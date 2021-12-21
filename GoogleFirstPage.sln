@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleFirstPage", "GoogleFirstPage\GoogleFirstPage.csproj", "{BD4C544A-2B64-43BE-9D53-183A72665BB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD4C544A-2B64-43BE-9D53-183A72665BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD4C544A-2B64-43BE-9D53-183A72665BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD4C544A-2B64-43BE-9D53-183A72665BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD4C544A-2B64-43BE-9D53-183A72665BB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4F01AB2-AEF3-4FDD-8749-4356BEF44896}
+	EndGlobalSection
+EndGlobal

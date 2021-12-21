@@ -1,0 +1,738 @@
+﻿
+@media only screen and (min-width : 1224px) {
+
+
+    body {
+        background-color: #f7fafc;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        background-repeat: no-repeat;
+    }
+
+    .containerNew {
+        width: 80%;
+        position: absolute;
+        margin-left: 3%;
+        margin-top: auto;
+    }
+
+
+    .leftDiv {
+        width: 25%;
+        float: left;
+        margin-top: 10px;
+        margin-left: 5px;
+        height: 500px;
+        background-color: #808080;
+        text-align: center;
+    }
+
+    .centerDiv {
+        width: 35%;
+        float: left;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-bottom: 100px;
+        border: 1px solid skyblue;
+    }
+
+    .rightDiv {
+        width: 35%;
+        float: left;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-bottom: 100px;
+        border: 1px solid skyblue;
+        background-color: #000000;
+    }
+
+
+
+    .box2 {
+        display: table-cell;
+        border-radius: 5px;
+    }
+
+
+    .box3 {
+        display: table-cell;
+        border-radius: 5px;
+    }
+
+    .box1 {
+        display: table-cell;
+        border-radius: 5px;
+    }
+
+    .text {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        padding: 0px 0;
+        height: 600px;
+        margin-top: 20px;
+    }
+
+    .textfirst {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px 0;
+        height: 200px;
+        margin-top: 50px;
+    }
+
+    .wrapper {
+        display: table;
+        width: 100%;
+    }
+
+    .middle {
+        display: table-cell;
+        width: 2%;
+    }
+
+    .footer {
+        background-color: #FFFFFF;
+        padding: 15px;
+        font-family: Arial;
+        font-weight: bold;
+        border: solid 1.5px skyblue;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        text-align: left;
+        font-size: 10px;
+        clear: both;
+        margin-top: 200px;
+        max-height: 20px;
+    }
+
+    .droplist {
+        border: 1.2px solid #1583c2;
+        box-shadow: #f0f9ff inset;
+        transition: 500ms all ease;
+        padding: 3px 3px 3px 3px;
+        border-radius: 2px;
+        font-family: Arial;
+        font-size: 14px;
+    }
+
+    .btn {
+        background: #1583c2;
+        border: 1px solid #1583c2;
+        width: 140px;
+        height: 30px;
+        font-size: 20px;
+        border-radius: 3px;
+        display: inline-block;
+        font-family: Arial;
+        font-weight: 700;
+        font-style: normal;
+        color: #FFFFFF;
+        margin-left: 50px;
+    }
+
+        .btn:hover {
+            background-color: white;
+            border: 1px solid #1583c2;
+            text-decoration: none;
+            color: #1583c2;
+            margin-bottom: 0px;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+
+    .text1 {
+        border: 1.2px solid #1583c2;
+        box-shadow: #f0f9ff inset;
+        transition: 500ms all ease;
+        padding: 3px 3px 3px 3px;
+        border-radius: 2px;
+        font-family: Arial;
+        font-size: 14px;
+    }
+
+    .img1logo {
+        margin-top: 100px;
+    }
+
+
+    .mydatagrid {
+        border: solid 2px black;
+    }
+
+    .headernew {
+        background-color: rgba(0,0,0,0.19);
+        font-family: Arial;
+        color: White;
+        border: none 0px transparent;
+        height: 28px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .rows {
+        background-color: #fff;
+        font-family: Arial;
+        font-size: 14px;
+        color: #000;
+        min-height: 25px;
+        text-align: left;
+        border: none 0px transparent;
+    }
+
+        .rows:hover {
+            background-color: #ff8000;
+            font-family: Arial;
+            color: #fff;
+            text-align: left;
+        }
+
+    .selectedrow {
+        background-color: #ff8000;
+        font-family: Arial;
+        color: #fff;
+        font-weight: bold;
+        text-align: left;
+    }
+
+
+    .gridview4 {
+        font-family: Calibri;
+        background-color: #FFFFFF;
+        width: 100%;
+    }
+
+        .gridview4 th {
+            background: #25b1a2;
+            font-size: 15px;
+            height: 35px;
+            padding: 4px;
+            font-family: Calibri;
+            min-width: 100px;
+            max-width: 600px;
+        }
+
+        .gridview4 td {
+            color: #333333;
+            font-family: Calibri;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 4px;
+            color: black;
+            height: 35px;
+            min-width: 100px;
+            max-width: 600px;
+        }
+
+            .gridview4 td:hover {
+                background-color: #e4e8ef;
+            }
+
+        .gridview4 tr.even td {
+            background: #e4e8ef;
+            font-family: Calibri;
+        }
+
+            .gridview4 tr.even td:hover {
+                background-color: #ffffff;
+            }
+
+
+
+
+    .mydatagrid a {
+        background-color: Transparent;
+        padding: 5px 5px 5px 5px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .mydatagrid a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+    .mydatagrid span {
+        background-color: #c9c9c9;
+        color: #000;
+        padding: 5px 5px 5px 5px;
+    }
+
+    .pager {
+        background-color: rgba(0,0,0,0.19);
+        font-family: Arial;
+        color: White;
+        height: 30px;
+        text-align: left;
+    }
+
+    .mydatagrid td {
+        padding: 5px;
+    }
+
+    .mydatagrid th {
+        padding: 5px;
+    }
+
+
+    .LblClassNew {
+        font-family: Cambria;
+        font-size: 20px;
+        color: #ff8000;
+    }
+
+
+    .moveCenter {
+        text-align: left;
+    }
+
+
+    #footerNew {
+        background-color: #FFFFFF;
+        padding: 15px;
+        font-family: Arial;
+        font-weight: bold;
+        /*border: dashed 1px skyblue;*/
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        text-align: left;
+        font-size: 10px;
+        clear: both;
+        margin-top: 3900px;
+        //margin-top:112px;
+    }
+
+    .Radioclass {
+        font-family: sans-serif,'Times New Roman';
+    }
+
+
+    .classlable {
+        font-family: Calibri;
+        color: black;
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    .gridview3 {
+        font-family: Calibri;
+        background-color: #FFFFFF;
+        width: 100%;
+    }
+
+        .gridview3 th {
+            background: #25b1a2;
+            font-size: 15px;
+            height: 35px;
+            padding: 4px;
+            font-family: Calibri;
+            min-width: 100px;
+            max-width: 600px;
+        }
+
+        .gridview3 td {
+            color: #333333;
+            font-family: Calibri;
+            font-size: 12px;
+            padding: 4px;
+            height: 35px;
+            font-size: 14px;
+            min-width: 100px;
+            max-width: 600px;
+        }
+
+            .gridview3 td:hover {
+                
+                background-color: #e4e8ef;
+            }
+
+        .gridview3 tr.even td {
+            background: #e4e8ef;
+            font-family: Calibri;
+        }
+
+            .gridview3 tr.even td:hover {
+                background-color: #ffffff;
+            }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    body {
+        background-color: #f7fafc;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        background-repeat: no-repeat;
+    }
+
+    .containerNew {
+        width: 80%;
+        position: absolute;
+        margin-left: 3%;
+        margin-top: auto;
+    }
+
+
+    .leftDiv {
+        width: 25%;
+        float: left;
+        margin-top: 10px;
+        margin-left: 5px;
+        height: 500px;
+        background-color: #808080;
+        text-align: center;
+    }
+
+    .centerDiv {
+        width: 35%;
+        float: left;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-bottom: 100px;
+        border: 1px solid skyblue;
+    }
+
+    .rightDiv {
+        width: 35%;
+        float: left;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-bottom: 100px;
+        border: 1px solid skyblue;
+        background-color: #000000;
+    }
+
+
+
+    .box2 {
+        display: table-cell;
+        border-radius: 5px;
+    }
+
+
+    .box3 {
+        display: table-cell;
+        border-radius: 5px;
+    }
+
+    .box1 {
+        display: table-cell;
+        border-radius: 5px;
+   
+    }
+
+    .box4 {
+        display: table-cell;
+        border-radius: 5px;
+        // width:25%;
+    }
+
+    .box5 {
+        //background-color: coral;
+        //background-color:#F4EEEE;
+        display: table-cell;
+        border-radius: 5px;
+        // width:25%;
+    }
+
+    .text {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        padding: 0px 0;
+        //height: 200px;
+        height: 600px;
+        margin-top: 20px;
+    }
+
+    .textfirst {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px 0;
+        //height: 200px;
+        height: 200px;
+        margin-top: 50px;
+    }
+
+    .wrapper {
+        display: table;
+        width: 100%;
+    }
+
+    .middle {
+        display: table-cell;
+        width: 2%;
+    }
+
+    .footer {
+        background-color: #FFFFFF;
+        padding: 15px;
+        font-family: Arial;
+        font-weight: bold;
+        //border: dashed 1px skyblue;
+        border: solid 1.5px skyblue;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        text-align: left;
+        font-size: 10px;
+        clear: both;
+        margin-top: 200px;
+        max-height: 20px;
+    }
+
+    .droplist {
+        border: 1.2px solid #1583c2;
+        //border: 1px solid #ff6a00;
+        box-shadow: #f0f9ff inset;
+        transition: 500ms all ease;
+        padding: 3px 3px 3px 3px;
+        border-radius: 2px;
+        font-family: Arial;
+        font-size: 14px;
+        color: black;
+        background-color: black;
+    }
+
+    .btn {
+        background: #1583c2;
+        //border: 1.5px solid #1583c2;
+        border: 1px solid #1583c2;
+        width: 140px;
+        height: 18px;
+        font-size: 15px;
+        border-radius: 4px;
+        display: inline-block;
+        font-family: Calibri;
+        font-weight: bold;
+        font-style: normal;
+        //color: #1583c2;
+        //color:#ff6a00;
+        color: #FFFFFF;
+        margin-left: 50px;
+    }
+
+        /*.btn:hover {
+            //background-color: #1583c2;
+            //background-color: #ff8000;
+            background-color: white;
+            border: 1px solid #1583c2;
+            text-decoration: none;
+            color: #1583c2;
+            margin-bottom: 0px;
+            //box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }*/
+
+
+    .text1 {
+        border: 1.2px solid #1583c2;
+        box-shadow: #f0f9ff inset;
+        transition: 500ms all ease;
+        padding: 3px 3px 3px 3px;
+        border-radius: 2px;
+        font-family: Arial;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .textboxcode {
+        border: 1.2px solid #1583c2;
+        box-shadow: #f0f9ff inset;
+        transition: 500ms all ease;
+        padding: 3px 3px 3px 3px;
+        border-radius: 2px;
+        font-family: Arial;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .img1logo {
+        margin-top: 100px;
+    }
+
+
+    .mydatagrid {
+        //width: 80%;
+        border: solid 2px black;
+        // min-width: 80%;
+    }
+
+    .headernew {
+        //background-color: #646464;
+        //background-color:#99f332;
+        background-color: rgba(0,0,0,0.19);
+        //background-color:#9ACD32;
+        //background-color:#33cc33;
+        font-family: Arial;
+        color: White;
+        border: none 0px transparent;
+        height: 28px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .rows {
+        background-color: #fff;
+        font-family: Arial;
+        font-size: 14px;
+        color: #000;
+        min-height: 25px;
+        text-align: left;
+        border: none 0px transparent;
+    }
+
+        .rows:hover {
+            background-color: #ff8000;
+            font-family: Arial;
+            color: #fff;
+            text-align: left;
+        }
+
+    .selectedrow {
+        background-color: #ff8000;
+        font-family: Arial;
+        color: #fff;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .mydatagrid a {
+        background-color: Transparent;
+        padding: 5px 5px 5px 5px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .mydatagrid a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+    .mydatagrid span {
+        background-color: #c9c9c9;
+        color: #000;
+        padding: 5px 5px 5px 5px;
+    }
+
+    .pager {
+        //background-color: #646464;
+        //background-color:#33a6cc;
+        //background-color:#668c99;
+        //background-color:#d6edf5;
+        //background-color:#33cc33;
+        //background-color:#b6ff00;
+        background-color: rgba(0,0,0,0.19);
+        font-family: Arial;
+        color: White;
+        height: 30px;
+        text-align: left;
+    }
+
+    .mydatagrid td {
+        padding: 5px;
+    }
+
+    .mydatagrid th {
+        padding: 5px;
+    }
+
+
+    .LblClassNew {
+        font-family: Cambria;
+        font-size: 20px;
+        color: #ff8000;
+    }
+
+
+    .moveCenter {
+        text-align: left;
+    }
+
+
+    #footerNew {
+        background-color: #FFFFFF;
+        padding: 15px;
+        font-family: Arial;
+        font-weight: bold;
+        border: dashed 1px skyblue;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        text-align: left;
+        font-size: 10px;
+        clear: both;
+        margin-top: 3900px;
+        //margin-top:112px;
+    }
+
+    .Radioclass {
+        font-family: sans-serif,'Times New Roman';
+    }
+
+
+    .classlable {
+        font-family: Calibri;
+        color: black;
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    .gridview3 {
+        font-family: Calibri;
+        background-color: #FFFFFF;
+        width: 100%;
+        word-wrap: break-word;
+    }
+
+        .gridview3 th {
+            //background: #a8b0b7;
+            background: #25b1a2;
+            font-size: 15px;
+            height: 35px;
+            padding: 4px;
+            font-family: Calibri;
+            min-width: 100px;
+            max-width: 600px;
+            word-wrap: break-word;
+        }
+
+        .gridview3 td {
+            //background: #e4e8ef;
+            color: #333333;
+            font-family: Calibri;
+            font-size: 12px;
+            padding: 4px;
+            height: 35px;
+            font-size: 14px;
+            min-width: 100px;
+            max-width: 600px;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+            .gridview3 td:hover {
+                //background-color: #FFFFFF;
+                background-color: #e4e8ef;
+                //background-color:rgb(231, 51, 99);
+            }
+
+        .gridview3 tr.even td {
+            //background: #FFFFFF;
+            background: #e4e8ef;
+            font-family: Calibri;
+            word-wrap: break-word;
+        }
+
+            .gridview3 tr.even td:hover {
+                //background-color: #a8b0b7;
+                background-color: #ffffff;
+                word-wrap: break-word;
+            }
+}
