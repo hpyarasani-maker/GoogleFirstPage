@@ -21,6 +21,7 @@ namespace GoogleFirstPage.TrendingTwoHoursResultsFromDB
         string hour;
         string hour1;
         string date = string.Empty;
+        string d = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
             calendar.StartDate = DateTime.Now.AddDays(-1);
