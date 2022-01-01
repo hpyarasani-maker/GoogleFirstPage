@@ -1956,27 +1956,27 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             },//end 21-10-2021
             new SearchProperties()//20-12-2021 France Paris, Lyon, Marseille
             {
-                seid=590, domain="fr", geo_location="Paris,Paris,Ile-de-France,France", locale= "fr-fr", uule = "w+CAIQICIgUGFyaXMsUGFyaXMsSWxlLWRlLUZyYW5jZSxGcmFuY2U=",device="desktop"
+                seid=590, domain="fr", geo_location="Paris,Paris,Ile-de-France,France", locale= "fr-fr", uule = "w+CAIQICIgUGFyaXMsUGFyaXMsSWxlLWRlLUZyYW5jZSxGcmFuY2U=",device="desktop",sename="Google FR (Paris)"
             },
             new SearchProperties()
             {
-                seid=591, domain="fr", geo_location="Paris,Paris,Ile-de-France,France", locale= "fr-fr", uule = "w+CAIQICIgUGFyaXMsUGFyaXMsSWxlLWRlLUZyYW5jZSxGcmFuY2U=",device="mobile_android"
+                seid=591, domain="fr", geo_location="Paris,Paris,Ile-de-France,France", locale= "fr-fr", uule = "w+CAIQICIgUGFyaXMsUGFyaXMsSWxlLWRlLUZyYW5jZSxGcmFuY2U=",device="mobile_android",sename="Google FR (Paris, Mobile)"
             },
             new SearchProperties()
             {
-                seid=592, domain="fr", geo_location="Lyon,Auvergne-Rhone-Alpes,France", locale= "fr-fr", uule = "w+CAIQICIgTHlvbixBdXZlcmduZS1SaG9uZS1BbHBlcyxGcmFuY2U=",device="desktop"
+                seid=592, domain="fr", geo_location="Lyon,Auvergne-Rhone-Alpes,France", locale= "fr-fr", uule = "w+CAIQICIgTHlvbixBdXZlcmduZS1SaG9uZS1BbHBlcyxGcmFuY2U=",device="desktop",sename="Google FR (Lyon)"
             },
             new SearchProperties()
             {
-                seid=593, domain="fr", geo_location="Lyon,Auvergne-Rhone-Alpes,France", locale= "fr-fr", uule = "w+CAIQICIgTHlvbixBdXZlcmduZS1SaG9uZS1BbHBlcyxGcmFuY2U=",device="mobile_android"
+                seid=593, domain="fr", geo_location="Lyon,Auvergne-Rhone-Alpes,France", locale= "fr-fr", uule = "w+CAIQICIgTHlvbixBdXZlcmduZS1SaG9uZS1BbHBlcyxGcmFuY2U=",device="mobile_android",sename="Google FR (Lyon, Mobile)"
             },
             new SearchProperties()
             {
-                 seid=594, domain="fr", geo_location="Marseille,Provence-Alpes-Cote d'Azur,France", locale= "fr-fr", uule = "w+CAIQICIrTWFyc2VpbGxlLFByb3ZlbmNlLUFscGVzLUNvdGUgZCdBenVyLEZyYW5jZQ==",device="desktop"
+                 seid=594, domain="fr", geo_location="Marseille,Provence-Alpes-Cote d'Azur,France", locale= "fr-fr", uule = "w+CAIQICIrTWFyc2VpbGxlLFByb3ZlbmNlLUFscGVzLUNvdGUgZCdBenVyLEZyYW5jZQ==",device="desktop",sename="Google FR (Marseille)"
             },
             new SearchProperties()
             {
-                seid=595, domain="fr", geo_location="Marseille,Provence-Alpes-Cote d'Azur,France", locale= "fr-fr", uule = "w+CAIQICIrTWFyc2VpbGxlLFByb3ZlbmNlLUFscGVzLUNvdGUgZCdBenVyLEZyYW5jZQ==",device="mobile_android"
+                seid=595, domain="fr", geo_location="Marseille,Provence-Alpes-Cote d'Azur,France", locale= "fr-fr", uule = "w+CAIQICIrTWFyc2VpbGxlLFByb3ZlbmNlLUFscGVzLUNvdGUgZCdBenVyLEZyYW5jZQ==",device="mobile_android",sename="Google FR (Marseille, Mobile)"
             },//end 20-12-2021
 
          };
