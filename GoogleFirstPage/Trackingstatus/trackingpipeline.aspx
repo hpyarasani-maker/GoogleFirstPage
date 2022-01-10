@@ -3,126 +3,129 @@
 <%@ Import Namespace="GoogleFirstPage.Trackingstatus" %>
 
 <!DOCTYPE html>
-<%@ Page Language="C#" %>
- <script runat="server" language="C#">
-     void Page_Load(object sender, EventArgs e)
-     {
-         TrackingModel tm = new TrackingModel();
-         var a = tm.GetTrackingAll();
-         for (int i = 0; i < a.Count; i++)
-         {
-             StringBuilder sb = new StringBuilder();
-             sb = Getdata(i,a);
-             switch (i)
-             {
-                 case 0:
-                     PlaceHolder1.Controls.Add(new LiteralControl { Text = sb.ToString() });
-                     PlaceHolder1.Controls.Add(new LiteralControl("<br />"));
-                     PlaceHolder1.Controls.Add(new LiteralControl("<br />"));
-                     break;
-                 case 1:
-                     PlaceHolder2.Controls.Add(new LiteralControl { Text = sb.ToString() });
-                     PlaceHolder2.Controls.Add(new LiteralControl("<br />"));
-                     PlaceHolder2.Controls.Add(new LiteralControl("<br />"));
-                     break;
-                 case 2:
-                     PlaceHolder3.Controls.Add(new LiteralControl { Text = sb.ToString() });
-                     PlaceHolder3.Controls.Add(new LiteralControl("<br />"));
-                     PlaceHolder3.Controls.Add(new LiteralControl("<br />"));
-                     break;
-                 case 3:
-                     PlaceHolder4.Controls.Add(new LiteralControl { Text = sb.ToString() });
-                     PlaceHolder4.Controls.Add(new LiteralControl("<br />"));
-                     PlaceHolder4.Controls.Add(new LiteralControl("<br />"));
-                     break;
-                 case 4:
-                     PlaceHolder5.Controls.Add(new LiteralControl { Text = sb.ToString() });
-                     PlaceHolder5.Controls.Add(new LiteralControl("<br />"));
-                     PlaceHolder5.Controls.Add(new LiteralControl("<br />"));
-                     break;
-                 case 5:
-                     PlaceHolder6.Controls.Add(new LiteralControl { Text = sb.ToString() });
-                     PlaceHolder6.Controls.Add(new LiteralControl("<br />"));
-                     PlaceHolder6.Controls.Add(new LiteralControl("<br />"));
-                     break;
-             }
-             if(i==0)
-             {
-             }
-         }
-     }
 
-     public StringBuilder Getdata(int i,List<TrackingModel> a)
-     {
-         StringBuilder sb = new StringBuilder();
-         sb.Append("<table border = '2'>");
-         sb.Append("<tr>");
-         sb.Append("<th>Apps</th>");
-         sb.Append("<th>"+a[i].Seid.ToString()+"</th>");
-         sb.Append("<th>Status</th>");
-         sb.Append("</tr>");
-         sb.Append("<tr>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'>sending</td>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'></td>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'></td>");
-         sb.Append("</tr>");
-         sb.Append("<tr>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'>Receiving</td>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'></td>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'></td>");
-         sb.Append("</tr>");
-         sb.Append("<tr>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'>Jobid's</td>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'></td>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'></td>");
-         sb.Append("</tr>");
-         sb.Append("<tr>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'>Proxies</td>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'></td>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'></td>");
-         sb.Append("</tr>");
-         sb.Append("<tr>");
-         if (a[i].Remaining.ToString()=="0")
-         {
-             sb.Append("<td style='width:100px;border: 1px solid #ccc'>Total</td>");
-             sb.Append("<td style='width:100px;border: 1px solid #ccc'>" + a[i].Total.ToString() + "</td>");
-             sb.Append("<td style='width:100px;border: 1px solid #ccc'>Completed</td>");
-             sb.Append("</tr>");
-             sb.Append("<tr>");
-             sb.Append("<td style='width:100px;border: 1px solid #ccc'>Received</td>");
-             sb.Append("<td style='width:100px;border: 1px solid #ccc'>" + a[i].Received.ToString() + "</td>");
-             sb.Append("<td style='width:100px;border: 1px solid #ccc'>Completed</td>");
-             sb.Append("</tr>");
-             sb.Append("<tr>");
-             sb.Append("<td style='width:100px;border: 1px solid #ccc'>Remaining</td>");
-             sb.Append("<td style='width:100px;border: 1px solid #ccc'>" + a[i].Remaining.ToString() + "</td>");
-             sb.Append("<td style='width:100px;border: 1px solid #ccc'>Completed</td>");
-             sb.Append("</tr>");
-         }
-         else {
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'>Total</td>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'>" + a[i].Total.ToString() + "</td>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'>Running</td>");
-         sb.Append("</tr>");
-         sb.Append("<tr>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'>Received</td>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'>" + a[i].Received.ToString() + "</td>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'>Running</td>");
-         sb.Append("</tr>");
-         sb.Append("<tr>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'>Remaining</td>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'>" + a[i].Remaining.ToString() + "</td>");
-         sb.Append("<td style='width:100px;border: 1px solid #ccc'>Running</td>");
-         sb.Append("</tr>");
-             }
-         sb.Append("</table>");
-         return sb;
-     }
+<%@ Page Language="C#" Debug="true" %>
+
+<script runat="server" language="C#">
+    void Page_Load(object sender, EventArgs e)
+    {
+        TrackingModel tm = new TrackingModel();
+        var a = tm.GetTrackingAll();
+        for (int i = 0; i < a.Count; i++)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb = Getdata(i, a);
+            switch (i)
+            {
+                case 0:
+                    PlaceHolder1.Controls.Add(new LiteralControl { Text = sb.ToString() });
+                    PlaceHolder1.Controls.Add(new LiteralControl("<br />"));
+                    PlaceHolder1.Controls.Add(new LiteralControl("<br />"));
+                    break;
+                case 1:
+                    PlaceHolder2.Controls.Add(new LiteralControl { Text = sb.ToString() });
+                    PlaceHolder2.Controls.Add(new LiteralControl("<br />"));
+                    PlaceHolder2.Controls.Add(new LiteralControl("<br />"));
+                    break;
+                case 2:
+                    PlaceHolder3.Controls.Add(new LiteralControl { Text = sb.ToString() });
+                    PlaceHolder3.Controls.Add(new LiteralControl("<br />"));
+                    PlaceHolder3.Controls.Add(new LiteralControl("<br />"));
+                    break;
+                case 3:
+                    PlaceHolder4.Controls.Add(new LiteralControl { Text = sb.ToString() });
+                    PlaceHolder4.Controls.Add(new LiteralControl("<br />"));
+                    PlaceHolder4.Controls.Add(new LiteralControl("<br />"));
+                    break;
+                case 4:
+                    PlaceHolder5.Controls.Add(new LiteralControl { Text = sb.ToString() });
+                    PlaceHolder5.Controls.Add(new LiteralControl("<br />"));
+                    PlaceHolder5.Controls.Add(new LiteralControl("<br />"));
+                    break;
+                case 5:
+                    PlaceHolder6.Controls.Add(new LiteralControl { Text = sb.ToString() });
+                    PlaceHolder6.Controls.Add(new LiteralControl("<br />"));
+                    PlaceHolder6.Controls.Add(new LiteralControl("<br />"));
+                    break;
+            }
+            if (i == 0)
+            {
+            }
+        }
+    }
+
+    public StringBuilder Getdata(int i, List<TrackingModel> a)
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.Append("<table border = '2'>");
+        sb.Append("<tr>");
+        sb.Append("<th>Apps</th>");
+        sb.Append("<th style='width:120px'>" + a[i].Seid.ToString() + "</th>");
+        sb.Append("<th>Status</th>");
+        sb.Append("</tr>");
+        sb.Append("<tr>");
+        sb.Append("<td style='width:100px;border: 1px solid #ccc'>sending</td>");
+        sb.Append("<td style='width:100px;border: 1px solid #ccc'></td>");
+        sb.Append("<td style='width:100px;border: 1px solid #ccc'></td>");
+        sb.Append("</tr>");
+        sb.Append("<tr>");
+        sb.Append("<td style='width:100px;border: 1px solid #ccc'>Receiving</td>");
+        sb.Append("<td style='width:100px;border: 1px solid #ccc'></td>");
+        sb.Append("<td style='width:100px;border: 1px solid #ccc'></td>");
+        sb.Append("</tr>");
+        sb.Append("<tr>");
+        sb.Append("<td style='width:100px;border: 1px solid #ccc'>Jobid's</td>");
+        sb.Append("<td style='width:100px;border: 1px solid #ccc'></td>");
+        sb.Append("<td style='width:100px;border: 1px solid #ccc'></td>");
+        sb.Append("</tr>");
+        sb.Append("<tr>");
+        sb.Append("<td style='width:100px;border: 1px solid #ccc'>Proxies</td>");
+        sb.Append("<td style='width:100px;border: 1px solid #ccc'></td>");
+        sb.Append("<td style='width:100px;border: 1px solid #ccc'></td>");
+        sb.Append("</tr>");
+        sb.Append("<tr>");
+        if (a[i].Remaining.ToString() == "0")
+        {
+            sb.Append("<td style='width:100px;border: 1px solid #ccc'>Total</td>");
+            sb.Append("<td style='width:100px;border: 1px solid #ccc'>" + a[i].Total + "</td>");
+            sb.Append("<td style='width:100px;border: 1px solid #ccc'>Completed</td>");
+            sb.Append("</tr>");
+            sb.Append("<tr>");
+            sb.Append("<td style='width:100px;border: 1px solid #ccc'>Received</td>");
+            sb.Append("<td style='width:100px;border: 1px solid #ccc'>" + a[i].Received + "</td>");
+            sb.Append("<td style='width:100px;border: 1px solid #ccc'>Completed</td>");
+            sb.Append("</tr>");
+            sb.Append("<tr>");
+            sb.Append("<td style='width:100px;border: 1px solid #ccc'>Remaining</td>");
+            sb.Append("<td style='width:100px;border: 1px solid #ccc'>" + a[i].Remaining + "</td>");
+            sb.Append("<td style='width:100px;border: 1px solid #ccc'>Completed</td>");
+            sb.Append("</tr>");
+        }
+        else
+        {
+            sb.Append("<td style='width:100px;border: 1px solid #ccc'>Total</td>");
+            sb.Append("<td style='width:100px;border: 1px solid #ccc'>" + a[i].Total + "</td>");
+            sb.Append("<td style='width:100px;border: 1px solid #ccc'>Running</td>");
+            sb.Append("</tr>");
+            sb.Append("<tr>");
+            sb.Append("<td style='width:100px;border: 1px solid #ccc'>Received</td>");
+            sb.Append("<td style='width:100px;border: 1px solid #ccc'>" + a[i].Received + "</td>");
+            sb.Append("<td style='width:100px;border: 1px solid #ccc'>Running</td>");
+            sb.Append("</tr>");
+            sb.Append("<tr>");
+            sb.Append("<td style='width:100px;border: 1px solid #ccc'>Remaining</td>");
+            sb.Append("<td style='width:100px;border: 1px solid #ccc'>" + a[i].Remaining + "</td>");
+            sb.Append("<td style='width:100px;border: 1px solid #ccc'>Running</td>");
+            sb.Append("</tr>");
+        }
+        sb.Append("</table>");
+        return sb;
+    }
 
 </script>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-   
+
 <head runat="server">
     <title>Tracking</title>
 
@@ -150,6 +153,27 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/js/footable.min.js"></script>
 
     <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.4.min.js"></script>
+
+    <style type="text/css">
+        .boxDiv {
+            //min-height:300px;
+            //height: 300px;
+            //padding-left: 20px;
+            //padding-top: 10px;
+            background-color: #ffffff;
+            font-weight: bold;
+            color: black;
+            //width: 450px;
+            margin: 10px;
+            //border: 1px solid #1583c2;
+            enable-background: new;
+        }
+
+        table, th, td {
+            //border: 1px solid black;
+        }
+    </style>
+
 </head>
 <body>
     <script src="js/custom.js"></script>
@@ -185,35 +209,83 @@
         <br />
         <br />
         <div class="containerDB">
-           <div style="margin-left:300px;">
-            <table style="width: 70%">
-                <tr>
-                    <td>
-                  <asp:PlaceHolder ID = "PlaceHolder1" runat="server" />
-                    </td>
-                    <td>
-                  <asp:PlaceHolder ID = "PlaceHolder2" runat="server" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:PlaceHolder ID = "PlaceHolder3" runat="server" />
-                    </td>
-                    <td>
-                        <asp:PlaceHolder ID = "PlaceHolder4" runat="server" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:PlaceHolder ID = "PlaceHolder5" runat="server" />
-                    </td>
-                    <td>
-                        <asp:PlaceHolder ID = "PlaceHolder6" runat="server" />
-                    </td>
-                </tr>
-            </table>
-        </div>
-
+            <div style="margin-left: 300px;">
+                <table style="width: 70%">
+                    <tr>
+                        <td style='border: 1px solid #ccc;'>
+                            <div style="background-color:#faf6f6;">
+                                <label style="font-family: Calibri; font-size: large; color: blue; font-size: 20px;">Server - 1</label>
+                                <hr  style="border:1px solid #000000;"/>
+                            </div>
+                            <div class="boxDiv">
+                                <asp:PlaceHolder ID="PlaceHolder1" runat="server" />
+                            </div>
+                        </td>
+                        <td style='border: 1px solid #ccc'>
+                            <div style="background-color:#faf6f6;">
+                                <label style="font-family: Calibri; font-size: large; color: blue; font-size: 20px;">Server - 2</label>
+                                <hr style="border:1px solid #000000;" />
+                            </div>
+                            <div class="boxDiv">
+                                <%--<label style="font-family: Calibri; font-size: large; color: blue;font-size:20px;box-shadow: 5px 10px 18px #888888;">Server - 2</label>--%>
+                                <asp:PlaceHolder ID="PlaceHolder2" runat="server" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style='border: 1px solid #ccc'>
+                            <div style="background-color:#faf6f6;">
+                                <label style="font-family: Calibri; font-size: large; color: blue; font-size: 20px;">Server - 3</label>
+                                <hr style="border:1px solid #000000;" />
+                            </div>
+                            <div class="boxDiv">
+                                <%--<label style="font-family: Calibri; font-size: large; color: blue;font-size:20px;">Server - 3</label>--%>
+                                <asp:PlaceHolder ID="PlaceHolder3" runat="server" />
+                            </div>
+                        </td>
+                        <td style='border: 1px solid #ccc'>
+                            <div style="background-color:#faf6f6;">
+                                <label style="font-family: Calibri; font-size: large; color: blue; font-size: 20px;">Server - 4</label>
+                                <hr style="border:1px solid #000000;" />
+                            </div>
+                            <div class="boxDiv">
+                                <%--<label style="font-family: Calibri; font-size: large; color: blue;font-size:20px;">Server - 4</label>--%>
+                                <asp:PlaceHolder ID="PlaceHolder4" runat="server" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style='border: 1px solid #ccc'>
+                            <div style="background-color:#faf6f6;">
+                                <label style="font-family: Calibri; font-size: large; color: blue; font-size: 20px;">Server - 5</label>
+                                <hr style="border:1px solid #000000;" />
+                            </div>
+                            <div class="boxDiv">
+                                <%--<label style="font-family: Calibri; font-size: large; color: blue;font-size:20px;">Server - 5</label>--%>
+                                <asp:PlaceHolder ID="PlaceHolder5" runat="server" />
+                            </div>
+                        </td>
+                        <td style='border: 1px solid #ccc'>
+                            <div style="background-color:#faf6f6;">
+                                <label style="font-family: Calibri; font-size: large; color: blue; font-size: 20px;">Server - 6</label>
+                                <hr style="border:1px solid #000000;"  />
+                            </div>
+                            <div class="boxDiv">
+                                <%--<label style="font-family: Calibri; font-size: large; color: blue;font-size:20px">Server - 6</label>--%>
+                                <asp:PlaceHolder ID="PlaceHolder6" runat="server" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <div id="footer">
+                <div style="font-weight: bold; font-size: 14px;">© <%= DateTime.Now.Year %> Pi Datametrics | Trackingpipeline.</div>
+            </div>
         </div>
     </form>
 </body>
