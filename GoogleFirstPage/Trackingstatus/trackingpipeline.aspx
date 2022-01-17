@@ -11,52 +11,65 @@
     {
         TrackingModel tm = new TrackingModel();
         var a = tm.GetTrackingAll();
+        ArrayList al = tm.servers();
         for (int i = 0; i < a.Count; i++)
         {
             StringBuilder sb = new StringBuilder();
+            bool st = false;
             sb = Getdata(i, a);
             switch (i)
             {
                 case 0:
+                    st = tm.PingServer((byte[])al[i]);
+                    if (st == true) { Label1.Text = "online"; } else if (st == false) { Label1.Text = "offline"; }
                     PlaceHolder1.Controls.Add(new LiteralControl { Text = sb.ToString() });
                     PlaceHolder1.Controls.Add(new LiteralControl("<br />"));
                     PlaceHolder1.Controls.Add(new LiteralControl("<br />"));
                     break;
                 case 1:
+                    st = tm.PingServer((byte[])al[i]);
+                    if (st == true) { Label2.Text = "online"; } else if (st == false) { Label2.Text = "offline"; }
                     PlaceHolder2.Controls.Add(new LiteralControl { Text = sb.ToString() });
                     PlaceHolder2.Controls.Add(new LiteralControl("<br />"));
                     PlaceHolder2.Controls.Add(new LiteralControl("<br />"));
                     break;
                 case 2:
+                    st = tm.PingServer((byte[])al[i]);
+                    if (st == true) { Label3.Text = "online"; } else if (st == false) { Label3.Text = "offline"; }
                     PlaceHolder3.Controls.Add(new LiteralControl { Text = sb.ToString() });
                     PlaceHolder3.Controls.Add(new LiteralControl("<br />"));
                     PlaceHolder3.Controls.Add(new LiteralControl("<br />"));
                     break;
                 case 3:
+                    st = tm.PingServer((byte[])al[i]);
+                    if (st == true) { Label4.Text = "online"; } else if (st == false) { Label4.Text = "offline"; }
                     PlaceHolder4.Controls.Add(new LiteralControl { Text = sb.ToString() });
                     PlaceHolder4.Controls.Add(new LiteralControl("<br />"));
                     PlaceHolder4.Controls.Add(new LiteralControl("<br />"));
                     break;
                 case 4:
+                    st = tm.PingServer((byte[])al[i]);
+                    if (st == true) { Label5.Text = "online"; } else if (st == false) { Label5.Text = "offline"; }
                     PlaceHolder5.Controls.Add(new LiteralControl { Text = sb.ToString() });
                     PlaceHolder5.Controls.Add(new LiteralControl("<br />"));
                     PlaceHolder5.Controls.Add(new LiteralControl("<br />"));
                     break;
                 case 5:
+                    st = tm.PingServer((byte[])al[i]);
+                    if (st == true) { Label6.Text = "online"; } else if (st == false) { Label6.Text = "offline"; }
                     PlaceHolder6.Controls.Add(new LiteralControl { Text = sb.ToString() });
                     PlaceHolder6.Controls.Add(new LiteralControl("<br />"));
                     PlaceHolder6.Controls.Add(new LiteralControl("<br />"));
                     break;
             }
-            if (i == 0)
-            {
-            }
+
         }
     }
 
     public StringBuilder Getdata(int i, List<TrackingModel> a)
     {
         StringBuilder sb = new StringBuilder();
+
         sb.Append("<table border = '2'>");
         sb.Append("<tr>");
         sb.Append("<th>Apps</th>");
@@ -213,65 +226,80 @@
                 <table style="width: 70%">
                     <tr>
                         <td style='border: 1px solid #ccc;'>
-                            <div style="background-color:#faf6f6;">
+                            <div style="background-color: #faf6f6;">
                                 <label style="font-family: Calibri; font-size: large; color: blue; font-size: 20px;">Server - 1</label>
-                                <hr  style="border:1px solid #000000;"/>
+                                <p>
+                                    <asp:Label ID="Label1" runat="server" ForeColor="Green" Font-Size="Large" Font-Bold="true"></asp:Label>
+                                </p>
+
+                                &nbsp;<hr style="border: 1px solid #000000;" />
                             </div>
                             <div class="boxDiv">
                                 <asp:PlaceHolder ID="PlaceHolder1" runat="server" />
                             </div>
                         </td>
                         <td style='border: 1px solid #ccc'>
-                            <div style="background-color:#faf6f6;">
+                            <div style="background-color: #faf6f6;">
                                 <label style="font-family: Calibri; font-size: large; color: blue; font-size: 20px;">Server - 2</label>
-                                <hr style="border:1px solid #000000;" />
+                                <p>
+                                    <asp:Label ID="Label2" runat="server" ForeColor="Green" Font-Size="Large" Font-Bold="true"></asp:Label>
+                                </p>
+                                &nbsp;<hr style="border: 1px solid #000000;" />
                             </div>
                             <div class="boxDiv">
-                                <%--<label style="font-family: Calibri; font-size: large; color: blue;font-size:20px;box-shadow: 5px 10px 18px #888888;">Server - 2</label>--%>
                                 <asp:PlaceHolder ID="PlaceHolder2" runat="server" />
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td style='border: 1px solid #ccc'>
-                            <div style="background-color:#faf6f6;">
+                            <div style="background-color: #faf6f6;">
                                 <label style="font-family: Calibri; font-size: large; color: blue; font-size: 20px;">Server - 3</label>
-                                <hr style="border:1px solid #000000;" />
+                                <p>
+                                    <asp:Label ID="Label3" runat="server" ForeColor="Green" Font-Size="Large" Font-Bold="true"></asp:Label>
+                                </p>
+                                &nbsp;<hr style="border: 1px solid #000000;" />
                             </div>
                             <div class="boxDiv">
-                                <%--<label style="font-family: Calibri; font-size: large; color: blue;font-size:20px;">Server - 3</label>--%>
                                 <asp:PlaceHolder ID="PlaceHolder3" runat="server" />
                             </div>
                         </td>
                         <td style='border: 1px solid #ccc'>
-                            <div style="background-color:#faf6f6;">
+                            <div style="background-color: #faf6f6;">
                                 <label style="font-family: Calibri; font-size: large; color: blue; font-size: 20px;">Server - 4</label>
-                                <hr style="border:1px solid #000000;" />
+                                <p>
+                                    <asp:Label ID="Label4" runat="server" ForeColor="Green" Font-Size="Large" Font-Bold="true"></asp:Label>
+
+                                </p>
+                                &nbsp;<hr style="border: 1px solid #000000;" />
                             </div>
                             <div class="boxDiv">
-                                <%--<label style="font-family: Calibri; font-size: large; color: blue;font-size:20px;">Server - 4</label>--%>
                                 <asp:PlaceHolder ID="PlaceHolder4" runat="server" />
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td style='border: 1px solid #ccc'>
-                            <div style="background-color:#faf6f6;">
+                            <div style="background-color: #faf6f6;">
                                 <label style="font-family: Calibri; font-size: large; color: blue; font-size: 20px;">Server - 5</label>
-                                <hr style="border:1px solid #000000;" />
+                                <p>
+                                    <asp:Label ID="Label5" runat="server" ForeColor="Green" Font-Size="Large" Font-Bold="true"></asp:Label>
+                                </p>
+                                &nbsp;<hr style="border: 1px solid #000000;" />
                             </div>
                             <div class="boxDiv">
-                                <%--<label style="font-family: Calibri; font-size: large; color: blue;font-size:20px;">Server - 5</label>--%>
                                 <asp:PlaceHolder ID="PlaceHolder5" runat="server" />
                             </div>
                         </td>
                         <td style='border: 1px solid #ccc'>
-                            <div style="background-color:#faf6f6;">
+                            <div style="background-color: #faf6f6;">
                                 <label style="font-family: Calibri; font-size: large; color: blue; font-size: 20px;">Server - 6</label>
-                                <hr style="border:1px solid #000000;"  />
+                                <p>
+                                    <asp:Label ID="Label6" runat="server" ForeColor="Green" Font-Size="Large" Font-Bold="true"></asp:Label>
+                                </p>
+                                &nbsp;<hr style="border: 1px solid #000000;" />
                             </div>
                             <div class="boxDiv">
-                                <%--<label style="font-family: Calibri; font-size: large; color: blue;font-size:20px">Server - 6</label>--%>
                                 <asp:PlaceHolder ID="PlaceHolder6" runat="server" />
                             </div>
                         </td>
