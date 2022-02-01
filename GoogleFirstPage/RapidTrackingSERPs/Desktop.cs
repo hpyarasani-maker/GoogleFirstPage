@@ -478,18 +478,20 @@ namespace GoogleFirstPage.RapidTrackingSERPs
         {
             StringBuilder s = new StringBuilder();
             if (node.HasClass("_NId") || node.HasClass("bkWMgd") || node.HasClass("srg")
-                || node.HasClass("g") || node.SelectNodes(".//div[@class='g']") != null // 18-03-2020
+                //|| node.HasClass("g") || node.SelectNodes(".//div[@class='g']") != null //c// 18-03-2020 
                 || node.SelectNodes(".//div[@class='g GjRtuc']") != null // 02-06-2020
                 || node.SelectNodes(".//div[contains(@class,'g card-section')]") != null //06-10-2020 classic link
                 || node.SelectNodes(".//div[@class='g tF2Cxc']|.//div[@class='g dFd2Tb']") != null) //24-08-2021 video block //01-06-2021
             {
-                HtmlNodeCollection nds = node.SelectNodes(".//div[@class='g']|.//div[@class='HD8Pae luh4tb cUezCb xpd O9g5cc uUPGi']|.//div[contains(@class,'g card-section')]");//11-01-2021 missing classic link//04-12-2020 videos block
+                HtmlNodeCollection nds = node.SelectNodes(".//div[contains(@class,'tF2Cxc')]"); //25-01-2022
+                if (nds == null) //25-01-2022
+                    nds = node.SelectNodes(".//div[@class='g']|.//div[@class='HD8Pae luh4tb cUezCb xpd O9g5cc uUPGi']|.//div[contains(@class,'g card-section')]");//25-01-2022
                 if (nds == null)
                     nds = node.SelectNodes(".//div[@class='rc']");
                 if (nds == null)
                     nds = node.SelectNodes(".//div[@class='gG0TJc']");  //29-05-2020
-                if (nds == null)
-                    nds = node.SelectNodes(".//div[contains(@class,'tF2Cxc')]");//07-01-2021 //18-02-2021 included contains function
+                //if (nds == null)
+                //    nds = node.SelectNodes(".//div[contains(@class,'tF2Cxc')]");//25-01-2022 commented//07-01-2021 //18-02-2021 included contains function
                 if (nds == null)
                     nds = node.SelectNodes(".//div[@class='yuRUbf']"); //31-05-2021
                 if (nds == null)
@@ -632,7 +634,9 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                         if (u.StartsWith("http") || u.StartsWith("https") || u.StartsWith("ftp")) //30-04-2020
                         {
                             // string links1 = HttpUtility.UrlDecode(u);
-                            s.Append("<item url=\"" + SetUrl(u) + "\"  title=\"" + SetTitle(nd.InnerText) + "\"  />");
+                            //s.Append("<item url=\"" + SetUrl(u) + "\"  title=\"" + SetTitle(nd.InnerText) + "\"  />");//18-01-2022 commented
+                            var title = nd.SelectSingleNode(".//h3")?.InnerText ?? nd.InnerText; //18-01-2022
+                            s.Append("<item url=\"" + SetUrl(u) + "\"  title=\"" + SetTitle(title) + "\"  />"); //18-01-2022
                             orgLinks++;
                         }
                     }
@@ -839,7 +843,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             return s.ToString();
         }
 
-        private string PeopleAlsoAsk(HtmlNode node)
+        private string PeopleAlsoAsk(HtmlNode node) //included item urls code 31-01-2022
         {
             StringBuilder s = new StringBuilder();
             HtmlNodeCollection nds = node.SelectNodes(".//div[@class='_eHi']/div"); // (".//h3[@class='r']/a");
@@ -855,13 +859,42 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 nds = node.SelectNodes(".//div[@jsname='Cpkphb']"); //30-11-2021 people also ask titles
             if (nds == null)
                 return string.Empty;
+            string[] titles = new string[nds.Count];//31-01-2022
+            int x = 0;
             foreach (HtmlNode nd in nds)
             {
-                s.Append("<item url=\"\" title=\"" + SetTitle(nd.InnerText) + "\" />");
+                //s.Append("<item url=\"\" title=\"" + SetTitle(nd.InnerText) + "\" />");
+                titles[x++] = nd.InnerText;
+            }
+            var res = GetPeopleAlsoAskUrls(titles);
+            if (string.IsNullOrEmpty(res))
+                foreach (var t in titles)
+                    s.Append("<item url=\"\" title=\"" + SetTitle(t) + "\" />");
+            s.Append(res);//31-01-2022
+            return s.ToString();
+        }//end of item urls code 31-01-2022
+        private string GetPeopleAlsoAskUrls(string[] titles) //People also method 31-01-2022
+        {
+            StringBuilder s = new StringBuilder();
+            //string pattern = @"WEB_ANSWERS_STANDARD_RESULT_(.*?)div class\\x3d\\x22yuRUbf\\x22\\x3e\\x3ca href\\x3d\\x22(.*?)\\x22 data-jsarwt";
+            string pattern = @"WEB_ANSWERS_STANDARD_RESULT_(.*?)div class\\x3d\\x22tF2Cxc\\x22\\x3e\\x3cdiv class\\x3d\\x22yuRUbf\\x22\\x3e\\x3ca href\\x3d\\x22(.*?)\\x22";
+            Regex re = new Regex(pattern, RegexOptions.IgnoreCase | RegexOptions.Singleline);
+            MatchCollection mc = re.Matches(html);
+            ArrayList myList = new ArrayList();
+            int x = 0;
+            foreach (Match m in mc)
+            {
+                string url = HttpUtility.HtmlDecode(m.Groups[2].Value);
+                if (url.StartsWith("http") || url.StartsWith("https"))
+                {
+                    int n = url.IndexOf("?");
+                    if (n > 0)
+                        url = url.Remove(n);
+                    s.Append("<item url=\"" + SetUrl(url) + "\" title=\"" + SetTitle(titles[x++]) + "\" />");
+                }
             }
             return s.ToString();
         }
-
         private string GetAnswerCard(HtmlNode node)
         {
             StringBuilder s = new StringBuilder();
@@ -905,8 +938,9 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 hn = node.SelectSingleNode(".//g-link/a"); //included on 2019-06-24
             if (hn != null)
             {
-                s.Append("<block type=\"twitterCards\" url=\"" + SetUrl(hn.Attributes["href"].Value) + "\">");
-
+                string url = hn.Attributes["href"].Value; //10-01-2022
+                if (url.Contains("/search?num=100")) url = string.Empty; //10-01-2022
+                s.Append("<block type=\"twitterCards\" url=\"" + SetUrl(url) + "\">"); //10-01-2022
                 HtmlNodeCollection nds = node.SelectNodes(".//g-inner-card/div/div[2]/div/g-link/a");
                 if (nds == null)
                     nds = node.SelectNodes(".//g-inner-card/div/a"); //21-10-2021 twitter item urls
@@ -1311,7 +1345,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
 
             nd = node.SelectSingleNode(".//*[@id='lu_map']");
             if (nd == null)
-                nd = node.SelectSingleNode(".//div[@class='xERobd']");  //changed on 26-06-2019
+                nd = node.SelectSingleNode(".//div[@class='xERobd']|.//div[@class='H93uF']");//22-01-2022  //changed on 26-06-2019
             if (nd == null)
                 nd = node.SelectSingleNode(".//a[contains(@data-url,'/maps/')]");//23-08-2021 map selector
             if (nd == null)
@@ -1482,7 +1516,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                         return false; //16-12-2021
                 }
                 // changes on 08-07-2019
-                if (node.SelectSingleNode(".//img[@alt='map image']") != null || node.SelectSingleNode(".//div[@jsname='N760b']|.//div[@class='kno-mrg kno-swp']|.//div[@class='e4xoPb']") != null || node.SelectSingleNode(".//img[contains(@data-bsrc,'/maps/')]") != null)//23-08-2021 map selector//02-08-2021
+                if (node.SelectSingleNode(".//img[@alt='map image']") != null || node.SelectSingleNode(".//div[@jsname='N760b']|.//div[@class='kno-mrg kno-swp']|.//div[@class='e4xoPb']|.//div[@class='H93uF']") != null || node.SelectSingleNode(".//img[contains(@data-bsrc,'/maps/')]") != null)//22-01-2022//23-08-2021 map selector//02-08-2021
                     if (node.SelectSingleNode(".//div[@class='tF2Cxc']") != null || node.Attributes["id"]?.Value == "rhs")//16-12-2021 //10-12-2021
                         return false;//10-12-2021
                     else //10-12-2021
