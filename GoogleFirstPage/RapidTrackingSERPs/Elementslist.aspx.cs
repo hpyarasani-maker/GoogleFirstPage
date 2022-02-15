@@ -54,9 +54,12 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                     }
                     else
                     {
+                        if(ds.Tables[0].Rows.Count < 0 || ds.Tables[0].Rows.Count == 0)
+                        {
+                            lblalllinks.Text = "Data Not Available";
+                        }
                         gvelements.DataSource = null;
                         gvelements.DataBind();
-                        lblalllinks.Text = "Data Not Available";
                     }
                 }
             }
@@ -70,7 +73,6 @@ namespace GoogleFirstPage.RapidTrackingSERPs
         {
             lblalllinks.Visible = true;
             BindData();
-            lblalllinks.Text = "Data Not Available";
         }
 
         protected void gvelements_PageIndexChanging(object sender, GridViewPageEventArgs e)
