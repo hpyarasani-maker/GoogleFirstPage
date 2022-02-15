@@ -70,6 +70,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
         {
             lblalllinks.Visible = true;
             BindData();
+            lblalllinks.Text = "Data Not Available";
         }
 
         protected void gvelements_PageIndexChanging(object sender, GridViewPageEventArgs e)
