@@ -58,8 +58,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                         {
                             lblalllinks.Text = "Data Not Available";
                         }
-                        gvelements.DataSource = null;
-                        gvelements.DataBind();
+                        //gvelements.DataSource = null;
+                        //gvelements.DataBind();
                     }
                 }
             }
