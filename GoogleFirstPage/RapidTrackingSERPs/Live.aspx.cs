@@ -80,7 +80,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                     SendToDatabase(Convert.ToInt32(seid), keyword, jobid);
                     doc = new HtmlAgilityPack.HtmlDocument();
                     doc.LoadHtml(html);
-                    oxylabsjobid.Text = "" + jobid.Trim();
+                    oxylabsjobid.Text = jobid.Trim();
                     if (device == "desktop")
                     {
                         Desktop clsdesktop = new Desktop();

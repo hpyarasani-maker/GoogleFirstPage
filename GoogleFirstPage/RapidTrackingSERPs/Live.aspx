@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Live.aspx.cs" Inherits="GoogleFirstPage.RapidTrackingSERPs.Live" Title="Rapid Tracking - Elements and Classic Links" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Live.aspx.cs" Inherits="GoogleFirstPage.RapidTrackingSERPs.Live" Title="SERP - Elements and Classic Links" %>
 
 <!DOCTYPE html>
 
@@ -391,28 +391,27 @@
              <asp:Label ID="Label1" runat="server" ForeColor="Blue" Font-Size="Large" Font-Bold="true" Text="Elements and Classic Links"></asp:Label><br />
             <br />
             <br />
-              <div  id="oxydiv1" runat="server" >
-                <table border="1" style="vertical-align: initial;vertical-align:middle;width:800px;">
+            <div  id="oxydiv1" runat="server" >
+                <table border="1" style="width:800px">
                     <tr>
-                         <td style="font-weight: bold;">Job ID from Oxylabs</td>
-                        <td>
-                            <asp:Label ID="oxylabsjobid" runat="server" Visible="true" ForeColor="blue"  Font-Size="15px" Font-Bold="true"></asp:Label></td>
+                         <td><b>Job ID from Oxylabs</b> </td>
+                        <td><asp:Label ID="oxylabsjobid" runat="server" Visible="true" ForeColor="blue"  Font-Size="15px" Font-Bold="true"></asp:Label></td>
                     </tr>
                     <tr>
-                        <td style="font-weight: bold;">No. Of Classic Links</td>
-                        <td>
-                            <asp:Label ID="resultscnt" runat="server" Visible="true" ForeColor="blue"  Font-Size="15px" Font-Bold="true"></asp:Label></td>
+                        <td><b>No. Of Classic Links</b> </td>
+                        <td><asp:Label ID="resultscnt" runat="server" Visible="true" ForeColor="blue"  Font-Size="15px" Font-Bold="true"></asp:Label></td>
                     </tr>
                 </table>
             </div>
+
             <div class="wrapper">
                 <asp:Label ID="lblalllinks" runat="server" ForeColor="Blue" Font-Size="Small" Font-Bold="true"></asp:Label>
                 <br />
                 <br />
                 <asp:GridView ID="gridviewlive" AutoGenerateColumns="false" CssClass="footable" HeaderStyle-HorizontalAlign="Right" Font-Bold="true" HeaderStyle-Font-Bold="true" runat="server" OnRowDataBound="gridviewlive_RowDataBound" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" HeaderStyle-Height="30px" RowStyle-Width="1px">
                     <Columns>
-                        <asp:BoundField HeaderText="Position" DataField="Position" />
-                        <asp:BoundField HeaderText="Feature" DataField="Block Type" ItemStyle-HorizontalAlign="Center" />
+                        <asp:BoundField HeaderText="CL Position" DataField="Position" ItemStyle-Width="100px"/>
+                        <asp:BoundField HeaderText="Elements" DataField="Block Type" ItemStyle-HorizontalAlign="Center" />
                         <asp:TemplateField HeaderText="URLs">
                             <HeaderStyle HorizontalAlign="Center" />
                             <ItemTemplate>
@@ -433,7 +432,7 @@
             <br />
             <div id="footer">
                 <%--<div style="font-weight: bold; font-size: 14px;">© 2020 Pi Datametrics | RapidTracking Live Search.</div>--%>
-                <div style="font-weight: bold; font-size: 14px;">© <%= DateTime.Now.Year %> Pi Datametrics | Rapid Tracking - Elements and Classic Links.</div>
+                <div style="font-weight: bold; font-size: 14px;">© <%= DateTime.Now.Year %> Pi Datametrics | SERP - Elements and Classic Links.</div>
             </div>
         </div>
     </form>
