@@ -284,70 +284,70 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Google">
                             <ItemTemplate>
-                                <div style="width: 65px;">
+                                <div style="width: 70px;">
                                     <%# Eval("Google","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Baidu">
                             <ItemTemplate>
-                                <div style="width: 42px;">
+                                <div style="width: 60px;">
                                     <%# Eval("Baidu","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Bing">
                             <ItemTemplate>
-                                <div style="width: 65px;">
+                                <div style="width: 60px;">
                                     <%# Eval("Bing","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Haosou">
                             <ItemTemplate>
-                                <div style="width: 42px;">
+                                <div style="width: 55px;">
                                     <%# Eval("Haosou","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Naver">
                             <ItemTemplate>
-                                <div style="width: 42px;">
+                                <div style="width: 55px;">
                                     <%# Eval("Naver","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Price-searcher">
+                        <%--<asp:TemplateField HeaderText="Price-searcher">
                             <ItemTemplate>
                                 <div style="width: 42px;">
                                     <%# Eval("PriceSearcher","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
-                        </asp:TemplateField>
+                        </asp:TemplateField>--%>
                         <asp:TemplateField HeaderText="Sogou">
                             <ItemTemplate>
-                                <div style="width: 42px;">
+                                <div style="width: 55px;">
                                     <%# Eval("Sogou","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Yandex">
                             <ItemTemplate>
-                                <div style="width: 42px;">
+                                <div style="width: 55px;">
                                     <%# Eval("Yandex","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Yahoo">
                             <ItemTemplate>
-                                <div style="width: 52px;">
+                                <div style="width: 55px;">
                                     <%# Eval("Yahoo","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Sending">
                             <ItemTemplate>
-                                <div style="width: 64px;">
+                                <div style="width: 68px;">
                                     <%# Eval("Sending","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
@@ -375,7 +375,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Error keywords">
                             <ItemTemplate>
-                                <div style="width: 55px;">
+                                <div style="width: 80px;">
                                     <%# Eval("Error_Keywords","{0:N0}") %>
                                 </div>
                             </ItemTemplate>

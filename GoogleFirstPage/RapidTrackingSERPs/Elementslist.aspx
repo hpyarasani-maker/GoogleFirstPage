@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Elementslist.aspx.cs" Inherits="GoogleFirstPage.RapidTrackingSERPs.ElementsList" Title="RapidTracking SERP ElementsList" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Elementslist.aspx.cs" Inherits="GoogleFirstPage.RapidTrackingSERPs.ElementsList" Title="SERP ElementsList" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 
-    <title>RapidTracking SERP ElementsList</title>
+    <title>SERP ElementsList</title>
 
     <meta charset="utf-8" />
 

@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 
-    <title>RapidTracking SERP Elementslists Item Urls</title>
+    <title>SERP Elementslists Item Urls</title>
 
     <meta charset="utf-8" />
 
