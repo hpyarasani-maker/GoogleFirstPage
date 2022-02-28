@@ -336,7 +336,7 @@
             <br />
             <br />
             <div id="footer">
-                <div style="font-weight: bold; font-size: 14px;">© <%= DateTime.Now.Year %> | RapidTracking SERP ElementsList.</div>
+                <div style="font-weight: bold; font-size: 14px;">© <%= DateTime.Now.Year %> | SERP ElementsList.</div>
             </div>
         </div>
     </form>

@@ -39,7 +39,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 {
                     if (device == "desktop")
                         uule = obj["results"][0]["url"].Value<string>().Split('&')[3].Replace("uule=", "");
-                    else uule = obj["results"][0]["url"].Value<string>().Split('&')[4].Replace("uule=", "");
+                    else
+                        uule = obj["results"][0]["url"].Value<string>().Split('&')[4].Replace("uule=", "");
                 }
                 else
                 {
