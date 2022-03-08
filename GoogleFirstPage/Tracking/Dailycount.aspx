@@ -181,12 +181,12 @@
                 <br />
                 <div class="wrapper12">
                     <div id="one">
-                        <label style="color: darkgreen; font-family: Cambria; font-size: x-large">Sending Count =</label><asp:Label runat="server" ID="lblsendcnt" Font-Names="Cambria" ForeColor="#0080ff" Font-Size="Large" Font-Bold="true" Text=" Google + Bing + Yahoo + Yandex + Sogou + Baidu + Haosou + Naver."></asp:Label><br />
+                        <label style="color: darkgreen; font-family: Cambria; font-size: x-large">Sending Count =</label><asp:Label runat="server" ID="lblsendcnt" Font-Names="Cambria" ForeColor="#0080ff" Font-Size="Large" Font-Bold="true" Text=" Google + Baidu  + Bing + Haosou  + Naver + Sogou + Yahoo + Yandex."></asp:Label><br />
                         <label style="color: darkgreen; font-family: Cambria; font-size: x-large">Total Sending Count =</label><asp:Label runat="server" ID="lbltotalsecnt" Font-Names="Cambria" ForeColor="#0080ff" Font-Size="Large" Font-Bold="true" Text=" Sending + Re-Tracked Keywords + Lessthan20."></asp:Label><br />
                         <asp:Label runat="server" ID="lbllessthan20view" Font-Names="Cambria" ForeColor="#0080ff" Font-Size="Large" Font-Bold="true" Text="Click on Lessthan20 Link to View Threads."></asp:Label><br />
                         <br />
                         <br />
-                        <asp:Label runat="server" ID="Label1" Font-Names="Cambria" ForeColor="#0080ff" Font-Size="Large" Font-Bold="true" Text="Search Engines like Bing, Yahoo, Yandex, Sogou, Baidu, Haosou."></asp:Label><br />
+                        <asp:Label runat="server" ID="Label1" Font-Names="Cambria" ForeColor="#0080ff" Font-Size="Large" Font-Bold="true" Text="Search Engines like Baidu, Bing, Haosou, Naver, Sogou, Yahoo, Yandex."></asp:Label><br />
                         <label style="color: darkgreen; font-family: Cambria; font-size: x-large">Sending Request =</label><asp:Label runat="server" ID="Label2" Font-Names="Cambria" ForeColor="#0080ff" Font-Size="Large" Font-Bold="true" Text=" Number of keywords  *  10 Pages."></asp:Label><br />
                     </div>
                     <div id="two">
