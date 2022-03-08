@@ -186,7 +186,7 @@
                         <asp:Label runat="server" ID="lbllessthan20view" Font-Names="Cambria" ForeColor="#0080ff" Font-Size="Large" Font-Bold="true" Text="Click on Lessthan20 Link to View Threads."></asp:Label><br />
                         <br />
                         <br />
-                        <asp:Label runat="server" ID="Label1" Font-Names="Cambria" ForeColor="#0080ff" Font-Size="Large" Font-Bold="true" Text="Search Engines like Bing, Yahoo, Yandex, Sogou, PriceSearcher, Baidu, Haosou."></asp:Label><br />
+                        <asp:Label runat="server" ID="Label1" Font-Names="Cambria" ForeColor="#0080ff" Font-Size="Large" Font-Bold="true" Text="Search Engines like Bing, Yahoo, Yandex, Sogou, Baidu, Haosou."></asp:Label><br />
                         <label style="color: darkgreen; font-family: Cambria; font-size: x-large">Sending Request =</label><asp:Label runat="server" ID="Label2" Font-Names="Cambria" ForeColor="#0080ff" Font-Size="Large" Font-Bold="true" Text=" Number of keywords  *  10 Pages."></asp:Label><br />
                     </div>
                     <div id="two">
