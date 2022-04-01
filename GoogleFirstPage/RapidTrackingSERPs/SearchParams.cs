@@ -1980,27 +1980,27 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             },//end 20-12-2021
             new SearchProperties() //01-04-2022 Barcelona
            {
-             seid =596, domain ="es", geo_location="Barcelona,Catalonia,Spain", locale= "es-es", uule = "w+CAIQICIZQmFyY2Vsb25hLENhdGFsb25pYSxTcGFpbg==",device="desktop"
+             seid =596, domain ="es", geo_location="Barcelona,Catalonia,Spain", locale= "es-es", uule = "w+CAIQICIZQmFyY2Vsb25hLENhdGFsb25pYSxTcGFpbg==",device="desktop",sename="Google ES (Barcelona,Catalonia)"
            },
            new SearchProperties()
            {
-             seid =597, domain ="es", geo_location="Barcelona,Catalonia,Spain", locale= "es-es", uule = "w+CAIQICIZQmFyY2Vsb25hLENhdGFsb25pYSxTcGFpbg==",device="mobile_android"
+             seid =597, domain ="es", geo_location="Barcelona,Catalonia,Spain", locale= "es-es", uule = "w+CAIQICIZQmFyY2Vsb25hLENhdGFsb25pYSxTcGFpbg==",device="mobile_android",sename="Google ES (Barcelona,Catalonia, Mobile)"
            },
            new SearchProperties()//01-04-2022 Madrid
            {
-              seid =598, domain ="es", geo_location="Province of Madrid,Madrid,Spain", locale= "en-es", uule = "w+CAIQICIfUHJvdmluY2Ugb2YgTWFkcmlkLE1hZHJpZCxTcGFpbg==",device="desktop"
+              seid =598, domain ="es", geo_location="Province of Madrid,Madrid,Spain", locale= "en-es", uule = "w+CAIQICIfUHJvdmluY2Ugb2YgTWFkcmlkLE1hZHJpZCxTcGFpbg==",device="desktop",sename="Google ES (Province of Madrid, Madrid)"
            },
            new SearchProperties()
            {
-              seid =599, domain ="es", geo_location="Province of Madrid,Madrid,Spain", locale= "en-es", uule = "w+CAIQICIfUHJvdmluY2Ugb2YgTWFkcmlkLE1hZHJpZCxTcGFpbg==",device="mobile_android"
+              seid =599, domain ="es", geo_location="Province of Madrid,Madrid,Spain", locale= "en-es", uule = "w+CAIQICIfUHJvdmluY2Ugb2YgTWFkcmlkLE1hZHJpZCxTcGFpbg==",device="mobile_android",sename="Google ES (Province of Madrid,Madrid, Mobile)"
            },
             new SearchProperties() //01-04-2022 Valencia
            {
-              seid =600, domain ="es", geo_location="Province of Valencia,Valencia,Spain", locale= "es-es", uule = "w+CAIQICIjUHJvdmluY2Ugb2YgVmFsZW5jaWEsVmFsZW5jaWEsU3BhaW4=",device="desktop"
+              seid =600, domain ="es", geo_location="Province of Valencia,Valencia,Spain", locale= "es-es", uule = "w+CAIQICIjUHJvdmluY2Ugb2YgVmFsZW5jaWEsVmFsZW5jaWEsU3BhaW4=",device="desktop",sename="Google ES (Province of Valencia,Valencia)"
            },
            new SearchProperties()
            {
-              seid =601, domain ="es", geo_location="Province of Valencia,Valencia,Spain", locale= "es-es", uule = "w+CAIQICIjUHJvdmluY2Ugb2YgVmFsZW5jaWEsVmFsZW5jaWEsU3BhaW4=",device="mobile_android"
+              seid =601, domain ="es", geo_location="Province of Valencia,Valencia,Spain", locale= "es-es", uule = "w+CAIQICIjUHJvdmluY2Ugb2YgVmFsZW5jaWEsVmFsZW5jaWEsU3BhaW4=",device="mobile_android",sename="Google ES (Province of Valencia,Valencia, Mobile)"
            },//end 01-04-2022
          };
     }

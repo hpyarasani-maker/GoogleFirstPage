@@ -431,7 +431,7 @@
                     <asp:TextBox ID="txtjobid" runat="server" Height="27px" Width="220px" CssClass="text1" AutoPostBack="false" placeholder="Jobid is Required" MaxLength="23"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="req1" runat="server" ErrorMessage="*" ControlToValidate="txtjobid" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ControlToValidate="txtjobid" runat="server" ForeColor="Red" Font-Bold="true" ErrorMessage="*" ValidationExpression="^\d+"></asp:RegularExpressionValidator>
-                    <asp:Button runat="server" Text="Submit" CssClass="btnlf" Height="27px" ID="btndwnload" Width="120px" OnClick="btndwnload_Click" />
+                    <asp:Button ID="btnjobid" runat="server" OnClick="btnjobid_Click" Text="Submit" CssClass="btnlf" Height="27px" Width="120px" />
                     <br />
                     <br />
                     <br />

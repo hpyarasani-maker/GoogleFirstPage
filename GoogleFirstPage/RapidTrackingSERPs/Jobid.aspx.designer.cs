@@ -67,13 +67,13 @@ namespace GoogleFirstPage.RapidTrackingSERPs {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
         
         /// <summary>
-        /// btndwnload control.
+        /// btnjobid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btndwnload;
+        protected global::System.Web.UI.WebControls.Button btnjobid;
         
         /// <summary>
         /// oxydiv1 control.
