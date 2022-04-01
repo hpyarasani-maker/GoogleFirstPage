@@ -612,6 +612,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             }
             else
             {
+                if (node.SelectSingleNode("./div[@id='rhs']") != null || node.Attributes["id"]?.Value == "rhs") return string.Empty; //01-04-2022
                 HtmlNodeCollection col = node.SelectNodes(".//h3[@class='r']/a");
                 if (col == null)
                     col = node.SelectNodes(".//div[@class='r']/a"); // 02-06-2020
@@ -1506,7 +1507,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 || node.SelectSingleNode(".//div[@class='vkc_np kkww4d']") != null //21-09-2020 updated answered card selectors  //03-06-2020
                 || node.SelectSingleNode(".//div[@class='setTDc']") != null //07-12-2020 answered card selector
                 || node.SelectSingleNode(".//div[@class='kp-blk ouUsKb G45kvd']") != null //24-08-2021 answer card selector
-                || node.SelectSingleNode(".//div[@class='M0XuFe mnr-c vk_c']") != null)//23-12-2021
+                || node.SelectSingleNode(".//div[@class='M0XuFe mnr-c vk_c']") != null //23-12-2021
+                || node.SelectSingleNode(".//div[@class='KIy09e obcontainer wDYxhc']") != null) //31-03-2022
             {
                 if (node.SelectSingleNode(".//div[@class='BET1rd']|.//div[@class='EfDVh wDYxhc NFQFxe']") == null && node.SelectSingleNode(".//div[@class='tpa-cc']") == null //23-12-2021 //21-08-2021 //25-09-2020
                     && node.SelectSingleNode(".//div[contains(@class,'kno-fb-ctx')]") == null) //13-10-2021
