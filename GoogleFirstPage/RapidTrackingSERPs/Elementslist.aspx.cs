@@ -54,7 +54,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                     }
                     else
                     {
-                        if(ds.Tables[0].Rows.Count < 0 || ds.Tables[0].Rows.Count == 0)
+                        if (ds.Tables[0].Rows.Count < 0 || ds.Tables[0].Rows.Count == 0)
                         {
                             lblalllinks.Text = "Data Not Available";
                         }
