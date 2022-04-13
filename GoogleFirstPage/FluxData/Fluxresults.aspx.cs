@@ -14,7 +14,8 @@ namespace GoogleFirstPage.FluxData
     public partial class Fluxresults : System.Web.UI.Page
     {
         SqlConnection con1 = new SqlConnection(ConfigurationManager.ConnectionStrings["Fluxresults"].ToString());
-
+        SqlConnection con2 = new SqlConnection(ConfigurationManager.ConnectionStrings["allsearchengines"].ToString());
+        
         SqlCommand cmd;
         SqlDataAdapter da;
         DataTable dt;
@@ -26,7 +27,7 @@ namespace GoogleFirstPage.FluxData
                 calender.EndDate = DateTime.Now.AddDays(-1);
                 txtDate.Attributes.Add("ReadOnly", "ReadOnly");
                 txtDate.Text = DateTime.Now.AddDays(-1).ToString("yyyy-MM-dd");
-                cmd = new SqlCommand("GetSearchEngines", con1);
+                cmd = new SqlCommand("GetSearchEngines", con2);
                 cmd.CommandType = CommandType.StoredProcedure;
                 da = new SqlDataAdapter(cmd);
                 dt = new DataTable();
