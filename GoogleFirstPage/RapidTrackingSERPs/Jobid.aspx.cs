@@ -73,6 +73,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                 clscnt++;
                                 Pos = Pos + 1;
                                 dt.Rows.Add("", node.Attributes[0].Value, node.Attributes[1].Value, Pos);
+                                //dt.Rows.Add("<CL/>", node.Attributes[0].Value, node.Attributes[1].Value, Pos);
                                 blkcnt = 0;
                             }
                             else
@@ -268,7 +269,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 }
                 else
                 {
-                    lblalllinks.Text = jobid + "Provided jobid has expired";
+                    lblalllinks.Text = jobid + " :   Provided jobid has expired";
                 }
             }
             catch (Exception ex)
