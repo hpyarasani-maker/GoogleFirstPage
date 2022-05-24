@@ -240,7 +240,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                     GetJobid(jobid);
                     if (device == "desktop")
                         //url = "https://www.google." + sp.domain + "/search?q=" + keyword + "&gl=" + s1 + "&hl=" + lan1 + "&uule=" + sp.uule + "&num=100&aomd=1&safe=off&safe_search=0&gs_l=desktop&gws_rd=ssl,cr";                        
-                        url = "https://www.google." + gp.domain + "/search?q=" + keyword.Replace("'", "%27") + "&gl=" + s1 + "&hl=" + lan1 + "&uule=" + uule + "&num=100&aomd=1&safe=off&safe_search=0&gs_l=desktop&gws_rd=ssl,cr";
+                        //url = "https://www.google." + gp.domain + "/search?q=" + keyword.Replace("'", "%27") + "&gl=" + s1 + "&hl=" + lan1 + "&uule=" + uule + "&num=100&aomd=1&safe=off&safe_search=0&gs_l=desktop&gws_rd=ssl,cr";
+                        url = "https://www.google." + gp.domain + "/search?q=" + keyword.Replace("'", "%27") + "&gl=" + s1 + "&hl=" + lan1 + "&uule=" + uule + "&num=100&aomd=1&safe=off&safe_search=0";
                     else
                         url = "https://www.google." + gp.domain + "/search?q=" + keyword.Replace("'", "%27") + "&gl=" + s1 + "&hl=" + lan1 + "&uule=" + uule + "&num=100&glp=1&adtest=on&tci=g:2752&safe=images&safe=high&adtest-useragent=Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Mobile/15E148 Safari/604.1";
 
