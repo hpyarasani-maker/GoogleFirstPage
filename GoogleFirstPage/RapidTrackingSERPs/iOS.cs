@@ -1570,25 +1570,30 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             return s.ToString();
         }//31-01-2022*/
 
-        private string GetPeopleAlsoAskUrls(string[] titles) //People also method 31-01-2022
+        private string GetPeopleAlsoAskUrls(string[] titles) //People also method 31-01-2022 //06-06-2022
         {
             StringBuilder s = new StringBuilder();
-            string pattern = @"WEB_ANSWERS_STANDARD_RESULT_(.*?)div class\\x3d\\x22Xv4xee\\x22\\x3e\\x3ch3 class\\x3d\\x22yuRUbf JtG40d MBeuO q8U8x\\x22\\x3e\\x3ca class\\x3d\\x22sXtWJb\\x22 href\\x3d\\x22(.*?)\\x22";
-            Regex re = new Regex(pattern, RegexOptions.IgnoreCase | RegexOptions.Singleline);
+            TimeSpan ts = TimeSpan.FromMilliseconds(500);
+            string pattern = @"[WEB_ANSWERS_STANDARD_RESULT_|K3M0Td g1Khaf MUmB9 zbA8Me](.*?)div class\\x3d\\x22Xv4xee\\x22\\x3e\\x3ch3 class\\x3d\\x22yuRUbf JtG40d MBeuO q8U8x\\x22\\x3e\\x3ca class\\x3d\\x22sXtWJb\\x22 href\\x3d\\x22(.*?)\\x22";
+            Regex re = new Regex(pattern, RegexOptions.IgnoreCase | RegexOptions.Singleline, ts);
             MatchCollection mc = re.Matches(html);
             ArrayList myList = new ArrayList();
             int x = 0;
             char[] yt = { '\\', '2', '6' };
-            foreach (Match m in mc)
+            try
             {
-                string url = HttpUtility.HtmlDecode(m.Groups[2].Value);
-                if (url.StartsWith("http") || url.StartsWith("https"))
+                foreach (Match m in mc)
                 {
-                    url = SetYTUrl(url, yt); //12-03-2022
-                    if (x < titles.Length)//22-02-2022
-                        s.Append("<item url=\"" + SetUrl(url) + "\" title=\"" + SetTitle(titles[x++]) + "\" />");//22-02-2022
+                    string url = HttpUtility.HtmlDecode(m.Groups[2].Value);
+                    if (url.StartsWith("http") || url.StartsWith("https"))
+                    {
+                        url = SetYTUrl(url, yt); //12-03-2022
+                        if (x < titles.Length)//22-02-2022
+                            s.Append("<item url=\"" + SetUrl(url) + "\" title=\"" + SetTitle(titles[x++]) + "\" />");//22-02-2022
+                    }
                 }
             }
+            catch { }
             for (; x < titles.Length; x++)//18-02-2022
                 s.Append("<item url=\"\" title=\"" + SetTitle(titles[x]) + "\" />");//18-02-2022
             return s.ToString();
@@ -1941,7 +1946,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
 
             nds = node.SelectNodes(".//g-inner-card/a");
             if (nds == null)
-                nds = node.SelectNodes(".//g-inner-card/div/a|.//div[@class='kno-fb-ctx n49mp']/div/a|.//div[@class='zZ9K7e']/a|.//div[@class='kno-fb-ctx n49mp']/div/div/a|.//g-inner-card/div/div/a");//07-10-2021 TS item urls //03-09-2021 TS Item urls //13-07-2021 TS item urls   // 30-10-2019
+                nds = node.SelectNodes(".//g-inner-card/div/a|.//div[@class='kno-fb-ctx n49mp']/div/a|.//div[@class='zZ9K7e']/a|.//div[contains(@class,'kno-fb-ctx')]/div/div/a|.//g-inner-card/div/div/a");//06-06-2022//07-10-2021 TS item urls //03-09-2021 TS Item urls //13-07-2021 TS item urls   // 30-10-2019
             if (nds == null)
                 nds = node.SelectNodes(".//g-inner-card/div/div/a");    // 13-12-2019
             if (nds == null)
