@@ -2004,11 +2004,11 @@ namespace GoogleFirstPage.RapidTrackingSERPs
            },//end 01-04-2022
            new SearchProperties() //13-07-2022
            {
-              seid =602, domain ="co.uk", geo_location="Bermuda", locale= "en-bm", uule = "w+CAIQICIHQmVybXVkYQ==",device="desktop"
+              seid =602, domain ="co.uk", geo_location="Bermuda", locale= "en-bm", uule = "w+CAIQICIHQmVybXVkYQ==",device="desktop",sename="Google UK (Bermuda)"
            },
            new SearchProperties()
            {
-              seid =603, domain ="co.uk", geo_location="Bermuda", locale= "en-bm", uule = "w+CAIQICIHQmVybXVkYQ==",device="mobile_android"
+              seid =603, domain ="co.uk", geo_location="Bermuda", locale= "en-bm", uule = "w+CAIQICIHQmVybXVkYQ==",device="mobile_android",sename="Google UK (Bermuda, Mobile)"
            }, //end 13-07-2022
          };
     }
