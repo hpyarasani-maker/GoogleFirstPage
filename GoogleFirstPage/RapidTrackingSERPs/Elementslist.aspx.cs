@@ -36,7 +36,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
         {
             try
             {
-                using (SqlConnection con = new SqlConnection(connection))
+                using (var con = new SqlConnection(connection))
                 {
                     cmd = new SqlCommand("[UI_GetElementsList]", con);
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -65,14 +65,17 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             }
             catch (Exception ex)
             {
-                string a = ex.Message;
+                lblalllinks.Text = ex.StackTrace.ToString();
             }
+           
         }
 
         protected void btnelementslist_Click(object sender, EventArgs e)
         {
             lblalllinks.Visible = true;
             BindData();
+           
+  
         }
 
         protected void gvelements_PageIndexChanging(object sender, GridViewPageEventArgs e)

@@ -189,7 +189,7 @@
                 <br />
 
 
-                <asp:GridView ID="gvelements" AutoGenerateColumns="false" CssClass="footable" HeaderStyle-HorizontalAlign="Right" Font-Bold="true" HeaderStyle-Font-Bold="true" runat="server" OnRowDataBound="gvelements_RowDataBound" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" HeaderStyle-Height="30px" RowStyle-Width="1px" AllowPaging="true" OnPageIndexChanging="gvelements_PageIndexChanging" PageSize="30">
+                <asp:GridView ID="gvelements" AutoGenerateColumns="false" CssClass="footable" HeaderStyle-HorizontalAlign="Right" Font-Bold="true" HeaderStyle-Font-Bold="true" runat="server" OnRowDataBound="gvelements_RowDataBound" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" HeaderStyle-Height="30px" RowStyle-Width="1px" AllowPaging="true" OnPageIndexChanging="gvelements_PageIndexChanging" PageSize="100">
                     <Columns>
                         <asp:TemplateField HeaderText="Date">
                             <ItemTemplate>
