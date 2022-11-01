@@ -195,11 +195,11 @@ namespace GoogleFirstPage.Xmltracker
                                 if (node?.Name == "a")
                                     eleVal = $"<{node?.Name} href=\"{WebUtility.HtmlEncode(WebUtility.HtmlDecode(node?.Attributes["href"]?.Value))}\">";
                                 else if (node?.Name == "img")
-                                    eleVal = $"<{node?.Name} alt=\"{node?.Attributes["alt"]?.Value}\" title=\"{node?.Attributes["title"]?.Value}\">";
+                                    eleVal = $"<{node?.Name} alt=\"{WebUtility.HtmlEncode(WebUtility.HtmlDecode(node?.Attributes["alt"]?.Value))}\" title=\"{WebUtility.HtmlEncode(WebUtility.HtmlDecode(node?.Attributes["title"]?.Value))}\">";
                                 else if (node?.Name == "meta")
                                 {
                                     if (node?.Attributes["name"]?.Value == "keywords" || node?.Attributes["name"]?.Value == "description")
-                                        eleVal = $"<{node?.Name} name=\"{node?.Attributes["name"]?.Value}\" content=\"{node?.Attributes["content"]?.Value}\">";
+                                        eleVal = $"<{node?.Name} name=\"{node?.Attributes["name"]?.Value}\" content=\"{WebUtility.HtmlEncode(WebUtility.HtmlDecode(node?.Attributes["content"]?.Value))}\">";
                                 }
                                 else
                                     eleVal = $"<{node?.Name}>";
@@ -220,7 +220,7 @@ namespace GoogleFirstPage.Xmltracker
                             }
                             catch (Exception ex)
                             {
-                                
+                                Response.Write(ex.Message);
                             }
                         }
 
@@ -233,9 +233,7 @@ namespace GoogleFirstPage.Xmltracker
                 xd.PreserveWhitespace = true;
 
                 xd.LoadXml(SanitizeXmlString(sb.ToString().Replace("\n", "").Replace("\r\n", "")));
-                //xd.Save(xmlPath);
                 //xd.PreserveWhitespace = true;
-                //xmlTxt.Text = xd.InnerXml;
                 Response.ContentType = "text/xml";
                 Response.Write(xd.InnerXml);
 

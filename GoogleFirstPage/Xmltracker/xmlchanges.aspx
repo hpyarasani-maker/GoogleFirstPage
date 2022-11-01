@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 
-    <title>XML Tracker</title>
+    <title>Elementary by Pi</title>
 
     <meta charset="utf-8" />
 
@@ -172,15 +172,6 @@
         </div>
         <div class="containerDB">
             <div class="header3">
-                <div style="margin-top: 12px;">
-                    <span class="auto-style1">Date :</span>&nbsp;&nbsp;
-                             <asp:TextBox ID="txtdate" runat="server" placeholder="Date" CssClass="text1" Height="30px" Width="85px"></asp:TextBox>
-                    <ajaxToolkit:CalendarExtender ID="calendar" PopupButtonID="img_pop" runat="server" TargetControlID="txtDate" Format="yyyy-MM-dd" StartDate="2022-10-31" />
-                    &nbsp;&nbsp;
-                <asp:ImageButton ID="img_pop" ImageUrl="~/images/calendarnew.png" ImageAlign="Bottom" runat="server" Height="25px" Width="30px" />&nbsp;&nbsp;&nbsp;
-
-                <asp:Button runat="server" Text="Submit" CssClass="btnlf" Height="27px" ID="btnchanges" Width="120px" OnClick="btnchanges_Click" />
-                </div>
             </div>
             <br />
             <br />
@@ -190,7 +181,7 @@
                 <asp:Label ID="lbl1" runat="server" CssClass="LblClassNew"></asp:Label>
                 <br />
 
-                <h1>XML Tracker Report</h1>
+                <h1>Elementary Changes Report</h1>
 
                 <asp:UpdateProgress ID="UpdateProgress1" runat="server">
 

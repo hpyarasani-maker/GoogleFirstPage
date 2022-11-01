@@ -20,8 +20,9 @@ namespace GoogleFirstPage.Xmltracker
 
 
             SqlConnection con = new SqlConnection(connection);
-            string strQuerry = "Select xmldata from xmlsource Where uid=" + uid + " and convert(varchar(10),date,127)='" +date  + "'";
-            SqlCommand comm = new SqlCommand(strQuerry, con);
+            //string strQuerry = "Select xmldata from xmlsource Where uid=" + uid + " and convert(varchar(10),date,127)='" + date  + "'";
+            string strQuery = "Exec [GetXmlData] '" + uid + "','" + date + "'";
+            SqlCommand comm = new SqlCommand(strQuery, con);
             try
             {
                 con.Open();
