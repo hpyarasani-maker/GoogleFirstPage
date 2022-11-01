@@ -187,6 +187,7 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Xmltracker\Default2.aspx" />
     <Content Include="Xmltracker\keywords.aspx" />
     <Content Include="Xmltracker\viewxml.aspx" />
     <Content Include="Xmltracker\xmlchanges.aspx" />
@@ -614,6 +615,13 @@
     <Compile Include="TrendingTwoHoursResultsFromDB\Viewxml.aspx.designer.cs">
       <DependentUpon>Viewxml.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Xmltracker\Default2.aspx.cs">
+      <DependentUpon>Default2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xmltracker\Default2.aspx.designer.cs">
+      <DependentUpon>Default2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Xmltracker\keywords.aspx.cs">
       <DependentUpon>keywords.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -621,6 +629,7 @@
     <Compile Include="Xmltracker\keywords.aspx.designer.cs">
       <DependentUpon>keywords.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Xmltracker\MyCls.cs" />
     <Compile Include="Xmltracker\viewxml.aspx.cs">
       <DependentUpon>viewxml.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

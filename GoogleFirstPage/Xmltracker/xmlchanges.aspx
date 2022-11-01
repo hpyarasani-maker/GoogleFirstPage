@@ -189,16 +189,21 @@
 
                 <asp:Label ID="lbl1" runat="server" CssClass="LblClassNew"></asp:Label>
                 <br />
-                <br />
 
-                <h2>XML changes</h2>
+                <h1>XML Tracker Report</h1>
+
                 <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+
+                 <%--   <ProgressTemplate>
+                        <b>Processing...</b>
+                    </ProgressTemplate>--%>
                 </asp:UpdateProgress>
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
-                        <asp:GridView ID="gvxmlchanges" AutoGenerateColumns="true" runat="server" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px">
-                            
-                        </asp:GridView>
+                        <p>
+                            <asp:PlaceHolder ID="phr" runat="server"></asp:PlaceHolder>
+                            &nbsp;
+                        </p>
                     </ContentTemplate>
                 </asp:UpdatePanel>
                 <br />

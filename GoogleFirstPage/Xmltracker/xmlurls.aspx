@@ -172,11 +172,7 @@
             <br />
             <div class="wrapper">
                 <%--<label style="font-family:Cambria;font-weight:bold;color:black;font-size:larger">XML Tracker</label>--%>
-                <br />
-                <br />
-               
                 <asp:Label ID="lblalllinks" runat="server" ForeColor="Blue" Font-Size="Small" Font-Bold="true"></asp:Label><br />
-
                 <asp:Label ID="lbl1" runat="server" Text="Click on  '' View XML''    for Processing XML Content" ForeColor="Blue"  Font-Size="Large" Font-Bold="true" ></asp:Label>
                 <br />
                 <br />
@@ -199,15 +195,15 @@
                                 <asp:TemplateField HeaderText="ViewXML">
                                     <HeaderStyle HorizontalAlign="Center" />
                                     <ItemTemplate>
-                                        <%--<a href="viewxml.aspx?uid=<%# Eval("uid") %>&url=<%# Eval("url") %>" target="_blank">View XML</a>--%>
-                                        <a href="viewxml.aspx?&url=<%# Eval("url") %>" target="_blank">View XML</a>
+                                        <a href="viewxml.aspx?uid=<%# Eval("uid") %>&url=<%# Eval("url") %>" target="_blank">View XML</a>
+                                        <%--<a href="viewxml.aspx?&url=<%# Eval("url") %>" target="_blank">View XML</a>--%>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="XML Changes">
                                     <HeaderStyle HorizontalAlign="Center" />
                                     <ItemTemplate>
-                                        <%--<a href="xmlchanges.aspx?uid=<%# Eval("uid") %>" target="_blank">XML Changes</a>--%>
-                                        <a href="xmlchanges.aspx?url=<%# Eval("url") %>" target="_blank">XML Changes</a>
+                                        <a href="xmlchanges.aspx?uid=<%# Eval("uid") %>" target="_blank">XML Changes</a>
+                                        <%--<a href="xmlchanges.aspx?url=<%# Eval("url") %>" target="_blank">XML Changes</a>--%>
                                     </ItemTemplate>
                                 </asp:TemplateField>
                             </Columns>

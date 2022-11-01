@@ -1,0 +1,69 @@
+﻿namespace MyLib
+{
+    using System;
+    using System.Collections;
+
+    public class MyCls
+    {
+        public bool blChng;
+        public bool blColChng;
+
+        public string[] diffInfo(IEnumerator n, IEnumerator ol)
+        {
+            string[] strArray = new string[] { "", "" };
+                Label_0154:
+                if (!n.MoveNext())
+                {
+                    ol.Reset();
+                    return strArray;
+                }
+                try
+                {
+                    string[] strArray4;
+                    string[] strArray5;
+                    if (ol.MoveNext())
+                    {
+                        try
+                        {
+                            if (!n.Current.ToString().Equals(ol.Current.ToString()))
+                            {
+                                string[] strArray2;
+                                string[] strArray3;
+                                (strArray2 = strArray)[0] = strArray2[0] + "<li>" + n.Current.ToString().Replace("<", "&lt;") + "</li>";
+                                (strArray3 = strArray)[1] = strArray3[1] + "<li>" + ol.Current.ToString().Replace("<", "&lt;") + "</li>";
+                                this.blChng = true;
+                                this.blColChng = true;
+                            }
+                            goto Label_0154;
+                        }
+                        catch (Exception exception)
+                        {
+                            throw new Exception("at diff1 - " + exception.Message);
+                        }
+                    }
+                    (strArray4 = strArray)[0] = strArray4[0] + "<li>" + n.Current.ToString().Replace("<", "&lt;") + "</li>";
+                    (strArray5 = strArray)[1] = strArray5[1] + "<li> - - - ";
+                    this.blChng = true;
+                    this.blColChng = true;
+                }
+                catch (Exception exception2)
+                {
+                    throw new Exception("at diff3 - " + exception2.Message);
+                }
+                goto Label_0154;
+                return strArray;
+        }
+
+        public string getColumn(IEnumerator nd)
+        {
+
+            string str = "";
+            while (nd.MoveNext())
+            {
+                str = str + "<li>" + nd.Current.ToString().Replace("<", "&lt;") + "</li>";
+            }
+            return str;
+        }
+    }
+}
+

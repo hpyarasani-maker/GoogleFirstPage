@@ -112,20 +112,20 @@ namespace GoogleFirstPage.OxylabsRequestCount
             {
                 if (e.Row.RowType == DataControlRowType.DataRow)
                 {
-                    Date = gvrequestcount.DataKeys[e.Row.RowIndex].Value.ToString();
+                    //Date = gvrequestcount.DataKeys[e.Row.RowIndex].Value.ToString();
 
-                    int count = Convert.ToInt32(((HyperLink)e.Row.FindControl("lbllessthan20")).Text);
-                    if (count > 0)
-                    {
-                        HyperLink lbllessthan20 = (HyperLink)e.Row.FindControl("lbllessthan20");
-                        lbllessthan20.Text = count.ToString();
-                    }
-                    else
-                    {
-                        HyperLink lbllessthan20 = (HyperLink)e.Row.FindControl("lbllessthan20");
-                        lbllessthan20.Text = count.ToString();
-                        lbllessthan20.Enabled = false;
-                    }
+                    //int count = Convert.ToInt32(((HyperLink)e.Row.FindControl("lbllessthan20")).Text);
+                    //if (count > 0)
+                    //{
+                    //    HyperLink lbllessthan20 = (HyperLink)e.Row.FindControl("lbllessthan20");
+                    //    lbllessthan20.Text = count.ToString();
+                    //}
+                    //else
+                    //{
+                    //    HyperLink lbllessthan20 = (HyperLink)e.Row.FindControl("lbllessthan20");
+                    //    lbllessthan20.Text = count.ToString();
+                    //    lbllessthan20.Enabled = false;
+                    //}
                 }
             }
             catch (Exception ex)

@@ -112,12 +112,12 @@ namespace GoogleFirstPage.Xmltracker {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// gvxmlchanges control.
+        /// phr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvxmlchanges;
+        protected global::System.Web.UI.WebControls.PlaceHolder phr;
     }
 }

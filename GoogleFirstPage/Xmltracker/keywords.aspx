@@ -141,9 +141,9 @@
                     <div class="navbar navbar-static-top">
                         <div>
                             <div class="navigation">
-                    <label style="font-family:Calibri;font-weight:bold;color:white;font-size:x-large;margin-left:-90px;margin-top:20px">Elementary by Pi</label>
+                                <label style="font-family: Calibri; font-weight: bold; color: white; font-size: x-large; margin-left: -90px; margin-top: 20px">Elementary by Pi</label>
 
-                                <nav style="margin-left: 950px; margin-top:-50px">
+                                <nav style="margin-left: 950px; margin-top: -50px">
                                     <ul class="nav topnav bold">
                                         <li class="dropdown">
                                             <a href="../Dashboard.aspx">Home</a>&nbsp;<ul style="display: none;" class="dropdown-menu bold">
@@ -165,7 +165,6 @@
                 <div style="margin-top: 12px;">
                     &nbsp; <strong><span class="auto-style2">Client :</span></strong>&nbsp;&nbsp; 
                    <asp:DropDownList ID="ddlclient" CssClass="text1" Height="32px" Width="260px" runat="server" AutoPostBack="true">
-                       <%--<asp:ListItem Enabled="true" Text="Branded Content Cond Nast Britain" Value="1"></asp:ListItem>--%>
                        <asp:ListItem Enabled="true" Text="All Keywords" Value="1"></asp:ListItem>
                    </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" Text="*" ControlToValidate="ddlclient" InitialValue="---------------Select Client---------------"></asp:RequiredFieldValidator>
@@ -186,7 +185,7 @@
                 <br />
 
 
-                <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+                 <asp:UpdateProgress ID="UpdateProgress1" runat="server">
                 </asp:UpdateProgress>
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <Triggers>
@@ -204,7 +203,7 @@
                                 </asp:TemplateField>
                                 <asp:TemplateField>
                                     <ItemTemplate>
-                                        <%--<a href="xmlurls.aspx?kid=<%# Eval("kid") %>" target="_blank">Top Results</a>--%>
+                                        <%--<a href="xmlresults.aspx?kid=<%# Eval("kid") %>" target="_blank">Top Results</a>--%>
                                         <a href="xmlurls.aspx?kid=<%# Eval("kid") %>" target="_blank">Link</a>
                                     </ItemTemplate>
                                 </asp:TemplateField>

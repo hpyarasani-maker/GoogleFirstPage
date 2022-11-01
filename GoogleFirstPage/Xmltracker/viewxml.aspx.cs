@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -23,9 +24,10 @@ namespace GoogleFirstPage.Xmltracker
             //string date = Request.QueryString["date"].ToString();
             //string kid = Request.QueryString["kid"].ToString();
             //string uid = Request.QueryString["uid"].ToString();
-            string date = DateTime.Today.ToString("yyyy-MM-dd");
             string url = Request.QueryString["url"].ToString();
-            
+            string date = DateTime.Today.ToString("yyyy-MM-dd");
+
+
 
             processresults(url);
 
@@ -169,10 +171,10 @@ namespace GoogleFirstPage.Xmltracker
                 HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
                 doc.LoadHtml(Text1);
 
-                string htmlElements = "title,dd,dl,dt,menu,pre,cite,code,data,time,div,h1,h2,h3,h4,h5,h6,p,span,a,ul,ol,li,b,i,u,hr,br,strong,em,table,tbody,tfoot,tr,th,thead,td,col,colgroup,img,picture,map,track,video,svg,button,form,input,label,option,select,textarea";
+                string htmlElements = "meta,title,dd,dl,dt,menu,pre,cite,code,data,time,div,h1,h2,h3,h4,h5,h6,p,span,a,ul,ol,li,b,i,u,hr,br,strong,em,table,tbody,tfoot,tr,th,thead,td,col,colgroup,img,picture,map,track,video,svg,button,form,input,label,option,select,textarea";
                 var strElements = htmlElements.Split(',');
 
-                sb.Append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
+                sb.Append("<?xml version=\"1.0\" ?>");
                 sb.Append("<XmlSource date=\"" + WebUtility.HtmlEncode(WebUtility.HtmlDecode(DateTime.Today.ToString("yyyy-MM-dd"))) + "\" url=\"" + WebUtility.HtmlEncode(WebUtility.HtmlDecode(url)) + "\">");
 
                 foreach (string ele in strElements)
@@ -189,19 +191,32 @@ namespace GoogleFirstPage.Xmltracker
                                 string eleVal = string.Empty;
                                 string nodeText = WebUtility.HtmlEncode(WebUtility.HtmlDecode(node?.InnerText));
 
-                                if (string.IsNullOrEmpty(nodeText)) continue;
+                                if (string.IsNullOrEmpty(nodeText) && node?.Name != "meta") continue;
                                 if (node?.Name == "a")
                                     eleVal = $"<{node?.Name} href=\"{WebUtility.HtmlEncode(WebUtility.HtmlDecode(node?.Attributes["href"]?.Value))}\">";
                                 else if (node?.Name == "img")
                                     eleVal = $"<{node?.Name} alt=\"{node?.Attributes["alt"]?.Value}\" title=\"{node?.Attributes["title"]?.Value}\">";
+                                else if (node?.Name == "meta")
+                                {
+                                    if (node?.Attributes["name"]?.Value == "keywords" || node?.Attributes["name"]?.Value == "description")
+                                        eleVal = $"<{node?.Name} name=\"{node?.Attributes["name"]?.Value}\" content=\"{node?.Attributes["content"]?.Value}\">";
+                                }
                                 else
                                     eleVal = $"<{node?.Name}>";
 
                                 eleVal += nodeText;
+                                if (string.IsNullOrEmpty(eleVal)) continue;
+
                                 eleVal += $"</{node?.Name}>";
 
+                                eleVal = Regex.Replace(eleVal, @">\s+", ">");
+                                eleVal = Regex.Replace(eleVal, @"\s+<", "<");
+                                eleVal = Regex.Replace(eleVal, @"\s+", " ");
+
                                 if (!sb.ToString().Contains(eleVal))
+                                {
                                     sb.Append(eleVal);
+                                }
                             }
                             catch (Exception ex)
                             {
