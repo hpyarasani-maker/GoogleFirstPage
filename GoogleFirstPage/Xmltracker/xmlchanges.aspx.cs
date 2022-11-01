@@ -57,8 +57,8 @@ namespace GoogleFirstPage.Xmltracker
         {
             string uid = Request.QueryString["uid"].ToString();
 
-            //string strQuerry = "Select xmldata,convert(varchar(20),date,127) date,uid from xmlSource Where uid ='" + uid + "' and xmldata is not null order by date";
-            string strQuery = "Exec [GetViewSourceChange] '" + uid + "'";
+            string strQuery = "Select xmldata,date,uid from xmlSource Where uid ='" + uid + "' and xmldata is not null order by date";
+            //string strQuery = "Exec [GetViewSourceChange] '" + uid + "'";
             SqlConnection con;
             SqlCommand comm;
 
@@ -112,8 +112,8 @@ namespace GoogleFirstPage.Xmltracker
                     XmlReader xr = sx.CreateReader();
                     XPathDocument xpd = new XPathDocument(xr);
                     XPathNavigator xpn = xpd.CreateNavigator();
-                    //stDate = dr.GetDateTime(1).Date.ToString("yyyy-MM-dd");
-                    stDate = DateTime.Today.ToString("yyyy-MM-dd");
+                    stDate = dr.GetDateTime(1).Date.ToString("yyyy-MM-dd");
+                    //stDate = DateTime.Today.ToString("yyyy-MM-dd");
                     xmlID = dr.GetValue(2).ToString();
 
                     XPathNodeIterator canonical = xpn.Select("XmlSource");
