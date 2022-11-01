@@ -187,6 +187,10 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Xmltracker\keywords.aspx" />
+    <Content Include="Xmltracker\viewxml.aspx" />
+    <Content Include="Xmltracker\xmlchanges.aspx" />
+    <Content Include="Xmltracker\xmlurls.aspx" />
     <None Include="FluxData\DataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet11.Designer.cs</LastGenOutput>
@@ -609,6 +613,35 @@
     </Compile>
     <Compile Include="TrendingTwoHoursResultsFromDB\Viewxml.aspx.designer.cs">
       <DependentUpon>Viewxml.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Xmltracker\keywords.aspx.cs">
+      <DependentUpon>keywords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xmltracker\keywords.aspx.designer.cs">
+      <DependentUpon>keywords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Xmltracker\viewxml.aspx.cs">
+      <DependentUpon>viewxml.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xmltracker\viewxml.aspx.designer.cs">
+      <DependentUpon>viewxml.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Xmltracker\xmlchanges.aspx.cs">
+      <DependentUpon>xmlchanges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xmltracker\xmlchanges.aspx.designer.cs">
+      <DependentUpon>xmlchanges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Xmltracker\XmlSanitizingStream.cs" />
+    <Compile Include="Xmltracker\xmlurls.aspx.cs">
+      <DependentUpon>xmlurls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xmltracker\xmlurls.aspx.designer.cs">
+      <DependentUpon>xmlurls.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -380,13 +380,13 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Lessthan20">
+                        <%--<asp:TemplateField HeaderText="Lessthan20">
                             <ItemTemplate>
                                 <div style="width: 65px;">
                                     <asp:HyperLink ID="lbllessthan20" runat="server" Text='<%# Eval("Lessthen20") %>' Target="_blank" NavigateUrl='<%# string.Format("~/Tracking/Lessthan20.aspx?Date={0}", HttpUtility.UrlEncode(Eval("Date").ToString())) %>' />
                                 </div>
                             </ItemTemplate>
-                        </asp:TemplateField>
+                        </asp:TemplateField>--%>
                         <asp:TemplateField HeaderText="Total sending">
                             <ItemTemplate>
                                 <div style="width: 80px;">

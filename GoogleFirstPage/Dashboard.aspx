@@ -115,6 +115,22 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
+                            <b><a data-toggle="collapse" href="#collapse12">XMLTracker</a></b>
+                        </h4>
+                    </div>
+                    <div id="collapse12" class="panel-collapse collapse">
+                        <br />
+                        <p style="font-family: Calibri; font-size: medium">XML Tracker Display results in xml format.</p>
+                        <a href="Xmltracker/keywords.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">XmlTracker</b></></a>
+                        <br />
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
                             <b><a data-toggle="collapse" href="#collapse15">Tracking keywords Unit Test Report</a></b>
                         </h4>
                     </div>
@@ -242,10 +258,10 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <b><a data-toggle="collapse" href="#collapse12">Trending Workspace</a></b>
+                            <b><a data-toggle="collapse" href="#collapse19">Trending Workspace</a></b>
                         </h4>
                     </div>
-                    <div id="collapse12" class="panel-collapse collapse">
+                    <div id="collapse19" class="panel-collapse collapse">
                         <br />
                         <p style="font-family: Calibri; font-size: medium">Trending Workspace captures all the elements like Adwords, Answercard, topstories , twittercards , adwords , videos , images , knowledge graph, Classc Links based on their position for the specified keyword for all search engines.</p>
                         <a href="TrendingTwoHoursResultsFromDB/TrendingworkspaceLive.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Trending Workspace Live</b></></a>
