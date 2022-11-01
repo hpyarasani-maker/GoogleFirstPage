@@ -115,13 +115,13 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <b><a data-toggle="collapse" href="#collapse12">XMLTracker</a></b>
+                            <b><a data-toggle="collapse" href="#collapse12">Elementary by Pi</a></b>
                         </h4>
                     </div>
                     <div id="collapse12" class="panel-collapse collapse">
                         <br />
-                        <p style="font-family: Calibri; font-size: medium">XML Tracker Display results in xml format.</p>
-                        <a href="Xmltracker/keywords.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">XmlTracker</b></></a>
+                        <p style="font-family: Calibri; font-size: medium">Elementary by Pi Display Data in xml format with respect to HTML Tags.</p>
+                        <a href="Xmltracker/keywords.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Elementary by Pi</b></></a>
                         <br />
                     </div>
                 </div>
