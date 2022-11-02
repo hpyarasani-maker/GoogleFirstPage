@@ -39,18 +39,6 @@ namespace GoogleFirstPage.Xmltracker
                 lbl.Text = ex.Message;
                 phr.Controls.Add(lbl);
             }
-
-            string previousdate = DateTime.Today.AddDays(-1).ToString("yyyy-MM-dd");
-
-            if (!IsPostBack)
-            {
-                //calendar.StartDate = DateTime.Now.AddDays(-1);
-                //calendar.EndDate = DateTime.Now;
-                //txtdate.Attributes.Add("ReadOnly", "ReadOnly");
-                //txtdate.Text = DateTime.Now.ToString("yyyy-MM-dd");
-
-            }
-
         }
 
         private void Show()
@@ -58,7 +46,7 @@ namespace GoogleFirstPage.Xmltracker
             string uid = Request.QueryString["uid"].ToString();
 
             string strQuery = "Select xmldata,date,uid from xmlSource Where uid ='" + uid + "' and xmldata is not null order by date";
-            //string strQuery = "Exec [GetViewSourceChange] '" + uid + "'";
+            //string strQuery = "Exec [XmlTracker].[dbo].[GetViewSourceChange] '" + uid + "'";
             SqlConnection con;
             SqlCommand comm;
 
@@ -87,22 +75,21 @@ namespace GoogleFirstPage.Xmltracker
                 con.Open();
                 SqlDataReader dr = comm.ExecuteReader();
                 XPathNodeIterator old_title = null;
-                //XPathNodeIterator old_description = null;
-                //XPathNodeIterator old_keywords = null;
+                XPathNodeIterator old_description = null;
+                XPathNodeIterator old_keywords = null;
                 XPathNodeIterator old_paragraph = null;
                 XPathNodeIterator old_h1 = null;
                 XPathNodeIterator old_h2 = null;
                 XPathNodeIterator old_h3 = null;
                 XPathNodeIterator old_em = null;
-                //XPathNodeIterator old_strong = null;
+                XPathNodeIterator old_strong = null;
                 XPathNodeIterator old_link_text = null;
-                //XPathNodeIterator old_link_url = null;
-                //XPathNodeIterator old_img_alt = null;
-                //XPathNodeIterator old_img_src = null;
+                XPathNodeIterator old_link_url = null;
+                XPathNodeIterator old_img_alt = null;
+                XPathNodeIterator old_img_src = null;
                 XPathNodeIterator old_td = null;
                 XPathNodeIterator old_li = null;
                 //XPathNodeIterator old_div = null;
-                XPathNodeIterator old_meta = null;
                 XPathNodeIterator old_time = null;
                 string stDate = "";
                 string xmlID = "0";
@@ -113,7 +100,6 @@ namespace GoogleFirstPage.Xmltracker
                     XPathDocument xpd = new XPathDocument(xr);
                     XPathNavigator xpn = xpd.CreateNavigator();
                     stDate = dr.GetDateTime(1).Date.ToString("yyyy-MM-dd");
-                    //stDate = DateTime.Today.ToString("yyyy-MM-dd");
                     xmlID = dr.GetValue(2).ToString();
 
                     XPathNodeIterator canonical = xpn.Select("XmlSource");
@@ -128,59 +114,63 @@ namespace GoogleFirstPage.Xmltracker
                     st += "<col width=\"10%\"> <col width=\"45%\"> <col width=\"45%\"> ";
                     st += "<tr ><th valign=\"top\">Element</th><th >&nbsp; &nbsp; In</th><th >&nbsp; &nbsp; Out</th></tr>";
 
-                    XPathNodeIterator new_meta = xpn.Select("XmlSource/tag/meta");
-                    this.display_changes(old_meta, new_meta, "Meta");
-                    old_meta = new_meta;
+                    XPathNodeIterator new_description = xpn.Select("XmlSource/tag/meta/description");
+                    this.display_changes(old_description, new_description, "Meta");
+                    old_description = new_description;
 
-                    XPathNodeIterator new_title = xpn.Select("XmlSource/tag/title");
+                    XPathNodeIterator new_keywords = xpn.Select("XmlSource/tag/meta/keywords");
+                    this.display_changes(old_keywords, new_keywords, "Meta");
+                    old_keywords = new_keywords;
+
+                    XPathNodeIterator new_title = xpn.Select("XmlSource/tag/title/text");
                     this.display_changes(old_title, new_title, "Title");
                     old_title = new_title;
 
 
-                    XPathNodeIterator new_time = xpn.Select("XmlSource/tag/time");
+                    XPathNodeIterator new_time = xpn.Select("XmlSource/tag/time/text");
                     display_changes(old_time, new_time, "Time");
                     old_time = new_time;
 
-                    //XPathNodeIterator new_strong = xpn.Select("XmlSource/tag/strong");
-                    //display_changes(old_strong, new_strong, "Strong");
-                    //old_strong = new_strong;
+                    XPathNodeIterator new_strong = xpn.Select("XmlSource/tag/strong/text");
+                    display_changes(old_strong, new_strong, "Strong");
+                    old_strong = new_strong;
 
-                    XPathNodeIterator new_paragraph = xpn.Select("XmlSource/tag/p");
+                    XPathNodeIterator new_paragraph = xpn.Select("XmlSource/tag/p/text");
                     display_changes(old_paragraph, new_paragraph, "P");
                     old_paragraph = new_paragraph;
 
-                    XPathNodeIterator new_h1 = xpn.Select("XmlSource/tag/h1");
+                    XPathNodeIterator new_h1 = xpn.Select("XmlSource/tag/h1/text");
                     display_changes(old_h1, new_h1, "H1");
                     old_h1 = new_h1;
 
-                    XPathNodeIterator new_h2 = xpn.Select("XmlSource/tag/h2");
+                    XPathNodeIterator new_h2 = xpn.Select("XmlSource/tag/h2/text");
                     display_changes(old_h2, new_h2, "H2");
                     old_h2 = new_h2;
 
-                    XPathNodeIterator new_h3 = xpn.Select("XmlSource/tag/h3");
+                    XPathNodeIterator new_h3 = xpn.Select("XmlSource/tag/h3/text");
                     display_changes(old_h3, new_h3, "H3");
                     old_h3 = new_h3;
 
-                    XPathNodeIterator new_em = xpn.Select("XmlSource/tag/em");
+                    XPathNodeIterator new_em = xpn.Select("XmlSource/tag/em/text");
                     display_changes(old_em, new_em, "EM");
                     old_em = new_em;
 
 
-                    //XPathNodeIterator new_linkurl = xpn.Select("XmlSource/tag/a/href");
-                    //display_changes(old_link_url, new_linkurl, "A Href");
-                    //old_link_url = new_linkurl;
+                    XPathNodeIterator new_linkurl = xpn.Select("XmlSource/tag/anchor/href");
+                    display_changes(old_link_url, new_linkurl, "A Href");
+                    old_link_url = new_linkurl;
 
-                    XPathNodeIterator new_linktext = xpn.Select("XmlSource/tag/a");
+                    XPathNodeIterator new_linktext = xpn.Select("XmlSource/tag/anchor/text");
                     display_changes(old_link_text, new_linktext, "A Text");
                     old_link_text = new_linktext;
 
-                    //XPathNodeIterator new_imagealt = xpn.Select("XmlSource/tag/images/image/alt");
-                    //display_changes(old_img_alt, new_imagealt, "Image Alt");
-                    //old_img_alt = new_imagealt;
+                    XPathNodeIterator new_imagealt = xpn.Select("XmlSource/tag/image/alt");
+                    display_changes(old_img_alt, new_imagealt, "Image Alt");
+                    old_img_alt = new_imagealt;
 
-                    //XPathNodeIterator new_imagesrc = xpn.Select("XmlSource/tag/images/image/src");
-                    //display_changes(old_img_src, new_imagesrc, "Image Src");
-                    //old_img_src = new_imagesrc;
+                    XPathNodeIterator new_imagesrc = xpn.Select("XmlSource/tag/image/src");
+                    display_changes(old_img_src, new_imagesrc, "Image Src");
+                    old_img_src = new_imagesrc;
 
                     XPathNodeIterator new_td = xpn.Select("XmlSource/tag/td");
                     display_changes(old_td, new_td, "TD");
@@ -190,15 +180,7 @@ namespace GoogleFirstPage.Xmltracker
                     display_changes(old_li, new_li, "LI");
                     old_li = new_li;
 
-                    //XPathNodeIterator new_description = xpn.Select("XmlSource/description");
-                    //display_changes(old_description, new_description, "Description");
-                    //old_description = new_description;
-
-                    //XPathNodeIterator new_keywords = xpn.Select("XmlSource/keywords");
-                    //display_changes(old_keywords, new_keywords, "keywords");
-                    //old_keywords = new_keywords;
-
-
+                    
                     //XPathNodeIterator new_div = xpn.Select("XmlSource/tag/div");
                     //display_changes(old_div, new_div, "Div");
                     //old_div = new_div;

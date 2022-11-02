@@ -142,46 +142,63 @@ namespace GoogleFirstPage.Xmltracker
                     HtmlNodeCollection nodes = doc.DocumentNode.SelectNodes($"//{ele}");
                     if (nodes != null)
                     {
-                        sb.Append($"<tag type=\"{ele.ToUpper()}\">");
+                        string eleVal = string.Empty;
 
                         foreach (HtmlNode node in nodes)
                         {
                             try
                             {
-                                string eleVal = string.Empty;
+                                string eVal = string.Empty;
                                 string nodeText = WebUtility.HtmlEncode(WebUtility.HtmlDecode(node?.InnerText));
 
-                                if (string.IsNullOrEmpty(nodeText) && node?.Name != "meta") continue;
-                                if (node?.Name == "a")
-                                    eleVal = $"<{node?.Name} href=\"{WebUtility.HtmlEncode(WebUtility.HtmlDecode(node?.Attributes["href"]?.Value))}\">";
-                                else if (node?.Name == "img")
-                                    eleVal = $"<{node?.Name} alt=\"{WebUtility.HtmlEncode(WebUtility.HtmlDecode(node?.Attributes["alt"]?.Value))}\" title=\"{WebUtility.HtmlEncode(WebUtility.HtmlDecode(node?.Attributes["title"]?.Value))}\">";
+                                if (string.IsNullOrEmpty(nodeText.Trim()) && node?.Name != "img" && node?.Name != "meta") continue;
+
+                                if (node?.Name == "a") //<anchor>
+                                    eVal = $"<href>{WebUtility.HtmlEncode(WebUtility.HtmlDecode(node?.Attributes["href"]?.Value))}</href>";
+                                else if (node?.Name == "img") //<image>
+                                {
+                                    string src = node.Attributes["src"]?.Value != null && (bool)!node.Attributes["src"]?.Value?.Trim().StartsWith("data:image")
+                                        ? WebUtility.HtmlEncode(WebUtility.HtmlDecode(node?.Attributes["src"]?.Value)) : "";
+                                    eVal = $"<alt>{WebUtility.HtmlEncode(WebUtility.HtmlDecode(node?.Attributes["alt"]?.Value))}</alt><src>{src}</src>";
+                                }
                                 else if (node?.Name == "meta")
                                 {
                                     if (node?.Attributes["name"]?.Value == "keywords" || node?.Attributes["name"]?.Value == "description")
-                                        eleVal = $"<{node?.Name} name=\"{node?.Attributes["name"]?.Value}\" content=\"{WebUtility.HtmlEncode(WebUtility.HtmlDecode(node?.Attributes["content"]?.Value))}\">";
+                                        eVal = $"<{node?.Attributes["name"]?.Value}>{WebUtility.HtmlEncode(WebUtility.HtmlDecode(node?.Attributes["content"]?.Value))}</{node?.Attributes["name"]?.Value}>";
                                 }
-                                else
-                                    eleVal = $"<{node?.Name}>";
 
-                                eleVal += nodeText;
-                                if (string.IsNullOrEmpty(eleVal)) continue;
+                                if (node?.Name != "meta" && node?.Name != "img")
+                                    eVal += $"<text>{nodeText}</text>";
 
-                                eleVal += $"</{node?.Name}>";
+                                if (string.IsNullOrEmpty(eVal)) continue;
 
-                                eleVal = Regex.Replace(eleVal, @">\s+", ">");
-                                eleVal = Regex.Replace(eleVal, @"\s+<", "<");
-                                eleVal = Regex.Replace(eleVal, @"\s+", " ");
+                                eVal = Regex.Replace(eVal, @">\s+", ">");
+                                eVal = Regex.Replace(eVal, @"\s+<", "<");
+                                eVal = Regex.Replace(eVal, @"\s+", " ");
 
-                                if (!sb.ToString().Contains(eleVal))
+                                if (!eleVal.Contains(eVal))
                                 {
-                                    sb.Append(eleVal);
+                                    eleVal += eVal;
                                 }
                             }
                             catch (Exception ex)
                             {
                                 Response.Write(ex.Message);
                             }
+                        }
+
+                        sb.Append($"<tag type=\"{ele.ToUpper()}\">");
+
+                        if (!string.IsNullOrEmpty(eleVal))
+                        {
+                            if (ele == "a")
+                                eleVal = $"<anchor>{eleVal}</anchor>";
+                            else if (ele == "img")
+                                eleVal = $"<image>{eleVal}</image>";
+                            else
+                                eleVal = $"<{ele}>{eleVal}</{ele}>";
+
+                            sb.Append(eleVal);
                         }
 
                         sb.Append("</tag>");
