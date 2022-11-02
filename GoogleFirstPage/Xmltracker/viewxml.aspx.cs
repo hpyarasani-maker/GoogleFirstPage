@@ -20,44 +20,11 @@ namespace GoogleFirstPage.Xmltracker
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //string name = Request.QueryString["KName"].ToString();
-            //string date = Request.QueryString["date"].ToString();
-            //string kid = Request.QueryString["kid"].ToString();
-            //string uid = Request.QueryString["uid"].ToString();
             string url = Request.QueryString["url"].ToString();
             string date = DateTime.Today.ToString("yyyy-MM-dd");
 
-
-
             processresults(url);
 
-
-            //SqlConnection con = new SqlConnection(connection);
-            ////string strQuerry = "exec [dbo].[GetXMLData] " + uid + ",'" + date + "','" + name + "'";
-            //string strQuerry = "exec [dbo].[GetXMLData] " + uid + ",'" + date + "'";
-
-            //SqlCommand comm = new SqlCommand(strQuerry, con);
-            //try
-            //{
-            //    con.Open();
-            //    SqlDataReader dr = comm.ExecuteReader();
-            //    if (dr.Read())
-            //    {
-            //        Response.ContentType = "text/xml";
-            //        Response.Write(dr.GetValue(0).ToString());
-            //    }
-            //    dr.Close();
-            //}
-            //catch (Exception ex)
-            //{
-            //    Response.Write(ex.Message.ToString());
-            //}
-            //finally
-            //{
-            //    comm.Dispose();
-            //    con.Close();
-            //    con.Dispose();
-            //}
         }
 
         public string webSourceTracking(string url)
@@ -65,7 +32,6 @@ namespace GoogleFirstPage.Xmltracker
             string respHTML = string.Empty;
             try
             {
-
                 Uri u = new Uri(url);
 
                 using (var client = new WebClient())
@@ -79,21 +45,18 @@ namespace GoogleFirstPage.Xmltracker
 
                     catch (Exception ex)
                     {
-
+                        Response.Write(ex.Message);
                     }
                 }
-
                 return respHTML;
-
             }
-            catch (WebException we)
+            catch (WebException web)
             {
-
-
+                Response.Write(web.Message);
             }
             catch (Exception ex)
             {
-
+                Response.Write(ex.Message);
             }
 
             return respHTML;
@@ -108,9 +71,7 @@ namespace GoogleFirstPage.Xmltracker
             string xmlData = string.Empty;
             string strIns = string.Empty;
 
-            //string xmlPath = "C:\\inetpub\\wwwroot\\xmlResults.xml";
-
-
+           
             try
             {
                 urlSource = webSourceTracking(url);
@@ -164,7 +125,6 @@ namespace GoogleFirstPage.Xmltracker
                 //urlData = urlSource.Replace("'", "''");
 
                 Encoding utf8 = Encoding.UTF8;
-                //resultList.Text = HttpUtility.UrlDecode(urlData, utf8);
                 string Text1 = HttpUtility.UrlDecode(urlData, utf8);
                 StringBuilder sb = new StringBuilder();
 
@@ -236,12 +196,10 @@ namespace GoogleFirstPage.Xmltracker
                 //xd.PreserveWhitespace = true;
                 Response.ContentType = "text/xml";
                 Response.Write(xd.InnerXml);
-
-                //xmlTxt.Refresh();
             }
             catch (Exception ex)
             {
-
+                Response.Write(ex.Message);
             }
 
         }

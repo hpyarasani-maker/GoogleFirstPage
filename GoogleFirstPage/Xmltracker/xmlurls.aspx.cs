@@ -22,8 +22,6 @@ namespace GoogleFirstPage.Xmltracker
         protected void Page_Load(object sender, EventArgs e)
         {
             string kid = Request.QueryString["kid"].ToString();
-            //string uid = Request.QueryString["uid"].ToString();
-            //string KName = Request.QueryString["KName"].ToString();
 
             using (SqlConnection con = new SqlConnection(connection))
             {
@@ -40,8 +38,6 @@ namespace GoogleFirstPage.Xmltracker
                 {
                     gvxmlurls.DataSource = ds;
                     gvxmlurls.DataBind();
-
-                    // lbl1.Text = "";
                 }
                 else
                 {
@@ -50,47 +46,6 @@ namespace GoogleFirstPage.Xmltracker
                 }
             }
 
-
-            //GetURLList();
-
         }
-
-        
-
-        //void GetURLList()
-        //{
-        //    string kid = Request.QueryString["kid"].ToString();
-        //    //string uid = Request.QueryString["uid"].ToString();
-        //    //string KName = Request.QueryString["KName"].ToString();
-
-
-
-        //    using (SqlConnection con = new SqlConnection(connection))
-        //    {
-        //        SqlCommand cmd;
-        //        SqlDataAdapter da;
-        //        DataSet ds;
-        //        cmd = new SqlCommand("[GetKeywordUrls]", con);
-        //        cmd.CommandType = CommandType.StoredProcedure;
-        //        cmd.Parameters.AddWithValue("@kid", SqlDbType.Int).Value = kid;
-        //        da = new SqlDataAdapter(cmd);
-        //        ds = new DataSet();
-        //        da.Fill(ds);
-
-        //        if (ds.Tables[0].Rows.Count > 0)
-        //        {
-        //            gvxmlurls.DataSource = ds;
-        //            gvxmlurls.DataBind();
-
-        //            // lbl1.Text = "";
-        //        }
-        //        else
-        //        {
-        //            gvxmlurls.DataSource = null;
-        //            gvxmlurls.DataBind();
-        //        }
-        //    }
-        //}
-
     }
 }

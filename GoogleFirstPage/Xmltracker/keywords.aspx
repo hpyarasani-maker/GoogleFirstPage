@@ -203,7 +203,6 @@
                                 </asp:TemplateField>
                                 <asp:TemplateField>
                                     <ItemTemplate>
-                                        <%--<a href="xmlresults.aspx?kid=<%# Eval("kid") %>" target="_blank">Top Results</a>--%>
                                         <a href="xmlurls.aspx?kid=<%# Eval("kid") %>" target="_blank">Link</a>
                                     </ItemTemplate>
                                 </asp:TemplateField>

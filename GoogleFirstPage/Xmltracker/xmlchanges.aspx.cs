@@ -39,19 +39,8 @@ namespace GoogleFirstPage.Xmltracker
                 lbl.Text = ex.Message;
                 phr.Controls.Add(lbl);
             }
-
-            string previousdate = DateTime.Today.AddDays(-1).ToString("yyyy-MM-dd");
-
-            if (!IsPostBack)
-            {
-                //calendar.StartDate = DateTime.Now.AddDays(-1);
-                //calendar.EndDate = DateTime.Now;
-                //txtdate.Attributes.Add("ReadOnly", "ReadOnly");
-                //txtdate.Text = DateTime.Now.ToString("yyyy-MM-dd");
-
-            }
-
         }
+
 
         private void Show()
         {
@@ -104,6 +93,7 @@ namespace GoogleFirstPage.Xmltracker
                 //XPathNodeIterator old_div = null;
                 XPathNodeIterator old_meta = null;
                 XPathNodeIterator old_time = null;
+
                 string stDate = "";
                 string xmlID = "0";
                 while (dr.Read())
@@ -113,7 +103,6 @@ namespace GoogleFirstPage.Xmltracker
                     XPathDocument xpd = new XPathDocument(xr);
                     XPathNavigator xpn = xpd.CreateNavigator();
                     stDate = dr.GetDateTime(1).Date.ToString("yyyy-MM-dd");
-                    //stDate = DateTime.Today.ToString("yyyy-MM-dd");
                     xmlID = dr.GetValue(2).ToString();
 
                     XPathNodeIterator canonical = xpn.Select("XmlSource");
@@ -123,7 +112,7 @@ namespace GoogleFirstPage.Xmltracker
                     string anc = "";
                     if (canonical.MoveNext())
                     //st += "<br />Results for : <a href=\"" + canonical.Current.ToString() + "\" target=\"_blank\" >" + canonical.Current.ToString() + "</a>";
-                   anc = "&nbsp; &nbsp; &nbsp; <a href=\"Default2.aspx?date=" + stDate + "&uid=" + xmlID + "\" target=\"=_blank\">[Elementary Data]</a>";
+                    anc = "&nbsp; &nbsp; &nbsp; <a href=\"Default2.aspx?date=" + stDate + "&uid=" + xmlID + "\" target=\"=_blank\">[Elementary Data]</a>";
                     st += "<p /><table width=\"100%\" bordercolor=\"Blue\" border=\"1\" >";
                     st += "<col width=\"10%\"> <col width=\"45%\"> <col width=\"45%\"> ";
                     st += "<tr ><th valign=\"top\">Element</th><th >&nbsp; &nbsp; In</th><th >&nbsp; &nbsp; Out</th></tr>";
@@ -172,7 +161,7 @@ namespace GoogleFirstPage.Xmltracker
 
                     XPathNodeIterator new_linktext = xpn.Select("XmlSource/tag/a");
                     display_changes(old_link_text, new_linktext, "A Text");
-                    old_link_text = new_linktext;                 
+                    old_link_text = new_linktext;
 
                     //XPathNodeIterator new_imagealt = xpn.Select("XmlSource/tag/images/image/alt");
                     //display_changes(old_img_alt, new_imagealt, "Image Alt");
@@ -202,6 +191,7 @@ namespace GoogleFirstPage.Xmltracker
                     //XPathNodeIterator new_div = xpn.Select("XmlSource/tag/div");
                     //display_changes(old_div, new_div, "Div");
                     //old_div = new_div;
+
 
                     st += "</table>";
 
@@ -269,7 +259,6 @@ namespace GoogleFirstPage.Xmltracker
                 }
                 stCol += "</ul></td></tr>";
             }
-
             else
             {
                 blColChng = true;
@@ -286,39 +275,6 @@ namespace GoogleFirstPage.Xmltracker
                 stCol += "</ul></td> </tr>";
             }
             if (blColChng) { st += stCol; }
-        }
-
-
-
-        protected void btnchanges_Click(object sender, EventArgs e)
-        {
-            //string url = Request.QueryString["url"].ToString();
-            //string uid = Request.QueryString["uid"].ToString();
-
-
-            //using (SqlConnection con = new SqlConnection(connection))
-            //{
-            //    SqlCommand cmd;
-            //    SqlDataAdapter da;
-            //    DataSet ds;
-            //    cmd = new SqlCommand("[GetXMLData]", con);
-            //    cmd.CommandType = CommandType.StoredProcedure;
-            //    cmd.Parameters.AddWithValue("@uid", SqlDbType.Int).Value = uid;
-            //    cmd.Parameters.AddWithValue("@date", SqlDbType.VarChar).Value = txtdate.Text;
-            //    da = new SqlDataAdapter(cmd);
-            //    ds = new DataSet();
-            //    da.Fill(ds);
-            //    if (ds.Tables[0].Rows.Count > 0)
-            //    {
-            //        gvxmlchanges.DataSource = ds;
-            //        gvxmlchanges.DataBind();
-            //    }
-            //    else
-            //    {
-            //        gvxmlchanges.DataSource = null;
-            //        gvxmlchanges.DataBind();
-            //    }
-            //}
-        }
+        }        
     }
 }

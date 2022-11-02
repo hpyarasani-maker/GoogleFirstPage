@@ -171,23 +171,15 @@
             </div>
         </div>
         <div class="containerDB">
-            <div class="header3">
-            </div>
-            <br />
-            <br />
+            <%--<div class="header3">
+            </div>--%>
             <div class="wrapper">
                 <asp:Label ID="lblalllinks" runat="server" ForeColor="Blue" Font-Size="Small" Font-Bold="true"></asp:Label><br />
-
                 <asp:Label ID="lbl1" runat="server" CssClass="LblClassNew"></asp:Label>
-                <br />
-
+               
                 <h1>Elementary Changes Report</h1>
-
+                <br />
                 <asp:UpdateProgress ID="UpdateProgress1" runat="server">
-
-                 <%--   <ProgressTemplate>
-                        <b>Processing...</b>
-                    </ProgressTemplate>--%>
                 </asp:UpdateProgress>
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>

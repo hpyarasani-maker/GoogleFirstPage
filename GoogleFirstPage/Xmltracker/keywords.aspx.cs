@@ -21,22 +21,16 @@ namespace GoogleFirstPage.Xmltracker
     {
         string connection = ConfigurationManager.ConnectionStrings["xmltracker"].ToString();
 
-
-        SqlCommand cmd;
-        SqlDataAdapter da;
-        DataTable dt;
-        //DataSet ds;
-
-
+       
         protected void Page_Load(object sender, EventArgs e)
         {
             //if(!IsPostBack)
             //{
             //    using (SqlConnection con = new SqlConnection(connection))
-            //    {                 
-            //        cmd = new SqlCommand("[GetClients]", con);
-            //        da = new SqlDataAdapter(cmd);
-            //        dt = new DataTable();
+            //    {
+            //        SqlCommand cmd = new SqlCommand("[GetClients]", con);
+            //        SqlDataAdapter da = new SqlDataAdapter(cmd);
+            //        DataTable dt = new DataTable();
             //        da.Fill(dt);
             //        ddlclient.DataTextField = "name";
             //        ddlclient.DataSource = dt;
@@ -76,9 +70,5 @@ namespace GoogleFirstPage.Xmltracker
             
         }
 
-        protected void gvurls_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-
-        }
     }
 }
