@@ -45,8 +45,8 @@ namespace GoogleFirstPage.Xmltracker
         {
             string uid = Request.QueryString["uid"].ToString();
 
-            string strQuery = "Select xmldata,date,uid from xmlSource Where uid ='" + uid + "' and xmldata is not null order by date";
-            //string strQuery = "Exec [XmlTracker].[dbo].[GetViewSourceChange] '" + uid + "'";
+            //string strQuery = "Select xmldata,date,uid from xmlSource Where uid ='" + uid + "' and xmldata is not null order by date";
+            string strQuery = "Exec [XmlTracker].[dbo].[GetViewSourceChange] '" + uid + "'";
             SqlConnection con;
             SqlCommand comm;
 
@@ -108,7 +108,7 @@ namespace GoogleFirstPage.Xmltracker
                     x++;
                     string anc = "";
                     if (canonical.MoveNext())
-                        //st += "<br />Results for : <a href=\"" + canonical.Current.ToString() + "\" target=\"_blank\" >" + canonical.Current.ToString() + "</a>";
+                        st += "<br />Results for : <a href=\"" + canonical.Current.GetAttribute("url", "") + "\" target=\"_blank\" >" + canonical.Current.GetAttribute("url", "") + "</a>";
                         anc = "&nbsp; &nbsp; &nbsp; <a href=\"Default2.aspx?date=" + stDate + "&uid=" + xmlID + "\" target=\"=_blank\">[Elementary Data]</a>";
                     st += "<p /><table width=\"100%\" bordercolor=\"Blue\" border=\"1\" >";
                     st += "<col width=\"10%\"> <col width=\"45%\"> <col width=\"45%\"> ";

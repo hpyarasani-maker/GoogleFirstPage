@@ -229,6 +229,7 @@
     <Content Include="login\Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Properties\PublishProfiles\googlefirstpage - Web Deploy.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -656,7 +657,6 @@
   <ItemGroup>
     <Content Include="js\jquery-1.10.2.min.map" />
     <None Include="packages.config" />
-    <None Include="Properties\PublishProfiles\googlefirstpage - Web Deploy.pubxml" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.0.0.min.map" />
     <Content Include="Scripts\umd\popper.min.js.map" />
