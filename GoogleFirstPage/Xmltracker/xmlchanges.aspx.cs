@@ -39,8 +39,19 @@ namespace GoogleFirstPage.Xmltracker
                 lbl.Text = ex.Message;
                 phr.Controls.Add(lbl);
             }
-        }
 
+            string previousdate = DateTime.Today.AddDays(-1).ToString("yyyy-MM-dd");
+
+            if (!IsPostBack)
+            {
+                //calendar.StartDate = DateTime.Now.AddDays(-1);
+                //calendar.EndDate = DateTime.Now;
+                //txtdate.Attributes.Add("ReadOnly", "ReadOnly");
+                //txtdate.Text = DateTime.Now.ToString("yyyy-MM-dd");
+
+            }
+
+        }
 
         private void Show()
         {
@@ -93,7 +104,6 @@ namespace GoogleFirstPage.Xmltracker
                 //XPathNodeIterator old_div = null;
                 XPathNodeIterator old_meta = null;
                 XPathNodeIterator old_time = null;
-
                 string stDate = "";
                 string xmlID = "0";
                 while (dr.Read())
@@ -103,6 +113,7 @@ namespace GoogleFirstPage.Xmltracker
                     XPathDocument xpd = new XPathDocument(xr);
                     XPathNavigator xpn = xpd.CreateNavigator();
                     stDate = dr.GetDateTime(1).Date.ToString("yyyy-MM-dd");
+                    //stDate = DateTime.Today.ToString("yyyy-MM-dd");
                     xmlID = dr.GetValue(2).ToString();
 
                     XPathNodeIterator canonical = xpn.Select("XmlSource");
@@ -111,8 +122,8 @@ namespace GoogleFirstPage.Xmltracker
                     x++;
                     string anc = "";
                     if (canonical.MoveNext())
-                    //st += "<br />Results for : <a href=\"" + canonical.Current.ToString() + "\" target=\"_blank\" >" + canonical.Current.ToString() + "</a>";
-                    anc = "&nbsp; &nbsp; &nbsp; <a href=\"Default2.aspx?date=" + stDate + "&uid=" + xmlID + "\" target=\"=_blank\">[Elementary Data]</a>";
+                        //st += "<br />Results for : <a href=\"" + canonical.Current.ToString() + "\" target=\"_blank\" >" + canonical.Current.ToString() + "</a>";
+                        anc = "&nbsp; &nbsp; &nbsp; <a href=\"Default2.aspx?date=" + stDate + "&uid=" + xmlID + "\" target=\"=_blank\">[Elementary Data]</a>";
                     st += "<p /><table width=\"100%\" bordercolor=\"Blue\" border=\"1\" >";
                     st += "<col width=\"10%\"> <col width=\"45%\"> <col width=\"45%\"> ";
                     st += "<tr ><th valign=\"top\">Element</th><th >&nbsp; &nbsp; In</th><th >&nbsp; &nbsp; Out</th></tr>";
@@ -192,7 +203,6 @@ namespace GoogleFirstPage.Xmltracker
                     //display_changes(old_div, new_div, "Div");
                     //old_div = new_div;
 
-
                     st += "</table>";
 
                     xr.Close();
@@ -259,6 +269,7 @@ namespace GoogleFirstPage.Xmltracker
                 }
                 stCol += "</ul></td></tr>";
             }
+
             else
             {
                 blColChng = true;
@@ -275,6 +286,6 @@ namespace GoogleFirstPage.Xmltracker
                 stCol += "</ul></td> </tr>";
             }
             if (blColChng) { st += stCol; }
-        }        
+        }
     }
 }
