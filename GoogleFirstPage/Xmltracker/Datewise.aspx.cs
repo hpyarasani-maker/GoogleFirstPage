@@ -226,7 +226,7 @@ namespace GoogleFirstPage.Xmltracker
             {
                 stCol += "<tr >";
                 stCol += "<td valign='top';word-wrap='break-word'><b>" + s + "</b></td>";
-                stCol += "<td ><ul>";
+                stCol += "<td word-wrap='break-word'><ul>";
 
                 IEnumerator nd = newnode.GetEnumerator();
                 IEnumerator od = oldnode.GetEnumerator();
@@ -259,7 +259,7 @@ namespace GoogleFirstPage.Xmltracker
 
                 stCol += "<tr >";
                 stCol += "<td word-wrap='break-word'><b>" + s + "</b></td>";
-                stCol += "<td ><ul>";
+                stCol += "<td word-wrap='break-word'><ul>";
                 IEnumerator nd = newnode.GetEnumerator();
                 if (nd != null)
                 {
