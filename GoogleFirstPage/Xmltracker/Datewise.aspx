@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="xmlurls.aspx.cs" Inherits="GoogleFirstPage.Xmltracker.xmlurls" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Datewise.aspx.cs" Inherits="GoogleFirstPage.Xmltracker.Datewise" %>
 
 <!DOCTYPE html>
 
@@ -25,7 +25,6 @@
     <link href="../CSS/Newstyle.css" rel="stylesheet" />
 
     <link rel="icon" href="../images/default-avatar-logo.png" type="image/x-icon" />
-
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
@@ -123,7 +122,18 @@
                     border-right: none;
                 }
     </style>
+    <style type="text/css">
+        .auto-style1 {
+            font-size: small;
+            font-weight: bold;
+        }
 
+        .center1 {
+            margin: auto;
+            width: 10%;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body style="background-color: white">
 
@@ -140,12 +150,9 @@
                 <div class="container">
                     <div class="navbar navbar-static-top">
                         <div>
-                <label style="font-family:Cambria;font-weight:bold;color:black;font-size:larger">XML Tracker</label>
-
                             <div class="navigation">
-                    <label style="font-family:Calibri;font-weight:bold;color:white;font-size:x-large;margin-left:-90px;margin-top:-100px">Elementary by Pi</label>
-
-                                <nav style="margin-left: 950px; margin-top:-50px;">
+                                <label style="font-family: Calibri; font-weight: bold; color: white; font-size: x-large; margin-left: -90px; margin-top: 20px">Elementary by Pi</label>
+                                <nav style="margin-left: 950px; margin-top: -50px">
                                     <ul class="nav topnav bold">
                                         <li class="dropdown">
                                             <a href="../Dashboard.aspx">Home</a>&nbsp;<ul style="display: none;" class="dropdown-menu bold">
@@ -163,59 +170,31 @@
             </div>
         </div>
         <div class="containerDB">
-            <%--<div class="header3">
-                <div style="margin-top: 12px;">
-                    
-                </div>
-            </div>--%>
-            <br />
-            <br />
+            <div class="header3">
+                <asp:TextBox ID="txtenddate" runat="server" placeholder="start dateate" Height="30px" Width="300px" Font-Size="Large" CssClass="text1"></asp:TextBox>
+                <asp:ImageButton runat="Server" ID="EndDateImage" ImageUrl="~/images/calendarnew.png" Height="25px" Width="30px"/>
+                <ajaxToolkit:CalendarExtender ID="endDate" runat="server" PopupButtonID="EndDateImage" TargetControlID="txtenddate" Format="yyyy-MM-dd" StartDate="2022-11-01" />
+                <asp:Button ID="btndatewise" runat="server" OnClick="btndatewise_Click" CssClass="btnlf" Height="24px" Width="120px" Text="Submit" />
+            </div>
             <div class="wrapper">
-                <%--<label style="font-family:Cambria;font-weight:bold;color:black;font-size:larger">XML Tracker</label>--%>
                 <asp:Label ID="lblalllinks" runat="server" ForeColor="Blue" Font-Size="Small" Font-Bold="true"></asp:Label><br />
-                <asp:Label ID="lbl1" runat="server" Text="Click on  '' View XML''    for Processing XML Content" ForeColor="Blue"  Font-Size="Large" Font-Bold="true" ></asp:Label>
-                <br />
-                <br />
+                <asp:Label ID="lbl1" runat="server" CssClass="LblClassNew"></asp:Label>
 
 
                 <asp:UpdateProgress ID="UpdateProgress1" runat="server">
                 </asp:UpdateProgress>
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="btndatewise" EventName="Click" />
+                    </Triggers>
                     <ContentTemplate>
-                        <asp:GridView ID="gvxmlurls" runat="server" AutoGenerateColumns="false" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px">
-                            <HeaderStyle BackColor="#e4e8ef" Font-Bold="true" ForeColor="Black" />
-                            <Columns>
-                                <asp:BoundField HeaderText="UID" DataField="uid" ItemStyle-HorizontalAlign="Center" Visible="false" />
-                                <asp:TemplateField HeaderText="URLs">
-                                    <HeaderStyle HorizontalAlign="Center" />
-                                    <ItemTemplate>
-                                        <a href="<%#DataBinder.Eval(Container.DataItem,"url") %>" target="_blank"><%#DataBinder.Eval(Container.DataItem,"url") %></a>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:TemplateField HeaderText="ViewXML">
-                                    <HeaderStyle HorizontalAlign="Center" />
-                                    <ItemTemplate>
-                                        <a href="viewxml.aspx?uid=<%# Eval("uid") %>&url=<%# Eval("url") %>" target="_blank">View XML</a>
-                                        <%--<a href="viewxml.aspx?&url=<%# Eval("url") %>" target="_blank">View XML</a>--%>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:TemplateField HeaderText="XML Changes">
-                                    <HeaderStyle HorizontalAlign="Center" />
-                                    <ItemTemplate>
-                                        <a href="xmlchanges.aspx?uid=<%# Eval("uid") %>" target="_blank">XML Changes</a>
-                                        <%--<a href="xmlchanges.aspx?url=<%# Eval("url") %>" target="_blank">XML Changes</a>--%>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Date wise">
-                                    <HeaderStyle HorizontalAlign="Center" />
-                                    <ItemTemplate>
-                                        <a href="Datewise.aspx?uid=<%# Eval("uid") %>" target="_blank">Date wise</a>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                            </Columns>
-                        </asp:GridView>
+                        <p>
+                            <asp:PlaceHolder ID="phr" runat="server"></asp:PlaceHolder>
+                            &nbsp;
+                        </p>
                     </ContentTemplate>
                 </asp:UpdatePanel>
+
                 <br />
                 <br />
             </div>
