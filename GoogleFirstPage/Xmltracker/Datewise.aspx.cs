@@ -225,7 +225,7 @@ namespace GoogleFirstPage.Xmltracker
             if (oldnode != newnode && oldnode != null)
             {
                 stCol += "<tr >";
-                stCol += "<td valign='top';word-wrap='break-word'><b>" + s + "</b></td>";
+                stCol += "<td valign='top' word-wrap='break-word'><b>" + s + "</b></td>";
                 stCol += "<td word-wrap='break-word'><ul>";
 
                 IEnumerator nd = newnode.GetEnumerator();
