@@ -112,7 +112,7 @@ namespace GoogleFirstPage.Xmltracker
                     if (canonical.MoveNext())
                         st += "<br />Results for : <a href=\"" + canonical.Current.GetAttribute("url", "") + "\" target=\"_blank\" >" + canonical.Current.GetAttribute("url", "") + "</a>";
                     anc = "&nbsp; &nbsp; &nbsp; <a href=\"Default2.aspx?date=" + stDate + "&uid=" + xmlID + "\" target=\"=_blank\">[Elementary Data]</a>";
-                    st += "<p /><table width=\"100%\" bordercolor=\"Blue\" border=\"1\" word-wrap=\"normal\">";
+                    st += "<p /><table width=\"100%\" bordercolor=\"Blue\" border=\"1\">";
                     st += "<col width=\"10%\"> <col width=\"45%\"> <col width=\"45%\"> ";
                     st += "<tr ><th valign=\"top\">Element</th><th >&nbsp; &nbsp; In</th><th >&nbsp; &nbsp; Out</th></tr>";
 
@@ -225,7 +225,7 @@ namespace GoogleFirstPage.Xmltracker
             if (oldnode != newnode && oldnode != null)
             {
                 stCol += "<tr >";
-                stCol += "<td valign='top' word-wrap='break-word'><b>" + s + "</b></td>";
+                stCol += "<td valign='top';word-wrap='break-word'><b>" + s + "</b></td>";
                 stCol += "<td ><ul>";
 
                 IEnumerator nd = newnode.GetEnumerator();
@@ -257,7 +257,7 @@ namespace GoogleFirstPage.Xmltracker
             {
                 blColChng = true;
 
-                stCol += "<tr>";
+                stCol += "<tr >";
                 stCol += "<td word-wrap='break-word'><b>" + s + "</b></td>";
                 stCol += "<td ><ul>";
                 IEnumerator nd = newnode.GetEnumerator();
