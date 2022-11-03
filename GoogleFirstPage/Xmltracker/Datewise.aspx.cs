@@ -174,11 +174,11 @@ namespace GoogleFirstPage.Xmltracker
                     display_changes(old_img_src, new_imagesrc, "Image Src");
                     old_img_src = new_imagesrc;
 
-                    XPathNodeIterator new_td = xpn.Select("XmlSource/tag/td");
+                    XPathNodeIterator new_td = xpn.Select("XmlSource/tag/td/text");
                     display_changes(old_td, new_td, "TD");
                     old_td = new_td;
 
-                    XPathNodeIterator new_li = xpn.Select("XmlSource/tag/li");
+                    XPathNodeIterator new_li = xpn.Select("XmlSource/tag/li/text");
                     display_changes(old_li, new_li, "LI");
                     old_li = new_li;
 
