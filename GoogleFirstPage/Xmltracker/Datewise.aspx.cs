@@ -29,6 +29,9 @@ namespace GoogleFirstPage.Xmltracker
                 txtenddate.Attributes.Add("ReadOnly", "ReadOnly");
                 txtenddate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
+                endDate.EndDate = DateTime.Now.AddDays(3);
+                endDate.EndDate = DateTime.Now;
+
                 string uid = (string)Request.QueryString["uid"];
                 
 
