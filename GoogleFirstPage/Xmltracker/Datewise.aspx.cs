@@ -28,8 +28,6 @@ namespace GoogleFirstPage.Xmltracker
             {
                 txtenddate.Attributes.Add("ReadOnly", "ReadOnly");
                 txtenddate.Text = DateTime.Now.ToString("yyyy-MM-dd");
-
-                endDate.EndDate = DateTime.Now.AddDays(3);
                 endDate.EndDate = DateTime.Now;
 
                 string uid = (string)Request.QueryString["uid"];
@@ -225,8 +223,8 @@ namespace GoogleFirstPage.Xmltracker
             if (oldnode != newnode && oldnode != null)
             {
                 stCol += "<tr >";
-                stCol += "<td valign='top' word-wrap='break-word'><b>" + s + "</b></td>";
-                stCol += "<td word-wrap='break-word'><ul>";
+                stCol += "<td valign='top' word-wrap:'break-word'><b>" + s + "</b></td>";
+                stCol += "<td word-wrap:'break-word'><ul>";
 
                 IEnumerator nd = newnode.GetEnumerator();
                 IEnumerator od = oldnode.GetEnumerator();
@@ -252,14 +250,13 @@ namespace GoogleFirstPage.Xmltracker
                 }
                 stCol += "</ul></td></tr>";
             }
-
             else
             {
                 blColChng = true;
 
                 stCol += "<tr >";
-                stCol += "<td word-wrap='break-word'><b>" + s + "</b></td>";
-                stCol += "<td word-wrap='break-word'><ul>";
+                stCol += "<td word-wrap:'break-word'><b>" + s + "</b></td>";
+                stCol += "<td word-wrap:'break-word'><ul>";
                 IEnumerator nd = newnode.GetEnumerator();
                 if (nd != null)
                 {

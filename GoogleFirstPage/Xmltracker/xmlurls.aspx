@@ -192,7 +192,7 @@
                                         <a href="<%#DataBinder.Eval(Container.DataItem,"url") %>" target="_blank"><%#DataBinder.Eval(Container.DataItem,"url") %></a>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="ViewXML">
+                                <asp:TemplateField HeaderText="View XML">
                                     <HeaderStyle HorizontalAlign="Center" />
                                     <ItemTemplate>
                                         <a href="viewxml.aspx?uid=<%# Eval("uid") %>&url=<%# Eval("url") %>" target="_blank">View XML</a>

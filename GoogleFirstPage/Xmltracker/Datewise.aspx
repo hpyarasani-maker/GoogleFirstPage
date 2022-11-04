@@ -66,8 +66,7 @@
             color: brown;
             font-weight: bold;
         }
-    </style>
-
+    </style>    
 
     <style type="text/css">
         .header3 {
@@ -171,8 +170,8 @@
         </div>
         <div class="containerDB">
             <div class="header3">
-                <asp:TextBox ID="txtenddate" runat="server" placeholder="start dateate" Height="30px" Width="300px" Font-Size="Large" CssClass="text1"></asp:TextBox>
-                <asp:ImageButton runat="Server" ID="EndDateImage" ImageUrl="~/images/calendarnew.png" Height="25px" Width="30px"/>
+                <asp:TextBox ID="txtenddate" runat="server" placeholder="start dateate" Height="35px" Width="220px" Font-Size="Large" CssClass="text1"></asp:TextBox>
+                <asp:ImageButton runat="Server" ID="EndDateImage" ImageUrl="~/images/calendarnew.png" Height="30px" Width="40px"/>
                 <ajaxToolkit:CalendarExtender ID="endDate" runat="server" PopupButtonID="EndDateImage" TargetControlID="txtenddate" Format="yyyy-MM-dd" StartDate="2022-11-01" />
                 <asp:Button ID="btndatewise" runat="server" OnClick="btndatewise_Click" CssClass="btnlf" Height="24px" Width="120px" Text="Submit" />
             </div>
