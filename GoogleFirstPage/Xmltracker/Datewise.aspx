@@ -66,7 +66,7 @@
             color: brown;
             font-weight: bold;
         }
-    </style>    
+    </style>
 
     <style type="text/css">
         .header3 {
@@ -123,9 +123,9 @@
     </style>
     <style type="text/css">
         .auto-style1 {
-            font-size:large;
-            font-weight:100; 
-            font-family:Arial;
+            font-size: large;
+            font-weight: 100;
+            font-family: Arial;
         }
 
         .center1 {
@@ -171,6 +171,22 @@
         </div>
         <div class="containerDB">
             <div class="header3">
+                <%--<table>
+                    <tr>
+                        <td>&nbsp;<span class="auto-style1">Select Date :</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:TextBox ID="txtenddate" runat="server" placeholder="start dateate" Height="30px" Width="230px" Font-Size="Large" CssClass="text1"></asp:TextBox>
+                        </td>
+                        <td>
+                            <asp:ImageButton runat="Server" ID="EndDateImage" ImageUrl="~/images/calendarnew.png" Height="30px" Width="40px" />
+                            <ajaxToolkit:CalendarExtender ID="endDate" runat="server" PopupButtonID="EndDateImage" TargetControlID="txtenddate" Format="yyyy-MM-dd" StartDate="2022-11-01" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Button ID="btndatewise" runat="server" OnClick="btndatewise_Click" CssClass="btnlf" Height="27px" Width="120px" Text="Submit" />
+                        </td>
+                    </tr>
+                </table>--%>
                 &nbsp;<span class="auto-style1">Select Date :</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtenddate" runat="server" placeholder="start dateate" Height="30px" Width="230px" Font-Size="Large" CssClass="text1"></asp:TextBox>
                 <asp:ImageButton runat="Server" ID="EndDateImage" ImageUrl="~/images/calendarnew.png" Height="30px" Width="40px"/>
