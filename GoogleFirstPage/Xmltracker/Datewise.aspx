@@ -123,8 +123,9 @@
     </style>
     <style type="text/css">
         .auto-style1 {
-            font-size: small;
-            font-weight: bold;
+            font-size:large;
+            font-weight:100; 
+            font-family:Arial;
         }
 
         .center1 {
@@ -170,10 +171,11 @@
         </div>
         <div class="containerDB">
             <div class="header3">
-                <asp:TextBox ID="txtenddate" runat="server" placeholder="start dateate" Height="35px" Width="220px" Font-Size="Large" CssClass="text1"></asp:TextBox>
+                &nbsp;<span class="auto-style1">Select Date :</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:TextBox ID="txtenddate" runat="server" placeholder="start dateate" Height="35px" Width="230px" Font-Size="Large" CssClass="text1"></asp:TextBox>
                 <asp:ImageButton runat="Server" ID="EndDateImage" ImageUrl="~/images/calendarnew.png" Height="30px" Width="40px"/>
                 <ajaxToolkit:CalendarExtender ID="endDate" runat="server" PopupButtonID="EndDateImage" TargetControlID="txtenddate" Format="yyyy-MM-dd" StartDate="2022-11-01" />
-                <asp:Button ID="btndatewise" runat="server" OnClick="btndatewise_Click" CssClass="btnlf" Height="24px" Width="120px" Text="Submit" />
+                <asp:Button ID="btndatewise" runat="server" OnClick="btndatewise_Click" CssClass="btnlf" Height="27px" Width="120px" Text="Submit" />
             </div>
             <div class="wrapper">
                 <asp:Label ID="lblalllinks" runat="server" ForeColor="Blue" Font-Size="Small" Font-Bold="true"></asp:Label><br />
