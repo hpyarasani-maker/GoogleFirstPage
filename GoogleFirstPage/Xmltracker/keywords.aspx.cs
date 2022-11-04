@@ -24,20 +24,20 @@ namespace GoogleFirstPage.Xmltracker
        
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if(!IsPostBack)
+            //if (!IsPostBack)
             //{
-            //    using (SqlConnection con = new SqlConnection(connection))
-            //    {
-            //        SqlCommand cmd = new SqlCommand("[GetClients]", con);
-            //        SqlDataAdapter da = new SqlDataAdapter(cmd);
-            //        DataTable dt = new DataTable();
-            //        da.Fill(dt);
-            //        ddlclient.DataTextField = "name";
-            //        ddlclient.DataSource = dt;
-            //        ddlclient.DataBind();
-            //        ddlclient.Items.Insert(0, "---------------Select Client---------------");
-            //        ddlclient.SelectedIndex = 1;
-            //    }
+                //using (SqlConnection con = new SqlConnection(connection))
+                //{
+                //    SqlCommand cmd = new SqlCommand("[GetClients]", con);
+                //    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                //    DataTable dt = new DataTable();
+                //    da.Fill(dt);
+                //    ddlclient.DataTextField = "name";
+                //    ddlclient.DataSource = dt;
+                //    ddlclient.DataBind();
+                //    ddlclient.Items.Insert(0, "---------------Select Client---------------");
+                //    ddlclient.SelectedIndex = 1;
+                //}
             //}
         }
 
@@ -60,7 +60,7 @@ namespace GoogleFirstPage.Xmltracker
             }
             finally
             {
-                if (objCon.State == ConnectionState.Open) objCon.Close();
+                //if (objCon.State == ConnectionState.Open) objCon.Close();
             }
         }
 

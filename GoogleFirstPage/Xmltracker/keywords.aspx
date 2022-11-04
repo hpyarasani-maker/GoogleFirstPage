@@ -166,6 +166,9 @@
                     &nbsp; <strong><span class="auto-style2">Client :</span></strong>&nbsp;&nbsp; 
                    <asp:DropDownList ID="ddlclient" CssClass="text1" Height="32px" Width="260px" runat="server" AutoPostBack="true">
                        <asp:ListItem Enabled="true" Text="All Keywords" Value="1"></asp:ListItem>
+                       <asp:ListItem Enabled="true" Text="Cond Nast GQ" Value="2"></asp:ListItem>
+                       <asp:ListItem Enabled="true" Text="Cond Nast Glamour" Value="3"></asp:ListItem>
+                       <asp:ListItem Enabled="true" Text="Cond Nast Vogue" Value="4"></asp:ListItem>
                    </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" Text="*" ControlToValidate="ddlclient" InitialValue="---------------Select Client---------------"></asp:RequiredFieldValidator>
                     &nbsp;
