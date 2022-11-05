@@ -146,9 +146,9 @@
                                 <nav style="margin-left: 950px; margin-top: -50px">
                                     <ul class="nav topnav bold">
                                         <li class="dropdown">
-                                            <a href="../Dashboard.aspx">Home</a>&nbsp;<ul style="display: none;" class="dropdown-menu bold">
+                                            <%--<a href="../Dashboard.aspx">Home</a>&nbsp;<ul style="display: none;" class="dropdown-menu bold">
                                                 <li><a href="../Dashboard.aspx">BACK TO DASHBOARD</a></li>
-                                            </ul>
+                                            </ul>--%>
                                         </li>
                                     </ul>
                                 </nav>
@@ -176,6 +176,14 @@
                     <br />
                     <br />
                     <br />
+
+                    <div style="float: right; margin-top: -90px;">
+                        &nbsp; <strong><span style="color: black;">Search :</span></strong>&nbsp;&nbsp; 
+                        <asp:TextBox runat="server" ID="txtsearchkwds" CssClass="text1" AutoPostBack="false"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="reqtxt" runat="server" Text="*" ForeColor="Black" ControlToValidate="txtsearchkwds" ErrorMessage="*"></asp:RequiredFieldValidator>
+                        <asp:Button ID="btnsearchkwd" runat="server" Text="Submit" CssClass="btnlf" Height="27px" Width="120px" OnClick="btnsearchkwd_Click" />
+                    </div>
+
                 </div>
             </div>
             <br />
@@ -188,19 +196,42 @@
                 <br />
 
 
-                 <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+                <asp:UpdateProgress ID="UpdateProgress1" runat="server">
                 </asp:UpdateProgress>
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <Triggers>
                         <asp:AsyncPostBackTrigger ControlID="btnclient" EventName="Click" />
                     </Triggers>
                     <ContentTemplate>
-                        <asp:GridView ID="gvurls" runat="server" AutoGenerateColumns="false" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px"   CellPadding="5" CellSpacing="0">
+                        <asp:GridView ID="gvurls" runat="server" AutoGenerateColumns="false" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px" CellPadding="5" CellSpacing="0">
                             <HeaderStyle BackColor="#e4e8ef" Font-Bold="true" ForeColor="Black" />
                             <Columns>
                                 <asp:TemplateField HeaderText="Keywords">
                                     <ItemTemplate>
                                         <asp:Label Text='<%#DataBinder.Eval(Container.DataItem,"KName")%>' ID="kwd" runat="server">
+                                        </asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <a href="xmlurls.aspx?kid=<%# Eval("kid") %>" target="_blank">Link</a>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                            </Columns>
+                        </asp:GridView>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                <asp:UpdatePanel ID="update2" runat="server">
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="btnsearchkwd" EventName="Click" />
+                    </Triggers>
+                    <ContentTemplate>
+                        <asp:GridView ID="gvsearch" runat="server" AutoGenerateColumns="false" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px" CellPadding="5" CellSpacing="0">
+                            <HeaderStyle BackColor="#e4e8ef" Font-Bold="true" ForeColor="Black" />
+                            <Columns>
+                                <asp:TemplateField HeaderText="Keywords">
+                                    <ItemTemplate>
+                                        <asp:Label Text='<%#DataBinder.Eval(Container.DataItem,"keyword")%>' ID="kwd" runat="server">
                                         </asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>

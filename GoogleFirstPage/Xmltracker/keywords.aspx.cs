@@ -70,5 +70,23 @@ namespace GoogleFirstPage.Xmltracker
             
         }
 
+        protected void btnsearchkwd_Click(object sender, EventArgs e)
+        {
+            string strSql = "exec [dbo].[GetSearchKeyword]'" + txtsearchkwds.Text + "'";
+            SqlConnection objCon = null;
+            try
+            {
+                objCon = new SqlConnection(connection);
+                objCon.Open();
+                SqlCommand objCmd = new SqlCommand(strSql, objCon);
+                gvsearch.DataSource = objCmd.ExecuteReader(CommandBehavior.CloseConnection);
+                gvsearch.DataBind();
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write(ex.Message);
+            }
+        }
     }
 }

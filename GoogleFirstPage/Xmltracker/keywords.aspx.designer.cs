@@ -67,6 +67,33 @@ namespace GoogleFirstPage.Xmltracker {
         protected global::System.Web.UI.WebControls.Button btnclient;
         
         /// <summary>
+        /// txtsearchkwds control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtsearchkwds;
+        
+        /// <summary>
+        /// reqtxt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqtxt;
+        
+        /// <summary>
+        /// btnsearchkwd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnsearchkwd;
+        
+        /// <summary>
         /// lblalllinks control.
         /// </summary>
         /// <remarks>
@@ -110,5 +137,23 @@ namespace GoogleFirstPage.Xmltracker {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gvurls;
+        
+        /// <summary>
+        /// update2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel update2;
+        
+        /// <summary>
+        /// gvsearch control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvsearch;
     }
 }
