@@ -41,7 +41,7 @@
                         throw new Exception("at diff1 - " + exception.Message);
                     }
                 }
-                (strArray4 = strArray)[0] = strArray4[0] + "<li>" + n.Current.ToString().Replace("<", "&lt;") + "</li>";
+                (strArray4 = strArray)[0] = strArray4[0] + "<li>" + setDiff(n.Current.ToString().Replace("<", "&lt;"), string.Empty, "green") + "</li>";
                 (strArray5 = strArray)[1] = strArray5[1] + "<li> - - - ";
                 this.blChng = true;
                 this.blColChng = true;
