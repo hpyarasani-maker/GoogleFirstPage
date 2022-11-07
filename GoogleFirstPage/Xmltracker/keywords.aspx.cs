@@ -21,37 +21,40 @@ namespace GoogleFirstPage.Xmltracker
     {
         string connection = ConfigurationManager.ConnectionStrings["xmltracker"].ToString();
 
-       
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (!IsPostBack)
-            //{
-                //using (SqlConnection con = new SqlConnection(connection))
-                //{
-                //    SqlCommand cmd = new SqlCommand("[GetClients]", con);
-                //    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                //    DataTable dt = new DataTable();
-                //    da.Fill(dt);
-                //    ddlclient.DataTextField = "name";
-                //    ddlclient.DataSource = dt;
-                //    ddlclient.DataBind();
-                //    ddlclient.Items.Insert(0, "---------------Select Client---------------");
-                //    ddlclient.SelectedIndex = 1;
-                //}
-            //}
+            if(!Page.IsPostBack)
+            {
+                using (SqlConnection con = new SqlConnection(connection))
+                {
+                    SqlCommand cmd = new SqlCommand("[GetClients]", con);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    ddlclient.DataTextField = "name";
+                    ddlclient.DataValueField = "id";
+                    ddlclient.DataSource = dt;
+                    ddlclient.Items.Insert(0, "---Select any Client---");                    
+                    ddlclient.DataBind();
+                }
+                
+            }
         }
 
         public void GetClientKeywords()
         {
-            string strSql = "exec [dbo].[GetClientsKeywords]";
+            //string strSql = "exec [dbo].[GetClientsKeywords]";
+            string clientid = ddlclient.SelectedValue;
+            string strSql = "exec [dbo].[GetClKeywords]'" + clientid + "'";
+
             SqlConnection objCon = null;
             try
             {
                 objCon = new SqlConnection(connection);
                 objCon.Open();
                 SqlCommand objCmd = new SqlCommand(strSql, objCon);
-                gvurls.DataSource = objCmd.ExecuteReader(CommandBehavior.CloseConnection);
-                gvurls.DataBind();
+                gvkeywords.DataSource = objCmd.ExecuteReader(CommandBehavior.CloseConnection);
+                gvkeywords.DataBind();
 
             }
             catch (Exception ex)
@@ -60,33 +63,58 @@ namespace GoogleFirstPage.Xmltracker
             }
             finally
             {
-                //if (objCon.State == ConnectionState.Open) objCon.Close();
+                if (objCon.State == ConnectionState.Open) objCon.Close();
             }
         }
 
         protected void btnclient_Click(object sender, EventArgs e)
         {
+            gvsearch.DataSource = null;
+            gvsearch.DataBind();
             GetClientKeywords();
-            
         }
 
+     
         protected void btnsearchkwd_Click(object sender, EventArgs e)
         {
-            string strSql = "exec [dbo].[GetSearchKeyword]'" + txtsearchkwds.Text + "'";
-            SqlConnection objCon = null;
-            try
+            
+            if (!string.IsNullOrEmpty(txtsearchkwds.Text))
             {
-                objCon = new SqlConnection(connection);
-                objCon.Open();
-                SqlCommand objCmd = new SqlCommand(strSql, objCon);
-                gvsearch.DataSource = objCmd.ExecuteReader(CommandBehavior.CloseConnection);
-                gvsearch.DataBind();
+                gvkeywords.DataSource = null;
+                gvkeywords.DataBind();
+                string strSql = "exec [dbo].[GetSearchKeyword]'" + txtsearchkwds.Text + "'";
+                SqlConnection objCon = null;
+                try
+                {
+                    objCon = new SqlConnection(connection);
+                    objCon.Open();
+                    SqlCommand objCmd = new SqlCommand(strSql, objCon);
+                    gvsearch.DataSource = objCmd.ExecuteReader(CommandBehavior.CloseConnection);
+                    gvsearch.DataBind();
 
+                }
+                catch (Exception ex)
+                {
+                    Response.Write(ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                Response.Write(ex.Message);
-            }
+
         }
+
+        //protected void ddlclient_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    using (SqlConnection con = new SqlConnection(connection))
+        //    {
+        //        SqlCommand cmd = new SqlCommand("[GetClients]", con);
+        //        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        //        DataTable dt = new DataTable();
+        //        da.Fill(dt);
+        //        ddlclient.DataTextField = "name";
+        //        ddlclient.DataValueField = "id";
+        //        ddlclient.DataSource = dt;
+        //        ddlclient.Items.Insert(0, "---All keywords---");
+        //        ddlclient.DataBind();
+        //    }
+        //}
     }
 }

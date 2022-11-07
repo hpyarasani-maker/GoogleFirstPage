@@ -193,6 +193,9 @@
                 <ajaxToolkit:CalendarExtender ID="endDate" runat="server" PopupButtonID="EndDateImage" TargetControlID="txtenddate" Format="yyyy-MM-dd" StartDate="2022-11-01" />
                 <asp:Button ID="btndatewise" runat="server" OnClick="btndatewise_Click" CssClass="btnlf" Height="27px" Width="120px" Text="Submit" />
             </div>
+            <br />
+            <br />
+            <br />
             <div class="wrapper">
                 <asp:Label ID="lblalllinks" runat="server" ForeColor="Blue" Font-Size="Small" Font-Bold="true"></asp:Label><br />
                 <asp:Label ID="lbl1" runat="server" CssClass="LblClassNew"></asp:Label>

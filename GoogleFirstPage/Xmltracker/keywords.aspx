@@ -96,7 +96,7 @@
             font-weight: bold;
             font-style: normal;
             color: #FFFFFF;
-            margin-left: 50px;
+            margin-left: 15px;
         }
 
             .btnlf:hover {
@@ -138,6 +138,7 @@
                 <a href="../Dashboard.aspx" title="Pi-Datametrics Dashboard Home">
                     <asp:Image ID="Image2" runat="server" ImageUrl="~/images/PILogo_1.jpg" CssClass="imgLogo" Height="51px" Width="54px" /></a>
                 <div class="container">
+
                     <div class="navbar navbar-static-top">
                         <div>
                             <div class="navigation">
@@ -162,29 +163,25 @@
         </div>
         <div class="containerDB">
             <div class="header3">
-                <div style="margin-top: 12px;">
-                    &nbsp; <strong><span class="auto-style2">Client :</span></strong>&nbsp;&nbsp; 
+                <div style="margin-top: 12px; float: left;">
+                    &nbsp; <strong><span>Client :</span></strong>&nbsp;&nbsp; 
                    <asp:DropDownList ID="ddlclient" CssClass="text1" Height="32px" Width="260px" runat="server" AutoPostBack="true">
-                       <asp:ListItem Enabled="true" Text="All Keywords" Value="1"></asp:ListItem>
-                       <asp:ListItem Enabled="true" Text="Cond Nast GQ" Value="2"></asp:ListItem>
-                       <asp:ListItem Enabled="true" Text="Cond Nast Glamour" Value="3"></asp:ListItem>
-                       <asp:ListItem Enabled="true" Text="Cond Nast Vogue" Value="4"></asp:ListItem>
+                       <%--<asp:ListItem Enabled="true" Text="All Keywords" Value="0"></asp:ListItem>
+                       <asp:ListItem Text="Cond Nast GQ" Value="1"></asp:ListItem>
+                       <asp:ListItem Text="Cond Nast Glamour" Value="2"></asp:ListItem>
+                       <asp:ListItem Text="Cond Nast Vogue" Value="3"></asp:ListItem>--%>
                    </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" Text="*" ControlToValidate="ddlclient" InitialValue="---------------Select Client---------------"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" Text="*" ControlToValidate="ddlclient" InitialValue="---Select any Client---"></asp:RequiredFieldValidator>
                     &nbsp;
                 <asp:Button runat="server" Text="Submit" CssClass="btnlf" Height="27px" ID="btnclient" Width="120px" OnClick="btnclient_Click" />
-                    <br />
-                    <br />
-                    <br />
-
-                    <div style="float: right; margin-top: -90px;">
-                        &nbsp; <strong><span style="color: black;">Search :</span></strong>&nbsp;&nbsp; 
-                        <asp:TextBox runat="server" ID="txtsearchkwds" CssClass="text1" AutoPostBack="false"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="reqtxt" runat="server" Text="*" ForeColor="Black" ControlToValidate="txtsearchkwds" ErrorMessage="*"></asp:RequiredFieldValidator>
-                        <asp:Button ID="btnsearchkwd" runat="server" Text="Submit" CssClass="btnlf" Height="27px" Width="120px" OnClick="btnsearchkwd_Click" />
-                    </div>
-
                 </div>
+                <div style="float: right; margin-top: 12px; margin-left: 50px;">
+                    &nbsp; <strong><span>Keyword Search :</span></strong> 
+                    <asp:TextBox runat="server" ID="txtsearchkwds" CssClass="text1" AutoPostBack="false" Width="257px"></asp:TextBox>
+                    <asp:Button ID="btnsearchkwd" runat="server" Text="Submit" CssClass="btnlf" Height="27px" Width="120px" OnClick="btnsearchkwd_Click" />
+                </div>
+
+
             </div>
             <br />
             <br />
@@ -195,32 +192,35 @@
                 <br />
                 <br />
 
-
-                <asp:UpdateProgress ID="UpdateProgress1" runat="server">
-                </asp:UpdateProgress>
-                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                    <Triggers>
-                        <asp:AsyncPostBackTrigger ControlID="btnclient" EventName="Click" />
-                    </Triggers>
-                    <ContentTemplate>
-                        <asp:GridView ID="gvurls" runat="server" AutoGenerateColumns="false" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px" CellPadding="5" CellSpacing="0">
-                            <HeaderStyle BackColor="#e4e8ef" Font-Bold="true" ForeColor="Black" />
-                            <Columns>
-                                <asp:TemplateField HeaderText="Keywords">
-                                    <ItemTemplate>
-                                        <asp:Label Text='<%#DataBinder.Eval(Container.DataItem,"KName")%>' ID="kwd" runat="server">
-                                        </asp:Label>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:TemplateField>
-                                    <ItemTemplate>
-                                        <a href="xmlurls.aspx?kid=<%# Eval("kid") %>" target="_blank">Link</a>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                            </Columns>
-                        </asp:GridView>
-                    </ContentTemplate>
-                </asp:UpdatePanel>
+                <div id="divgetkwds" runat="server">
+                    <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+                    </asp:UpdateProgress>
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <Triggers>
+                            <asp:AsyncPostBackTrigger ControlID="btnclient" EventName="Click" />
+                        </Triggers>
+                        <ContentTemplate>
+                            <asp:GridView ID="gvkeywords" runat="server" AutoGenerateColumns="false" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px" CellPadding="5" CellSpacing="0">
+                                <HeaderStyle BackColor="#e4e8ef" Font-Bold="true" ForeColor="Black" />
+                                <Columns>
+                                    <asp:TemplateField HeaderText="Keywords">
+                                        <ItemTemplate>
+                                            <asp:Label Text='<%#DataBinder.Eval(Container.DataItem,"KName")%>' ID="kwd" runat="server">
+                                            </asp:Label>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                    <asp:TemplateField>
+                                        <ItemTemplate>
+                                            <a href="xmlurls.aspx?kid=<%# Eval("kid") %>" target="_blank">Link</a>
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                </Columns>
+                            </asp:GridView>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </div>
+            </div>
+            <div class="wrapper" id="divsearch" runat="server">
                 <asp:UpdatePanel ID="update2" runat="server">
                     <Triggers>
                         <asp:AsyncPostBackTrigger ControlID="btnsearchkwd" EventName="Click" />
@@ -256,7 +256,7 @@
             <div id="footer">
                 <div style="font-weight: bold; font-size: 14px;">© <%= DateTime.Now.Year %> Pi Datametrics | XML Tracker.</div>
             </div>
-        </div>
+            <%--</div>--%>
     </form>
 </body>
 </html>
