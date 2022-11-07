@@ -23,7 +23,8 @@ namespace GoogleFirstPage.Xmltracker
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!Page.IsPostBack)
+            lblmessage.Text = "";
+            if (!Page.IsPostBack)
             {
                 using (SqlConnection con = new SqlConnection(connection))
                 {
@@ -34,7 +35,8 @@ namespace GoogleFirstPage.Xmltracker
                     ddlclient.DataTextField = "name";
                     ddlclient.DataValueField = "id";
                     ddlclient.DataSource = dt;
-                    ddlclient.Items.Insert(0, "---Select any Client---");                    
+                    //ddlclient.Items.Insert(0, "---Select any Client---");
+                    //ddlclient.SelectedIndex = 0;
                     ddlclient.DataBind();
                 }
                 
@@ -69,6 +71,7 @@ namespace GoogleFirstPage.Xmltracker
 
         protected void btnclient_Click(object sender, EventArgs e)
         {
+            lblmessage.Text = "";
             gvsearch.DataSource = null;
             gvsearch.DataBind();
             GetClientKeywords();
@@ -91,12 +94,15 @@ namespace GoogleFirstPage.Xmltracker
                     SqlCommand objCmd = new SqlCommand(strSql, objCon);
                     gvsearch.DataSource = objCmd.ExecuteReader(CommandBehavior.CloseConnection);
                     gvsearch.DataBind();
-
                 }
                 catch (Exception ex)
                 {
                     Response.Write(ex.Message);
                 }
+            }
+            else
+            {
+                lblmessage.Text = "please enter keyword";
             }
 
         }
