@@ -178,10 +178,9 @@
                 <div style="float: right; margin-top: 12px; margin-left: 50px;">
                     &nbsp; <strong><span>Keyword Search :</span></strong> 
                     <asp:TextBox runat="server" ID="txtsearchkwds" CssClass="text1" AutoPostBack="false" Width="257px"></asp:TextBox>
+                    <asp:Label ID="lblmessage" runat="server"></asp:Label>
                     <asp:Button ID="btnsearchkwd" runat="server" Text="Submit" CssClass="btnlf" Height="27px" Width="120px" OnClick="btnsearchkwd_Click" />
                 </div>
-
-
             </div>
             <br />
             <br />
