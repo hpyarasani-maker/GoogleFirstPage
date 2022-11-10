@@ -118,14 +118,13 @@ namespace GoogleFirstPage.Xmltracker
                 unchar.Add("  ");
                 unchar.Add("Â");
                 unchar.Add("â€¢");
-                foreach (String str in unchar)
+                unchar.Add("â€");
+                foreach (string str in unchar)
                 {
-                    urlData = urlSource.Replace(str, "");
+                    urlSource = urlSource.Replace(str, "");
                 }
-                //urlData = urlSource.Replace("'", "''");
-
                 Encoding utf8 = Encoding.UTF8;
-                string Text1 = HttpUtility.UrlDecode(urlData, utf8);
+                string Text1 = HttpUtility.UrlDecode(urlSource, utf8);
                 StringBuilder sb = new StringBuilder();
 
                 HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
@@ -150,7 +149,6 @@ namespace GoogleFirstPage.Xmltracker
                             {
                                 string eVal = string.Empty;
                                 string nodeText = WebUtility.HtmlEncode(WebUtility.HtmlDecode(node?.InnerText));
-
                                 if (string.IsNullOrEmpty(nodeText.Trim()) && node?.Name != "img" && node?.Name != "meta") continue;
 
                                 if (node?.Name == "a") //<anchor>
