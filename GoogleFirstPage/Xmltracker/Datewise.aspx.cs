@@ -109,7 +109,7 @@ namespace GoogleFirstPage.Xmltracker
                     if (canonical.MoveNext())
                         st += "<br />Results for : <a href=\"" + canonical.Current.GetAttribute("url", "") + "\" target=\"_blank\" >" + canonical.Current.GetAttribute("url", "") + "</a>";
                     anc = "&nbsp; &nbsp; &nbsp; <a href=\"Default2.aspx?date=" + stDate + "&uid=" + xmlID + "\" target=\"=_blank\">[Elementary Data]</a>";
-                    st += "<p /><table width=\"100%\" bordercolor=\"Blue\" border=\"1\">";
+                    st += "<p /><table width=\"50%\" bordercolor=\"Blue\" border=\"1\">";
                     st += "<col width=\"10%\"> <col width=\"45%\"> <col width=\"45%\"> ";
                     st += "<tr ><th valign=\"top\">Element</th><th >&nbsp; &nbsp; In</th><th >&nbsp; &nbsp; Out</th></tr>";
 

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Elementary by Pi</title>
-    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/main1.css" rel="stylesheet" />
 
     <link rel="icon" href="images/default-avatar-logo.png" type="image/x-icon" />
 
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="displaydata">
-            <div class="header2">
+            <%--<div class="header2">
                 <div class="headercenterdiv">
                     <strong><span>Select Date :</span></strong>
                     <asp:TextBox ID="txtenddate" runat="server" placeholder="start date" Height="30px" Width="150px" Font-Size="Large" CssClass="text1"></asp:TextBox>
@@ -32,10 +32,32 @@
                     <asp:Button ID="btndatewise" runat="server" OnClick="btndatewise_Click" CssClass="buttonleft" Height="27px" Width="120px" Text="Submit" />
 
                 </div>
+            </div>--%>
+            <div style="margin-top: 1px; background-color: #e4e8ef; height: 120px; border-radius: 10px 10px;">
+                <br />
+                <div>
+                    <table style="margin-left: auto; margin-right: auto;">
+                        <tr>
+                            <td>
+                                <strong><span>Select Date :</span></strong>
+                            </td>
+                            <td>
+                                <asp:TextBox ID="txtenddate" runat="server" placeholder="start dateate" Height="30px" Width="90px" Font-Size="Large" CssClass="text1"></asp:TextBox>
+                                <asp:ImageButton runat="Server" ID="EndDateImage" ImageUrl="~/images/calendarnew.png" Height="30px" Width="40px" />
+                                <ajaxToolkit:CalendarExtender ID="endDate" runat="server" PopupButtonID="EndDateImage" TargetControlID="txtenddate" Format="yyyy-MM-dd" StartDate="2022-11-02" />
+                            </td>
+                            <td></td>
+                            <td>
+                                <asp:Button ID="btndatewise" runat="server" OnClick="btndatewise_Click" CssClass="buttonleft" Height="27px" Width="120px" Text="Submit" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-        </div>
 
-        <div class="wrapper">
+        </div>
+        <div style="margin-top:150px;">
+             <div class="wrapper">
             <asp:UpdateProgress ID="UpdateProgress1" runat="server">
             </asp:UpdateProgress>
             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
@@ -50,6 +72,8 @@
                 </ContentTemplate>
             </asp:UpdatePanel>
         </div>
+        </div>
+       
         <br />
         <br />
         <br />
