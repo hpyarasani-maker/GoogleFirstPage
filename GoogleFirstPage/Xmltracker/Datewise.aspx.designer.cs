@@ -10,7 +10,7 @@
 namespace GoogleFirstPage.Xmltracker {
     
     
-    public partial class Datewise {
+    public partial class datewise {
         
         /// <summary>
         /// form1 control.
@@ -22,22 +22,13 @@ namespace GoogleFirstPage.Xmltracker {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ScriptManager1 control.
+        /// scriptmgr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
-        
-        /// <summary>
-        /// Image2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image2;
+        protected global::System.Web.UI.ScriptManager scriptmgr;
         
         /// <summary>
         /// txtenddate control.
@@ -74,24 +65,6 @@ namespace GoogleFirstPage.Xmltracker {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btndatewise;
-        
-        /// <summary>
-        /// lblalllinks control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblalllinks;
-        
-        /// <summary>
-        /// lbl1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl1;
         
         /// <summary>
         /// UpdateProgress1 control.

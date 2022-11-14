@@ -13,7 +13,7 @@ using System.Xml.XPath;
 
 namespace GoogleFirstPage.Xmltracker
 {
-    public partial class Datewise : System.Web.UI.Page
+    public partial class datewise : System.Web.UI.Page
     {
         string connection = ConfigurationManager.ConnectionStrings["xmltracker"].ToString();
         private string st;
@@ -31,7 +31,7 @@ namespace GoogleFirstPage.Xmltracker
                 endDate.EndDate = DateTime.Now;
 
                 string uid = (string)Request.QueryString["uid"];
-                
+
 
                 DateTime dy = DateTime.Now;
                 txtenddate.Text = dy.ToString("yyy-MM-dd");
@@ -45,8 +45,7 @@ namespace GoogleFirstPage.Xmltracker
         {
             string uid = Request.QueryString["uid"].ToString();
 
-            //string strQuery = "Select xmldata,date,uid from xmlSource Where uid ='" + uid + "' and date between convert(datetime,'" + firstdate + "',127) and convert(datetime,'" + lastdate + "',127) order by date";
-            string strQuery = "Exec [XmlTracker].[dbo].[GetViewSourceChangeDate] '" + uid + "','"+curDate+"'";
+            string strQuery = "Exec [XmlTracker].[dbo].[GetViewSourceChangeDate] '" + uid + "','" + curDate + "'";
             SqlConnection con;
             SqlCommand comm;
 

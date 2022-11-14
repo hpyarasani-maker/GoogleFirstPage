@@ -1,0 +1,82 @@
+﻿
+body {
+    background-color: #ffffff;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    vertical-align: top;
+}
+
+tr:nth-of-type(odd) {
+    background: #ffffff;
+}
+
+th {
+    padding: 5px 5px;
+    border: 1px solid blue;
+    vertical-align: top;
+    word-wrap: break-word;
+    font-weight: bold;
+}
+
+td, th {
+    padding: 5px 5px;
+    border: 1px solid blue;
+    vertical-align: top;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+
+    .table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+    tr {
+        border: 1px solid blue;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid blue;
+        position: relative;
+        padding-left: 50%;
+    }
+
+        td:before {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+
+        td:nth-of-type(1):before {
+            content: "Element";
+            font-weight: bold;
+        }
+
+        td:nth-of-type(2):before {
+            content: "In";
+            font-weight: bold;
+        }
+
+        td:nth-of-type(3):before {
+            content: "Out";
+            font-weight: bold;
+        }
+}
+
+
+

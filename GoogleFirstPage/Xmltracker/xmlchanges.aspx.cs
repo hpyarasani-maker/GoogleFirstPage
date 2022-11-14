@@ -8,6 +8,7 @@ using System.Data.SqlTypes;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Xml;
 using System.Xml.XPath;
@@ -23,7 +24,6 @@ namespace GoogleFirstPage.Xmltracker
         private bool blColChng;
         private MyLib.MyCls cls;
         public string yearValue = string.Empty;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             DateTime dd = DateTime.Now;
@@ -38,14 +38,15 @@ namespace GoogleFirstPage.Xmltracker
                 Label lbl = new Label();
                 lbl.Text = ex.Message;
                 phr.Controls.Add(lbl);
+
             }
         }
+
 
         private void Show()
         {
             string uid = Request.QueryString["uid"].ToString();
 
-            //string strQuery = "Select xmldata,date,uid from xmlSource Where uid ='" + uid + "' and xmldata is not null order by date";
             string strQuery = "Exec [XmlTracker].[dbo].[GetViewSourceChange] '" + uid + "'";
             SqlConnection con;
             SqlCommand comm;
@@ -109,11 +110,12 @@ namespace GoogleFirstPage.Xmltracker
                     string anc = "";
                     if (canonical.MoveNext())
                         st += "<br />Results for : <a href=\"" + canonical.Current.GetAttribute("url", "") + "\" target=\"_blank\" >" + canonical.Current.GetAttribute("url", "") + "</a>";
-                        anc = "&nbsp; &nbsp; &nbsp; <a href=\"Default2.aspx?date=" + stDate + "&uid=" + xmlID + "\" target=\"=_blank\">[Elementary Data]</a>";
-                    st += "<p /><table width=\"100%\" bordercolor=\"Blue\" border=\"1\" >";
+                    anc = "&nbsp; &nbsp; &nbsp; <a href=\"Default2.aspx?date=" + stDate + "&uid=" + xmlID + "\" target=\"=_blank\">[Elementary Data]</a>";
+                    st += "<p /><table width=\"100%\" bordercolor=\"Blue\" border=\"1\">";
                     st += "<col width=\"10%\"> <col width=\"45%\"> <col width=\"45%\"> ";
                     st += "<tr ><th valign=\"top\">Element</th><th >&nbsp; &nbsp; In</th><th >&nbsp; &nbsp; Out</th></tr>";
 
+                 
                     XPathNodeIterator new_description = xpn.Select("XmlSource/tag/meta/description");
                     this.display_changes(old_description, new_description, "Meta");
                     old_description = new_description;
@@ -180,7 +182,7 @@ namespace GoogleFirstPage.Xmltracker
                     display_changes(old_li, new_li, "LI");
                     old_li = new_li;
 
-                    
+
                     //XPathNodeIterator new_div = xpn.Select("XmlSource/tag/div");
                     //display_changes(old_div, new_div, "Div");
                     //old_div = new_div;

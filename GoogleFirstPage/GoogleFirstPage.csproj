@@ -187,12 +187,24 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="Xmltracker\Datewise.aspx" />
+    <Content Include="Xmltracker\css\main.css" />
+    <Content Include="Xmltracker\css\main1.css" />
+    <Content Include="Xmltracker\css\Tablecss.css" />
+    <Content Include="Xmltracker\datewise.aspx" />
     <Content Include="Xmltracker\Default2.aspx" />
+    <Content Include="Xmltracker\images\calendarnew.png" />
+    <Content Include="Xmltracker\images\default-avatar-logo.png" />
+    <Content Include="Xmltracker\images\pilogo.jpg" />
+    <Content Include="Xmltracker\js\custom.js" />
     <Content Include="Xmltracker\keywords.aspx" />
     <Content Include="Xmltracker\viewxml.aspx" />
     <Content Include="Xmltracker\xmlchanges.aspx" />
     <Content Include="Xmltracker\xmlurls.aspx" />
+    <None Include="Xmltracker\js\jquery-1.10.2.intellisense.js" />
+    <Content Include="Xmltracker\js\jquery-1.10.2.js" />
+    <Content Include="Xmltracker\js\jquery-1.10.2.min.js" />
+    <Content Include="Xmltracker\js\jquery-3.2.1.js" />
+    <Content Include="Xmltracker\js\jquery.js" />
     <None Include="FluxData\DataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet11.Designer.cs</LastGenOutput>
@@ -375,6 +387,7 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Xmltracker\js\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="amazon.aspx.cs">
@@ -617,12 +630,12 @@
     <Compile Include="TrendingTwoHoursResultsFromDB\Viewxml.aspx.designer.cs">
       <DependentUpon>Viewxml.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Xmltracker\Datewise.aspx.cs">
-      <DependentUpon>Datewise.aspx</DependentUpon>
+    <Compile Include="Xmltracker\datewise.aspx.cs">
+      <DependentUpon>datewise.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Xmltracker\Datewise.aspx.designer.cs">
-      <DependentUpon>Datewise.aspx</DependentUpon>
+    <Compile Include="Xmltracker\datewise.aspx.designer.cs">
+      <DependentUpon>datewise.aspx</DependentUpon>
     </Compile>
     <Compile Include="Xmltracker\Default2.aspx.cs">
       <DependentUpon>Default2.aspx</DependentUpon>

@@ -1,5 +1,4 @@
-﻿using HtmlAgilityPack;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -11,13 +10,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
-
 namespace GoogleFirstPage.Xmltracker
 {
     public partial class xmlurls : System.Web.UI.Page
     {
-        string connection = ConfigurationManager.ConnectionStrings["xmltracker"].ToString();
 
+        string connection = ConfigurationManager.ConnectionStrings["xmltracker"].ToString();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -45,7 +43,6 @@ namespace GoogleFirstPage.Xmltracker
                     gvxmlurls.DataBind();
                 }
             }
-
         }
     }
 }

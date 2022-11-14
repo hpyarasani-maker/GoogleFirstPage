@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -71,7 +70,7 @@ namespace GoogleFirstPage.Xmltracker
             string xmlData = string.Empty;
             string strIns = string.Empty;
 
-           
+
             try
             {
                 urlSource = webSourceTracking(url);
@@ -117,12 +116,15 @@ namespace GoogleFirstPage.Xmltracker
                 unchar.Add("上");
                 unchar.Add("  ");
                 unchar.Add("Â");
+                unchar.Add("Ã");
                 unchar.Add("â€¢");
                 unchar.Add("â€");
                 foreach (string str in unchar)
                 {
                     urlSource = urlSource.Replace(str, "");
                 }
+                
+
                 Encoding utf8 = Encoding.UTF8;
                 string Text1 = HttpUtility.UrlDecode(urlSource, utf8);
                 StringBuilder sb = new StringBuilder();
@@ -149,6 +151,7 @@ namespace GoogleFirstPage.Xmltracker
                             {
                                 string eVal = string.Empty;
                                 string nodeText = WebUtility.HtmlEncode(WebUtility.HtmlDecode(node?.InnerText));
+
                                 if (string.IsNullOrEmpty(nodeText.Trim()) && node?.Name != "img" && node?.Name != "meta") continue;
 
                                 if (node?.Name == "a") //<anchor>

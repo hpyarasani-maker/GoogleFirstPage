@@ -1,31 +1,18 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="keywords.aspx.cs" Inherits="GoogleFirstPage.Xmltracker.keywords" Title="Elementary by Pi" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="keywords.aspx.cs" Inherits="GoogleFirstPage.Xmltracker.keywords" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 
-    <title>Elementary by Pi</title>
-
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/main1.css" rel="stylesheet" />
 
-    <link href="Content/bootstrap.cosmo.min.css" rel="stylesheet" />
-    <link href="Content/StyleSheet.css" rel="stylesheet" />
+    <title>Elementary by Pi</title>
+    
 
-    <%--<link rel="icon" href="../images/PILogo_1.jpg" type="image/x-icon" />--%>
-
-    <link href="../CSS/StyleSheet2.css" rel="stylesheet" />
-
-    <script src="../js/jquery-1.10.2.js"></script>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no" />
-
-    <link href="../CSS/menu.css" rel="stylesheet" />
-
-    <link href="../CSS/Newstyle.css" rel="stylesheet" />
-
-    <link rel="icon" href="../images/default-avatar-logo.png" type="image/x-icon" />
-
+    <link rel="icon" href="images/default-avatar-logo.png" type="image/x-icon" />
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
@@ -33,204 +20,104 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/css/footable.min.css" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/js/footable.min.js"></script>
+
+    <script src="js/jquery-1.10.2.js"></script>
+
     <script type="text/javascript">
         $(function () {
-            $('[id*=gvelements]').footable();
+            $('[id*=gridkeywords]').footable();
         });
     </script>
-
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-
-    <script type="text/javascript">
-        function ShowProgress() {
-            setTimeout(function () {
-                var modal = $('<div />');
-                modal.addClass("modal");
-                $('body').append(modal);
-                var loading = $(".loading");
-                loading.show();
-                var top = Math.max($(window).height() / 2 - loading[0].offsetHeight / 2, 0);
-                var left = Math.max($(window).width() / 2 - loading[0].offsetWidth / 2, 0);
-                loading.css({ top: top, left: left });
-            }, 200);
-        }
-        $('form').live("submit", function () {
-            ShowProgress();
-        });
-
-    </script>
-
-    <style>
-        .LblClass2 {
-            font-family: Cambria;
-            font-size: 20px;
-            color: brown;
-            font-weight: bold;
-        }
-    </style>
-
-
-    <style type="text/css">
-        .header3 {
-            padding: 20px;
-            text-align: center;
-            font-family: Arial;
-            font-size: 15px;
-            background-color: #e4e8ef;
-            height: 85px;
-            padding: 10px 10px 10px 10px;
-            border-radius: 10px 10px;
-        }
-    </style>
-
-    <style>
-        .btnlf {
-            background: #1583c2;
-            border: 1px solid #1583c2;
-            width: 140px;
-            height: 18px;
-            font-size: 15px;
-            border-radius: 4px;
-            display: inline-block;
-            font-family: Calibri;
-            font-weight: bold;
-            font-style: normal;
-            color: #FFFFFF;
-            margin-left: 15px;
-        }
-
-            .btnlf:hover {
-                background-color: white;
-                border: 1px solid #1583c2;
-                text-decoration: none;
-                color: #1583c2;
-                margin-bottom: 0px;
-            }
-    </style>
-    <style>
-        table {
-            padding: 1px;
-            background-color: #FFFFFF;
-            color: black;
-        }
-
-            table tr td {
-                padding: 5px;
-                border-right: 1px solid black;
-            }
-
-                table tr td:last-child {
-                    border-right: none;
-                }
-    </style>
-
 </head>
-<body style="background-color: white">
-
+<body>
     <script src="js/custom.js"></script>
-
     <script src="js/jquery.js"></script>
+
     <form id="form1" runat="server">
-        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
-
-        <div class="header1">
+        <asp:ScriptManager ID="scriptmgr" runat="server" EnablePageMethods="false"></asp:ScriptManager>
+        <div class="header">
             <div class="header-menu">
-                <a href="../Dashboard.aspx" title="Pi-Datametrics Dashboard Home">
-                    <asp:Image ID="Image2" runat="server" ImageUrl="~/images/PILogo_1.jpg" CssClass="imgLogo" Height="51px" Width="54px" /></a>
-                <div class="container">
-
-                    <div class="navbar navbar-static-top">
-                        <div>
-                            <div class="navigation">
-                                <label style="font-family: Calibri; font-weight: bold; color: white; font-size: x-large; margin-left: -90px; margin-top: 20px">Elementary by Pi</label>
-
-                                <nav style="margin-left: 950px; margin-top: -50px">
-                                    <ul class="nav topnav bold">
-                                        <li class="dropdown">
-                                            <%--<a href="../Dashboard.aspx">Home</a>&nbsp;<ul style="display: none;" class="dropdown-menu bold">
-                                                <li><a href="../Dashboard.aspx">BACK TO DASHBOARD</a></li>
-                                            </ul>--%>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-
-                        <!-- end navigation -->
-                    </div>
+                <img src="images/pilogo.jpg" alt="pi-datametrics" class="imagedimensions" height="51" width="54" />
+                <label class="labeltext1">Elementary by Pi</label>
+            </div>
+        </div>
+        <div class="displaydata">
+            <div style="margin-top: 1px; background-color: #e4e8ef; height: 120px; border-radius: 10px 10px;margin-left:20px;width:105%;">
+                <br />
+                <div>
+                    <table style="margin-left: auto; margin-right: auto;">
+                        <tr>
+                            <td><strong><span>Client :</span></strong>
+                            </td>
+                            <td>
+                                <asp:DropDownList ID="ddlclients" runat="server" Height="32px" Width="200px" CssClass="control"></asp:DropDownList>
+                            </td>
+                            <td></td>
+                            <td>
+                                <asp:Button ID="btnkeywords" runat="server" OnClick="btnkeywords_Click" CssClass="buttonleft" Text="Submit" Height="27px" Width="120px" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong><span>keyword Search :</span></strong>
+                            </td>
+                            <td>
+                                <asp:TextBox ID="txtsearch" runat="server" Height="40px" Width="200px" CssClass="control" placeholder="Enter keyword"></asp:TextBox>
+                            </td>
+                            <td></td>
+                            <td>
+                                <asp:Button ID="btnsearch" runat="server" OnClick="btnsearch_Click" CssClass="buttonright" Text="Submit" Height="27px" Width="120px" />
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
-        <div class="containerDB">
-            <div class="header3">
-                <div style="margin-top: 12px; float: left;">
-                    &nbsp; <strong><span>Client :</span></strong>&nbsp;&nbsp; 
-                   <asp:DropDownList ID="ddlclient" CssClass="text1" Height="32px" Width="260px" runat="server" AutoPostBack="true">
-                       <%--<asp:ListItem Enabled="true" Text="All Keywords" Value="0"></asp:ListItem>
-                       <asp:ListItem Text="Cond Nast GQ" Value="1"></asp:ListItem>
-                       <asp:ListItem Text="Cond Nast Glamour" Value="2"></asp:ListItem>
-                       <asp:ListItem Text="Cond Nast Vogue" Value="3"></asp:ListItem>--%>
-                   </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" Text="*" ControlToValidate="ddlclient" InitialValue="---Select any Client---"></asp:RequiredFieldValidator>
-                    &nbsp;
-                <asp:Button runat="server" Text="Submit" CssClass="btnlf" Height="27px" ID="btnclient" Width="120px" OnClick="btnclient_Click" />
-                </div>
-                <div style="float: right; margin-top: 12px; margin-left: 50px;">
-                    &nbsp; <strong><span>Keyword Search :</span></strong> 
-                    <asp:TextBox runat="server" ID="txtsearchkwds" CssClass="text1" AutoPostBack="false" Width="257px"></asp:TextBox>
-                    <asp:Label ID="lblmessage" runat="server"></asp:Label>
-                    <asp:Button ID="btnsearchkwd" runat="server" Text="Submit" CssClass="btnlf" Height="27px" Width="120px" OnClick="btnsearchkwd_Click" />
-                </div>
-            </div>
-            <br />
-            <br />
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <div style="margin-left:30px;">
             <div class="wrapper">
-                <asp:Label ID="lblalllinks" runat="server" ForeColor="Blue" Font-Size="Small" Font-Bold="true"></asp:Label><br />
-
-                <asp:Label ID="lbl1" runat="server" CssClass="LblClassNew"></asp:Label>
-                <br />
-                <br />
-
-                <div id="divgetkwds" runat="server">
-                    <asp:UpdateProgress ID="UpdateProgress1" runat="server">
-                    </asp:UpdateProgress>
-                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                        <Triggers>
-                            <asp:AsyncPostBackTrigger ControlID="btnclient" EventName="Click" />
-                        </Triggers>
-                        <ContentTemplate>
-                            <asp:GridView ID="gvkeywords" runat="server" AutoGenerateColumns="false" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px" CellPadding="5" CellSpacing="0">
-                                <HeaderStyle BackColor="#e4e8ef" Font-Bold="true" ForeColor="Black" />
-                                <Columns>
-                                    <asp:TemplateField HeaderText="Keywords">
-                                        <ItemTemplate>
-                                            <asp:Label Text='<%#DataBinder.Eval(Container.DataItem,"KName")%>' ID="kwd" runat="server">
-                                            </asp:Label>
-                                        </ItemTemplate>
-                                    </asp:TemplateField>
-                                    <asp:TemplateField>
-                                        <ItemTemplate>
-                                            <a href="xmlurls.aspx?kid=<%# Eval("kid") %>" target="_blank">Link</a>
-                                        </ItemTemplate>
-                                    </asp:TemplateField>
-                                </Columns>
-                            </asp:GridView>
-                        </ContentTemplate>
-                    </asp:UpdatePanel>
-                </div>
-            </div>
-            <div class="wrapper" id="divsearch" runat="server">
-                <asp:UpdatePanel ID="update2" runat="server">
+            <asp:Label ID="lblnodata" runat="server" ForeColor="Blue" Font-Size="Small" Font-Bold="true"></asp:Label><br />
+            <div id="divgetkwds" runat="server">
+                <asp:UpdatePanel ID="updatepnel1" runat="server">
                     <Triggers>
-                        <asp:AsyncPostBackTrigger ControlID="btnsearchkwd" EventName="Click" />
+                        <asp:AsyncPostBackTrigger ControlID="btnkeywords" EventName="Click" />
                     </Triggers>
                     <ContentTemplate>
-                        <asp:GridView ID="gvsearch" runat="server" AutoGenerateColumns="false" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px" CellPadding="5" CellSpacing="0">
+                        <asp:GridView ID="gridkeywords" runat="server" AutoGenerateColumns="false" Width="80%" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px" CellPadding="5" CellSpacing="0">
                             <HeaderStyle BackColor="#e4e8ef" Font-Bold="true" ForeColor="Black" />
                             <Columns>
                                 <asp:TemplateField HeaderText="Keywords">
                                     <ItemTemplate>
-                                        <asp:Label Text='<%#DataBinder.Eval(Container.DataItem,"keyword")%>' ID="kwd" runat="server">
+                                        <asp:Label Text='<%#DataBinder.Eval(Container.DataItem,"KName")%>' ID="kwd" runat="server">
                                         </asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
@@ -243,19 +130,43 @@
                         </asp:GridView>
                     </ContentTemplate>
                 </asp:UpdatePanel>
-                <br />
-                <br />
             </div>
-            <br />
-            <br />
-            <br />
-            <%--<asp:Label ID="lbl1" runat="server" CssClass="LblClass"></asp:Label>--%>
-            <br />
-            <br />
-            <div id="footer">
-                <div style="font-weight: bold; font-size: 14px;">© <%= DateTime.Now.Year %> Pi Datametrics | XML Tracker.</div>
+
+            <div id="divsearch" runat="server">
+                <asp:UpdatePanel ID="updatepnel2" runat="server">
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="btnsearch" EventName="Click" />
+                    </Triggers>
+                    <ContentTemplate>
+                        <asp:GridView ID="gvsearch" runat="server" AutoGenerateColumns="false" CssClass="footable" Width="80%" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px" CellPadding="5" CellSpacing="0">
+                            <HeaderStyle BackColor="#e4e8ef" Font-Bold="true" ForeColor="Black" />
+                            <Columns>
+                                <asp:TemplateField HeaderText="Keywords">
+                                    <ItemTemplate>
+                                        <asp:Label ID="kwdsearch" runat="server" Text='<%#DataBinder.Eval(Container.DataItem,"keyword")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                        <a href="xmlurls.aspx?kid=<%# Eval("kid") %>" target="_blank">Link</a>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                            </Columns>
+                        </asp:GridView>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
             </div>
-            <%--</div>--%>
+        </div>
+        </div>
+        
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="footer">
+            &copy; <%= DateTime.Now.Year %> Pi Datametrics | XML Tracker.
+        </div>
     </form>
 </body>
 </html>

@@ -22,94 +22,58 @@ namespace GoogleFirstPage.Xmltracker {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ScriptManager1 control.
+        /// scriptmgr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        protected global::System.Web.UI.ScriptManager scriptmgr;
         
         /// <summary>
-        /// Image2 control.
+        /// ddlclients control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image2;
+        protected global::System.Web.UI.WebControls.DropDownList ddlclients;
         
         /// <summary>
-        /// ddlclient control.
+        /// btnkeywords control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlclient;
+        protected global::System.Web.UI.WebControls.Button btnkeywords;
         
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// txtsearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.TextBox txtsearch;
         
         /// <summary>
-        /// btnclient control.
+        /// btnsearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnclient;
+        protected global::System.Web.UI.WebControls.Button btnsearch;
         
         /// <summary>
-        /// txtsearchkwds control.
+        /// lblnodata control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsearchkwds;
-        
-        /// <summary>
-        /// lblmessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblmessage;
-        
-        /// <summary>
-        /// btnsearchkwd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnsearchkwd;
-        
-        /// <summary>
-        /// lblalllinks control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblalllinks;
-        
-        /// <summary>
-        /// lbl1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl1;
+        protected global::System.Web.UI.WebControls.Label lblnodata;
         
         /// <summary>
         /// divgetkwds control.
@@ -121,31 +85,22 @@ namespace GoogleFirstPage.Xmltracker {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divgetkwds;
         
         /// <summary>
-        /// UpdateProgress1 control.
+        /// updatepnel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdateProgress UpdateProgress1;
+        protected global::System.Web.UI.UpdatePanel updatepnel1;
         
         /// <summary>
-        /// UpdatePanel1 control.
+        /// gridkeywords control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
-        
-        /// <summary>
-        /// gvkeywords control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvkeywords;
+        protected global::System.Web.UI.WebControls.GridView gridkeywords;
         
         /// <summary>
         /// divsearch control.
@@ -157,13 +112,13 @@ namespace GoogleFirstPage.Xmltracker {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divsearch;
         
         /// <summary>
-        /// update2 control.
+        /// updatepnel2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel update2;
+        protected global::System.Web.UI.UpdatePanel updatepnel2;
         
         /// <summary>
         /// gvsearch control.

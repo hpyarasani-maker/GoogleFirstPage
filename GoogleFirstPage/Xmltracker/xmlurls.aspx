@@ -4,28 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Elementary by Pi</title>
-
-    <meta charset="utf-8" />
-
-    <link href="Content/bootstrap.cosmo.min.css" rel="stylesheet" />
-    <link href="Content/StyleSheet.css" rel="stylesheet" />
-
-    <%--<link rel="icon" href="../images/PILogo_1.jpg" type="image/x-icon" />--%>
-
-    <link href="../CSS/StyleSheet2.css" rel="stylesheet" />
-
-    <script src="../js/jquery-1.10.2.js"></script>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width = device-width, initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no" />
-
-    <link href="../CSS/menu.css" rel="stylesheet" />
-
-    <link href="../CSS/Newstyle.css" rel="stylesheet" />
-
-    <link rel="icon" href="../images/default-avatar-logo.png" type="image/x-icon" />
-
+    <link href="css/main.css" rel="stylesheet" />
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
@@ -33,201 +16,78 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/css/footable.min.css" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-footable/0.1.0/js/footable.min.js"></script>
+
+    <link rel="icon" href="images/default-avatar-logo.png" type="image/x-icon" />
+
+    <script src="js/jquery-1.10.2.js"></script>
+
     <script type="text/javascript">
         $(function () {
-            $('[id*=gvelements]').footable();
+            $('[id*=gvxmlurls]').footable();
         });
     </script>
-
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-
-    <script type="text/javascript">
-        function ShowProgress() {
-            setTimeout(function () {
-                var modal = $('<div />');
-                modal.addClass("modal");
-                $('body').append(modal);
-                var loading = $(".loading");
-                loading.show();
-                var top = Math.max($(window).height() / 2 - loading[0].offsetHeight / 2, 0);
-                var left = Math.max($(window).width() / 2 - loading[0].offsetWidth / 2, 0);
-                loading.css({ top: top, left: left });
-            }, 200);
-        }
-        $('form').live("submit", function () {
-            ShowProgress();
-        });
-
-    </script>
-
-    <style>
-        .LblClass2 {
-            font-family: Cambria;
-            font-size: 20px;
-            color: brown;
-            font-weight: bold;
-        }
-    </style>
-
-
-    <style type="text/css">
-        .header3 {
-            padding: 20px;
-            text-align: center;
-            font-family: Arial;
-            font-size: 15px;
-            background-color: #e4e8ef;
-            height: 85px;
-            padding: 10px 10px 10px 10px;
-            border-radius: 10px 10px;
-        }
-    </style>
-
-    <style>
-        .btnlf {
-            background: #1583c2;
-            border: 1px solid #1583c2;
-            width: 140px;
-            height: 18px;
-            font-size: 15px;
-            border-radius: 4px;
-            display: inline-block;
-            font-family: Calibri;
-            font-weight: bold;
-            font-style: normal;
-            color: #FFFFFF;
-            margin-left: 50px;
-        }
-
-            .btnlf:hover {
-                background-color: white;
-                border: 1px solid #1583c2;
-                text-decoration: none;
-                color: #1583c2;
-                margin-bottom: 0px;
-            }
-    </style>
-    <style>
-        table {
-            padding: 1px;
-            background-color: #FFFFFF;
-            color: black;
-        }
-
-            table tr td {
-                padding: 5px;
-                border-right: 1px solid black;
-            }
-
-                table tr td:last-child {
-                    border-right: none;
-                }
-    </style>
 
 </head>
-<body style="background-color: white">
-
-    <script src="js/custom.js"></script>
-
-    <script src="js/jquery.js"></script>
+<body>
     <form id="form1" runat="server">
-        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
-
-        <div class="header1">
+        <asp:ScriptManager ID="scriptmgr" runat="server" EnablePageMethods="false"></asp:ScriptManager>
+        <div class="header">
             <div class="header-menu">
-                <a href="../Dashboard.aspx" title="Pi-Datametrics Dashboard Home">
-                    <asp:Image ID="Image2" runat="server" ImageUrl="~/images/PILogo_1.jpg" CssClass="imgLogo" Height="51px" Width="54px" /></a>
-                <div class="container">
-                    <div class="navbar navbar-static-top">
-                        <div>
-                <label style="font-family:Cambria;font-weight:bold;color:black;font-size:larger">XML Tracker</label>
-
-                            <div class="navigation">
-                    <label style="font-family:Calibri;font-weight:bold;color:white;font-size:x-large;margin-left:-90px;margin-top:-100px">Elementary by Pi</label>
-
-                                <nav style="margin-left: 950px; margin-top:-50px;">
-                                    <ul class="nav topnav bold">
-                                        <li class="dropdown">
-                                            <a href="../Dashboard.aspx">Home</a>&nbsp;<ul style="display: none;" class="dropdown-menu bold">
-                                                <li><a href="../Dashboard.aspx">BACK TO DASHBOARD</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-
-                        <!-- end navigation -->
-                    </div>
-                </div>
+                <img src="images/pilogo.jpg" alt="pi-datametrics" class="imagedimensions" height="51" width="54" />
+                <label class="labeltext1">Elementary by Pi</label>
             </div>
         </div>
-        <div class="containerDB">
-            <%--<div class="header3">
-                <div style="margin-top: 12px;">
-                    
-                </div>
-            </div>--%>
+        <div class="displaydata">
             <br />
             <br />
-            <div class="wrapper">
-                <%--<label style="font-family:Cambria;font-weight:bold;color:black;font-size:larger">XML Tracker</label>--%>
-                <asp:Label ID="lblalllinks" runat="server" ForeColor="Blue" Font-Size="Small" Font-Bold="true"></asp:Label><br />
-                <asp:Label ID="lbl1" runat="server" Text="Click on  '' View XML''    for Processing XML Content" ForeColor="Blue"  Font-Size="Large" Font-Bold="true" ></asp:Label>
-                <br />
-                <br />
+            <asp:Label ID="lbl1" runat="server" Text="Click on  '' View XML''    for Processing XML Content" ForeColor="Blue" Font-Size="Large" Font-Bold="true"></asp:Label>
+        </div>
 
-
-                <asp:UpdateProgress ID="UpdateProgress1" runat="server">
-                </asp:UpdateProgress>
-                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                    <ContentTemplate>
-                        <asp:GridView ID="gvxmlurls" runat="server" AutoGenerateColumns="false" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px">
-                            <HeaderStyle BackColor="#e4e8ef" Font-Bold="true" ForeColor="Black" />
-                            <Columns>
-                                <asp:BoundField HeaderText="UID" DataField="uid" ItemStyle-HorizontalAlign="Center" Visible="false" />
-                                <asp:TemplateField HeaderText="URLs">
-                                    <HeaderStyle HorizontalAlign="Center" />
-                                    <ItemTemplate>
-                                        <a href="<%#DataBinder.Eval(Container.DataItem,"url") %>" target="_blank"><%#DataBinder.Eval(Container.DataItem,"url") %></a>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:TemplateField HeaderText="View XML">
-                                    <HeaderStyle HorizontalAlign="Center" />
-                                    <ItemTemplate>
-                                        <a href="viewxml.aspx?uid=<%# Eval("uid") %>&url=<%# Eval("url") %>" target="_blank">View XML</a>
-                                        <%--<a href="viewxml.aspx?&url=<%# Eval("url") %>" target="_blank">View XML</a>--%>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:TemplateField HeaderText="XML Changes">
-                                    <HeaderStyle HorizontalAlign="Center" />
-                                    <ItemTemplate>
-                                        <a href="xmlchanges.aspx?uid=<%# Eval("uid") %>" target="_blank">XML Changes</a>
-                                        <%--<a href="xmlchanges.aspx?url=<%# Eval("url") %>" target="_blank">XML Changes</a>--%>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Date wise">
-                                    <HeaderStyle HorizontalAlign="Center" />
-                                    <ItemTemplate>
-                                        <a href="Datewise.aspx?uid=<%# Eval("uid") %>" target="_blank">Date wise</a>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                            </Columns>
-                        </asp:GridView>
-                    </ContentTemplate>
-                </asp:UpdatePanel>
-                <br />
-                <br />
-            </div>
-            <br />
-            <br />
-            <br />
-            <%--<asp:Label ID="lbl1" runat="server" CssClass="LblClass"></asp:Label>--%>
-            <br />
-            <br />
-            <div id="footer">
-                <div style="font-weight: bold; font-size: 14px;">© <%= DateTime.Now.Year %> Pi Datametrics | XML Tracker.</div>
-            </div>
+        <div class="wrapper">
+            <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+            </asp:UpdateProgress>
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>
+                    <asp:GridView ID="gvxmlurls" runat="server" AutoGenerateColumns="false" Width="80%" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px">
+                        <HeaderStyle BackColor="#e4e8ef" Font-Bold="true" ForeColor="Black" />
+                        <Columns>
+                            <asp:BoundField HeaderText="UID" DataField="uid" ItemStyle-HorizontalAlign="Center" Visible="false" />
+                            <asp:TemplateField HeaderText="URLs">
+                                <HeaderStyle HorizontalAlign="Center" />
+                                <ItemTemplate>
+                                    <a href="<%#DataBinder.Eval(Container.DataItem,"url") %>" target="_blank"><%#DataBinder.Eval(Container.DataItem,"url") %></a>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="View XML">
+                                <HeaderStyle HorizontalAlign="Center" />
+                                <ItemTemplate>
+                                    <a href="viewxml.aspx?uid=<%# Eval("uid") %>&url=<%# Eval("url") %>" target="_blank">View XML</a>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="XML Changes">
+                                <HeaderStyle HorizontalAlign="Center" />
+                                <ItemTemplate>
+                                    <a href="xmlchanges.aspx?uid=<%# Eval("uid") %>" target="_blank">XML Changes</a>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Date wise">
+                                <HeaderStyle HorizontalAlign="Center" />
+                                <ItemTemplate>
+                                    <a href="Datewise.aspx?uid=<%# Eval("uid") %>" target="_blank">Date wise</a>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="footer">
+            &copy; <%= DateTime.Now.Year %> Pi Datametrics | XML Tracker.
         </div>
     </form>
 </body>
