@@ -180,10 +180,12 @@
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
-        <div class="header1">
+        <div class="header1" style="width: 2200px;">
             <div class="header-menu">
-                <a href="http://www.pi-datametrics.com/" title="Pi-Datametrics DashBoard Home">
+                <div style="margin-left:-150px;">
+                    <a href="../Dashboard.aspx" title="Pi-Datametrics DashBoard Home">
                     <asp:Image ID="Image2" runat="server" ImageUrl="~/images/PILogo_1.jpg" CssClass="imgLogo" Height="51px" Width="54px" /></a>
+               </div>
                 <div class="container">
                     <div class="navbar navbar-static-top">
                         <div>

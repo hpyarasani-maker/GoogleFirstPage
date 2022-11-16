@@ -95,11 +95,13 @@
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
 
-        <header style="height: 80px;">
-            <a href="Dashboard.aspx" title="Pi-Datametrics Dashboard Home">
+        <header style="height: 80px;width:2000px;">
+            <div style="margin-left:-150px;">
+                 <a href="Dashboard.aspx" title="Pi-Datametrics Dashboard Home">
                 <asp:Image ID="Image2" runat="server" ImageUrl="~/images/PILogo_1.jpg" CssClass="imgLogoNew" Height="50px" Width="54px" /></a>
-            <div class="container">
             </div>
+           <%-- <div class="container">
+            </div>--%>
         </header>
 
         <div class="containerDB">

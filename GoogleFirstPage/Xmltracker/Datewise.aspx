@@ -16,23 +16,15 @@
 <body>
     <form id="form1" runat="server">
         <asp:ScriptManager ID="scriptmgr" runat="server" EnablePageMethods="false"></asp:ScriptManager>
-        <div class="header">
+        <div class="header" style="width:4000px;">
             <div class="header-menu">
-                <img src="images/pilogo.jpg" alt="pi-datametrics" class="imagedimensions" height="51" width="54" />
-                <label class="labeltext1">Elementary by Pi</label>
+                <div style="margin-left: -80px;">
+                    <img src="images/pilogo.jpg" alt="pi-datametrics" class="imagedimensions" height="51" width="54" />
+                    <label class="labeltext1">Elementary by Pi</label>
+                </div>
             </div>
         </div>
         <div class="displaydata">
-            <%--<div class="header2">
-                <div class="headercenterdiv">
-                    <strong><span>Select Date :</span></strong>
-                    <asp:TextBox ID="txtenddate" runat="server" placeholder="start date" Height="30px" Width="150px" Font-Size="Large" CssClass="text1"></asp:TextBox>
-                    <asp:ImageButton runat="Server" ID="EndDateImage" ImageUrl="~/images/calendarnew.png" Height="30px" Width="40px" />
-                    <ajaxToolkit:CalendarExtender ID="endDate" runat="server" PopupButtonID="EndDateImage" TargetControlID="txtenddate" Format="yyyy-MM-dd" StartDate="2022-11-02" />
-                    <asp:Button ID="btndatewise" runat="server" OnClick="btndatewise_Click" CssClass="buttonleft" Height="27px" Width="120px" Text="Submit" />
-
-                </div>
-            </div>--%>
             <div style="margin-top: 1px; background-color: #e4e8ef; height: 120px; border-radius: 10px 10px;">
                 <br />
                 <div>

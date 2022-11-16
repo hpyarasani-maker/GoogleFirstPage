@@ -7,10 +7,10 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="css/main1.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
 
     <title>Elementary by Pi</title>
-    
+
 
     <link rel="icon" href="images/default-avatar-logo.png" type="image/x-icon" />
 
@@ -35,10 +35,12 @@
 
     <form id="form1" runat="server">
         <asp:ScriptManager ID="scriptmgr" runat="server" EnablePageMethods="false"></asp:ScriptManager>
-        <div class="header">
+        <div class="header" style="width: 2500px;">
             <div class="header-menu">
-                <img src="images/pilogo.jpg" alt="pi-datametrics" class="imagedimensions" height="51" width="54" />
-                <label class="labeltext1">Elementary by Pi</label>
+                <div style="margin-left: -80px;">
+                    <img src="images/pilogo.jpg" alt="pi-datametrics" class="imagedimensions" height="51" width="54" />
+                    <label class="labeltext1">Elementary by Pi</label>
+                </div>
             </div>
         </div>
         <div class="displaydata">

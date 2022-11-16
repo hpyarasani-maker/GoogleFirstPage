@@ -8,7 +8,6 @@
 .header {
     background-color: black;
     height: 80px;
-    width: 2118px;
 }
 
 .header-menu {
@@ -163,11 +162,16 @@
     width: 80%;
 }
 
+.headerofh1 {
+    margin-left: 190px;
+    margin-top: 30px;
+}
+
 @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
     .header {
         background-color: black;
         height: 80px;
-        width: 550px;
+        /*width: 550px;*/
     }
 
     /*.header2 {
@@ -238,6 +242,29 @@
         margin-top: 120px;
         margin-left: 10%;
     }
+    .headerofh1 {
+        margin-left: 50px;
+        margin-top: 30px;
+    }
 }
+
+
+/*@media all and (device-width: 380px) and (device-height: 932px) and (orientation:portrait) {
+    .header {
+        background-color: black;
+        height: 80px;
+        width:auto;
+    }
+    
+}
+
+@media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+    .header {
+        background-color: black;
+        height: 80px;
+        width: auto;
+    }
+    
+}*/
 
 

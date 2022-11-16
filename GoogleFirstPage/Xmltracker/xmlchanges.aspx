@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Elementary by Pi</title>
-    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/main1.css" rel="stylesheet" />
 
     <link rel="icon" href="images/default-avatar-logo.png" type="image/x-icon" />
  
@@ -16,15 +16,16 @@
 <body>
     <form id="form1" runat="server">
         <asp:ScriptManager ID="scriptmgr" runat="server" EnablePageMethods="false"></asp:ScriptManager>
-        <div class="header">
+        <div class="header" style="width:4000px;">
             <div class="header-menu">
-                <img src="images/pilogo.jpg" alt="pi-datametrics" class="imagedimensions" height="51" width="54" />
-                <label class="labeltext1">Elementary by Pi</label>
+                <div style="margin-left: -80px;">
+                    <img src="images/pilogo.jpg" alt="pi-datametrics" class="imagedimensions" height="51" width="54" />
+                    <label class="labeltext1">Elementary by Pi</label>
+                </div>
             </div>
         </div>  
         <h1 class="headerofh1">Elementary Changes Report</h1>
         <div class="wrapper">
-            
                 <asp:UpdateProgress ID="UpdateProgress1" runat="server">
                 </asp:UpdateProgress>
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
