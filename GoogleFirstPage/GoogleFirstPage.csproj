@@ -199,6 +199,7 @@
     <Content Include="Xmltracker\keywords.aspx" />
     <Content Include="Xmltracker\viewxml.aspx" />
     <Content Include="Xmltracker\xmlchanges.aspx" />
+    <Content Include="Xmltracker\XmlDiff.aspx" />
     <Content Include="Xmltracker\xmlurls.aspx" />
     <None Include="Xmltracker\js\jquery-1.10.2.intellisense.js" />
     <Content Include="Xmltracker\js\jquery-1.10.2.js" />
@@ -665,6 +666,13 @@
     </Compile>
     <Compile Include="Xmltracker\xmlchanges.aspx.designer.cs">
       <DependentUpon>xmlchanges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Xmltracker\XmlDiff.aspx.cs">
+      <DependentUpon>XmlDiff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xmltracker\XmlDiff.aspx.designer.cs">
+      <DependentUpon>XmlDiff.aspx</DependentUpon>
     </Compile>
     <Compile Include="Xmltracker\XmlSanitizingStream.cs" />
     <Compile Include="Xmltracker\xmlurls.aspx.cs">
