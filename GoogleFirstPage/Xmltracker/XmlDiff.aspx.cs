@@ -1,41 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Data.SqlTypes;
-using System.Linq;
 using System.Text;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Xml;
 
 namespace GoogleFirstPage.Xmltracker
 {
-    public partial class XmlDiff : System.Web.UI.Page
+    public partial class XmlDiff : Page
     {
         string connection = ConfigurationManager.ConnectionStrings["xmltracker"].ToString();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
-            {
-                txtDate.Attributes.Add("ReadOnly", "ReadOnly");
-                txtDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
-            }
-        }
+            string uid = Request.QueryString["uid"].ToString();
+            string date = Request.QueryString["date"].ToString();
 
-        protected void btndatewise_Click(object sender, EventArgs e)
-        {
+            string strQuery = "Exec [XmlTracker].[dbo].[GetXmlSourceChangeDate] " + uid + ", '" + date + "'";
 
-            string dt = txtDate.Text;
-            string uid = txtUId.Text;
-
-
-            string strQuery = "Exec [XmlTracker].[dbo].[GetXmlSourceChangeDate] " + uid + ", '" + dt + "'";
-            
-
-            int x = 0;
             try
             {
                 string curXml = string.Empty;
@@ -47,10 +29,10 @@ namespace GoogleFirstPage.Xmltracker
                     SqlCommand comm = new SqlCommand(strQuery, con);
                     comm.CommandTimeout = 0;
                     SqlDataReader dr = comm.ExecuteReader();
-                    if(dr.Read())
+                    if (dr.Read())
                     {
                         curXml = dr.GetSqlXml(0).Value;
-                        prevXml = dr.GetSqlXml(1).Value;                        
+                        prevXml = dr.GetSqlXml(1).Value;
                     }
                     dr.Close();
                     comm.Dispose();
@@ -66,9 +48,8 @@ namespace GoogleFirstPage.Xmltracker
             }
             catch (Exception ex)
             {
-                throw ex;
+                Response.Write(ex.Message);
             }            
-
         }
 
         private string XmlChanges(string curXml, string prevXml)

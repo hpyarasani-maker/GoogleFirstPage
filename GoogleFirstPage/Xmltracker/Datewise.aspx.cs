@@ -193,6 +193,9 @@ namespace GoogleFirstPage.Xmltracker
                     if (!blChng) { st = ""; }
                     phr.Controls.Add(lbldt);
                     phr.Controls.Add(new LiteralControl(anc + " <br />"));
+                    
+                    phr.Controls.Add(new LiteralControl("<a href=\"XmlDiff.aspx?date=" + stDate + "&uid=" + xmlID + "\" target=\"=_blank\">[View Xml Diff]</a> <br />"));
+
                     Label lbl = new Label();
                     lbl.ID = "spn" + x.ToString();
 
