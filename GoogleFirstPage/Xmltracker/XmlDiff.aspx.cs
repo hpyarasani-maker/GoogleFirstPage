@@ -44,7 +44,7 @@ namespace GoogleFirstPage.Xmltracker
                 Response.Clear();
                 Response.ContentType = "text/xml";
                 Response.Write(diffXml);
-                Response.End();
+                //Response.End();
             }
             catch (Exception ex)
             {
