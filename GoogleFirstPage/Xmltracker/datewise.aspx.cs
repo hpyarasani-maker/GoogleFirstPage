@@ -195,7 +195,7 @@ namespace GoogleFirstPage.Xmltracker
                     phr.Controls.Add(new LiteralControl(anc + " <br />"));
                     
                     if(!string.IsNullOrEmpty(st))
-                        phr.Controls.Add(new LiteralControl("<br /><a href=\"XmlDiff.aspx?date=" + stDate + "&uid=" + xmlID + "\" target=\"=_blank\">[View Xml Diff]</a> <br />"));
+                        phr.Controls.Add(new LiteralControl("<br /><a href=\"XmlDiff.aspx?date=" + stDate + "&uid=" + xmlID + "\" target=\"=_blank\">[View Xml Format]</a> <br />"));
 
                     Label lbl = new Label();
                     lbl.ID = "spn" + x.ToString();
