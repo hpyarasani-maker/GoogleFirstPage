@@ -16,7 +16,7 @@
 <body>
     <form id="form1" runat="server">
         <asp:ScriptManager ID="scriptmgr" runat="server" EnablePageMethods="false"></asp:ScriptManager>
-        <div class="header" style="width:4000px;">
+        <div class="header" style="width:4100px;">
             <div class="header-menu">
                 <div style="margin-left: -80px;">
                     <img src="images/pilogo.jpg" alt="pi-datametrics" class="imagedimensions" height="51" width="54" />
