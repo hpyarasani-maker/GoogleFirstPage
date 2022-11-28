@@ -2012,11 +2012,11 @@ namespace GoogleFirstPage.RapidTrackingSERPs
            }, //end 13-07-2022
            new SearchProperties() // 23-11-2022
            {
-              seid = 604, domain ="be", geo_location="Belgium", locale= "en-be", uule = "w+CAIQICIHQmVsZ2l1bQ==",device="desktop"
+              seid = 604, domain ="be", geo_location="Belgium", locale= "en-be", uule = "w+CAIQICIHQmVsZ2l1bQ==",device="desktop",sename="Google UK (Belgium)"
            },
            new SearchProperties()
            {
-              seid = 605, domain ="be", geo_location="Belgium", locale= "en-be", uule = "w+CAIQICIHQmVsZ2l1bQ==",device="mobile_android"
+              seid = 605, domain ="be", geo_location="Belgium", locale= "en-be", uule = "w+CAIQICIHQmVsZ2l1bQ==",device="mobile_android",sename="Google UK (Belgium, Mobile)"
            }, // end 23-11-2022
          };
     }
