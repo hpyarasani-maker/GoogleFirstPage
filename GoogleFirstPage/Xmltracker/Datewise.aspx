@@ -72,7 +72,7 @@
         <br />
         <br />
         <div class="footer">
-            &copy; <%= DateTime.Now.Year %> Pi Datametrics | XML Tracker.
+            &copy; <%= DateTime.Now.Year %> Pi Datametrics | Elementary by Pi.
         </div>
     </form>
 </body>
