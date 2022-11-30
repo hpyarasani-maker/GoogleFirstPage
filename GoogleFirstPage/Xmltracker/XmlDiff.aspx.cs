@@ -73,6 +73,8 @@ namespace GoogleFirstPage.Xmltracker
 
             foreach (XmlNode curNode in curList)
             {
+                if (curNode.Attributes["type"].Value.ToLower() == "div")
+                    continue;
                 XmlNode cNode = curNode.ChildNodes[0];
                 if (cNode == null)
                     continue;
