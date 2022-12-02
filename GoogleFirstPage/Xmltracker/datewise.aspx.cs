@@ -237,7 +237,7 @@ namespace GoogleFirstPage.Xmltracker
                     {
                         cls.blChng = blChng;
                         cls.blColChng = blColChng;
-                        string[] sdif = cls.diffInfo(nd, od);
+                        string[] sdif = cls.diffInfo(nd, od, s);
                         blChng = cls.blChng;
                         blColChng = cls.blColChng;
                         stCol += sdif[0];
