@@ -47,6 +47,7 @@ namespace GoogleFirstPage.Xmltracker
         {
             string uid = Request.QueryString["uid"].ToString();
 
+
             string strQuery = "Exec [XmlTracker].[dbo].[GetViewSourceChange] '" + uid + "'";
             SqlConnection con;
             SqlCommand comm;
@@ -111,7 +112,7 @@ namespace GoogleFirstPage.Xmltracker
                     if (canonical.MoveNext())
                         st += "<br />Results for : <a href=\"" + canonical.Current.GetAttribute("url", "") + "\" target=\"_blank\" >" + canonical.Current.GetAttribute("url", "") + "</a>";
                     anc = "&nbsp; &nbsp; &nbsp; <a href=\"Default2.aspx?date=" + stDate + "&uid=" + xmlID + "\" target=\"=_blank\">[Elementary Data]</a>";
-                    st += "<p /><table width=\"50%\" bordercolor=\"Blue\" cellpadding=\"5\" cellspacing=\"0\"  border=\"1\">";
+                    st += "<p /><table width=\"50%\" bordercolor=\"Blue\" cellpadding=\"0\" cellspacing=\"0\"  border=\"1\" style=\"font-family:Geneva;font-size:large;word-wrap:break-word\">";
                     st += "<col width=\"10%\"> <col width=\"45%\"> <col width=\"45%\"> ";
                     st += "<tr ><th valign=\"top\">Element</th><th >&nbsp; &nbsp; In</th><th >&nbsp; &nbsp; Out</th></tr>";
 

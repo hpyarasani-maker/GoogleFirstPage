@@ -34,7 +34,7 @@
                                 <strong><span>Select Date :</span></strong>
                             </td>
                             <td>
-                                <asp:TextBox ID="txtenddate" runat="server" placeholder="start dateate" Height="30px" Width="90px" Font-Size="Large" CssClass="text1"></asp:TextBox>
+                                <asp:TextBox ID="txtenddate" runat="server" placeholder="start dateate" Height="30px" Width="95px" Font-Size="Large" CssClass="text1"></asp:TextBox>
                                 <asp:ImageButton runat="Server" ID="EndDateImage" ImageUrl="~/images/calendarnew.png" Height="30px" Width="40px" />
                                 <ajaxToolkit:CalendarExtender ID="endDate" runat="server" PopupButtonID="EndDateImage" TargetControlID="txtenddate" Format="yyyy-MM-dd" StartDate="2022-11-02" />
                             </td>
