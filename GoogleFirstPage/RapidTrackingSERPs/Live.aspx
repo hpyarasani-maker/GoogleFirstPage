@@ -345,10 +345,10 @@
 
         <div class="header1" style="width: 2500px;">
             <div class="header-menu">
-               <div style="margin-left:-150px;">
+                <div style="margin-left: -150px;">
                     <a href="../Dashboard.aspx" title="Pi-Datametrics DashBoard Home">
-                    <asp:Image ID="Image2" runat="server" ImageUrl="~/images/PILogo_1.jpg" CssClass="imgLogo" Height="51px" Width="54px" /></a>
-               </div>
+                        <asp:Image ID="Image2" runat="server" ImageUrl="~/images/PILogo_1.jpg" CssClass="imgLogo" Height="51px" Width="54px" /></a>
+                </div>
                 <div class="container">
                     <div class="navbar navbar-static-top">
                         <div>
@@ -375,33 +375,35 @@
                 <div style="margin-top: 12px;">
                     &nbsp;<span class="auto-style1">Keyword :</span>&nbsp;&nbsp;
                  <asp:TextBox ID="txtlivesearch" runat="server" Height="30px" Width="300px" CssClass="text1" OnTextChanged="txtlivesearch_TextChanged" AutoPostBack="false" placeholder="Search a keyword"></asp:TextBox>
-                  <asp:RequiredFieldValidator ID="req1" runat="server" ErrorMessage="*" ControlToValidate="txtlivesearch" Text="*"></asp:RequiredFieldValidator>
-                &nbsp; <strong><span class="auto-style2">Search Engine :</span></strong>&nbsp;&nbsp; 
+                    <asp:RequiredFieldValidator ID="req1" runat="server" ErrorMessage="*" ControlToValidate="txtlivesearch" Text="*"></asp:RequiredFieldValidator>
+                    &nbsp; <strong><span class="auto-style2">Search Engine :</span></strong>&nbsp;&nbsp; 
                    <asp:DropDownList ID="ddlseid" CssClass="text1" Height="30px" Width="300px" runat="server">
                    </asp:DropDownList>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" Text="*" ControlToValidate="ddlseid" InitialValue="----Select----" ForeColor="Red"></asp:RequiredFieldValidator>
-                &nbsp;
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" Text="*" ControlToValidate="ddlseid" InitialValue="----Select----" ForeColor="Red"></asp:RequiredFieldValidator>
+                    &nbsp;
                 <asp:Button runat="server" Text="Submit" CssClass="btnlf" Height="27px" ID="btngetdata" Width="120px" OnClick="btngetdata_Click" />
-                <br />
-                <br />
-                <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
             </div>
-            </div>
-            <br />
-            <br /> 
-            <br />
-             <asp:Label ID="Label1" runat="server" ForeColor="Blue" Font-Size="Large" Font-Bold="true" Text="Elements and Classic Links"></asp:Label><br />
             <br />
             <br />
-            <div  id="oxydiv1" runat="server" >
-                <table border="1" style="width:800px">
+            <br />
+            <asp:Label ID="Label1" runat="server" ForeColor="Blue" Font-Size="Large" Font-Bold="true" Text="Elements and Classic Links"></asp:Label><br />
+            <br />
+            <br />
+            <div id="oxydiv1" runat="server">
+                <table border="1" style="width: 800px">
                     <tr>
-                         <td><b>Job ID from Oxylabs</b> </td>
-                        <td><asp:Label ID="oxylabsjobid" runat="server" Visible="true" ForeColor="blue"  Font-Size="15px" Font-Bold="true"></asp:Label></td>
+                        <td><b>Job ID from Oxylabs</b> </td>
+                        <td>
+                            <asp:Label ID="oxylabsjobid" runat="server" Visible="true" ForeColor="blue" Font-Size="15px" Font-Bold="true"></asp:Label></td>
                     </tr>
                     <tr>
                         <td><b>No. Of Classic Links</b> </td>
-                        <td><asp:Label ID="resultscnt" runat="server" Visible="true" ForeColor="blue"  Font-Size="15px" Font-Bold="true"></asp:Label></td>
+                        <td>
+                            <asp:Label ID="resultscnt" runat="server" Visible="true" ForeColor="blue" Font-Size="15px" Font-Bold="true"></asp:Label></td>
                     </tr>
                 </table>
             </div>
@@ -412,7 +414,7 @@
                 <br />
                 <asp:GridView ID="gridviewlive" AutoGenerateColumns="false" CssClass="footable" HeaderStyle-HorizontalAlign="Right" Font-Bold="true" HeaderStyle-Font-Bold="true" runat="server" OnRowDataBound="gridviewlive_RowDataBound" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" HeaderStyle-Height="30px" RowStyle-Width="1px">
                     <Columns>
-                        <asp:BoundField HeaderText="CL Position" DataField="Position" ItemStyle-Width="100px"/>
+                        <asp:BoundField HeaderText="CL Position" DataField="Position" ItemStyle-Width="100px" />
                         <asp:BoundField HeaderText="Elements" DataField="Block Type" ItemStyle-HorizontalAlign="Center" />
                         <asp:TemplateField HeaderText="URLs">
                             <HeaderStyle HorizontalAlign="Center" />
@@ -420,7 +422,7 @@
                                 <a href="<%#DataBinder.Eval(Container.DataItem,"URL") %>" target="_blank"><%#DataBinder.Eval(Container.DataItem,"URL") %></a>
                             </ItemTemplate>
                         </asp:TemplateField>
-                         <asp:BoundField HeaderText="Title" DataField="Title" />
+                        <asp:BoundField HeaderText="Title" DataField="Title" />
                     </Columns>
                 </asp:GridView>
                 <br />
