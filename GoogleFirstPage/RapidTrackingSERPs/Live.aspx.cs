@@ -111,31 +111,31 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                     //if (clscnt >= 1)
                                     //    dt.Rows.Add("", "", "");
                                     DataRow row11 = dt.NewRow();
-                                    if (node.Attributes[0].Value.ToString() == "popularProducts")
+                                    //dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                    //foreach (XmlNode nodee in node)
+                                    //{
+                                    //    //dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                    //    dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + "|" + "Price= " + nodee.Attributes[2].Value +"|" + "Site=" + nodee.Attributes[3].Value);
+
+                                    //}
+                                    //dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
+
+
+
+                                    dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                    foreach (XmlNode nodee in node)
                                     {
-                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
-                                        foreach (XmlNode nodee in node)
+                                        if (node.Attributes[0].Value.ToString() == "popularProducts")
                                         {
-
-
+                                            //dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                            dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + "|" + "Price= " + nodee.Attributes[2].Value + "|" + "Site=" + nodee.Attributes[3].Value);
+                                        }
+                                        else
+                                        {
                                             dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
-
                                         }
-                                        dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                     }
-                                    else
-                                    {
-                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
-                                        foreach (XmlNode nodee in node)
-                                        {
-
-
-                                            dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value, nodee.Attributes[2].Value);
-
-                                        }
-                                        dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
-
-                                    }
+                                    dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");                                    
                                     clscnt = 0;
                                     //dt.Rows.Add("", "", "");
                                 }
@@ -175,9 +175,10 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                     dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                     foreach (XmlNode nodee in node)
                                     {
-                                        if (nodee.Name == "popularProducts")
+                                        if (node.Attributes[0].Value.ToString() == "popularProducts")
                                         {
-                                            dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + " " + "Site=" + nodee.Attributes[2].Value);
+                                            //dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                            dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + "|" + "Price= " + nodee.Attributes[2].Value + "|" + "Site=" + nodee.Attributes[3].Value);
                                         }
                                         else
                                         {
@@ -212,8 +213,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             dt.Columns.Add("URL");
             dt.Columns.Add("Title");
             dt.Columns.Add("Position");
-            //dt.Columns.Add("Site");
-            //dt.Columns.Add("Price");
+            dt.Columns.Add("Site");
+            dt.Columns.Add("Price");
             return dt;
         }
         private void SendToDatabase(int seid,string keyword,string jobid)

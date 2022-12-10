@@ -84,10 +84,24 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                 //if (clscnt >= 1)
                                 //    dt.Rows.Add("", "", "");
                                 DataRow row11 = dt.NewRow();
+                                //dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                //foreach (XmlNode nodee in node)
+                                //{
+                                //    dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                //}
+                                //dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                 dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                 foreach (XmlNode nodee in node)
                                 {
-                                    dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                    if (node.Attributes[0].Value.ToString() == "popularProducts")
+                                    {
+                                        //dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                        dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + "|" + "Price= " + nodee.Attributes[2].Value + "|" + "Site=" + nodee.Attributes[3].Value);
+                                    }
+                                    else
+                                    {
+                                        dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                    }
                                 }
                                 dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                 clscnt = 0;
@@ -124,10 +138,24 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                 //if (clscnt >= 1)
                                 //    dt.Rows.Add("", "", "");
                                 DataRow row11 = dt.NewRow();
+                                //dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                //foreach (XmlNode nodee in node)
+                                //{
+                                //    dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                //}
+                                //dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                 dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                 foreach (XmlNode nodee in node)
                                 {
-                                    dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                    if (node.Attributes[0].Value.ToString() == "popularProducts")
+                                    {
+                                        //dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                        dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + "|" + "Price= " + nodee.Attributes[2].Value + "|" + "Site=" + nodee.Attributes[3].Value);
+                                    }
+                                    else
+                                    {
+                                        dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                    }
                                 }
                                 dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                 clscnt = 0;
