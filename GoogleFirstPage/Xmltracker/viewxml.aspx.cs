@@ -132,7 +132,7 @@ namespace GoogleFirstPage.Xmltracker
                 HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
                 doc.LoadHtml(Text1);
 
-                string htmlElements = "meta,title,dd,dl,dt,menu,pre,cite,code,data,time,div,h1,h2,h3,h4,h5,h6,p,span,a,ul,ol,li,b,i,u,hr,br,strong,em,table,tbody,tfoot,tr,th,thead,td,col,colgroup,img,picture,map,track,video,svg,button,form,input,label,option,select,textarea";
+                string htmlElements = "meta,title,dd,dl,dt,menu,pre,cite,code,data,time,h1,h2,h3,h4,h5,h6,p,span,a,ul,ol,li,b,i,u,hr,br,strong,em,table,tbody,tfoot,tr,th,thead,td,col,colgroup,img,picture,map,track,video,svg,button,form,input,label,option,select,textarea";
                 var strElements = htmlElements.Split(',');
 
                 sb.Append("<?xml version=\"1.0\" ?>");
