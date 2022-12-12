@@ -393,6 +393,9 @@
             <asp:Label ID="Label1" runat="server" ForeColor="Blue" Font-Size="Large" Font-Bold="true" Text="Elements and Classic Links"></asp:Label><br />
             <br />
             <br />
+            <br />
+            <br />
+            <br />
             <div id="oxydiv1" runat="server">
                 <table border="1" style="width: 800px">
                     <tr>

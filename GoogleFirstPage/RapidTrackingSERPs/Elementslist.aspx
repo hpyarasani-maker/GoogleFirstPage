@@ -263,6 +263,13 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Popular Products">
+                            <ItemTemplate>
+                                <div style="width: 100px;">
+                                    <%# Eval("popularProducts","{0:N0}") %>
+                                </div>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Sports results">
                             <ItemTemplate>
                                 <div style="width: 80px;">
