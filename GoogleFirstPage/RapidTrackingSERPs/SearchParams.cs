@@ -2018,6 +2018,350 @@ namespace GoogleFirstPage.RapidTrackingSERPs
            {
               seid = 605, domain ="be", geo_location="Belgium", locale= "en-be", uule = "w+CAIQICIHQmVsZ2l1bQ==",device="mobile_android",sename="Google UK (Belgium, Mobile)"
            }, // end 23-11-2022
+           new SearchProperties() // 23-12-2022 new seid's from 606 - 691
+           {
+                seid = 606, domain ="com", geo_location="Surprise, Arizona,United States", locale= "en-us", uule = "w+CAIQICIfU3VycHJpc2UsIEFyaXpvbmEsVW5pdGVkIFN0YXRlcw==",device="desktop",sename="Google US (Surprise, Arizona)"
+           },
+           new SearchProperties()
+           {
+                seid = 607, domain ="com", geo_location="Surprise, Arizona,United States", locale= "en-us", uule = "w+CAIQICIfU3VycHJpc2UsIEFyaXpvbmEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Surprise, Arizona, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 608, domain ="com", geo_location="Austin, Texas,United States", locale= "en-us", uule = "w+CAIQICIbQXVzdGluLCBUZXhhcyxVbml0ZWQgU3RhdGVz",device="desktop",sename="Google US (Austin, Texas)"
+           },
+           new SearchProperties()
+           {
+                seid = 609, domain ="com", geo_location="Austin, Texas,United States", locale= "en-us", uule = "w+CAIQICIbQXVzdGluLCBUZXhhcyxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Austin, Texas, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 610, domain ="com", geo_location="Berkeley, California,United States", locale= "en-us", uule = "w+CAIQICIiQmVya2VsZXksIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="desktop",sename="Google US (Berkeley, California)"
+           },
+           new SearchProperties()
+           {
+                seid = 611, domain ="com", geo_location="Berkeley, California,United States", locale= "en-us", uule = "w+CAIQICIiQmVya2VsZXksIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Berkeley, California, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 612, domain ="com", geo_location="Clearwater, Florida,United States", locale= "en-us", uule = "w+CAIQICIhQ2xlYXJ3YXRlciwgRmxvcmlkYSxVbml0ZWQgU3RhdGVz",device="desktop",sename="Google US (Clearwater, Florida)"
+           },
+           new SearchProperties()
+           {
+                seid = 613, domain ="com", geo_location="Clearwater, Florida,United States", locale= "en-us", uule = "w+CAIQICIhQ2xlYXJ3YXRlciwgRmxvcmlkYSxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Clearwater, Florida, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 614, domain ="com", geo_location="Maspeth, New York,United States", locale= "en-us", uule = "w+CAIQICIfTWFzcGV0aCwgTmV3IFlvcmssVW5pdGVkIFN0YXRlcw==",device="desktop",sename="Google US (Maspeth, New York)"
+           },
+           new SearchProperties()
+           {
+                seid = 615, domain ="com", geo_location="Maspeth, New York,United States", locale= "en-us", uule = "w+CAIQICIfTWFzcGV0aCwgTmV3IFlvcmssVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Maspeth, New York, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 616, domain ="com", geo_location="Milpitas, California,United States", locale= "en-us", uule = "w+CAIQICIiTWlscGl0YXMsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="desktop",sename="Google US (Milpitas, California)"
+           },
+           new SearchProperties()
+           {
+                seid = 617, domain ="com", geo_location="Milpitas, California,United States", locale= "en-us", uule = "w+CAIQICIiTWlscGl0YXMsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Milpitas, California, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 618, domain ="com", geo_location="Rialto, California,United States", locale= "en-us", uule = "w+CAIQICIgUmlhbHRvLCBDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=",device="desktop",sename="Google US (Rialto, California)"
+           },
+           new SearchProperties()
+           {
+                seid = 619, domain ="com", geo_location="Rialto, California,United States", locale= "en-us", uule = "w+CAIQICIgUmlhbHRvLCBDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Rialto, California, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 620, domain ="com", geo_location="Richmond, California,United States", locale= "en-us", uule = "w+CAIQICIiUmljaG1vbmQsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="desktop",sename="Google US (Richmond, California)"
+           },
+           new SearchProperties()
+           {
+                seid = 621, domain ="com", geo_location="Richmond, California,United States", locale= "en-us", uule = "w+CAIQICIiUmljaG1vbmQsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Richmond, California, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 622, domain ="com", geo_location="Riverview, Florida,United States", locale= "en-us", uule = "w+CAIQICIgUml2ZXJ2aWV3LCBGbG9yaWRhLFVuaXRlZCBTdGF0ZXM=",device="desktop",sename="Google US (Riverview, Florida)"
+           },
+           new SearchProperties()
+           {
+                seid = 623, domain ="com", geo_location="Riverview, Florida,United States", locale= "en-us", uule = "w+CAIQICIgUml2ZXJ2aWV3LCBGbG9yaWRhLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Riverview, Florida, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 624, domain ="com", geo_location="San Diego, California,United States", locale= "en-us", uule = "w+CAIQICIjU2FuIERpZWdvLCBDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=",device="desktop",sename="Google US (San Diego, California)"
+           },
+           new SearchProperties()
+           {
+                seid = 625, domain ="com", geo_location="San Diego, California,United States", locale= "en-us", uule = "w+CAIQICIjU2FuIERpZWdvLCBDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (San Diego, California, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 626, domain ="com", geo_location="San Jose, California,United States", locale= "en-us", uule = "w+CAIQICIiU2FuIEpvc2UsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="desktop",sename="Google US (San Jose, California)"
+           },
+           new SearchProperties()
+           {
+                seid = 627, domain ="com", geo_location="San Jose, California,United States", locale= "en-us", uule = "w+CAIQICIiU2FuIEpvc2UsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (San Jose, California, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 628, domain ="com", geo_location="San Leandro, California,United States", locale= "en-us", uule = "w+CAIQICIlU2FuIExlYW5kcm8sIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="desktop",sename="Google US (San Leandro, California)"
+           },
+           new SearchProperties()
+           {
+                seid = 629, domain ="com", geo_location="San Leandro, California,United States", locale= "en-us", uule = "w+CAIQICIlU2FuIExlYW5kcm8sIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (San Leandro, California, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 630, domain ="com", geo_location="Seattle, Washington,United States", locale= "en-us", uule = "w+CAIQICIhU2VhdHRsZSwgV2FzaGluZ3RvbixVbml0ZWQgU3RhdGVz",device="desktop",sename="Google US (Seattle, Washington)"
+           },
+           new SearchProperties()
+           {
+                seid = 631, domain ="com", geo_location="Seattle, Washington,United States", locale= "en-us", uule = "w+CAIQICIhU2VhdHRsZSwgV2FzaGluZ3RvbixVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Seattle, Washington, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 632, domain ="com", geo_location="Spring Valley, California,United States", locale= "en-us", uule = "w+CAIQICInU3ByaW5nIFZhbGxleSwgQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz",device="desktop",sename="Google US (Spring Valley)"
+           },
+           new SearchProperties()
+           {
+                seid = 633, domain ="com", geo_location="Spring Valley, California,United States", locale= "en-us", uule = "w+CAIQICInU3ByaW5nIFZhbGxleSwgQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Spring Valley,, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 634, domain ="com", geo_location="Titusville, Florida,United States", locale= "en-us", uule = "w+CAIQICIhVGl0dXN2aWxsZSwgRmxvcmlkYSxVbml0ZWQgU3RhdGVz",device="desktop",sename="Google US (Titusville, Florida)"
+           },
+           new SearchProperties()
+           {
+                seid = 635, domain ="com", geo_location="Titusville, Florida,United States", locale= "en-us", uule = "w+CAIQICIhVGl0dXN2aWxsZSwgRmxvcmlkYSxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Titusville, Florida, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 636, domain ="com", geo_location="Van Nuys, California,United States", locale= "en-us", uule = "w+CAIQICIiVmFuIE51eXMsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="desktop",sename="Google US (Van Nuys, California)"
+           },
+           new SearchProperties()
+           {
+                seid = 637, domain ="com", geo_location="Van Nuys, California,United States", locale= "en-us", uule = "w+CAIQICIiVmFuIE51eXMsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Van Nuys, California, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 638, domain ="com", geo_location="Waipahu, Hawaii,United States", locale= "en-us", uule = "w+CAIQICIdV2FpcGFodSwgSGF3YWlpLFVuaXRlZCBTdGF0ZXM=",device="desktop",sename="Google US (Waipahu, Hawaii)"
+           },
+           new SearchProperties()
+           {
+                seid = 639, domain ="com", geo_location="Waipahu, Hawaii,United States", locale= "en-us", uule = "w+CAIQICIdV2FpcGFodSwgSGF3YWlpLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Waipahu, Hawaii, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 640, domain ="com", geo_location="Palm Harbor, Florida,United States", locale= "en-us", uule = "w+CAIQICIiUGFsbSBIYXJib3IsIEZsb3JpZGEsVW5pdGVkIFN0YXRlcw==",device="desktop",sename="Google US (Palm Harbor, Florida)"
+           },
+           new SearchProperties()
+           {
+                seid = 641, domain ="com", geo_location="Palm Harbor, Florida,United States", locale= "en-us", uule = "w+CAIQICIiUGFsbSBIYXJib3IsIEZsb3JpZGEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Palm Harbor, Florida, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 642, domain ="com", geo_location="Antioch, California,United States", locale= "en-us", uule = "w+CAIQICIhQW50aW9jaCwgQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz",device="desktop",sename="Google US (Antioch, California)"
+           },
+           new SearchProperties()
+           {
+                seid = 643, domain ="com", geo_location="Antioch, California,United States", locale= "en-us", uule = "w+CAIQICIhQW50aW9jaCwgQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Antioch, California, Mobile)"
+           },
+            new SearchProperties()
+           {
+                seid = 644, domain ="com", geo_location="Bee Cave, Texas,United States", locale= "en-us", uule = "w+CAIQICIcQmVlIENhdmUsIFRleGFzLFVuaXRlZCBTdGF0ZQ==",device="desktop",sename="Google US (Bee Cave, Texas)"
+           },
+           new SearchProperties()
+           {
+                seid = 645, domain ="com", geo_location="Bee Cave, Texas,United States", locale= "en-us", uule = "w+CAIQICIcQmVlIENhdmUsIFRleGFzLFVuaXRlZCBTdGF0ZQ==",device="mobile_android",sename="Google US (Bee Cave, Texas, Mobile)"
+           },
+            new SearchProperties()
+           {
+                seid = 646, domain ="com", geo_location="Brea, California,United States", locale= "en-us", uule = "w+CAIQICIeQnJlYSwgQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz",device="desktop",sename="Google US (Brea, California)"
+           },
+           new SearchProperties()
+           {
+                seid = 647, domain ="com", geo_location="Brea, California,United States", locale= "en-us", uule = "w+CAIQICIeQnJlYSwgQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Brea, California, Mobile)"
+           },
+            new SearchProperties()
+           {
+                seid = 648, domain ="com", geo_location="Federal Way, Washington,United States", locale= "en-us", uule = "w+CAIQICIlRmVkZXJhbCBXYXksIFdhc2hpbmd0b24sVW5pdGVkIFN0YXRlcw==",device="desktop",sename="Google US (Federal Way, Washington)"
+           },
+           new SearchProperties()
+           {
+                seid = 649, domain ="com", geo_location="Federal Way, Washington,United States", locale= "en-us", uule = "w+CAIQICIlRmVkZXJhbCBXYXksIFdhc2hpbmd0b24sVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Federal Way, Washington,, Mobile)"
+           },
+            new SearchProperties()
+           {
+                seid = 650, domain ="com", geo_location="Lanham, Maryland,United States", locale= "en-us", uule = "w+CAIQICIeTGFuaGFtLCBNYXJ5bGFuZCxVbml0ZWQgU3RhdGVzCg==",device="desktop",sename="Google US (Lanham, Maryland)"
+           },
+           new SearchProperties()
+           {
+                seid = 651, domain ="com", geo_location="Lanham, Maryland,United States", locale= "en-us", uule = "w+CAIQICIeTGFuaGFtLCBNYXJ5bGFuZCxVbml0ZWQgU3RhdGVzCg==",device="mobile_android",sename="Google US (Lanham, Maryland, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 652, domain ="com", geo_location="Livingston, New Jersey,United States", locale= "en-us", uule = "w+CAIQICIkTGl2aW5nc3RvbiwgTmV3IEplcnNleSxVbml0ZWQgU3RhdGVz",device="desktop",sename="Google US (Livingston, New Jersey)"
+           },
+           new SearchProperties()
+           {
+                seid = 653, domain ="com", geo_location="Livingston, New Jersey,United States", locale= "en-us", uule = "w+CAIQICIkTGl2aW5nc3RvbiwgTmV3IEplcnNleSxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Livingston, New Jersey, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 654, domain ="com", geo_location="Denver, Colorado,United States", locale= "en-us", uule = "w+CAIQICIeRGVudmVyLCBDb2xvcmFkbyxVbml0ZWQgU3RhdGVz",device="desktop",sename="Google US (Denver, Colorado)"
+           },
+           new SearchProperties()
+           {
+                seid = 655, domain ="com", geo_location="Denver, Colorado,United States", locale= "en-us", uule = "w+CAIQICIeRGVudmVyLCBDb2xvcmFkbyxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Denver, Colorado, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 656, domain ="com", geo_location="Los Angeles, California,United States", locale= "en-us", uule = "w+CAIQICImTG9zIEFuZ2VsZXMsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcwo=",device="desktop",sename="Google US (Los Angeles, California)"
+           },
+           new SearchProperties()
+           {
+                seid = 657, domain ="com", geo_location="Los Angeles, California,United States", locale= "en-us", uule = "w+CAIQICImTG9zIEFuZ2VsZXMsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcwo=",device="mobile_android",sename="Google US (Los Angeles, California, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 658, domain ="com", geo_location="Blue Bell, Pennsylvania,United States", locale= "en-us", uule = "w+CAIQICIlQmx1ZSBCZWxsLCBQZW5uc3lsdmFuaWEsVW5pdGVkIFN0YXRlcw==",device="desktop",sename="Google US (Blue Bell, Pennsylvania)"
+           },
+           new SearchProperties()
+           {
+                seid = 659, domain ="com", geo_location="Blue Bell, Pennsylvania,United States", locale= "en-us", uule = "w+CAIQICIlQmx1ZSBCZWxsLCBQZW5uc3lsdmFuaWEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Blue Bell, Pennsylvania, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 660, domain ="com", geo_location="Camarillo, California,United States", locale= "en-us", uule = "w+CAIQICIjQ2FtYXJpbGxvLCBDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=",device="desktop",sename="Google US (Camarillo, California)"
+           },
+           new SearchProperties()
+           {
+                seid = 661, domain ="com", geo_location="Camarillo, California,United States", locale= "en-us", uule = "w+CAIQICIjQ2FtYXJpbGxvLCBDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Camarillo, California, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 662, domain ="com", geo_location="Torrance, California,United States", locale= "en-us", uule = "w+CAIQICIiVG9ycmFuY2UsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="desktop",sename="Google US (Torrance, California)"
+           },
+           new SearchProperties()
+           {
+                seid = 663, domain ="com", geo_location="Torrance, California,United States", locale= "en-us", uule = "w+CAIQICIiVG9ycmFuY2UsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Torrance, California, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 664, domain ="com", geo_location="Atlantic Beach, Florida,United States", locale= "en-us", uule = "w+CAIQICIlQXRsYW50aWMgQmVhY2gsIEZsb3JpZGEsVW5pdGVkIFN0YXRlcw==",device="desktop",sename="Google US (Atlantic Beach, Florida)"
+           },
+           new SearchProperties()
+           {
+                seid = 665, domain ="com", geo_location="Atlantic Beach, Florida,United States", locale= "en-us", uule = "w+CAIQICIlQXRsYW50aWMgQmVhY2gsIEZsb3JpZGEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Atlantic Beach, Florida, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 666, domain ="com", geo_location="Murray, Utah,United States", locale= "en-us", uule = "w+CAIQICIaTXVycmF5LCBVdGFoLFVuaXRlZCBTdGF0ZXM=",device="desktop",sename="Google US (Murray, Utah)"
+           },
+           new SearchProperties()
+           {
+                seid = 667, domain ="com", geo_location="Murray, Utah,United States", locale= "en-us", uule = "w+CAIQICIaTXVycmF5LCBVdGFoLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Murray, Utah, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 668, domain ="com", geo_location="Vista, California,United States", locale= "en-us", uule = "w+CAIQICIfVmlzdGEsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="desktop",sename="Google US (Vista, California)"
+           },
+           new SearchProperties()
+           {
+                seid = 669, domain ="com", geo_location="Vista, California,United States", locale= "en-us", uule = "w+CAIQICIfVmlzdGEsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Vista, California, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 670, domain ="com", geo_location="Brooklyn, New York,United States", locale= "en-us", uule = "w+CAIQICIgQnJvb2tseW4sIE5ldyBZb3JrLFVuaXRlZCBTdGF0ZXM=",device="desktop",sename="Google US (Brooklyn, New York)"
+           },
+           new SearchProperties()
+           {
+                seid = 671, domain ="com", geo_location="Brooklyn, New York,United States", locale= "en-us", uule = "w+CAIQICIgQnJvb2tseW4sIE5ldyBZb3JrLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Brooklyn, New York, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 672, domain ="com", geo_location="North Wales, Pennsylvania,United States", locale= "en-us", uule = "w+CAIQICInTm9ydGggV2FsZXMsIFBlbm5zeWx2YW5pYSxVbml0ZWQgU3RhdGVz",device="desktop",sename="Google US (North Wales, Pennsylvania)"
+           },
+           new SearchProperties()
+           {
+                seid = 673, domain ="com", geo_location="North Wales, Pennsylvania,United States", locale= "en-us", uule = "w+CAIQICInTm9ydGggV2FsZXMsIFBlbm5zeWx2YW5pYSxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (North Wales, Pennsylvania, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 674, domain ="com", geo_location="Tacoma, Washington,United States", locale= "en-us", uule = "w+CAIQICIgVGFjb21hLCBXYXNoaW5ndG9uLFVuaXRlZCBTdGF0ZXM=",device="desktop",sename="Google US (Tacoma, Washington)"
+           },
+           new SearchProperties()
+           {
+                seid = 675, domain ="com", geo_location="Tacoma, Washington,United States", locale= "en-us", uule = "w+CAIQICIgVGFjb21hLCBXYXNoaW5ndG9uLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Tacoma, Washington, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 676, domain ="com", geo_location="Piscataway, New Jersey,United States", locale= "en-us", uule = "w+CAIQICIkUGlzY2F0YXdheSwgTmV3IEplcnNleSxVbml0ZWQgU3RhdGVz",device="desktop",sename="Google US (Piscataway, New Jersey)"
+           },
+           new SearchProperties()
+           {
+                seid = 677, domain ="com", geo_location="Piscataway, New Jersey,United States", locale= "en-us", uule = "w+CAIQICIkUGlzY2F0YXdheSwgTmV3IEplcnNleSxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Piscataway, New Jersey, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 678, domain ="com", geo_location="Portland, Oregon,United States", locale= "en-us", uule = "w+CAIQICIeUG9ydGxhbmQsIE9yZWdvbixVbml0ZWQgU3RhdGVz",device="desktop",sename="Google US (Portland, Oregon,United States)"
+           },
+           new SearchProperties()
+           {
+                seid = 679, domain ="com", geo_location="Portland, Oregon,United States", locale= "en-us", uule = "w+CAIQICIeUG9ydGxhbmQsIE9yZWdvbixVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Portland, Oregon,United States, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 680, domain ="com", geo_location="Homestead, Florida,United States", locale= "en-us", uule = "w+CAIQICIgSG9tZXN0ZWFkLCBGbG9yaWRhLFVuaXRlZCBTdGF0ZXM=",device="desktop",sename="Google US (Homestead, Florida)"
+           },
+           new SearchProperties()
+           {
+                seid = 681, domain ="com", geo_location="Homestead, Florida,United States", locale= "en-us", uule = "w+CAIQICIgSG9tZXN0ZWFkLCBGbG9yaWRhLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Homestead, Florida, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 682, domain ="com", geo_location="Everett, Washington,United States", locale= "en-us", uule = "w+CAIQICIhRXZlcmV0dCwgV2FzaGluZ3RvbixVbml0ZWQgU3RhdGVz",device="desktop",sename="Google US (Everett, Washington)"
+           },
+           new SearchProperties()
+           {
+                seid = 683, domain ="com", geo_location="Everett, Washington,United States", locale= "en-us", uule = "w+CAIQICIhRXZlcmV0dCwgV2FzaGluZ3RvbixVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Everett, Washington, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 684, domain ="com", geo_location="Flushing, New York,United States", locale= "en-us", uule = "w+CAIQICIgRmx1c2hpbmcsIE5ldyBZb3JrLFVuaXRlZCBTdGF0ZXM=",device="desktop",sename="Google US (Flushing, New York)"
+           },
+           new SearchProperties()
+           {
+                seid = 685, domain ="com", geo_location="Flushing, New York,United States", locale= "en-us", uule = "w+CAIQICIgRmx1c2hpbmcsIE5ldyBZb3JrLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Flushing, New York, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 686, domain ="com", geo_location="Lakewood, Washington,United States", locale= "en-us", uule = "w+CAIQICIiTGFrZXdvb2QsIFdhc2hpbmd0b24sVW5pdGVkIFN0YXRlcw==",device="desktop",sename="Google US (Lakewood, Washington)"
+           },
+           new SearchProperties()
+           {
+                seid = 687, domain ="com", geo_location="Lakewood, Washington,United States", locale= "en-us", uule = "w+CAIQICIiTGFrZXdvb2QsIFdhc2hpbmd0b24sVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Lakewood, Washington, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 688, domain ="com", geo_location="Los Gatos, California,United States", locale= "en-us", uule = "w+CAIQICIjTG9zIEdhdG9zLCBDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=",device="desktop",sename="Google US (Los Gatos, California)"
+           },
+           new SearchProperties()
+           {
+                seid = 689, domain ="com", geo_location="Los Gatos, California,United States", locale= "en-us", uule = "w+CAIQICIjTG9zIEdhdG9zLCBDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Los Gatos, California, Mobile)"
+           },
+           new SearchProperties()
+           {
+                seid = 690, domain ="com", geo_location="Mililani, Hawaii,United States", locale= "en-us", uule = "w+CAIQICIeTWlsaWxhbmksIEhhd2FpaSxVbml0ZWQgU3RhdGVz",device="desktop",sename="Google US (Mililani, Hawaii)"
+           },
+           new SearchProperties()
+           {
+                seid = 691, domain ="com", geo_location="Mililani, Hawaii,United States", locale= "en-us", uule = "w+CAIQICIeTWlsaWxhbmksIEhhd2FpaSxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Mililani, Hawaii, Mobile)"
+           },// 23-12-2022 new seid's from 606 - 691
          };
     }
     public class SearchProperties
