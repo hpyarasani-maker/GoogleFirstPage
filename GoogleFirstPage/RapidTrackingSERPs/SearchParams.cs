@@ -2218,14 +2218,14 @@ namespace GoogleFirstPage.RapidTrackingSERPs
            {
                 seid = 655, domain ="com", geo_location="Denver, Colorado,United States", locale= "en-us", uule = "w+CAIQICIeRGVudmVyLCBDb2xvcmFkbyxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Denver, Colorado, Mobile)"
            },
-           new SearchProperties()
-           {
-                seid = 656, domain ="com", geo_location="Los Angeles, California,United States", locale= "en-us", uule = "w+CAIQICImTG9zIEFuZ2VsZXMsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcwo=",device="desktop",sename="Google US (Los Angeles, California)"
-           },
-           new SearchProperties()
-           {
-                seid = 657, domain ="com", geo_location="Los Angeles, California,United States", locale= "en-us", uule = "w+CAIQICImTG9zIEFuZ2VsZXMsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcwo=",device="mobile_android",sename="Google US (Los Angeles, California, Mobile)"
-           },
+           //new SearchProperties()
+           //{
+           //     seid = 656, domain ="com", geo_location="Los Angeles, California,United States", locale= "en-us", uule = "w+CAIQICImTG9zIEFuZ2VsZXMsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcwo=",device="desktop",sename="Google US (Los Angeles, California)"
+           //},
+           //new SearchProperties()
+           //{
+           //     seid = 657, domain ="com", geo_location="Los Angeles, California,United States", locale= "en-us", uule = "w+CAIQICImTG9zIEFuZ2VsZXMsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcwo=",device="mobile_android",sename="Google US (Los Angeles, California, Mobile)"
+           //},
            new SearchProperties()
            {
                 seid = 658, domain ="com", geo_location="Blue Bell, Pennsylvania,United States", locale= "en-us", uule = "w+CAIQICIlQmx1ZSBCZWxsLCBQZW5uc3lsdmFuaWEsVW5pdGVkIFN0YXRlcw==",device="desktop",sename="Google US (Blue Bell, Pennsylvania)"
