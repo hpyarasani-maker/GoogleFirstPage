@@ -2444,11 +2444,11 @@ namespace GoogleFirstPage.RapidTrackingSERPs
            },
            new SearchProperties()
            {
-                seid = 712, domain ="st", geo_location="Sao Tome and Príncipe", locale= "pt-st", uule = "w+CAIQICIVU2FvIFRvbWUgYW5kIFByaW5jaXBl",device="desktop",sename="Google ST (São Tomé and Príncipe,Portuguese)"
+                seid = 712, domain ="st", geo_location="Sao Tome and Príncipe", locale= "pt-st", uule = "w+CAIQICIVU2FvIFRvbWUgYW5kIFByaW5jaXBl",device="desktop",sename="Google ST (Sao Tome and Príncipe,Portuguese)"
            },
            new SearchProperties()
            {
-                seid = 713, domain ="st", geo_location="Sao Tome and Príncipe", locale= "pt-st", uule = "w+CAIQICIVU2FvIFRvbWUgYW5kIFByaW5jaXBl",device="mobile_android",sename="Google ST (São Tomé and Príncipe,Portuguese, Mobile)"
+                seid = 713, domain ="st", geo_location="Sao Tome and Príncipe", locale= "pt-st", uule = "w+CAIQICIVU2FvIFRvbWUgYW5kIFByaW5jaXBl",device="mobile_android",sename="Google ST (Sao Tome and Príncipe,Portuguese, Mobile)"
            },    // 30-12-2022 new seid's from 692- 713
          };
     }
