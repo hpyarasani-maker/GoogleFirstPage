@@ -2364,91 +2364,91 @@ namespace GoogleFirstPage.RapidTrackingSERPs
            },// 23-12-2022 new seid's from 606 - 691
            new SearchProperties()// 30-12-2022 new seid's from 692- 713
            {
-                seid = 692, domain ="bj", geo_location="Benin", locale= "fr-bj", uule = "w+CAIQICIFQmVuaW4=",device="desktop",sename="Google Benin (French)"
+                seid = 692, domain ="bj", geo_location="Benin", locale= "fr-bj", uule = "w+CAIQICIFQmVuaW4=",device="desktop",sename="Google BJ (Benin,French)"
            },
            new SearchProperties()
            {
-                seid = 693, domain ="bj", geo_location="Benin", locale= "fr-bj", uule = "w+CAIQICIFQmVuaW4=",device="mobile_android",sename="Google Benin (French, Mobile)"
+                seid = 693, domain ="bj", geo_location="Benin", locale= "fr-bj", uule = "w+CAIQICIFQmVuaW4=",device="mobile_android",sename="Google BJ (Benin,French, Mobile)"
            },
            new SearchProperties()
            {
-                seid = 694, domain ="bf", geo_location="Burkina Faso", locale= "fr-bf", uule = "w+CAIQICIMQnVya2luYSBGYXNv",device="desktop",sename="Google Burkina Faso (French)"
+                seid = 694, domain ="bf", geo_location="Burkina Faso", locale= "fr-bf", uule = "w+CAIQICIMQnVya2luYSBGYXNv",device="desktop",sename="Google BF (Burkina Faso,French)"
            },
            new SearchProperties()
            {
-                seid = 695, domain ="bf", geo_location="Burkina Faso", locale= "fr-bf", uule = "w+CAIQICIMQnVya2luYSBGYXNv",device="mobile_android",sename="Google Burkina Faso (French, Mobile)"
+                seid = 695, domain ="bf", geo_location="Burkina Faso", locale= "fr-bf", uule = "w+CAIQICIMQnVya2luYSBGYXNv",device="mobile_android",sename="Google BF (Burkina Faso,French, Mobile)"
            },
            new SearchProperties()
            {
-                seid = 696, domain ="cv", geo_location="Cape Verde", locale= "pt-cv", uule = "w+CAIQICIKQ2FwZSBWZXJkZQ==",device="desktop",sename="Google Cape Verde (Portuguese)"
+                seid = 696, domain ="cv", geo_location="Cape Verde", locale= "pt-cv", uule = "w+CAIQICIKQ2FwZSBWZXJkZQ==",device="desktop",sename="Google CV (Cape Verde,Portuguese)"
            },
            new SearchProperties()
            {
-                seid = 697, domain ="cv", geo_location="Cape Verde", locale= "pt-cv", uule = "w+CAIQICIKQ2FwZSBWZXJkZQ==",device="mobile_android",sename="Google Cape Verde (Portuguese, Mobile)"
+                seid = 697, domain ="cv", geo_location="Cape Verde", locale= "pt-cv", uule = "w+CAIQICIKQ2FwZSBWZXJkZQ==",device="mobile_android",sename="Google CV (Cape Verde,Portuguese, Mobile)"
            },
            new SearchProperties()
            {
-                seid = 698, domain ="gm", geo_location="The Gambia", locale= "en-gm", uule = "w+CAIQICIKVGhlIEdhbWJpYQ==",device="desktop",sename="Google The Gambia (English)"
+                seid = 698, domain ="gm", geo_location="The Gambia", locale= "en-gm", uule = "w+CAIQICIKVGhlIEdhbWJpYQ==",device="desktop",sename="Google GM (The Gambia,English)"
            },
            new SearchProperties()
            {
-                seid = 699, domain ="gm", geo_location="The Gambia", locale= "en-gm", uule = "w+CAIQICIKVGhlIEdhbWJpYQ==",device="mobile_android",sename="Google The Gambia (English, Mobile)"
+                seid = 699, domain ="gm", geo_location="The Gambia", locale= "en-gm", uule = "w+CAIQICIKVGhlIEdhbWJpYQ==",device="mobile_android",sename="Google GM (The Gambia,English, Mobile)"
            },
            new SearchProperties()
            {
-                seid = 700, domain ="ci", geo_location="Ivory Coast", locale= "fr-ci", uule = "w+CAIQICILSXZvcnkgQ29hc3Q=",device="desktop",sename="Google Ivory Coast (French)"
+                seid = 700, domain ="ci", geo_location="Ivory Coast", locale= "fr-ci", uule = "w+CAIQICILSXZvcnkgQ29hc3Q=",device="desktop",sename="Google CI (Ivory Coast,French)"
            },
            new SearchProperties()
            {
-                seid = 701, domain ="ci", geo_location="Ivory Coast", locale= "fr-ci", uule = "w+CAIQICILSXZvcnkgQ29hc3Q=",device="mobile_android",sename="Google Ivory Coast (French, Mobile)"
+                seid = 701, domain ="ci", geo_location="Ivory Coast", locale= "fr-ci", uule = "w+CAIQICILSXZvcnkgQ29hc3Q=",device="mobile_android",sename="Google CI (Ivory Coast,French, Mobile)"
            },
             new SearchProperties()
            {
-                seid = 702, domain ="ml", geo_location="Mali", locale= "fr-ml", uule = "w+CAIQICIETWFsaQ==",device="desktop",sename="Google Mali (French)"
+                seid = 702, domain ="ml", geo_location="Mali", locale= "fr-ml", uule = "w+CAIQICIETWFsaQ==",device="desktop",sename="Google ML (Mali,French)"
            },
            new SearchProperties()
            {
-                seid = 703, domain ="ml", geo_location="Mali", locale= "fr-ml", uule = "w+CAIQICIETWFsaQ==",device="mobile_android",sename="Google Mali (French, Mobile)"
+                seid = 703, domain ="ml", geo_location="Mali", locale= "fr-ml", uule = "w+CAIQICIETWFsaQ==",device="mobile_android",sename="Google ML (Mali,French, Mobile)"
            },
             new SearchProperties()
            {
-                seid = 704, domain ="ne", geo_location="Niger", locale= "fr-ne", uule = "w+CAIQICIFTmlnZXI=",device="desktop",sename="Google Niger (French)"
+                seid = 704, domain ="ne", geo_location="Niger", locale= "fr-ne", uule = "w+CAIQICIFTmlnZXI=",device="desktop",sename="Google NE (Niger,French)"
            },
            new SearchProperties()
            {
-                seid = 705, domain ="ne", geo_location="Niger", locale= "fr-ne", uule = "w+CAIQICIFTmlnZXI=",device="mobile_android",sename="Google Niger (French, Mobile)"
+                seid = 705, domain ="ne", geo_location="Niger", locale= "fr-ne", uule = "w+CAIQICIFTmlnZXI=",device="mobile_android",sename="Google NE (Niger,French, Mobile)"
            },
            new SearchProperties()
            {
-                seid = 706, domain ="sn", geo_location="Senegal", locale= "fr-sn", uule = "w+CAIQICIHU2VuZWdhbA==",device="desktop",sename="Google Senegal (French)"
+                seid = 706, domain ="sn", geo_location="Senegal", locale= "fr-sn", uule = "w+CAIQICIHU2VuZWdhbA==",device="desktop",sename="Google SN (Senegal,French)"
            },
            new SearchProperties()
            {
-                seid = 707, domain ="sn", geo_location="Senegal", locale= "fr-sn", uule = "w+CAIQICIHU2VuZWdhbA==",device="mobile_android",sename="Google Senegal (French, Mobile)"
+                seid = 707, domain ="sn", geo_location="Senegal", locale= "fr-sn", uule = "w+CAIQICIHU2VuZWdhbA==",device="mobile_android",sename="Google SN (Senegal,French, Mobile)"
            },
            new SearchProperties()
            {
-                seid = 708, domain ="com.sl", geo_location="Sierra Leone", locale= "en-sl", uule = "w+CAIQICIMU2llcnJhIExlb25l",device="desktop",sename="Google Sierra Leone (English)"
+                seid = 708, domain ="com.sl", geo_location="Sierra Leone", locale= "en-sl", uule = "w+CAIQICIMU2llcnJhIExlb25l",device="desktop",sename="Google SL (Sierra Leone,English)"
            },
            new SearchProperties()
            {
-                seid = 709, domain ="com.sl", geo_location="Sierra Leone", locale= "en-sl", uule = "w+CAIQICIMU2llcnJhIExlb25l",device="mobile_android",sename="Google Sierra Leone (English, Mobile)"
+                seid = 709, domain ="com.sl", geo_location="Sierra Leone", locale= "en-sl", uule = "w+CAIQICIMU2llcnJhIExlb25l",device="mobile_android",sename="Google SL (Sierra Leone,English, Mobile)"
            },
            new SearchProperties()
            {
-                seid = 710, domain ="tg", geo_location="Togo", locale= "fr-tg", uule = "w+CAIQICIMU2llcnJhIExlb25l",device="desktop",sename="Google Togo (French)"
+                seid = 710, domain ="tg", geo_location="Togo", locale= "fr-tg", uule = "w+CAIQICIMU2llcnJhIExlb25l",device="desktop",sename="Google TG (Togo,French)"
            },
            new SearchProperties()
            {
-                seid = 711, domain ="tg", geo_location="Togo", locale= "fr-tg", uule = "w+CAIQICIMU2llcnJhIExlb25l",device="mobile_android",sename="Google Togo (French, Mobile)"
+                seid = 711, domain ="tg", geo_location="Togo", locale= "fr-tg", uule = "w+CAIQICIMU2llcnJhIExlb25l",device="mobile_android",sename="Google TG (Togo,French, Mobile)"
            },
            new SearchProperties()
            {
-                seid = 712, domain ="st", geo_location="São Tomé and Príncipe", locale= "pt-st", uule = "w+CAIQICIVU2FvIFRvbWUgYW5kIFByaW5jaXBl",device="desktop",sename="Google São Tomé and Príncipe (Portuguese)"
+                seid = 712, domain ="st", geo_location="São Tomé and Príncipe", locale= "pt-st", uule = "w+CAIQICIVU2FvIFRvbWUgYW5kIFByaW5jaXBl",device="desktop",sename="Google ST (São Tomé and Príncipe,Portuguese)"
            },
            new SearchProperties()
            {
-                seid = 713, domain ="st", geo_location="São Tomé and Príncipe", locale= "pt-st", uule = "w+CAIQICIVU2FvIFRvbWUgYW5kIFByaW5jaXBl",device="mobile_android",sename="Google São Tomé and Príncipe (Portuguese, Mobile)"
+                seid = 713, domain ="st", geo_location="São Tomé and Príncipe", locale= "pt-st", uule = "w+CAIQICIVU2FvIFRvbWUgYW5kIFByaW5jaXBl",device="mobile_android",sename="Google ST (São Tomé and Príncipe,Portuguese, Mobile)"
            },    // 30-12-2022 new seid's from 692- 713
          };
     }
