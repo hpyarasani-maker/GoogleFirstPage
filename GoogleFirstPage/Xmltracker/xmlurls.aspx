@@ -31,7 +31,7 @@
 <body>
     <form id="form1" runat="server">
         <asp:ScriptManager ID="scriptmgr" runat="server" EnablePageMethods="false"></asp:ScriptManager>
-        <div class="header" style="width:2400px;">
+        <div class="header" style="width: 2400px;">
             <div class="header-menu">
                 <div style="margin-left: -80px;">
                     <img src="images/pilogo.jpg" alt="pi-datametrics" class="imagedimensions" height="51" width="54" />
@@ -58,6 +58,12 @@
                                 <HeaderStyle HorizontalAlign="Center" />
                                 <ItemTemplate>
                                     <a href="<%#DataBinder.Eval(Container.DataItem,"url") %>" target="_blank"><%#DataBinder.Eval(Container.DataItem,"url") %></a>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Date Tracking Started">
+                                <HeaderStyle HorizontalAlign="Center" />
+                                <ItemTemplate>
+                                    <%# Eval("StartDate") %>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="View XML">
