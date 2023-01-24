@@ -66,6 +66,12 @@
                                     <%# Eval("StartDate") %>
                                 </ItemTemplate>
                             </asp:TemplateField>
+                             <asp:TemplateField HeaderText="Number of changes">
+                                <HeaderStyle HorizontalAlign="Center" />
+                                <ItemTemplate>
+                                    <%# Eval("ChangesCount","{0:N0}") %>
+                                </ItemTemplate>
+                            </asp:TemplateField>
                             <asp:TemplateField HeaderText="View XML">
                                 <HeaderStyle HorizontalAlign="Center" />
                                 <ItemTemplate>

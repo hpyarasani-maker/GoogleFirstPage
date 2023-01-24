@@ -44,7 +44,7 @@
             </div>
         </div>
         <div class="displaydata">
-            <div style="margin-top: 1px; background-color: #e4e8ef; height: 120px; border-radius: 10px 10px;margin-left:20px;width:105%;">
+            <div style="margin-top: 1px; background-color: #e4e8ef; height: 130px; border-radius: 10px 10px;margin-left:20px;width:105%;">
                 <br />
                 <div>
                     <table style="margin-left: auto; margin-right: auto;">
