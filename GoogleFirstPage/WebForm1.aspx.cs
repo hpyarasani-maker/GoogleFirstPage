@@ -30,6 +30,7 @@ namespace GoogleFirstPage
         {
             if (Page.ModelState.IsValid)
             {
+                
                 RegisterAsyncTask(new PageAsyncTask(keywords_data_trends_explore_live));
             }
         }
@@ -47,16 +48,15 @@ namespace GoogleFirstPage
                 postData.Add(new
                 {
                     location_name = "United States",
-                    date_from = "2022-02-07",
-                    date_to = "2023-02-08",
-                    type = "youtube",
+                    date_from = "2023-01-01",
+                    date_to = "2023-01-31",
+                    type = "web",
                     category_code = 1,
-                    keyword = "car insurance"
-                    //keywords = new[]
-                    //{
-                    //"rugby",
-                    //"cricket"
-                    // }
+                    //keywords = "car insurance"
+                    keywords = new[]
+                    {
+                    "mercedes"
+                     }
                 });
                 var taskPostResponse = await httpClient.PostAsync("/v3/keywords_data/google_trends/explore/live", new StringContent(JsonConvert.SerializeObject(postData)));
                 var result = JsonConvert.DeserializeObject<dynamic>(await taskPostResponse.Content.ReadAsStringAsync());
