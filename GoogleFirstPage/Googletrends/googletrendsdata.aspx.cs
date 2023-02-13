@@ -243,10 +243,12 @@ namespace GoogleFirstPage.Googletrends
         public void SaveRelatedTopics(JToken rt, string kid, string seid)
         {
             DataTable dt3 = new DataTable();
-            dt3.Columns.Add("geo_id");
-            dt3.Columns.Add("geo_name");
+            dt3.Columns.Add("topic_id");
+            dt3.Columns.Add("topic_title");
+            dt3.Columns.Add("topic_type");
             dt3.Columns.Add("value");
-            dt3.Columns.Add("max_value_index");
+            dt3.Columns.Add("type");
+
 
             var top = rt["top"];
             var rising = rt["rising"];
@@ -261,12 +263,14 @@ namespace GoogleFirstPage.Googletrends
                 var topic_title = item["topic_title"].Value<string>();
                 var topic_type = item["topic_type"].Value<string>();
                 var value = item["value"].Value<string>();
+                var type = "top";
 
 
                 a.Add(topic_id);
                 a.Add(topic_title);
                 a.Add(topic_type);
                 a.Add(value);
+                a.Add(type);
 
                 for (int s = 0; s < a.Count; s++)
                 {
@@ -293,6 +297,7 @@ namespace GoogleFirstPage.Googletrends
                 var topic_title = item["topic_title"].Value<string>();
                 var topic_type = item["topic_type"].Value<string>();
                 var value = item["value"].Value<int>();
+                var type = "rising";
 
                 ArrayList a1 = new ArrayList();
                 DataRow dr1 = dt3.NewRow();
@@ -301,6 +306,7 @@ namespace GoogleFirstPage.Googletrends
                 a1.Add(topic_title);
                 a1.Add(topic_type);
                 a1.Add(value);
+                a1.Add(type);
 
                 for (int s = 0; s < a1.Count; s++)
                 {
@@ -327,7 +333,8 @@ namespace GoogleFirstPage.Googletrends
             DataTable dt4 = new DataTable();
             dt4.Columns.Add("query");
             dt4.Columns.Add("value");
-       
+            dt4.Columns.Add("type");
+
             var top = rq["top"];
             var rising = rq["rising"];
 
@@ -338,10 +345,12 @@ namespace GoogleFirstPage.Googletrends
 
                 var query = item["query"].Value<string>();
                 var value = item["value"].Value<int>();
+                var type = "top";
 
 
                 a.Add(query);
                 a.Add(value);
+                a.Add(type);
              
                 for (int s = 0; s < a.Count; s++)
                 {
@@ -366,12 +375,14 @@ namespace GoogleFirstPage.Googletrends
             {
                 var query = item["query"].Value<string>();
                 var value = item["value"].Value<int>();
+                var type = "rising";
 
                 ArrayList a1 = new ArrayList();
                 DataRow dr1 = dt4.NewRow();
 
                 a1.Add(query);
                 a1.Add(value);
+                a1.Add(type);
 
                 for (int s = 0; s < a1.Count; s++)
                 {
