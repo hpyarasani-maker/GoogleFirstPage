@@ -168,6 +168,21 @@
                 </div>
             </div>
 
+             <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <b><a data-toggle="collapse" href="#collapse20">Data Discovery Tools - Google Trends</a></b>
+                        </h4>
+                    </div>
+                    <div id="collapse20" class="panel-collapse collapse">
+                        <br />
+                        <p style="font-family: Calibri; font-size: medium">Google Trends returns for Interest over time, Interest by subregion, Related topics, Related queries </p>
+                        <a href="Googletrends/googletrendsdata.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Google Trends Live</b></></a><br />
+                    </div>
+                </div>
+            </div>
+
             <div class="panel-group">
                 <div class="panel panel-default">
                     <div class="panel-heading">
@@ -200,6 +215,7 @@
                     </div>
                 </div>
             </div>
+
 
             <div class="panel-group">
                 <div class="panel panel-default">

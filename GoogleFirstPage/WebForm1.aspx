@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Async="true" Inherits="GoogleFirstPage.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Async="true" AsyncTimeout="100000" Inherits="GoogleFirstPage.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -12,6 +12,7 @@
             <asp:TextBox ID="txtkwds1" runat="server"></asp:TextBox><br />
             <asp:Button ID="btnq1" runat="server" Text="Submit" OnClick="btnq1_Click"/>
         </div>
+
     </form>
 </body>
 </html>
