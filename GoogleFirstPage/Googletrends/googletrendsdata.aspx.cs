@@ -370,8 +370,9 @@ namespace GoogleFirstPage.Googletrends
             {
                 DataTable dt4 = new DataTable();
                 dt4.Columns.Add("query");
-                dt4.Columns.Add("value");
                 dt4.Columns.Add("type");
+                dt4.Columns.Add("value");
+               
 
                 var top = rq["top"];
                 var rising = rq["rising"];
@@ -387,8 +388,8 @@ namespace GoogleFirstPage.Googletrends
 
 
                     a.Add(query);
-                    a.Add(value);
                     a.Add(type);
+                    a.Add(value);
 
                     for (int s = 0; s < a.Count; s++)
                     {
@@ -419,8 +420,9 @@ namespace GoogleFirstPage.Googletrends
                     DataRow dr1 = dt4.NewRow();
 
                     a1.Add(query);
-                    a1.Add(value);
                     a1.Add(type);
+                    a1.Add(value);
+                    
 
                     for (int s = 0; s < a1.Count; s++)
                     {
