@@ -91,51 +91,64 @@ namespace GoogleFirstPage.Googletrends
         protected void btngoogletrends_Click(object sender, EventArgs e)
         {
             //RegisterAsyncTask(new PageAsyncTask(keywords_data_trends_explore_live));
-            
-            string locations = ddllocation.SelectedItem.ToString();
-            string kid = ddllocation.SelectedValue.ToString();
-            string[] kwds = { txtkeyword.Text };
-            if (locations != null)
-            {
-                string res = keywords_data_trends_explore_live(kwds, ddllocation.SelectedValue.ToString()).Result;
-                ProcessData(res,kid,locations);
-            }
-            
 
+            try
+            {
+                string locations = ddllocation.SelectedItem.ToString();
+                string kid = ddllocation.SelectedValue.ToString();
+                string[] kwds = { txtkeyword.Text };
+                if (locations != null)
+                {
+                    string res = keywords_data_trends_explore_live(kwds, ddllocation.SelectedValue.ToString()).Result;
+                    ProcessData(res, kid, locations);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public void ProcessData(string result, string seid,string location)
         {
-            JObject jo = JObject.Parse(result);
-            var tasks = from p in jo["tasks"] select p;
-            var res = tasks.FirstOrDefault()["result"];
-            var items = res.FirstOrDefault()["items"];
-
-            foreach (var item in items)
+            try
             {
-                var title = item["title"].Value<string>();
-                if (title == "Interest over time")
-                {
-                    var iot = item["data"];
-                    SaveOverTime(iot, seid, location);
+                JObject jo = JObject.Parse(result);
+                var tasks = from p in jo["tasks"] select p;
+                var res = tasks.FirstOrDefault()["result"];
+                var items = res.FirstOrDefault()["items"];
 
-                }
-                else if (title == "Interest by subregion")
+                foreach (var item in items)
                 {
-                    var ibs = item["data"];
-                    SaveBySubregion(ibs, seid, location);
-                }
-                else if (title == "Related topics")
-                {
-                    var rt = item["data"];
-                    SaveRelatedTopics(rt, seid, location);
-                }
-                else if (title == "Related queries")
-                {
-                    var rq = item["data"];
-                    SaveRelatedQueries(rq, seid, location);
+                    var title = item["title"].Value<string>();
+                    if (title == "Interest over time")
+                    {
+                        var iot = item["data"];
+                        SaveOverTime(iot, seid, location);
+
+                    }
+                    else if (title == "Interest by subregion")
+                    {
+                        var ibs = item["data"];
+                        SaveBySubregion(ibs, seid, location);
+                    }
+                    else if (title == "Related topics")
+                    {
+                        var rt = item["data"];
+                        SaveRelatedTopics(rt, seid, location);
+                    }
+                    else if (title == "Related queries")
+                    {
+                        var rq = item["data"];
+                        SaveRelatedQueries(rq, seid, location);
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            
         }
 
         public string TimestampToDate(long timestamp)
@@ -145,266 +158,292 @@ namespace GoogleFirstPage.Googletrends
         }
         public void SaveOverTime(JToken iot, string kid, string seid)
         {
-            DataTable dt1 = new DataTable();
-            dt1.Columns.Add("date_from");
-            dt1.Columns.Add("date_to");
-            //dt1.Columns.Add("timestamp");
-            dt1.Columns.Add("missing_data");
-            dt1.Columns.Add("value");
-
-            foreach (var item in iot)
+            try
             {
-                ArrayList a = new ArrayList();
-                DataRow dr = dt1.NewRow();
+                DataTable dt1 = new DataTable();
+                dt1.Columns.Add("date_from");
+                dt1.Columns.Add("date_to");
+                //dt1.Columns.Add("timestamp");
+                dt1.Columns.Add("missing_data");
+                dt1.Columns.Add("value");
 
-                var date_from = item["date_from"].Value<string>();
-                var date_to = item["date_to"].Value<string>();
-                //var date_from = txtstartdate.Text;
-                //var date_to = txtenddate.Text;
-                //var timestamp = item["timestamp"].Value<long>();
-                var missing_data = item["missing_data"].Value<bool>();
-                var value = item["values"][0].Value<string>();
-
-                //var tsDate = TimestampToDate(timestamp);
-
-                a.Add(date_from);
-                a.Add(date_to);
-                //a.Add(tsDate);
-                a.Add(missing_data);
-                a.Add(value);
-              
-                for (int s = 0; s < a.Count; s++)
+                foreach (var item in iot)
                 {
-                    dr[s] = a[s];
-                }
+                    ArrayList a = new ArrayList();
+                    DataRow dr = dt1.NewRow();
 
-                dt1.Rows.Add(dr);
+                    var date_from = item["date_from"].Value<string>();
+                    var date_to = item["date_to"].Value<string>();
+                    //var date_from = txtstartdate.Text;
+                    //var date_to = txtenddate.Text;
+                    //var timestamp = item["timestamp"].Value<long>();
+                    var missing_data = item["missing_data"].Value<bool>();
+                    var value = item["values"][0].Value<string>();
 
-                if (dt1.Rows.Count > 0)
-                {
-                    Label6.Visible = true;
-                    gvinterestot.DataSource = dt1;
-                    gvinterestot.DataBind();
-                }
-                else
-                {
-                    gvinterestot.DataSource = null;
-                    gvinterestot.DataBind();
-                }
+                    //var tsDate = TimestampToDate(timestamp);
 
+                    a.Add(date_from);
+                    a.Add(date_to);
+                    //a.Add(tsDate);
+                    a.Add(missing_data);
+                    a.Add(value);
+
+                    for (int s = 0; s < a.Count; s++)
+                    {
+                        dr[s] = a[s];
+                    }
+
+                    dt1.Rows.Add(dr);
+
+                    if (dt1.Rows.Count > 0)
+                    {
+                        Label6.Visible = true;
+                        gvinterestot.DataSource = dt1;
+                        gvinterestot.DataBind();
+                    }
+                    else
+                    {
+                        gvinterestot.DataSource = null;
+                        gvinterestot.DataBind();
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
 
 
         public void SaveBySubregion(JToken ibs, string kid, string seid)
         {
-            DataTable dt2 = new DataTable();
-            dt2.Columns.Add("geo_id");
-            dt2.Columns.Add("geo_name");
-            dt2.Columns.Add("value");
-            dt2.Columns.Add("max_value_index");
-            
-            foreach (var item in ibs)
+            try
             {
-                ArrayList a = new ArrayList();
-                DataRow dr = dt2.NewRow();
+                DataTable dt2 = new DataTable();
+                dt2.Columns.Add("geo_id");
+                dt2.Columns.Add("geo_name");
+                dt2.Columns.Add("value");
+                dt2.Columns.Add("max_value_index");
 
-                var geo_id = item["geo_id"].Value<string>();
-                var geo_name = item["geo_name"].Value<string>();
-                var value = item["values"][0].Value<string>();
-                var max_value_index = item["max_value_index"].Value<int>();
+                foreach (var item in ibs)
+                {
+                    ArrayList a = new ArrayList();
+                    DataRow dr = dt2.NewRow();
 
-                a.Add(geo_id);
-                a.Add(geo_name);
-                a.Add(value);
-                a.Add(max_value_index);
-               
-                for (int s = 0; s < a.Count; s++)
-                {
-                    dr[s] = a[s];
-                }
+                    var geo_id = item["geo_id"].Value<string>();
+                    var geo_name = item["geo_name"].Value<string>();
+                    var value = item["values"][0].Value<string>();
+                    var max_value_index = item["max_value_index"].Value<int>();
 
-                dt2.Rows.Add(dr);
-                if(dt2.Rows.Count > 0)
-                {
-                    Label7.Visible = true;
-                    gvsubregion.DataSource = dt2;
-                    gvsubregion.DataBind();
+                    a.Add(geo_id);
+                    a.Add(geo_name);
+                    a.Add(value);
+                    a.Add(max_value_index);
+
+                    for (int s = 0; s < a.Count; s++)
+                    {
+                        dr[s] = a[s];
+                    }
+
+                    dt2.Rows.Add(dr);
+                    if (dt2.Rows.Count > 0)
+                    {
+                        Label7.Visible = true;
+                        gvsubregion.DataSource = dt2;
+                        gvsubregion.DataBind();
+                    }
+                    else
+                    {
+                        gvsubregion.DataSource = null;
+                        gvsubregion.DataBind();
+                    }
+
                 }
-                else
-                {
-                    gvsubregion.DataSource = null;
-                    gvsubregion.DataBind();
-                }
-               
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
 
         public void SaveRelatedTopics(JToken rt, string kid, string seid)
         {
-            DataTable dt3 = new DataTable();
-            dt3.Columns.Add("topic_id");
-            dt3.Columns.Add("topic_title");
-            dt3.Columns.Add("topic_type");
-            dt3.Columns.Add("value");
-            dt3.Columns.Add("type");
-
-
-            var top = rt["top"];
-            var rising = rt["rising"];
-
-            foreach (var item in top)
+            try
             {
-                ArrayList a = new ArrayList();
-                ArrayList a1 = new ArrayList();
-                DataRow dr = dt3.NewRow();
-
-                var topic_id = item["topic_id"].Value<string>();
-                var topic_title = item["topic_title"].Value<string>();
-                var topic_type = item["topic_type"].Value<string>();
-                var value = item["value"].Value<string>();
-                var type = "top";
+                DataTable dt3 = new DataTable();
+                dt3.Columns.Add("topic_id");
+                dt3.Columns.Add("topic_title");
+                dt3.Columns.Add("topic_type");
+                dt3.Columns.Add("value");
+                dt3.Columns.Add("type");
 
 
-                a.Add(topic_id);
-                a.Add(topic_title);
-                a.Add(topic_type);
-                a.Add(value);
-                a.Add(type);
+                var top = rt["top"];
+                var rising = rt["rising"];
 
-                for (int s = 0; s < a.Count; s++)
+                foreach (var item in top)
                 {
-                    dr[s] = a[s];
+                    ArrayList a = new ArrayList();
+                    ArrayList a1 = new ArrayList();
+                    DataRow dr = dt3.NewRow();
+
+                    var topic_id = item["topic_id"].Value<string>();
+                    var topic_title = item["topic_title"].Value<string>();
+                    var topic_type = item["topic_type"].Value<string>();
+                    var value = item["value"].Value<string>();
+                    var type = "top";
+
+
+                    a.Add(topic_id);
+                    a.Add(topic_title);
+                    a.Add(topic_type);
+                    a.Add(value);
+                    a.Add(type);
+
+                    for (int s = 0; s < a.Count; s++)
+                    {
+                        dr[s] = a[s];
+                    }
+
+                    dt3.Rows.Add(dr);
+                    if (dt3.Rows.Count > 0)
+                    {
+                        Label8.Visible = true;
+                        gvrelatedtopics.DataSource = dt3;
+                        gvrelatedtopics.DataBind();
+                    }
+                    else
+                    {
+                        gvrelatedtopics.DataSource = null;
+                        gvrelatedtopics.DataBind();
+                    }
                 }
 
-                dt3.Rows.Add(dr);
-                if(dt3.Rows.Count > 0)
+                foreach (var item in rising)
                 {
-                    Label8.Visible = true;
-                    gvrelatedtopics.DataSource = dt3;
-                    gvrelatedtopics.DataBind();
-                }
-                else
-                {
-                    gvrelatedtopics.DataSource = null;
-                    gvrelatedtopics.DataBind();
+                    var topic_id = item["topic_id"].Value<string>();
+                    var topic_title = item["topic_title"].Value<string>();
+                    var topic_type = item["topic_type"].Value<string>();
+                    var value = item["value"].Value<int>();
+                    var type = "rising";
+
+                    ArrayList a1 = new ArrayList();
+                    DataRow dr1 = dt3.NewRow();
+
+                    a1.Add(topic_id);
+                    a1.Add(topic_title);
+                    a1.Add(topic_type);
+                    a1.Add(value);
+                    a1.Add(type);
+
+                    for (int s = 0; s < a1.Count; s++)
+                    {
+                        dr1[s] = a1[s];
+                    }
+
+                    dt3.Rows.Add(dr1);
+                    if (dt3.Rows.Count > 0)
+                    {
+                        Label8.Visible = true;
+                        gvrelatedtopics.DataSource = dt3;
+                        gvrelatedtopics.DataBind();
+                    }
+                    else
+                    {
+                        gvrelatedtopics.DataSource = null;
+                        gvrelatedtopics.DataBind();
+                    }
                 }
             }
-
-            foreach (var item in rising)
+            catch (Exception ex)
             {
-                var topic_id = item["topic_id"].Value<string>();
-                var topic_title = item["topic_title"].Value<string>();
-                var topic_type = item["topic_type"].Value<string>();
-                var value = item["value"].Value<int>();
-                var type = "rising";
-
-                ArrayList a1 = new ArrayList();
-                DataRow dr1 = dt3.NewRow();
-
-                a1.Add(topic_id);
-                a1.Add(topic_title);
-                a1.Add(topic_type);
-                a1.Add(value);
-                a1.Add(type);
-
-                for (int s = 0; s < a1.Count; s++)
-                {
-                    dr1[s] = a1[s];
-                }
-
-                dt3.Rows.Add(dr1);
-                if(dt3.Rows.Count > 0)
-                {
-                    Label8.Visible = true;
-                    gvrelatedtopics.DataSource = dt3;
-                    gvrelatedtopics.DataBind();
-                }
-                else
-                {
-                    gvrelatedtopics.DataSource = null;
-                    gvrelatedtopics.DataBind();
-                }
+                throw ex;
             }
         }
 
         public void SaveRelatedQueries(JToken rq, string kid, string seid)
         {
-            DataTable dt4 = new DataTable();
-            dt4.Columns.Add("query");
-            dt4.Columns.Add("value");
-            dt4.Columns.Add("type");
-
-            var top = rq["top"];
-            var rising = rq["rising"];
-
-            foreach (var item in top)
+            try
             {
-                ArrayList a = new ArrayList();
-                DataRow dr = dt4.NewRow();
+                DataTable dt4 = new DataTable();
+                dt4.Columns.Add("query");
+                dt4.Columns.Add("value");
+                dt4.Columns.Add("type");
 
-                var query = item["query"].Value<string>();
-                var value = item["value"].Value<int>();
-                var type = "top";
+                var top = rq["top"];
+                var rising = rq["rising"];
 
-
-                a.Add(query);
-                a.Add(value);
-                a.Add(type);
-             
-                for (int s = 0; s < a.Count; s++)
+                foreach (var item in top)
                 {
-                    dr[s] = a[s];
+                    ArrayList a = new ArrayList();
+                    DataRow dr = dt4.NewRow();
+
+                    var query = item["query"].Value<string>();
+                    var value = item["value"].Value<int>();
+                    var type = "top";
+
+
+                    a.Add(query);
+                    a.Add(value);
+                    a.Add(type);
+
+                    for (int s = 0; s < a.Count; s++)
+                    {
+                        dr[s] = a[s];
+                    }
+
+                    dt4.Rows.Add(dr);
+                    if (dt4.Rows.Count > 0)
+                    {
+                        Label9.Visible = true;
+                        gvrelatedqueries.DataSource = dt4;
+                        gvrelatedqueries.DataBind();
+                    }
+                    else
+                    {
+                        gvrelatedqueries.DataSource = null;
+                        gvrelatedqueries.DataBind();
+                    }
                 }
 
-                dt4.Rows.Add(dr);
-                if(dt4.Rows.Count > 0)
+                foreach (var item in rising)
                 {
-                    Label9.Visible = true;
-                    gvrelatedqueries.DataSource = dt4;
-                    gvrelatedqueries.DataBind();
-                }
-                else
-                {
-                    gvrelatedqueries.DataSource = null;
-                    gvrelatedqueries.DataBind();
+                    var query = item["query"].Value<string>();
+                    var value = item["value"].Value<int>();
+                    var type = "rising";
+
+                    ArrayList a1 = new ArrayList();
+                    DataRow dr1 = dt4.NewRow();
+
+                    a1.Add(query);
+                    a1.Add(value);
+                    a1.Add(type);
+
+                    for (int s = 0; s < a1.Count; s++)
+                    {
+                        dr1[s] = a1[s];
+                    }
+
+                    dt4.Rows.Add(dr1);
+                    if (dt4.Rows.Count > 0)
+                    {
+                        Label9.Visible = true;
+                        gvrelatedqueries.DataSource = dt4;
+                        gvrelatedqueries.DataBind();
+                    }
+                    else
+                    {
+                        gvrelatedqueries.DataSource = null;
+                        gvrelatedqueries.DataBind();
+                    }
+
                 }
             }
-
-            foreach (var item in rising)
+            catch (Exception ex)
             {
-                var query = item["query"].Value<string>();
-                var value = item["value"].Value<int>();
-                var type = "rising";
-
-                ArrayList a1 = new ArrayList();
-                DataRow dr1 = dt4.NewRow();
-
-                a1.Add(query);
-                a1.Add(value);
-                a1.Add(type);
-
-                for (int s = 0; s < a1.Count; s++)
-                {
-                    dr1[s] = a1[s];
-                }
-
-                dt4.Rows.Add(dr1);
-                if (dt4.Rows.Count > 0)
-                {
-                    Label9.Visible = true;
-                    gvrelatedqueries.DataSource = dt4;
-                    gvrelatedqueries.DataBind();
-                }
-                else
-                {
-                    gvrelatedqueries.DataSource = null;
-                    gvrelatedqueries.DataBind();
-                }
-                
+                throw ex;
             }
         }
-
-
     }
 }
