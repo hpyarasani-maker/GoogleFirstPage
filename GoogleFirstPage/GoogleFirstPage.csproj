@@ -216,7 +216,6 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="WebForm1.aspx" />
     <Content Include="Xmltracker\css\main.css" />
     <Content Include="Xmltracker\css\main1.css" />
     <Content Include="Xmltracker\css\Tablecss.css" />
@@ -667,13 +666,6 @@
     </Compile>
     <Compile Include="TrendingTwoHoursResultsFromDB\Viewxml.aspx.designer.cs">
       <DependentUpon>Viewxml.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Xmltracker\datewise.aspx.cs">
       <DependentUpon>datewise.aspx</DependentUpon>
