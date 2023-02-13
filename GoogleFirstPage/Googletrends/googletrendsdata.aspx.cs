@@ -275,9 +275,8 @@ namespace GoogleFirstPage.Googletrends
                 dt3.Columns.Add("topic_id");
                 dt3.Columns.Add("topic_title");
                 dt3.Columns.Add("topic_type");
-                dt3.Columns.Add("value");
                 dt3.Columns.Add("type");
-
+                dt3.Columns.Add("value");
 
                 var top = rt["top"];
                 var rising = rt["rising"];
@@ -298,8 +297,10 @@ namespace GoogleFirstPage.Googletrends
                     a.Add(topic_id);
                     a.Add(topic_title);
                     a.Add(topic_type);
-                    a.Add(value);
                     a.Add(type);
+                    a.Add(value);
+
+                    
 
                     for (int s = 0; s < a.Count; s++)
                     {
@@ -334,8 +335,9 @@ namespace GoogleFirstPage.Googletrends
                     a1.Add(topic_id);
                     a1.Add(topic_title);
                     a1.Add(topic_type);
-                    a1.Add(value);
                     a1.Add(type);
+                    a1.Add(value);
+                    
 
                     for (int s = 0; s < a1.Count; s++)
                     {
