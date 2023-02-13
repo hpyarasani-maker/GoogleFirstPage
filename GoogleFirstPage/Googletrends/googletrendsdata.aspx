@@ -112,7 +112,7 @@
             <div class="wrapper">
                 <asp:Label ID="lblalllinks" runat="server"></asp:Label>
                 <div style="margin-left: 50px;">
-                    <p style="font-family: Cambria; color: black; font-size: 25px; font-weight: bold;"><u>GoogleTrends </u></p>
+                    <p style="font-family: Cambria; color: black; font-size: 25px; font-weight: bold;"><u>Google Trends </u></p>
 
                     <table class="auto-style1" border="0">
                         <tr style="border-top: solid 2px black; border-bottom: solid 2px black; border-left: solid 2px black; border-right: solid 2px black;">
