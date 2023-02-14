@@ -21,8 +21,12 @@ namespace GoogleFirstPage.Googletrends
         {
             if(!Page.IsPostBack)
             {
-                txtenddate.Attributes.Add("ReadOnly", "ReadOnly");
+                
                 txtstartdate.Attributes.Add("ReadOnly", "ReadOnly");
+                txtstartdate.Text = DateTime.Now.AddYears(-1).ToString("yyyy-MM-dd");
+                txtenddate.Attributes.Add("ReadOnly", "ReadOnly");
+                txtenddate.Text = DateTime.Now.ToString("yyyy-MM-dd");
+                endt.EndDate = DateTime.Now;
             }
             Label6.Visible = false;
             Label7.Visible = false;

@@ -115,7 +115,7 @@
                     <p style="font-family: Cambria; color: black; font-size: 25px; font-weight: bold;"><u>Google Trends </u></p>
 
                     <table class="auto-style1" border="0">
-                        <tr style="border-top: solid 2px black; border-bottom: solid 2px black; border-left: solid 2px black; border-right: solid 2px black;">
+                        <tr style="border-top: solid 1px black; border-bottom: solid 1px black; border-left: solid 1px black; border-right: solid 1px black;">
                             <td class="auto-style2">
                                 <asp:Label ID="Label1" runat="server" Text="Keyword :" Font-Bold="true"></asp:Label>
                                 <asp:TextBox ID="txtkeyword" runat="server" CssClass="text1"></asp:TextBox>
@@ -123,35 +123,35 @@
                             </td>
                             <td class="auto-style2">
                                 <asp:Label ID="Label2" runat="server" Text="Location :" Font-Bold="true"></asp:Label>
-                                <asp:DropDownList ID="ddllocation" runat="server" Width="160px" CssClass="text1">
+                                <asp:DropDownList ID="ddllocation" runat="server" Width="135px" CssClass="text1">
                                     <asp:ListItem Selected="True" Text="United States" Value="1"></asp:ListItem>
                                     <asp:ListItem Text="United Kingdom" Value="58"></asp:ListItem>
                                 </asp:DropDownList>
-                                <asp:RequiredFieldValidator ID="reqcntrycodr" runat="server" ControlToValidate="ddllocation" InitialValue="Drop down" Text="Select Location" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator ID="reqcntrycodr" runat="server" ControlToValidate="ddllocation" Text="Select Location" ForeColor="Red"></asp:RequiredFieldValidator>
                             </td>
-                            <td class="auto-style2">
+                            <%--<td class="auto-style2">
                                 <asp:Label ID="Label3" runat="server" Text="Language :" Font-Bold="true"></asp:Label>
                                 <asp:DropDownList ID="ddllanguage" runat="server" Width="160px" CssClass="text1">
                                     <asp:ListItem Selected="True" Text="English" Value="1"></asp:ListItem>
                                 </asp:DropDownList>
-                                <asp:RequiredFieldValidator ID="reqlang" runat="server" ControlToValidate="ddllanguage" InitialValue="Drop down" Text="Select any language" ForeColor="Red"></asp:RequiredFieldValidator>
-                            </td>
+                                <asp:RequiredFieldValidator ID="reqlang" runat="server" ControlToValidate="ddllanguage" Text="Select any language" ForeColor="Red"></asp:RequiredFieldValidator>
+                            </td>--%>
                             <td class="auto-style2">
                                 <asp:Label ID="Label4" runat="server" Text="Start Date :" Font-Bold="true"></asp:Label>
-                                <asp:TextBox ID="txtstartdate" runat="server" placeholder="start date" Height="30px" Width="100px" CssClass="text1"></asp:TextBox>
+                                <asp:TextBox ID="txtstartdate" runat="server" placeholder="start date" Height="30px" Width="85px" CssClass="text1"></asp:TextBox>
                                 <asp:ImageButton runat="Server" ID="strtimg" ImageUrl="~/images/calendarnew.png" Height="20px" Width="20px" />
                                 <ajaxToolkit:CalendarExtender ID="stdate" runat="server" PopupButtonID="strtimg" TargetControlID="txtstartdate" Format="yyyy-MM-dd" />
                                 <asp:RequiredFieldValidator ID="reqfvsdate" runat="server" ControlToValidate="txtstartdate" Text="Startdate required" ForeColor="Red"></asp:RequiredFieldValidator>
                             </td>
                             <td class="auto-style2">
                                 <asp:Label ID="Label5" runat="server" Text="End Date :" Font-Bold="true"></asp:Label>
-                                <asp:TextBox ID="txtenddate" runat="server" placeholder="end date" Height="30px" Width="100px" CssClass="text1"></asp:TextBox>
+                                <asp:TextBox ID="txtenddate" runat="server" placeholder="end date" Height="30px" Width="85px" CssClass="text1"></asp:TextBox>
                                 <asp:ImageButton runat="Server" ID="enddimg" ImageUrl="~/images/calendarnew.png" Height="20px" Width="20px" />
                                 <ajaxToolkit:CalendarExtender ID="endt" runat="server" PopupButtonID="enddimg" TargetControlID="txtenddate" Format="yyyy-MM-dd" />
                                 <asp:RequiredFieldValidator ID="reqfvendate" runat="server" ControlToValidate="txtenddate" Text="Enddate required" ForeColor="Red"></asp:RequiredFieldValidator>
                             </td>
                             <td>
-                                <div style="margin-left: -50px;">
+                                <div style="margin-left: -180px;">
                                     <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="btngoogletrends_Click" CssClass="btnlf" Height="27px" Width="120px" />
                                 </div>
                             </td>
