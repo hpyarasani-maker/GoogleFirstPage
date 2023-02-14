@@ -21,10 +21,9 @@ namespace GoogleFirstPage.Googletrends
         {
             if (!Page.IsPostBack)
             {
-                
                 txtstartdate.Attributes.Add("ReadOnly", "ReadOnly");
                 txtstartdate.Text = DateTime.Now.AddYears(-1).ToString("yyyy-MM-dd");
-                stdate.StartDate = DateTime.Now.AddYears(-1);
+                //stdate.StartDate = DateTime.Now.AddYears(-1);
                 txtenddate.Attributes.Add("ReadOnly", "ReadOnly");
                 txtenddate.Text = DateTime.Now.ToString("yyyy-MM-dd");
                 endt.EndDate = DateTime.Now;
