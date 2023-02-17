@@ -17,6 +17,12 @@ namespace GoogleFirstPage.Googletrends
 {
     public partial class keywordsdata : System.Web.UI.Page
     {
+        //string year = string.Empty;
+        //string month = string.Empty;
+        //string volume = string.Empty;
+        string volumedata = string.Empty;
+        string searchres = string.Empty;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -92,6 +98,55 @@ namespace GoogleFirstPage.Googletrends
             return await Task.FromResult(response);
         }
 
+        public async Task<string> GetSearchVolumeResponse(string[] keyword, string location)
+        {
+            string[] kwds = { txtkeyword.Text };
+            Uri queryUri = new Uri("https://api.dataforseo.com/v3/keywords_data/google_ads/search_volume/live");
+            string username = "hemachander@intelligentpositioning.com";
+            string password = "19a90cf9a3f8a1e1";
+            string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
+
+            var postData = new List<object>();
+            postData.Add(new
+            {
+                location_name = ddllocation.SelectedItem,
+                keywords = kwds
+
+            });
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(queryUri);
+            req.Headers.Clear();
+
+            req.Method = "POST";
+            req.ContentType = "application/json";
+            req.Headers.Add(HttpRequestHeader.Authorization, "Basic " + authInfo);
+
+            using (var streamWriter = new StreamWriter(req.GetRequestStream()))
+            {
+                var json = JsonConvert.SerializeObject(postData, new JsonSerializerSettings
+                {
+                    Formatting = Newtonsoft.Json.Formatting.Indented,
+                });
+
+                streamWriter.Write(json);
+            }
+            string response = "";
+            try
+            {
+                HttpWebResponse res = (HttpWebResponse)req.GetResponse();
+                using (StreamReader reader = new StreamReader(res.GetResponseStream(), Encoding.UTF8))
+                {
+                    response = reader.ReadToEnd();
+                    res.Close();
+                    //return response;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return await Task.FromResult(response);
+        }
+
         protected void btngoogletrends_Click(object sender, EventArgs e)
         {
             //RegisterAsyncTask(new PageAsyncTask(keywords_data_trends_explore_live));
@@ -104,7 +159,9 @@ namespace GoogleFirstPage.Googletrends
                 if (locations != null)
                 {
                     string res = keywords_data_trends_explore_live(kwds, ddllocation.SelectedValue.ToString()).Result;
+                    searchres = GetSearchVolumeResponse(kwds, ddllocation.SelectedValue.ToString()).Result;
                     ProcessData(res, kid, locations);
+                    //ProcessSVData(searchres, kid, locations);
                 }
             }
             catch (Exception ex)
@@ -113,7 +170,60 @@ namespace GoogleFirstPage.Googletrends
             }
         }
 
-        public void ProcessData(string result, string seid,string location)
+        //public void ProcessSVData(string result, string seid, string location)
+        //{
+        //    try
+        //    {
+        //        DataTable dt1 = new DataTable();
+        //        dt1.Columns.Add("year");
+        //        dt1.Columns.Add("month");
+        //        dt1.Columns.Add("volume");
+
+        //        JObject jo = JObject.Parse(result);
+        //        var tasks = from p in jo["tasks"] select p;
+        //        var res = tasks.FirstOrDefault()["result"];
+        //        var monthly = res.FirstOrDefault()["monthly_searches"];
+
+        //        foreach (JToken mm in monthly)
+        //        {
+        //            ArrayList a = new ArrayList();
+        //            DataRow dr = dt1.NewRow();
+
+        //            year = mm["year"].Value<string>();
+        //            month = mm["month"].Value<string>();
+        //            //volume = mm["search_volume"].Value<string>();
+        //            volumedata = mm["search_volume"].Value<string>();
+
+        //            //a.Add(year);
+        //            //a.Add(month);
+        //            //a.Add(volume);
+
+        //            //for (int s = 0; s < a.Count; s++)
+        //            //{
+        //            //    dr[s] = a[s];
+        //            //}
+
+        //            //dt1.Rows.Add(dr);
+
+        //            //if (dt1.Rows.Count > 0)
+        //            //{
+        //            //    gvinterestot.DataSource = dt1;
+        //            //    gvinterestot.DataBind();
+        //            //}
+        //            //else
+        //            //{
+        //            //    gvinterestot.DataSource = null;
+        //            //    gvinterestot.DataBind();
+        //            //}
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+
+        public void ProcessData(string result, string seid, string location)
         {
             try
             {
@@ -152,7 +262,6 @@ namespace GoogleFirstPage.Googletrends
             {
                 throw ex;
             }
-            
         }
 
         public string TimestampToDate(long timestamp)
@@ -160,57 +269,90 @@ namespace GoogleFirstPage.Googletrends
             DateTime tsDate = DateTimeOffset.FromUnixTimeSeconds(timestamp).DateTime;
             return tsDate.ToString();
         }
+        
         public void SaveOverTime(JToken iot, string kid, string seid)
         {
             try
             {
+                ArrayList a = new ArrayList();
                 DataTable dt1 = new DataTable();
-                dt1.Columns.Add("date_from");
-                dt1.Columns.Add("date_to");
-                //dt1.Columns.Add("timestamp");
-                dt1.Columns.Add("missing_data");
-                dt1.Columns.Add("value");
+                //dt1.Columns.Add("date_from");
+                //dt1.Columns.Add("date_to");
+                //dt1.Columns.Add("value");
+                //dt1.Columns.Add("year");
+                //dt1.Columns.Add("month");
+                //dt1.Columns.Add("volume");
+                dt1.Columns.Add(new DataColumn("date_from", typeof(string)));
+                dt1.Columns.Add(new DataColumn("date_to", typeof(string)));
+                dt1.Columns.Add(new DataColumn("value", typeof(string)));
+                //dt1.Columns.Add(new DataColumn("volume", typeof(string)));
 
+                //DataColumn newCol = new DataColumn("volume", typeof(string));
+                //dt1.Columns.Add(newCol);
+                
+                var date_from = "";
+                var date_to = "";
+                var value = "";
+
+                var year = "";
+                var month = "";
+                var volume = "";
+
+                JObject jo = JObject.Parse(searchres);
+                var tasks = from p in jo["tasks"] select p;
+                var res = tasks.FirstOrDefault()["result"];
+                var monthly = res.FirstOrDefault()["monthly_searches"];
+
+                DataRow dr ;
                 foreach (var item in iot)
                 {
-                    ArrayList a = new ArrayList();
-                    DataRow dr = dt1.NewRow();
+                    
+                    dr = dt1.NewRow();
 
-                    var date_from = item["date_from"].Value<string>();
-                    var date_to = item["date_to"].Value<string>();
-                    //var date_from = txtstartdate.Text;
-                    //var date_to = txtenddate.Text;
-                    //var timestamp = item["timestamp"].Value<long>();
-                    var missing_data = item["missing_data"].Value<bool>();
-                    var value = item["values"][0].Value<string>();
-
-                    //var tsDate = TimestampToDate(timestamp);
-
+                    date_from = item["date_from"].Value<string>();
+                    date_to = item["date_to"].Value<string>();
+                    value = item["values"][0].Value<string>();
                     a.Add(date_from);
                     a.Add(date_to);
-                    //a.Add(tsDate);
-                    a.Add(missing_data);
                     a.Add(value);
 
                     for (int s = 0; s < a.Count; s++)
                     {
                         dr[s] = a[s];
                     }
-
                     dt1.Rows.Add(dr);
+                }
+                dt1.Columns.Add(new DataColumn("volume", typeof(string)));
 
-                    if (dt1.Rows.Count > 0)
-                    {
-                        Label6.Visible = true;
-                        gvinterestot.DataSource = dt1;
-                        gvinterestot.DataBind();
-                    }
-                    else
-                    {
-                        gvinterestot.DataSource = null;
-                        gvinterestot.DataBind();
-                    }
+                foreach (var mm in monthly)
+                {
+                    ArrayList a1 = new ArrayList();
+                    dr = dt1.NewRow();
 
+                    year = mm["year"].Value<string>();
+                    month = mm["month"].Value<string>();
+                    volume = mm["search_volume"].Value<string>();
+
+                    //a1.Add(year);
+                    //a1.Add(month);
+                    a1.Add(volume);
+
+                    for (int s = 0; s < a1.Count; s++)
+                    {
+                        dr[s] = a1[s];
+                    }
+                    dt1.Rows.Add(dr);
+                }
+                
+                if (dt1.Rows.Count > 0)
+                {
+                    gvinterestot.DataSource = dt1;
+                    gvinterestot.DataBind();
+                }
+                else
+                {
+                    gvinterestot.DataSource = null;
+                    gvinterestot.DataBind();
                 }
             }
             catch (Exception ex)
@@ -304,7 +446,7 @@ namespace GoogleFirstPage.Googletrends
                     a.Add(type);
                     a.Add(value);
 
-                    
+
 
                     for (int s = 0; s < a.Count; s++)
                     {
@@ -341,7 +483,7 @@ namespace GoogleFirstPage.Googletrends
                     a1.Add(topic_type);
                     a1.Add(type);
                     a1.Add(value);
-                    
+
 
                     for (int s = 0; s < a1.Count; s++)
                     {
@@ -376,7 +518,7 @@ namespace GoogleFirstPage.Googletrends
                 dt4.Columns.Add("query");
                 dt4.Columns.Add("type");
                 dt4.Columns.Add("value");
-               
+
 
                 var top = rq["top"];
                 var rising = rq["rising"];
@@ -426,7 +568,7 @@ namespace GoogleFirstPage.Googletrends
                     a1.Add(query);
                     a1.Add(type);
                     a1.Add(value);
-                    
+
 
                     for (int s = 0; s < a1.Count; s++)
                     {
