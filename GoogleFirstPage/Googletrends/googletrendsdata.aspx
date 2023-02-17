@@ -168,7 +168,7 @@
                         </asp:UpdateProgress>
                         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                             <ContentTemplate>
-                                <asp:GridView ID="gvinterestot" runat="server" AutoGenerateColumns="true" Width="80%" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px">
+                                <asp:GridView ID="gvinterestot" runat="server" AutoGenerateColumns="true" Width="80%" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px" OnRowDataBound="gvinterestot_RowDataBound">
                                     <HeaderStyle BackColor="#e4e8ef" Font-Bold="true" ForeColor="Black" />
                                    <%-- <Columns>
                                         <asp:BoundField HeaderText="DateFrom" DataField="date_from" ItemStyle-HorizontalAlign="Center" />

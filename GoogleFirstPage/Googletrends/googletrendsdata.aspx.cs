@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Drawing;
+using System.Globalization;
 
 namespace GoogleFirstPage.Googletrends
 {
@@ -170,59 +172,6 @@ namespace GoogleFirstPage.Googletrends
             }
         }
 
-        //public void ProcessSVData(string result, string seid, string location)
-        //{
-        //    try
-        //    {
-        //        DataTable dt1 = new DataTable();
-        //        dt1.Columns.Add("year");
-        //        dt1.Columns.Add("month");
-        //        dt1.Columns.Add("volume");
-
-        //        JObject jo = JObject.Parse(result);
-        //        var tasks = from p in jo["tasks"] select p;
-        //        var res = tasks.FirstOrDefault()["result"];
-        //        var monthly = res.FirstOrDefault()["monthly_searches"];
-
-        //        foreach (JToken mm in monthly)
-        //        {
-        //            ArrayList a = new ArrayList();
-        //            DataRow dr = dt1.NewRow();
-
-        //            year = mm["year"].Value<string>();
-        //            month = mm["month"].Value<string>();
-        //            //volume = mm["search_volume"].Value<string>();
-        //            volumedata = mm["search_volume"].Value<string>();
-
-        //            //a.Add(year);
-        //            //a.Add(month);
-        //            //a.Add(volume);
-
-        //            //for (int s = 0; s < a.Count; s++)
-        //            //{
-        //            //    dr[s] = a[s];
-        //            //}
-
-        //            //dt1.Rows.Add(dr);
-
-        //            //if (dt1.Rows.Count > 0)
-        //            //{
-        //            //    gvinterestot.DataSource = dt1;
-        //            //    gvinterestot.DataBind();
-        //            //}
-        //            //else
-        //            //{
-        //            //    gvinterestot.DataSource = null;
-        //            //    gvinterestot.DataBind();
-        //            //}
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
-
         public void ProcessData(string result, string seid, string location)
         {
             try
@@ -276,19 +225,11 @@ namespace GoogleFirstPage.Googletrends
             {
                 ArrayList a = new ArrayList();
                 DataTable dt1 = new DataTable();
-                //dt1.Columns.Add("date_from");
-                //dt1.Columns.Add("date_to");
-                //dt1.Columns.Add("value");
-                //dt1.Columns.Add("year");
-                //dt1.Columns.Add("month");
-                //dt1.Columns.Add("volume");
+     
                 dt1.Columns.Add(new DataColumn("date_from", typeof(string)));
                 dt1.Columns.Add(new DataColumn("date_to", typeof(string)));
                 dt1.Columns.Add(new DataColumn("value", typeof(string)));
-                //dt1.Columns.Add(new DataColumn("volume", typeof(string)));
-
-                //DataColumn newCol = new DataColumn("volume", typeof(string));
-                //dt1.Columns.Add(newCol);
+ 
                 
                 var date_from = "";
                 var date_to = "";
@@ -312,35 +253,25 @@ namespace GoogleFirstPage.Googletrends
                     date_from = item["date_from"].Value<string>();
                     date_to = item["date_to"].Value<string>();
                     value = item["values"][0].Value<string>();
-                    a.Add(date_from);
-                    a.Add(date_to);
-                    a.Add(value);
-
-                    for (int s = 0; s < a.Count; s++)
-                    {
-                        dr[s] = a[s];
-                    }
+                    dr["date_from"] = date_from;
+                    dr["date_to"] = date_to;
+                    dr["value"] = value;
+                    
                     dt1.Rows.Add(dr);
                 }
-                dt1.Columns.Add(new DataColumn("volume", typeof(string)));
+                dt1.Columns.Add(new DataColumn("Volume", typeof(string)));
 
                 foreach (var mm in monthly)
                 {
-                    ArrayList a1 = new ArrayList();
+                    //ArrayList a1 = new ArrayList();
                     dr = dt1.NewRow();
-
+                    
                     year = mm["year"].Value<string>();
                     month = mm["month"].Value<string>();
                     volume = mm["search_volume"].Value<string>();
 
-                    //a1.Add(year);
-                    //a1.Add(month);
-                    a1.Add(volume);
-
-                    for (int s = 0; s < a1.Count; s++)
-                    {
-                        dr[s] = a1[s];
-                    }
+                    dr["volume"] = volume;
+                    
                     dt1.Rows.Add(dr);
                 }
                 
@@ -594,6 +525,29 @@ namespace GoogleFirstPage.Googletrends
             {
                 throw ex;
             }
+        }
+
+        protected void gvinterestot_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            //try
+            //{
+            //    if (e.Row.RowType == DataControlRowType.DataRow)
+            //    {
+            //        DateTime dtRow = DateTime.ParseExact(e.Row.Cells[1].Text, "yyyy-MM-dd", CultureInfo.InvariantCulture);
+            //        string curDate = DateTime.Now.ToString("yyyy-MM-dd");
+            //        int result = DateTime.Compare(dtRow, DateTime.Parse(curDate));
+
+                    
+            //        if (result < 0)
+            //        {
+            //            e.Row.Cells[1].BackColor = Color.Red;
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    throw ex;
+            //}
         }
     }
 }
