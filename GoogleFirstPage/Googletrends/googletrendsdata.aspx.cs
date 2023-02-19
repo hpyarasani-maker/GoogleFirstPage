@@ -229,8 +229,9 @@ namespace GoogleFirstPage.Googletrends
                 dt1.Columns.Add(new DataColumn("date_from", typeof(string)));
                 dt1.Columns.Add(new DataColumn("date_to", typeof(string)));
                 dt1.Columns.Add(new DataColumn("value", typeof(string)));
- 
-                
+                dt1.Columns.Add(new DataColumn("Volume", typeof(string)));
+
+
                 var date_from = "";
                 var date_to = "";
                 var value = "";
@@ -259,7 +260,6 @@ namespace GoogleFirstPage.Googletrends
                     
                     dt1.Rows.Add(dr);
                 }
-                dt1.Columns.Add(new DataColumn("Volume", typeof(string)));
 
                 foreach (var mm in monthly)
                 {
