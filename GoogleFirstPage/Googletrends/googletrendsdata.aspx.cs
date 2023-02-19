@@ -255,12 +255,13 @@ namespace GoogleFirstPage.Googletrends
                     dr["date_to"] = date_to;
                     dr["value"] = value;
                     dr["Volume"] = null;
-                    var myVolume = from p in GetSearchVolume(searchres) select p;
-                    var t = myVolume.FirstOrDefault();
-                    //foreach (string v in myVolume.)
-                    //{
-                        dr["Volume"] = t;
-                    //}
+                    List<string> myVolume = GetSearchVolume(searchres);
+                    //var myVolume = from p in GetSearchVolume(searchres) select p;
+                    //var t = myVolume.FirstOrDefault();
+                    foreach (string v in myVolume)
+                    {
+                        dr["Volume"] = v;
+                    }
                     dt1.Rows.Add(dr);
                 }
 
