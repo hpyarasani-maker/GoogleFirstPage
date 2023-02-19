@@ -236,14 +236,11 @@ namespace GoogleFirstPage.Googletrends
                 var date_to = "";
                 var value = "";
 
-                var year = "";
-                var month = "";
-                var volume = "";
+                //var year = "";
+                //var month = "";
+                //var volume = "";
 
-                JObject jo = JObject.Parse(searchres);
-                var tasks = from p in jo["tasks"] select p;
-                var res = tasks.FirstOrDefault()["result"];
-                var monthly = res.FirstOrDefault()["monthly_searches"];
+                
 
                 DataRow dr ;
                 foreach (var item in iot)
@@ -257,23 +254,17 @@ namespace GoogleFirstPage.Googletrends
                     dr["date_from"] = date_from;
                     dr["date_to"] = date_to;
                     dr["value"] = value;
-                    
+                    dr["Volume"] = null;
+                    var myVolume = from p in GetSearchVolume(searchres) select p;
+                    var t = myVolume.FirstOrDefault();
+                    //foreach (string v in myVolume.)
+                    //{
+                        dr["Volume"] = t;
+                    //}
                     dt1.Rows.Add(dr);
                 }
 
-                foreach (var mm in monthly)
-                {
-                    //ArrayList a1 = new ArrayList();
-                    dr = dt1.NewRow();
-                    
-                    year = mm["year"].Value<string>();
-                    month = mm["month"].Value<string>();
-                    volume = mm["search_volume"].Value<string>();
-
-                    dr["volume"] = volume;
-                    
-                    dt1.Rows.Add(dr);
-                }
+               
                 
                 if (dt1.Rows.Count > 0)
                 {
@@ -291,7 +282,20 @@ namespace GoogleFirstPage.Googletrends
                 throw ex;
             }
         }
-
+        public List<string> GetSearchVolume(string json)
+        {
+            List<string> myList = new List<string>();
+            JObject jo = JObject.Parse(searchres);
+            var tasks = from p in jo["tasks"] select p;
+            var res = tasks.FirstOrDefault()["result"];
+            var monthly = res.FirstOrDefault()["monthly_searches"];
+            foreach (var mm in monthly)
+            {
+                //ArrayList a1 = new ArrayList();
+                myList.Add(mm["search_volume"].Value<string>());
+            }
+            return myList;
+        }
 
         public void SaveBySubregion(JToken ibs, string kid, string seid)
         {
