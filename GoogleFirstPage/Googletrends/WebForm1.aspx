@@ -16,9 +16,6 @@
             <br />
             <br />
             <asp:GridView ID="grdsvm" runat="server">
-                <Columns>
-                    <asp:BoundField HeaderText="Date" DataField="date" ItemStyle-HorizontalAlign="Center" />
-                </Columns>
             </asp:GridView>
         </div>
     </form>
