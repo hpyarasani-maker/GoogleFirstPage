@@ -29,7 +29,7 @@ namespace GoogleFirstPage.Googletrends
             List<string> allDates = GetAllDates().ToList();
             List<string> volume = GetVolumeData().ToList();
             List<string> lDates = GetLastDates(allDates).ToList();
-            int i = 0;
+           
             foreach (var ad in allDates)
             {
                 dr = dt.NewRow();
