@@ -186,6 +186,7 @@
     <Content Include="GoogleClassicLinksCallbackUrl\Livesearch.aspx" />
     <Content Include="GoogleClassicLinks\Livesearch.aspx" />
     <Content Include="Googletrends\googletrendsdata.aspx" />
+    <Content Include="Googletrends\WebForm1.aspx" />
     <Content Include="images\calendarnew.png" />
     <Content Include="images\calender.png" />
     <Content Include="images\CSV.png" />
@@ -545,6 +546,13 @@
     </Compile>
     <Compile Include="Googletrends\googletrendsdata.aspx.designer.cs">
       <DependentUpon>googletrendsdata.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Googletrends\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Googletrends\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Internallinks\internallinks.aspx.cs">
       <DependentUpon>internallinks.aspx</DependentUpon>
