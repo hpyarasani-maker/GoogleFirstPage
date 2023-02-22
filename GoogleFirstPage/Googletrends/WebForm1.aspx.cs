@@ -22,12 +22,14 @@ namespace GoogleFirstPage.Googletrends
 
         protected void btnsvd_Click(object sender, EventArgs e)
         {
+            Dictionary<string, string> dict =  new Dictionary<string, string>();
             DataTable dt = new DataTable();
             dt.Columns.Add(new DataColumn("Date", typeof(string)));
             dt.Columns.Add(new DataColumn("Volume", typeof(string)));
             DataRow dr;
             List<string> allDates = GetAllDates().ToList();
             List<string> volume = GetVolumeData().ToList();
+            var resVolume = from v in volume select v;
             List<string> lDates = GetLastDates(allDates).ToList();
            
             foreach (var ad in allDates)
@@ -36,10 +38,13 @@ namespace GoogleFirstPage.Googletrends
                 dr["Date"] = ad.ToString();
                 foreach (var ld in lDates)
                 {
-                    foreach (var vol in volume)
+                    foreach (var vol in resVolume)
                     {
-                        if (ad.ToString() == ld.ToString())
-                            dr["Volume"] = vol.ToString();
+                        dict.Add(ld.ToString(),vol.ToString());
+                           
+                        //if (ad.ToString() == ld.ToString())
+                        foreach(KeyValuePair<string,string> volu in dict)
+                            dr["Volume"] = volu.Value;
                     }
                 }
                 dt.Rows.Add(dr);
