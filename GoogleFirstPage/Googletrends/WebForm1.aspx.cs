@@ -31,24 +31,46 @@ namespace GoogleFirstPage.Googletrends
             List<string> volume = GetVolumeData().ToList();
             var resVolume = from v in volume select v;
             List<string> lDates = GetLastDates(allDates).ToList();
-           
-            foreach (var ad in allDates)
+            Dictionary<List<string>, List<string>> res = GetDicVolumeData(lDates,volume);
+
+            foreach (KeyValuePair<List<string>, List<string>> a in res)
             {
                 dr = dt.NewRow();
-                dr["Date"] = ad.ToString();
-                foreach (var ld in lDates)
-                {
-                    foreach (var vol in resVolume)
-                    {
-                        dict.Add(ld.ToString(),vol.ToString());
-                           
-                        //if (ad.ToString() == ld.ToString())
-                        foreach(KeyValuePair<string,string> volu in dict)
-                            dr["Volume"] = volu.Value;
-                    }
-                }
+                dr["Date"] = a.Key;
+                dr["Volume"] = a.Value;
                 dt.Rows.Add(dr);
             }
+
+            //dr = dt.NewRow();
+            //dr["Date"] = res.Keys;
+            //dr["Volume"] = res.Values;
+            //dt.Rows.Add(dr);
+
+
+            //foreach (var ad in allDates)
+            //{
+            //    dr = dt.NewRow();
+            //    dr["Date"] = ad.ToString();
+
+            //    foreach(var r in res)
+            //    {
+            //        if(ad.ToString() == r.Key.ToString())
+            //        dr["Volume"] = r.Value;
+
+            //    }
+            //    //foreach (var ld in lDates)
+            //    //{
+            //    //    foreach (var vol in resVolume)
+            //    //    {
+            //    //        dict.Add(ld.ToString(),vol.ToString());
+
+            //    //        //if (ad.ToString() == ld.ToString())
+            //    //        foreach(KeyValuePair<string,string> volu in dict)
+            //    //            dr["Volume"] = volu.Value;
+            //    //    }
+            //    //}
+            //    dt.Rows.Add(dr);
+            //}
             grdsvm.DataSource = dt;
             grdsvm.DataBind();
         }
@@ -125,7 +147,20 @@ namespace GoogleFirstPage.Googletrends
           //dateitm = Items.ToString();
             return myList;
         }
+        public Dictionary<List<string>, List<string>> GetDicVolumeData(List<string> date, List<string> volume)
+        {
+            Dictionary<List<string>, List<string>> dict = new Dictionary<List<string>, List<string>>();
+            dict.Add(date, volume);
 
+            //foreach (KeyValuePair<List<string>,List<string>> d in dict)
+            //{
+            //    foreach (KeyValuePair<List<string>, List<string>> v in dict)
+            //    {
+            //        dict.Add(d.Key, v.Value);
+            //   }
+            //}
+            return dict;
+        }
 
         public List<string> GetVolumeData()
         {
@@ -144,6 +179,15 @@ namespace GoogleFirstPage.Googletrends
             li.Add("673000");
             li.Add("823000");
             return li.ToList();
+        }
+
+
+        public class UniqueDates
+        {
+            public string LDate { get; set; }
+
+            public string Volume { get; set; }
+
         }
 
     }

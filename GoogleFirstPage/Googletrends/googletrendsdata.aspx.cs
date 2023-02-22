@@ -290,14 +290,14 @@ namespace GoogleFirstPage.Googletrends
             var tasks = from p in jo["tasks"] select p;
             var res = tasks.FirstOrDefault()["result"];
             var monthly = res.FirstOrDefault()["monthly_searches"];
-            StringBuilder sb = new StringBuilder();
+            //StringBuilder sb = new StringBuilder();
             foreach (var mm in monthly)
             {
                 //ArrayList a1 = new ArrayList();
                 myList.Add(mm["search_volume"].Value<string>());
-                sb.Append(mm["search_volume"].Value<string>() + Environment.NewLine);
+                //sb.Append(mm["search_volume"].Value<string>() + Environment.NewLine);
             }
-            File.WriteAllText(@"C:\inetpub\wwwroot\html\volume" + ".txt", sb.ToString(), Encoding.UTF8);
+            //File.WriteAllText(@"C:\inetpub\wwwroot\html\volume" + ".txt", sb.ToString(), Encoding.UTF8);
             return myList;
         }
 
