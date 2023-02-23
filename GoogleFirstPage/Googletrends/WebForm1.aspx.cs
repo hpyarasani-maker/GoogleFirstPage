@@ -36,7 +36,7 @@ namespace GoogleFirstPage.Googletrends
             Dictionary<string, string> dict = new Dictionary<string, string>();
             DataTable dt = new DataTable();
             dt.Columns.Add(new DataColumn("AllDates", typeof(string)));
-            dt.Columns.Add(new DataColumn("Date", typeof(string)));
+            //dt.Columns.Add(new DataColumn("Date", typeof(string)));
             dt.Columns.Add(new DataColumn("Volume", typeof(string)));
             DataRow dr;
             allDates = GetAllDates().ToList();
@@ -60,7 +60,7 @@ namespace GoogleFirstPage.Googletrends
                         dr["AllDates"] = ad;
                         if (ad.ToString() == lastmdate.ToString())
                         {
-                            dr["Date"] = lastmdate;
+                            //dr["Date"] = lastmdate;
                             dr["Volume"] = volumedata;
                         }
                     }
