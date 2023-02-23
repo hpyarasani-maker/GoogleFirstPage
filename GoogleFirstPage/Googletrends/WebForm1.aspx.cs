@@ -20,7 +20,7 @@ namespace GoogleFirstPage.Googletrends
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         public Dictionary<List<string>, List<string>> GetDicVolumeData(List<string> date, List<string> volume)
@@ -35,6 +35,7 @@ namespace GoogleFirstPage.Googletrends
         {
             Dictionary<string, string> dict = new Dictionary<string, string>();
             DataTable dt = new DataTable();
+            dt.Columns.Add(new DataColumn("AllDates", typeof(string)));
             dt.Columns.Add(new DataColumn("Date", typeof(string)));
             dt.Columns.Add(new DataColumn("Volume", typeof(string)));
             DataRow dr;
@@ -44,20 +45,23 @@ namespace GoogleFirstPage.Googletrends
             lDates = GetLastDates(allDates).ToList();
             Dictionary<List<string>, List<string>> res = GetDicVolumeData(lDates, volume);
             dr = dt.NewRow();
-            foreach (KeyValuePair<List<string>, List<string>> a in res.ToList())
-            {
-                string lastmdate = "";
-                string volumedata = "";
-                for (int i = 0; i < lDates.Count; i++)
+            
+                foreach (KeyValuePair<List<string>, List<string>> a in res.ToList())
                 {
-                    lastmdate = a.Key[i];
-                    volumedata = a.Value[i];
-                    dr = dt.NewRow();
-                    dr["Date"] = lastmdate;
-                    dr["Volume"] = volumedata;
-                    dt.Rows.Add(dr);
+                    string lastmdate = "";
+                    string volumedata = "";
+                    for (int i = 0; i < lDates.Count; i++)
+                    {
+                        lastmdate = a.Key[i];
+                        volumedata = a.Value[i];
+                        dr = dt.NewRow();
+                        dr["AllDates"] = ad;
+                        dr["Date"] = lastmdate;
+                        dr["Volume"] = volumedata;
+                        dt.Rows.Add(dr);
+                    }
                 }
-            }
+            
             //dr = dt.NewRow();
             //dr["Date"] = res.Keys;
             //dr["Volume"] = res.Values;
@@ -146,6 +150,7 @@ namespace GoogleFirstPage.Googletrends
             mydate.Add("2023-02-04");
             mydate.Add("2023-02-11");
             mydate.Add("2023-02-21");
+            mydate.Add("2023-02-23");
             return mydate;
         }
         public List<string> GetLastDates(List<string> mydate1)
@@ -170,9 +175,9 @@ namespace GoogleFirstPage.Googletrends
         {
             
             List<string> li = new List<string>();
+            li.Add("673000");
             li.Add("823000");
-            li.Add("673000");
-            li.Add("673000");
+            li.Add("823000");
             li.Add("673000");
             li.Add("673000");
             li.Add("823000");
@@ -182,10 +187,17 @@ namespace GoogleFirstPage.Googletrends
             li.Add("823000");
             li.Add("823000");
             li.Add("673000");
-            //li.Add("823000");
+            li.Add(GetNumberofDays(int.Parse(li[0])));
             //string val = li[0];
             return li.ToList();
             
+        }
+
+        public string GetNumberofDays(int vm)
+        {
+            
+            int d = vm/DateTime.DaysInMonth(DateTime.Now.Year,DateTime.Now.Month)*DateTime.Now.Day;
+            return d.ToString();
         }
 
 
