@@ -13,34 +13,51 @@ namespace GoogleFirstPage.Googletrends
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        
-        
+        List<string> allDates;
+        List<string> volume;
+        List<string> lDates;
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
+
+        public Dictionary<List<string>, List<string>> GetDicVolumeData(List<string> date, List<string> volume)
+        {
+            Dictionary<List<string>, List<string>> dict = new Dictionary<List<string>, List<string>>();
+            dict.Add(date, volume);
+            return dict;
+        }
+
 
         protected void btnsvd_Click(object sender, EventArgs e)
         {
-            Dictionary<string, string> dict =  new Dictionary<string, string>();
+            Dictionary<string, string> dict = new Dictionary<string, string>();
             DataTable dt = new DataTable();
             dt.Columns.Add(new DataColumn("Date", typeof(string)));
             dt.Columns.Add(new DataColumn("Volume", typeof(string)));
             DataRow dr;
-            List<string> allDates = GetAllDates().ToList();
-            List<string> volume = GetVolumeData().ToList();
+            allDates = GetAllDates().ToList();
+            volume = GetVolumeData().ToList();
             var resVolume = from v in volume select v;
-            List<string> lDates = GetLastDates(allDates).ToList();
-            Dictionary<List<string>, List<string>> res = GetDicVolumeData(lDates,volume);
-
-            foreach (KeyValuePair<List<string>, List<string>> a in res)
+            lDates = GetLastDates(allDates).ToList();
+            Dictionary<List<string>, List<string>> res = GetDicVolumeData(lDates, volume);
+            dr = dt.NewRow();
+            foreach (KeyValuePair<List<string>, List<string>> a in res.ToList())
             {
-                dr = dt.NewRow();
-                dr["Date"] = a.Key;
-                dr["Volume"] = a.Value;
-                dt.Rows.Add(dr);
+                string lastmdate = "";
+                string volumedata = "";
+                for (int i = 0; i < lDates.Count; i++)
+                {
+                    lastmdate = a.Key[i];
+                    volumedata = a.Value[i];
+                    dr = dt.NewRow();
+                    dr["Date"] = lastmdate;
+                    dr["Volume"] = volumedata;
+                    dt.Rows.Add(dr);
+                }
             }
-
             //dr = dt.NewRow();
             //dr["Date"] = res.Keys;
             //dr["Volume"] = res.Values;
@@ -144,27 +161,15 @@ namespace GoogleFirstPage.Googletrends
                 //Console.WriteLine(items.ToString("yyyy-MM-dd"));
                 myList.Add(items.ToString("yyyy-MM-dd"));
             }
-          //dateitm = Items.ToString();
+            //dateitm = Items.ToString();
             return myList;
         }
-        public Dictionary<List<string>, List<string>> GetDicVolumeData(List<string> date, List<string> volume)
-        {
-            Dictionary<List<string>, List<string>> dict = new Dictionary<List<string>, List<string>>();
-            dict.Add(date, volume);
-
-            //foreach (KeyValuePair<List<string>,List<string>> d in dict)
-            //{
-            //    foreach (KeyValuePair<List<string>, List<string>> v in dict)
-            //    {
-            //        dict.Add(d.Key, v.Value);
-            //   }
-            //}
-            return dict;
-        }
+       
 
         public List<string> GetVolumeData()
         {
-            var li = new List<string>();
+            
+            List<string> li = new List<string>();
             li.Add("823000");
             li.Add("673000");
             li.Add("673000");
@@ -177,8 +182,10 @@ namespace GoogleFirstPage.Googletrends
             li.Add("823000");
             li.Add("823000");
             li.Add("673000");
-            li.Add("823000");
+            //li.Add("823000");
+            //string val = li[0];
             return li.ToList();
+            
         }
 
 
