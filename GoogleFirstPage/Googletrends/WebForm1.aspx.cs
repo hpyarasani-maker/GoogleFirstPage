@@ -55,7 +55,7 @@ namespace GoogleFirstPage.Googletrends
                         lastmdate = a.Key[i];
                         volumedata = a.Value[i];
                         dr = dt.NewRow();
-                        dr["AllDates"] = ad;
+                       
                         dr["Date"] = lastmdate;
                         dr["Volume"] = volumedata;
                         dt.Rows.Add(dr);
