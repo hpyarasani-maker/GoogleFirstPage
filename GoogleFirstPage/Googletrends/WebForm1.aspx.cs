@@ -44,8 +44,10 @@ namespace GoogleFirstPage.Googletrends
             var resVolume = from v in volume select v;
             lDates = GetLastDates(allDates).ToList();
             Dictionary<List<string>, List<string>> res = GetDicVolumeData(lDates, volume);
-            dr = dt.NewRow();
             
+            foreach (var ad in allDates)
+            {
+                dr = dt.NewRow();
                 foreach (KeyValuePair<List<string>, List<string>> a in res.ToList())
                 {
                     string lastmdate = "";
@@ -54,13 +56,17 @@ namespace GoogleFirstPage.Googletrends
                     {
                         lastmdate = a.Key[i];
                         volumedata = a.Value[i];
-                        dr = dt.NewRow();
-                       
-                        dr["Date"] = lastmdate;
-                        dr["Volume"] = volumedata;
-                        dt.Rows.Add(dr);
+                        
+                        dr["AllDates"] = ad;
+                        if (ad.ToString() == lastmdate.ToString())
+                        {
+                            dr["Date"] = lastmdate;
+                            dr["Volume"] = volumedata;
+                        }
                     }
                 }
+                dt.Rows.Add(dr);
+            }
             
             //dr = dt.NewRow();
             //dr["Date"] = res.Keys;
