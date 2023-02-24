@@ -24,6 +24,10 @@ namespace GoogleFirstPage.Googletrends
         //string volume = string.Empty;
         string volumedata = string.Empty;
         string searchres = string.Empty;
+        List<string> allDates;
+        List<string> volume;
+        List<string> lDates;
+        List<string> myVolume;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -218,34 +222,54 @@ namespace GoogleFirstPage.Googletrends
             DateTime tsDate = DateTimeOffset.FromUnixTimeSeconds(timestamp).DateTime;
             return tsDate.ToString();
         }
-        
+
         public void SaveOverTime(JToken iot, string kid, string seid)
         {
             try
             {
                 ArrayList a = new ArrayList();
                 DataTable dt1 = new DataTable();
-     
+
                 dt1.Columns.Add(new DataColumn("date_from", typeof(string)));
                 dt1.Columns.Add(new DataColumn("date_to", typeof(string)));
                 dt1.Columns.Add(new DataColumn("value", typeof(string)));
                 dt1.Columns.Add(new DataColumn("Volume", typeof(string)));
 
-
                 var date_from = "";
                 var date_to = "";
                 var value = "";
+                DataRow dr;
 
-                //var year = "";
-                //var month = "";
-                //var volume = "";
+                allDates = GetAlldates(iot);
+                lDates = GetLastDates(allDates).ToList();
+                myVolume = GetSearchVolume(searchres);
 
-                
+                Dictionary<List<string>, List<string>> res = GetDicVolumeData(lDates, myVolume);
+                //foreach (var ad in allDates)
+                //{
+                //    dr = dt1.NewRow();
+                //    foreach (KeyValuePair<List<string>, List<string>> x in res.ToList())
+                //    {
+                //        string lastmdate = "";
+                //        string volumedata = "";
+                //        for (int i = 0; i < lDates.Count; i++)
+                //        {
+                //            lastmdate = x.Key[i];
+                //            volumedata = x.Value[i];
 
-                DataRow dr ;
+                //            dr["AllDates"] = ad;
+                //            if (ad.ToString() == lastmdate.ToString())
+                //            {
+                //                //dr["Date"] = lastmdate;
+                //                dr["Volume"] = volumedata;
+                //            }
+                //        }
+                //    }
+                //    dt1.Rows.Add(dr);
+
+
                 foreach (var item in iot)
                 {
-                    
                     dr = dt1.NewRow();
 
                     date_from = item["date_from"].Value<string>();
@@ -255,18 +279,32 @@ namespace GoogleFirstPage.Googletrends
                     dr["date_to"] = date_to;
                     dr["value"] = value;
                     dr["Volume"] = null;
-                    List<string> myVolume = GetSearchVolume(searchres);
-                    //var myVolume = from p in GetSearchVolume(searchres) select p;
-                    //var t = myVolume.FirstOrDefault();
-                    foreach (string v in myVolume)
+
+                    foreach (var ad in allDates)
                     {
-                        dr["Volume"] = v;
+                        //dr = dt1.NewRow();
+                        foreach (KeyValuePair<List<string>, List<string>> x in res.ToList())
+                        {
+                            string lastmdate = "";
+                            string volumedata = "";
+
+                            for (int i = 0; i < lDates.Count; i++)
+                            {
+                                lastmdate = x.Key[i];
+                                volumedata = x.Value[i];
+                            
+                                //dr["AllDates"] = ad;
+                                if (ad.ToString() == lastmdate.ToString())
+                                {
+                                    //dr["Date"] = lastmdate;
+                                    dr["Volume"] = volumedata;
+                                }
+                            }
+                        }
                     }
                     dt1.Rows.Add(dr);
                 }
 
-               
-                
                 if (dt1.Rows.Count > 0)
                 {
                     gvinterestot.DataSource = dt1;
@@ -290,16 +328,55 @@ namespace GoogleFirstPage.Googletrends
             var tasks = from p in jo["tasks"] select p;
             var res = tasks.FirstOrDefault()["result"];
             var monthly = res.FirstOrDefault()["monthly_searches"];
-            //StringBuilder sb = new StringBuilder();
             foreach (var mm in monthly)
             {
-                //ArrayList a1 = new ArrayList();
                 myList.Add(mm["search_volume"].Value<string>());
-                //sb.Append(mm["search_volume"].Value<string>() + Environment.NewLine);
             }
-            //File.WriteAllText(@"C:\inetpub\wwwroot\html\volume" + ".txt", sb.ToString(), Encoding.UTF8);
+            myList.Add(GetNumberofDays(int.Parse(myList[0])));
             return myList;
         }
+
+        public List<string> GetAlldates(JToken jt)
+        {
+            List<string> dts = new List<string>();
+
+            foreach (var item in jt)
+            {
+                //dts.Add(item["date_from"].Value<string>());
+                dts.Add(item["date_to"].Value<string>());
+            }
+            return dts;
+        }
+
+        public Dictionary<List<string>, List<string>> GetDicVolumeData(List<string> date, List<string> volume)
+        {
+            Dictionary<List<string>, List<string>> dict = new Dictionary<List<string>, List<string>>();
+            dict.Add(date, volume);
+            return dict;
+        }
+
+        public List<string> GetLastDates(List<string> mydate1)
+        {
+            List<string> myList = new List<string>();
+            List<DateTime> dates = mydate1.Select(date => DateTime.Parse(date)).ToList();
+            dates.Sort();
+
+            var groupdates = dates.GroupBy(x => new { MatchDates = x.Month + "-" + x.Year }).Select(x => x.Max(s => s.Date));
+
+            foreach (var items in groupdates)
+            {
+                myList.Add(items.ToString("yyyy-MM-dd"));
+            }
+            return myList;
+        }
+
+
+        public string GetNumberofDays(int vm)
+        {
+            int d = vm / DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month) * DateTime.Now.Day;
+            return d.ToString();
+        }
+
 
         public void SaveBySubregion(JToken ibs, string kid, string seid)
         {
@@ -545,7 +622,7 @@ namespace GoogleFirstPage.Googletrends
             //        string curDate = DateTime.Now.ToString("yyyy-MM-dd");
             //        int result = DateTime.Compare(dtRow, DateTime.Parse(curDate));
 
-                    
+
             //        if (result < 0)
             //        {
             //            e.Row.Cells[1].BackColor = Color.Red;
