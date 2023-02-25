@@ -280,8 +280,7 @@ namespace GoogleFirstPage.Googletrends
                     dr["value"] = value;
                     dr["Volume"] = null;
 
-                    foreach (var ad in allDates)
-                    {
+                   
                         //dr = dt1.NewRow();
                         foreach (KeyValuePair<List<string>, List<string>> x in res.ToList())
                         {
@@ -294,14 +293,14 @@ namespace GoogleFirstPage.Googletrends
                                 volumedata = x.Value[i];
                             
                                 //dr["AllDates"] = ad;
-                                if (ad.ToString() == lastmdate.ToString())
+                                if (date_from == lastmdate.ToString())
                                 {
                                     //dr["Date"] = lastmdate;
                                     dr["Volume"] = volumedata;
                                 }
                             }
                         }
-                    }
+                    
                     dt1.Rows.Add(dr);
                 }
 
@@ -343,7 +342,7 @@ namespace GoogleFirstPage.Googletrends
             foreach (var item in jt)
             {
                 //dts.Add(item["date_from"].Value<string>());
-                dts.Add(item["date_to"].Value<string>());
+                dts.Add(item["date_from"].Value<string>());
             }
             return dts;
         }
