@@ -232,8 +232,8 @@ namespace GoogleFirstPage.Googletrends
 
                 dt1.Columns.Add(new DataColumn("date_from", typeof(string)));
                 dt1.Columns.Add(new DataColumn("date_to", typeof(string)));
-                dt1.Columns.Add(new DataColumn("value", typeof(string)));
                 dt1.Columns.Add(new DataColumn("MontlyVolume", typeof(string)));
+                dt1.Columns.Add(new DataColumn("value", typeof(string)));
 
                 var date_from = "";
                 var date_to = "";
@@ -277,7 +277,6 @@ namespace GoogleFirstPage.Googletrends
                     value = item["values"][0].Value<string>();
                     dr["date_from"] = date_from;
                     dr["date_to"] = date_to;
-                    dr["value"] = value;
                     dr["MontlyVolume"] = null;
 
                    
@@ -298,9 +297,10 @@ namespace GoogleFirstPage.Googletrends
                                     //dr["Date"] = lastmdate;
                                     dr["MontlyVolume"] = volumedata;
                                 }
-                            }
+                                
                         }
-                    
+                        }
+                    dr["value"] = value;
                     dt1.Rows.Add(dr);
                 }
 
