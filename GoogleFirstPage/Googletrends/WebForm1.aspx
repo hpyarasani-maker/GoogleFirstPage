@@ -15,7 +15,7 @@
             <br />
             <br />
             <br />
-            <asp:GridView ID="grdsvm" runat="server">
+            <asp:GridView ID="grdsvm" runat="server" ShowFooter="true">
             </asp:GridView>
         </div>
     </form>

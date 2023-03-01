@@ -38,13 +38,15 @@ namespace GoogleFirstPage.Googletrends
             dt.Columns.Add(new DataColumn("AllDates", typeof(string)));
             //dt.Columns.Add(new DataColumn("Date", typeof(string)));
             dt.Columns.Add(new DataColumn("Volume", typeof(string)));
+            //dt.Columns.Add(new DataColumn("Total", typeof(string)));
             DataRow dr;
             allDates = GetAllDates().ToList();
             volume = GetVolumeData().ToList();
             var resVolume = from v in volume select v;
             lDates = GetLastDates(allDates).ToList();
             Dictionary<List<string>, List<string>> res = GetDicVolumeData(lDates, volume);
-            
+            //int total = 0;
+            int total = volume.Sum(x => Convert.ToInt32(x));
             foreach (var ad in allDates)
             {
                 dr = dt.NewRow();
@@ -62,12 +64,18 @@ namespace GoogleFirstPage.Googletrends
                         {
                             //dr["Date"] = lastmdate;
                             dr["Volume"] = volumedata;
+
+                            //for (int z = 0; z < lDates.Count; z++)
+                            //{
+                            //    total = dt.AsEnumerable().Sum(row => row.Field<Int32>(volumedata));
+                            //    //dr["Total"] = total.ToString();
+                            //}
                         }
                     }
                 }
                 dt.Rows.Add(dr);
             }
-            
+
             //dr = dt.NewRow();
             //dr["Date"] = res.Keys;
             //dr["Volume"] = res.Values;
@@ -100,6 +108,11 @@ namespace GoogleFirstPage.Googletrends
             //}
             grdsvm.DataSource = dt;
             grdsvm.DataBind();
+
+            //int total = 0; 
+            grdsvm.FooterRow.Cells[0].Text = "Total Volume";
+            grdsvm.FooterRow.Cells[1].Text = total.ToString();
+           
         }
         public List<string> GetAllDates()
         {

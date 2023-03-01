@@ -243,7 +243,7 @@ namespace GoogleFirstPage.Googletrends
                 allDates = GetAlldates(iot);
                 lDates = GetLastDates(allDates).ToList();
                 myVolume = GetSearchVolume(searchres);
-
+                int total = myVolume.Sum(x => Convert.ToInt32(x));
                 Dictionary<List<string>, List<string>> res = GetDicVolumeData(lDates, myVolume);
                 //foreach (var ad in allDates)
                 //{
@@ -307,6 +307,10 @@ namespace GoogleFirstPage.Googletrends
                 {
                     gvinterestot.DataSource = dt1;
                     gvinterestot.DataBind();
+
+                    gvinterestot.FooterRow.Cells[1].Text = "Year Total Volume";
+                    gvinterestot.FooterRow.Cells[1].Font.Bold = true;
+                    gvinterestot.FooterRow.Cells[2].Text = total.ToString();
                 }
                 else
                 {
