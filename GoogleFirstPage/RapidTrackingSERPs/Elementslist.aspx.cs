@@ -44,8 +44,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                     da = new SqlDataAdapter(cmd);
                     ds = new DataSet();
                     da.Fill(ds);
-                    gvelements.DataSource = ds;
-                    gvelements.DataBind();
+                    //gvelements.DataSource = ds;
+                    //gvelements.DataBind();
                     if (ds.Tables[0].Rows.Count > 0)
                     {
                         gvelements.DataSource = ds;
