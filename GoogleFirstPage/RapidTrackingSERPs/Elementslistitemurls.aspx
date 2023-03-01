@@ -324,7 +324,7 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Video box (Item Urls)">
+                        <asp:TemplateField HeaderText="Video card (Item Urls)">
                             <ItemTemplate>
                                 <div style="width: 75px;">
                                     <%# Eval("videoCard","{0:N0}") %>
