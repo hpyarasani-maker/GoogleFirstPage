@@ -111,31 +111,6 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                     //if (clscnt >= 1)
                                     //    dt.Rows.Add("", "", "");
                                     DataRow row11 = dt.NewRow();
-                                    //dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
-                                    //foreach (XmlNode nodee in node)
-                                    //{
-                                    //    //dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
-                                    //    dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + "|" + "Price= " + nodee.Attributes[2].Value +"|" + "Site=" + nodee.Attributes[3].Value);
-
-                                    //}
-                                    //dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
-
-
-                                    /*dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
-                                    foreach (XmlNode nodee in node)
-                                    {
-                                        if (node.Attributes[0].Value.ToString() == "popularProducts")
-                                        {
-                                            //dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
-                                            dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + " --- " + " Price = " + nodee.Attributes[2].Value + " --- " + " Site = " + nodee.Attributes[3].Value);
-                                        }
-                                        else
-                                        {
-                                            dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
-                                        }
-                                    }
-                                    dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");*/
-
                                     if (node.Attributes[0].Value.ToString() != "hotelPack")
                                     {
                                         dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
@@ -143,7 +118,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                         {
                                             if (node.Attributes[0].Value.ToString() == "popularProducts")
                                             {
-                                                dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + " --- " + " Price = " + nodee.Attributes[2].Value + " --- " + " Site = " + nodee.Attributes[3].Value);
+                                                dt.Rows.Add("", nodee.Attributes[0].Value, " Title = " + nodee.Attributes[1].Value + " --- " + " Price = " + nodee.Attributes[2].Value + " --- " + " Site = " + nodee.Attributes[3].Value);
                                             }
                                             else
                                             {
@@ -166,22 +141,20 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                                 //dt.Rows.Add("", nodee.Attributes[0].Value, " Rating= " + nodee.Attributes[1].Value + " --- " + " TotalReviews = " + nodee.Attributes[2].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[3].Value + " --- " + " Title = " + nodee.Attributes[4].Value);
                                                 if (nodee.Attributes[1].Name == "price")
                                                 {
-                                                    dt.Rows.Add("", nodee.Attributes[0].Value, " Price= " + nodee.Attributes[1].Value + " --- " + " Pricevalue = " + nodee.Attributes[2].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[3].Value + " --- " + " Title = " + nodee.Attributes[4].Value);
+                                                    dt.Rows.Add("", nodee.Attributes[0].Value, " Price = " + nodee.Attributes[1].Value + " --- " + " Pricevalue = " + nodee.Attributes[2].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[3].Value + " --- " + " Title = " + nodee.Attributes[4].Value);
                                                 }
                                                 else if (nodee.Attributes[1].Name != "price")
                                                 {
-                                                    dt.Rows.Add("", nodee.Attributes[0].Value, " Rating= " + nodee.Attributes[1].Value + " --- " + " TotalReviews = " + nodee.Attributes[2].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[3].Value + " --- " + " Title = " + nodee.Attributes[4].Value);
+                                                    dt.Rows.Add("", nodee.Attributes[0].Value, " Rating = " + nodee.Attributes[1].Value + " --- " + " TotalReviews = " + nodee.Attributes[2].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[3].Value + " --- " + " Title = " + nodee.Attributes[4].Value);
                                                 }
                                             }
                                             else
                                             {
-                                                dt.Rows.Add("", nodee.Attributes[0].Value, " Price= " + nodee.Attributes[1].Value + " --- " + " PriceValue = " + nodee.Attributes[2].Value + " --- " + " Rating = " + nodee.Attributes[3].Value + " --- " + " TotalReviews = " + nodee.Attributes[4].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[5].Value + " --- " + " Title = " + nodee.Attributes[6].Value);
+                                                dt.Rows.Add("", nodee.Attributes[0].Value, " Price = " + nodee.Attributes[1].Value + " --- " + " PriceValue = " + nodee.Attributes[2].Value + " --- " + " Rating = " + nodee.Attributes[3].Value + " --- " + " TotalReviews = " + nodee.Attributes[4].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[5].Value + " --- " + " Title = " + nodee.Attributes[6].Value);
                                             }
                                         }
                                         dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                     }
-
-
                                     clscnt = 0;
                                     //dt.Rows.Add("", "", "");
                                 }
@@ -217,22 +190,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                     //    dt.Rows.Add("", "", "");
                                     //if (clscnt >= 1)
                                     //    dt.Rows.Add("", "", "");
-                                    /*DataRow row11 = dt.NewRow();
-                                    dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
-                                    foreach (XmlNode nodee in node)
-                                    {
-                                        if (node.Attributes[0].Value.ToString() == "popularProducts")
-                                        {
-                                            //dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
-                                            dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + " --- " + " Price = " + nodee.Attributes[2].Value + " --- " + " Site = " + nodee.Attributes[3].Value);
-                                        }
-                                        else
-                                        {
-                                            dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
-                                        }
-                                    }
-                                    dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");*/
-
+                                    DataRow row11 = dt.NewRow();
                                     if (node.Attributes[0].Value.ToString() != "hotelPack")
                                     {
                                         dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
@@ -240,7 +198,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                         {
                                             if (node.Attributes[0].Value.ToString() == "popularProducts")
                                             {
-                                                dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + " --- " + " Price = " + nodee.Attributes[2].Value + " --- " + " Site = " + nodee.Attributes[3].Value);
+                                                dt.Rows.Add("", nodee.Attributes[0].Value, " Title = " + nodee.Attributes[1].Value + " --- " + " Price = " + nodee.Attributes[2].Value + " --- " + " Site = " + nodee.Attributes[3].Value);
                                             }
                                             else
                                             {
@@ -263,11 +221,11 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                                 //dt.Rows.Add("", nodee.Attributes[0].Value, " Rating= " + nodee.Attributes[1].Value + " --- " + " TotalReviews = " + nodee.Attributes[2].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[3].Value + " --- " + " Title = " + nodee.Attributes[4].Value);
                                                 if (nodee.Attributes[1].Name == "price")
                                                 {
-                                                    dt.Rows.Add("", nodee.Attributes[0].Value, " Price= " + nodee.Attributes[1].Value + " --- " + " Pricevalue = " + nodee.Attributes[2].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[3].Value + " --- " + " Title = " + nodee.Attributes[4].Value);
+                                                    dt.Rows.Add("", nodee.Attributes[0].Value, " Price = " + nodee.Attributes[1].Value + " --- " + " Pricevalue = " + nodee.Attributes[2].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[3].Value + " --- " + " Title = " + nodee.Attributes[4].Value);
                                                 }
                                                 else if (nodee.Attributes[1].Name != "price")
                                                 {
-                                                    dt.Rows.Add("", nodee.Attributes[0].Value, " Rating= " + nodee.Attributes[1].Value + " --- " + " TotalReviews = " + nodee.Attributes[2].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[3].Value + " --- " + " Title = " + nodee.Attributes[4].Value);
+                                                    dt.Rows.Add("", nodee.Attributes[0].Value, " Rating = " + nodee.Attributes[1].Value + " --- " + " TotalReviews = " + nodee.Attributes[2].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[3].Value + " --- " + " Title = " + nodee.Attributes[4].Value);
                                                 }
                                             }
                                             else
@@ -305,8 +263,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             dt.Columns.Add("URL");
             dt.Columns.Add("Title");
             dt.Columns.Add("Position");
-            dt.Columns.Add("Site");
-            dt.Columns.Add("Price");
+            //dt.Columns.Add("Site");
+            //dt.Columns.Add("Price");
             return dt;
         }
         private void SendToDatabase(int seid,string keyword,string jobid)
