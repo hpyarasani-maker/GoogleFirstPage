@@ -292,12 +292,11 @@ namespace GoogleFirstPage.Googletrends
                             volumedata = x.Value[i];
 
                             //dr["AllDates"] = ad;
-                            if (date_from == lastmdate.ToString())
+                            if (date_to == lastmdate.ToString())
                             {
                                 //dr["Date"] = lastmdate;
                                 dr["MontlyVolume"] = volumedata;
                             }
-
                         }
                     }
                     dr["value"] = value;
@@ -342,7 +341,7 @@ namespace GoogleFirstPage.Googletrends
             foreach (var item in jt)
             {
                 //dts.Add(item["date_from"].Value<string>());
-                dts.Add(item["date_from"].Value<string>());
+                dts.Add(item["date_to"].Value<string>());
             }
             return dts;
         }
