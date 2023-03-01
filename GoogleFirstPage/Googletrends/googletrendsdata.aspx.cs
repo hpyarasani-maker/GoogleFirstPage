@@ -308,7 +308,7 @@ namespace GoogleFirstPage.Googletrends
                     gvinterestot.DataSource = dt1;
                     gvinterestot.DataBind();
 
-                    gvinterestot.FooterRow.Cells[1].Text = "Year Total Volume";
+                    gvinterestot.FooterRow.Cells[1].Text = "Total Volume";
                     gvinterestot.FooterRow.Cells[1].Font.Bold = true;
                     gvinterestot.FooterRow.Cells[2].Text = total.ToString();
                 }
