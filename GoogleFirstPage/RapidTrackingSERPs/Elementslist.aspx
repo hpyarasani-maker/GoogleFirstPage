@@ -216,7 +216,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Carousel">
                             <ItemTemplate>
-                                <div style="width: 45px;">
+                                <div style="width: 48px;">
                                     <%# Eval("Carousel","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
