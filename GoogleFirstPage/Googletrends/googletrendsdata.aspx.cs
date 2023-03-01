@@ -279,27 +279,27 @@ namespace GoogleFirstPage.Googletrends
                     dr["date_to"] = date_to;
                     dr["MontlyVolume"] = null;
 
-                   
-                        //dr = dt1.NewRow();
-                        foreach (KeyValuePair<List<string>, List<string>> x in res.ToList())
-                        {
-                            string lastmdate = "";
-                            string volumedata = "";
 
-                            for (int i = 0; i < lDates.Count; i++)
+                    //dr = dt1.NewRow();
+                    foreach (KeyValuePair<List<string>, List<string>> x in res.ToList())
+                    {
+                        string lastmdate = "";
+                        string volumedata = "";
+
+                        for (int i = 0; i < lDates.Count; i++)
+                        {
+                            lastmdate = x.Key[i];
+                            volumedata = x.Value[i];
+
+                            //dr["AllDates"] = ad;
+                            if (date_from == lastmdate.ToString())
                             {
-                                lastmdate = x.Key[i];
-                                volumedata = x.Value[i];
-                            
-                                //dr["AllDates"] = ad;
-                                if (date_from == lastmdate.ToString())
-                                {
-                                    //dr["Date"] = lastmdate;
-                                    dr["MontlyVolume"] = volumedata;
-                                }
-                                
+                                //dr["Date"] = lastmdate;
+                                dr["MontlyVolume"] = volumedata;
+                            }
+
                         }
-                        }
+                    }
                     dr["value"] = value;
                     dt1.Rows.Add(dr);
                 }

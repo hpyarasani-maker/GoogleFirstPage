@@ -64,53 +64,114 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                     int Pos = 0;
                     int clscnt = 0;
                     int blkcnt = 0;
-                    foreach (XmlNode n in root)
+                    try
                     {
-                        foreach (XmlNode node in n)
+                        foreach (XmlNode n in root)
                         {
-                            if (node.Name != "block")
+                            foreach (XmlNode node in n)
                             {
-                                clscnt++;
-                                Pos = Pos + 1;
-                                dt.Rows.Add("", node.Attributes[0].Value, node.Attributes[1].Value, Pos);
-                                //dt.Rows.Add("<CL/>", node.Attributes[0].Value, node.Attributes[1].Value, Pos);
-                                blkcnt = 0;
-                            }
-                            else
-                            {
-                                blkcnt++;
-                                //if (dt.Rows.Count != 0 && blkcnt == 0)
-                                //    dt.Rows.Add("", "", "");
-                                //if (clscnt >= 1)
-                                //    dt.Rows.Add("", "", "");
-                                DataRow row11 = dt.NewRow();
-                                //dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
-                                //foreach (XmlNode nodee in node)
-                                //{
-                                //    dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
-                                //}
-                                //dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
-                                dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
-                                foreach (XmlNode nodee in node)
+                                if (node.Name != "block")
                                 {
-                                    if (node.Attributes[0].Value.ToString() == "popularProducts")
-                                    {
-                                        //dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
-                                        //dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + "|" + " Price= " + nodee.Attributes[2].Value + "|" + " Site=" + nodee.Attributes[3].Value);
-                                        dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + " --- " + " Price = " + nodee.Attributes[2].Value + " --- " + " Site = " + nodee.Attributes[3].Value);
-
-                                    }
-                                    else
-                                    {
-                                        dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
-                                    }
+                                    clscnt++;
+                                    Pos = Pos + 1;
+                                    dt.Rows.Add("", node.Attributes[0].Value, node.Attributes[1].Value, Pos);
+                                    //dt.Rows.Add("<CL/>", node.Attributes[0].Value, node.Attributes[1].Value, Pos);
+                                    blkcnt = 0;
                                 }
-                                dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
-                                clscnt = 0;
-                                //dt.Rows.Add("", "", "");
+                                else
+                                {
+                                    blkcnt++;
+                                    //if (dt.Rows.Count != 0 && blkcnt == 0)
+                                    //    dt.Rows.Add("", "", "");
+                                    //if (clscnt >= 1)
+                                    //    dt.Rows.Add("", "", "");
+                                    DataRow row11 = dt.NewRow();
+                                    //dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                    //foreach (XmlNode nodee in node)
+                                    //{
+                                    //    dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                    //}
+                                    //dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
+                                    /*dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                    foreach (XmlNode nodee in node)
+                                    {
+                                        if (node.Attributes[0].Value.ToString() == "popularProducts")
+                                        {
+                                            //dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                            //dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + "|" + " Price= " + nodee.Attributes[2].Value + "|" + " Site=" + nodee.Attributes[3].Value);
+                                            dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + " --- " + " Price = " + nodee.Attributes[2].Value + " --- " + " Site = " + nodee.Attributes[3].Value);
+                                        }
+                                        else if(node.Attributes[0].Value.ToString() != "popularProducts")
+                                        {
+                                            dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                        }
+                                        else if (node.Attributes[0].Value.ToString() == "hotelPack")
+                                        {
+                                            //dt.Rows.Add("", "", nodee.Attributes[0].Value + " --- " + " Price = " + nodee.Attributes[1].Value + " --- " + " PriceValue = " + nodee.Attributes[2].Value + " --- " + " rating = " + nodee.Attributes[3].Value + " --- " + " TotalReviews = " + nodee.Attributes[4].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[5].Value + " --- " + " Title = " + nodee.Attributes[6].Value);
+                                            dt.Rows.Add("", "", " Price = " + nodee.Attributes[1].Value + " --- " + " PriceValue = " + nodee.Attributes[2].Value + " --- " + " rating = " + nodee.Attributes[3].Value + " --- " + " TotalReviews = " + nodee.Attributes[4].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[5].Value + " --- " + " Title = " + nodee.Attributes[6].Value);
+                                        }
+                                        else
+                                        {
+                                            //dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                            dt.Rows.Add("", ""," Price = " + nodee.Attributes[1].Value + " --- " + " PriceValue = " + nodee.Attributes[2].Value + " --- " + " rating = " + nodee.Attributes[3].Value + " --- " + " TotalReviews = " + nodee.Attributes[4].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[5].Value + " --- " + " Title = " + nodee.Attributes[6].Value);
+                                        }
+                                    }
+                                    dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");*/
+
+                                    if (node.Attributes[0].Value.ToString() != "hotelPack")
+                                    {
+                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                        foreach (XmlNode nodee in node)
+                                        {
+                                            if (node.Attributes[0].Value.ToString() == "popularProducts")
+                                            {
+                                                dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + " --- " + " Price = " + nodee.Attributes[2].Value + " --- " + " Site = " + nodee.Attributes[3].Value);
+                                            }
+                                            else
+                                            {
+                                                dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                            }
+                                        }
+                                        dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
+                                    }
+                                    if (node.Attributes[0].Value.ToString() == "hotelPack")
+                                    {
+                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                        foreach (XmlNode nodee in node)
+                                        {
+                                            if (nodee.Attributes.Count == 3)
+                                            {
+                                                dt.Rows.Add("", nodee.Attributes[0].Value, " AdditionalInfo= " + nodee.Attributes[1].Value + " --- " + " Title = " + nodee.Attributes[2].Value);
+                                            }
+                                            else if (nodee.Attributes.Count == 5)
+                                            {
+                                                //dt.Rows.Add("", nodee.Attributes[0].Value, " Rating= " + nodee.Attributes[1].Value + " --- " + " TotalReviews = " + nodee.Attributes[2].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[3].Value + " --- " + " Title = " + nodee.Attributes[4].Value);
+                                                if (nodee.Attributes[1].Name == "price")
+                                                {
+                                                    dt.Rows.Add("", nodee.Attributes[0].Value, " Price= " + nodee.Attributes[1].Value + " --- " + " Pricevalue = " + nodee.Attributes[2].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[3].Value + " --- " + " Title = " + nodee.Attributes[4].Value);
+                                                }
+                                                else if(nodee.Attributes[1].Name != "price")
+                                                {
+                                                    dt.Rows.Add("", nodee.Attributes[0].Value, " Rating= " + nodee.Attributes[1].Value + " --- " + " TotalReviews = " + nodee.Attributes[2].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[3].Value + " --- " + " Title = " + nodee.Attributes[4].Value);
+                                                }
+                                            }
+                                            else
+                                            {
+                                                dt.Rows.Add("", nodee.Attributes[0].Value, " Price= " + nodee.Attributes[1].Value + " --- " + " PriceValue = " + nodee.Attributes[2].Value + " --- " + " Rating = " + nodee.Attributes[3].Value + " --- " + " TotalReviews = " + nodee.Attributes[4].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[5].Value + " --- " + " Title = " + nodee.Attributes[6].Value);
+                                            }
+                                        }
+                                        dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
+                                    }
+                                    clscnt = 0;
+                                    //dt.Rows.Add("", "", "");
+                                }
                             }
+                            resultscnt.Text = "" + Pos.ToString();
                         }
-                        resultscnt.Text = "" + Pos.ToString();
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
                     }
                 }
                 else
@@ -121,52 +182,104 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                     int Pos = 0;
                     int clscnt = 0;
                     int blkcnt = 0;
-                    foreach (XmlNode n in root)
+                    try
                     {
-                        foreach (XmlNode node in n)
+                        foreach (XmlNode n in root)
                         {
-                            if (node.Name != "block")
+                            foreach (XmlNode node in n)
                             {
-                                clscnt++;
-                                Pos = Pos + 1;
-                                dt.Rows.Add("", node.Attributes[0].Value, node.Attributes[1].Value, Pos);
-                                blkcnt = 0;
-                            }
-                            else
-                            {
-                                blkcnt++;
-                                //if (dt.Rows.Count != 0 && blkcnt == 0)
-                                //    dt.Rows.Add("", "", "");
-                                //if (clscnt >= 1)
-                                //    dt.Rows.Add("", "", "");
-                                DataRow row11 = dt.NewRow();
-                                //dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
-                                //foreach (XmlNode nodee in node)
-                                //{
-                                //    dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
-                                //}
-                                //dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
-                                dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
-                                foreach (XmlNode nodee in node)
+                                if (node.Name != "block")
                                 {
-                                    if (node.Attributes[0].Value.ToString() == "popularProducts")
-                                    {
-                                        //dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
-                                        //dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + "|" + " Price= " + nodee.Attributes[2].Value + "|" + " Site=" + nodee.Attributes[3].Value);
-                                        dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + " --- " + " Price = " + nodee.Attributes[2].Value + " --- " + " Site = " + nodee.Attributes[3].Value);
-
-                                    }
-                                    else
-                                    {
-                                        dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
-                                    }
+                                    clscnt++;
+                                    Pos = Pos + 1;
+                                    dt.Rows.Add("", node.Attributes[0].Value, node.Attributes[1].Value, Pos);
+                                    blkcnt = 0;
                                 }
-                                dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
-                                clscnt = 0;
-                                //dt.Rows.Add("", "", "");
+                                else
+                                {
+                                    blkcnt++;
+                                    //if (dt.Rows.Count != 0 && blkcnt == 0)
+                                    //    dt.Rows.Add("", "", "");
+                                    //if (clscnt >= 1)
+                                    //    dt.Rows.Add("", "", "");
+                                    DataRow row11 = dt.NewRow();
+                                    //dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                    //foreach (XmlNode nodee in node)
+                                    //{
+                                    //    dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                    //}
+                                    //dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
+                                    /*dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                    foreach (XmlNode nodee in node)
+                                    {
+                                        if (node.Attributes[0].Value.ToString() == "popularProducts")
+                                        {
+                                            //dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                            //dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + "|" + " Price= " + nodee.Attributes[2].Value + "|" + " Site=" + nodee.Attributes[3].Value);
+                                            dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + " --- " + " Price = " + nodee.Attributes[2].Value + " --- " + " Site = " + nodee.Attributes[3].Value);
+
+                                        }
+                                        //if (node.Attributes[0].Value.ToString() == "hotelPack")
+                                        //{
+                                        //    dt.Rows.Add("", nodee.Attributes[6].Value, " Price = " + nodee.Attributes[0].Value + " --- " + " PriceValue = " + nodee.Attributes[1].Value + " --- " + " rating = " + nodee.Attributes[2].Value + " --- " + " TotalReviews = " + nodee.Attributes[3].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[4].Value + " --- " + " Title = " + nodee.Attributes[5].Value);
+                                        //}
+                                    }
+                                    dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");*/
+
+                                    if (node.Attributes[0].Value.ToString() != "hotelPack")
+                                    {
+                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                        foreach (XmlNode nodee in node)
+                                        {
+                                            if (node.Attributes[0].Value.ToString() == "popularProducts")
+                                            {
+                                                dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + " --- " + " Price = " + nodee.Attributes[2].Value + " --- " + " Site = " + nodee.Attributes[3].Value);
+                                            }
+                                            else
+                                            {
+                                                dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                            }
+                                        }
+                                        dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
+                                    }
+                                    if (node.Attributes[0].Value.ToString() == "hotelPack")
+                                    {
+                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                        foreach (XmlNode nodee in node)
+                                        {
+                                            if (nodee.Attributes.Count == 3)
+                                            {
+                                                dt.Rows.Add("", nodee.Attributes[0].Value, " AdditionalInfo= " + nodee.Attributes[1].Value + " --- " + " Title = " + nodee.Attributes[2].Value);
+                                            }
+                                            else if (nodee.Attributes.Count == 5)
+                                            {
+                                                //dt.Rows.Add("", nodee.Attributes[0].Value, " Rating= " + nodee.Attributes[1].Value + " --- " + " TotalReviews = " + nodee.Attributes[2].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[3].Value + " --- " + " Title = " + nodee.Attributes[4].Value);
+                                                if (nodee.Attributes[1].Name == "price")
+                                                {
+                                                    dt.Rows.Add("", nodee.Attributes[0].Value, " Price= " + nodee.Attributes[1].Value + " --- " + " Pricevalue = " + nodee.Attributes[2].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[3].Value + " --- " + " Title = " + nodee.Attributes[4].Value);
+                                                }
+                                                else if (nodee.Attributes[1].Name != "price")
+                                                {
+                                                    dt.Rows.Add("", nodee.Attributes[0].Value, " Rating= " + nodee.Attributes[1].Value + " --- " + " TotalReviews = " + nodee.Attributes[2].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[3].Value + " --- " + " Title = " + nodee.Attributes[4].Value);
+                                                }
+                                            }
+                                            else
+                                            {
+                                                dt.Rows.Add("", nodee.Attributes[0].Value, " Price= " + nodee.Attributes[1].Value + " --- " + " PriceValue = " + nodee.Attributes[2].Value + " --- " + " Rating = " + nodee.Attributes[3].Value + " --- " + " TotalReviews = " + nodee.Attributes[4].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[5].Value + " --- " + " Title = " + nodee.Attributes[6].Value);
+                                            }
+                                        }
+                                        dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
+                                    }
+                                    clscnt = 0;
+                                    //dt.Rows.Add("", "", "");
+                                }
                             }
+                            resultscnt.Text = "" + Pos.ToString();
                         }
-                        resultscnt.Text = "" + Pos.ToString();
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
                     }
                 }
                 gridviewjobid.DataSource = dt;

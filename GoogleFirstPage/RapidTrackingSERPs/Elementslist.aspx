@@ -228,6 +228,13 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Hotel Pack">
+                            <ItemTemplate>
+                                <div style="width: 50px;">
+                                    <%# Eval("hotelPack","{0:N0}") %>
+                                </div>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Images">
                             <ItemTemplate>
                                 <div style="width: 70px;">
