@@ -40,7 +40,7 @@ namespace GoogleFirstPage.Googletrends
             dt.Columns.Add(new DataColumn("Volume", typeof(string)));
             //dt.Columns.Add(new DataColumn("Total", typeof(string)));
             DataRow dr;
-            allDates = GetAllDates().ToList();
+            allDates = GetDateTo().ToList();
             volume = GetVolumeData().ToList();
             var resVolume = from v in volume select v;
             lDates = GetLastDates(allDates).ToList();
@@ -114,68 +114,127 @@ namespace GoogleFirstPage.Googletrends
             grdsvm.FooterRow.Cells[1].Text = total.ToString();
            
         }
-        public List<string> GetAllDates()
+     
+
+        public List<string> GetDateTo()
         {
-            List<string> mydate = new List<string>();
-            mydate.Add("2022-02-26");
-            mydate.Add("2022-03-05");
-            mydate.Add("2022-03-12");
-            mydate.Add("2022-03-19");
-            mydate.Add("2022-03-26");
-            mydate.Add("2022-04-02");
-            mydate.Add("2022-04-09");
-            mydate.Add("2022-04-16");
-            mydate.Add("2022-04-23");
-            mydate.Add("2022-04-30");
-            mydate.Add("2022-05-07");
-            mydate.Add("2022-05-14");
-            mydate.Add("2022-05-21");
-            mydate.Add("2022-05-28");
-            mydate.Add("2022-06-04");
-            mydate.Add("2022-06-11");
-            mydate.Add("2022-06-18");
-            mydate.Add("2022-06-25");
-            mydate.Add("2022-07-02");
-            mydate.Add("2022-07-09");
-            mydate.Add("2022-07-16");
-            mydate.Add("2022-07-23");
-            mydate.Add("2022-07-30");
-            mydate.Add("2022-08-06");
-            mydate.Add("2022-08-13");
-            mydate.Add("2022-08-20");
-            mydate.Add("2022-08-27");
-            mydate.Add("2022-09-03");
-            mydate.Add("2022-09-10");
-            mydate.Add("2022-09-17");
-            mydate.Add("2022-09-24");
-            mydate.Add("2022-10-01");
-            mydate.Add("2022-10-08");
-            mydate.Add("2022-10-15");
-            mydate.Add("2022-10-22");
-            mydate.Add("2022-10-29");
-            mydate.Add("2022-11-05");
-            mydate.Add("2022-11-12");
-            mydate.Add("2022-11-19");
-            mydate.Add("2022-11-26");
-            mydate.Add("2022-12-03");
-            mydate.Add("2022-12-10");
-            mydate.Add("2022-12-17");
-            mydate.Add("2022-12-24");
-            mydate.Add("2022-12-31");
-            mydate.Add("2023-01-07");
-            mydate.Add("2023-01-14");
-            mydate.Add("2023-01-21");
-            mydate.Add("2023-01-28");
-            mydate.Add("2023-02-04");
-            mydate.Add("2023-02-11");
-            mydate.Add("2023-02-21");
-            mydate.Add("2023-02-23");
-            return mydate;
+            List<string> datetoList = new List<string>();
+            datetoList.Add("2022-03-12");
+            datetoList.Add("2022-03-19");
+            datetoList.Add("2022-03-26");
+            datetoList.Add("2022-04-02");
+            datetoList.Add("2022-04-09");
+            datetoList.Add("2022-04-16");
+            datetoList.Add("2022-04-23");
+            datetoList.Add("2022-04-30");
+            datetoList.Add("2022-05-07");
+            datetoList.Add("2022-05-14");
+            datetoList.Add("2022-05-21");
+            datetoList.Add("2022-05-28");
+            datetoList.Add("2022-06-04");
+            datetoList.Add("2022-06-11");
+            datetoList.Add("2022-06-18");
+            datetoList.Add("2022-06-25");
+            datetoList.Add("2022-07-02");
+            datetoList.Add("2022-07-09");
+            datetoList.Add("2022-07-16");
+            datetoList.Add("2022-07-23");
+            datetoList.Add("2022-07-30");
+            datetoList.Add("2022-08-06");
+            datetoList.Add("2022-08-13");
+            datetoList.Add("2022-08-20");
+            datetoList.Add("2022-08-27");
+            datetoList.Add("2022-09-03");
+            datetoList.Add("2022-09-10");
+            datetoList.Add("2022-09-17");
+            datetoList.Add("2022-09-24");
+            datetoList.Add("2022-10-01");
+            datetoList.Add("2022-10-08");
+            datetoList.Add("2022-10-15");
+            datetoList.Add("2022-10-22");
+            datetoList.Add("2022-10-29");
+            datetoList.Add("2022-11-05");
+            datetoList.Add("2022-11-12");
+            datetoList.Add("2022-11-19");
+            datetoList.Add("2022-11-26");
+            datetoList.Add("2022-12-03");
+            datetoList.Add("2022-12-10");
+            datetoList.Add("2022-12-17");
+            datetoList.Add("2022-12-24");
+            datetoList.Add("2022-12-31");
+            datetoList.Add("2023-01-07");
+            datetoList.Add("2023-01-14");
+            datetoList.Add("2023-01-21");
+            datetoList.Add("2023-01-28");
+            datetoList.Add("2023-02-04");
+            datetoList.Add("2023-02-11");
+            datetoList.Add("2023-02-18");
+            datetoList.Add("2023-02-25");
+            datetoList.Add("2023-03-04");
+            return datetoList;
         }
-        public List<string> GetLastDates(List<string> mydate1)
+        public List<string> GetDateFrom()
+        {
+            List<string> datefromList = new List<string>();
+            datefromList.Add("2022-03-06");
+            datefromList.Add("2022-03-13");
+            datefromList.Add("2022-03-20");
+            datefromList.Add("2022-03-27");
+            datefromList.Add("2022-04-03");
+            datefromList.Add("2022-04-10");
+            datefromList.Add("2022-04-17");
+            datefromList.Add("2022-04-24");
+            datefromList.Add("2022-05-01");
+            datefromList.Add("2022-05-08");
+            datefromList.Add("2022-05-15");
+            datefromList.Add("2022-05-22");
+            datefromList.Add("2022-05-29");
+            datefromList.Add("2022-06-05");
+            datefromList.Add("2022-06-12");
+            datefromList.Add("2022-06-19");
+            datefromList.Add("2022-06-26");
+            datefromList.Add("2022-07-03");
+            datefromList.Add("2022-07-10");
+            datefromList.Add("2022-07-17");
+            datefromList.Add("2022-07-24");
+            datefromList.Add("2022-07-31");
+            datefromList.Add("2022-08-07");
+            datefromList.Add("2022-08-14");
+            datefromList.Add("2022-08-21");
+            datefromList.Add("2022-08-28");
+            datefromList.Add("2022-09-04");
+            datefromList.Add("2022-09-11");
+            datefromList.Add("2022-09-18");
+            datefromList.Add("2022-09-25");
+            datefromList.Add("2022-10-02");
+            datefromList.Add("2022-10-09");
+            datefromList.Add("2022-10-16");
+            datefromList.Add("2022-10-23");
+            datefromList.Add("2022-10-30");
+            datefromList.Add("2022-11-06");
+            datefromList.Add("2022-11-13");
+            datefromList.Add("2022-11-20");
+            datefromList.Add("2022-11-27");
+            datefromList.Add("2022-12-04");
+            datefromList.Add("2022-12-11");
+            datefromList.Add("2022-12-18");
+            datefromList.Add("2022-12-25");
+            datefromList.Add("2023-01-01");
+            datefromList.Add("2023-01-08");
+            datefromList.Add("2023-01-15");
+            datefromList.Add("2023-01-22");
+            datefromList.Add("2023-01-29");
+            datefromList.Add("2023-02-05");
+            datefromList.Add("2023-02-12");
+            datefromList.Add("2023-02-19");
+            datefromList.Add("2023-02-26");
+            return datefromList;
+        }
+
+            public List<string> GetLastDates(List<string> myDateFrom)
         {
             List<string> myList = new List<string>();
-            List<DateTime> dates = mydate1.Select(date => DateTime.Parse(date)).ToList();
+            List<DateTime> dates = myDateFrom.Select(date => DateTime.Parse(date)).ToList();
             dates.Sort();
 
             var groupdates = dates.GroupBy(x => new { MatchDates = x.Month + "-" + x.Year }).Select(x => x.Max(s => s.Date));
@@ -188,7 +247,23 @@ namespace GoogleFirstPage.Googletrends
             //dateitm = Items.ToString();
             return myList;
         }
-       
+        public List<string> GetStartDates(List<string> myDateTo)
+        {
+            List<string> myList = new List<string>();
+            List<DateTime> dates = myDateTo.Select(date => DateTime.Parse(date)).ToList();
+            dates.Sort();
+
+            var groupdates = dates.GroupBy(x => new { MatchDates = x.Month + "-" + x.Year }).Select(x => x.Min(s => s.Date));
+
+            foreach (var items in groupdates)
+            {
+                //Console.WriteLine(items.ToString("yyyy-MM-dd"));
+                myList.Add(items.ToString("yyyy-MM-dd"));
+            }
+            //dateitm = Items.ToString();
+            return myList;
+        }
+
 
         public List<string> GetVolumeData()
         {
@@ -218,7 +293,12 @@ namespace GoogleFirstPage.Googletrends
             int d = vm/DateTime.DaysInMonth(DateTime.Now.Year,DateTime.Now.Month)*DateTime.Now.Day;
             return d.ToString();
         }
-
+        public string GetNumberofWeeks(DateTime fromdate, DateTime dateto)
+        {
+            TimeSpan ts = fromdate - dateto;
+            int totalWeeks = ts.Days / 7;
+            return totalWeeks.ToString();
+        }
 
         public class UniqueDates
         {
