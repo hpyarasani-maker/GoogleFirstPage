@@ -20,7 +20,18 @@ namespace GoogleFirstPage.Googletrends
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            List<string> myDateFromList = GetDateFrom();
+            List<DateTime> myFromDates = GetFromDates(myDateFromList);
+            List<string> myDateToList = GetDateTo();
+            List<DateTime> myToDates = GetToDates(myDateToList);
+
+            var weeks = GetNumberofWeeks(DateTime.Parse("06-03-2023 00:00:00",null), DateTime.Parse("26-03-2023 00:00:00", null));
+            Response.Write(weeks);
+            //foreach (var myfrom in myFromDates)
+            //{
+            //    Response.Write(myfrom + "<br />");
+            //}
+            //string dates = GetNumberofWeeks(myFirstDates, myToDates);
         }
 
         public Dictionary<List<string>, List<string>> GetDicVolumeData(List<string> date, List<string> volume)
@@ -76,36 +87,7 @@ namespace GoogleFirstPage.Googletrends
                 dt.Rows.Add(dr);
             }
 
-            //dr = dt.NewRow();
-            //dr["Date"] = res.Keys;
-            //dr["Volume"] = res.Values;
-            //dt.Rows.Add(dr);
-
-
-            //foreach (var ad in allDates)
-            //{
-            //    dr = dt.NewRow();
-            //    dr["Date"] = ad.ToString();
-
-            //    foreach(var r in res)
-            //    {
-            //        if(ad.ToString() == r.Key.ToString())
-            //        dr["Volume"] = r.Value;
-
-            //    }
-            //    //foreach (var ld in lDates)
-            //    //{
-            //    //    foreach (var vol in resVolume)
-            //    //    {
-            //    //        dict.Add(ld.ToString(),vol.ToString());
-
-            //    //        //if (ad.ToString() == ld.ToString())
-            //    //        foreach(KeyValuePair<string,string> volu in dict)
-            //    //            dr["Volume"] = volu.Value;
-            //    //    }
-            //    //}
-            //    dt.Rows.Add(dr);
-            //}
+           
             grdsvm.DataSource = dt;
             grdsvm.DataBind();
 
@@ -230,8 +212,7 @@ namespace GoogleFirstPage.Googletrends
             datefromList.Add("2023-02-26");
             return datefromList;
         }
-
-            public List<string> GetLastDates(List<string> myDateFrom)
+        public List<string> GetLastDates(List<string> myDateFrom)
         {
             List<string> myList = new List<string>();
             List<DateTime> dates = myDateFrom.Select(date => DateTime.Parse(date)).ToList();
@@ -247,10 +228,10 @@ namespace GoogleFirstPage.Googletrends
             //dateitm = Items.ToString();
             return myList;
         }
-        public List<string> GetStartDates(List<string> myDateTo)
+        public List<DateTime> GetFromDates(List<string> myDateFrom)
         {
-            List<string> myList = new List<string>();
-            List<DateTime> dates = myDateTo.Select(date => DateTime.Parse(date)).ToList();
+            List<DateTime> myList = new List<DateTime>();
+            List<DateTime> dates = myDateFrom.Select(date => DateTime.Parse(date)).ToList();
             dates.Sort();
 
             var groupdates = dates.GroupBy(x => new { MatchDates = x.Month + "-" + x.Year }).Select(x => x.Min(s => s.Date));
@@ -258,7 +239,23 @@ namespace GoogleFirstPage.Googletrends
             foreach (var items in groupdates)
             {
                 //Console.WriteLine(items.ToString("yyyy-MM-dd"));
-                myList.Add(items.ToString("yyyy-MM-dd"));
+                myList.Add(items);
+            }
+            //dateitm = Items.ToString();
+            return myList;
+        }
+        public List<DateTime> GetToDates(List<string> myDateTo)
+        {
+            List<DateTime> myList = new List<DateTime>();
+            List<DateTime> dates = myDateTo.Select(date => DateTime.Parse(date)).ToList();
+            dates.Sort();
+
+            var groupdates = dates.GroupBy(x => new { MatchDates = x.Month + "-" + x.Year }).Select(x => x.Max(s => s.Date));
+
+            foreach (var items in groupdates)
+            {
+                //Console.WriteLine(items.ToString("yyyy-MM-dd"));
+                myList.Add(items);
             }
             //dateitm = Items.ToString();
             return myList;
@@ -295,7 +292,15 @@ namespace GoogleFirstPage.Googletrends
         }
         public string GetNumberofWeeks(DateTime fromdate, DateTime dateto)
         {
-            TimeSpan ts = fromdate - dateto;
+            TimeSpan ts = new TimeSpan();
+            if (fromdate < dateto)
+            {
+                 ts = dateto.AddDays(1).Subtract(fromdate);
+            }
+            else
+            {
+                 ts = fromdate.AddDays(-1).Subtract(dateto);
+            }
             int totalWeeks = ts.Days / 7;
             return totalWeeks.ToString();
         }
