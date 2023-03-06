@@ -2450,6 +2450,14 @@ namespace GoogleFirstPage.RapidTrackingSERPs
            {
                 seid = 713, domain ="st", geo_location="Sao Tome and Principe", locale= "pt-st", uule = "w+CAIQICIVU2FvIFRvbWUgYW5kIFByaW5jaXBl",device="mobile_android",sename="Google ST (Sao Tome and Príncipe,Portuguese, Mobile)"
            },    // 30-12-2022 new seid's from 692- 713
+           new SearchProperties() //06-03-2023
+            {
+             seid = 714, domain ="com", geo_location="California,United States", locale= "en-us", uule = "w+CAIQICIYY2FsaWZvcm5pYSx1bml0ZWQgc3RhdGVz",device="desktop"
+            },
+            new SearchProperties()
+            {
+             seid = 715, domain ="com", geo_location="California,United States", locale= "en-us", uule = "w+CAIQICIYY2FsaWZvcm5pYSx1bml0ZWQgc3RhdGVz",device="mobile_android"
+            },//06-03-2023
          };
     }
     public class SearchProperties
