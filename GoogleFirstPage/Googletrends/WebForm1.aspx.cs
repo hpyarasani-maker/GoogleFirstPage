@@ -34,69 +34,56 @@ namespace GoogleFirstPage.Googletrends
             //string dates = GetNumberofWeeks(myFirstDates, myToDates);
         }
 
-        public Dictionary<List<string>, List<string>> GetDicVolumeData(List<string> date, List<string> volume)
+        public Dictionary<string, string> GetDicVolumeData(List<string> date, List<string> volume)
         {
-            Dictionary<List<string>, List<string>> dict = new Dictionary<List<string>, List<string>>();
-            dict.Add(date, volume);
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            for (int i = 0; i < date.Count; i++)
+                dict.Add(date[i], volume[i]);
             return dict;
         }
 
 
         protected void btnsvd_Click(object sender, EventArgs e)
         {
-            Dictionary<string, string> dict = new Dictionary<string, string>();
             DataTable dt = new DataTable();
             dt.Columns.Add(new DataColumn("AllDates", typeof(string)));
             //dt.Columns.Add(new DataColumn("Date", typeof(string)));
             dt.Columns.Add(new DataColumn("Volume", typeof(string)));
             //dt.Columns.Add(new DataColumn("Total", typeof(string)));
+            dt.Columns.Add(new DataColumn("WeeklyVol", typeof(string)));
             DataRow dr;
             allDates = GetDateTo().ToList();
             volume = GetVolumeData().ToList();
             var resVolume = from v in volume select v;
             lDates = GetLastDates(allDates).ToList();
-            Dictionary<List<string>, List<string>> res = GetDicVolumeData(lDates, volume);
-            //int total = 0;
+            Dictionary<string, string> dict = GetDicVolumeData(lDates, volume);
             int total = volume.Sum(x => Convert.ToInt32(x));
-            foreach (var ad in allDates)
+                       
+            foreach (var a in dict)
             {
-                dr = dt.NewRow();
-                foreach (KeyValuePair<List<string>, List<string>> a in res.ToList())
+                string lastmdate = a.Key;
+                string volumedata = a.Value;
+                var weeks = allDates.Where(d => DateTime.Parse(d).ToString("yyyy-MM") == DateTime.Parse(lastmdate).ToString("yyyy-MM"));
+                foreach (var ad in weeks)
                 {
-                    string lastmdate = "";
-                    string volumedata = "";
-                    for (int i = 0; i < lDates.Count; i++)
-                    {
-                        lastmdate = a.Key[i];
-                        volumedata = a.Value[i];
-                        
-                        dr["AllDates"] = ad;
-                        if (ad.ToString() == lastmdate.ToString())
-                        {
-                            //dr["Date"] = lastmdate;
-                            dr["Volume"] = volumedata;
+                    dr = dt.NewRow();
+                    dr["AllDates"] = ad;
+                    if (ad.ToString() == lastmdate.ToString())
+                        dr["Volume"] = volumedata;
 
-                            //for (int z = 0; z < lDates.Count; z++)
-                            //{
-                            //    total = dt.AsEnumerable().Sum(row => row.Field<Int32>(volumedata));
-                            //    //dr["Total"] = total.ToString();
-                            //}
-                        }
-                    }
+                    dr["WeeklyVol"] = (Math.Round(Convert.ToDouble(volumedata) / weeks.Count(), 0)).ToString();
+                    dt.Rows.Add(dr);
                 }
-                dt.Rows.Add(dr);
+
             }
 
-           
             grdsvm.DataSource = dt;
             grdsvm.DataBind();
 
-            //int total = 0; 
             grdsvm.FooterRow.Cells[0].Text = "Total Volume";
             grdsvm.FooterRow.Cells[1].Text = total.ToString();
-           
+
         }
-     
 
         public List<string> GetDateTo()
         {
@@ -310,6 +297,8 @@ namespace GoogleFirstPage.Googletrends
             public string LDate { get; set; }
 
             public string Volume { get; set; }
+
+            public string WeeklyVol { get; set; }
 
         }
 
