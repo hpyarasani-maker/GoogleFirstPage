@@ -133,7 +133,7 @@
                                         </asp:TemplateField>
                                         <asp:TemplateField>
                                             <ItemTemplate>
-                                                <a href="data.aspx?id=<%# Eval("id") %>&name=<%# Eval("name")%>" target="_blank">View</a>
+                                                <a href="SearchVolume.aspx?id=<%# Eval("id") %>&name=<%# Eval("name")%>" target="_blank">View</a>
                                                 <%--<a href="data.aspx?id=<%# Eval("id") %>&name=<%# Eval("name") %>" target="_blank">View</a>--%>
                                             </ItemTemplate>
                                         </asp:TemplateField>

@@ -98,25 +98,28 @@
             </div>
         </div>
 
-
+         
         <div class="containerDB">
             <br />
-            <%-- <div style="margin-left: 670px;">
+            <div style="align-items:center;margin-left: 400px;">
+                
+                    <asp:DropDownList ID="country_list" runat="server" Width="300px" CssClass="text1" Height="30px"></asp:DropDownList>
+                    <asp:Button ID="sub_btn" runat="server" Text="Sumit" CssClass="btnlf" Height="25px"  Width="120px" OnClick="sub_btn_Click" />
+                </div>
+            <%-- <div style="margin-left: 670px;"></asp:
                 <p style="font-family: Cambria; color: black; font-size: 25px; font-weight: bold;"><u>GoogleTrends </u></p>
             </div>--%>
 
             <%--<asp:Label ID="lbl" runat="server" Font-Size="12" ForeColor="Chocolate" Visible="false"></asp:Label><br />--%>
-
+            
             <div class="wrapper">
-                <div style="align-items:center;">
-                    <asp:DropDownList ID="country_list" runat="server"></asp:DropDownList>
-                    <asp:Button ID="sub_btn" runat="server" Text="Button" />
-                </div>
+               
             <div style="margin-left: 100px; margin-top: 100px;">
                 <asp:UpdateProgress ID="UpdateProgress1" runat="server">
                 </asp:UpdateProgress>
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                     <ContentTemplate>
+                        <asp:Label ID="name_lbl" runat="server" Text="" style="font-weight: bold;"></asp:Label>
                         <asp:GridView ID="gvdata" runat="server" AutoGenerateColumns="true" Width="80%" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px">
                             <HeaderStyle BackColor="#e4e8ef" Font-Bold="true" ForeColor="Black" />
 
