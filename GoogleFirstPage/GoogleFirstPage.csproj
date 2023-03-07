@@ -185,9 +185,9 @@
     <Content Include="FluxData\Matchingurlscount.aspx" />
     <Content Include="GoogleClassicLinksCallbackUrl\Livesearch.aspx" />
     <Content Include="GoogleClassicLinks\Livesearch.aspx" />
-    <Content Include="Googletrends\data.aspx" />
+    <Content Include="Googletrends\SearchVolume.aspx" />
     <Content Include="Googletrends\googletrendsdata.aspx" />
-    <Content Include="Googletrends\trackingvolumedata.aspx" />
+    <Content Include="Googletrends\keywords.aspx" />
     <Content Include="Googletrends\WebForm1.aspx" />
     <Content Include="images\calendarnew.png" />
     <Content Include="images\calender.png" />
@@ -542,12 +542,12 @@
     </Compile>
     <Compile Include="GoogleClassicLinks\OxyParams.cs" />
     <Compile Include="GoogleClassicLinks\SearchParams.cs" />
-    <Compile Include="Googletrends\data.aspx.cs">
-      <DependentUpon>data.aspx</DependentUpon>
+    <Compile Include="Googletrends\SearchVolume.aspx.cs">
+      <DependentUpon>SearchVolume.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Googletrends\data.aspx.designer.cs">
-      <DependentUpon>data.aspx</DependentUpon>
+    <Compile Include="Googletrends\SearchVolume.aspx.designer.cs">
+      <DependentUpon>SearchVolume.aspx</DependentUpon>
     </Compile>
     <Compile Include="Googletrends\googletrendsdata.aspx.cs">
       <DependentUpon>googletrendsdata.aspx</DependentUpon>
@@ -556,12 +556,12 @@
     <Compile Include="Googletrends\googletrendsdata.aspx.designer.cs">
       <DependentUpon>googletrendsdata.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Googletrends\trackingvolumedata.aspx.cs">
-      <DependentUpon>trackingvolumedata.aspx</DependentUpon>
+    <Compile Include="Googletrends\keywords.aspx.cs">
+      <DependentUpon>keywords.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Googletrends\trackingvolumedata.aspx.designer.cs">
-      <DependentUpon>trackingvolumedata.aspx</DependentUpon>
+    <Compile Include="Googletrends\keywords.aspx.designer.cs">
+      <DependentUpon>keywords.aspx</DependentUpon>
     </Compile>
     <Compile Include="Googletrends\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

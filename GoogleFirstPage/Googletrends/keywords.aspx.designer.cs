@@ -10,7 +10,7 @@
 namespace GoogleFirstPage.Googletrends {
     
     
-    public partial class searchvolume {
+    public partial class keywords {
         
         /// <summary>
         /// form1 control.

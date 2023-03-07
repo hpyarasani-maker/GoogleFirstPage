@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="data.aspx.cs" Inherits="GoogleFirstPage.Googletrends.data" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="keywords.aspx.cs" Inherits="GoogleFirstPage.Googletrends.keywords" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Tracking Position and Volume Data</title>
+    <title>Search Volume Data</title>
 
     <link href="../CSS/StyleSheet2.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
@@ -37,7 +37,7 @@
 
     <script type="text/javascript">
         $(function () {
-            $('[id*=gvdata]').footable();
+            $('[id*=gvserchvolme]').footable();
         });
     </script>
 
@@ -65,11 +65,14 @@
                 margin-bottom: 0px;
             }
     </style>
-
 </head>
-<body>
+<body style="background-color: white">
+    <script src="js/custom.js"></script>
+
+    <script src="js/jquery.js"></script>
     <form id="form1" runat="server">
-        <asp:ScriptManager ID="scriptmgr" runat="server" EnablePageMethods="false"></asp:ScriptManager>
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
         <div class="header1" style="width: 2200px;">
             <div class="header-menu">
                 <div style="margin-left: -150px;">
@@ -98,7 +101,6 @@
             </div>
         </div>
 
-
         <div class="containerDB">
             <br />
             <%-- <div style="margin-left: 670px;">
@@ -108,22 +110,47 @@
             <%--<asp:Label ID="lbl" runat="server" Font-Size="12" ForeColor="Chocolate" Visible="false"></asp:Label><br />--%>
 
             <div class="wrapper">
-            <div style="margin-left: 100px; margin-top: 100px;">
-                <asp:UpdateProgress ID="UpdateProgress1" runat="server">
-                </asp:UpdateProgress>
-                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                    <ContentTemplate>
-                        <asp:GridView ID="gvdata" runat="server" AutoGenerateColumns="true" Width="80%" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px">
-                            <HeaderStyle BackColor="#e4e8ef" Font-Bold="true" ForeColor="Black" />
+                <div style="margin-left: 50px;">
+                    <p style="font-family: Cambria; color: black; font-size: 25px; font-weight: bold;">Keywords</p>
 
-                        </asp:GridView>
-                    </ContentTemplate>
-                </asp:UpdatePanel>
+                    <div>
+                        <%--<asp:Label ID="lblerror" runat="server" ForeColor="Red" Font-Size="Large"></asp:Label>--%>
+                    </div>
+                    <br />
+                    <div>
+                        <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+                        </asp:UpdateProgress>
+                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                            <ContentTemplate>
+                                <asp:GridView ID="gvserchvolme" runat="server" AutoGenerateColumns="false" Width="80%" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px">
+                                    <HeaderStyle BackColor="#e4e8ef" Font-Bold="true" ForeColor="Black" />
+                                    <Columns>
+                                        <asp:TemplateField HeaderText="Keywords">
+                                            <ItemTemplate>
+                                                <asp:Label Text='<%#DataBinder.Eval(Container.DataItem,"name")%>' ID="kwd" runat="server">
+                                                </asp:Label>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                        <asp:TemplateField>
+                                            <ItemTemplate>
+                                                <a href="data.aspx?id=<%# Eval("id") %>&name=<%# Eval("name")%>" target="_blank">View</a>
+                                                <%--<a href="data.aspx?id=<%# Eval("id") %>&name=<%# Eval("name") %>" target="_blank">View</a>--%>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
+                                    </Columns>
+                                </asp:GridView>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </div>
+                    <br />
+                    <br />
+                </div>
+                <br />
             </div>
-        </div>
             <br />
             <br />
             <br />
+
 
             <br />
             <br />

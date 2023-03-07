@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace GoogleFirstPage.Googletrends
 {
-    public partial class searchvolume : System.Web.UI.Page
+    public partial class keywords : System.Web.UI.Page
     {
         string connection = ConfigurationManager.ConnectionStrings["Trackingdata"].ToString();
         protected void Page_Load(object sender, EventArgs e)

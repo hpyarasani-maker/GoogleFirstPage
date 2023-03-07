@@ -10,10 +10,10 @@ using System.Web.UI.WebControls;
 
 namespace GoogleFirstPage.Googletrends
 {
-    public partial class data : System.Web.UI.Page
+    public partial class SearchVolume : System.Web.UI.Page
     {
         string connection = ConfigurationManager.ConnectionStrings["Trackingdata"].ToString();
-
+        DataTable dt;
         protected void Page_Load(object sender, EventArgs e)
         {
             string id = Request.QueryString["id"].ToString();
@@ -27,6 +27,7 @@ namespace GoogleFirstPage.Googletrends
                 cmd = new SqlCommand("[GetSearchvolumeData]", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@kid", SqlDbType.Int).Value = id; 
+
                 //cmd.Parameters.Add("@keyword", SqlDbType.NVarChar).Value = name.Replace(" ","%20");
                 da = new SqlDataAdapter(cmd);
                 ds = new DataSet();
@@ -41,6 +42,34 @@ namespace GoogleFirstPage.Googletrends
                     gvdata.DataSource = null;
                     gvdata.DataBind();
                 }
+            }
+        }
+
+        protected void GetCountryList()
+        {
+            using (SqlConnection con = new SqlConnection(connection))
+            {
+                SqlCommand cmd;
+                SqlDataAdapter da;
+                DataSet ds;
+                cmd = new SqlCommand("[GetSearchEngines]", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                //cmd.Parameters.Add("@keyword", SqlDbType.NVarChar).Value = name.Replace(" ","%20");
+                da = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                da.Fill(dt);
+                country_list.DataTextField = "name";
+                country_list.DataValueField = "seid";
+                country_list.DataSource = dt;
+                country_list.DataBind();
+                //searchEngines.Items.Insert(0, "----Select----");
+                country_list.SelectedItem.Value.ToString();
+                //ddlkeyword.SelectedValue = "2";
+                country_list.SelectedIndex = 0;
+                ds = new DataSet();
+                da.Fill(ds);
+                
             }
         }
     }

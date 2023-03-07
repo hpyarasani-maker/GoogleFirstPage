@@ -10,7 +10,7 @@
 namespace GoogleFirstPage.Googletrends {
     
     
-    public partial class data {
+    public partial class SearchVolume {
         
         /// <summary>
         /// form1 control.
@@ -38,6 +38,24 @@ namespace GoogleFirstPage.Googletrends {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image Image2;
+        
+        /// <summary>
+        /// country_list control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList country_list;
+        
+        /// <summary>
+        /// sub_btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button sub_btn;
         
         /// <summary>
         /// UpdateProgress1 control.
