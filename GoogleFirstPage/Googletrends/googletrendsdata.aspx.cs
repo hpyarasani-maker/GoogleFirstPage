@@ -233,6 +233,7 @@ namespace GoogleFirstPage.Googletrends
                 dt1.Columns.Add(new DataColumn("date_from", typeof(string)));
                 dt1.Columns.Add(new DataColumn("date_to", typeof(string)));
                 dt1.Columns.Add(new DataColumn("MontlyVolume", typeof(string)));
+                dt1.Columns.Add(new DataColumn("WeeklyVolume", typeof(string)));
                 dt1.Columns.Add(new DataColumn("value", typeof(string)));
 
                 var date_from = "";
@@ -244,29 +245,8 @@ namespace GoogleFirstPage.Googletrends
                 lDates = GetLastDates(allDates).ToList();
                 myVolume = GetSearchVolume(searchres);
                 int total = myVolume.Sum(x => Convert.ToInt32(x));
-                Dictionary<List<string>, List<string>> res = GetDicVolumeData(lDates, myVolume);
-                //foreach (var ad in allDates)
-                //{
-                //    dr = dt1.NewRow();
-                //    foreach (KeyValuePair<List<string>, List<string>> x in res.ToList())
-                //    {
-                //        string lastmdate = "";
-                //        string volumedata = "";
-                //        for (int i = 0; i < lDates.Count; i++)
-                //        {
-                //            lastmdate = x.Key[i];
-                //            volumedata = x.Value[i];
-
-                //            dr["AllDates"] = ad;
-                //            if (ad.ToString() == lastmdate.ToString())
-                //            {
-                //                //dr["Date"] = lastmdate;
-                //                dr["Volume"] = volumedata;
-                //            }
-                //        }
-                //    }
-                //    dt1.Rows.Add(dr);
-
+                Dictionary<string, string> res = GetDicVolumeData(lDates, myVolume);
+                Dictionary<string, string> weeklyVolRes = GetWeeklyVolume(res, allDates);
 
                 foreach (var item in iot)
                 {
@@ -279,26 +259,26 @@ namespace GoogleFirstPage.Googletrends
                     dr["date_to"] = date_to;
                     dr["MontlyVolume"] = null;
 
-
-                    //dr = dt1.NewRow();
-                    foreach (KeyValuePair<List<string>, List<string>> x in res.ToList())
+                    string weeklyVol = string.Empty;
+                    weeklyVolRes.TryGetValue(date_to, out weeklyVol);
+                    
+                    foreach (var x in res)
                     {
                         string lastmdate = "";
                         string volumedata = "";
 
                         for (int i = 0; i < lDates.Count; i++)
                         {
-                            lastmdate = x.Key[i];
-                            volumedata = x.Value[i];
+                            lastmdate = x.Key;
+                            volumedata = x.Value;
 
-                            //dr["AllDates"] = ad;
                             if (date_to == lastmdate.ToString())
                             {
-                                //dr["Date"] = lastmdate;
                                 dr["MontlyVolume"] = volumedata;
                             }
                         }
                     }
+                    dr["WeeklyVolume"] = weeklyVol;
                     dr["value"] = value;
                     dt1.Rows.Add(dr);
                 }
@@ -323,6 +303,25 @@ namespace GoogleFirstPage.Googletrends
                 throw ex;
             }
         }
+
+        private Dictionary<string, string> GetWeeklyVolume(Dictionary<string, string> res, List<string> allDates)
+        {
+            Dictionary<string, string> wRes = new Dictionary<string, string>();
+
+            foreach (var r in res)
+            {
+                string mDate = r.Key;
+                string rvolume = r.Value;
+                var weeks = allDates.Where(d => DateTime.Parse(d).ToString("yyyy-MM") == DateTime.Parse(mDate).ToString("yyyy-MM"));
+                foreach (var w in weeks)
+                {
+                    string wr = Math.Round(Convert.ToDouble(rvolume) / weeks.Count(), 0).ToString();
+                    wRes.Add(w, wr);
+                }
+            }
+            return wRes;
+        }
+
         public List<string> GetSearchVolume(string json)
         {
             List<string> myList = new List<string>();
@@ -350,10 +349,11 @@ namespace GoogleFirstPage.Googletrends
             return dts;
         }
 
-        public Dictionary<List<string>, List<string>> GetDicVolumeData(List<string> date, List<string> volume)
+        public Dictionary<string, string> GetDicVolumeData(List<string> date, List<string> volume)
         {
-            Dictionary<List<string>, List<string>> dict = new Dictionary<List<string>, List<string>>();
-            dict.Add(date, volume);
+            Dictionary<string, string> dict = new Dictionary<string, string>();
+            for (int i = 0; i < date.Count; i++)
+                dict.Add(date[i], volume[i]);
             return dict;
         }
 
