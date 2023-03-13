@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -23,31 +24,34 @@ namespace GoogleFirstPage.Xmltracker
             string date = DateTime.Today.ToString("yyyy-MM-dd");
 
             processresults(url);
-
         }
 
+        private CookieContainer _cookies = new CookieContainer();
+
+        //In case you need to clear the cookies
+        public void ClearCookies()
+        {
+            _cookies = new CookieContainer();
+        }
         public string webSourceTracking(string url)
         {
-            string respHTML = string.Empty;
+            string html = string.Empty;
             try
             {
-                Uri u = new Uri(url);
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
 
-                using (var client = new WebClient())
+                request.CookieContainer = _cookies;
+                request.AllowWriteStreamBuffering = true;
+                request.UserAgent = ".NET Framework Test Client";
+
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                if (response.StatusCode != HttpStatusCode.OK) throw new Exception(response.StatusDescription);
+                var stream = response.GetResponseStream();
+
+                using (var reader = new StreamReader(stream))
                 {
-                    try
-                    {
-                        client.Headers.Clear();
-                        client.Headers["Content-Type"] = "text/xml";
-                        respHTML = client.DownloadString(u);
-                    }
-
-                    catch (Exception ex)
-                    {
-                        Response.Write(ex.Message);
-                    }
+                    html = reader.ReadToEnd();
                 }
-                return respHTML;
             }
             catch (WebException web)
             {
@@ -57,10 +61,44 @@ namespace GoogleFirstPage.Xmltracker
             {
                 Response.Write(ex.Message);
             }
-
-            return respHTML;
-
+            return html;
         }
+
+        /* public string webSourceTracking(string url)
+         {
+             string respHTML = string.Empty;
+             try
+             {
+                 Uri u = new Uri(url);
+
+                 using (var client = new WebClient())
+                 {
+                     try
+                     {
+                         client.Headers.Clear();
+                         client.Headers["Content-Type"] = "text/xml";
+                         respHTML = client.DownloadString(u);
+                     }
+
+                     catch (Exception ex)
+                     {
+                         Response.Write(ex.Message);
+                     }
+                 }
+                 return respHTML;
+             }
+             catch (WebException web)
+             {
+                 Response.Write(web.Message);
+             }
+             catch (Exception ex)
+             {
+                 Response.Write(ex.Message);
+             }
+
+             return respHTML;
+
+         }*/
 
 
         public void processresults(string url)
@@ -123,7 +161,7 @@ namespace GoogleFirstPage.Xmltracker
                 {
                     urlSource = urlSource.Replace(str, "");
                 }
-                
+
 
                 Encoding utf8 = Encoding.UTF8;
                 string Text1 = HttpUtility.UrlDecode(urlSource, utf8);
