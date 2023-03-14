@@ -2452,19 +2452,19 @@ namespace GoogleFirstPage.RapidTrackingSERPs
            },    // 30-12-2022 new seid's from 692- 713
            new SearchProperties() //06-03-2023
             {
-             seid = 714, domain ="com", geo_location="California,United States", locale= "en-us", uule = "w+CAIQICIYY2FsaWZvcm5pYSx1bml0ZWQgc3RhdGVz",device="desktop"
+             seid = 714, domain ="com", geo_location="California,United States", locale= "en-us", uule = "w+CAIQICIYY2FsaWZvcm5pYSx1bml0ZWQgc3RhdGVz",device="desktop",sename="Google US (California)"
             },
             new SearchProperties()
             {
-             seid = 715, domain ="com", geo_location="California,United States", locale= "en-us", uule = "w+CAIQICIYY2FsaWZvcm5pYSx1bml0ZWQgc3RhdGVz",device="mobile_android"
+             seid = 715, domain ="com", geo_location="California,United States", locale= "en-us", uule = "w+CAIQICIYY2FsaWZvcm5pYSx1bml0ZWQgc3RhdGVz",device="mobile_android",sename="Google US (California, Mobile)"
             },//06-03-2023
              new SearchProperties() //14-03-2023
             {
-            seid = 716, domain ="com", geo_location="Texas,United States", locale= "en-us", uule = "w+CAIQICITVGV4YXMsVW5pdGVkIFN0YXRlcw==",device="desktop"
+            seid = 716, domain ="com", geo_location="Texas,United States", locale= "en-us", uule = "w+CAIQICITVGV4YXMsVW5pdGVkIFN0YXRlcw==",device="desktop",sename="Google US (Texas)"
             },
             new SearchProperties()
             {
-            seid = 717, domain ="com", geo_location="Texas,United States", locale= "en-us", uule = "w+CAIQICITVGV4YXMsVW5pdGVkIFN0YXRlcw==",device="mobile_android"
+            seid = 717, domain ="com", geo_location="Texas,United States", locale= "en-us", uule = "w+CAIQICITVGV4YXMsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Texas, Mobile)"
             },//14-03-2023 end
          };
     }
