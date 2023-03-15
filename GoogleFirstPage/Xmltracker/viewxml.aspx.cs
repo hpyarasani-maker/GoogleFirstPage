@@ -42,8 +42,8 @@ namespace GoogleFirstPage.Xmltracker
 
                 request.CookieContainer = _cookies;
                 request.AllowWriteStreamBuffering = true;
-                request.UserAgent = ".NET Framework Test Client";
-
+                //request.UserAgent = ".NET Framework Test Client";
+                request.UserAgent = "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.70 Safari/533.4";
                 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
                 if (response.StatusCode != HttpStatusCode.OK) throw new Exception(response.StatusDescription);
                 var stream = response.GetResponseStream();
