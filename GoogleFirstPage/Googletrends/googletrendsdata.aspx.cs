@@ -235,6 +235,8 @@ namespace GoogleFirstPage.Googletrends
                 dt1.Columns.Add(new DataColumn("MontlyVolume", typeof(string)));
                 dt1.Columns.Add(new DataColumn("WeeklyVolume", typeof(string)));
                 dt1.Columns.Add(new DataColumn("value", typeof(string)));
+                dt1.Columns.Add(new DataColumn("WeeklyVolProp", typeof(string)));
+                dt1.Columns.Add(new DataColumn("WeeklyVolDiff", typeof(string)));
 
                 var date_from = "";
                 var date_to = "";
@@ -248,6 +250,8 @@ namespace GoogleFirstPage.Googletrends
                 Dictionary<string, string> res = GetDicVolumeData(lDates, myVolume);
                 Dictionary<string, string> weeklyVolRes = GetWeeklyVolume(res, allDates);
 
+                double prevVal = -1;
+
                 foreach (var item in iot)
                 {
                     dr = dt1.NewRow();
@@ -259,9 +263,6 @@ namespace GoogleFirstPage.Googletrends
                     dr["date_to"] = date_to;
                     dr["MontlyVolume"] = null;
 
-                    string weeklyVol = string.Empty;
-                    weeklyVolRes.TryGetValue(date_to, out weeklyVol);
-                    
                     foreach (var x in res)
                     {
                         string lastmdate = "";
@@ -278,8 +279,20 @@ namespace GoogleFirstPage.Googletrends
                             }
                         }
                     }
+
+                    string weeklyVol = string.Empty;
+                    weeklyVolRes.TryGetValue(date_to, out weeklyVol);
+                    var duration = weeklyVolRes.Count;
+                    var volDiff = GetWeeklyVolumeDiff(Convert.ToDouble(weeklyVol), Convert.ToDouble(value), prevVal, duration);
+                    prevVal = Convert.ToDouble(value);
+
                     dr["WeeklyVolume"] = weeklyVol;
                     dr["value"] = value;
+                    if (volDiff != null)
+                    {
+                        dr["WeeklyVolProp"] = volDiff[0];
+                        dr["WeeklyVolDiff"] = volDiff[1];
+                    }
                     dt1.Rows.Add(dr);
                 }
 
@@ -303,6 +316,29 @@ namespace GoogleFirstPage.Googletrends
                 throw ex;
             }
         }
+
+        private string[] GetWeeklyVolumeDiff(double vol, double curVal, double prevVal, int duration )
+        {
+            if(prevVal == -1)
+            {
+                return null;
+            }
+
+            string[] res = { string.Empty, string.Empty };            
+                       
+            var cVol = Math.Round(vol * (curVal / 100f), 3);
+            var pVol = Math.Round(vol * (prevVal / 100f), 3);
+
+            var prop = Math.Round(((cVol - pVol) / pVol) * duration, 3);
+            //var prop = prevVal - curVal;
+
+            var volDiff = vol * (prop / 100f);
+
+            res[0] = prop.ToString();
+            res[1] = volDiff.ToString();
+            return res;
+
+        }      
 
         private Dictionary<string, string> GetWeeklyVolume(Dictionary<string, string> res, List<string> allDates)
         {
