@@ -332,7 +332,7 @@ namespace GoogleFirstPage.Googletrends
             var prop = Math.Round(((cVol - pVol) / pVol) * duration, 3);
             //var prop = prevVal - curVal;
 
-            var volDiff = vol * (prop / 100f);
+            var volDiff = Math.Round(vol * (prop / 100f),0);
 
             res[0] = prop.ToString();
             res[1] = volDiff.ToString();
