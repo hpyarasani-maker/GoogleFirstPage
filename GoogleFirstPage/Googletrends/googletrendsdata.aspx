@@ -163,6 +163,7 @@
                     </div>
                     <br />
                     <div>
+                        <asp:Button ID="btnCSV" runat="server" Text="Get Csv" OnClick="btnCSV_Click" Width="120"/><br />
                         <asp:Label ID="Label6" runat="server" Text="Interest over time" Font-Size="Large"></asp:Label><br />
                         <asp:UpdateProgress ID="UpdateProgress1" runat="server">
                         </asp:UpdateProgress>
@@ -190,12 +191,6 @@
                             <ContentTemplate>
                                 <asp:GridView ID="gvsubregion" runat="server" AutoGenerateColumns="true" Width="80%" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px">
                                     <HeaderStyle BackColor="#e4e8ef" Font-Bold="true" ForeColor="Black" />
-                                    <%--<Columns>
-                                        <asp:BoundField HeaderText="Geo ID" DataField="geo_id" ItemStyle-HorizontalAlign="Center" />
-                                        <asp:BoundField HeaderText="Geo Name" DataField="geo_name" ItemStyle-HorizontalAlign="Center" />
-                                        <asp:BoundField HeaderText="Value" DataField="value" ItemStyle-HorizontalAlign="Center" />
-                                        <asp:BoundField HeaderText="Max Value Index" DataField="max_value_index" ItemStyle-HorizontalAlign="Center" />
-                                    </Columns>--%>
                                 </asp:GridView>
                             </ContentTemplate>
                         </asp:UpdatePanel>
@@ -210,13 +205,6 @@
                             <ContentTemplate>
                                 <asp:GridView ID="gvrelatedtopics" runat="server" AutoGenerateColumns="true" Width="80%" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px">
                                     <HeaderStyle BackColor="#e4e8ef" Font-Bold="true" ForeColor="Black" />
-                                    <%--<Columns>
-                                        <asp:BoundField HeaderText="Type" DataField="type" ItemStyle-HorizontalAlign="Center" />
-                                        <asp:BoundField HeaderText="Topic ID" DataField="topic_id" ItemStyle-HorizontalAlign="Center" />
-                                        <asp:BoundField HeaderText="Topic Title" DataField="topic_title" ItemStyle-HorizontalAlign="Center" />
-                                        <asp:BoundField HeaderText="Topic Type" DataField="topic_type" ItemStyle-HorizontalAlign="Center" />
-                                        <asp:BoundField HeaderText="Value" DataField="value" ItemStyle-HorizontalAlign="Center" />
-                                    </Columns>--%>
                                 </asp:GridView>
                             </ContentTemplate>
                         </asp:UpdatePanel>
@@ -231,11 +219,6 @@
                             <ContentTemplate>
                                 <asp:GridView ID="gvrelatedqueries" runat="server" AutoGenerateColumns="true" Width="80%" CssClass="footable" Font-Bold="true" HeaderStyle-Font-Bold="true" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" RowStyle-Width="1px" HeaderStyle-Height="30px">
                                     <HeaderStyle BackColor="#e4e8ef" Font-Bold="true" ForeColor="Black" />
-                                    <%--<Columns>
-                                        <asp:BoundField HeaderText="Type" DataField="type" ItemStyle-HorizontalAlign="Center" />
-                                        <asp:BoundField HeaderText="Query ID" DataField="query" ItemStyle-HorizontalAlign="Center" />
-                                        <asp:BoundField HeaderText="Value" DataField="value" ItemStyle-HorizontalAlign="Center" />
-                                    </Columns>--%>
                                 </asp:GridView>
                             </ContentTemplate>
                         </asp:UpdatePanel>

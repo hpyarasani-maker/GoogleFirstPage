@@ -19,15 +19,14 @@ namespace GoogleFirstPage.Googletrends
 {
     public partial class keywordsdata : System.Web.UI.Page
     {
-        //string year = string.Empty;
-        //string month = string.Empty;
-        //string volume = string.Empty;
+        
         string volumedata = string.Empty;
         string searchres = string.Empty;
         List<string> allDates;
-        List<string> volume;
         List<string> lDates;
         List<string> myVolume;
+        
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -44,6 +43,7 @@ namespace GoogleFirstPage.Googletrends
             Label7.Visible = false;
             Label8.Visible = false;
             Label9.Visible = false;
+            btnCSV.Enabled = false;
         }
 
         public async Task<string> keywords_data_trends_explore_live(string[] keyword, string location)
@@ -169,6 +169,7 @@ namespace GoogleFirstPage.Googletrends
                     ProcessData(res, kid, locations);
                     //ProcessSVData(searchres, kid, locations);
                 }
+                btnCSV.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -192,7 +193,6 @@ namespace GoogleFirstPage.Googletrends
                     {
                         var iot = item["data"];
                         SaveOverTime(iot, seid, location);
-
                     }
                     else if (title == "Interest by subregion")
                     {
@@ -225,10 +225,11 @@ namespace GoogleFirstPage.Googletrends
 
         public void SaveOverTime(JToken iot, string kid, string seid)
         {
+            DataTable dt1 = new DataTable();
+
             try
             {
                 ArrayList a = new ArrayList();
-                DataTable dt1 = new DataTable();
 
                 dt1.Columns.Add(new DataColumn("date_from", typeof(string)));
                 dt1.Columns.Add(new DataColumn("date_to", typeof(string)));
@@ -301,7 +302,7 @@ namespace GoogleFirstPage.Googletrends
                     gvinterestot.DataSource = dt1;
                     gvinterestot.DataBind();
 
-                    gvinterestot.FooterRow.Cells[1].Text = "Total Volume";
+                    gvinterestot.FooterRow.Cells[1].Text = "Total Volume = ";
                     gvinterestot.FooterRow.Cells[1].Font.Bold = true;
                     gvinterestot.FooterRow.Cells[2].Text = total.ToString();
                 }
@@ -315,8 +316,7 @@ namespace GoogleFirstPage.Googletrends
             {
                 throw ex;
             }
-        }
-
+        }        
         private string[] GetWeeklyVolumeDiff(double vol, double curVal, double prevVal, int duration )
         {
             if(prevVal == -1)
@@ -650,6 +650,7 @@ namespace GoogleFirstPage.Googletrends
             }
         }
 
+        
         protected void gvinterestot_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             //try
@@ -672,5 +673,52 @@ namespace GoogleFirstPage.Googletrends
             //    throw ex;
             //}
         }
+
+        protected void btnCSV_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Response.Clear();
+                Response.Buffer = true;
+                string a = "GoogletrendsData" + "_" + txtkeyword.Text + "_" + ddllocation.SelectedItem.Text + ".csv";
+                Response.AddHeader("content-disposition", "attachment;filename=" + a);
+                Response.Charset = "";
+                Response.ContentType = "text/csv";
+
+                gvinterestot.AllowPaging = false;                
+
+                StringBuilder sb = new StringBuilder();
+
+                foreach (TableCell cell in gvinterestot.HeaderRow.Cells)
+                {
+                    sb.Append(cell.Text + ',').Replace("&nbsp;", " ");
+                }
+                sb.Append("\r\n");
+
+                foreach (GridViewRow row in gvinterestot.Rows)
+                {
+                    foreach (TableCell cell in row.Cells)
+                    {
+                        sb.Append(cell.Text + ',').Replace("&nbsp;", " ");
+                    }
+                    sb.Append("\r\n");
+                }
+
+                foreach (TableCell cell in gvinterestot.FooterRow.Cells)
+                {
+                    sb.Append(cell.Text + ',').Replace("&nbsp;", " ");
+                }
+                sb.Append("\r\n");
+
+                Response.Output.Write(sb.ToString());
+                Response.Flush();
+                Response.End();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }
