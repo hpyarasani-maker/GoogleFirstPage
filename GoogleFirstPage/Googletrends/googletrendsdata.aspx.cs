@@ -431,7 +431,7 @@ namespace GoogleFirstPage.Googletrends
             List<DateTime> dates = mydate1.Select(date => DateTime.Parse(date)).ToList();
             dates.Sort();
 
-            var groupdates = dates.GroupBy(x => new { MatchDates = x.Month + "-" + x.Year }).Select(x => x.Max(s => s.Date));
+            var groupdates = dates.GroupBy(x => new { MatchDates = x.Month + "-" + x.Year }).Select(x => x.Min(s => s.Date));
 
             foreach (var items in groupdates)
             {
