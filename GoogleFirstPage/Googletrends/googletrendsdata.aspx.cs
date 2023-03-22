@@ -249,7 +249,7 @@ namespace GoogleFirstPage.Googletrends
                 myVolume = GetSearchVolume(searchres);
                 int total = myVolume.Sum(x => Convert.ToInt32(x));
                 Dictionary<string, string> res = GetDicVolumeData(lDates, myVolume);
-                Dictionary<string, string> weeklyVolRes = GetWeeklyVolume(res, allDates);
+                Dictionary<string, string> weeklyVolRes = GetWeeklyVolume(res, allDates, iot);
 
                 double prevVal = -1;
 
@@ -340,7 +340,7 @@ namespace GoogleFirstPage.Googletrends
 
         }      
 
-        private Dictionary<string, string> GetWeeklyVolume(Dictionary<string, string> res, List<string> allDates)
+        private Dictionary<string, string> GetWeeklyVolume(Dictionary<string, string> res, List<string> allDates, JToken iot)
         {
             Dictionary<string, string> wRes = new Dictionary<string, string>();
 
@@ -349,10 +349,42 @@ namespace GoogleFirstPage.Googletrends
                 string mDate = r.Key;
                 string rvolume = r.Value;
                 var weeks = allDates.Where(d => DateTime.Parse(d).ToString("yyyy-MM") == DateTime.Parse(mDate).ToString("yyyy-MM"));
+                var swVol = 0.0;
+
                 foreach (var w in weeks)
                 {
-                    string wr = Math.Round(Convert.ToDouble(rvolume) / weeks.Count(), 0).ToString();
+                    string value = string.Empty;
+                    foreach (var item in iot)
+                    {                  
+                        var date_to = item["date_to"].Value<string>();
+                        if (w != date_to)
+                            continue;
+                        value = item["values"][0].Value<string>();
+                        break;
+                    }
+                    string wr = Math.Round(Convert.ToDouble(rvolume) * Convert.ToDouble(value) / 100 / 7 , 0).ToString();
+                    swVol += Convert.ToDouble(wr);
                     wRes.Add(w, wr);
+                }
+
+                var remVol = Convert.ToDouble(rvolume) - swVol;
+                if (remVol > 0)
+                {
+                    remVol /= weeks.Count();
+
+                    foreach (var w in weeks)
+                    {
+                        foreach (var rs in wRes)
+                        {
+                            string date = rs.Key;
+                            string volume = rs.Value;
+                            if(date == w)
+                            {
+                                wRes[date] = Math.Round(Convert.ToDouble(volume) + remVol, 0).ToString();
+                                break;
+                            }
+                        }
+                    }
                 }
             }
             return wRes;
