@@ -258,7 +258,12 @@ namespace GoogleFirstPage.Googletrends
                     dr = dt1.NewRow();
 
                     date_from = item["date_from"].Value<string>();
-                    date_to = item["date_to"].Value<string>();
+                    var days = (Convert.ToDateTime(item["date_to"].Value<string>()) - Convert.ToDateTime(item["date_from"].Value<DateTime>())).Days;
+                    if (days > 6)
+                        date_to = Convert.ToDateTime(item["date_to"].Value<string>()).AddDays(6 - days).ToString("yyyy-MM-dd");
+                    else
+                        date_to = item["date_to"].Value<string>();
+
                     value = item["values"][0].Value<string>();
                     dr["date_from"] = date_from;
                     dr["date_to"] = date_to;
@@ -355,8 +360,13 @@ namespace GoogleFirstPage.Googletrends
                 {
                     string value = string.Empty;
                     foreach (var item in iot)
-                    {                  
-                        var date_to = item["date_to"].Value<string>();
+                    {
+                        string date_to;
+                        var days = (Convert.ToDateTime(item["date_to"].Value<string>()) - Convert.ToDateTime(item["date_from"].Value<DateTime>())).Days;
+                        if (days > 6)
+                            date_to = Convert.ToDateTime(item["date_to"].Value<string>()).AddDays(6 - days).ToString("yyyy-MM-dd");
+                        else
+                            date_to = item["date_to"].Value<string>();
                         if (w != date_to)
                             continue;
                         value = item["values"][0].Value<string>();
@@ -411,8 +421,17 @@ namespace GoogleFirstPage.Googletrends
 
             foreach (var item in jt)
             {
+                string dt;
+                var days = (Convert.ToDateTime(item["date_to"].Value<string>()) - Convert.ToDateTime(item["date_from"].Value<DateTime>())).Days;
+                if (days > 6)
+                    dt = Convert.ToDateTime(item["date_to"].Value<string>()).AddDays(6 - days).ToString("yyyy-MM-dd");
+                else
+                    dt = item["date_to"].Value<string>();
+
+                dts.Add(dt);
+
                 //dts.Add(item["date_from"].Value<string>());
-                dts.Add(item["date_to"].Value<string>());
+                //dts.Add(item["date_to"].Value<string>());
             }
             return dts;
         }
