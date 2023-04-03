@@ -249,7 +249,8 @@ namespace GoogleFirstPage.Googletrends
                 myVolume = GetSearchVolume(searchres);
                 int total = myVolume.Sum(x => Convert.ToInt32(x));
                 Dictionary<string, string> res = GetDicVolumeData(lDates, myVolume);
-                Dictionary<string, string> weeklyVolRes = GetWeeklyVolume(res, allDates, iot);
+                var weeklyVol = total / 52;
+                Dictionary<string, string> weeklyVolRes = GetWeeklyVolume(res, allDates, iot, weeklyVol);
 
                 double prevVal = -1;
 
@@ -286,9 +287,10 @@ namespace GoogleFirstPage.Googletrends
                         }
                     }
 
-                    string weeklyVol = string.Empty;
-                    weeklyVolRes.TryGetValue(date_to, out weeklyVol);
-                    var duration = weeklyVolRes.Count;
+                    //string weeklyVol = string.Empty;
+                    //weeklyVolRes.TryGetValue(date_to, out weeklyVol);
+                    //var duration = weeklyVolRes.Count;
+                    var duration = 52;
                     var volDiff = GetWeeklyVolumeDiff(Convert.ToDouble(weeklyVol), Convert.ToDouble(value), prevVal, duration);
                     prevVal = Convert.ToDouble(value);
 
@@ -345,14 +347,14 @@ namespace GoogleFirstPage.Googletrends
 
         }      
 
-        private Dictionary<string, string> GetWeeklyVolume(Dictionary<string, string> res, List<string> allDates, JToken iot)
+        private Dictionary<string, string> GetWeeklyVolume(Dictionary<string, string> res, List<string> allDates, JToken iot, int weeklyVol)
         {
             Dictionary<string, string> wRes = new Dictionary<string, string>();
 
             foreach (var r in res)
             {
                 string mDate = r.Key;
-                string rvolume = r.Value;
+                //string rvolume = r.Value;
                 var weeks = allDates.Where(d => DateTime.Parse(d).ToString("yyyy-MM") == DateTime.Parse(mDate).ToString("yyyy-MM"));
                 var swVol = 0.0;
 
@@ -372,12 +374,14 @@ namespace GoogleFirstPage.Googletrends
                         value = item["values"][0].Value<string>();
                         break;
                     }
-                    string wr = Math.Round(Convert.ToDouble(rvolume) * Convert.ToDouble(value) / 100 / 7 , 0).ToString();
+                    string wr = Math.Round(Convert.ToDouble(weeklyVol) * Convert.ToDouble(value) / 100 / 7 , 0).ToString();
+                    //string wr = Math.Round(Convert.ToDouble(rvolume) * Convert.ToDouble(value) / 100 / 7 , 0).ToString();
                     swVol += Convert.ToDouble(wr);
                     wRes.Add(w, wr);
                 }
 
-                var remVol = Convert.ToDouble(rvolume) - swVol;
+                var remVol = Convert.ToDouble(weeklyVol) - swVol;
+                //var remVol = Convert.ToDouble(rvolume) - swVol;
                 if (remVol > 0)
                 {
                     remVol /= weeks.Count();
