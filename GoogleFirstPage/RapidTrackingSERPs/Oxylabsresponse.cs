@@ -13,8 +13,10 @@ namespace GoogleFirstPage.RapidTrackingSERPs
     {
         public string GetJobidsource1(string jobId, string seid, string device, out string uule)
         {
-            string username = "gpidatametrics";
-            string password = "sdV5X3fcX6";
+            //string username = "gpidatametrics";
+            //string password = "sdV5X3fcX6";
+            string username = "piapp";
+            string password = "b5FCvgkjxx";
             string resURL = "http://data.oxylabs.io/v1/queries/" + jobId + "/results";
             //string resURL = "https://data.oxylabs.io/v1/queries/" + jobId;
             HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(resURL);

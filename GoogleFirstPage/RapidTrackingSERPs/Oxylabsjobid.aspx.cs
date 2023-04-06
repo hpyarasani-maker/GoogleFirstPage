@@ -224,8 +224,10 @@ namespace GoogleFirstPage.RapidTrackingSERPs
 
         private string GetHtmlSource(string jobId, string seid, out string device, out string url, out string gl, out string keyword)
         {
-            string username = "gpidatametrics";
-            string password = "sdV5X3fcX6";
+            //string username = "gpidatametrics";
+            //string password = "sdV5X3fcX6";
+            string username = "piapp";
+            string password = "b5FCvgkjxx";
 
             string resURL = "http://data.oxylabs.io/v1/queries/" + jobId + "/results";
             //string resURL = "https://data.oxylabs.io/v1/queries/" + jobId;

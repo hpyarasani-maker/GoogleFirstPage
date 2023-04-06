@@ -28,8 +28,10 @@ namespace GoogleFirstPage.GoogleClassicLinks
         private ArrayList GetOxylabsWebDataSources(string kwds, string domain, string location, string lang, string uule)
         {
             Uri queryUri = new Uri("https://data.oxylabs.io/v1/queries/batch");
-            string username = "gpidatametrics";
-            string password = "sdV5X3fcX6";
+            //string username = "gpidatametrics";
+            //string password = "sdV5X3fcX6";
+            string username = "piapp";
+            string password = "b5FCvgkjxx";
             string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
 
             OxyParams op = new OxyParams()
@@ -185,8 +187,10 @@ namespace GoogleFirstPage.GoogleClassicLinks
         private ArrayList GetOxylabsWebDataMobileSources(string kwds, string domain, string location, string lang, string uule)
         {
             Uri queryUri = new Uri("https://data.oxylabs.io/v1/queries/batch");
-            string username = "gpidatametrics";
-            string password = "sdV5X3fcX6";
+            //string username = "gpidatametrics";
+            //string password = "sdV5X3fcX6";
+            string username = "piapp";
+            string password = "b5FCvgkjxx";
             string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
             string[] kwd = { kwds };
             OxyParams op = new OxyParams()
@@ -339,8 +343,10 @@ namespace GoogleFirstPage.GoogleClassicLinks
         {
 
             Uri queryUri = new Uri("https://data.oxylabs.io/v1/queries/batch");
-            string username = "gpidatametrics";
-            string password = "sdV5X3fcX6";
+            //string username = "gpidatametrics";
+            //string password = "sdV5X3fcX6";
+            string username = "piapp";
+            string password = "b5FCvgkjxx";
             string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
             string[] kwd = { kwds };
             OxyParams op = new OxyParams()
@@ -496,8 +502,10 @@ namespace GoogleFirstPage.GoogleClassicLinks
         {
 
             Uri queryUri = new Uri("https://data.oxylabs.io/v1/queries/batch");
-            string username = "gpidatametrics";
-            string password = "sdV5X3fcX6";
+            //string username = "gpidatametrics";
+            //string password = "sdV5X3fcX6";
+            string username = "piapp";
+            string password = "b5FCvgkjxx";
             string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
             string[] kwd = { kwds };
             OxyParams op = new OxyParams()

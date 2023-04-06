@@ -41,8 +41,10 @@ namespace GoogleFirstPage.GoogleClassicLinksCallback
             ArrayList arRes = new ArrayList();
             try
             {
-                string username = "gpidatametrics";
-                string password = "sdV5X3fcX6";
+                //string username = "gpidatametrics";
+                //string password = "sdV5X3fcX6";
+                string username = "piapp";
+                string password = "b5FCvgkjxx";
 
                 if (status == "done")
                 {
@@ -92,8 +94,10 @@ namespace GoogleFirstPage.GoogleClassicLinksCallback
             ArrayList arRes = new ArrayList();
             try
             {
-                string username = "gpidatametrics";
-                string password = "sdV5X3fcX6";
+                //string username = "gpidatametrics";
+                //string password = "sdV5X3fcX6";
+                string username = "piapp";
+                string password = "b5FCvgkjxx";
 
                 if (status == "done")
                 {
@@ -142,8 +146,10 @@ namespace GoogleFirstPage.GoogleClassicLinksCallback
             ArrayList arRes = new ArrayList();
             try
             {
-                string username = "gpidatametrics";
-                string password = "sdV5X3fcX6";
+                //string username = "gpidatametrics";
+                //string password = "sdV5X3fcX6";
+                string username = "piapp";
+                string password = "b5FCvgkjxx";
 
                 if (status == "done")
                 {
@@ -194,8 +200,10 @@ namespace GoogleFirstPage.GoogleClassicLinksCallback
             ArrayList arRes = new ArrayList();
             try
             {
-                string username = "gpidatametrics";
-                string password = "sdV5X3fcX6";
+                //string username = "gpidatametrics";
+                //string password = "sdV5X3fcX6";
+                string username = "piapp";
+                string password = "b5FCvgkjxx";
 
                 if (status == "done")
                 {
@@ -246,8 +254,10 @@ namespace GoogleFirstPage.GoogleClassicLinksCallback
             ArrayList arRes = new ArrayList();
             try
             {
-                string username = "gpidatametrics";
-                string password = "sdV5X3fcX6";
+                //string username = "gpidatametrics";
+                //string password = "sdV5X3fcX6";
+                string username = "piapp";
+                string password = "b5FCvgkjxx";
 
                 if (status == "done")
                 {
@@ -297,8 +307,10 @@ namespace GoogleFirstPage.GoogleClassicLinksCallback
             ArrayList arRes = new ArrayList();
             try
             {
-                string username = "gpidatametrics";
-                string password = "sdV5X3fcX6";
+                //string username = "gpidatametrics";
+                //string password = "sdV5X3fcX6";
+                string username = "piapp";
+                string password = "b5FCvgkjxx";
 
                 if (status == "done")
                 {
@@ -348,8 +360,10 @@ namespace GoogleFirstPage.GoogleClassicLinksCallback
             ArrayList arRes = new ArrayList();
             try
             {
-                string username = "gpidatametrics";
-                string password = "sdV5X3fcX6";
+                //string username = "gpidatametrics";
+                //string password = "sdV5X3fcX6";
+                string username = "piapp";
+                string password = "b5FCvgkjxx";
 
                 if (status == "done")
                 {
@@ -393,8 +407,10 @@ namespace GoogleFirstPage.GoogleClassicLinksCallback
         private async Task<Dictionary<string, ArrayList>> GetOxylabsWebDataSources(string kwds, string domain, string location, string lang, string uule)
         {
             Uri queryUri = new Uri("https://data.oxylabs.io/v1/queries/batch");
-            string username = "gpidatametrics";
-            string password = "sdV5X3fcX6";
+            //string username = "gpidatametrics";
+            //string password = "sdV5X3fcX6";
+            string username = "piapp";
+            string password = "b5FCvgkjxx";
             string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
 
             //string callbackURL = "http://seresults.azurewebsites.net/api/callback/";              
@@ -477,8 +493,10 @@ namespace GoogleFirstPage.GoogleClassicLinksCallback
         {
             //string kws = "[\"" + kwds.Replace(",", "\", \"") + "\"]";
             Uri queryUri = new Uri("https://data.oxylabs.io/v1/queries/batch");
-            string username = "gpidatametrics";
-            string password = "sdV5X3fcX6";
+            //string username = "gpidatametrics";
+            //string password = "sdV5X3fcX6";
+            string username = "piapp";
+            string password = "b5FCvgkjxx";
             string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
 
             //string callbackURL = "http://seresults.azurewebsites.net/api/callback/";
@@ -560,8 +578,10 @@ namespace GoogleFirstPage.GoogleClassicLinksCallback
             //string kws = "[\"" + kwds.Replace(",", "\", \"") + "\"]";
 
             Uri queryUri = new Uri("https://data.oxylabs.io/v1/queries/batch");
-            string username = "gpidatametrics";
-            string password = "sdV5X3fcX6";
+            //string username = "gpidatametrics";
+            //string password = "sdV5X3fcX6";
+            string username = "piapp";
+            string password = "b5FCvgkjxx";
             string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
 
             string callbackURL = "http://callbacklivetest.azurewebsites.net/api/callback";
@@ -642,8 +662,10 @@ namespace GoogleFirstPage.GoogleClassicLinksCallback
             //string kws = "[\"" + kwds.Replace(",", "\", \"") + "\"]";
 
             Uri queryUri = new Uri("https://data.oxylabs.io/v1/queries/batch");
-            string username = "gpidatametrics";
-            string password = "sdV5X3fcX6";
+            //string username = "gpidatametrics";
+            //string password = "sdV5X3fcX6";
+            string username = "piapp";
+            string password = "b5FCvgkjxx";
             string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
 
             string callbackURL = "http://callbacklivetest.azurewebsites.net/api/callback";
@@ -723,8 +745,10 @@ namespace GoogleFirstPage.GoogleClassicLinksCallback
             //string kws = "[\"" + kwds.Replace(",", "\", \"") + "\"]";
 
             Uri queryUri = new Uri("https://data.oxylabs.io/v1/queries/batch");
-            string username = "gpidatametrics";
-            string password = "sdV5X3fcX6";
+            //string username = "gpidatametrics";
+            //string password = "sdV5X3fcX6";
+            string username = "piapp";
+            string password = "b5FCvgkjxx";
             string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
 
             string callbackURL = "http://callbacklivetest.azurewebsites.net/api/callback";
@@ -807,8 +831,10 @@ namespace GoogleFirstPage.GoogleClassicLinksCallback
             //string kws = "[\"" + kwds.Replace(",", "\", \"") + "\"]";
 
             Uri queryUri = new Uri("https://data.oxylabs.io/v1/queries/batch");
-            string username = "gpidatametrics";
-            string password = "sdV5X3fcX6";
+            //string username = "gpidatametrics";
+            //string password = "sdV5X3fcX6";
+            string username = "piapp";
+            string password = "b5FCvgkjxx";
             string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
 
             string callbackURL = "http://callbacklivetest.azurewebsites.net/api/callback";
@@ -888,8 +914,10 @@ namespace GoogleFirstPage.GoogleClassicLinksCallback
         public async Task<ArrayList> GetOxylabsWebDataSources_Nws_Images_Mobile2(string kwds, string domain, string location, string lang, string uule, string value)
         {
             Uri queryUri = new Uri("https://data.oxylabs.io/v1/queries/batch");
-            string username = "gpidatametrics";
-            string password = "sdV5X3fcX6";
+            //string username = "gpidatametrics";
+            //string password = "sdV5X3fcX6";
+            string username = "piapp";
+            string password = "b5FCvgkjxx";
             string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
 
             string callbackURL = "http://callbacklivetest.azurewebsites.net/api/callback";
@@ -1075,8 +1103,10 @@ namespace GoogleFirstPage.GoogleClassicLinksCallback
             //string kws = "[\"" + kwds.Replace(",", "\", \"") + "\"]";
 
             Uri queryUri = new Uri("https://data.oxylabs.io/v1/queries/batch");
-            string username = "gpidatametrics";
-            string password = "sdV5X3fcX6";
+            //string username = "gpidatametrics";
+            //string password = "sdV5X3fcX6";
+            string username = "piapp";
+            string password = "b5FCvgkjxx";
             string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
 
             string callbackURL = "http://callbacklivetest.azurewebsites.net/api/callback";
@@ -1240,8 +1270,10 @@ namespace GoogleFirstPage.GoogleClassicLinksCallback
             //string kws = "[\"" + kwds.Replace(",", "\", \"") + "\"]";
 
             Uri queryUri = new Uri("https://data.oxylabs.io/v1/queries/batch");
-            string username = "gpidatametrics";
-            string password = "sdV5X3fcX6";
+            //string username = "gpidatametrics";
+            //string password = "sdV5X3fcX6";
+            string username = "piapp";
+            string password = "b5FCvgkjxx";
             string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
 
             string callbackURL = "http://callbacklivetest.azurewebsites.net/api/callback";

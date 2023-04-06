@@ -268,8 +268,10 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 string seid = "";
                 string sename1 = "";
                 int count = 0;
-                string username = "gpidatametrics";
-                string password = "sdV5X3fcX6";
+                //string username = "gpidatametrics";
+                //string password = "sdV5X3fcX6";
+                string username = "piapp";
+                string password = "b5FCvgkjxx";
                 string resURL = "http://data.oxylabs.io/v1/queries/" + jobid;
                 HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(resURL);
                 string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
