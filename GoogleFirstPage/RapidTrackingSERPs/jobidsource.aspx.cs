@@ -31,8 +31,10 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             
 
             string seid = "";
-            string username = "gpidatametrics";
-            string password = "sdV5X3fcX6";
+            //string username = "gpidatametrics";
+            //string password = "sdV5X3fcX6";
+            string username = "piapp";
+            string password = "b5FCvgkjxx";
             string resURL = "http://data.oxylabs.io/v1/queries/" + jobid;
             HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(resURL);
             string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
@@ -77,8 +79,10 @@ namespace GoogleFirstPage.RapidTrackingSERPs
 
         private string GetHtmlSource(string jobId, string seid, string device)
         {
-            string username = "gpidatametrics";
-            string password = "sdV5X3fcX6";
+            //string username = "gpidatametrics";
+            //string password = "sdV5X3fcX6";
+            string username = "piapp";
+            string password = "b5FCvgkjxx";
             string resURL = "http://data.oxylabs.io/v1/queries/" + jobId + "/results";
             //string resURL = "https://data.oxylabs.io/v1/queries/" + jobId;
             HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(resURL);
