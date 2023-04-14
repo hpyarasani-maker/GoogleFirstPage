@@ -113,7 +113,7 @@ namespace GoogleFirstPage.Googletrends
                 if (dt1.Rows.Count > 0)
                 {
                     int total = trends.GetSearchVolume(searchres).Sum(x => Convert.ToInt32(x));
-                    CreateXml(dt1, total, txtkeyword.Text, location, txtstartdate.Text, txtenddate.Text);
+                    //CreateXml(dt1, total, txtkeyword.Text, location, txtstartdate.Text, txtenddate.Text);
 
                     gvinterestot.DataSource = dt1;
                     gvinterestot.DataBind();
@@ -276,31 +276,6 @@ namespace GoogleFirstPage.Googletrends
             }
         }
 
-        private void CreateXml(DataTable dt, int total, string keyword, string location, string prevYear, string curYear)
-        {
-            StringBuilder builder = new StringBuilder();
-            builder.AppendLine("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
-            builder.AppendLine("<GoogletrendsOverTime>");
-            builder.AppendLine("<OverTimes keyword =\"" + keyword + "\" country=\"" + location + "\" previousYear=\"" + prevYear + "\" currentYear=\"" + curYear + "\" >");
-            foreach (DataRow row in dt.Rows)
-            {
-                builder.AppendLine("<OverTime>");
-                foreach (DataColumn col in dt.Columns)
-                {
-                    if (string.IsNullOrEmpty(row[col].ToString()))
-                        builder.AppendLine("<" + col.ColumnName + " />");
-                    else
-                        builder.AppendLine("<" + col.ColumnName + ">" + row[col].ToString() + "</" + col.ColumnName + ">");
-                }
-                builder.AppendLine("</OverTime>");
-            }
-            builder.AppendLine("</OverTimes>");
-            builder.AppendLine("<TotalVolume>" + total + "</TotalVolume>");
-            builder.AppendLine("</GoogletrendsOverTime>");
-
-            XmlDocument doc = new XmlDocument();
-            doc.LoadXml(builder.ToString());
-            doc.Save("C:\\inetpub\\wwwroot\\trends\\TrendsOverTime.xml");
-        }
+       
     }
 }

@@ -515,6 +515,32 @@ namespace GoogleFirstPage.Googletrends
             int d = vm / DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month) * DateTime.Now.Day;
             return d.ToString();
         }
+        private void CreateXml(DataTable dt, int total, string keyword, string location, string prevYear, string curYear)
+        {
+            StringBuilder builder = new StringBuilder();
+            builder.AppendLine("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
+            builder.AppendLine("<GoogletrendsOverTime>");
+            builder.AppendLine("<OverTimes keyword =\"" + keyword + "\" country=\"" + location + "\" previousYear=\"" + prevYear + "\" currentYear=\"" + curYear + "\" >");
+            foreach (DataRow row in dt.Rows)
+            {
+                builder.AppendLine("<OverTime>");
+                foreach (DataColumn col in dt.Columns)
+                {
+                    if (string.IsNullOrEmpty(row[col].ToString()))
+                        builder.AppendLine("<" + col.ColumnName + " />");
+                    else
+                        builder.AppendLine("<" + col.ColumnName + ">" + row[col].ToString() + "</" + col.ColumnName + ">");
+                }
+                builder.AppendLine("</OverTime>");
+            }
+            builder.AppendLine("</OverTimes>");
+            builder.AppendLine("<TotalVolume>" + total + "</TotalVolume>");
+            builder.AppendLine("</GoogletrendsOverTime>");
+
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(builder.ToString());
+            doc.Save("C:\\inetpub\\wwwroot\\trends\\TrendsOverTime.xml");
+        }
 
     }
 }
