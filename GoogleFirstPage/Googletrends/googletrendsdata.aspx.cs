@@ -14,19 +14,17 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Drawing;
 using System.Globalization;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace GoogleFirstPage.Googletrends
 {
     public partial class keywordsdata : System.Web.UI.Page
     {
-        
-        string volumedata = string.Empty;
-        string searchres = string.Empty;
-        List<string> allDates;
-        List<string> lDates;
-        List<string> myVolume;
-        
 
+        string searchres = string.Empty;
+
+        TrendsData trends = new TrendsData();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -46,128 +44,17 @@ namespace GoogleFirstPage.Googletrends
             btnCSV.Enabled = false;
         }
 
-        public async Task<string> keywords_data_trends_explore_live(string[] keyword, string location)
+        protected async void btngoogletrends_Click(object sender, EventArgs e)
         {
-            string[] kwds = { txtkeyword.Text };
-            Uri queryUri = new Uri("https://api.dataforseo.com/v3/keywords_data/google_trends/explore/live");
-            string username = "hemachander@intelligentpositioning.com";
-            string password = "19a90cf9a3f8a1e1";
-            string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
-
-            //string fromDate = DateTime.Now.AddYears(-1).ToString("yyyy-MM-dd");
-            //string toDate = DateTime.Today.ToString("yyyy-MM-dd");
-
-            string fromDate = txtstartdate.Text;
-            string toDate = txtenddate.Text;
-
-            var postData = new List<object>();
-            postData.Add(new
-            {
-                location_name = ddllocation.SelectedItem,
-                date_from = fromDate,
-                date_to = toDate,
-                type = "web",
-                category_code = 0,
-                keywords = kwds
-            });
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(queryUri);
-            req.Headers.Clear();
-
-            req.Method = "POST";
-            req.ContentType = "application/json";
-            req.Headers.Add(HttpRequestHeader.Authorization, "Basic " + authInfo);
-
-            using (var streamWriter = new StreamWriter(req.GetRequestStream()))
-            {
-                var json = JsonConvert.SerializeObject(postData, new JsonSerializerSettings
-                {
-                    Formatting = Newtonsoft.Json.Formatting.Indented,
-                });
-
-                streamWriter.Write(json);
-            }
-            string response = "";
-            try
-            {
-                HttpWebResponse res = (HttpWebResponse)req.GetResponse();
-                using (StreamReader reader = new StreamReader(res.GetResponseStream(), Encoding.UTF8))
-                {
-                    response = reader.ReadToEnd();
-                    res.Close();
-                    //return response;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return await Task.FromResult(response);
-        }
-
-        public async Task<string> GetSearchVolumeResponse(string[] keyword, string location)
-        {
-            string[] kwds = { txtkeyword.Text };
-            Uri queryUri = new Uri("https://api.dataforseo.com/v3/keywords_data/google_ads/search_volume/live");
-            string username = "hemachander@intelligentpositioning.com";
-            string password = "19a90cf9a3f8a1e1";
-            string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
-
-            var postData = new List<object>();
-            postData.Add(new
-            {
-                location_name = ddllocation.SelectedItem,
-                keywords = kwds
-
-            });
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(queryUri);
-            req.Headers.Clear();
-
-            req.Method = "POST";
-            req.ContentType = "application/json";
-            req.Headers.Add(HttpRequestHeader.Authorization, "Basic " + authInfo);
-
-            using (var streamWriter = new StreamWriter(req.GetRequestStream()))
-            {
-                var json = JsonConvert.SerializeObject(postData, new JsonSerializerSettings
-                {
-                    Formatting = Newtonsoft.Json.Formatting.Indented,
-                });
-
-                streamWriter.Write(json);
-            }
-            string response = "";
-            try
-            {
-                HttpWebResponse res = (HttpWebResponse)req.GetResponse();
-                using (StreamReader reader = new StreamReader(res.GetResponseStream(), Encoding.UTF8))
-                {
-                    response = reader.ReadToEnd();
-                    res.Close();
-                    //return response;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return await Task.FromResult(response);
-        }
-
-        protected void btngoogletrends_Click(object sender, EventArgs e)
-        {
-            //RegisterAsyncTask(new PageAsyncTask(keywords_data_trends_explore_live));
-
             try
             {
                 string locations = ddllocation.SelectedItem.ToString();
                 string kid = ddllocation.SelectedValue.ToString();
-                string[] kwds = { txtkeyword.Text };
                 if (locations != null)
                 {
-                    string res = keywords_data_trends_explore_live(kwds, ddllocation.SelectedValue.ToString()).Result;
-                    searchres = GetSearchVolumeResponse(kwds, ddllocation.SelectedValue.ToString()).Result;
+                    string res = await trends.keywords_data_trends_explore_live(txtkeyword.Text, txtstartdate.Text, txtenddate.Text, ddllocation.SelectedItem.Text); //.Result;
+                    searchres = await trends.GetSearchVolumeResponse(txtkeyword.Text, ddllocation.SelectedItem.Text);
                     ProcessData(res, kid, locations);
-                    //ProcessSVData(searchres, kid, locations);
                 }
                 btnCSV.Enabled = true;
             }
@@ -216,96 +103,18 @@ namespace GoogleFirstPage.Googletrends
                 throw ex;
             }
         }
-
-        public string TimestampToDate(long timestamp)
+        
+        public void SaveOverTime(JToken iot, string kid, string location)
         {
-            DateTime tsDate = DateTimeOffset.FromUnixTimeSeconds(timestamp).DateTime;
-            return tsDate.ToString();
-        }
-
-        public void SaveOverTime(JToken iot, string kid, string seid)
-        {
-            DataTable dt1 = new DataTable();
-
             try
             {
-                ArrayList a = new ArrayList();
-
-                dt1.Columns.Add(new DataColumn("date_from", typeof(string)));
-                dt1.Columns.Add(new DataColumn("date_to", typeof(string)));
-                dt1.Columns.Add(new DataColumn("MontlyVolume", typeof(string)));
-                dt1.Columns.Add(new DataColumn("WeeklyVolume", typeof(string)));
-                dt1.Columns.Add(new DataColumn("value", typeof(string)));
-                dt1.Columns.Add(new DataColumn("WeeklyVolProp", typeof(string)));
-                dt1.Columns.Add(new DataColumn("WeeklyVolDiff", typeof(string)));
-
-                var date_from = "";
-                var date_to = "";
-                var value = "";
-                DataRow dr;
-
-                allDates = GetAlldates(iot);
-                lDates = GetLastDates(allDates).ToList();
-                myVolume = GetSearchVolume(searchres);
-                int total = myVolume.Sum(x => Convert.ToInt32(x));
-                Dictionary<string, string> res = GetDicVolumeData(lDates, myVolume);
-                var weeklyVol = total / 52;
-                Dictionary<string, string> weeklyVolRes = GetWeeklyVolume(res, allDates, iot, weeklyVol);
-
-                double prevVal = -1;
-
-                foreach (var item in iot)
-                {
-                    dr = dt1.NewRow();
-
-                    date_from = item["date_from"].Value<string>();
-                    var days = (Convert.ToDateTime(item["date_to"].Value<string>()) - Convert.ToDateTime(item["date_from"].Value<DateTime>())).Days;
-                    if (days > 6)
-                        date_to = Convert.ToDateTime(item["date_to"].Value<string>()).AddDays(6 - days).ToString("yyyy-MM-dd");
-                    else
-                        date_to = item["date_to"].Value<string>();
-
-                    value = item["values"][0].Value<string>();
-                    dr["date_from"] = date_from;
-                    dr["date_to"] = date_to;
-                    dr["MontlyVolume"] = null;
-
-                    foreach (var x in res)
-                    {
-                        string lastmdate = "";
-                        string volumedata = "";
-
-                        for (int i = 0; i < lDates.Count; i++)
-                        {
-                            lastmdate = x.Key;
-                            volumedata = x.Value;
-
-                            if (date_to == lastmdate.ToString())
-                            {
-                                dr["MontlyVolume"] = volumedata;
-                            }
-                        }
-                    }
-
-                    //string weeklyVol = string.Empty;
-                    //weeklyVolRes.TryGetValue(date_to, out weeklyVol);
-                    //var duration = weeklyVolRes.Count;
-                    var duration = 52;
-                    var volDiff = GetWeeklyVolumeDiff(Convert.ToDouble(weeklyVol), Convert.ToDouble(value), prevVal, duration);
-                    prevVal = Convert.ToDouble(value);
-
-                    dr["WeeklyVolume"] = weeklyVol;
-                    dr["value"] = value;
-                    if (volDiff != null)
-                    {
-                        dr["WeeklyVolProp"] = volDiff[0];
-                        dr["WeeklyVolDiff"] = volDiff[1];
-                    }
-                    dt1.Rows.Add(dr);
-                }
+                DataTable dt1 = trends.GetOverTime(iot, searchres);
 
                 if (dt1.Rows.Count > 0)
                 {
+                    int total = trends.GetSearchVolume(searchres).Sum(x => Convert.ToInt32(x));
+                    CreateXml(dt1, total, txtkeyword.Text, location, txtstartdate.Text, txtenddate.Text);
+
                     gvinterestot.DataSource = dt1;
                     gvinterestot.DataBind();
 
@@ -323,197 +132,24 @@ namespace GoogleFirstPage.Googletrends
             {
                 throw ex;
             }
-        }        
-        private string[] GetWeeklyVolumeDiff(double vol, double curVal, double prevVal, int duration )
-        {
-            if(prevVal == -1)
-            {
-                return null;
-            }
-
-            string[] res = { string.Empty, string.Empty };            
-                       
-            var cVol = Math.Round(vol * (curVal / 100f), 3);
-            var pVol = Math.Round(vol * (prevVal / 100f), 3);
-
-            var prop = Math.Round(((cVol - pVol) / pVol) * duration, 3);
-            //var prop = prevVal - curVal;
-
-            var volDiff = Math.Round(vol * (prop / 100f),0);
-
-            res[0] = prop.ToString();
-            res[1] = volDiff.ToString();
-            return res;
-
-        }      
-
-        private Dictionary<string, string> GetWeeklyVolume(Dictionary<string, string> res, List<string> allDates, JToken iot, int weeklyVol)
-        {
-            Dictionary<string, string> wRes = new Dictionary<string, string>();
-
-            foreach (var r in res)
-            {
-                string mDate = r.Key;
-                //string rvolume = r.Value;
-                var weeks = allDates.Where(d => DateTime.Parse(d).ToString("yyyy-MM") == DateTime.Parse(mDate).ToString("yyyy-MM"));
-                var swVol = 0.0;
-
-                foreach (var w in weeks)
-                {
-                    string value = string.Empty;
-                    foreach (var item in iot)
-                    {
-                        string date_to;
-                        var days = (Convert.ToDateTime(item["date_to"].Value<string>()) - Convert.ToDateTime(item["date_from"].Value<DateTime>())).Days;
-                        if (days > 6)
-                            date_to = Convert.ToDateTime(item["date_to"].Value<string>()).AddDays(6 - days).ToString("yyyy-MM-dd");
-                        else
-                            date_to = item["date_to"].Value<string>();
-                        if (w != date_to)
-                            continue;
-                        value = item["values"][0].Value<string>();
-                        break;
-                    }
-                    string wr = Math.Round(Convert.ToDouble(weeklyVol) * Convert.ToDouble(value) / 100 / 7 , 0).ToString();
-                    //string wr = Math.Round(Convert.ToDouble(rvolume) * Convert.ToDouble(value) / 100 / 7 , 0).ToString();
-                    swVol += Convert.ToDouble(wr);
-                    wRes.Add(w, wr);
-                }
-
-                var remVol = Convert.ToDouble(weeklyVol) - swVol;
-                //var remVol = Convert.ToDouble(rvolume) - swVol;
-                if (remVol > 0)
-                {
-                    remVol /= weeks.Count();
-
-                    foreach (var w in weeks)
-                    {
-                        foreach (var rs in wRes)
-                        {
-                            string date = rs.Key;
-                            string volume = rs.Value;
-                            if(date == w)
-                            {
-                                wRes[date] = Math.Round(Convert.ToDouble(volume) + remVol, 0).ToString();
-                                break;
-                            }
-                        }
-                    }
-                }
-            }
-            return wRes;
         }
 
-        public List<string> GetSearchVolume(string json)
+        public void SaveBySubregion(JToken ibs, string kid, string location)
         {
-            List<string> myList = new List<string>();
-            JObject jo = JObject.Parse(searchres);
-            var tasks = from p in jo["tasks"] select p;
-            var res = tasks.FirstOrDefault()["result"];
-            var monthly = res.FirstOrDefault()["monthly_searches"];
-            foreach (var mm in monthly)
+            try
             {
-                myList.Add(mm["search_volume"].Value<string>());
-            }
-            myList.Add(GetNumberofDays(int.Parse(myList[0])));
-            return myList;
-        }
+                DataTable dt2 = trends.GetBySubregion(ibs);
 
-        public List<string> GetAlldates(JToken jt)
-        {
-            List<string> dts = new List<string>();
-
-            foreach (var item in jt)
-            {
-                string dt;
-                var days = (Convert.ToDateTime(item["date_to"].Value<string>()) - Convert.ToDateTime(item["date_from"].Value<DateTime>())).Days;
-                if (days > 6)
-                    dt = Convert.ToDateTime(item["date_to"].Value<string>()).AddDays(6 - days).ToString("yyyy-MM-dd");
+                if (dt2.Rows.Count > 0)
+                {
+                    Label7.Visible = true;
+                    gvsubregion.DataSource = dt2;
+                    gvsubregion.DataBind();
+                }
                 else
-                    dt = item["date_to"].Value<string>();
-
-                dts.Add(dt);
-
-                //dts.Add(item["date_from"].Value<string>());
-                //dts.Add(item["date_to"].Value<string>());
-            }
-            return dts;
-        }
-
-        public Dictionary<string, string> GetDicVolumeData(List<string> date, List<string> volume)
-        {
-            Dictionary<string, string> dict = new Dictionary<string, string>();
-            for (int i = 0; i < date.Count; i++)
-                dict.Add(date[i], volume[i]);
-            return dict;
-        }
-
-        public List<string> GetLastDates(List<string> mydate1)
-        {
-            List<string> myList = new List<string>();
-            List<DateTime> dates = mydate1.Select(date => DateTime.Parse(date)).ToList();
-            dates.Sort();
-
-            var groupdates = dates.GroupBy(x => new { MatchDates = x.Month + "-" + x.Year }).Select(x => x.Min(s => s.Date));
-
-            foreach (var items in groupdates)
-            {
-                myList.Add(items.ToString("yyyy-MM-dd"));
-            }
-            return myList;
-        }
-
-
-        public string GetNumberofDays(int vm)
-        {
-            int d = vm / DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month) * DateTime.Now.Day;
-            return d.ToString();
-        }
-
-
-        public void SaveBySubregion(JToken ibs, string kid, string seid)
-        {
-            try
-            {
-                DataTable dt2 = new DataTable();
-                dt2.Columns.Add("geo_id");
-                dt2.Columns.Add("geo_name");
-                dt2.Columns.Add("value");
-                dt2.Columns.Add("max_value_index");
-
-                foreach (var item in ibs)
                 {
-                    ArrayList a = new ArrayList();
-                    DataRow dr = dt2.NewRow();
-
-                    var geo_id = item["geo_id"].Value<string>();
-                    var geo_name = item["geo_name"].Value<string>();
-                    var value = item["values"][0].Value<string>();
-                    var max_value_index = item["max_value_index"].Value<int>();
-
-                    a.Add(geo_id);
-                    a.Add(geo_name);
-                    a.Add(value);
-                    a.Add(max_value_index);
-
-                    for (int s = 0; s < a.Count; s++)
-                    {
-                        dr[s] = a[s];
-                    }
-
-                    dt2.Rows.Add(dr);
-                    if (dt2.Rows.Count > 0)
-                    {
-                        Label7.Visible = true;
-                        gvsubregion.DataSource = dt2;
-                        gvsubregion.DataBind();
-                    }
-                    else
-                    {
-                        gvsubregion.DataSource = null;
-                        gvsubregion.DataBind();
-                    }
-
+                    gvsubregion.DataSource = null;
+                    gvsubregion.DataBind();
                 }
             }
             catch (Exception ex)
@@ -522,95 +158,22 @@ namespace GoogleFirstPage.Googletrends
             }
         }
 
-        public void SaveRelatedTopics(JToken rt, string kid, string seid)
+        public void SaveRelatedTopics(JToken rt, string kid, string location)
         {
             try
             {
-                DataTable dt3 = new DataTable();
-                dt3.Columns.Add("topic_id");
-                dt3.Columns.Add("topic_title");
-                dt3.Columns.Add("topic_type");
-                dt3.Columns.Add("type");
-                dt3.Columns.Add("value");
+                DataTable dt3 = trends.GetRelatedTopics(rt);
 
-                var top = rt["top"];
-                var rising = rt["rising"];
-
-                foreach (var item in top)
+                if (dt3.Rows.Count > 0)
                 {
-                    ArrayList a = new ArrayList();
-                    ArrayList a1 = new ArrayList();
-                    DataRow dr = dt3.NewRow();
-
-                    var topic_id = item["topic_id"].Value<string>();
-                    var topic_title = item["topic_title"].Value<string>();
-                    var topic_type = item["topic_type"].Value<string>();
-                    var value = item["value"].Value<string>();
-                    var type = "top";
-
-
-                    a.Add(topic_id);
-                    a.Add(topic_title);
-                    a.Add(topic_type);
-                    a.Add(type);
-                    a.Add(value);
-
-
-
-                    for (int s = 0; s < a.Count; s++)
-                    {
-                        dr[s] = a[s];
-                    }
-
-                    dt3.Rows.Add(dr);
-                    if (dt3.Rows.Count > 0)
-                    {
-                        Label8.Visible = true;
-                        gvrelatedtopics.DataSource = dt3;
-                        gvrelatedtopics.DataBind();
-                    }
-                    else
-                    {
-                        gvrelatedtopics.DataSource = null;
-                        gvrelatedtopics.DataBind();
-                    }
+                    Label8.Visible = true;
+                    gvrelatedtopics.DataSource = dt3;
+                    gvrelatedtopics.DataBind();
                 }
-
-                foreach (var item in rising)
+                else
                 {
-                    var topic_id = item["topic_id"].Value<string>();
-                    var topic_title = item["topic_title"].Value<string>();
-                    var topic_type = item["topic_type"].Value<string>();
-                    var value = item["value"].Value<int>();
-                    var type = "rising";
-
-                    ArrayList a1 = new ArrayList();
-                    DataRow dr1 = dt3.NewRow();
-
-                    a1.Add(topic_id);
-                    a1.Add(topic_title);
-                    a1.Add(topic_type);
-                    a1.Add(type);
-                    a1.Add(value);
-
-
-                    for (int s = 0; s < a1.Count; s++)
-                    {
-                        dr1[s] = a1[s];
-                    }
-
-                    dt3.Rows.Add(dr1);
-                    if (dt3.Rows.Count > 0)
-                    {
-                        Label8.Visible = true;
-                        gvrelatedtopics.DataSource = dt3;
-                        gvrelatedtopics.DataBind();
-                    }
-                    else
-                    {
-                        gvrelatedtopics.DataSource = null;
-                        gvrelatedtopics.DataBind();
-                    }
+                    gvrelatedtopics.DataSource = null;
+                    gvrelatedtopics.DataBind();
                 }
             }
             catch (Exception ex)
@@ -619,84 +182,22 @@ namespace GoogleFirstPage.Googletrends
             }
         }
 
-        public void SaveRelatedQueries(JToken rq, string kid, string seid)
+        public void SaveRelatedQueries(JToken rq, string kid, string location)
         {
             try
             {
-                DataTable dt4 = new DataTable();
-                dt4.Columns.Add("query");
-                dt4.Columns.Add("type");
-                dt4.Columns.Add("value");
+                DataTable dt4 = trends.GetRelatedQueries(rq);
 
-
-                var top = rq["top"];
-                var rising = rq["rising"];
-
-                foreach (var item in top)
+                if (dt4.Rows.Count > 0)
                 {
-                    ArrayList a = new ArrayList();
-                    DataRow dr = dt4.NewRow();
-
-                    var query = item["query"].Value<string>();
-                    var value = item["value"].Value<int>();
-                    var type = "top";
-
-
-                    a.Add(query);
-                    a.Add(type);
-                    a.Add(value);
-
-                    for (int s = 0; s < a.Count; s++)
-                    {
-                        dr[s] = a[s];
-                    }
-
-                    dt4.Rows.Add(dr);
-                    if (dt4.Rows.Count > 0)
-                    {
-                        Label9.Visible = true;
-                        gvrelatedqueries.DataSource = dt4;
-                        gvrelatedqueries.DataBind();
-                    }
-                    else
-                    {
-                        gvrelatedqueries.DataSource = null;
-                        gvrelatedqueries.DataBind();
-                    }
+                    Label9.Visible = true;
+                    gvrelatedqueries.DataSource = dt4;
+                    gvrelatedqueries.DataBind();
                 }
-
-                foreach (var item in rising)
+                else
                 {
-                    var query = item["query"].Value<string>();
-                    var value = item["value"].Value<int>();
-                    var type = "rising";
-
-                    ArrayList a1 = new ArrayList();
-                    DataRow dr1 = dt4.NewRow();
-
-                    a1.Add(query);
-                    a1.Add(type);
-                    a1.Add(value);
-
-
-                    for (int s = 0; s < a1.Count; s++)
-                    {
-                        dr1[s] = a1[s];
-                    }
-
-                    dt4.Rows.Add(dr1);
-                    if (dt4.Rows.Count > 0)
-                    {
-                        Label9.Visible = true;
-                        gvrelatedqueries.DataSource = dt4;
-                        gvrelatedqueries.DataBind();
-                    }
-                    else
-                    {
-                        gvrelatedqueries.DataSource = null;
-                        gvrelatedqueries.DataBind();
-                    }
-
+                    gvrelatedqueries.DataSource = null;
+                    gvrelatedqueries.DataBind();
                 }
             }
             catch (Exception ex)
@@ -705,7 +206,7 @@ namespace GoogleFirstPage.Googletrends
             }
         }
 
-        
+
         protected void gvinterestot_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             //try
@@ -740,7 +241,7 @@ namespace GoogleFirstPage.Googletrends
                 Response.Charset = "";
                 Response.ContentType = "text/csv";
 
-                gvinterestot.AllowPaging = false;                
+                gvinterestot.AllowPaging = false;
 
                 StringBuilder sb = new StringBuilder();
 
@@ -775,5 +276,31 @@ namespace GoogleFirstPage.Googletrends
             }
         }
 
+        private void CreateXml(DataTable dt, int total, string keyword, string location, string prevYear, string curYear)
+        {
+            StringBuilder builder = new StringBuilder();
+            builder.AppendLine("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
+            builder.AppendLine("<GoogletrendsOverTime>");
+            builder.AppendLine("<OverTimes keyword =\"" + keyword + "\" country=\"" + location + "\" previousYear=\"" + prevYear + "\" currentYear=\"" + curYear + "\" >");
+            foreach (DataRow row in dt.Rows)
+            {
+                builder.AppendLine("<OverTime>");
+                foreach (DataColumn col in dt.Columns)
+                {
+                    if (string.IsNullOrEmpty(row[col].ToString()))
+                        builder.AppendLine("<" + col.ColumnName + " />");
+                    else
+                        builder.AppendLine("<" + col.ColumnName + ">" + row[col].ToString() + "</" + col.ColumnName + ">");
+                }
+                builder.AppendLine("</OverTime>");
+            }
+            builder.AppendLine("</OverTimes>");
+            builder.AppendLine("<TotalVolume>" + total + "</TotalVolume>");
+            builder.AppendLine("</GoogletrendsOverTime>");
+
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(builder.ToString());
+            doc.Save("C:\\inetpub\\wwwroot\\trends\\TrendsOverTime.xml");
+        }
     }
 }

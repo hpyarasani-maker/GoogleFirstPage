@@ -564,6 +564,7 @@
     <Compile Include="Googletrends\keywords.aspx.designer.cs">
       <DependentUpon>keywords.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Googletrends\TrendsData.cs" />
     <Compile Include="Googletrends\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
