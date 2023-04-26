@@ -15,7 +15,19 @@ namespace GoogleFirstPage.Googletrends
 {
     public class TrendsData
     {
-        public async Task<string> keywords_data_trends_explore_live(string keyword, string stDate, string endDate, string location)
+        string result;
+        string searches;
+        internal int iot_total = 0;
+
+        public async Task ProcessData(string keyword, string location)
+        {
+            result = await keywords_data_trends_explore_live(keyword, location);
+            searches = await GetSearchVolumeResponse(keyword, location);
+
+            CreateXml(keyword, location);
+        }
+
+        public async Task<string> keywords_data_trends_explore_live(string keyword, string location)
         {
             string[] kwds = { keyword };
             Uri queryUri = new Uri("https://api.dataforseo.com/v3/keywords_data/google_trends/explore/live");
@@ -23,8 +35,10 @@ namespace GoogleFirstPage.Googletrends
             string password = "19a90cf9a3f8a1e1";
             string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
 
-            string fromDate = stDate;
-            string toDate = endDate;
+            DateTime dt = DateTime.Today;
+
+            string fromDate = dt.AddYears(-1).ToString("yyyy-MM-dd");
+            string toDate = dt.ToString("yyyy-MM-dd");
 
             var postData = new List<object>{
                 new {
@@ -116,8 +130,32 @@ namespace GoogleFirstPage.Googletrends
             return await Task.FromResult(response);
         }
 
-        public DataTable GetOverTime(JToken iot, string searches)
+        public DataTable GetOverTime()
         {
+            JToken iot = null;
+            try
+            {
+                JObject jo = JObject.Parse(result);
+                var tasks = from p in jo["tasks"] select p;
+                var res = tasks.FirstOrDefault()["result"];
+                var items = res.FirstOrDefault()["items"];
+
+                foreach (var item in items)
+                {
+                    var title = item["title"].Value<string>();
+                    if (title == "Interest over time")
+                    {
+                        iot = item["data"];
+                        break;
+                    }
+                }
+                if(iot == null) return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
             DataTable dt1 = new DataTable("OverTime");
 
             try
@@ -140,9 +178,9 @@ namespace GoogleFirstPage.Googletrends
                 List<string> allDates = GetAlldates(iot);
                 List<string> lDates = GetLastDates(allDates).ToList();
                 List<string> myVolume = GetSearchVolume(searches);
-                int total = myVolume.Sum(x => Convert.ToInt32(x));
+                iot_total = myVolume.Sum(x => Convert.ToInt32(x));
                 Dictionary<string, string> res = GetDicVolumeData(lDates, myVolume);
-                var weeklyVol = total / 52;
+                var weeklyVol = iot_total / 52;
                 Dictionary<string, string> weeklyVolRes = GetWeeklyVolume(res, allDates, iot, weeklyVol);
 
                 double prevVal = -1;
@@ -203,8 +241,32 @@ namespace GoogleFirstPage.Googletrends
             }
         }
 
-        public DataTable GetBySubregion(JToken ibs)
+        public DataTable GetBySubregion()
         {
+            JToken ibs = null;
+            try
+            {
+                JObject jo = JObject.Parse(result);
+                var tasks = from p in jo["tasks"] select p;
+                var res = tasks.FirstOrDefault()["result"];
+                var items = res.FirstOrDefault()["items"];
+
+                foreach (var item in items)
+                {
+                    var title = item["title"].Value<string>();
+                    if (title == "Interest by subregion")
+                    {
+                        ibs = item["data"];
+                        break;
+                    }
+                }
+                if (ibs == null) return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
             try
             {
                 DataTable dt2 = new DataTable("Subregion");
@@ -244,8 +306,32 @@ namespace GoogleFirstPage.Googletrends
             }
         }
 
-        public DataTable GetRelatedTopics(JToken rt)
+        public DataTable GetRelatedTopics()
         {
+            JToken rt = null;
+            try
+            {
+                JObject jo = JObject.Parse(result);
+                var tasks = from p in jo["tasks"] select p;
+                var res = tasks.FirstOrDefault()["result"];
+                var items = res.FirstOrDefault()["items"];
+
+                foreach (var item in items)
+                {
+                    var title = item["title"].Value<string>();
+                    if (title == "Related topics")
+                    {
+                        rt = item["data"];
+                        break;
+                    }
+                }
+                if (rt == null) return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
             try
             {
                 DataTable dt3 = new DataTable("RelatedTopics");
@@ -318,8 +404,31 @@ namespace GoogleFirstPage.Googletrends
             }
         }
 
-        public DataTable GetRelatedQueries(JToken rq)
+        public DataTable GetRelatedQueries()
         {
+            JToken rq = null;
+            try
+            {
+                JObject jo = JObject.Parse(result);
+                var tasks = from p in jo["tasks"] select p;
+                var res = tasks.FirstOrDefault()["result"];
+                var items = res.FirstOrDefault()["items"];
+
+                foreach (var item in items)
+                {
+                    var title = item["title"].Value<string>();
+                    if (title == "Related queries")
+                    {
+                        rq = item["data"];
+                        break;
+                    }
+                }
+                if (rq == null) return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
             try
             {
                 DataTable dt4 = new DataTable("RelatedQueries");
@@ -516,12 +625,19 @@ namespace GoogleFirstPage.Googletrends
             int d = vm / DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month) * DateTime.Now.Day;
             return d.ToString();
         }
-        private void CreateXml(DataTable dt, int total, string keyword, string location, string prevYear, string curYear)
+        
+        private void CreateXml(string keyword, string location)
         {
+            DataTable dt = GetOverTime();
+
+            //string prevYear = DateTime.Today.AddYears(-1).ToString("yyyy-MM-dd");
+            //string curYear = DateTime.Today.ToString("yyyy-MM-dd");
+
             StringBuilder builder = new StringBuilder();
             builder.AppendLine("<?xml version=\"1.0\" encoding=\"utf-8\" ?>");
             builder.AppendLine("<GoogletrendsOverTime>");
-            builder.AppendLine("<OverTimes keyword =\"" + keyword + "\" country=\"" + location + "\" previousYear=\"" + prevYear + "\" currentYear=\"" + curYear + "\" >");
+            //builder.AppendLine("<OverTimes keyword =\"" + keyword + "\" country=\"" + location + "\" previousYear=\"" + prevYear + "\" currentYear=\"" + curYear + "\" >");
+            builder.AppendLine("<OverTimes keyword =\"" + keyword + "\" country=\"" + location + "\" >");
             foreach (DataRow row in dt.Rows)
             {
                 builder.AppendLine("<OverTime>");
@@ -535,7 +651,7 @@ namespace GoogleFirstPage.Googletrends
                 builder.AppendLine("</OverTime>");
             }
             builder.AppendLine("</OverTimes>");
-            builder.AppendLine("<TotalVolume>" + total + "</TotalVolume>");
+            builder.AppendLine("<TotalVolume>" + iot_total + "</TotalVolume>");
             builder.AppendLine("</GoogletrendsOverTime>");
 
             XmlDocument doc = new XmlDocument();

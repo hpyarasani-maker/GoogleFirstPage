@@ -1,29 +1,13 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using System.Data;
-using System.IO;
-using System.Linq;
-using System.Net;
 using System.Text;
-using System.Threading.Tasks;
-using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Drawing;
-using System.Globalization;
-using System.Xml;
-using System.Xml.Serialization;
 
 namespace GoogleFirstPage.Googletrends
 {
     public partial class keywordsdata : System.Web.UI.Page
     {
-
-        string searchres = string.Empty;
-
         TrendsData trends = new TrendsData();
 
         protected void Page_Load(object sender, EventArgs e)
@@ -49,12 +33,14 @@ namespace GoogleFirstPage.Googletrends
             try
             {
                 string locations = ddllocation.SelectedItem.ToString();
-                string kid = ddllocation.SelectedValue.ToString();
+                //string kid = ddllocation.SelectedValue.ToString();
                 if (locations != null)
                 {
-                    string res = await trends.keywords_data_trends_explore_live(txtkeyword.Text, txtstartdate.Text, txtenddate.Text, ddllocation.SelectedItem.Text); //.Result;
-                    searchres = await trends.GetSearchVolumeResponse(txtkeyword.Text, ddllocation.SelectedItem.Text);
-                    ProcessData(res, kid, locations);
+                    await trends.ProcessData(txtkeyword.Text, locations);
+                    SaveOverTime();
+                    SaveBySubregion();
+                    SaveRelatedTopics();
+                    SaveRelatedQueries();
                 }
                 btnCSV.Enabled = true;
             }
@@ -62,65 +48,22 @@ namespace GoogleFirstPage.Googletrends
             {
                 throw ex;
             }
-        }
-
-        public void ProcessData(string result, string seid, string location)
-        {
-            try
-            {
-                JObject jo = JObject.Parse(result);
-                var tasks = from p in jo["tasks"] select p;
-                var res = tasks.FirstOrDefault()["result"];
-                var items = res.FirstOrDefault()["items"];
-
-                foreach (var item in items)
-                {
-                    var title = item["title"].Value<string>();
-                    if (title == "Interest over time")
-                    {
-                        var iot = item["data"];
-                        SaveOverTime(iot, seid, location);
-                    }
-                    else if (title == "Interest by subregion")
-                    {
-                        var ibs = item["data"];
-                        SaveBySubregion(ibs, seid, location);
-                    }
-                    else if (title == "Related topics")
-                    {
-                        var rt = item["data"];
-                        SaveRelatedTopics(rt, seid, location);
-                    }
-                    else if (title == "Related queries")
-                    {
-                        var rq = item["data"];
-                        SaveRelatedQueries(rq, seid, location);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        }               
         
-        public void SaveOverTime(JToken iot, string kid, string location)
+        public void SaveOverTime() 
         {
             try
             {
-                DataTable dt1 = trends.GetOverTime(iot, searchres);
+                DataTable dt1 = trends.GetOverTime(); 
 
-                if (dt1.Rows.Count > 0)
+                if (dt1 != null && dt1.Rows.Count > 0)
                 {
-                    int total = trends.GetSearchVolume(searchres).Sum(x => Convert.ToInt32(x));
-                    //CreateXml(dt1, total, txtkeyword.Text, location, txtstartdate.Text, txtenddate.Text);
-
                     gvinterestot.DataSource = dt1;
                     gvinterestot.DataBind();
 
                     gvinterestot.FooterRow.Cells[1].Text = "Total Volume = ";
                     gvinterestot.FooterRow.Cells[1].Font.Bold = true;
-                    gvinterestot.FooterRow.Cells[2].Text = total.ToString();
+                    gvinterestot.FooterRow.Cells[2].Text = trends.iot_total.ToString();
                 }
                 else
                 {
@@ -134,13 +77,13 @@ namespace GoogleFirstPage.Googletrends
             }
         }
 
-        public void SaveBySubregion(JToken ibs, string kid, string location)
+        public void SaveBySubregion() 
         {
             try
             {
-                DataTable dt2 = trends.GetBySubregion(ibs);
+                DataTable dt2 = trends.GetBySubregion();
 
-                if (dt2.Rows.Count > 0)
+                if (dt2 != null && dt2.Rows.Count > 0)
                 {
                     Label7.Visible = true;
                     gvsubregion.DataSource = dt2;
@@ -158,13 +101,13 @@ namespace GoogleFirstPage.Googletrends
             }
         }
 
-        public void SaveRelatedTopics(JToken rt, string kid, string location)
+        public void SaveRelatedTopics() 
         {
             try
             {
-                DataTable dt3 = trends.GetRelatedTopics(rt);
+                DataTable dt3 = trends.GetRelatedTopics();
 
-                if (dt3.Rows.Count > 0)
+                if (dt3 != null && dt3.Rows.Count > 0)
                 {
                     Label8.Visible = true;
                     gvrelatedtopics.DataSource = dt3;
@@ -182,13 +125,13 @@ namespace GoogleFirstPage.Googletrends
             }
         }
 
-        public void SaveRelatedQueries(JToken rq, string kid, string location)
+        public void SaveRelatedQueries()
         {
             try
             {
-                DataTable dt4 = trends.GetRelatedQueries(rq);
+                DataTable dt4 = trends.GetRelatedQueries();
 
-                if (dt4.Rows.Count > 0)
+                if (dt4 != null && dt4.Rows.Count > 0)
                 {
                     Label9.Visible = true;
                     gvrelatedqueries.DataSource = dt4;
