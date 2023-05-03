@@ -656,7 +656,7 @@ namespace GoogleFirstPage.Googletrends
 
             XmlDocument doc = new XmlDocument();
             doc.LoadXml(builder.ToString());
-            doc.Save("C:\\inetpub\\wwwroot\\trends\\TrendsOverTime.xml");
+            //doc.Save("C:\\inetpub\\wwwroot\\trends\\TrendsOverTime.xml");
         }
 
     }
