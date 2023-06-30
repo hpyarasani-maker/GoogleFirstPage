@@ -111,7 +111,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                     //if (clscnt >= 1)
                                     //    dt.Rows.Add("", "", "");
                                     DataRow row11 = dt.NewRow();
-                                    if (node.Attributes[0].Value.ToString() != "hotelPack")
+                                    if (node.Attributes[0].Value.ToString() != "hotelPack" && node.Attributes[0].Value.ToString() != "flightPack")
                                     {
                                         dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                         foreach (XmlNode nodee in node)
@@ -155,6 +155,19 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                         }
                                         dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                     }
+                                    if (node.Attributes[0].Value.ToString() == "flightPack")
+                                    {
+                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                        if (node.Attributes.Count == 5)
+                                        {
+                                            dt.Rows.Add("", "", " url= " + "" + "  ,  " + " title= " + "" + "  ,  " + " origin = " + node.Attributes[3].Value + " , " + " destination= " + node.Attributes[4].Value);
+                                        }
+                                        foreach (XmlNode nodee in node)
+                                        {
+                                            dt.Rows.Add("", "", " url= " + "" + " , " + " title= " + "" + "  ,  " + " airline= " + nodee.Attributes[2].Value + "  ,  " + " duration= " + nodee.Attributes[3].Value + " , " + " durationValue= " + nodee.Attributes[4].Value + " , " + " connections= " + nodee.Attributes[5].Value + " , " + " price= " + nodee.Attributes[6].Value + " , " + " priceValue= " + nodee.Attributes[7].Value);
+                                        }
+                                        dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
+                                    }
                                     clscnt = 0;
                                     //dt.Rows.Add("", "", "");
                                 }
@@ -191,7 +204,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                     //if (clscnt >= 1)
                                     //    dt.Rows.Add("", "", "");
                                     DataRow row11 = dt.NewRow();
-                                    if (node.Attributes[0].Value.ToString() != "hotelPack")
+                                    if (node.Attributes[0].Value.ToString() != "hotelPack" && node.Attributes[0].Value.ToString() != "flightPack")
                                     {
                                         dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                         foreach (XmlNode nodee in node)
@@ -235,7 +248,19 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                         }
                                         dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                     }
-
+                                    if (node.Attributes[0].Value.ToString() == "flightPack")
+                                    {
+                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                        if (node.Attributes.Count == 5)
+                                        {
+                                            dt.Rows.Add("", "", " url= " + "" + "  ,  " + " title= " + "" + "  ,  " + " origin = " + node.Attributes[3].Value + " , " + " destination= " + node.Attributes[4].Value);
+                                        }
+                                        foreach (XmlNode nodee in node)
+                                        {
+                                            dt.Rows.Add("", "", " url= " + "" + " , " + " title= " + "" + "  ,  " + " airline= " + nodee.Attributes[0].Value + "  ,  " + " duration= " + nodee.Attributes[3].Value + " , " + " durationValue= " + nodee.Attributes[4].Value + " , " + " connections= " + nodee.Attributes[5].Value + " , " + " price= " + nodee.Attributes[6].Value + " , " + " priceValue= " + nodee.Attributes[7].Value);
+                                        }
+                                        dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
+                                    }
                                     clscnt = 0;
                                     //dt.Rows.Add("", "", "");
                                 }
