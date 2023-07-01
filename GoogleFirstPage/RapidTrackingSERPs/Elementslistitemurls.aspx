@@ -226,6 +226,13 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Flight Pack (Item Urls)">
+                            <ItemTemplate>
+                                <div style="width: 75px;">
+                                    <%# Eval("flightPack","{0:N0}") %>
+                                </div>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Hotel Pack (Item Urls)">
                             <ItemTemplate>
                                 <div style="width: 75px;">
