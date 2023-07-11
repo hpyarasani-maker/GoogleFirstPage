@@ -111,6 +111,10 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                     //if (clscnt >= 1)
                                     //    dt.Rows.Add("", "", "");
                                     DataRow row11 = dt.NewRow();
+                                    if (node.Attributes[0].Value.ToString() == "videoCard")
+                                    {
+                                        dt.Rows.Add("", node.Attributes[1].Value);
+                                    }
                                     if (node.Attributes[0].Value.ToString() != "hotelPack" && node.Attributes[0].Value.ToString() != "flightPack")
                                     {
                                         dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
@@ -204,6 +208,10 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                     //if (clscnt >= 1)
                                     //    dt.Rows.Add("", "", "");
                                     DataRow row11 = dt.NewRow();
+                                    if (node.Attributes[0].Value.ToString() == "videoCard")
+                                    {
+                                        dt.Rows.Add("", node.Attributes[1].Value);
+                                    }
                                     if (node.Attributes[0].Value.ToString() != "hotelPack" && node.Attributes[0].Value.ToString() != "flightPack")
                                     {
                                         dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
