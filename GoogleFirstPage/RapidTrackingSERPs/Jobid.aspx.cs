@@ -86,27 +86,39 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                     //if (clscnt >= 1)
                                     //    dt.Rows.Add("", "", "");
                                     DataRow row11 = dt.NewRow();
-                                    if (node.Attributes[0].Value.ToString() == "videoCard")
+                                    if (node.Attributes[0].Value.ToString() == "findResultsOn")
+                                    {
+                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                        foreach (XmlNode nodee in node)
+                                        {
+                                            dt.Rows.Add("", nodee.Attributes[1].Value, " Title = " + "" + " ,  " + " source = " + nodee.Attributes[0].Value);
+                                        }
+                                        dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
+                                    }
+                                    if (node.Attributes[0].Value.ToString() == "videoCard" && node.Attributes[0].Value.ToString() != "findResultsOn")
                                     {
                                         dt.Rows.Add("", node.Attributes[1].Value);
                                     }
                                     if (node.Attributes[0].Value.ToString() != "hotelPack" && node.Attributes[0].Value.ToString() != "flightPack")
                                     {
-                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
-                                        foreach (XmlNode nodee in node)
+                                        if (node.Attributes[0].Value.ToString() != "findResultsOn")
                                         {
-                                            if (node.Attributes[0].Value.ToString() == "popularProducts")
+                                            dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                            foreach (XmlNode nodee in node)
                                             {
-                                                dt.Rows.Add("", nodee.Attributes[0].Value, " Title = " + nodee.Attributes[1].Value + " --- " + " Price = " + nodee.Attributes[2].Value + " --- " + " Site = " + nodee.Attributes[3].Value);
+                                                if (node.Attributes[0].Value.ToString() == "popularProducts")
+                                                {
+                                                    dt.Rows.Add("", nodee.Attributes[0].Value, " Title = " + nodee.Attributes[1].Value + " --- " + " Price = " + nodee.Attributes[2].Value + " --- " + " Site = " + nodee.Attributes[3].Value);
+                                                }
+                                                else
+                                                {
+                                                    dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                                }
                                             }
-                                            else
-                                            {
-                                                dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
-                                            }
+                                            dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                         }
-                                        dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                     }
-                                    if (node.Attributes[0].Value.ToString() == "hotelPack")
+                                    if (node.Attributes[0].Value.ToString() == "hotelPack" && node.Attributes[0].Value.ToString() != "findResultsOn")
                                     {
                                         dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                         foreach (XmlNode nodee in node)
@@ -122,7 +134,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                                 {
                                                     dt.Rows.Add("", nodee.Attributes[0].Value, " Price = " + nodee.Attributes[1].Value + " --- " + " Pricevalue = " + nodee.Attributes[2].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[3].Value + " --- " + " Title = " + nodee.Attributes[4].Value);
                                                 }
-                                                else if(nodee.Attributes[1].Name != "price")
+                                                else if (nodee.Attributes[1].Name != "price")
                                                 {
                                                     dt.Rows.Add("", nodee.Attributes[0].Value, " Rating = " + nodee.Attributes[1].Value + " --- " + " TotalReviews = " + nodee.Attributes[2].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[3].Value + " --- " + " Title = " + nodee.Attributes[4].Value);
                                                 }
@@ -134,7 +146,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                         }
                                         dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                     }
-                                    if (node.Attributes[0].Value.ToString() == "flightPack")
+                                    if (node.Attributes[0].Value.ToString() == "flightPack" && node.Attributes[0].Value.ToString() != "findResultsOn")
                                     {
                                         dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                         if (node.Attributes.Count == 5)
@@ -188,27 +200,39 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                     //if (clscnt >= 1)
                                     //    dt.Rows.Add("", "", "");
                                     DataRow row11 = dt.NewRow();
-                                    if (node.Attributes[0].Value.ToString() == "videoCard")
+                                    if (node.Attributes[0].Value.ToString() == "findResultsOn")
+                                    {
+                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                        foreach (XmlNode nodee in node)
+                                        {
+                                            dt.Rows.Add("", nodee.Attributes[1].Value, " Title = " + "" + " ,  " + " source = " + nodee.Attributes[0].Value);
+                                        }
+                                        dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
+                                    }
+                                    if (node.Attributes[0].Value.ToString() == "videoCard" && node.Attributes[0].Value.ToString() != "findResultsOn")
                                     {
                                         dt.Rows.Add("", node.Attributes[1].Value);
                                     }
                                     if (node.Attributes[0].Value.ToString() != "hotelPack" && node.Attributes[0].Value.ToString() != "flightPack")
                                     {
-                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
-                                        foreach (XmlNode nodee in node)
+                                        if (node.Attributes[0].Value.ToString() != "findResultsOn")
                                         {
-                                            if (node.Attributes[0].Value.ToString() == "popularProducts")
+                                            dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                            foreach (XmlNode nodee in node)
                                             {
-                                                dt.Rows.Add("", nodee.Attributes[0].Value," Title = " + nodee.Attributes[1].Value + " --- " + " Price = " + nodee.Attributes[2].Value + " --- " + " Site = " + nodee.Attributes[3].Value);
+                                                if (node.Attributes[0].Value.ToString() == "popularProducts")
+                                                {
+                                                    dt.Rows.Add("", nodee.Attributes[0].Value, " Title = " + nodee.Attributes[1].Value + " --- " + " Price = " + nodee.Attributes[2].Value + " --- " + " Site = " + nodee.Attributes[3].Value);
+                                                }
+                                                else
+                                                {
+                                                    dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                                }
                                             }
-                                            else
-                                            {
-                                                dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
-                                            }
+                                            dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                         }
-                                        dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                     }
-                                    if (node.Attributes[0].Value.ToString() == "hotelPack")
+                                    if (node.Attributes[0].Value.ToString() == "hotelPack" && node.Attributes[0].Value.ToString() != "findResultsOn")
                                     {
                                         dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                         foreach (XmlNode nodee in node)
@@ -231,12 +255,12 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                             }
                                             else
                                             {
-                                                dt.Rows.Add("", nodee.Attributes[0].Value, " Price = " + nodee.Attributes[1].Value + " --- " + " PriceValue = " + nodee.Attributes[2].Value + " --- " + " Rating = " + nodee.Attributes[3].Value + " --- " + " TotalReviews = " + nodee.Attributes[4].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[5].Value + " --- " + " Title = " + nodee.Attributes[6].Value);
+                                                dt.Rows.Add("", nodee.Attributes[0].Value, " Price= " + nodee.Attributes[1].Value + " --- " + " PriceValue = " + nodee.Attributes[2].Value + " --- " + " Rating = " + nodee.Attributes[3].Value + " --- " + " TotalReviews = " + nodee.Attributes[4].Value + " --- " + " AdditionalInfo = " + nodee.Attributes[5].Value + " --- " + " Title = " + nodee.Attributes[6].Value);
                                             }
                                         }
                                         dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                     }
-                                    if (node.Attributes[0].Value.ToString() == "flightPack")
+                                    if (node.Attributes[0].Value.ToString() == "flightPack" && node.Attributes[0].Value.ToString() != "findResultsOn")
                                     {
                                         dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                         if (node.Attributes.Count == 5)
