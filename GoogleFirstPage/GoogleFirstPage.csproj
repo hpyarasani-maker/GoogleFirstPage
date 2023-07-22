@@ -156,6 +156,9 @@
   <ItemGroup>
     <Content Include="amazon.aspx" />
     <Content Include="Amazontrackingweekly.aspx" />
+    <Content Include="Classiclinks\Missedlink.aspx" />
+    <Content Include="Classiclinks\missinglinks.aspx" />
+    <Content Include="Classiclinks\WebForm1.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -438,6 +441,31 @@
     </Compile>
     <Compile Include="Amazontrackingweekly.aspx.designer.cs">
       <DependentUpon>Amazontrackingweekly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classiclinks\Desktop.cs" />
+    <Compile Include="Classiclinks\iOS.cs" />
+    <Compile Include="Classiclinks\Missedlink.aspx.cs">
+      <DependentUpon>Missedlink.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classiclinks\Missedlink.aspx.designer.cs">
+      <DependentUpon>Missedlink.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classiclinks\missinglinks.aspx.cs">
+      <DependentUpon>missinglinks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classiclinks\missinglinks.aspx.designer.cs">
+      <DependentUpon>missinglinks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classiclinks\OxyParams.cs" />
+    <Compile Include="Classiclinks\SearchParams.cs" />
+    <Compile Include="Classiclinks\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classiclinks\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
