@@ -191,7 +191,7 @@
                 <br />
 
 
-                <asp:GridView ID="gvelements" AutoGenerateColumns="false" CssClass="footable" HeaderStyle-HorizontalAlign="Right" Font-Bold="true" HeaderStyle-Font-Bold="true" runat="server" OnRowDataBound="gvelements_RowDataBound" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" HeaderStyle-Height="30px" RowStyle-Width="1px" AllowPaging="true" OnPageIndexChanging="gvelements_PageIndexChanging" PageSize="30">
+                <asp:GridView ID="gvelements" Width="100%" AutoGenerateColumns="false" CssClass="footable" HeaderStyle-HorizontalAlign="Right" Font-Bold="true" HeaderStyle-Font-Bold="true" runat="server" OnRowDataBound="gvelements_RowDataBound" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" HeaderStyle-Height="30px" RowStyle-Width="1px" AllowPaging="true" OnPageIndexChanging="gvelements_PageIndexChanging" PageSize="30">
                     <Columns>
                         <asp:TemplateField HeaderText="Date">
                             <ItemTemplate>
@@ -202,14 +202,14 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Answer card">
                             <ItemTemplate>
-                                <div style="width: 62px;">
+                                <div style="width: 68px;">
                                     <%# Eval("Answer card","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="App packs">
                             <ItemTemplate>
-                                <div style="width: 52px;">
+                                <div style="width: 60px;">
                                     <%# Eval("App packs","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
@@ -228,16 +228,23 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
+                        <asp:TemplateField HeaderText="FindResultsOn">
+                            <ItemTemplate>
+                                <div style="width: 80px;">
+                                    <%# Eval("findResultsOn","{0:N0}") %>
+                                </div>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Flight Pack">
                             <ItemTemplate>
-                                <div style="width: 50px;">
+                                <div style="width: 60px;">
                                     <%# Eval("flightPack","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Hotel Pack">
                             <ItemTemplate>
-                                <div style="width: 50px;">
+                                <div style="width: 60px;">
                                     <%# Eval("hotelPack","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
@@ -265,7 +272,7 @@
                         </asp:TemplateField>
                          <asp:TemplateField HeaderText="People Also Ask">
                             <ItemTemplate>
-                                <div style="width: 80px;">
+                                <div style="width: 85px;">
                                     <%# Eval("People also ask","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
