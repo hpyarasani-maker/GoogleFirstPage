@@ -129,6 +129,13 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                 sb.Append("<block type=\"knowledgeGraph\" url=\"\" title=\"" + SetTitle(heading) + "\" />");
                             }
                         }*///19-01-2023 //23-01-2023 Googlehotels else KP Block
+                        n = node.SelectSingleNode(".//div[@class='kno-fiu kno-liu']");//11-08-2023 Images block
+                        if (n != null)
+                        {
+                            sb.Append("<block type=\"images\" url=\"\">");
+                            sb.Append(GetImages(node));
+                            sb.Append("</block>");
+                        }//11-08-2023
                         n = node.SelectSingleNode(".//block-component/div[contains(@class, 'kno-result')]");//30-01-2023 Answer Card
                         if (n != null)
                         {
@@ -1273,7 +1280,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                     if (link != null)
                     {
                         url = link.Attributes["href"]?.Value;
-                        title = link.SelectSingleNode(".//div[contains(@class,'ZsI9Vc')]|.//div[@jsname='r4nke']|.//div[@class='aTc6pf']|.//div[@class='aqszKe']|.//div[contains(@class,'SsM98d')]")?.InnerText ?? "";//16-06-2023//27-02-2023//05-01-2023
+                        title = link.SelectSingleNode(".//div[contains(@class,'ZsI9Vc')]|.//div[@jsname='r4nke']|.//div[@class='aTc6pf']|.//div[@class='aqszKe']|.//div[contains(@class,'SsM98d')]|.//div[contains(@class,'gkQHve')]")?.InnerText ?? "";//09-08-2023//16-06-2023//27-02-2023//05-01-2023
                         price = link.SelectSingleNode(".//div[@class='Ijn7Rc']|.//div[@class='vy5bA dpJO9']|.//div[@class='uSZhvf Dxiee']/span[1]|.//div[@class='xQbyBc']/span|.//span[contains(@class,'lmQWe')]")?.InnerText ?? "";//06-03-2023//27-02-2023 //05-01-2023
                         name = link.SelectSingleNode(".//div[@class='DAB5ue']|.//div[@class='NemW5e']/span|.//div[contains(@class, 'ChC0jd')]/span|.//div[contains(@class,'kV5zMb')]/span[1]|.//span[@class='rw5ecc RmEs5b rOlovd']|.//div[contains(@class,'n7emVc')]")?.InnerText ?? "";//23-06-2023//09-05-2023//10-04-2023//16-03-2023 //27-02-2023//05-01-2023
                     }
@@ -1408,11 +1415,11 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                     s.Append(GetPopularProducts(node));
                     s.Append("</block>");
                     break;//22-11-2022
-                case "findresultson"://07-07-2023
-                    s.Append("<block type=\"findResultsOn\" url=\"\">");
+                case "findresultson":
+                    //s.Append("<block type=\"findResultsOn\" url=\"\">");
                     s.Append(GetFindResultsOn(node));
-                    s.Append("</block>");
-                    break;//07-07-2023
+                    //s.Append("</block>");
+                    break;//09-08-2023//07-07-2023
                 default:
                     break;
             }
@@ -1874,127 +1881,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             return s.ToString();
         }
 
-        /*private string GetPeopleAlsoAskUrls(string[] titles) //People also method 04-03-2022
-        {
-            StringBuilder s = new StringBuilder();
-            //22-03-2022
-            //images
-            string imagePattern = @"\Wtsuid\d{1,3}\W:\W(.*?)""";
-            Regex rimage = new Regex(imagePattern, RegexOptions.IgnoreCase | RegexOptions.Singleline);
-            MatchCollection _mcimg = rimage.Matches(html);
-            ArrayList alImages = new ArrayList();
-            foreach (Match mi in _mcimg)
-            {
-                string[] imgs = { HttpUtility.HtmlDecode(mi.Groups[0].Value), HttpUtility.HtmlDecode(mi.Groups[1].Value) };
-                alImages.Add(imgs);
-            }
-            //end 22-03-2022
-            string pattern = @"WEB_ANSWERS_STANDARD_RESULT_(.*?)div class\\x3d\\x22Xv4xee\\x22\\x3e\\x3ch3 class\\x3d\\x22yuRUbf JtG40d MBeuO q8U8x\\x22\\x3e\\x3ca class\\x3d\\x22sXtWJb\\x22 href\\x3d\\x22(.*?)\\x22";
-            Regex re = new Regex(pattern, RegexOptions.IgnoreCase | RegexOptions.Singleline);
-            MatchCollection mc = re.Matches(html);
-            int x = 0;
-            char[] yt = { '\\', '2', '6' };
-            foreach (Match m in mc)
-            {
-                string url = HttpUtility.HtmlDecode(m.Groups[2].Value);
-                if (url.StartsWith("http") || url.StartsWith("https"))
-                {
-                    url = SetYTUrl(url, yt); //12-03-2022
-                }
-                //text
-                string textPattern = @"\\x3cspan class\\x3d\\x22hgKElc\\x22\\x3e(.*?)\\x3c/span\\x3e";
-                Regex _rx = new Regex(textPattern, RegexOptions.IgnoreCase | RegexOptions.Singleline);
-                Match _m = _rx.Match(m.Groups[0].Value);
-                string txt, text = string.Empty;
-                if (_m.Success)
-                {
-                    txt = HttpUtility.HtmlDecode(_m.Groups[1].Value);
-                    text = SetYTUrl(txt, yt); //15-03-2022
-                }
-                //22-03-2022
-                //image
-                string img = string.Empty;
-                if (alImages.Count > 0)
-                {
-                    imagePattern = @"tsuid\d{1,3}";
-                    _rx = new Regex(imagePattern, RegexOptions.IgnoreCase | RegexOptions.Singleline);
-                    _m = _rx.Match(m.Groups[0].Value);
-                    if (_m.Success)
-                    {
-                        foreach (string[] imgUrl in alImages)
-                        {
-                            if (imgUrl[0].StartsWith("\"" + _m.Value + "\":"))
-                            {
-                                img = SetYTUrl(imgUrl[1], yt);
-                                break;
-                            }
-                        }
-                    }
-                }
-                //end 22-03-2022
-                //18-03-2022
-                //table
-                string tblPattern = @"\\x3ctable\\x3e\\x3ctbody\\x3e(.*?)\\x3c/tbody\\x3e\\x3c/table\\x3e";
-                _rx = new Regex(tblPattern, RegexOptions.IgnoreCase | RegexOptions.Singleline);
-                _m = _rx.Match(m.Groups[0].Value);
-                string tbl = string.Empty;
-                string tblValues = string.Empty;
-                if (_m.Success)
-                {
-                    tbl = HttpUtility.HtmlDecode(_m.Groups[1].Value);
-                    //rows
-                    string rowPattern = @"\\x3ctr(.*?)\\x3c/tr\\x3e";
-                    _rx = new Regex(rowPattern, RegexOptions.IgnoreCase | RegexOptions.Singleline);
-                    MatchCollection _mcrows = _rx.Matches(tbl);
-                    tblValues = "<table>";
-                    foreach (Match mrow in _mcrows)
-                    {
-                        string row = HttpUtility.HtmlDecode(mrow.Groups[1].Value);
-                        //th
-                        string thPattern = @"\\x3cth(.*?)\\x3e(.*?)\\x3c/th\\x3e";
-                        _rx = new Regex(thPattern, RegexOptions.IgnoreCase | RegexOptions.Singleline);
-                        MatchCollection _mcth = _rx.Matches(row);
-                        tblValues += "<tr>";
-                        foreach (Match mth in _mcth)
-                        {
-                            string th = HttpUtility.HtmlDecode(mth.Groups[2].Value);
-                            tblValues += "<th>";
-                            //tblValues += th.Replace(@"\x3cb\x3e", "").Replace(@"\x3c/b\x3e", "");
-                            tblValues += SetYTUrl(th,yt);//22-03-2022
-                            tblValues += "</th>";
-                        }
-                        //td
-                        string tdPattern = @"\\x3ctd(.*?)\\x3e(.*?)\\x3c/td\\x3e";
-                        _rx = new Regex(tdPattern, RegexOptions.IgnoreCase | RegexOptions.Singleline);
-                        MatchCollection _mctd = _rx.Matches(row);
-                        foreach (Match mtd in _mctd)
-                        {
-                            string td = HttpUtility.HtmlDecode(mtd.Groups[2].Value);
-                            tblValues += "<td>";
-                            //tblValues += td.Replace(@"\x3cb\x3e", "").Replace(@"\x3c/b\x3e", "");
-                            tblValues += SetYTUrl(td, yt);//22-03-2022
-                            tblValues += "</td>";
-                        }
-                        tblValues += "</tr>";
-                    }
-                    tblValues += "</table>";
-                }
 
-                if (x < titles.Length)
-                {
-                    s.Append("<item url=\"" + SetUrl(url) + "\" title=\"" + SetTitle(titles[x++]) + "\" text=\"" + SetTitle(text) + "\" image=\"" + SetUrl(img) + "\" >");
-                    if (!string.IsNullOrEmpty(tblValues))
-                    {
-                        s.Append(tblValues);
-                    }
-                    s.Append("</item>");
-                }
-                //end 18-03-2022                                                                                                                                                                                
-            }
-            for (; x < titles.Length; x++)
-                s.Append("<item url=\"\" title=\"" + SetTitle(titles[x]) + "\" text=\"\" image=\"\" />"); //17-03-2022
-            return s.ToString();
-        }*/
         private string GetAnswerCard(HtmlNode node)
         {
             StringBuilder s = new StringBuilder();
@@ -2301,8 +2188,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                             n = nd.SelectSingleNode(".//div[@class='KiGY3d mB12kf JRhSae ZyAH8d']");
                         if (n == null)
                             n = nd.SelectSingleNode(".//div[@class='oyj2db']|.//span[@class='rQMQod Xb5VRe']");//30-07-2020
-                        //if (n == null)
-                        //    n = nd.SelectSingleNode(".//div[@class='VibNM WGnkfe']|.//div[@jsname='ibnC6b']");
+                        if (n == null)
+                            n = nd.SelectSingleNode(".//div[@class='k8M7xd OSrXXb tNxQIb ynAwRc']");//14-08-2023 videos item title
                         try
                         {
                             // Changes in Videos block on 25-06-2019
@@ -2437,17 +2324,25 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 }
                 destination = destination.Trim();
             }
-            else
+            else //09-08-2023
             {
                 dest = node.SelectSingleNode(".//span[@class='XaP5ee IFnjPb RES9jf']|.//h3[@class='IFnjPb RES9jf']");
                 int lenIndex = dest.InnerText.IndexOf(" to ") >= 0 ? dest.InnerText.IndexOf(" to ") :
                     dest.InnerText.IndexOf(" nach ") >= 0 ? dest.InnerText.IndexOf(" nach ") : -1;
+                if (lenIndex == -1)
+                    lenIndex = dest.InnerText.IndexOf(" from ") >= 0 ? dest.InnerText.IndexOf(" from ") : -1;
                 origin = dest?.InnerText?.Substring(0, lenIndex).Trim(); // dest.InnerText.IndexOf(" to "));
                 if (origin.ToLower().Equals("flights") || origin.Equals("Flüge")) origin = string.Empty;
                 int len = dest.InnerText.IndexOf(" to ") >= 0 ? dest.InnerText.IndexOf(" to ") + 4 :
                     dest.InnerText.IndexOf(" nach ") >= 0 ? dest.InnerText.IndexOf(" nach ") + 6 : -1;
-                destination = dest?.InnerText.Substring(len).Trim(); // dest.InnerText.IndexOf(" to ") + 4).Trim();
-            }
+                if (len == -1)
+                {
+                    len = dest.InnerText.IndexOf(" from ") >= 0 ? dest.InnerText.IndexOf(" from ") + 6 : -1;
+                    origin = dest?.InnerText.Substring(len).Trim();
+                }
+                else
+                    destination = dest?.InnerText.Substring(len).Trim(); // dest.InnerText.IndexOf(" to ") + 4).Trim();
+            }//09-08-2023
             s.Append("<block type=\"flightPack\" url=\"\" title=\"\" origin=\"" + SetTitle(origin) + "\" destination=\"" + SetTitle(destination) + "\" >");
             HtmlNodeCollection nds = node.SelectNodes(".//div[@class='aieQre']/div/a|.//div[contains(@class,'LQQ1Bd')]/div/a");
             if (nds != null)
@@ -2456,10 +2351,10 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 {
                     try
                     {
-                        string airline = nd.SelectSingleNode(".//span[@class='ps0VMc']|.//div[@class='A4fsl']")?.InnerText.Trim() ?? "";
+                        string airline = nd.SelectSingleNode(".//span[@class='ps0VMc']|.//div[@class='A4fsl']|.//div[@class='eqdsgd']")?.InnerText.Trim() ?? "";//09-08-2023
                         string hours = nd.SelectSingleNode(".//span[@class='sRcB8']|.//div[@class='QTPlac']/span[2]")?.InnerText.Trim() ?? "0h 0m";
                         string connecting = nd.SelectSingleNode(".//span[@class='u85UCd']|.//div[@class='QTPlac']/span[1]")?.InnerText.Trim() ?? "";
-                        string price = nd.SelectSingleNode(".//span[@class='xqqLDd']|.//span[@class='cirEce']")?.InnerText.Trim() ?? "0";
+                        string price = nd.SelectSingleNode(".//span[@class='xqqLDd']|.//span[@class='cirEce']|.//div[@class='n22NNe']")?.InnerText.Trim() ?? "0";//09-08-2023
                         string priceValue = string.Empty;
                         string hoursValue = string.Empty;
                         string title = string.Empty;
@@ -2574,22 +2469,28 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             }
             return s.ToString();
         }//24-03-2022
-        private string GetFindResultsOn(HtmlNode node) //07-07-2023 FindResultsOn Block
+        private string GetFindResultsOn(HtmlNode node)//09-08-2023//07-07-2023 FindResultsOn Block
         {
             StringBuilder s = new StringBuilder();
-            HtmlNodeCollection nds = node.SelectNodes(".//div/a[@class='dVjlWe']|.//div/a[@class='t2Yvdb']|.//div/a[@class='SsH3c']");//21-07-2023
+            s.Append("<block type=\"findResultsOn\" url=\"\">");
+            HtmlNodeCollection nds = node.SelectNodes(".//div/a[@class='dVjlWe']|.//div/a[@class='t2Yvdb']|.//div/a[@class='SsH3c']");
             if (nds != null)
             {
                 foreach (var nd in nds)
                 {
                     string url = nd.Attributes["href"].Value;
-                    string source = nd.SelectSingleNode(".//span[@class='dsJOWd']|.//span[@class='izosSe']|.//span[@class='UhM1oe']")?.InnerText ?? "";//21-07-2023
+                    string source = nd.SelectSingleNode(".//span[@class='dsJOWd']|.//span[@class='izosSe']|.//span[@class='UhM1oe']")?.InnerText ?? "";
                     string title = nd.SelectSingleNode(".//div[@class='NNFu9b nDgy9d']")?.InnerText ?? "";
                     s.Append("<item source=\"" + SetTitle(source) + "\" url=\"" + SetUrl(url) + "\" title=\"" + SetTitle(title) + "\" />");
                 }
             }
+            s.Append("</block>");
+            if (node.SelectSingleNode(".//div[contains(@class,'WlTAzf')]|.//div[@class='tkQJMd']") != null || node.Attributes["class"]?.Value == "WlTAzf mnr-c vk_c")
+            {
+                s.Append(GetFlights(node));
+            }
             return s.ToString();
-        } //07-07-2023 FindResultsOn Block
+        }//09-08-2023//07-07-2023 FindResultsOn Block
         private string ConvertNumber(string value)//23-06-2023
         {
             if (string.IsNullOrEmpty(value))
@@ -2933,7 +2834,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
 
                 // changes on 08-07-2019
                 nd = node.SelectSingleNode(".//img[@alt='map image']|.//img[@alt='Affected area map']|.//img[contains(@alt,'Map of ')]|.//img[@alt='Affected area']|.//img[@alt='Immagine mappa']|.//img[contains(@alt,'Map from')]|.//img[contains(@alt,'Mappa di')]");//02-05-2022//22-11-2021//30-11-2020 //19-06-2020 // 13-03-2020 //01-05-2020
-                if (nd != null)
+                if (nd != null & node.SelectSingleNode(".//div[@class='Vvrpbd']") == null)//14-08-2023
                     return "Maps";
             }
 
@@ -2941,7 +2842,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             if (nd == null)
                 nd = node.SelectSingleNode(".//div[@class='bUNBRd mnr-c']|.//div[@class='HnYYW i8lZMc']|.//div[@class='HnYYW mfMhoc']|.//div[@class='HnYYW']/div|.//div[@class='HnYYW DFkChc']");//04-07-2023//20-11-2020 twiter classic links//26-06-2020 //13-03-2020 //include on 2019-06-24
             if (nd == null)
-                nd = node.SelectSingleNode(".//g-card[@class='g F6CFcc']|.//g-inner-card[@class='Bf5NPb']");//26-06-2023//03-06-2021 twitter block
+                nd = node.SelectSingleNode(".//g-card[@class='g F6CFcc']|.//g-inner-card[@class='Bf5NPb']|.//div[@class='Bv2VAe']");//14-08-2023//26-06-2023//03-06-2021 twitter block
             if (nd != null)
             {
                 if (nd.InnerText.Contains("Twitter") || nd.SelectSingleNode(".//g-link") != null) //07-01-2021 twitter link
@@ -3059,10 +2960,10 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             }
             else
             {
-                nd = node.SelectSingleNode(".//div[@class='rKFBM gsrt wp-ms']|.//span[@class='FCUp0c rQMQod']"); //13-07-2020 images selector    // changes on 11-07-2019
+                nd = node.SelectSingleNode(".//div[@class='rKFBM gsrt wp-ms']|.//div[@class='JNkvid gsrt VJIO7b BUnLGf wp-ms']|.//span[@class='FCUp0c rQMQod']");//11-08-2023 //13-07-2020 images selector    // changes on 11-07-2019
                 if (nd != null)
                 {
-                    if (nd.InnerText == "About" || nd.InnerText == "Images" || nd.InnerText == "Imágenes")  // 07-02-2020 and 10-02-2020 21-02-2020 included title for images block
+                    if (nd.InnerText == "About" || nd.InnerText.StartsWith("Images") || nd.InnerText == "Imágenes")//14-08-2023  // 07-02-2020 and 10-02-2020 21-02-2020 included title for images block
                         return "Images";
                     if (nd.InnerText.Trim() == "Eventos")  // 07-02-2020 included title for Event block
                         return "Event";
