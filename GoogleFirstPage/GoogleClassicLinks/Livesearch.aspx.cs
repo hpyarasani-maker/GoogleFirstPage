@@ -489,7 +489,7 @@ namespace GoogleFirstPage.GoogleClassicLinks
                 //[not(contains(@class, 'fl'))]    
                 //HtmlNodeCollection node = doc.DocumentNode.SelectNodes(".//div[@class='r']/a|.//div[@class='rc']/div/a");
                 //HtmlNodeCollection node = doc.DocumentNode.SelectNodes(".//h3[@class='r']/a|.//div[@class='r']/a|.//div[@class='r']/div/a|.//div[@class='yuRUbf']/a|.//g-link/a|.//h3[@class='r dO0Ag']/a|.//div[@class='yuRUbf']/a|.//div[@class='zTpPx']/g-link/a");
-                HtmlNodeCollection node = doc.DocumentNode.SelectNodes(".//div[@class='yuRUbf']/a|.//div[@class='yuRUbf']/div/a|.//div/div[@class='g jNVrwc Y4pkMc']");
+                HtmlNodeCollection node = doc.DocumentNode.SelectNodes(".//div[@class='yuRUbf']/a|.//div[@class='yuRUbf']/div/a|.//div[@class='yuRUbf']/div/span/a|.//div/div[@class='g jNVrwc Y4pkMc']");
 
                 foreach (HtmlNode links in node)
                 {
