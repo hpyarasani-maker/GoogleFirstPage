@@ -42,7 +42,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                     nodeCol = nodeCol[nodeCol.Count - 1].SelectNodes("a/div");  //28-04-2020
                 if (nodeCol == null)//20-09-2023
                     nodeCol = doc.DocumentNode.SelectNodes("//div[@id='rso']/div[@class='MjjYud']/div|//div[@id='rso']/div[@class='MjjYud']/block-component|.//div[contains(@class,'TzHB6b')]");//22-09-2023//21-09-2023//20-09-2023
-                if (nodeCol == null)
+                if (nodeCol == null || doc.DocumentNode.SelectNodes("//div[@class='WtZO4e']/div|//div[@classname='WtZO4e']/div")?.Count > 1)//25-09-2023
                     nodeCol = doc.DocumentNode.SelectNodes("//div[@id='rso']/div|//div[@id='rso']/g-card|//div[@id='taw']/div[@class='med']/div[2]/div|//div[@id='rso']/nav|//div[@id='rso']/block-component/div|//div[contains(@id, 'arc-srp')]/div/div[@class='MjjYud']|//div[contains(@id, 'arc-srp')]/div/div/div[@class='MjjYud']|.//div[contains(@class,'TzHB6b')]");//29-03-2023//07-01-2022 event results//28-04-2020
                 if (nodeCol != null && nodeCol.Count == 1)
                     nodeCol = doc.DocumentNode.SelectNodes("//div[@id='rso']/div|//div[@class='vC5Ym DhKAUb']/div");  //23-03-2023  //17-09-2019
@@ -106,12 +106,14 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                         if (n == null)
                             n = node.SelectSingleNode(".//div[contains(@class,'PZPZlf')]"); //30-03-2023//27-02-2023 //15-11-2021 KP
 
-                        if (node.SelectSingleNode(".//div[contains(@class,'WlTAzf ')]") == null)//22-09-2023
+                        if (n != null)//25-09-2023
                         {
-                            string heading = n.InnerText;
-                            sb.Append("<block type=\"knowledgeGraph\" url=\"\" title=\"" + SetTitle(heading) + "\" />");
-                        }//22-09-2023
-
+                            if (node.SelectSingleNode(".//div[contains(@class,'WlTAzf ')]|.//div[@jsname='dTDiAc']") == null)//25-09-2023//22-09-2023
+                            {
+                                string heading = n.InnerText;
+                                sb.Append("<block type=\"knowledgeGraph\" url=\"\" title=\"" + SetTitle(heading) + "\" />");
+                            }//22-09-2023
+                        }//25-09-2023
                         /*if (n != null)//19-01-2023 //23-01-2023 Googlehotels else KP Block
                         {
                             string googleHotels = string.Empty;
@@ -139,13 +141,13 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                             sb.Append(GetImages(node));
                             sb.Append("</block>");
                         }//11-08-2023
-                        n = node.SelectSingleNode(".//block-component/div[contains(@class, 'kno-result')]|.//div[@class='UDZeY fAgajc']");//20-09-2023//30-01-2023 Answer Card
-                        if (n != null)
-                        {
-                            sb.Append("<block type=\"answerCard\" url=\"\">");
-                            sb.Append(GetAnswerCard(n));
-                            sb.Append("</block>");
-                        }//30-01-2023 Answer Card
+                        //n = node.SelectSingleNode(".//block-component/div[contains(@class, 'kno-result')]|.//div[@class='UDZeY fAgajc']");//20-09-2023//30-01-2023 Answer Card
+                        //if (n != null)//25-09-2023
+                        //{
+                        //    sb.Append("<block type=\"answerCard\" url=\"\">");
+                        //    sb.Append(GetAnswerCard(n));
+                        //    sb.Append("</block>");
+                        //}//30-01-2023 Answer Card//25-09-2023
                         n = node.SelectSingleNode(".//g-img[@class='o8ebK']|.//g-img[@class='gRTVof']|.//div[@class='Xlcxdd']");//20-09-2023//10-10-2022//07-09-2022 missing KP block
                         if (n != null && node.SelectSingleNode(".//div[@class='KrvXD']") == null)///13-12-2022
                         {
@@ -1799,6 +1801,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                     hdrNode = nd.SelectSingleNode(".//div[@class='kno-ecr-pt kno-fb-ctx HOpgu gsmt']/span");
                 if (hdrNode == null)
                     hdrNode = nd.SelectSingleNode(".//div[@class='gsrt TCmnBf']");
+                if (hdrNode == null)
+                    hdrNode = nd.SelectSingleNode(".//div[@class='SPZz6b']/h2");//27-09-2023
                 if (hdrNode == null)//26-09-2019
                     hdrNode = nd.SelectSingleNode(".//div[@class='SPZz6b']/div");//26-09-2019
                 if (hdrNode == null)
@@ -2424,7 +2428,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                         try
                         {
                             string airline = "";
-                            string hours = nd.SelectSingleNode(".//td[1]/div/div[contains(@class,'BNeawe')]/span[2]")?.InnerText.Trim() ?? nd.SelectSingleNode(".//div[@class='BNeawe DwrKqd']/span")?.InnerText.Trim() ?? "0h 0m"; //22-09-2023
+                            string hours = nd.SelectSingleNode(".//div[@class='BNeawe DwrKqd']/span")?.InnerText.Trim() ?? nd.SelectSingleNode(".//td[1]/div/div[contains(@class,'BNeawe')]/span[2]")?.InnerText.Trim() ?? "0h 0m"; //27-09-2023 //22-09-2023
                             string connecting = nd.SelectSingleNode(".//div[contains(@class,'BNeawe')]/span[@class='BNeawe']")?.InnerText.Trim() ?? nd.SelectSingleNode(".//div[@class='BNeawe']")?.InnerText.Trim() ?? "";//22-09-2023
                             string price = nd.SelectSingleNode(".//div[@class='BNeawe DwrKqd']")?.GetDirectInnerText() ?? nd.SelectSingleNode(".//td[2]/div/div[@class='BNeawe']")?.GetDirectInnerText() ?? "0";//22-09-2023
                             string priceValue = string.Empty;
@@ -2566,6 +2570,10 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 price = "0";//01-06-2023
             if (price.Equals("vérifier le prix"))//01-06-2023
                 price = "0";//01-06-2023
+            if (price.Equals("Preis prüfen"))
+                price = "0";
+            if (price.Equals("controlla il prezzo"))
+                price = "0";
             return price;
         }
         private string ConvertHours(string hours) //05-07-2023
@@ -2616,8 +2624,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 int min = Convert.ToInt32(match.Groups[1].Value);
                 return (min > 0) ? (min / 60.0).ToString("##.##") : "0.0";
             }//23-09-2023
-
-            return "";
+            return "0.0";//25-09-2023
         }//05-07-2023
         private string GetBlockType(HtmlNode node)
         {
