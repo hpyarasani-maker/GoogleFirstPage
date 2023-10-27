@@ -108,7 +108,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
 
                         if (n != null)//25-09-2023
                         {
-                            if (node.SelectSingleNode(".//div[contains(@class,'WlTAzf ')]|.//div[@jsname='dTDiAc']") == null)//25-09-2023//22-09-2023
+                            if (node.SelectSingleNode(".//div[contains(@class,'WlTAzf ')]|.//div[@jsname='dTDiAc']") == null || node.SelectSingleNode(".//div[contains(@class,'XbtRGb qxsd')]") != null)//23-10-2023//25-09-2023//22-09-2023
                             {
                                 string heading = n.InnerText;
                                 sb.Append("<block type=\"knowledgeGraph\" url=\"\" title=\"" + SetTitle(heading) + "\" />");
@@ -134,13 +134,13 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                 sb.Append("<block type=\"knowledgeGraph\" url=\"\" title=\"" + SetTitle(heading) + "\" />");
                             }
                         }*///19-01-2023 //23-01-2023 Googlehotels else KP Block
-                        n = node.SelectSingleNode(".//div[@class='kno-fiu kno-liu']");//11-08-2023 Images block
-                        if (n != null)
-                        {
-                            sb.Append("<block type=\"images\" url=\"\">");
-                            sb.Append(GetImages(node));
-                            sb.Append("</block>");
-                        }//11-08-2023
+                        //n = node.SelectSingleNode(".//div[@class='kno-fiu kno-liu']");//11-08-2023 Images block
+                        //if (n != null && node.SelectSingleNode(".//div[contains(@class,'PZPZlf')]") == null)//23-10-2023
+                        //{
+                        //    sb.Append("<block type=\"images\" url=\"\">");
+                        //    sb.Append(GetImages(node));
+                        //    sb.Append("</block>");
+                        //}//26-10-2023//11-08-2023 commented
                         //n = node.SelectSingleNode(".//block-component/div[contains(@class, 'kno-result')]|.//div[@class='UDZeY fAgajc']");//20-09-2023//30-01-2023 Answer Card
                         //if (n != null)//25-09-2023
                         //{
@@ -148,11 +148,11 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                         //    sb.Append(GetAnswerCard(n));
                         //    sb.Append("</block>");
                         //}//30-01-2023 Answer Card//25-09-2023
-                        n = node.SelectSingleNode(".//g-img[@class='o8ebK']|.//g-img[@class='gRTVof']|.//div[@class='Xlcxdd']");//20-09-2023//10-10-2022//07-09-2022 missing KP block
-                        if (n != null && node.SelectSingleNode(".//div[@class='KrvXD']") == null)///13-12-2022
-                        {
-                            sb.Append("<block type=\"maps\" url=\"\"></block>");
-                        } //07-09-2022
+                        //n = node.SelectSingleNode(".//g-img[@class='o8ebK']|.//g-img[@class='gRTVof']|.//div[@class='Xlcxdd']");//20-09-2023//10-10-2022//07-09-2022 missing KP block
+                        //if (n != null && node.SelectSingleNode(".//div[@class='KrvXD']") == null)///13-12-2022
+                        //{
+                        //    sb.Append("<block type=\"maps\" url=\"\"></block>");
+                        //} //25-10-2023 commented//07-09-2022
                         continue;
                     }
                     try
@@ -2896,7 +2896,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             if (nd == null)
                 nd = node.SelectSingleNode(".//div[@class='bUNBRd mnr-c']|.//div[@class='HnYYW i8lZMc']|.//div[@class='HnYYW mfMhoc']|.//div[@class='HnYYW']/div|.//div[@class='HnYYW DFkChc']");//04-07-2023//20-11-2020 twiter classic links//26-06-2020 //13-03-2020 //include on 2019-06-24
             if (nd == null)
-                nd = node.SelectSingleNode(".//g-card[@class='g F6CFcc']|.//g-inner-card[@class='Bf5NPb']|.//div[@class='Bv2VAe']");//14-08-2023//26-06-2023//03-06-2021 twitter block
+                nd = node.SelectSingleNode(".//g-card[@class='g F6CFcc']|.//g-inner-card[contains(@class,'Bf5NPb')]|.//div[@class='Bv2VAe']");//23-10-2023//14-08-2023//26-06-2023//03-06-2021 twitter block
             if (nd != null)
             {
                 if (nd.InnerText.Contains("Twitter") || nd.SelectSingleNode(".//g-link") != null) //07-01-2021 twitter link
@@ -3007,6 +3007,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 nd = node.SelectSingleNode(".//div[@class='mR2gOd pptFR']"); //25-02-2021 images selector
             if (nd == null)
                 nd = node.SelectSingleNode(".//div[@class='u4WRYb']");//06-12-2021 image block
+            if (nd == null)
+                nd = node.SelectSingleNode(".//div[@class='ysxiae iRPzcb']");//23-10-2023
             if (nd != null)
             {
                 //if (node.SelectSingleNode(".//div[@class='kno-fiu kno-liu']") == null) //30-08-2021 image wrong block issue
@@ -3018,7 +3020,9 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 nd = node.SelectSingleNode(".//div[@class='rKFBM gsrt wp-ms']|.//div[@class='JNkvid gsrt VJIO7b BUnLGf wp-ms']|.//span[@class='FCUp0c rQMQod']");//11-08-2023 //13-07-2020 images selector    // changes on 11-07-2019
                 if (nd != null)
                 {
-                    if (nd.InnerText == "About" || nd.InnerText.StartsWith("Images") || nd.InnerText == "Imágenes")//14-08-2023  // 07-02-2020 and 10-02-2020 21-02-2020 included title for images block
+                    if (nd.InnerText == "About")//26-10-2023
+                        return "AnswerCard";
+                    if (nd.InnerText.StartsWith("Images") || nd.InnerText == "Imágenes")//26-10-2023
                         return "Images";
                     if (nd.InnerText.Trim() == "Eventos")  // 07-02-2020 included title for Event block
                         return "Event";
@@ -3051,7 +3055,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             //13-08-2019
             nd = node.SelectSingleNode(".//div[@class='aJegcc']");
             if (nd != null)
-                if (node.SelectNodes(".//div[contains(@class,'xCCdqb')]|.//div[contains(@class, 'tyUpi')]|.//div[@class='baPFxb g kSMK2']") == null)//11-04-2023//10-04-2023//06-12-2021 wrong PL block//16-09-2019
+                if (node.SelectNodes(".//div[contains(@class,'xCCdqb')]|.//div[contains(@class, 'tyUpi')]|.//div[@class='baPFxb g kSMK2']|.//div[contains(@class,'wTrwWd')]") == null)//23-10-2023//11-04-2023//10-04-2023//06-12-2021 wrong PL block//16-09-2019
                 {
                     return "ProductListedAds";
                 }
