@@ -614,7 +614,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             }//02-11-2023
             //18-03-2020
             HtmlNode imgs = colt.SelectSingleNode("//div[@class='M8OgIe']");//21-04-2023
-            if (imgs != null && imgs.SelectSingleNode(".//div[@id='Odp5De']|.//div[@jscontroller='qTdDb']") == null)//15-05-2023//27-04-2023
+            if (imgs != null && (imgs.SelectSingleNode(".//div[@id='Odp5De']|.//div[@jscontroller='qTdDb']") == null || imgs.SelectSingleNode(".//div[@class='QjXCXd']") != null))//04-01-2024//15-05-2023//27-04-2023
             {
                 s.Append("<block type=\"images\" url=\"\">");
                 s.Append(GetImages(imgs));
@@ -1595,7 +1595,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             HtmlNode dest = node.SelectSingleNode(".//input[contains(@placeholder,'destination')]|.//input[contains(@placeholder,'destinazione')]");//13-07-2023
             if (dest != null)
             {
-                origin = node.SelectSingleNode(".//input[contains(@placeholder,'origin')]|.//input[contains(@placeholder,'il luogo di partenza')]").Attributes["value"]?.Value ?? "";//13-07-2023
+                origin = node.SelectSingleNode(".//input[contains(@placeholder,'origin')]|.//input[contains(@placeholder,'il luogo di partenza')]|.//input[contains(@placeholder,'Ville de départ')]").Attributes["value"]?.Value ?? "";//29-12-2023//13-07-2023
                 destination = dest.Attributes["value"]?.Value ?? "";
             }
             else
@@ -1803,7 +1803,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
         private string Convertprice(string price)
         {
             string patternprice = "[\\d]+";
-            string p = price.Replace(",", "").Replace("٬", "");
+            string p = price.Contains("€") ? price.Replace(" ", "").Replace(".", "") : price.Replace(",", "").Replace("٬", "");//01-01-2024
             Match mc = Regex.Match(p, patternprice, RegexOptions.IgnoreCase);
             if (mc.Success)
                 price = mc.Value;
