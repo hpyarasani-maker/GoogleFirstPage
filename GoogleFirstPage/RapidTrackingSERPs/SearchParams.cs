@@ -2692,19 +2692,19 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             },//18-01-2024
             new SearchProperties() //27-01-2024
             {
-            seid =774, domain ="nl", geo_location="Curacao", locale= "nl-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="desktop"
+            seid =774, domain ="nl", geo_location="Curacao", locale= "nl-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="desktop",sename="Google CU (Curacao)"
             },
             new SearchProperties()
             {
-            seid =775, domain ="nl", geo_location="Curacao", locale= "nl-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="mobile_android"
+            seid =775, domain ="nl", geo_location="Curacao", locale= "nl-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="mobile_android",sename="Google CU (Curacao, Mobile)"
             },
             new SearchProperties()
             {
-            seid =776, domain ="bg", geo_location="Bulgaria", locale= "bg-bg", uule = "w+CAIQICIIQnVsZ2FyaWE=",device="mobile_android"
+            seid =776, domain ="bg", geo_location="Bulgaria", locale= "bg-bg", uule = "w+CAIQICIIQnVsZ2FyaWE=",device="mobile_android",sename="Google BG (Bulgaria, Mobile)"
             },
             new SearchProperties()
             {
-            seid =777, domain ="co.ma", geo_location="Morocco", locale= "fr-ma", uule = "w+CAIQICIHTW9yb2Njbw==",device="mobile_android"
+            seid =777, domain ="co.ma", geo_location="Morocco", locale= "fr-ma", uule = "w+CAIQICIHTW9yb2Njbw==",device="mobile_android",sename="Google MA (Morocco, Mobile)"
             },//27-01-2024
          };
     }
