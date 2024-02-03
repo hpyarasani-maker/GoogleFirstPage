@@ -2688,7 +2688,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             },
             new SearchProperties()
             {
-            seid =773, domain ="fr", geo_location="Saint-Denis", locale= "fr-re", uule = "w+CAIQICILU2FpbnQtRGVuaXM=",device="mobile_android",sename="Google FR (Saint-Denis, Mobile)"
+            seid =773, domain ="fr", geo_location="Saint-Denis", locale= "fr-re", uule = "w+CAIQICILU2FpbnQtRGVuaXM=",device="mobile_android",sename="Google FR (Reunion Island, Mobile)"
             },//18-01-2024
             new SearchProperties() //27-01-2024
             {

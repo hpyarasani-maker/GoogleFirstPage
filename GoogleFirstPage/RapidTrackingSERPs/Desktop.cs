@@ -47,9 +47,9 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 if (nodeCol == null || nodeCol.Count <= 4)
                     nodeCol = rso.SelectNodes(".//div[contains(@class,'TzHB6b cLjAic')]");//02-11-2023
                 if (nodeCol == null || nodeCol.Count <= 3)//02-11-2023
-                    nodeCol = rso.SelectNodes(".//div[@class='WvKfwe a3spGf']/div|.//div[@class='wDYxhc']");//02-11-2023
+                    nodeCol = rso.SelectNodes(".//div[@class='WvKfwe a3spGf']/div");//01-02-2024//02-11-2023
                 if (nodeCol == null || (nodeCol.Count >= 1 && nodeCol.Count <= 3))
-                    nodeCol = rso.SelectNodes(".//div[contains(@class,'WvKfwe')]/div|.//div[@class='UDZeY OTFaAf']/div|.//div[@class='MjjYud']");
+                    nodeCol = rso.SelectNodes(".//div[contains(@class,'WvKfwe')]/div|.//div[@class='UDZeY OTFaAf']/div|.//div[@class='MjjYud']|.//div[contains(@class,'g Ww4FFb')]");//01-02-2024
                 if (nodeCol != null)  //11-08-2022 //end 01-11-2023
                     foreach (HtmlNode node in nodeCol)
                     {
@@ -2007,7 +2007,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 nd = node.SelectSingleNode(".//div[@class='wH6SXe']");//03-10-2023
             if (nd == null)
                 nd = node.SelectSingleNode(".//div[@jsmodel='Wn3aEc']");//16-01-2024
-            if (nd != null && node.Attributes["id"]?.Value != "Odp5De" && node.SelectSingleNode(".//div[@class='q6PGbe']|.//div[@class='l44Vof']|.//div[@class='P9Jfrb']|.//div[@class='o8ebK']|.//div[@class='ntKMYc']|.//img[starts-with(@alt,'Map of')]") == null)//03-11-2023//06-12-2022//13-08-2022 maps //02-06-2022
+            if (nd != null && node.Attributes["id"]?.Value != "Odp5De" && node.SelectSingleNode(".//div[@class='q6PGbe']|.//div[@class='l44Vof']|.//div[@class='P9Jfrb']|.//div[@class='o8ebK']|.//div[@class='ntKMYc']|.//img[starts-with(@alt,'Map of')]|.//div[@class='aJegcc']") == null)//01-02-2024//03-11-2023//06-12-2022//13-08-2022 maps //02-06-2022
             {
                 return "Images";
             }
@@ -2204,7 +2204,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 {
                     if (nd.Attributes["alt"].Value.StartsWith("Map of ") || node.SelectSingleNode(".//div[@class='H93uF']" + //24-11-2023//06-12-2022//21-04-2022
                         "|.//div[@class='uaxL4e ef0Hld']") != null || node.SelectSingleNode(".//img[contains(@alt,'Map of ')]" +
-                        "|.//img[contains(@alt,'Karte von ')]") != null)//05-12-2023
+                        "|.//img[contains(@alt,'Karte von ')]|.//img[contains(@alt,'karte')]") != null)//22-01-2024//05-12-2023
                         return true;
                     if (node.SelectSingleNode(".//div[@class='U1TUId LYh3vc']") != null) //16-12-2021
                         return false; //16-12-2021
