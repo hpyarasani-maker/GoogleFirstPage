@@ -2716,7 +2716,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             },
             new SearchProperties()
             {
-            seid =780, domain ="com.cy", geo_location="Cyprus", locale= "tr-cy", uule = "w+CAIQICIQRmFtYWd1c3RhLEN5cHJ1cw==", device="mobile_android",sename="Google CY (Turkish, Mobile)"
+            seid =780, domain ="com.cy", geo_location="Famagusta,Cyprus", locale= "tr-cy", uule = "w+CAIQICIQRmFtYWd1c3RhLEN5cHJ1cw==", device="mobile_android",sename="Google CY (Famagusta,Turkish, Mobile)"
             },
             new SearchProperties()
             {
