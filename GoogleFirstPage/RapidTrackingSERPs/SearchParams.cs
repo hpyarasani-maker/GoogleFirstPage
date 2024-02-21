@@ -2706,6 +2706,42 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             {
             seid =777, domain ="co.ma", geo_location="Morocco", locale= "fr-ma", uule = "w+CAIQICIHTW9yb2Njbw==",device="mobile_android",sename="Google MA (Morocco, Mobile)"
             },//27-01-2024
+            new SearchProperties()//21-02-2024
+            {
+             seid =778, domain ="hn", geo_location="Honduras", locale= "es-hn", uule = "w+CAIQICIISG9uZHVyYXM=", device="mobile_android",sename="Google HN (Spanish, Mobile)"
+            },
+            new SearchProperties()
+            {
+            seid =779, domain ="com.sv", geo_location="El Salvador", locale= "es-sv", uule = "w+CAIQICILRWwgU2FsdmFkb3I=", device="mobile_android",sename="Google El Salvador (Spanish, Mobile)"
+            },
+            new SearchProperties()
+            {
+            seid =780, domain ="com.cy", geo_location="Cyprus", locale= "tr-cy", uule = "w+CAIQICIQRmFtYWd1c3RhLEN5cHJ1cw==", device="mobile_android",sename="Google CY (Turkish, Mobile)"
+            },
+            new SearchProperties()
+            {
+            seid =781, domain ="com.ua", geo_location="Ukraine", locale= "uk-ua", uule = "w+CAIQICIHVWtyYWluZQ==", device="mobile_android",sename="Google UA (Mobile)"
+            },
+            new SearchProperties()
+            {
+             seid =782, domain ="com.ua", geo_location="Ukraine", locale= "ru-ua", uule = "w+CAIQICIHVWtyYWluZQ==", device="mobile_android",sename="Google UA (Russian, Mobile)"
+            },
+            new SearchProperties()
+            {
+            seid = 783, domain ="rs", geo_location="Serbia", locale= "sr-rs", uule = "w+CAIQICIGU2VyYmlh", device="mobile_android",sename="Google RS (Mobile)"
+            },
+            new SearchProperties()
+            {
+            seid = 784, domain ="sk", geo_location="Slovakia", locale= "sk-sk", uule = "w+CAIQICIIU2xvdmFraWE=", device="mobile_android",sename="Google SK (Mobile)"
+            },
+            new SearchProperties()
+            {
+            seid =785, domain ="si", geo_location="Slovenia", locale= "sl-si", uule = "w+CAIQICIIU2xvdmVuaWE=", device="mobile_android",sename="Google SI (Mobile)"
+            },
+            new SearchProperties()
+            {
+            seid =786, domain ="co.il", geo_location="Israel", locale= "iw-il", uule = "w+CAIQICIGSXNyYWVs", device="mobile_android",sename="Google IL (Hebrew, Mobile)"
+            },//21-02-2024
          };
     }
     public class SearchProperties
