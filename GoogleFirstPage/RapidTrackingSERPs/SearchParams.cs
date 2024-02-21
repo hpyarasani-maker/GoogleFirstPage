@@ -2742,6 +2742,70 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             {
             seid =786, domain ="co.il", geo_location="Israel", locale= "iw-il", uule = "w+CAIQICIGSXNyYWVs", device="mobile_android",sename="Google IL (Hebrew, Mobile)"
             },//21-02-2024
+            new SearchProperties()//21-02-2024
+            {
+                seid =787, domain ="co.uk", geo_location="Bath,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIbQmF0aCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Bath)"
+            },
+            new SearchProperties()
+            {
+                seid =788, domain ="co.uk", geo_location="Bath,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIbQmF0aCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Bath, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =789, domain ="co.uk", geo_location="Ilkley,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIdSWxrbGV5LEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop", sename="Google UK (Ilkley)"
+            },
+            new SearchProperties()
+            {
+                seid =790, domain ="co.uk", geo_location="Ilkley,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIdSWxrbGV5LEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Ilkley, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =791, domain ="co.uk", geo_location="Ipswich,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeSXBzd2ljaCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Ipswich)"
+            },
+            new SearchProperties()
+            {
+                seid =792, domain ="co.uk", geo_location="Ipswich,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeSXBzd2ljaCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Ipswich, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =793, domain ="co.uk", geo_location="Preston,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeUHJlc3RvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Preston)"
+            },
+            new SearchProperties()
+            {
+                seid =794, domain ="co.uk", geo_location="Preston,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeUHJlc3RvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Preston, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =795, domain ="co.uk", geo_location="Reigate,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeUmVpZ2F0ZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Reigate)"
+            },
+            new SearchProperties()
+            {
+                seid =796, domain ="co.uk", geo_location="Reigate,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeUmVpZ2F0ZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Reigate, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =797, domain ="co.uk", geo_location="Swindon,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeU3dpbmRvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Swindon)"
+            },
+            new SearchProperties()
+            {
+                seid =798, domain ="co.uk", geo_location="Swindon,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeU3dpbmRvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Swindon, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =799, domain ="co.uk", geo_location="Wigan,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIcV2lnYW4sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop", sename="Google UK (Wigan)"
+            },
+            new SearchProperties()
+            {
+                seid =800, domain ="co.uk", geo_location="Wigan,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIcV2lnYW4sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Wigan, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =801, domain ="co.uk", geo_location="Windsor,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeV2luZHNvcixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Windsor)"
+            },
+            new SearchProperties()
+            {
+                seid =802, domain ="co.uk", geo_location="Windsor,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeV2luZHNvcixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Windsor, Mobile)"
+            },//21-02-2024
          };
     }
     public class SearchProperties
