@@ -222,6 +222,8 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="RapidTrackingSERPs\keywordsearch.aspx" />
+    <Content Include="RapidTrackingSERPs\Getjobid.aspx" />
     <Content Include="Xmltracker\css\main.css" />
     <Content Include="Xmltracker\css\main1.css" />
     <Content Include="Xmltracker\css\Tablecss.css" />
@@ -644,6 +646,20 @@
     </Compile>
     <Compile Include="RapidTrackingSERPs\jobidsource.aspx.designer.cs">
       <DependentUpon>jobidsource.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RapidTrackingSERPs\keywordsearch.aspx.cs">
+      <DependentUpon>keywordsearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RapidTrackingSERPs\keywordsearch.aspx.designer.cs">
+      <DependentUpon>keywordsearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RapidTrackingSERPs\Getjobid.aspx.cs">
+      <DependentUpon>Getjobid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RapidTrackingSERPs\Getjobid.aspx.designer.cs">
+      <DependentUpon>Getjobid.aspx</DependentUpon>
     </Compile>
     <Compile Include="RapidTrackingSERPs\Oxylabsresponse.cs" />
     <Compile Include="Trackingstatus\pipeline.aspx.cs">

@@ -12,8 +12,6 @@
     <link href="Content/bootstrap.cosmo.min.css" rel="stylesheet" />
     <link href="Content/StyleSheet.css" rel="stylesheet" />
 
-    <%--<link rel="icon" href="../images/PILogo_1.jpg" type="image/x-icon" />--%>
-
     <link href="../CSS/StyleSheet2.css" rel="stylesheet" />
 
     <script src="../js/jquery-1.10.2.js"></script>
