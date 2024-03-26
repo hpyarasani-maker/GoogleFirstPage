@@ -99,7 +99,17 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                     {
                                         dt.Rows.Add("", node.Attributes[1].Value);
                                     }
-                                    if (node.Attributes[0].Value.ToString() != "hotelPack" && node.Attributes[0].Value.ToString() != "flightPack")
+                                    if (node.Attributes[0].Value.ToString() == "answerCard")
+                                    {
+                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                        foreach (XmlNode nodee in node)
+                                        {
+                                            //dt.Rows.Add("", nodee.Attributes[1].Value, " featureTitle = " + nodee.Attributes[0].Value + " --- " + " Title = " + nodee.Attributes[2].Value + " --- " + " description = " + nodee.Attributes[3].Value + " --- " + " isTable = " + nodee.Attributes[4].Value + " --- " + " isList = " + nodee.Attributes[5].Value + " --- " + " isChart = " + nodee.Attributes[6].Value + " --- " + " isVideo = " + nodee.Attributes[7].Value); //+ " --- " + " Table = " + nodee.LastChild.Attributes[8].Value
+                                            dt.Rows.Add("", node.Attributes[1].Value, " featureTitle = " + nodee.Attributes[0].Value + " --- " + " Title = " + nodee.Attributes[2].Value + " --- " + " description = " + nodee.Attributes[3].Value + " --- " + " cardType = " + nodee.Attributes[4].Value); //+ " --- " + " Table = " + nodee.LastChild.Attributes[8].Value
+                                        }
+                                        dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
+                                    }
+                                    if (node.Attributes[0].Value.ToString() != "hotelPack" && node.Attributes[0].Value.ToString() != "flightPack" && node.Attributes[0].Value.ToString() != "answerCard")
                                     {
                                         if (node.Attributes[0].Value.ToString() != "findResultsOn")
                                         {
@@ -111,11 +121,11 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                                     //dt.Rows.Add("", nodee.Attributes[0].Value, " Title = " + nodee.Attributes[1].Value + " --- " + " Price = " + nodee.Attributes[2].Value + " --- " + " Site = " + nodee.Attributes[3].Value);
                                                     dt.Rows.Add("", nodee.Attributes[0].Value, " Title = " + nodee.Attributes[1].Value + " --- " + " Price = " + nodee.Attributes[2].Value + " --- " + " PriceValue = " + nodee.Attributes[3].Value + " --- " + " Site = " + nodee.Attributes[4].Value);
                                                 }
-                                                else if(node.Attributes[0].Value.ToString() == "videos")
+                                                else if (node.Attributes[0].Value.ToString() == "videos")
                                                 {
                                                     dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + " ------ " + " creatorName = " + nodee.Attributes[2].Value);
                                                 }
-                                                else 
+                                                else
                                                 {
                                                     dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
                                                 }
@@ -123,7 +133,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                             dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                         }
                                     }
-                                    if (node.Attributes[0].Value.ToString() == "hotelPack" && node.Attributes[0].Value.ToString() != "findResultsOn")
+                                    if (node.Attributes[0].Value.ToString() == "hotelPack" && node.Attributes[0].Value.ToString() != "findResultsOn" && node.Attributes[0].Value.ToString() != "answerCard")
                                     {
                                         dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                         foreach (XmlNode nodee in node)
@@ -151,7 +161,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                         }
                                         dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                     }
-                                    if (node.Attributes[0].Value.ToString() == "flightPack" && node.Attributes[0].Value.ToString() != "findResultsOn")
+                                    if (node.Attributes[0].Value.ToString() == "flightPack" && node.Attributes[0].Value.ToString() != "findResultsOn" && node.Attributes[0].Value.ToString() != "answerCard")
                                     {
                                         dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                         if (node.Attributes.Count == 5)
@@ -218,7 +228,17 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                     {
                                         dt.Rows.Add("", node.Attributes[1].Value);
                                     }
-                                    if (node.Attributes[0].Value.ToString() != "hotelPack" && node.Attributes[0].Value.ToString() != "flightPack")
+                                    if (node.Attributes[0].Value.ToString() == "answerCard")
+                                    {
+                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                        foreach (XmlNode nodee in node)
+                                        {
+                                            //dt.Rows.Add("", nodee.Attributes[1].Value, " featureTitle = " + nodee.Attributes[0].Value + " --- " + " Title = " + nodee.Attributes[2].Value + " --- " + " description = " + nodee.Attributes[3].Value + " --- " + " isTable = " + nodee.Attributes[4].Value + " --- " + " isList = " + nodee.Attributes[5].Value + " --- " + " isChart = " + nodee.Attributes[6].Value + " --- " + " isVideo = " + nodee.Attributes[7].Value); //+ " --- " + " Table = " + nodee.LastChild.Attributes[8].Value
+                                            dt.Rows.Add("", nodee.Attributes[1].Value, " featureTitle = " + nodee.Attributes[0].Value + " --- " + " Title = " + nodee.Attributes[2].Value + " --- " + " description = " + nodee.Attributes[3].Value + " --- " + " cardType = " + nodee.Attributes[4].Value); //+ " --- " + " Table = " + nodee.LastChild.Attributes[8].Value
+                                        }
+                                        dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
+                                    }
+                                    if (node.Attributes[0].Value.ToString() != "hotelPack" && node.Attributes[0].Value.ToString() != "flightPack" && node.Attributes[0].Value.ToString() != "answerCard")
                                     {
                                         if (node.Attributes[0].Value.ToString() != "findResultsOn")
                                         {
@@ -242,7 +262,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                             dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                         }
                                     }
-                                    if (node.Attributes[0].Value.ToString() == "hotelPack" && node.Attributes[0].Value.ToString() != "findResultsOn")
+                                    if (node.Attributes[0].Value.ToString() == "hotelPack" && node.Attributes[0].Value.ToString() != "findResultsOn" && node.Attributes[0].Value.ToString() != "answerCard")
                                     {
                                         dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                         foreach (XmlNode nodee in node)
@@ -270,7 +290,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                         }
                                         dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                     }
-                                    if (node.Attributes[0].Value.ToString() == "flightPack" && node.Attributes[0].Value.ToString() != "findResultsOn")
+                                    if (node.Attributes[0].Value.ToString() == "flightPack" && node.Attributes[0].Value.ToString() != "findResultsOn" && node.Attributes[0].Value.ToString() != "answerCard")
                                     {
                                         dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                         if (node.Attributes.Count == 5)

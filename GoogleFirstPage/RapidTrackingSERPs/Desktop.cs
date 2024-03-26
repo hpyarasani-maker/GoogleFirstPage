@@ -606,9 +606,9 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             HtmlNode ac = doc.DocumentNode.SelectSingleNode(".//div[@class='ULSxyf a2qDab EyBRub']|.//div[@id='Odp5De']");//03-11-2023
             if (ac != null && ac.SelectSingleNode(".//div[contains(@class,'NhRr3b')]|.//div[@class='wDYxhc']") != null && ac.SelectSingleNode(".//g-scrolling-carousel") == null)//07-12-2023
             {
-                s.Append("<block type=\"answerCard\" url=\"\">");
+                //s.Append("<block type=\"answerCard\" url=\"\">");
                 s.Append(GetAnswerCard(ac));
-                s.Append("</block>");
+                //s.Append("</block>");
             }
             //30-09-2022 end for new code answer card
             HtmlNode hp = doc.DocumentNode.SelectSingleNode(".//div[@class='MaKSie']");//02-11-2023
@@ -745,9 +745,9 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                             }//19-09-2023
                             if (nd.SelectSingleNode(".//div[@class='ifM9O']") != null)//29-09-2023
                             {
-                                s.Append("<block type=\"answerCard\" url=\"\">");
+                                //s.Append("<block type=\"answerCard\" url=\"\">");
                                 s.Append(GetAnswerCard(nd));
-                                s.Append("</block>");
+                                //s.Append("</block>");
                                 continue;
                             }//29-09-2023
                             if (nd.SelectSingleNode(".//div[@jsname='wRSfy']") != null && nd.SelectSingleNode(".//div[@class='g']" +
@@ -992,10 +992,10 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                     s.Append(GetTwitterCards(node));
                     break;
                 case "answercard":
-                    s.Append("<block type=\"answerCard\" url=\"\">");
+                    //s.Append("<block type=\"answerCard\" url=\"\">");
                     //get answer card urls;
                     s.Append(GetAnswerCard(node));
-                    s.Append("</block>");
+                    //s.Append("</block>");
                     break;
                 case "peoplealsoask":
                     s.Append("<block type=\"peopleAlsoAsk\" url=\"\">");
@@ -1253,7 +1253,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             return s.ToString();
         }
 
-        private string GetAnswerCard(HtmlNode node)
+        /*private string GetAnswerCard(HtmlNode node)
         {
             StringBuilder s = new StringBuilder();
             HtmlNodeCollection nds = node.SelectNodes(".//div[@class='r']/a");
@@ -1265,12 +1265,12 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 nds = node.SelectNodes(".//div[@class='WcS13d']|.//div[@class='V3FYCf']");//04-12-2023 //removed /a //05-10-2020 included selector for missing classic links
             if (nds == null)
                 return string.Empty;
-
+           
             foreach (HtmlNode nd in nds)
             {
                 //05-10-2020
                 string title = "";
-
+                
                 HtmlNodeCollection nds1 = nd.SelectNodes(".//h3|.//div[@class='wKZW5d']"); //23-12-2021
                 if (nds1 != null)
                 {
@@ -1289,16 +1289,16 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 //end 05-10-2020
             }
             return s.ToString();
-        }
+        }*/
 
-        /*private string GetAnswerCard(HtmlNode node)//07-03-2024
+        private string GetAnswerCard(HtmlNode node)//07-03-2024
         {
             StringBuilder s = new StringBuilder();
             string desc = string.Empty;
             bool lst = false;
             bool tbl = node.SelectSingleNode(".//table") != null;
             bool video = node.SelectSingleNode(".//span[@class='z1asCe UIgqBe']/svg") != null;
-            string f_title = node.SelectSingleNode(".//div[@role='heading' and @ aria-level='3']")?.InnerText ?? "";
+            string f_title = (node.SelectNodes(".//span[contains(@class, 'ILfuVd')]") == null) ? node.SelectSingleNode(".//div[@role='heading' and @ aria-level='3']")?.InnerText ?? "" : "";//20-03-2024
             bool chrt = node.SelectSingleNode(".//div[contains(@class, 'kpd-ch')]") != null;
             HtmlNode a = node.SelectSingleNode(".//div[@class='yuRUbf']/a|.//div[@class='yuRUbf']/div/a|.//div[@class='yuRUbf']/div/span/a");
             string url = a?.Attributes["href"].Value ?? "";
@@ -1311,7 +1311,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 {
                     desc += l.InnerText + "\\n";//12-03-2024
                 }
-                desc = desc.Remove(desc.Length - 1);
+                desc = desc.Remove(desc.Length - 1) + "n";
             }
             if (tbl)
             {
@@ -1342,15 +1342,17 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                     //desc = desc.Remove(desc.Length - 1);//12-03-2024
                 }
             }
-            else
+            else if (string.IsNullOrEmpty(desc))//20-03-2024
+            {
                 desc = node.SelectSingleNode(".//span[contains(@class, 'ILfuVd')]")?.InnerText ?? "";
+            }//20-03-2024
             string cardType = lst ? "list" : tbl ? "table" : video ? "video" : chrt ? "chart" : "text";
             s.Append("<block type=\"answerCard\" url=\"" + SetUrl(url) + "\" >");
-            s.Append("<item featureTitle=\"" + SetTitle(f_title) + "\" url=\"" + SetUrl(url) + "\" title=\"" +
+            s.Append("<item featureTitle=\"" + SetTitle(f_title) + "\" url=\"\" title=\"" +
                 SetTitle(title) + "\" description=\"" + SetTitle(desc) + "\" cardType=\"" + cardType + "\" />");
             s.Append("</block>");
             return s.ToString();
-        }//07-03-2024*/
+        }//07-03-2024
 
         private string GetTwitterCards(HtmlNode node)
         {
