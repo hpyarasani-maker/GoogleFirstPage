@@ -205,7 +205,7 @@
             <br />
             <br />
             <div id="footer">
-                <div style="font-weight: bold; font-size: 14px;">© <%= DateTime.Now.Year %> Pi Datametrics | SERP - MissingElements.</div>
+                <div style="font-weight: bold; font-size: 14px;">© <%= DateTime.Now.Year %> Pi Datametrics | SERP - Jobids.</div>
             </div>
         </div>
     </form>

@@ -97,7 +97,10 @@ namespace GoogleFirstPage.RapidTrackingSERPs
 
         protected void grmissing_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-
+            foreach (TableCell tc in e.Row.Cells)
+            {
+                tc.Attributes["style"] = "border-right:1px solid black; border-bottom:1px solid blaco";
+            }
         }
     }
 }

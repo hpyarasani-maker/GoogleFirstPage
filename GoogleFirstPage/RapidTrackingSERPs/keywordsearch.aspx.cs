@@ -46,7 +46,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                         object[] array = row.ItemArray;
                         for (i = 0; i < array.Length - 1; i++)
                         {
-                            sw.Write(array[i].ToString() + " : ");
+                            sw.Write(array[i].ToString() + "\t");
                         }
                         sw.WriteLine(array[i].ToString());
                     }
