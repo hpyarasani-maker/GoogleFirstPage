@@ -423,7 +423,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                         //url = "https://www.google." + gp.domain + "/search?q=" + keyword.Replace("'", "%27") + "&gl=" + s1 + "&hl=" + lan1 + "&uule=" + uule + "&num=100&aomd=1&safe=off&safe_search=0&gs_l=desktop&gws_rd=ssl,cr";
                         url = "https://www.google." + gp.domain + "/search?q=" + keyword.Replace("'", "%27") + "&gl=" + s1 + "&hl=" + lan1 + "&uule=" + uule + "&num=100&aomd=1&safe=off&safe_search=0";
                     else
-                        url = "https://www.google." + gp.domain + "/search?q=" + keyword.Replace("'", "%27") + "&gl=" + s1 + "&hl=" + lan1 + "&uule=" + uule + "&num=100&glp=1&adtest=on&tci=g:2752&safe=images&safe=high&adtest-useragent=Mozilla/5.0 (iPhone; CPU iPhone OS 12_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.2 Mobile/15E148 Safari/604.1";
+                        url = "https://www.google." + gp.domain + "/search?q=" + keyword.Replace("'", "%27") + "&gl=" + s1 + "&hl=" + lan1 + "&uule=" + uule + "&num=100&glp=1&adtest=on&tci=g:2752&safe=images&safe=high&adtest-useragent=Mozilla/5.0 (iPhone; CPU iPhone OS 14_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/124.0 Mobile/15E148 Safari/605.1.15";
 
 
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "Popup_File" + 2, "window.open('" + url.Replace("'", "%27") + "','Window_X')", true);
