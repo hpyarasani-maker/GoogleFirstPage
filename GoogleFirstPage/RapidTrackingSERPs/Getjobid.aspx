@@ -39,6 +39,15 @@
         });
     </script>
 
+    <script type="text/javascript">
+        function HideLabel() {
+            var seconds = 10;
+            setTimeout(function () {
+                document.getElementById("<%=lblalllinks.ClientID %>").style.display = "none";
+            }, seconds * 1000);
+        };
+    </script>
+
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
     <script type="text/javascript">
@@ -153,7 +162,7 @@
             <div class="header3">
                 <div style="margin-top: 12px;">
                     &nbsp;<strong><span class="auto-style1">Feature :</span></strong>&nbsp;&nbsp;
-                    <asp:DropDownList id="ddltype" runat="server" CssClass="text1" Height="30px" Width="180px">
+                    <asp:DropDownList ID="ddltype" runat="server" CssClass="text1" Height="30px" Width="180px">
                         <asp:ListItem Text="adwords" Value="adwords" Selected="True"></asp:ListItem>
                         <asp:ListItem Text="answerCard" Value="answerCard"></asp:ListItem>
                         <asp:ListItem Text="apps" Value="apps"></asp:ListItem>
@@ -189,23 +198,26 @@
                     <br />
                 </div>
             </div>
+            <br />
+            <br />
+            <br />
             <div class="wrapper">
                 <asp:Label ID="lblalllinks" runat="server" ForeColor="Blue" Font-Size="Small" Font-Bold="true"></asp:Label>
             </div>
             <br />
             <br />
             <br />
-            <asp:GridView runat="server" ID="grmissing" AutoGenerateColumns="false" HeaderStyle-HorizontalAlign="Left" Font-Bold="true" HeaderStyle-Font-Bold="true" OnRowDataBound="grmissing_RowDataBound" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" HeaderStyle-Height="2px" RowStyle-Width="1px">
+            <%--<asp:GridView runat="server" ID="grmissing" AutoGenerateColumns="false" HeaderStyle-HorizontalAlign="Left" Font-Bold="true" HeaderStyle-Font-Bold="true" OnRowDataBound="grmissing_RowDataBound" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" HeaderStyle-Height="2px" RowStyle-Width="1px">
                 <Columns>
                         <asp:BoundField HeaderText="Seid" DataField="seid" ItemStyle-HorizontalAlign="Left" />
                         <asp:BoundField HeaderText="Keyword" DataField="name" ItemStyle-HorizontalAlign="Left" />
                         <asp:BoundField HeaderText="Oxylabs Jobid" DataField="jobid" ItemStyle-HorizontalAlign="Left" />
                     </Columns>
-            </asp:GridView>
+            </asp:GridView>--%>
             <br />
             <br />
             <div id="footer">
-                <div style="font-weight: bold; font-size: 14px;">© <%= DateTime.Now.Year %> Pi Datametrics | SERP - Jobids.</div>
+                <div style="font-weight: bold; font-size: 14px;">© <%= DateTime.Now.Year %> Pi Datametrics | SERP - GetJobid.</div>
             </div>
         </div>
     </form>

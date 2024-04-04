@@ -18,7 +18,9 @@ namespace GoogleFirstPage.RapidTrackingSERPs
         SqlCommand cmd;
         SqlDataAdapter da;
         DataTable dt;
-        
+        SqlConnection con;
+
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,19 +29,19 @@ namespace GoogleFirstPage.RapidTrackingSERPs
 
         protected void btnsearchkwd_Click(object sender, EventArgs e)
         {
-            
-          lblalllinks.Visible = false;
+            string date = DateTime.Today.ToString("yyyy-MM-dd");
+            lblalllinks.Visible = false;
             try
             {
                 lblalllinks.Visible = true;
-                using (SqlConnection con = new SqlConnection(conn))
+                using (con = new SqlConnection(conn))
                 {
                     cmd = new SqlCommand("[GetSearchKeywords]", con);
                     cmd.CommandType = CommandType.StoredProcedure;
                     da = new SqlDataAdapter(cmd);
                     dt = new DataTable();
                     da.Fill(dt);
-                    StreamWriter sw = new StreamWriter(@"C:\inetpub\wwwroot\html\keywordslist.txt", true);
+                    StreamWriter sw = new StreamWriter(@"C:\inetpub\wwwroot\html\keywordslist_" + date + ".txt", true);
                     int i;
                     foreach (DataRow row in dt.Rows)
                     {
@@ -62,7 +64,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             }
             finally
             {
-                
+                con.Close();
+                con.Dispose();
             }
         }
     }
