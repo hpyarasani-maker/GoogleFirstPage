@@ -9,12 +9,11 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:GridView ID="grd11" runat="server" AutoGenerateColumns="true">
-                
-            </asp:GridView>
-
+            <asp:TextBox ID="txtkwd" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtseids" runat="server"></asp:TextBox>
             <asp:Button ID="bt111" runat="server" OnClick="bt111_Click" Text="submit" />
             <asp:Label ID="lblclcount" runat="server"></asp:Label>
+            <asp:GridView ID="gvtracking" runat="server" AutoGenerateColumns="true"></asp:GridView>
         </div>
     </form>
 </body>

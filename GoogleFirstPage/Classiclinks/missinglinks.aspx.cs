@@ -85,11 +85,11 @@ namespace GoogleFirstPage.Classiclinks
                     {
                         Desktop clsDesktop = new Desktop();
                         res = clsDesktop.ProcessDocument(seid, keyword, doc, out count);
-                        resRx = clsDesktop.ProcessClassicLinks(seid, keyword, doc);
+                        //resRx = clsDesktop.ProcessClassicLinks(seid, keyword, doc);
                     }
                     else
                     {
-                        iOS clsiOS = new iOS();
+                        iOS1 clsiOS = new iOS1();
                         res = clsiOS.ProcessDocument(seid, keyword, doc, out count);
                         resRx = clsiOS.ProcessClassicLinks(seid, keyword, doc);
                     }

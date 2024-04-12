@@ -22,13 +22,22 @@ namespace GoogleFirstPage.Classiclinks {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// grd11 control.
+        /// txtkwd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grd11;
+        protected global::System.Web.UI.WebControls.TextBox txtkwd;
+        
+        /// <summary>
+        /// txtseids control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtseids;
         
         /// <summary>
         /// bt111 control.
@@ -47,5 +56,14 @@ namespace GoogleFirstPage.Classiclinks {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblclcount;
+        
+        /// <summary>
+        /// gvtracking control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvtracking;
     }
 }

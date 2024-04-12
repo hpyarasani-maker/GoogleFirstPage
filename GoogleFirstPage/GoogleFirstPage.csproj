@@ -446,6 +446,7 @@
     </Compile>
     <Compile Include="Classiclinks\Desktop.cs" />
     <Compile Include="Classiclinks\iOS.cs" />
+    <Compile Include="Classiclinks\iOS1.cs" />
     <Compile Include="Classiclinks\Missedlink.aspx.cs">
       <DependentUpon>Missedlink.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

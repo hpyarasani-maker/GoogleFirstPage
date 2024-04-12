@@ -22,6 +22,7 @@ namespace GoogleFirstPage.Classiclinks
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        public string jobid = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -29,8 +30,99 @@ namespace GoogleFirstPage.Classiclinks
 
         protected void bt111_Click(object sender, EventArgs e)
         {
-           GetProcessedLists();
-           
+            string seid = txtseids.Text;
+            string keyword = txtkwd.Text;
+            ArrayList list1 = new ArrayList();
+            //GetProcessedLists();
+            bool result = false;
+            if (Page.IsValid)
+            {
+                try
+                {
+                    var doc = new HtmlAgilityPack.HtmlDocument();
+                    ArrayList alresult = GetHTML(keyword, Convert.ToInt32(seid));
+
+                    foreach (string[] src in alresult)
+                    {
+                        JObject obj = JObject.Parse(src[1]);
+                        string html = obj["results"][0]["content"].Value<string>();
+                        string kwds = src[0];
+                        //string html = src[1];
+                        jobid = src[2];
+                        string device = src[3];
+                        //SendToDatabase(Convert.ToInt32(seid), kwds, jobid);
+                        result = true;
+                        doc = new HtmlAgilityPack.HtmlDocument();
+                        doc.LoadHtml(html);
+                        string res = string.Empty;
+                        int count = 0;
+                        try
+                        {
+                            if (device == "desktop")
+                            {
+                                Desktop clsDesktop = new Desktop();
+                                res = clsDesktop.ProcessDocument(seid, keyword, doc, out count);
+                                XmlDocument xml = new XmlDocument();
+                                xml.LoadXml(res);
+                                XmlNodeList xnList1 = xml.SelectNodes("/searchResult/section/item/@url");
+                                foreach (XmlNode xn1 in xnList1)
+                                {
+                                    list1.Add(xn1.InnerText);
+                                }
+                            }
+                            else
+                            {
+                                iOS clsiOS = new iOS();
+                                res = clsiOS.ProcessDocument(seid, keyword, doc, out count);
+                                XmlDocument xml = new XmlDocument();
+                                xml.LoadXml(res);
+                                XmlNodeList xnList1 = xml.SelectNodes("/searchResult/section/item/@url");
+                                foreach (XmlNode xn1 in xnList1)
+                                {
+                                    list1.Add(xn1.InnerText);
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Response.Write(ex.Message);
+                        }
+                    }
+
+                    if (Page.IsValid)
+                    {
+                        int count = 1;
+                        ArrayList myList = new ArrayList();
+                        //foreach (var a in list1)
+                        //{
+                            DataTable dt = Table();
+
+                            foreach (string[] s in list1)
+                            {
+                                //sb.Append("<item url=\"" + s[0] + "\" missedIn=\"" + s[1] + "\" />");
+                                DataRow row = dt.NewRow();
+                                dt.Rows.Add(s[0]);
+                            }
+                            //grd11.DataSource = dt;
+                            //grd11.DataBind();
+                            //ArrayList alRes = a.Value;
+                            //for (int i = 0; i < alRes.Count; i++)
+                            //{
+                            //    myList.Add(new mURL(alRes[i].ToString(), count++));
+                            //}
+                            //oxylabsjobid.Text = "" + jobid.Trim();
+                            //resultscnt.Text = "" + alRes.Count;
+                        //}
+                        gvtracking.DataSource = dt;
+                        gvtracking.DataBind();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    string error = ex.Message;
+                }
+            }
+
         }
 
         List<ArrayList> GetProcessedLists()
@@ -125,15 +217,15 @@ namespace GoogleFirstPage.Classiclinks
                 dt.Rows.Add(s[0],s[1]);
 
             }
-            grd11.DataSource = dt;
-            grd11.DataBind();
+            //grd11.DataSource = dt;
+            //grd11.DataBind();
         }
 
         public DataTable Table()
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("URL");
-            dt.Columns.Add("Missing from");
+            //dt.Columns.Add("Missing from");
             return dt;
         }
 
@@ -172,7 +264,185 @@ namespace GoogleFirstPage.Classiclinks
             public int Position { get { return position; } }
         }
 
-        
+        public ArrayList GetHTML(string keyword, int seid)
+        {
+            ArrayList alResult = new ArrayList();
+            try
+            {
+                SearchProperties sp = SearchParams.searches.Where(s => s.seid == seid).SingleOrDefault();
+                sp.query = keyword;
+                if (sp != null)
+                    alResult = GetOxylabsWebDataSources(sp);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return alResult;
+        }
+
+        ArrayList GetOxylabsWebDataSources(SearchProperties sp)
+        {
+            Uri queryUri = new Uri("http://data.oxylabs.io/v1/queries/batch");
+            //string username = "gpidatametrics";
+            //string password = "sdV5X3fcX6";
+            string username = "piapp";
+            string password = "b5FCvgkjxx";
+            string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
+            string[] keyword = { sp.query };
+
+            OxyParams op = new OxyParams()
+            {
+                source = "google_search",
+                domain = sp.domain,
+                //query = sp.query.Split(','),
+                query = keyword,
+                limit = 100,
+                pages = 1,
+                //start_page = 1,
+                locale = sp.locale,
+                geo_location = sp.geo_location,
+                //uule = uule,
+                parse = false, //23-09-2021 changed datatype into "int to bool"
+                user_agent_type = sp.device,
+                context = new List<Context> {
+                    new Context("safe_search", 0)
+                    }
+            };
+
+
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(queryUri);
+            req.Headers.Clear();
+
+            req.Method = "POST";
+            req.ContentType = "application/json";
+            req.Headers.Add(HttpRequestHeader.Authorization, "Basic " + authInfo);
+
+            using (var streamWriter = new StreamWriter(req.GetRequestStream()))
+            {
+                var json = Newtonsoft.Json.JsonConvert.SerializeObject(op, new Newtonsoft.Json.JsonSerializerSettings
+                {
+                    Formatting = Newtonsoft.Json.Formatting.Indented,
+                });
+
+                streamWriter.Write(json);
+            }
+
+            string response;
+            try
+            {
+                HttpWebResponse res = (HttpWebResponse)req.GetResponse();
+                using (StreamReader reader = new StreamReader(res.GetResponseStream(), Encoding.UTF8))
+                {
+                    response = reader.ReadToEnd();
+                }
+                res.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            JObject jo = JObject.Parse(response);
+            var links = from p in jo["queries"] select p;
+            ArrayList lst = new ArrayList();
+            foreach (JToken link in links)
+            {
+                string kw = link["query"].Value<string>();
+                string href = link["_links"][1]["href"].Value<string>();
+                string status = link["status"].Value<string>();
+                string jobid = link["id"].Value<string>();
+                string device = link["user_agent_type"].Value<string>();
+                string[] s = { kw, href, status, "no", jobid, device };    // keyword, url, status, isdownloaded, jobid, device.
+                lst.Add(s);
+            }
+
+            if (lst.Count <= 0) return lst;
+            ArrayList alResult = new ArrayList();
+            do
+            {
+                int cnt = 0;
+                foreach (string[] cbUrl in lst)
+                {
+                    string[] reslt = { "", "", "", "" };
+                    response = "";
+
+                    Uri uri = new Uri(cbUrl[1]);
+                    //Uri uri = new Uri("http://data.oxylabs.io/v1/queries/6707077494169666561/results");
+                    if (cbUrl[2] == "done" && cbUrl[3] == "no")
+                    {
+                        try
+                        {
+                            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
+                            httpWebRequest.Headers["Authorization"] = "Basic " + authInfo;
+                            HttpWebResponse res = (HttpWebResponse)httpWebRequest.GetResponse();
+
+                            Stream resVal = res.GetResponseStream();
+                            StreamReader reader = new StreamReader(resVal, Encoding.UTF8);
+                            //** Store all the contents
+                            response = reader.ReadToEnd();
+                            resVal.Close();
+                            res.Close();
+
+                            cbUrl[3] = "yes";
+                            cnt++;
+
+                            if (!string.IsNullOrEmpty(response))
+                            {
+                                reslt[0] = cbUrl[0];
+                                reslt[1] = response;
+                                reslt[2] = cbUrl[4];
+                                reslt[3] = cbUrl[5];
+                                alResult.Add(reslt);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Result Request: " + ex.Message);
+                        }
+                    }
+                    else if (cbUrl[2] == "faulted" && cbUrl[3] == "no")
+                    {
+                        cbUrl[3] = "yes";
+                        cnt++;
+                    }
+                    else if (cbUrl[2] == "pending" && cbUrl[3] == "no")
+                    {
+                        try
+                        {
+                            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(uri.ToString().Replace("/results", ""));
+                            httpWebRequest.Headers["Authorization"] = "Basic " + authInfo;
+                            HttpWebResponse res = (HttpWebResponse)httpWebRequest.GetResponse();
+
+                            string doneresp = "";
+                            using (StreamReader reader = new StreamReader(res.GetResponseStream(), Encoding.UTF8))
+                            {
+                                doneresp = reader.ReadToEnd();
+                            }
+                            res.Close();
+
+                            JObject job = JObject.Parse(doneresp);
+                            string status = job["status"].Value<string>();
+                            cbUrl[2] = status;
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("Status Request: " + ex.Message);
+                        }
+                    }
+                    else
+                        cnt++;
+                    Task.Delay(200).Wait();
+                }
+
+                if (lst.Count == cnt) break;
+
+            } while (true);
+
+            return alResult;
+        }
+
 
     }
 }
