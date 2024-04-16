@@ -446,7 +446,6 @@
     </Compile>
     <Compile Include="Classiclinks\Desktop.cs" />
     <Compile Include="Classiclinks\iOS.cs" />
-    <Compile Include="Classiclinks\iOS1.cs" />
     <Compile Include="Classiclinks\Missedlink.aspx.cs">
       <DependentUpon>Missedlink.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -564,7 +563,9 @@
     </Compile>
     <Compile Include="GoogleClassicLinksCallbackUrl\OxyParams.cs" />
     <Compile Include="GoogleClassicLinksCallbackUrl\SearchParams.cs" />
+    <Compile Include="GoogleClassicLinks\Desktop.cs" />
     <Compile Include="GoogleClassicLinks\HTMLParserNewTask.cs" />
+    <Compile Include="GoogleClassicLinks\iOS.cs" />
     <Compile Include="GoogleClassicLinks\Livesearch.aspx.cs">
       <DependentUpon>Livesearch.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -37,7 +37,7 @@
 
     <script type="text/javascript">
         $(function () {
-            $('[id*=gvtracking]').footable();
+            $('[id*=gridviewjobid]').footable();
         });
     </script>
 

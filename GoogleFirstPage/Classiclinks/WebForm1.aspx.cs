@@ -65,10 +65,20 @@ namespace GoogleFirstPage.Classiclinks
                                 XmlDocument xml = new XmlDocument();
                                 xml.LoadXml(res);
                                 XmlNodeList xnList1 = xml.SelectNodes("/searchResult/section/item/@url");
+                                int itemcount = 1;
                                 foreach (XmlNode xn1 in xnList1)
                                 {
                                     list1.Add(xn1.InnerText);
                                 }
+                                ArrayList alRes = new ArrayList();
+                                ArrayList myList = new ArrayList();
+                                alRes = list1;
+                                for (int i = 0; i < alRes.Count; i++)
+                                {
+                                    myList.Add(new mURL(itemcount++, alRes[i].ToString()));
+                                }
+                                gvtracking.DataSource = myList;
+                                gvtracking.DataBind();
                             }
                             else
                             {
@@ -81,6 +91,16 @@ namespace GoogleFirstPage.Classiclinks
                                 {
                                     list1.Add(xn1.InnerText);
                                 }
+                                int itemcount = 1;
+                                ArrayList alRes = new ArrayList();
+                                ArrayList myList = new ArrayList();
+                                alRes = list1;
+                                for (int i = 0; i < alRes.Count; i++)
+                                {
+                                    myList.Add(new mURL(itemcount++, alRes[i].ToString()));
+                                }
+                                gvtracking.DataSource = myList;
+                                gvtracking.DataBind();
                             }
                         }
                         catch (Exception ex)
@@ -89,33 +109,33 @@ namespace GoogleFirstPage.Classiclinks
                         }
                     }
 
-                    if (Page.IsValid)
-                    {
-                        int count = 1;
-                        ArrayList myList = new ArrayList();
-                        //foreach (var a in list1)
-                        //{
-                            DataTable dt = Table();
+                    //if (Page.IsValid)
+                    //{
+                    //    int count = 1;
+                    //    ArrayList myList = new ArrayList();
+                    //    //foreach (var a in list1)
+                    //    //{
+                    //        DataTable dt = Table();
 
-                            foreach (string[] s in list1)
-                            {
-                                //sb.Append("<item url=\"" + s[0] + "\" missedIn=\"" + s[1] + "\" />");
-                                DataRow row = dt.NewRow();
-                                dt.Rows.Add(s[0]);
-                            }
-                            //grd11.DataSource = dt;
-                            //grd11.DataBind();
-                            //ArrayList alRes = a.Value;
-                            //for (int i = 0; i < alRes.Count; i++)
-                            //{
-                            //    myList.Add(new mURL(alRes[i].ToString(), count++));
-                            //}
-                            //oxylabsjobid.Text = "" + jobid.Trim();
-                            //resultscnt.Text = "" + alRes.Count;
-                        //}
-                        gvtracking.DataSource = dt;
-                        gvtracking.DataBind();
-                    }
+                    //        foreach (string[] s in list1)
+                    //        {
+                    //            //sb.Append("<item url=\"" + s[0] + "\" missedIn=\"" + s[1] + "\" />");
+                    //            DataRow row = dt.NewRow();
+                    //            dt.Rows.Add(s[0]);
+                    //        }
+                    //        //grd11.DataSource = dt;
+                    //        //grd11.DataBind();
+                    //        //ArrayList alRes = a.Value;
+                    //        //for (int i = 0; i < alRes.Count; i++)
+                    //        //{
+                    //        //    myList.Add(new mURL(alRes[i].ToString(), count++));
+                    //        //}
+                    //        //oxylabsjobid.Text = "" + jobid.Trim();
+                    //        //resultscnt.Text = "" + alRes.Count;
+                    //    //}
+                    //    gvtracking.DataSource = dt;
+                    //    gvtracking.DataBind();
+                    //}
                 }
                 catch (Exception ex)
                 {
@@ -255,13 +275,15 @@ namespace GoogleFirstPage.Classiclinks
         {
             private string url;
             private int position;
-            public mURL(string url, int position)
+            public mURL(int position, string url)
             {
-                this.url = url;
                 this.position = position;
+
+                this.url = url;
             }
-            public string URL { get { return url; } }
             public int Position { get { return position; } }
+
+            public string URL { get { return url; } }
         }
 
         public ArrayList GetHTML(string keyword, int seid)

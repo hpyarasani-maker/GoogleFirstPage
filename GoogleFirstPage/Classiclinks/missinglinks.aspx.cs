@@ -89,7 +89,7 @@ namespace GoogleFirstPage.Classiclinks
                     }
                     else
                     {
-                        iOS1 clsiOS = new iOS1();
+                        iOS clsiOS = new iOS();
                         res = clsiOS.ProcessDocument(seid, keyword, doc, out count);
                         resRx = clsiOS.ProcessClassicLinks(seid, keyword, doc);
                     }
