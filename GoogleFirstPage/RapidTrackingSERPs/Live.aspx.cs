@@ -53,9 +53,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 }
             }
         }
-
-
-
+        
         protected void btngetdata_Click(object sender, EventArgs e)
         {
             oxydiv1.Visible = true;
