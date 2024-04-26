@@ -70,60 +70,6 @@ namespace GoogleFirstPage.GoogleClassicLinks
             string keyword = textsearchbox.Text;
             ArrayList list1 = new ArrayList();
             bool result = false;
-            if (Page.IsValid)
-            {
-                try
-                {
-                    var doc = new HtmlAgilityPack.HtmlDocument();
-                    ArrayList alresult = GetHTML(keyword, Convert.ToInt32(seid));
-
-                    foreach (string[] src in alresult)
-                    {
-                        JObject obj = JObject.Parse(src[1]);
-                        string html = obj["results"][0]["content"].Value<string>();
-                        string kwds = src[0];
-                        //string html = src[1];
-                        jobid = src[2];
-                        string device = src[3];
-                        SendToDatabase(Convert.ToInt32(seid), kwds, jobid);
-                        result = true;
-                        doc = new HtmlAgilityPack.HtmlDocument();
-                        doc.LoadHtml(html);
-                        string res = string.Empty;
-                        if (device == "desktop")
-                        {
-                            dict = DesktopPattern(html, keyword);
-                        }
-                        else
-                        {
-                            dict = MobilePattern(html, keyword);
-                        }
-                    }
-
-                    if (Page.IsValid)
-                    {
-                        int count = 1;
-                        ArrayList myList = new ArrayList();
-                        foreach (KeyValuePair<string, ArrayList> kvp in dict)
-                        {
-                            ArrayList alRes = kvp.Value;
-                            for (int i = 0; i < alRes.Count; i++)
-                            {
-                                myList.Add(new mURL(alRes[i].ToString(), count++));
-                            }
-                            oxylabsjobid.Text = "" + jobid.Trim();
-                            resultscnt.Text = "" + alRes.Count;
-                        }
-                        gvtracking.DataSource = myList;
-                        gvtracking.DataBind();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    string error = ex.Message;
-                }
-            }
-
             //if (Page.IsValid)
             //{
             //    try
@@ -144,62 +90,32 @@ namespace GoogleFirstPage.GoogleClassicLinks
             //            doc = new HtmlAgilityPack.HtmlDocument();
             //            doc.LoadHtml(html);
             //            string res = string.Empty;
-            //            int count = 0;
-            //            try
+            //            if (device == "desktop")
             //            {
-            //                if (device == "desktop")
-            //                {
-            //                    Desktop clsDesktop = new Desktop();
-            //                    res = clsDesktop.ProcessDocument(seid, keyword, doc, out count);
-            //                    XmlDocument xml = new XmlDocument();
-            //                    xml.LoadXml(res);
-            //                    XmlNodeList xnList1 = xml.SelectNodes("/searchResult/section/item/@url");
-            //                    int itemcount = 1;
-            //                    foreach (XmlNode xn1 in xnList1)
-            //                    {
-            //                        list1.Add(xn1.InnerText);
-            //                    }
-            //                    ArrayList alRes = new ArrayList();
-            //                    ArrayList myList = new ArrayList();
-            //                    alRes = list1;
-            //                    for (int i = 0; i < alRes.Count; i++)
-            //                    {
-            //                        myList.Add(new mURL(itemcount++, alRes[i].ToString()));
-            //                    }
-            //                    gvtracking.DataSource = myList;
-            //                    gvtracking.DataBind();
-            //                    oxylabsjobid.Text = "" + jobid.Trim();
-            //                    resultscnt.Text = "" + myList.Count;
-            //                }
-            //                else
-            //                {
-            //                    iOS clsiOS = new iOS();
-            //                    res = clsiOS.ProcessDocument(seid, keyword, doc, out count);
-            //                    XmlDocument xml = new XmlDocument();
-            //                    xml.LoadXml(res);
-            //                    XmlNodeList xnList1 = xml.SelectNodes("/searchResult/section/item/@url");
-            //                    int itemcount = 1;
-            //                    foreach (XmlNode xn1 in xnList1)
-            //                    {
-            //                        list1.Add(xn1.InnerText);
-            //                    }
-            //                    ArrayList alRes = new ArrayList();
-            //                    ArrayList myList = new ArrayList();
-            //                    alRes = list1;
-            //                    for (int i = 0; i < alRes.Count; i++)
-            //                    {
-            //                        myList.Add(new mURL(itemcount++, alRes[i].ToString()));
-            //                    }
-            //                    gvtracking.DataSource = myList;
-            //                    gvtracking.DataBind();
-            //                    oxylabsjobid.Text = "" + jobid.Trim();
-            //                    resultscnt.Text = "" + myList.Count;
-            //                }
+            //                dict = DesktopPattern(html, keyword);
             //            }
-            //            catch (Exception ex)
+            //            else
             //            {
-            //                Response.Write(ex.Message);
+            //                dict = MobilePattern(html, keyword);
             //            }
+            //        }
+
+            //        if (Page.IsValid)
+            //        {
+            //            int count = 1;
+            //            ArrayList myList = new ArrayList();
+            //            foreach (KeyValuePair<string, ArrayList> kvp in dict)
+            //            {
+            //                ArrayList alRes = kvp.Value;
+            //                for (int i = 0; i < alRes.Count; i++)
+            //                {
+            //                    myList.Add(new mURL(alRes[i].ToString(), count++));
+            //                }
+            //                oxylabsjobid.Text = "" + jobid.Trim();
+            //                resultscnt.Text = "" + alRes.Count;
+            //            }
+            //            gvtracking.DataSource = myList;
+            //            gvtracking.DataBind();
             //        }
             //    }
             //    catch (Exception ex)
@@ -207,6 +123,90 @@ namespace GoogleFirstPage.GoogleClassicLinks
             //        string error = ex.Message;
             //    }
             //}
+
+            if (Page.IsValid)
+            {
+                try
+                {
+                    var doc = new HtmlAgilityPack.HtmlDocument();
+                    ArrayList alresult = GetHTML(keyword, Convert.ToInt32(seid));
+
+                    foreach (string[] src in alresult)
+                    {
+                        JObject obj = JObject.Parse(src[1]);
+                        string html = obj["results"][0]["content"].Value<string>();
+                        string kwds = src[0];
+                        //string html = src[1];
+                        jobid = src[2];
+                        string device = src[3];
+                        SendToDatabase(Convert.ToInt32(seid), kwds, jobid);
+                        result = true;
+                        doc = new HtmlAgilityPack.HtmlDocument();
+                        doc.LoadHtml(html);
+                        string res = string.Empty;
+                        int count = 0;
+                        try
+                        {
+                            if (device == "desktop")
+                            {
+                                Desktop clsDesktop = new Desktop();
+                                res = clsDesktop.ProcessDocument(seid, keyword, doc, out count);
+                                XmlDocument xml = new XmlDocument();
+                                xml.LoadXml(res);
+                                XmlNodeList xnList1 = xml.SelectNodes("/searchResult/section/item/@url");
+                                int itemcount = 1;
+                                foreach (XmlNode xn1 in xnList1)
+                                {
+                                    list1.Add(xn1.InnerText);
+                                }
+                                ArrayList alRes = new ArrayList();
+                                ArrayList myList = new ArrayList();
+                                alRes = list1;
+                                for (int i = 0; i < alRes.Count; i++)
+                                {
+                                    myList.Add(new mURL(itemcount++, alRes[i].ToString()));
+                                }
+                                gvtracking.DataSource = myList;
+                                gvtracking.DataBind();
+                                oxylabsjobid.Text = "" + jobid.Trim();
+                                resultscnt.Text = "" + myList.Count;
+                            }
+                            else
+                            {
+                                iOS clsiOS = new iOS();
+                                res = clsiOS.ProcessDocument(seid, keyword, doc, out count);
+                                XmlDocument xml = new XmlDocument();
+                                xml.LoadXml(res);
+                                XmlNodeList xnList1 = xml.SelectNodes("/searchResult/section/item/@url");
+                                int itemcount = 1;
+                                foreach (XmlNode xn1 in xnList1)
+                                {
+                                    list1.Add(xn1.InnerText);
+                                }
+                                ArrayList alRes = new ArrayList();
+                                ArrayList myList = new ArrayList();
+                                alRes = list1;
+                                for (int i = 0; i < alRes.Count; i++)
+                                {
+                                    myList.Add(new mURL(itemcount++, alRes[i].ToString()));
+                                }
+                                gvtracking.DataSource = myList;
+                                gvtracking.DataBind();
+                                oxylabsjobid.Text = "" + jobid.Trim();
+                                resultscnt.Text = "" + myList.Count;
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Response.Write(ex.Message);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    string error = ex.Message;
+                }
+            }
         }
 
         protected void textsearchbox_TextChanged(object sender, EventArgs e)
@@ -254,34 +254,34 @@ namespace GoogleFirstPage.GoogleClassicLinks
             }
         }
 
-        public class mURL
-        {
-            private string url;
-            private int position;
-            public mURL(string url, int position)
-            {
-                this.url = url;
-                this.position = position;
-            }
-            public string URL { get { return url; } }
-            public int Position { get { return position; } }
-        }
-
-
-        //public class mURL // from class file
+        //public class mURL
         //{
         //    private string url;
         //    private int position;
-        //    public mURL(int position, string url)
+        //    public mURL(string url, int position)
         //    {
-        //        this.position = position;
-
         //        this.url = url;
+        //        this.position = position;
         //    }
-        //    public int Position { get { return position; } }
-
         //    public string URL { get { return url; } }
-        //} // from class file
+        //    public int Position { get { return position; } }
+        //}
+
+
+        public class mURL // from class file
+        {
+            private string url;
+            private int position;
+            public mURL(int position, string url)
+            {
+                this.position = position;
+
+                this.url = url;
+            }
+            public int Position { get { return position; } }
+
+            public string URL { get { return url; } }
+        } // from class file
 
 
         public ArrayList GetHTML(string keyword, int seid)
