@@ -3190,6 +3190,30 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             {
                 seid =898, domain ="com.np", geo_location="Nepal", locale= "en-np", uule = "w+CAIQICIFTmVwYWw=",device="mobile_android", sename="Google Nepal (English, Mobile)"
             },//15-05-2024
+            new SearchProperties()//03-06-2024
+            {
+                seid = 899, domain ="com", geo_location="New Jersey,United States", locale= "en-us", uule = "w+CAIQICIYTmV3IEplcnNleSxVbml0ZWQgU3RhdGVz",device="desktop", sename="Google US(New Jersey)"
+            },
+            new SearchProperties()
+            {
+                seid = 900, domain ="com", geo_location="New Jersey,United States", locale= "en-us", uule = "w+CAIQICIYTmV3IEplcnNleSxVbml0ZWQgU3RhdGVz",device="mobile_android", sename="Google US(New Jersey, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid = 901, domain ="com", geo_location="Delaware,United States", locale= "en-us", uule = "w+CAIQICIWRGVsYXdhcmUsVW5pdGVkIFN0YXRlcw==",device="desktop", sename="Google US(Delaware)"
+            },
+            new SearchProperties()
+            {
+                seid = 902, domain ="com", geo_location="Delaware,United States", locale= "en-us", uule = "w+CAIQICIWRGVsYXdhcmUsVW5pdGVkIFN0YXRlcw==",device="mobile_android", sename="Google US(Delaware, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid = 903, domain ="com", geo_location="Maryland,United States", locale= "en-us", uule = "w+CAIQICIWTWFyeWxhbmQsVW5pdGVkIFN0YXRlcw==",device="desktop", sename="Google US(Maryland)"
+            },
+            new SearchProperties()
+            {
+                seid = 904, domain ="com", geo_location="Maryland,United States", locale= "en-us", uule = "w+CAIQICIWTWFyeWxhbmQsVW5pdGVkIFN0YXRlcw==",device="mobile_android", sename="Google US(Maryland, Mobile)"
+            },//03-06-2024
          };
     }
     public class SearchProperties

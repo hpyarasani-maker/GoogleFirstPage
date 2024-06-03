@@ -2658,6 +2658,562 @@ namespace GoogleFirstPage.Classiclinks
             {
             seid =765, domain ="co.ug", geo_location="Uganda", locale= "sw-ug", uule = "w+CAIQICIGVWdhbmRh",device="mobile_android"
             },//22-12-2023
+            new SearchProperties() //16-01-2024
+            {
+            seid =766, domain ="by", geo_location="Belarus", locale= "ru-by", uule = "w+CAIQICIHQmVsYXJ1cw==",device="desktop",sename="Google BY (Belarus)"
+            },
+            new SearchProperties()
+            {
+            seid =767, domain ="by", geo_location="Belarus", locale= "ru-by", uule = "w+CAIQICIHQmVsYXJ1cw==",device="mobile_android",sename="Google BY (Belarus, Mobile)"
+            },
+            new SearchProperties()
+            {
+            seid =768, domain ="co.uz", geo_location="Uzbekistan", locale= "uz-uz", uule = "w+CAIQICIKVXpiZWtpc3Rhbg==",device="desktop",sename="Google UZ (Uzbekistan)"
+            },
+            new SearchProperties()
+            {
+            seid =769, domain ="co.uz", geo_location="Uzbekistan", locale= "uz-uz", uule = "w+CAIQICIKVXpiZWtpc3Rhbg==",device="mobile_android",sename="Google UZ (Uzbekistan, Mobile)"
+            },
+            new SearchProperties()
+            {
+            seid =770, domain ="nl", geo_location="Aruba", locale= "en-aw", uule = "w+CAIQICIFQXJ1YmE=",device="desktop",sename="Google AW (Aruba)"
+            },
+            new SearchProperties()
+            {
+            seid =771, domain ="nl", geo_location="Aruba", locale= "en-aw", uule = "w+CAIQICIFQXJ1YmE=",device="mobile_android",sename="Google AW (Aruba, Mobile)"
+            },//16-01-2024
+            new SearchProperties() //18-01-2024
+            {
+            seid =772, domain ="fr", geo_location="Saint-Denis", locale= "fr-re", uule = "w+CAIQICILU2FpbnQtRGVuaXM=",device="desktop",sename="Google FR (Saint-Denis)"
+            },
+            new SearchProperties()
+            {
+            seid =773, domain ="fr", geo_location="Saint-Denis", locale= "fr-re", uule = "w+CAIQICILU2FpbnQtRGVuaXM=",device="mobile_android",sename="Google FR (Reunion Island, Mobile)"
+            },//18-01-2024
+            new SearchProperties() //27-01-2024
+            {
+            seid =774, domain ="nl", geo_location="Curacao", locale= "nl-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="desktop",sename="Google CU (Curacao)"
+            },
+            new SearchProperties()
+            {
+            seid =775, domain ="nl", geo_location="Curacao", locale= "nl-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="mobile_android",sename="Google CU (Curacao, Mobile)"
+            },
+            new SearchProperties()
+            {
+            seid =776, domain ="bg", geo_location="Bulgaria", locale= "bg-bg", uule = "w+CAIQICIIQnVsZ2FyaWE=",device="mobile_android",sename="Google BG (Bulgaria, Mobile)"
+            },
+            new SearchProperties()
+            {
+            seid =777, domain ="co.ma", geo_location="Morocco", locale= "fr-ma", uule = "w+CAIQICIHTW9yb2Njbw==",device="mobile_android",sename="Google MA (Morocco, Mobile)"
+            },//27-01-2024
+            new SearchProperties()//21-02-2024
+            {
+             seid =778, domain ="hn", geo_location="Honduras", locale= "es-hn", uule = "w+CAIQICIISG9uZHVyYXM=", device="mobile_android",sename="Google HN (Spanish, Mobile)"
+            },
+            new SearchProperties()
+            {
+            seid =779, domain ="com.sv", geo_location="El Salvador", locale= "es-sv", uule = "w+CAIQICILRWwgU2FsdmFkb3I=", device="mobile_android",sename="Google El Salvador (Spanish, Mobile)"
+            },
+            new SearchProperties()
+            {
+            seid =780, domain ="com.cy", geo_location="Famagusta,Cyprus", locale= "tr-cy", uule = "w+CAIQICIQRmFtYWd1c3RhLEN5cHJ1cw==", device="mobile_android",sename="Google CY (Famagusta,Turkish, Mobile)"
+            },
+            new SearchProperties()
+            {
+            seid =781, domain ="com.ua", geo_location="Ukraine", locale= "uk-ua", uule = "w+CAIQICIHVWtyYWluZQ==", device="mobile_android",sename="Google UA (Mobile)"
+            },
+            new SearchProperties()
+            {
+             seid =782, domain ="com.ua", geo_location="Ukraine", locale= "ru-ua", uule = "w+CAIQICIHVWtyYWluZQ==", device="mobile_android",sename="Google UA (Russian, Mobile)"
+            },
+            new SearchProperties()
+            {
+            seid = 783, domain ="rs", geo_location="Serbia", locale= "sr-rs", uule = "w+CAIQICIGU2VyYmlh", device="mobile_android",sename="Google RS (Mobile)"
+            },
+            new SearchProperties()
+            {
+            seid = 784, domain ="sk", geo_location="Slovakia", locale= "sk-sk", uule = "w+CAIQICIIU2xvdmFraWE=", device="mobile_android",sename="Google SK (Mobile)"
+            },
+            new SearchProperties()
+            {
+            seid =785, domain ="si", geo_location="Slovenia", locale= "sl-si", uule = "w+CAIQICIIU2xvdmVuaWE=", device="mobile_android",sename="Google SI (Mobile)"
+            },
+            new SearchProperties()
+            {
+            seid =786, domain ="co.il", geo_location="Israel", locale= "iw-il", uule = "w+CAIQICIGSXNyYWVs", device="mobile_android",sename="Google IL (Hebrew, Mobile)"
+            },//21-02-2024
+            new SearchProperties()//21-02-2024
+            {
+                seid =787, domain ="co.uk", geo_location="Bath,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIbQmF0aCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Bath)"
+            },
+            new SearchProperties()
+            {
+                seid =788, domain ="co.uk", geo_location="Bath,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIbQmF0aCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Bath, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =789, domain ="co.uk", geo_location="Ilkley,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIdSWxrbGV5LEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop", sename="Google UK (Ilkley)"
+            },
+            new SearchProperties()
+            {
+                seid =790, domain ="co.uk", geo_location="Ilkley,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIdSWxrbGV5LEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Ilkley, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =791, domain ="co.uk", geo_location="Ipswich,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeSXBzd2ljaCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Ipswich)"
+            },
+            new SearchProperties()
+            {
+                seid =792, domain ="co.uk", geo_location="Ipswich,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeSXBzd2ljaCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Ipswich, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =793, domain ="co.uk", geo_location="Preston,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeUHJlc3RvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Preston)"
+            },
+            new SearchProperties()
+            {
+                seid =794, domain ="co.uk", geo_location="Preston,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeUHJlc3RvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Preston, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =795, domain ="co.uk", geo_location="Reigate,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeUmVpZ2F0ZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Reigate)"
+            },
+            new SearchProperties()
+            {
+                seid =796, domain ="co.uk", geo_location="Reigate,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeUmVpZ2F0ZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Reigate, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =797, domain ="co.uk", geo_location="Swindon,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeU3dpbmRvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Swindon)"
+            },
+            new SearchProperties()
+            {
+                seid =798, domain ="co.uk", geo_location="Swindon,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeU3dpbmRvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Swindon, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =799, domain ="co.uk", geo_location="Wigan,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIcV2lnYW4sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop", sename="Google UK (Wigan)"
+            },
+            new SearchProperties()
+            {
+                seid =800, domain ="co.uk", geo_location="Wigan,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIcV2lnYW4sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Wigan, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =801, domain ="co.uk", geo_location="Windsor,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeV2luZHNvcixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Windsor)"
+            },
+            new SearchProperties()
+            {
+                seid =802, domain ="co.uk", geo_location="Windsor,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeV2luZHNvcixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Windsor, Mobile)"
+            },//21-02-2024
+            new SearchProperties()//07-03-2024
+            {
+                seid =803, domain ="bt", geo_location="Bhutan", locale= "en-bt", uule = "w+CAIQICIGQmh1dGFu",device="mobile_android",sename="Google BT (English, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =804, domain ="com.vc", geo_location="Saint Vincent and the Grenadines", locale= "en-vc", uule = "w+CAIQICIHR3JlbmFkYQ==",device="mobile_android",sename="Google VC (English, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =805, domain ="tt", geo_location="Trinidad and Tobago", locale= "en-tt", uule = "w+CAIQICITVHJpbmlkYWQgYW5kIFRvYmFnbw==",device="mobile_android",sename="Google TT (English, Mobile)"
+            },//07-03-2024
+            new SearchProperties()//12-04-2024
+            {
+            seid =806, domain ="com.cy", geo_location="Famagusta,Cyprus", locale= "en-cy", uule = "w+CAIQICIQRmFtYWd1c3RhLEN5cHJ1cw==", device="mobile_android",sename="Google CY (Famagusta,English, Mobile)"
+            },//12-04-2024
+            new SearchProperties() //01-05-2024 from seid 807 to 896
+            {
+                seid =807, domain ="co.uk", geo_location="Altrincham,Greater Manchester,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI0QWx0cmluY2hhbSxHcmVhdGVyIE1hbmNoZXN0ZXIsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop", sename="Google UK (Altrincham)"
+            },
+            new SearchProperties()
+            {
+                seid =808, domain ="co.uk", geo_location="Altrincham,Greater Manchester,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI0QWx0cmluY2hhbSxHcmVhdGVyIE1hbmNoZXN0ZXIsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Altrincham, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =809, domain ="co.uk", geo_location="Banbury,Oxford,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIqQmFuYnVyeSxPeGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Banbury)"
+            },
+            new SearchProperties()
+            {
+                seid =810, domain ="co.uk", geo_location="Banbury,Oxford,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIqQmFuYnVyeSxPeGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Banbury, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =811, domain ="co.uk", geo_location="Berkhamsted,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIwQmVya2hhbXN0ZWQsSGVydGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Berkhamsted)"
+            },
+            new SearchProperties()
+            {
+                seid =812, domain ="co.uk", geo_location="Berkhamsted,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIwQmVya2hhbXN0ZWQsSGVydGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Berkhamsted,mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =813, domain ="co.uk", geo_location="Beverley,East Riding of Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI4QmV2ZXJsZXksRWFzdCBSaWRpbmcgb2YgWW9ya3NoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop", sename="Google UK (Beverley)"
+            },
+            new SearchProperties()
+            {
+                seid =814, domain ="co.uk", geo_location="Beverley,East Riding of Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI4QmV2ZXJsZXksRWFzdCBSaWRpbmcgb2YgWW9ya3NoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Beverley, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =815, domain ="co.uk", geo_location="Bishops Stortford,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI2QmlzaG9wcyBTdG9ydGZvcmQsSGVydGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Bishops Stortford)"
+            },
+            new SearchProperties()
+            {
+                seid =816, domain ="co.uk", geo_location="Bishops Stortford,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI2QmlzaG9wcyBTdG9ydGZvcmQsSGVydGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Bishops Stortford, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =817, domain ="co.uk", geo_location="Bracknell,Berkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIqQnJhY2tuZWxsLEJlcmtzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Bracknell)"
+            },
+            new SearchProperties()
+            {
+                seid =818, domain ="co.uk", geo_location="Bracknell,Berkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIqQnJhY2tuZWxsLEJlcmtzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Bracknell, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =819, domain ="co.uk", geo_location="Camberley,Surrey,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInQ2FtYmVybGV5LFN1cnJleSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Camberley)"
+            },
+            new SearchProperties()
+            {
+                seid =820, domain ="co.uk", geo_location="Camberley,Surrey,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInQ2FtYmVybGV5LFN1cnJleSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Camberley,Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =821, domain ="co.uk", geo_location="Canterbury,Kent,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICImQ2FudGVyYnVyeSxLZW50LEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop", sename="Google UK (Canterbury)"
+            },
+            new SearchProperties()
+            {
+                seid =822, domain ="co.uk", geo_location="Canterbury,Kent,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICImQ2FudGVyYnVyeSxLZW50LEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Canterbury, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =823, domain ="co.uk", geo_location="Chelmsford,Essex,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInQ2hlbG1zZm9yZCxFc3NleCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Chelmsford)"
+            },
+            new SearchProperties()
+            {
+                seid =824, domain ="co.uk", geo_location="Chelmsford,Essex,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInQ2hlbG1zZm9yZCxFc3NleCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Chelmsford, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =825, domain ="co.uk", geo_location="Cheltenham,Gloucestershire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIxQ2hlbHRlbmhhbSxHbG91Y2VzdGVyc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop", sename="Google UK (Cheltenham)"
+            },
+            new SearchProperties()
+            {
+                seid =826, domain ="co.uk", geo_location="Cheltenham,Gloucestershire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIxQ2hlbHRlbmhhbSxHbG91Y2VzdGVyc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Cheltenham, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =827, domain ="co.uk", geo_location="Chester,Cheshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInQ2hlc3RlcixDaGVzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Chester)"
+            },
+            new SearchProperties()
+            {
+                seid =828, domain ="co.uk", geo_location="Chester,Cheshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInQ2hlc3RlcixDaGVzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Chester, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =829, domain ="co.uk", geo_location="Chesterfield,Derbyshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIuQ2hlc3RlcmZpZWxkLERlcmJ5c2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop", sename="Google UK (Chesterfield)"
+            },
+            new SearchProperties()
+            {
+                seid =830, domain ="co.uk", geo_location="Chesterfield,Derbyshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIuQ2hlc3RlcmZpZWxkLERlcmJ5c2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Chesterfield, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =831, domain ="co.uk", geo_location="Colchester,Essex,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInQ29sY2hlc3RlcixFc3NleCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Colchester)"
+            },
+            new SearchProperties()
+            {
+                seid =832, domain ="co.uk", geo_location="Colchester,Essex,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInQ29sY2hlc3RlcixFc3NleCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Colchester, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =833, domain ="co.uk", geo_location="Crewe,Cheshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIlQ3Jld2UsQ2hlc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop", sename="Google UK (Crewe)"
+            },
+            new SearchProperties()
+            {
+                seid =834, domain ="co.uk", geo_location="Crewe,Cheshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIlQ3Jld2UsQ2hlc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Crewe, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =835, domain ="co.uk", geo_location="Derby,Derbyshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInRGVyYnksRGVyYnlzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Derby)"
+            },
+            new SearchProperties()
+            {
+                seid =836, domain ="co.uk", geo_location="Derby,Derbyshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInRGVyYnksRGVyYnlzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Derby, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =837, domain ="co.uk", geo_location="Durham,County Durham,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrRHVyaGFtLENvdW50eSBEdXJoYW0sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop", sename="Google UK (Durham,County Durham)"
+            },
+            new SearchProperties()
+            {
+                seid =838, domain ="co.uk", geo_location="Durham,County Durham,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrRHVyaGFtLENvdW50eSBEdXJoYW0sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Durham,County Durham, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =839, domain ="co.uk", geo_location="Exeter,Devon,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIjRXhldGVyLERldm9uLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop", sename="Google UK (Exeter)"
+            },
+            new SearchProperties()
+            {
+                seid =840, domain ="co.uk", geo_location="Exeter,Devon,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIjRXhldGVyLERldm9uLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Exeter, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =841, domain ="co.uk", geo_location="Farnborough,Hampshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIsRmFybmJvcm91Z2gsSGFtcHNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop", sename="Google UK (Farnborough)"
+            },
+            new SearchProperties()
+            {
+                seid =842, domain ="co.uk", geo_location="Farnborough,Hampshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIsRmFybmJvcm91Z2gsSGFtcHNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Farnborough, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =843, domain ="co.uk", geo_location="Fleet,Hampshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICImRmxlZXQsSGFtcHNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop", sename="Google UK (Fleet,)"
+            },
+            new SearchProperties()
+            {
+                seid =844, domain ="co.uk", geo_location="Fleet,Hampshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICImRmxlZXQsSGFtcHNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Fleet, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =845, domain ="co.uk", geo_location="Guildford,Surrey,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInR3VpbGRmb3JkLFN1cnJleSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Guildford)"
+            },
+            new SearchProperties()
+            {
+                seid =846, domain ="co.uk", geo_location="Guildford,Surrey,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInR3VpbGRmb3JkLFN1cnJleSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Guildford, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =847, domain ="co.uk", geo_location="Harrogate,North Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIwSGFycm9nYXRlLE5vcnRoIFlvcmtzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Harrogate)"
+            },
+            new SearchProperties()
+            {
+                seid =848, domain ="co.uk", geo_location="Harrogate,North Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIwSGFycm9nYXRlLE5vcnRoIFlvcmtzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Harrogate, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =849, domain ="co.uk", geo_location="High Wycombe,Buckinghamshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIzSGlnaCBXeWNvbWJlLEJ1Y2tpbmdoYW1zaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (High Wycombe)"
+            },
+            new SearchProperties()
+            {
+                seid =850, domain ="co.uk", geo_location="High Wycombe,Buckinghamshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIzSGlnaCBXeWNvbWJlLEJ1Y2tpbmdoYW1zaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (High Wycombe, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =851, domain ="co.uk", geo_location="Huddersfield,West Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIySHVkZGVyc2ZpZWxkLFdlc3QgWW9ya3NoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop", sename="Google UK (Huddersfield)"
+            },
+            new SearchProperties()
+            {
+                seid =852, domain ="co.uk", geo_location="Huddersfield,West Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIySHVkZGVyc2ZpZWxkLFdlc3QgWW9ya3NoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Huddersfield, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =853, domain ="co.uk", geo_location="Kingston,Greater London,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIuS2luZ3N0b24sR3JlYXRlciBMb25kb24sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop", sename="Google UK (Kingston)"
+            },
+            new SearchProperties()
+            {
+                seid =854, domain ="co.uk", geo_location="Kingston,Greater London,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIuS2luZ3N0b24sR3JlYXRlciBMb25kb24sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Kingston, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =855, domain ="co.uk", geo_location="Knutsford,Cheshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIpS251dHNmb3JkLENoZXNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop", sename="Google UK (Knutsford)"
+            },
+            new SearchProperties()
+            {
+                seid =856, domain ="co.uk", geo_location="Knutsford,Cheshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIpS251dHNmb3JkLENoZXNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Knutsford, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =857, domain ="co.uk", geo_location="Leamington Spa,Warwickshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIyTGVhbWluZ3RvbiBTcGEsV2Fyd2lja3NoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop", sename="Google UK (Leamington Spa)"
+            },
+            new SearchProperties()
+            {
+                seid =858, domain ="co.uk", geo_location="Leamington Spa,Warwickshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIyTGVhbWluZ3RvbiBTcGEsV2Fyd2lja3NoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Leamington Spa, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =859, domain ="co.uk", geo_location="Lincoln,Lincolnshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrTGluY29sbixMaW5jb2xuc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop", sename="Google UK (Lincoln)"
+            },
+            new SearchProperties()
+            {
+                seid =860, domain ="co.uk", geo_location="Lincoln,Lincolnshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrTGluY29sbixMaW5jb2xuc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Lincoln, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =861, domain ="co.uk", geo_location="Middlesbrough,North Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI0TWlkZGxlc2Jyb3VnaCxOb3J0aCBZb3Jrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop", sename="Google UK (Middlesbrough)"
+            },
+            new SearchProperties()
+            {
+                seid =862, domain ="co.uk", geo_location="Middlesbrough,North Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI0TWlkZGxlc2Jyb3VnaCxOb3J0aCBZb3Jrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Middlesbrough, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =863, domain ="co.uk", geo_location="North Shields,Tyne and Wear,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIyTm9ydGggU2hpZWxkcyxUeW5lIGFuZCBXZWFyLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop", sename="Google UK (North Shields)"
+            },
+            new SearchProperties()
+            {
+                seid =864, domain ="co.uk", geo_location="North Shields,Tyne and Wear,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIyTm9ydGggU2hpZWxkcyxUeW5lIGFuZCBXZWFyLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (North Shields, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =865, domain ="co.uk", geo_location="Rickmansworth,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIyUmlja21hbnN3b3J0aCxIZXJ0Zm9yZHNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop", sename="Google UK (Rickmansworth)"
+            },
+            new SearchProperties()
+            {
+                seid =866, domain ="co.uk", geo_location="Rickmansworth,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIyUmlja21hbnN3b3J0aCxIZXJ0Zm9yZHNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Rickmansworth, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =867, domain ="co.uk", geo_location="Sevenoaks,Kent,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIlU2V2ZW5vYWtzLEtlbnQsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop", sename="Google UK (Sevenoaks)"
+            },
+            new SearchProperties()
+            {
+                seid =868, domain ="co.uk", geo_location="Sevenoaks,Kent,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIlU2V2ZW5vYWtzLEtlbnQsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Sevenoaks, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =869, domain ="co.uk", geo_location="Solihull,West Midlands,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICItU29saWh1bGwsV2VzdCBNaWRsYW5kcyxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Solihull)"
+            },
+            new SearchProperties()
+            {
+                seid =870, domain ="co.uk", geo_location="Solihull,West Midlands,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICItU29saWh1bGwsV2VzdCBNaWRsYW5kcyxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Solihull, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =871, domain ="co.uk", geo_location="St Albans,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIuU3QgQWxiYW5zLEhlcnRmb3Jkc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop", sename="Google UK (St Albans)"
+            },
+            new SearchProperties()
+            {
+                seid =872, domain ="co.uk", geo_location="St Albans,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIuU3QgQWxiYW5zLEhlcnRmb3Jkc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (St Albans, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =873, domain ="co.uk", geo_location="Stamford,Lincolnshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIsU3RhbWZvcmQsTGluY29sbnNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop", sename="Google UK (Stamford)"
+            },
+            new SearchProperties()
+            {
+                seid =874, domain ="co.uk", geo_location="Stamford,Lincolnshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIsU3RhbWZvcmQsTGluY29sbnNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Stamford, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =875, domain ="co.uk", geo_location="Stockport,Greater Manchester,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIzU3RvY2twb3J0LEdyZWF0ZXIgTWFuY2hlc3RlcixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Stockport)"
+            },
+            new SearchProperties()
+            {
+                seid =876, domain ="co.uk", geo_location="Stockport,Greater Manchester,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIzU3RvY2twb3J0LEdyZWF0ZXIgTWFuY2hlc3RlcixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Stockport, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =877, domain ="co.uk", geo_location="Stoke On Trent,Staffordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIzU3Rva2UgT24gVHJlbnQsU3RhZmZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Stoke On Trent)"
+            },
+            new SearchProperties()
+            {
+                seid =878, domain ="co.uk", geo_location="Stoke On Trent,Staffordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIzU3Rva2UgT24gVHJlbnQsU3RhZmZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Stoke On Trent, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =879, domain ="co.uk", geo_location="Sutton Coldfield,Warwickshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI0U3V0dG9uIENvbGRmaWVsZCxXYXJ3aWNrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop", sename="Google UK (Sutton Coldfield)"
+            },
+            new SearchProperties()
+            {
+                seid =880, domain ="co.uk", geo_location="Sutton Coldfield,Warwickshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI0U3V0dG9uIENvbGRmaWVsZCxXYXJ3aWNrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Sutton Coldfield, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =881, domain ="co.uk", geo_location="Swindon,Wiltshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIoU3dpbmRvbixXaWx0c2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop", sename="Google UK (Swindon)"
+            },
+            new SearchProperties()
+            {
+                seid =882, domain ="co.uk", geo_location="Swindon,Wiltshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIoU3dpbmRvbixXaWx0c2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Swindon, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =883, domain ="co.uk", geo_location="Tunbridge Wells,Kent,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrVHVuYnJpZGdlIFdlbGxzLEtlbnQsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop", sename="Google UK (Tunbridge Wells)"
+            },
+            new SearchProperties()
+            {
+                seid =884, domain ="co.uk", geo_location="Tunbridge Wells,Kent,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrVHVuYnJpZGdlIFdlbGxzLEtlbnQsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Tunbridge Wells, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =885, domain ="co.uk", geo_location="Warrington,Cheshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIqV2FycmluZ3RvbixDaGVzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Warrington)"
+            },
+            new SearchProperties()
+            {
+                seid =886, domain ="co.uk", geo_location="Warrington,Cheshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIqV2FycmluZ3RvbixDaGVzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Warrington, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =887, domain ="co.uk", geo_location="Wetherby,West Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIuV2V0aGVyYnksV2VzdCBZb3Jrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop", sename="Google UK (Wetherby)"
+            },
+            new SearchProperties()
+            {
+                seid =888, domain ="co.uk", geo_location="Wetherby,West Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIuV2V0aGVyYnksV2VzdCBZb3Jrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Wetherby, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =889, domain ="co.uk", geo_location="Winchester,Hampshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrV2luY2hlc3RlcixIYW1wc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop", sename="Google UK (Winchester)"
+            },
+            new SearchProperties()
+            {
+                seid =890, domain ="co.uk", geo_location="Winchester,Hampshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrV2luY2hlc3RlcixIYW1wc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Winchester, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =891, domain ="co.uk", geo_location="Woking,Surrey,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIkV29raW5nLFN1cnJleSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop", sename="Google UK (Woking)"
+            },
+            new SearchProperties()
+            {
+                seid =892, domain ="co.uk", geo_location="Woking,Surrey,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIkV29raW5nLFN1cnJleSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Woking, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =893, domain ="co.uk", geo_location="Worcester,Worcestershire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIvV29yY2VzdGVyLFdvcmNlc3RlcnNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop", sename="Google UK (Worcester)"
+            },
+            new SearchProperties()
+            {
+                seid =894, domain ="co.uk", geo_location="Worcester,Worcestershire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIvV29yY2VzdGVyLFdvcmNlc3RlcnNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Worcester, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =895, domain ="co.uk", geo_location="York,North Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrWW9yayxOb3J0aCBZb3Jrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop", sename="Google UK (York)"
+            },
+            new SearchProperties()
+            {
+                seid =896, domain ="co.uk", geo_location="York,North Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrWW9yayxOb3J0aCBZb3Jrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (York, Mobile)"
+            },//01-05-2024 
+            new SearchProperties()//15-05-2024
+            {
+                seid =897, domain ="com.np", geo_location="Nepal", locale= "en-np", uule = "w+CAIQICIFTmVwYWw=",device="desktop", sename="Google Nepal (English)"
+            },
+            new SearchProperties()
+            {
+                seid =898, domain ="com.np", geo_location="Nepal", locale= "en-np", uule = "w+CAIQICIFTmVwYWw=",device="mobile_android", sename="Google Nepal (English, Mobile)"
+            },//15-05-2024
+            new SearchProperties()//03-06-2024
+            {
+                seid = 899, domain ="com", geo_location="New Jersey,United States", locale= "en-us", uule = "w+CAIQICIYTmV3IEplcnNleSxVbml0ZWQgU3RhdGVz",device="desktop"
+            },
+            new SearchProperties()
+            {
+                seid = 900, domain ="com", geo_location="New Jersey,United States", locale= "en-us", uule = "w+CAIQICIYTmV3IEplcnNleSxVbml0ZWQgU3RhdGVz",device="mobile_android"
+            },
+            new SearchProperties()
+            {
+                seid = 901, domain ="com", geo_location="Delaware,United States", locale= "en-us", uule = "w+CAIQICIWRGVsYXdhcmUsVW5pdGVkIFN0YXRlcw==",device="desktop"
+            },
+            new SearchProperties()
+            {
+                seid = 902, domain ="com", geo_location="Delaware,United States", locale= "en-us", uule = "w+CAIQICIWRGVsYXdhcmUsVW5pdGVkIFN0YXRlcw==",device="mobile_android"
+            },
+            new SearchProperties()
+            {
+                seid = 903, domain ="com", geo_location="Maryland,United States", locale= "en-us", uule = "w+CAIQICIWTWFyeWxhbmQsVW5pdGVkIFN0YXRlcw==",device="desktop"
+            },
+            new SearchProperties()
+            {
+                seid = 904, domain ="com", geo_location="Maryland,United States", locale= "en-us", uule = "w+CAIQICIWTWFyeWxhbmQsVW5pdGVkIFN0YXRlcw==",device="mobile_android"
+            },//03-06-2024
          };
     }
     public class SearchProperties
