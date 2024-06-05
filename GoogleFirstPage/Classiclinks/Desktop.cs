@@ -489,7 +489,7 @@ namespace GoogleFirstPage.Classiclinks
                 if (carousel != null)//07-12-2023 end
                 {
                     s.Append("<block type=\"carousel\" url=\"\">");
-                    //s.Append(GetCarousel(crNode));  // 23-10-2019
+                    s.Append(GetCarousel(carousel));//29-04-2024 uncommented  // 23-10-2019
                     s.Append("</block>");
                 }
             }
@@ -1351,8 +1351,8 @@ namespace GoogleFirstPage.Classiclinks
                 desc = node.SelectSingleNode(".//span[contains(@class, 'ILfuVd')]")?.InnerText ?? "";
             }//20-03-2024
             string cardType = lst ? "list" : tbl ? "table" : video ? "video" : chrt ? "chart" : "text";
-            s.Append("<block type=\"answerCard\" url=\"" + SetUrl(url) + "\" >");
-            s.Append("<item featureTitle=\"" + SetTitle(f_title) + "\" url=\"\" title=\"" +
+            s.Append("<block type=\"answerCard\" url=\"\">");//17-05-2024
+            s.Append("<item featureTitle=\"" + SetTitle(f_title) + "\" url=\"" + SetUrl(url) + "\" title=\"" +//17-05-2024
                 SetTitle(title) + "\" description=\"" + SetTitle(desc) + "\" cardType=\"" + cardType + "\" />");
             s.Append("</block>");
             return s.ToString();
@@ -1393,7 +1393,7 @@ namespace GoogleFirstPage.Classiclinks
         private string GetImages(HtmlNode node)
         {
             StringBuilder s = new StringBuilder();
-            HtmlNodeCollection nds = node.SelectNodes(".//div[contains(@class,'eA0Zlc PZPZlf JX86yc ivg-i')]|.//div[@jsname='dTDiAc']"); //11-08-2021 //09-08-2021
+            HtmlNodeCollection nds = node.SelectNodes(".//div[contains(@class,'eA0Zlc PZPZlf JX86yc ivg-i')]|.//div[@jsname='dTDiAc']|.//div[@class='w43QB EXH1Ce']/a"); //23-05-2024//11-08-2021 //09-08-2021
             if (nds == null)
                 nds = node.SelectNodes(".//g-img/img");
             bool existed = false;
@@ -1416,6 +1416,12 @@ namespace GoogleFirstPage.Classiclinks
                         s.Append("<item url=\"" + SetUrl(url) + "\" title=\"\" />");
                         existed = true;
                     }
+                    else if (nd.Attributes.Contains("href"))//2024-05-23
+                    {
+                        url = nd.Attributes["href"]?.Value.Trim() ?? "";
+                        s.Append("<item url=\"" + SetUrl(url) + "\" title=\"\" />");
+                        existed = true;
+                    }//2024-05-23
                 }
             if (!existed)
             {
@@ -2186,7 +2192,7 @@ namespace GoogleFirstPage.Classiclinks
         {
             bool bVal = (node.SelectSingleNode(".//h3[@class='zQlLed']") != null  // top stories       
                 || node.SelectSingleNode(".//div[@class='wXlZre B03h3d V14nKc ptcLIOszQJu__wholepage-card wp-msss']") != null//topstories 08-04-2020
-                || node.SelectSingleNode(".//div[contains(@class, 'e2BEnf U7izfe')]") != null //28-07-2021 images selectors
+                || node.SelectSingleNode(".//div[contains(@class, 'e2BEnf U7izfe')]|.//div[@class='x7cRLb']") != null //03-06-2024//28-07-2021 images selectors
                 || node.SelectSingleNode(".//table[@class='nrgt']") != null || node.SelectSingleNode(".//table[@class='jmjoTe']") != null      // site links  22-08-2020 included block type selector
                 || node.SelectSingleNode(".//img[@id='lu_map']|.//div[@id='lu_map']") != null //02-11-2-23     // maps
                 || node.SelectSingleNode(".//div[@class='xERobd']") != null //  maps    //changed on 26-06-2019
@@ -2509,7 +2515,10 @@ namespace GoogleFirstPage.Classiclinks
                     {
                         indx = url.LastIndexOf("https://");
                     }
-                    url = url.Remove(0, indx);
+                    if (indx > 0) //29-04-2024
+                    {
+                        url = url.Remove(0, indx);
+                    }//29-04-2024
                 }//28-03-2024
 
                 if (url.Contains("&amp;grqid="))
