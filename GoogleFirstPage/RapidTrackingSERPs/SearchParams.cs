@@ -3353,11 +3353,11 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             },
             new SearchProperties()
             {
-                seid = 939, domain ="fr", geo_location="Saint-Denis", locale= "en-re", uule = "w+CAIQICILU2FpbnQtRGVuaXM=",device="desktop", sename="Google RE (Reunion Island,English)"
+                seid = 939, domain ="fr", geo_location="Saint-Denis", locale= "en-re", uule = "w+CAIQICILU2FpbnQtRGVuaXM=",device="desktop", sename="Google FR (Reunion Island,English)"
             },
             new SearchProperties()
             {
-                seid = 940, domain ="fr", geo_location="Saint-Denis", locale= "en-re", uule = "w+CAIQICILU2FpbnQtRGVuaXM=",device="mobile_android", sename="Google RE (Reunion Island,English, Mobile)"
+                seid = 940, domain ="fr", geo_location="Saint-Denis", locale= "en-re", uule = "w+CAIQICILU2FpbnQtRGVuaXM=",device="mobile_android", sename="Google FR (Reunion Island,English, Mobile)"
             },
             new SearchProperties()
             {
