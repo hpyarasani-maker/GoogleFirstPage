@@ -3518,6 +3518,14 @@ namespace GoogleFirstPage.Classiclinks
             {
                 seid = 980, domain ="ro", geo_location="Romania", locale= "en-ro", uule = "w+CAIQICIHUm9tYW5pYQ==",device="mobile_android"
             },//20-06-2024
+            new SearchProperties()//21-06-2024
+            {
+                seid = 981, domain ="fr", geo_location="Saint-Denis", locale= "en-re", uule = "w+CAIQICILU2FpbnQtRGVuaXM=",device="desktop"
+            },
+            new SearchProperties()
+            {
+                seid = 982, domain ="fr", geo_location="Saint-Denis", locale= "en-re", uule = "w+CAIQICILU2FpbnQtRGVuaXM=",device="mobile_android"
+            },//21-06-2024
          };
     }
     public class SearchProperties
