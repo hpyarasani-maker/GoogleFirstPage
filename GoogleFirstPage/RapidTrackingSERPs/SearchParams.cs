@@ -3232,11 +3232,11 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             },
             new SearchProperties()
             {
-                seid = 909, domain ="aw", geo_location="Aruba", locale= "en-aw", uule = "w+CAIQICIFQXJ1YmE=",device="desktop", sename="Google AW (English)"
+                seid = 909, domain ="nl", geo_location="Aruba", locale= "en-aw", uule = "w+CAIQICIFQXJ1YmE=",device="desktop", sename="Google AW (English)"
             },
             new SearchProperties()
             {
-                seid = 910, domain ="aw", geo_location="Aruba", locale= "en-aw", uule = "w+CAIQICIFQXJ1YmE=",device="mobile_android", sename="Google AW (English, Mobile)"
+                seid = 910, domain ="nl", geo_location="Aruba", locale= "en-aw", uule = "w+CAIQICIFQXJ1YmE=",device="mobile_android", sename="Google AW (English, Mobile)"
             },
             new SearchProperties()
             {
