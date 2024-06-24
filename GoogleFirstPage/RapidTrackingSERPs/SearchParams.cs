@@ -2676,11 +2676,11 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             },
             new SearchProperties()
             {
-            seid =770, domain ="nl", geo_location="Aruba", locale= "en-aw", uule = "w+CAIQICIFQXJ1YmE=",device="desktop",sename="Google AW (Aruba)"
+            seid =770, domain ="nl", geo_location="Aruba", locale= "en-aw", uule = "w+CAIQICIFQXJ1YmE=",device="desktop",sename="Google NL (Aruba)"
             },
             new SearchProperties()
             {
-            seid =771, domain ="nl", geo_location="Aruba", locale= "en-aw", uule = "w+CAIQICIFQXJ1YmE=",device="mobile_android",sename="Google AW (Aruba, Mobile)"
+            seid =771, domain ="nl", geo_location="Aruba", locale= "en-aw", uule = "w+CAIQICIFQXJ1YmE=",device="mobile_android",sename="Google NL (Aruba, English, Mobile)"
             },//16-01-2024
             new SearchProperties() //18-01-2024
             {
