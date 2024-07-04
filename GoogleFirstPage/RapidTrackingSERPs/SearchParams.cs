@@ -3526,6 +3526,22 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             {
                 seid = 982, domain ="fr", geo_location="Saint-Denis", locale= "en-re", uule = "w+CAIQICILU2FpbnQtRGVuaXM=",device="mobile_android",sename="Google FR (Reunion Island, English, Mobile)"
             },//21-06-2024
+            new SearchProperties()//04-07-2024
+            {
+                seid = 983, domain ="nl", geo_location="Aruba", locale= "es-aw", uule = "w+CAIQICIFQXJ1YmE=",device="desktop",sename="Google AW (Spanish)"
+            },
+            new SearchProperties()
+            {
+                seid = 984, domain ="nl", geo_location="Aruba", locale= "es-aw", uule = "w+CAIQICIFQXJ1YmE=",device="mobile_android",sename="Google AW (Spanish, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid = 985, domain ="am", geo_location="Armenia", locale= "ru-am", uule = "w+CAIQICIHQXJtZW5pYQ==",device="desktop",sename="Google AM (Russian)"
+            },
+            new SearchProperties()
+            {
+                seid = 986, domain ="am", geo_location="Armenia", locale= "ru-am", uule = "w+CAIQICIHQXJtZW5pYQ==",device="mobile_android",sename="Google AM (Russian, Mobile)"
+            },//04-07-2024
          };
     }
     public class SearchProperties
