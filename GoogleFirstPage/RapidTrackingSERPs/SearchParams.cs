@@ -3542,6 +3542,10 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             {
                 seid = 986, domain ="am", geo_location="Armenia", locale= "ru-am", uule = "w+CAIQICIHQXJtZW5pYQ==",device="mobile_android",sename="Google AM (Russian, Mobile)"
             },//04-07-2024
+            new SearchProperties()//11-07-2024
+            {
+                seid = 987, domain ="co.il", geo_location="Israel", locale= "en-il", uule = "w+CAIQICIGSXNyYWVs",device="mobile_android",sename="Google IL (English, Mobile)"
+            },//11-07-2024
          };
     }
     public class SearchProperties
