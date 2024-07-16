@@ -219,6 +219,13 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Dataset (Item Urls)">
+                            <ItemTemplate>
+                                <div style="width: 75px;">
+                                    <%# Eval("dataset","{0:N0}") %>
+                                </div>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Finance (Item Urls)">
                             <ItemTemplate>
                                 <div style="width: 75px;">

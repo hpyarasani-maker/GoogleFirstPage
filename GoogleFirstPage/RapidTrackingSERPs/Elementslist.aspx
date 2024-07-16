@@ -216,8 +216,15 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Carousel">
                             <ItemTemplate>
-                                <div style="width: 48px;">
+                                <div style="width: 54px;">
                                     <%# Eval("Carousel","{0:N0}") %>
+                                </div>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Dataset">
+                            <ItemTemplate>
+                                <div style="width: 54px;">
+                                    <%# Eval("dataset","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
@@ -314,14 +321,14 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Twitter cards">
                             <ItemTemplate>
-                                <div style="width: 80px;">
+                                <div style="width: 70px;">
                                     <%# Eval("Twitter cards","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Top stories">
                             <ItemTemplate>
-                                <div style="width: 80px;">
+                                <div style="width: 60px;">
                                     <%# Eval("Top stories","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
@@ -342,7 +349,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Video card">
                             <ItemTemplate>
-                                <div style="width: 80px;">
+                                <div style="width: 70px;">
                                     <%# Eval("Video card","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
