@@ -2540,11 +2540,11 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             },
             new SearchProperties()
             {
-            seid =736, domain ="com.pg", geo_location="Guinea", locale= "en-pg", uule = "w+CAIQICIGR3VpbmVh",device="desktop",sename="Google PG (English)"
+            seid =736, domain ="com.pg", geo_location="Guinea", locale= "en-pg", uule = "w+CAIQICIGR3VpbmVh",device="desktop",sename="Google GU (English)"
             },
             new SearchProperties()
             {
-            seid =737, domain ="com.pg", geo_location="Guinea", locale= "en-pg", uule = "w+CAIQICIGR3VpbmVh",device="mobile_android",sename="Google PG (English, Mobile)"
+            seid =737, domain ="com.pg", geo_location="Guinea", locale= "en-pg", uule = "w+CAIQICIGR3VpbmVh",device="mobile_android",sename="Google GU (English, Mobile)"
             },
             new SearchProperties()
             {
