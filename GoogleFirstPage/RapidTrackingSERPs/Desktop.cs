@@ -51,13 +51,15 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 if (nodeCol == null || (nodeCol.Count >= 1 && nodeCol.Count <= 5))//09-02-2024
                 {//08-02-2024
                     if (rso.SelectNodes("//div[contains(@id,'kp-wp-tab-')]") != null)
-                        nodeCol = rso.SelectNodes(".//div[contains(@class,'TzHB6b cLjAic')]|.//div[contains(@class,'g Ww4FFb')]|.//div[@class='g PmEWq']");//09-07-2024
+                        nodeCol = rso.SelectNodes(".//div[contains(@class,'TzHB6b cLjAic')]|.//div[contains(@class,'g Ww4FFb')]|.//div[@class='g PmEWq']|.//div[@class='Wt5Tfe']|.//div[@class='g']/div[@class='BYM4Nd']");//22-07-2024//20-07-2024//09-07-2024
                     else
                         nodeCol = rso.SelectNodes(".//div[contains(@class,'WvKfwe')]/div|.//div[@class='UDZeY OTFaAf']/div|.//div[@class='MjjYud']|.//div[contains(@class,'g Ww4FFb')]");
                 }//08-02-2024
                 if (nodeCol != null)  //11-08-2022 //end 01-11-2023
                     foreach (HtmlNode node in nodeCol)
                     {
+                        if (node.Attributes["class"]?.Value?.Contains("TzHB6b cLjAic") == true && node.SelectSingleNode(".//div[@class='cUnQKe']|.//div[contains(@class,'g Ww4FFb')]") != null)//22-07-2024
+                        { continue; }//22-07-2024
                         if (node.HasClass("kp-wholepage"))
                         {
                             continue;
@@ -134,6 +136,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 throw ex;
             }
             return string.Empty;
+
         }
 
         private string GetRightStuff(HtmlDocument doc)
@@ -419,6 +422,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                             link = nd.SelectSingleNode(".//div[contains(@class,'wTrwWd')]");//06-04-2023
                         if (link == null)//17-06-2023
                             link = nd.SelectSingleNode(".//div[contains(@class,'vzhcTd')]");//17-06-2023
+                        if (link == null)//22-07-2024
+                            link = nd.SelectSingleNode(".//div[@class='V5fewe']");//22-07-2024
                         if (link == null)//29-09-2023
                             link = nd.SelectSingleNode(".//div[@class='UC8ZCe QS8Cxb']");//29-09-2023
                         if (link != null)
@@ -1099,7 +1104,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
 
             s.Append("<block type=\"jobs\" url=\"\">");
 
-            HtmlNodeCollection nodes = node.SelectNodes(".//li/div[@class='PwjeAc']"); //15-07-2022
+            HtmlNodeCollection nodes = node.SelectNodes(".//li/div[@class='PwjeAc']|.//div[@class='L5NwLd']");//19-07-2024 //15-07-2022
             if (nodes != null)
             {
                 foreach (HtmlNode nd in nodes)
@@ -1113,7 +1118,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                         url = SetUrl(url);
                     }
 
-                    string title = nd.SelectSingleNode(".//div[@role='heading']").InnerText;
+                    string title = nd.SelectSingleNode(".//div[@role='heading']|.//div[@class='tNxQIb PUpOsf']")?.InnerText;//19-07-2024
                     if (!string.IsNullOrEmpty(url) || !string.IsNullOrEmpty(title))
                         s.Append("<item url=\"" + SetUrl(url) + "\" title=\"" + SetTitle(title) + "\" />");
                 }
@@ -2072,7 +2077,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 if (node.SelectSingleNode(".//div[@class='AuVD KJ7Tg cUnQKe']|.//div[contains(@class,'RTaUke')]") == null)//23-05-2023//03-05-2023 //20-07-2022
                     return "PeopleAlsoAsk"; //11-02-2020
             }
-            if (node.SelectSingleNode(".//g-card[@class='cvoI5e']|.//g-tray-header[contains(@class,'iI6nue')]") != null || node.SelectSingleNode(".//g-card[@class='U8KfXc']") != null)//13-03-2024//11-01-2023 //23-11-2020 //20-11-2020
+            if (node.SelectSingleNode(".//g-card[@class='cvoI5e']|.//g-tray-header[contains(@class,'iI6nue')]") != null || node.SelectSingleNode(".//g-card[@class='U8KfXc']") != null || node.SelectSingleNode(".//div[@class='ZNyqGc']") != null)//19-07-2024//13-03-2024//11-01-2023 //23-11-2020 //20-11-2020
             {
                 return "Jobs";
             }
@@ -2096,7 +2101,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 || node.SelectSingleNode(".//div[@class='HaXvv kfn9hb']") != null || node.SelectSingleNode(".//div[@class='tsp-view']") != null //24-11-2020 selector for eventresults block//07-02-2020
                 || node.SelectSingleNode(".//div[@class='AxJnmb Wdsnue']") != null || node.SelectSingleNode(".//div[@class='tsp-fvcfc']") != null //05-01-2023 //02-08-2021 event block selector
                 || node.SelectSingleNode(".//g-expandable-content[@jscontroller='Ah7cLd']|.//div[@class='wYpZje']") != null)//08-07-2024
-                return "Event";
+                if (node.SelectSingleNode(".//div[@class='aeayCf mnr-c']") == null)//20-07-2024
+                    return "Event";
 
             if (node.SelectSingleNode(".//div[@id='cwmcwd']|.//div[@class='wDYxhc']") != null || node.SelectSingleNode(".//div[@class='ifM9O']") != null //21-04-2023
                  || node.SelectSingleNode(".//div[@class='vk_ard']") != null || node.SelectSingleNode(".//div[@class='d7sCQ kp-header']") != null   //03-06-2020
@@ -2278,6 +2284,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 || node.SelectSingleNode(".//div[@class='CH6Bmd']") != null//27-02-2023
                 || node.SelectSingleNode(".//div[@class='oCLR8']") != null//02-06-2023
                 || node.SelectSingleNode(".//div[@class='fPmcEc']") != null//19-09-2023
+                || node.SelectSingleNode(".//div[@class='ZNyqGc']") != null//19-07-2024 Jobs
                 || node.SelectSingleNode(".//div[@class='qkC4td']") != null//21-09-2023
                 || node.SelectNodes(".//div[@class='xSoq1']") != null//10-10-2023
                 || node.SelectNodes(".//div[@class='udVt6e']") != null;//02-11-2023
@@ -2688,5 +2695,6 @@ namespace GoogleFirstPage.RapidTrackingSERPs
     }
 
 }
+
 
 
