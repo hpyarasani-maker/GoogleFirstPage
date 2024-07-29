@@ -79,6 +79,11 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                 foreach (HtmlNode nd in nc)
                                 {
                                     string s = ProcessNode(nd);
+                                    if (!string.IsNullOrEmpty(s))//29-07-2024
+                                    {
+                                        if (s.StartsWith("<block type=\"popularProducts\"") && sb.ToString().Contains(s))
+                                            s = string.Empty;
+                                    }//29-07-2024
                                     ndText += s;
                                     if (s.Length > 0)
                                         sb.Append(s);
@@ -169,6 +174,11 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                         if (node.InnerHtml != "")
                         {
                             string s = ProcessNode(node);
+                            if (!string.IsNullOrEmpty(s))//29-07-2024
+                            {
+                                if (s.StartsWith("<block type=\"popularProducts\"") && sb.ToString().Contains(s))
+                                    s = string.Empty;
+                            }//29-07-2024
                             ndText += s;
                             if (s.Length > 0)
                                 sb.Append(s);
@@ -220,6 +230,11 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                             s = ProcessNode(nd);
                                         }
                                         catch { }
+                                        if (!string.IsNullOrEmpty(s))//29-07-2024
+                                        {
+                                            if (s.StartsWith("<block type=\"popularProducts\"") && sb.ToString().Contains(s))
+                                                s = string.Empty;
+                                        }//29-07-2024
                                         ndText += s;
                                         if (s.Length > 0)
                                             sb.Append(s);
@@ -3069,7 +3084,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 // if (node.SelectSingleNode(".//div[@class='FEoF4d']") == null && node.SelectSingleNode(".//div[@class='PZPZlf hb8SAc']") == null) //15-09-2022 //24-11-2022 commented
                 if (node.SelectSingleNode(".//div[@class='FEoF4d']|.//div[@class='kno-rdesc']|.//div[contains(@class,'rbR0cd')]" +
                     "|.//div[@class='knowledge-finance-wholepage-chart__fw-uch']|.//div[@class='WFxqwc']|.//div[@class='KrvXD']|.//div[contains(@class,'dnXCYb')]" +//23-07-2024
-                    "|.//div[@class='hoJlSb']|.//div[@class='Vo9TVc nG7hRb']|.//div[@jsname='xQjRM']|.//div[@class='x3SAYd']|.//div[@class='XNfAUb']") == null || node.SelectSingleNode(".//div[@class='V3FYCf']") != null)//05-07-2024
+                    "|.//div[@class='hoJlSb']|.//div[@class='Vo9TVc nG7hRb']|.//div[@jsname='xQjRM']|.//div[@class='x3SAYd']|.//div[@class='XNfAUb']|.//div[@jsname='VMmjWc']") == null || node.SelectSingleNode(".//div[@class='V3FYCf']") != null)//29-07-2024//05-07-2024
                     return "AnswerCard";
             }
 
@@ -3315,7 +3330,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             {
                 if (node.SelectSingleNode(".//div[@class='VPyzge']|.//div[@class='aJegcc']|.//div[@jsname='Sicp7d']") == null && (node.SelectSingleNode(".//div[@class='kno-fiu kno-liu']" +//10-06-2024 //04-04-2024
                     "|.//div[@class='N60dNb mfMhoc']|.//div[@jsmodel='vqHyhf']|.//div[@jsmodel='Wn3aEc']|.//div[@class='HdBr8']|.//div[@class='VKHL9c']" +
-                    "|.//div[@class='IZE3Td']/div[@id='iur']") != null))//23-07-2024//02-02-2024//01-02-2024//15-12-2023
+                    "|.//div[@class='IZE3Td']/div[@id='iur']|.//div[@class='IZE3Td']/div[@jscontroller='gOTY1']") != null))//29-07-2024//23-07-2024//02-02-2024//01-02-2024//15-12-2023
                     return "Images";
             }
             else
