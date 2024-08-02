@@ -224,6 +224,7 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="RapidTrackingSERPs\keywordsearch.aspx" />
     <Content Include="RapidTrackingSERPs\Getjobid.aspx" />
+    <Content Include="RapidTrackingSERPs\Missingelementlist.aspx" />
     <Content Include="Xmltracker\css\main.css" />
     <Content Include="Xmltracker\css\main1.css" />
     <Content Include="Xmltracker\css\Tablecss.css" />
@@ -662,6 +663,13 @@
     </Compile>
     <Compile Include="RapidTrackingSERPs\Getjobid.aspx.designer.cs">
       <DependentUpon>Getjobid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RapidTrackingSERPs\Missingelementlist.aspx.cs">
+      <DependentUpon>Missingelementlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RapidTrackingSERPs\Missingelementlist.aspx.designer.cs">
+      <DependentUpon>Missingelementlist.aspx</DependentUpon>
     </Compile>
     <Compile Include="RapidTrackingSERPs\Oxylabsresponse.cs" />
     <Compile Include="Trackingstatus\pipeline.aspx.cs">

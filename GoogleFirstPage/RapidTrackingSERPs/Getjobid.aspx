@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Getjobid.aspx.cs" Inherits="GoogleFirstPage.RapidTrackingSERPs.Missingelements" Title="Missing Elements" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Getjobid.aspx.cs" Inherits="GoogleFirstPage.RapidTrackingSERPs.Missingelements" Title="Missing Element Jobid" %>
 
 <!DOCTYPE html>
 
@@ -41,7 +41,7 @@
 
     <script type="text/javascript">
         function HideLabel() {
-            var seconds = 10;
+            var seconds = 15;
             setTimeout(function () {
                 document.getElementById("<%=lblalllinks.ClientID %>").style.display = "none";
             }, seconds * 1000);
@@ -161,30 +161,31 @@
         <div class="containerDB">
             <div class="header3">
                 <div style="margin-top: 12px;">
-                    &nbsp;<strong><span class="auto-style1">Feature :</span></strong>&nbsp;&nbsp;
-                    <asp:DropDownList ID="ddltype" runat="server" CssClass="text1" Height="30px" Width="180px">
-                        <asp:ListItem Text="adwords" Value="adwords" Selected="True"></asp:ListItem>
-                        <asp:ListItem Text="answerCard" Value="answerCard"></asp:ListItem>
-                        <asp:ListItem Text="apps" Value="apps"></asp:ListItem>
-                        <asp:ListItem Text="carousel" Value="carousel"></asp:ListItem>
-                        <asp:ListItem Text="finance" Value="finance"></asp:ListItem>
-                        <asp:ListItem Text="findResultsOn" Value="findResultsOn"></asp:ListItem>
-                        <asp:ListItem Text="flightPack" Value="flightPack"></asp:ListItem>
-                        <asp:ListItem Text="hotelPack" Value="hotelPack"></asp:ListItem>
-                        <asp:ListItem Text="images" Value="images"></asp:ListItem>
+                    &nbsp;<strong><span class="auto-style1">Select BlockType :</span></strong>&nbsp;&nbsp;
+                    <asp:DropDownList ID="ddltype" runat="server" CssClass="text1" Height="30px" Width="160px">
+                        <asp:ListItem Text="Adwords" Value="adwords" Selected="True"></asp:ListItem>
+                        <asp:ListItem Text="AnswerCard" Value="answerCard"></asp:ListItem>
+                        <asp:ListItem Text="Apps" Value="apps"></asp:ListItem>
+                        <asp:ListItem Text="Carousel" Value="carousel"></asp:ListItem>
+                        <asp:ListItem Text="Dataset" Value="dataset"></asp:ListItem>
+                        <asp:ListItem Text="Finance" Value="finance"></asp:ListItem>
+                        <asp:ListItem Text="FindResultsOn" Value="findResultsOn"></asp:ListItem>
+                        <asp:ListItem Text="FlightPack" Value="flightPack"></asp:ListItem>
+                        <asp:ListItem Text="HotelPack" Value="hotelPack"></asp:ListItem>
+                        <asp:ListItem Text="Images" Value="images"></asp:ListItem>
                         <asp:ListItem Text="Jobs" Value="Jobs"></asp:ListItem>
-                        <asp:ListItem Text="knowledgeGraph" Value="knowledgeGraph"></asp:ListItem>
-                        <asp:ListItem Text="maps" Value="maps"></asp:ListItem>
-                        <asp:ListItem Text="peopleAlsoAsk" Value="peopleAlsoAsk"></asp:ListItem>
-                        <asp:ListItem Text="productListedAds" Value="productListedAds"></asp:ListItem>
-                        <asp:ListItem Text="popularProducts" Value="popularProducts"></asp:ListItem>
-                        <asp:ListItem Text="eventResults" Value="eventResults"></asp:ListItem>
-                        <asp:ListItem Text="siteLinks" Value="siteLinks"></asp:ListItem>
-                        <asp:ListItem Text="twitterCards" Value="twitterCards"></asp:ListItem>
-                        <asp:ListItem Text="topStories" Value="topStories"></asp:ListItem>
-                        <asp:ListItem Text="videos" Value="videos"></asp:ListItem>
-                        <asp:ListItem Text="video" Value="video"></asp:ListItem>
-                        <asp:ListItem Text="videoCard" Value="videoCard"></asp:ListItem>
+                        <asp:ListItem Text="KnowledgeGraph" Value="knowledgeGraph"></asp:ListItem>
+                        <asp:ListItem Text="Maps" Value="maps"></asp:ListItem>
+                        <asp:ListItem Text="PeopleAlsoAsk" Value="peopleAlsoAsk"></asp:ListItem>
+                        <asp:ListItem Text="ProductListedAds" Value="productListedAds"></asp:ListItem>
+                        <asp:ListItem Text="PopularProducts" Value="popularProducts"></asp:ListItem>
+                        <asp:ListItem Text="EventResults" Value="eventResults"></asp:ListItem>
+                        <asp:ListItem Text="SiteLinks" Value="siteLinks"></asp:ListItem>
+                        <asp:ListItem Text="TwitterCards" Value="twitterCards"></asp:ListItem>
+                        <asp:ListItem Text="TopStories" Value="topStories"></asp:ListItem>
+                        <asp:ListItem Text="Videos" Value="videos"></asp:ListItem>
+                        <asp:ListItem Text="Video" Value="video"></asp:ListItem>
+                        <asp:ListItem Text="VideoCard" Value="videoCard"></asp:ListItem>
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="reqfv1" runat="server" ErrorMessage="*" Text="*" ControlToValidate="ddltype" InitialValue="----Select----" ForeColor="Red"></asp:RequiredFieldValidator>
                     &nbsp; <strong><span class="auto-style2">Search Engine :</span></strong>&nbsp;&nbsp; 
@@ -217,7 +218,7 @@
             <br />
             <br />
             <div id="footer">
-                <div style="font-weight: bold; font-size: 14px;">© <%= DateTime.Now.Year %> Pi Datametrics | SERP - GetJobid.</div>
+                <div style="font-weight: bold; font-size: 14px;">© <%= DateTime.Now.Year %> Pi Datametrics | SERP - OxylabsJobid.</div>
             </div>
         </div>
     </form>

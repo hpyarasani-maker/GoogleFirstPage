@@ -117,6 +117,71 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
+                            <b><a data-toggle="collapse" href="#collapse17">RapidTracking</a></b>
+                        </h4>
+                    </div>
+                    <div id="collapse17" class="panel-collapse collapse">
+                        <br />
+                        <p style="font-family: Calibri; font-size: medium">Display all SERP Features. </p>
+                        <a href="RapidTrackingSERPs/Live.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Live Search</b></></a><br />
+                        <hr style="border-color: black" />
+                        <%--<p style="font-family: Calibri; font-size: medium">Downloads a Zipfile that contains Oxylabs Html Source, Xml file and also Googlesource. </p>--%>
+                        <p style="font-family: Calibri; font-size: medium">Display all the Features such as Classic links and Blocks and populates oxylabs jobid source and Google link. </p>
+                        <a href="RapidTrackingSERPs/Jobid.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Search by JobID</b></></a><br />
+                        <hr style="border-color: black" />
+                        <p style="font-family: Calibri; font-size: medium">To Fetch All Google Classic Links According to Search Engines. </p>
+                        <a href="GoogleClassicLinks/Livesearch.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Top 100 Classic links</b></></a><br />
+                        <%--<hr style="border-color: black" />
+                        <p style="font-family: Calibri; font-size: medium">To Fetch All Oxylabs Jobids with SE. </p>
+                        <a href="RapidTrackingSERPs/Getjobid.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Get All Jobids</b></></a><br />--%>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <b><a data-toggle="collapse" href="#collapse16">Flux Results[SERP Elements]</a></b>
+                        </h4>
+                    </div>
+                    <div id="collapse16" class="panel-collapse collapse">
+                        <br />
+                        <p style="font-family: Calibri; font-size: medium">To Fetch all Elements keywords Count in RapidTracking According to Search Engine. </p>
+                        <a href="RapidTrackingSERPs/Elementslist.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">ElementsList</b></></a><br />
+                        <hr style="border-color: black" />
+                        <p style="font-family: Calibri; font-size: medium">To Fetch all Elements Item Urls Count in RapidTracking According to Search Engine. </p>
+                        <a href="RapidTrackingSERPs/Elementslistitemurls.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">ElementsList Item Urls</b></></a><br />
+                        <hr style="border-color: black" />
+                        <p style="font-family: Calibri; font-size: medium">To Fetch the Average Movement of FluxResults Occured For the Last 2 Days. </p>
+                        <a href="FluxData/Fluxresults.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Flux Results</b></></a><br />
+                        <hr style="border-color: black" />
+                        <p style="font-family: Calibri; font-size: medium">To Fetch the MatchingURLs . </p>
+                        <a href="FluxData/Matchingurlscount.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Flux Results Matching URLs Count=0</b></></a><br />
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <b><a data-toggle="collapse" href="#collapse14">Daily Tracking Requests</a></b>
+                        </h4>
+                    </div>
+                    <div id="collapse14" class="panel-collapse collapse">
+                        <br />
+                        <p style="font-family: Calibri; font-size: medium">Display all Sending Request and Receiving Tracking keywords Count.</p>
+                        <a href="Tracking/Dailycount.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Daily Count</b></></a>
+                        <br />
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
                             <b><a data-toggle="collapse" href="#collapse12">Elementary by Pi</a></b>
                         </h4>
                     </div>
@@ -141,32 +206,6 @@
                         <p style="font-family: Calibri; font-size: medium">Display Tracking keywords UnitTest Report.</p>
                         <a href="login/login.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Login To View Report</b></></a>
                         <br />
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="panel-group">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <b><a data-toggle="collapse" href="#collapse17">RapidTracking</a></b>
-                        </h4>
-                    </div>
-                    <div id="collapse17" class="panel-collapse collapse">
-                        <br />
-                        <p style="font-family: Calibri; font-size: medium">Display all SERP Features. </p>
-                        <a href="RapidTrackingSERPs/Live.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Live Search</b></></a><br />
-                        <hr style="border-color: black" />
-                        <%--<p style="font-family: Calibri; font-size: medium">Downloads a Zipfile that contains Oxylabs Html Source, Xml file and also Googlesource. </p>--%>
-                        <p style="font-family: Calibri; font-size: medium">Display all the Features such as Classic links and Blocks and populates oxylabs jobid source and Google link. </p>
-                        <a href="RapidTrackingSERPs/Jobid.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Search by JobID</b></></a><br />
-                        <hr style="border-color: black" />
-                        <p style="font-family: Calibri; font-size: medium">To Fetch All Google Classic Links According to Search Engines. </p>
-                        <a href="GoogleClassicLinks/Livesearch.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Top 100 Classic links</b></></a><br />
-                        <%--<hr style="border-color: black" />
-                        <p style="font-family: Calibri; font-size: medium">To Fetch All Oxylabs Jobids with SE. </p>
-                        <a href="RapidTrackingSERPs/Getjobid.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Get All Jobids</b></></a><br />--%>
                     </div>
                 </div>
             </div>
@@ -215,47 +254,6 @@
                         <hr style="border-color: black" />
                         <p style="font-family: Calibri; font-size: medium">Get relevant product categories for website’s keywords. Find out what products or services websites advertise in paid search and what topics they rank for in organic SERPs.</p>
                         <a href="DataDiscoveryTools/GetCategoriesfordomain.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Get Categories For Domain</b></></a><br />
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="panel-group">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <b><a data-toggle="collapse" href="#collapse14">Daily Tracking Requests</a></b>
-                        </h4>
-                    </div>
-                    <div id="collapse14" class="panel-collapse collapse">
-                        <br />
-                        <p style="font-family: Calibri; font-size: medium">Display all Sending Request and Receiving Tracking keywords Count.</p>
-                        <a href="Tracking/Dailycount.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Daily Count</b></></a>
-                        <br />
-                    </div>
-                </div>
-            </div>
-
-            <div class="panel-group">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <b><a data-toggle="collapse" href="#collapse16">Flux Results</a></b>
-                        </h4>
-                    </div>
-                    <div id="collapse16" class="panel-collapse collapse">
-                        <br />
-                        <p style="font-family: Calibri; font-size: medium">To Fetch all Elements keywords Count in RapidTracking According to Search Engine. </p>
-                        <a href="RapidTrackingSERPs/Elementslist.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">ElementsList</b></></a><br />
-                        <hr style="border-color: black" />
-                        <p style="font-family: Calibri; font-size: medium">To Fetch all Elements Item Urls Count in RapidTracking According to Search Engine. </p>
-                        <a href="RapidTrackingSERPs/Elementslistitemurls.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">ElementsList Item Urls</b></></a><br />
-                        <hr style="border-color: black" />
-                        <p style="font-family: Calibri; font-size: medium">To Fetch the Average Movement of FluxResults Occured For the Last 2 Days. </p>
-                        <a href="FluxData/Fluxresults.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Flux Results</b></></a><br />
-                        <hr style="border-color: black" />
-                        <p style="font-family: Calibri; font-size: medium">To Fetch the MatchingURLs . </p>
-                        <a href="FluxData/Matchingurlscount.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Flux Results Matching URLs Count=0</b></></a><br />
                     </div>
                 </div>
             </div>
