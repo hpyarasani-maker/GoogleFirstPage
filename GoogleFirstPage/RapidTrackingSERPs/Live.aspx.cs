@@ -360,7 +360,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                                 }
                                                 foreach (XmlNode nodee in node)
                                                 {
-                                                    dt.Rows.Add("", "", " url= " + "" + " , " + " title= " + "" + "  ,  " + " airline= " + nodee.Attributes[0].Value + "  ,  " + " duration= " + nodee.Attributes[3].Value + " , " + " durationValue= " + nodee.Attributes[4].Value + " , " + " connections= " + nodee.Attributes[5].Value + " , " + " price= " + nodee.Attributes[6].Value + " , " + " priceValue= " + nodee.Attributes[7].Value);
+                                                    dt.Rows.Add("", "", " url= " + "" + " , " + " title= " + "" + "  ,  " + " airline= " + nodee.Attributes[1].Value + "  ,  " + " duration= " + nodee.Attributes[3].Value + " , " + " durationValue= " + nodee.Attributes[4].Value + " , " + " connections= " + nodee.Attributes[5].Value + " , " + " price= " + nodee.Attributes[6].Value + " , " + " priceValue= " + nodee.Attributes[7].Value);
                                                 }
                                                 dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                             }
