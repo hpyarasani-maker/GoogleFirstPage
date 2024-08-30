@@ -152,12 +152,12 @@
                         <hr style="border-color: black" />
                         <p style="font-family: Calibri; font-size: medium">To Fetch all Elements Item Urls Count in RapidTracking According to Search Engine. </p>
                         <a href="RapidTrackingSERPs/Elementslistitemurls.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">ElementsList Item Urls</b></></a><br />
-                        <hr style="border-color: black" />
+                        <%--<hr style="border-color: black" />
                         <p style="font-family: Calibri; font-size: medium">To Fetch the Average Movement of FluxResults Occured For the Last 2 Days. </p>
                         <a href="FluxData/Fluxresults.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Flux Results</b></></a><br />
                         <hr style="border-color: black" />
                         <p style="font-family: Calibri; font-size: medium">To Fetch the MatchingURLs . </p>
-                        <a href="FluxData/Matchingurlscount.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Flux Results Matching URLs Count=0</b></></a><br />
+                        <a href="FluxData/Matchingurlscount.aspx" target="_blank"><b style="font-size: 16px; font-family:Cambria">Flux Results Matching URLs Count=0</b></></a><br />--%>
                     </div>
                 </div>
             </div>
