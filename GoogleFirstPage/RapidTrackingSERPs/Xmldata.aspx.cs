@@ -1,35 +1,26 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.IO;
 using System.Linq;
-using Ionic.Zip;
 using System.Net;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Web;
-using System.Xml;
-using System.Web.UI.WebControls;
-using HtmlAgilityPack;
-using System.Configuration;
-using System.Data.SqlClient;
 using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Xml;
 
 namespace GoogleFirstPage.RapidTrackingSERPs
 {
-    public partial class jobidsource : System.Web.UI.Page
+    public partial class Xmldata : System.Web.UI.Page
     {
-        Oxylabsresponse oxyresponse = new Oxylabsresponse();
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             GetParams gp = new GetParams();
             string jobid = Request.QueryString["jobid"].ToString();
-
-            string seid = string.Empty;
+            string seid = Request.QueryString["seid"].ToString();
+            
             string username = "piapp";
             string password = "b5FCvgkjxx";
             string resURL = "http://data.oxylabs.io/v1/queries/" + jobid;
@@ -61,21 +52,13 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             string keyword = obj["query"].Value<string>();
             string geol = obj["geo_location"].Value<string>();
             string locale = obj["locale"].Value<string>();
-
-            string html1 = GetHtmlSource(jobid, seid, device);
-
-            if (!string.IsNullOrEmpty(html1))
-            {
-                Response.ContentType = "text/html";
-                Response.Write(html1.ToString());
-                //Response.Write("<script>window.open('xmldata.aspx?jobid=" + jobid + "&seid=" + seid + "&keyword=" + keyword + "','_blank');</script>");
-                //ClientScript.RegisterStartupScript(this.GetType(), "OpenWindow", "window.open('" + html1 + "');", true);
-            }
+            GetSource(jobid, seid, keyword, device);
         }
 
-        private string GetHtmlSource(string jobId, string seid, string device)
+        public string GetSource(string jobId, string seid,string keyword, string device)
         {
-            
+            //string username = "gpidatametrics";
+            //string password = "sdV5X3fcX6";
             string username = "piapp";
             string password = "b5FCvgkjxx";
             string resURL = "http://data.oxylabs.io/v1/queries/" + jobId + "/results";
@@ -86,25 +69,60 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             HttpWebResponse res = (HttpWebResponse)httpWebRequest.GetResponse();
             Stream resStream = res.GetResponseStream();
             StreamReader reader = new StreamReader(resStream, Encoding.UTF8);
-            string response = reader.ReadToEnd();
+            string response1 = reader.ReadToEnd();
             resStream.Close();
             res.Close();
             try
             {
-                JObject obj = JObject.Parse(response);
-                response = obj["results"][0]["content"].Value<string>();
+                JObject obj = JObject.Parse(response1);
+                response1 = obj["results"][0]["content"].Value<string>();
                 var doc = new HtmlAgilityPack.HtmlDocument();
-                doc.LoadHtml(response);
-
-                var sp = SearchParams.searches.Where(s => s.seid == Convert.ToInt32(seid)).SingleOrDefault();
-                device = sp.device;
-                return response;
+                doc.LoadHtml(response1);
+                GetXmlDataView(seid, keyword, jobId, device,response1);
+                //var sp = SearchParams.searches.Where(s => s.seid == Convert.ToInt32(seid)).SingleOrDefault();
+                //device = sp.device;
+                return "";
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
+
+        public void GetXmlDataView(string seid, string kw, string jobid, string device,string resp)
+        {
+            try
+            {
+                var doc = new HtmlAgilityPack.HtmlDocument();
+                doc.LoadHtml(resp);
+                int count = 0;
+                if (device == "desktop")
+                {
+                    Desktop clsdesktop = new Desktop();
+                    string res = clsdesktop.ProcessDocument(seid, kw, doc, out count);
+                    XmlDocument doc1 = new XmlDocument();
+                    doc1.LoadXml(res);
+                    Response.ContentType = "text/xml";
+                    Response.Write(res);
+                    Response.End();
+                }
+                else
+                {
+                    iOS clsios = new iOS();
+                    string res = clsios.ProcessDocument(seid, kw, doc, out count);
+                    XmlDocument doc1 = new XmlDocument();
+                    doc1.LoadXml(res);
+                    Response.ContentType = "text/xml";
+                    Response.Write(res);
+                    Response.End();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
 
     }
 }

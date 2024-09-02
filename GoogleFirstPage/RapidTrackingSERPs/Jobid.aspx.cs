@@ -410,8 +410,6 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 string seid = "";
                 string sename1 = "";
                 int count = 0;
-                //string username = "gpidatametrics";
-                //string password = "sdV5X3fcX6";
                 string username = "piapp";
                 string password = "b5FCvgkjxx";
                 string resURL = "http://data.oxylabs.io/v1/queries/" + jobid;
@@ -483,7 +481,6 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "Popup_File" + 2, "window.open('" + url.Replace("'", "%27") + "','Window_X')", true);
 
                     var doc = new HtmlAgilityPack.HtmlDocument();
-
                     doc.LoadHtml(html);
                     if (device == "desktop")
                     {
