@@ -205,7 +205,7 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="AI Overview (Item Urls)">
+                        <asp:TemplateField HeaderText="Ai Overview (Item Urls)">
                             <ItemTemplate>
                                 <div style="width: 60px;">
                                     <%# Eval("aiOverview","{0:N0}") %>
