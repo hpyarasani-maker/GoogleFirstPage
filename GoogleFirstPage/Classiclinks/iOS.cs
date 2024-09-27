@@ -49,7 +49,7 @@ namespace GoogleFirstPage.Classiclinks
                     nodeCol = doc.DocumentNode.SelectNodes("//div[contains(@class,'Ww4FFb vt6azd DlUvEb')]|//div[contains(@class,'uVMCKf Ww4FFb vt6azd')]" +
                     "|//div[contains(@class,'wHYlTd Ww4FFb vt6azd')]|//div[contains(@class,'Lv2Cle Ww4FFb vt6azd')]|//div[contains(@class,'Ww4FFb vt6azd xpd')]" +
                     "|//div[contains(@class,'Ww4FFb vt6azd oGMpge')]|//div[contains(@class,'Ww4FFb vt6azd tRkSqb')]|//div[contains(@class,'Ww4FFb vt6azd F6CFcc')]" +
-                    "|//div[@class='lU8tTd']|//g-card[@class='g F6CFcc']|.//div[@class='Ww4FFb vt6azd g']");//10-09-2024//09-05-2024//12-03-2024
+                    "|//div[@class='lU8tTd']|//g-card[@class='g F6CFcc']|.//div[@class='Ww4FFb vt6azd g']|.//div[@class='AGopnf']");//26-09-2024//10-09-2024//09-05-2024//12-03-2024
                 if (nodeCol == null)
                     nodeCol = doc.DocumentNode.SelectNodes("//*[@id='tscffb']");
 
@@ -904,7 +904,7 @@ namespace GoogleFirstPage.Classiclinks
                         if (nd.SelectSingleNode(".//div[@jscontroller='i5z2Rc']") != null
                             || nd.SelectSingleNode(".//div[@class='Lgnr0e J88qA vgnU9e BmP5tf']") != null //13-12-2019
                              || nd.SelectSingleNode(".//div[@class='MUxGbd v0nnCb lyLwlc']") != null   //16-12-
-                             || nd.SelectSingleNode(".//div[@class='E8hWLe SVMeif BmP5tf']") != null //21-07-2022
+                             || nd.SelectSingleNode(".//div[contains(@class,'E8hWLe SVMeif')]") != null //20-09-2024 //21-07-2022
                              || nd.SelectSingleNode(".//div[@class='GssVdc']") != null)//04-07-2024
                         {
                             s.Append(GetSiteLinks(nd));
@@ -996,7 +996,7 @@ namespace GoogleFirstPage.Classiclinks
                                         HtmlNode vdo = nd.SelectSingleNode(".//a[contains(@class,'BmP5tf')]"); //11-11-2021
                                         // video block.
                                         if (vdo == null)
-                                            vdo = nd.SelectSingleNode(".//div[@class='th N3nEGc']/a|.//a[@class='d3q37c']");//14-02-2024
+                                            vdo = nd.SelectSingleNode(".//div[@class='th N3nEGc']/a|.//a[@class='d3q37c']|.//div[@class='T61Aje v5yQqb']/a");//19-09-2024//14-02-2024
                                         if (vdo != null && nd.SelectNodes(".//g-scrolling-carousel[@class='kQ9KOd']") == null)//28-09-2022
                                         {
                                             string url = vdo.Attributes["href"].Value;
@@ -1038,7 +1038,7 @@ namespace GoogleFirstPage.Classiclinks
                             if (n == null)
                                 n = nd.SelectSingleNode(".//a[@class='C8nzq Tj0U2 BmP5tf amp_r']"); // 29-11-2019
                             if (n == null)
-                                n = nd.SelectSingleNode(".//a[contains(@class,'cz3goc BmP5tf')]");//03-02-2023 //31-05-2022
+                                n = nd.SelectSingleNode(".//a[contains(@class,'cz3goc')]");//20-09-2024//03-02-2023 //31-05-2022
                             if (n == null)
                                 n = nd.SelectSingleNode(".//a[contains(@class,'sXtWJb')]"); //16-12-2020
                             if (n == null)//13-08-2024
@@ -1151,6 +1151,8 @@ namespace GoogleFirstPage.Classiclinks
                                     nv = nd.SelectSingleNode(".//a[@class='C8nzq JTuIPc amp_r']");
                                 if (nv == null)
                                     nv = nd.SelectSingleNode(".//a[@class='C8nzq JTuIPc']");
+                                if (nv == null)//19-09-2024
+                                    nv = nd.SelectSingleNode(".//a[contains(@class,'cz3goc OcpZAb')]");//19-09-2024
                                 if (nv == null)
                                     nv = nd.SelectSingleNode(".//a[@class='C8nzq BmP5tf amp_r']");  // 10-06-2020 swapped from below
                                 if (nv == null)
@@ -1384,7 +1386,7 @@ namespace GoogleFirstPage.Classiclinks
                     {
                         url = link.Attributes["href"]?.Value;
                         title = link.SelectSingleNode(".//div[contains(@class,'ZsI9Vc')]|.//div[@jsname='r4nke']|.//div[@class='aTc6pf']|.//div[@class='aqszKe']|.//div[contains(@class,'SsM98d')]|.//div[contains(@class,'gkQHve')]")?.InnerText ?? "";//09-08-2023//16-06-2023//27-02-2023//05-01-2023
-                        price = link.SelectSingleNode(".//div[@class='Ijn7Rc']|.//div[@class='vy5bA dpJO9']|.//div[@class='uSZhvf Dxiee']/span[1]|.//div[@class='xQbyBc']/span|.//span[contains(@class,'lmQWe')]")?.InnerText ?? "";//06-03-2023//27-02-2023 //05-01-2023
+                        price = link.SelectSingleNode(".//div[@class='Ijn7Rc']|.//div[@class='vy5bA dpJO9']|.//div[@class='uSZhvf Dxiee']/span[1]|.//div[@class='xQbyBc']/span|.//span[contains(@class,'lmQWe')]|.//div[contains(@class,'ueUFo')]/span[1]")?.InnerText ?? "";//26-09-2024//06-03-2023//27-02-2023 //05-01-2023
                         name = link.SelectSingleNode(".//div[@class='DAB5ue']|.//div[@class='NemW5e']/span|.//div[contains(@class, 'ChC0jd')]/span|.//div[contains(@class,'kV5zMb')]/span[1]|.//span[@class='rw5ecc RmEs5b rOlovd']|.//span[contains(@class,'WJMUdc')]")?.InnerText ?? "";//07-12-2023//23-06-2023//09-05-2023//10-04-2023//16-03-2023 //27-02-2023//05-01-2023
                         if (price != "")//28-11-2023
                         {
@@ -1848,8 +1850,12 @@ namespace GoogleFirstPage.Classiclinks
                 n = node.SelectSingleNode(".//a[contains(@class,'BmP5tf')]");//14-01-2022 //14-09-2020 contains
             if (n == null)
                 n = node.SelectSingleNode(".//a[contains(@class,'sXtWJb')]");//16-12-2020 //15-12-2020
+            if (n == null)//20-09-2024
+                n = node.SelectSingleNode(".//a[@class='cz3goc OcpZAb']");//20-09-2024
             if (n == null)//13-08-2024
                 n = node.SelectSingleNode(".//a[@class='rTyHce jgWGIe']");//13-08-2024
+            if (n == null)//19-09-2024
+                n = node.SelectSingleNode(".//a[contains(@class,'cz3goc OcpZAb')]");//19-09-2024
             if (n != null)
             {
                 if (orgLinks < 100)
@@ -3158,7 +3164,7 @@ namespace GoogleFirstPage.Classiclinks
                 // if (node.SelectSingleNode(".//div[@class='FEoF4d']") == null && node.SelectSingleNode(".//div[@class='PZPZlf hb8SAc']") == null) //15-09-2022 //24-11-2022 commented
                 if (node.SelectSingleNode(".//div[@class='FEoF4d']|.//div[@class='kno-rdesc']|.//div[contains(@class,'rbR0cd')]|.//g-card[@class='g F6CFcc']|.//div[@class='zhYvOe OuaH0']" +//28-08-2024//15-08-2024
                     "|.//div[@class='knowledge-finance-wholepage-chart__fw-uch']|.//div[@class='WFxqwc']|.//div[@class='KrvXD']|.//div[contains(@class,'dnXCYb')]" +//23-07-2024
-                    "|.//div[@class='hoJlSb']|.//div[@class='Vo9TVc nG7hRb']|.//div[@jsname='xQjRM']|.//div[@class='x3SAYd']|.//div[@class='XNfAUb']|.//div[@jsname='VMmjWc']") == null || node.SelectSingleNode(".//div[@class='V3FYCf']") != null)//29-07-2024//05-07-2024
+                    "|.//div[@class='hoJlSb']|.//div[@class='Vo9TVc nG7hRb']|.//div[@jsname='xQjRM']|.//div[@class='x3SAYd']|.//div[@class='XNfAUb']|.//div[@jsname='VMmjWc']|.//div[@class='agqCtf tw-res']") == null || node.SelectSingleNode(".//div[@class='V3FYCf']") != null)//19-09-2024//29-07-2024//05-07-2024
                     return "AnswerCard";
             }
 
@@ -3253,7 +3259,7 @@ namespace GoogleFirstPage.Classiclinks
                 if ((node.SelectSingleNode(".//div[@class='Gqsa8d']") != null && node.SelectSingleNode(".//div[@class='EDblX HG5ZQb']") != null)//27-02-2024
                 || (node.SelectSingleNode(".//div[@class='HOslld dutT5c']|.//div[@class='zJUuqf adDDi']|.//div[@class='IZE3Td']") != null
                 && (node.SelectSingleNode(".//div[@class='RyIFgf']") == null || node.SelectNodes(".//div[contains(@class,'EXH1Ce')]") != null))//09-05-2024//29-04-2024//16-03-2024//27-02-2024
-                && (node.SelectSingleNode(".//div[@class='vDF3Oc jIrdcd']|.//div[contains(@class,'qtOtne')]|.//div[@class='YB4h9 ky4hfd']|.//div[@class='oj7Mub eVNxY']") == null))//26-07-2024//04-07-2024//01-05-2024
+                && (node.SelectSingleNode(".//div[@class='vDF3Oc jIrdcd']|.//div[contains(@class,'qtOtne')]|.//div[@class='YB4h9 ky4hfd']|.//div[@class='oj7Mub eVNxY']|.//div[@class='aJegcc']|.//div[@class='nC7kNc RrlBtc']") == null))//26-09-2024//24-09-2024//26-07-2024//04-07-2024//01-05-2024
                     return "Hotel";
             }
             nd = node.SelectSingleNode(".//*[@id='rXuTZe']");
@@ -3482,7 +3488,7 @@ namespace GoogleFirstPage.Classiclinks
                      || nd.InnerText.ToLower().StartsWith("latest") || nd.InnerText.ToLower().Contains("map")//07-08-2020  //23-06-2020 //22-06-2020
                      || nd.InnerText.ToLower().Contains("notícias")) //08-01-2021 top stories
                     if ((node.SelectSingleNode(".//div[@id='tscffb']") != null || node.SelectSingleNode(".//div[@class='KJDcUb']") == null)
-                            && node.SelectSingleNode(".//div/a[contains(@class,'C8nzq BmP5tf')]|.//div/a[@class='rTyHce jgWGIe']") == null && node.SelectSingleNode(".//div/a[contains(@class,'cz3goc BmP5tf')]") == null//27-08-2024
+                            && node.SelectSingleNode(".//div/a[contains(@class,'C8nzq BmP5tf')]|.//div/a[@class='rTyHce jgWGIe']|.//div[contains(@class,'kb0PBd cvP2Ce')]|.//div/a[contains(@class,'cz3goc')]") == null//20-09-2024
                              && node.SelectSingleNode(".//g-card[@id='tscffb']") == null) //19-05-2022//12-11-2021 //25-05-2021 //04-01-2021 video block
                         return true;
                 if (node.SelectSingleNode(".//div[@class='ttfMne']|.//div[@class='N60dNb mfMhoc']|.//h2[@class='OEsCyf mfMhoc']|.//div[@class='kp-blk c2xzTb OJXvsb']|.//div[@class='WpKAof']|.//g-card/div[@class='mnr-c']|.//div[@class='FQrfLd']") != null)//04-11-2022 //23-11-2021 CB //27-10-2021 //01-09-2021 missing AC block//12-07-2021 job block //12-07-2021 carousel block //19-01-2021 missing top stories
