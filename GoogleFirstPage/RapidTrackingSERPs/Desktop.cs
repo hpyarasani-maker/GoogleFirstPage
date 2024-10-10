@@ -51,7 +51,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 if (nodeCol == null || (nodeCol.Count >= 1 && nodeCol.Count <= 5))//09-02-2024
                 {//08-02-2024
                     if (rso.SelectNodes("//div[contains(@id,'kp-wp-tab-')]") != null)
-                        nodeCol = rso.SelectNodes(".//div[contains(@class,'TzHB6b cLjAic')]|.//div[contains(@class,'g Ww4FFb')]|.//div[@class='g PmEWq']|.//div[@class='Wt5Tfe']|.//div[@class='g']/div[@class='BYM4Nd']");//22-07-2024//20-07-2024//09-07-2024
+                        nodeCol = rso.SelectNodes(".//div[contains(@class,'TzHB6b cLjAic')]|.//div[contains(@class,'TzHB6b j8lBAb p7kDMc cLjAic')]|.//div[contains(@class,'g Ww4FFb')]|.//div[@class='g PmEWq']|.//div[@class='Wt5Tfe']|.//div[@class='g']/div[@class='BYM4Nd']|.//div[@class='Lv2Cle']|.//g-section-with-header[@class='yG4QQe TBC9ub']|.//div[@class='uVMCKf']");//09-10-2024
                     else
                         nodeCol = rso.SelectNodes(".//div[contains(@class,'WvKfwe')]/div|.//div[@class='UDZeY OTFaAf']/div|.//div[@class='MjjYud']|.//div[contains(@class,'g Ww4FFb')]");
                 }//08-02-2024
@@ -62,6 +62,10 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                         {
                             continue;
                         }
+                        if (node.HasClass("TzHB6b") && node.SelectSingleNode(".//div[contains(@class,'g Ww4FFb')]|.//div[@class='g PmEWq']|.//div[@class='Wt5Tfe']|.//div[@class='g']/div[@class='BYM4Nd']|.//div[@class='Lv2Cle']|.//g-section-with-header[@class='yG4QQe TBC9ub']|.//div[@class='uVMCKf']") != null)//09-10-2024
+                        {
+                            continue;
+                        }//09-10-2024
                         try
                         {
                             if (node.InnerHtml != "")
@@ -623,8 +627,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 s.Append("</block>");
             }//02-11-2023
             //18-03-2020
-            HtmlNode imgs = colt.SelectSingleNode("//div[contains(@class, 'M8OgIe')]");//08-07-2024//21-04-2023
-            if (imgs != null && (imgs.SelectSingleNode(".//div[@id='Odp5De']|.//div[@jscontroller='qTdDb']") == null || imgs.SelectSingleNode(".//div[@class='QjXCXd']") != null))//04-01-2024//15-05-2023//27-04-2023
+            HtmlNode imgs = colt?.SelectSingleNode("//div[contains(@class, 'M8OgIe')]");//30-09-2024//08-07-2024//21-04-2023
+            if (imgs != null && (imgs.SelectSingleNode(".//div[@id='Odp5De']|.//div[@jscontroller='qTdDb']") == null || imgs.SelectSingleNode(".//div[@class='QjXCXd']|.//div[@class='Lv2Cle']") != null))//10-10-2024//04-01-2024//15-05-2023//27-04-2023
             {
                 s.Append("<block type=\"images\" url=\"\">");
                 s.Append(GetImages(imgs));
@@ -1066,6 +1070,9 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 case "aioverview"://21-08-2024
                     s.Append(GetAioverview(node));
                     break;//21-08-2024
+                /*case "classiclinkcarousel"://30-09-2024 ClassicLinkCarousel
+                    s.Append(GetClassicLinkCarousel(node));
+                    break;//30-09-2024 ClassicLinkCarousel*/
                 default:
                     break;
             }
@@ -1920,6 +1927,31 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             }
             return s.ToString();
         } //07-07-2023 FindResultsOn Block
+        private string GetClassicLinkCarousel(HtmlNode node)//30-09-2024 ClassicLinkCarousel
+        {
+            StringBuilder s = new StringBuilder();
+            HtmlNode n = node.SelectSingleNode(".//div[@class='yuRUbf']/a|.//div[@class='yuRUbf']/div/a|.//div[@class='yuRUbf']/div/span/a");
+            if (n != null)
+            {
+                HtmlNode t = n.SelectSingleNode(".//h3");
+                s.Append("<block type=\"classickLinkCarousel\" url=\"" + SetUrl(n.Attributes["href"].Value) + "\" title=\"" + SetTitle(t.InnerText) + "\" >");
+                HtmlNodeCollection nds = node.SelectNodes(".//div[@class='IF221e EXH1Ce']");
+                if (nds != null)
+                {
+                    foreach (HtmlNode nd in nds)
+                    {
+                        HtmlNode a = nd.SelectSingleNode(".//a");
+                        HtmlNode t1 = nd.SelectSingleNode(".//div[@role='heading']");
+                        if (a != null && t1 != null)
+                        {
+                            s.Append("<item url=\"" + SetUrl(a.Attributes["href"].Value) + "\" title=\"" + SetTitle(t1.InnerText) + "\" />");
+                        }
+                    }
+                }
+                s.Append("</block>");
+            }
+            return s.ToString();
+        }//30-09-2024 ClassicLinkCarousel
         private string ConvertNumber(string value)//23-06-2023
         {
             if (string.IsNullOrEmpty(value))
@@ -2043,7 +2075,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 nd = node.SelectSingleNode(".//div[@class='CEMjEf NUnG9d']/g-img"); //06-04-2022 TS
             if (nd == null)//27-04-2023
                 nd = node.SelectSingleNode(".//div[@class='aUSklf']|.//div[@jsname='K9a4Re']");//25-09-2024
-            if (nd != null)
+            if (nd != null && node.SelectSingleNode(".//div[@class='fN9oz']|.//div[@class='Brgz0 tw-res']") == null)//10-10-2024//01-10-2024
                 return "topstories";
             if (nd == null)
                 nd = node.SelectSingleNode(".//span[@class='qB1pae']");
@@ -2062,7 +2094,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             HtmlNode nd1 = null;
             if (nd != null)
                 nd1 = node.SelectSingleNode(".//div[@class='g']");
-            if (nd != null && nd1 == null)
+            if (nd != null && nd1 == null && node.SelectSingleNode(".//div[@class='fN9oz']|.//div[@class='Brgz0 tw-res']") == null)//10-10-2024//07-10-2024
                 return "videos";
             //end 15-10-2020
             nd = node.SelectSingleNode(".//div[@class='_Zfh']");
@@ -2211,7 +2243,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             // end of map changes.
 
             nd = node.SelectSingleNode(".//div[@id='kx']|.//div[@id='rrg']|.//div[@class='oHJrJb']|.//div[@class='q6PGbe']|.//g-scrolling-carousel[@class='arDHIe']|.//div[@class='jhtnKe oJxN6']|.//div[@jsname='GDPwke']");//21-09-2023//19-09-2023//01-09-2022//03-11-2021 CS Block//05-08-2020 included selector for carousel
-            if (nd != null)
+            if (nd != null && node.SelectSingleNode(".//div[@class='fN9oz']") == null)//07-10-2024
             {
                 return "Carousel";
             }
@@ -2249,6 +2281,9 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             nd = node.SelectSingleNode(".//div[@class='GcKpu']|.//div[contains(@class,'Fzsovc')]");//03-09-2024//21-08-2024 AIOverview
             if (nd != null)
                 return "aiOverview";//21-08-2024 AIOverview
+            /*nd = node.SelectSingleNode(".//div[@data-snf='RqgZTc' and (@data-sncf='1' or @data-sncf='2')]");//30-09-2024 ClassicLinkCarousel
+            if (nd != null)
+                return "classicLinkCarousel";//30-09-2024 ClassicLinkCarousel*/
             return "";
         }
 
@@ -2364,7 +2399,9 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 if (nd != null)
                     if ((nd.InnerText == "Top stories" || nd.InnerText == "Huvudnyheter" || nd.InnerText == "Videos" || nd.InnerText == "Video" || nd.InnerText == "Tin bài hàng đầu" || nd.InnerText == "Voorpaginanieuws" || nd.InnerText == "Vertaalresultaat" || nd.InnerText == "Recipes" || nd.InnerText == "Vidéos") && node.SelectSingleNode(".//div[contains(@class,'g Ww4FFb')]") == null)//30-10-2023//02-12-2020 videos//05-08-2020 //29-06-2020//03-06-2020 // 02-06-2020  // 08-04-2020
                         return true;
-
+                /*nd = node.SelectSingleNode(".//div[@data-snf='RqgZTc' and (@data-sncf='1' or @data-sncf='2')]");//30-09-2024 ClassicLinkCarousel
+                if (nd != null)
+                    return true;//30-09-2024 ClassicLinkCarousel*/
                 //enable below line without new block "popularProducts"
                 //if (node.SelectSingleNode(".//div[contains(@class,'kp-blk')]") != null || node.SelectSingleNode(".//div[@class='dzpFPb']") != null)//28-05-2022//06-04-2022 //13-10-2021
                 if (node.SelectSingleNode(".//div[contains(@class,'kp-blk')]") != null || node.SelectSingleNode(".//div[@class='dzpFPb']") != null || node.SelectSingleNode(".//div[@jscontroller='Yma7vd']") != null || node.SelectSingleNode(".//div[contains(@class,'aJegcc')]") != null || node.SelectSingleNode(".//div[@class='IbDT9d']") != null)//10-09-2024//24-05-2023//09-12-2022//09-11-2022 shopping
