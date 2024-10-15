@@ -226,6 +226,20 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
+                        <%--<asp:TemplateField HeaderText="Classic Link Carousel (Item Urls)">
+                            <ItemTemplate>
+                                <div style="width: 75px;">
+                                    <%# Eval("classicLinkCarousel","{0:N0}") %>
+                                </div>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="Classic Link SiteLinks (Item Urls)">
+                            <ItemTemplate>
+                                <div style="width: 75px;">
+                                    <%# Eval("classicLinkSiteLinks","{0:N0}") %>
+                                </div>
+                            </ItemTemplate>
+                        </asp:TemplateField>--%>
                         <asp:TemplateField HeaderText="Dataset (Item Urls)">
                             <ItemTemplate>
                                 <div style="width: 75px;">
@@ -289,6 +303,13 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
+                       <%-- <asp:TemplateField HeaderText="people Also Search (Item Urls)">
+                            <ItemTemplate>
+                                <div style="width: 75px;">
+                                    <%# Eval("peopleAlsoSearch","{0:N0}") %>
+                                </div>
+                            </ItemTemplate>
+                        </asp:TemplateField>--%>
                         <asp:TemplateField HeaderText="Product listed ads (Item Urls)">
                             <ItemTemplate>
                                 <div style="width: 75px;">
@@ -317,6 +338,13 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
+                        <%--<asp:TemplateField HeaderText="Sites Carousel (Item Urls)">
+                            <ItemTemplate>
+                                <div style="width: 60px;">
+                                    <%# Eval("sitesCarousel","{0:N0}") %>
+                                </div>
+                            </ItemTemplate>
+                        </asp:TemplateField>--%>
                          <asp:TemplateField HeaderText="Text ads (Item Urls)">
                             <ItemTemplate>
                                 <div style="width: 75px;">
