@@ -388,8 +388,9 @@
             <br />
             <br />
             <br />
-            <asp:Label ID="Label1" runat="server" ForeColor="Blue" Font-Size="Large" Font-Bold="true" Text="Elements and Classic Links"></asp:Label><br />
             <br />
+            <br />
+            <asp:Label ID="Label1" runat="server" ForeColor="Blue" Font-Size="Large" Font-Bold="true" Text="Elements and Classic Links"></asp:Label><br />
             <br />
             <br />
             <br />
