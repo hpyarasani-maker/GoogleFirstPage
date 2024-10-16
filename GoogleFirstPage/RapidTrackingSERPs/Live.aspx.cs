@@ -129,8 +129,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                             //}
                                             if (node.Attributes[0].Value.ToString() == "classicLinkSiteLinks")
                                             {
-                                                dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
-                                                dt.Rows.Add("", node.Attributes[1].Value, node.Attributes[2].Value);
+                                                dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">", node.Attributes[1].Value, node.Attributes[2].Value);
+                                                //dt.Rows.Add("", node.Attributes[1].Value, node.Attributes[2].Value);
                                                 foreach (XmlNode nodee in node)
                                                 {
                                                     dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
@@ -148,8 +148,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                             }
                                             if (node.Attributes[0].Value.ToString() == "classickLinkCarousel")
                                             {
-                                                dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
-                                                dt.Rows.Add("", node.Attributes[1].Value, node.Attributes[2].Value);
+                                                dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">", node.Attributes[1].Value, node.Attributes[2].Value);
+                                                //dt.Rows.Add("", node.Attributes[1].Value, node.Attributes[2].Value);
                                                 foreach (XmlNode nodee in node)
                                                 {
                                                     dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
@@ -330,8 +330,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                             //}
                                             if (node.Attributes[0].Value.ToString() == "classicLinkSiteLinks")
                                             {
-                                                dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
-                                                dt.Rows.Add("", node.Attributes[1].Value, node.Attributes[2].Value);
+                                                dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">", node.Attributes[1].Value, node.Attributes[2].Value);
+                                                //dt.Rows.Add("", node.Attributes[1].Value, node.Attributes[2].Value);
                                                 foreach (XmlNode nodee in node)
                                                 {
                                                     dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
@@ -349,8 +349,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                             }
                                             if (node.Attributes[0].Value.ToString() == "classickLinkCarousel")
                                             {
-                                                dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
-                                                dt.Rows.Add("", node.Attributes[1].Value, node.Attributes[2].Value);
+                                                dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">", node.Attributes[1].Value, node.Attributes[2].Value);
+                                                //dt.Rows.Add("", node.Attributes[1].Value, node.Attributes[2].Value);
                                                 foreach (XmlNode nodee in node)
                                                 {
                                                     dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
@@ -505,8 +505,6 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             dt.Columns.Add("URL");
             dt.Columns.Add("Title");
             dt.Columns.Add("Position");
-            //dt.Columns.Add("Site");
-            //dt.Columns.Add("Price");
             return dt;
         }
         private void SendToDatabase(int seid, string keyword, string jobid)

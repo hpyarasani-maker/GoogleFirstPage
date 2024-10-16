@@ -102,8 +102,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                     //}
                                     if (node.Attributes[0].Value.ToString() == "classicLinkSiteLinks")
                                     {
-                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
-                                        dt.Rows.Add("", node.Attributes[1].Value, node.Attributes[2].Value);
+                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">", node.Attributes[1].Value, node.Attributes[2].Value);
+                                        //dt.Rows.Add("", node.Attributes[1].Value, node.Attributes[2].Value);
                                         foreach (XmlNode nodee in node)
                                         {
                                             dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
@@ -121,8 +121,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                     }
                                     if (node.Attributes[0].Value.ToString() == "classickLinkCarousel")
                                     {
-                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
-                                        dt.Rows.Add("", node.Attributes[1].Value, node.Attributes[2].Value);
+                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">", node.Attributes[1].Value, node.Attributes[2].Value);
+                                        //dt.Rows.Add("", node.Attributes[1].Value, node.Attributes[2].Value);
                                         foreach (XmlNode nodee in node)
                                         {
                                             dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
@@ -293,8 +293,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                     //}
                                     if (node.Attributes[0].Value.ToString() == "classicLinkSiteLinks")
                                     {
-                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
-                                        dt.Rows.Add("", node.Attributes[1].Value, node.Attributes[2].Value);
+                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">", node.Attributes[1].Value, node.Attributes[2].Value);
+                                        //dt.Rows.Add("", node.Attributes[1].Value, node.Attributes[2].Value);
                                         foreach (XmlNode nodee in node)
                                         {
                                             dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
@@ -312,8 +312,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                     }
                                     if (node.Attributes[0].Value.ToString() == "classickLinkCarousel")
                                     {
-                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
-                                        dt.Rows.Add("", node.Attributes[1].Value, node.Attributes[2].Value);
+                                        dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">", node.Attributes[1].Value, node.Attributes[2].Value);
+                                        //dt.Rows.Add("", node.Attributes[1].Value, node.Attributes[2].Value);
                                         foreach (XmlNode nodee in node)
                                         {
                                             dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
@@ -459,7 +459,12 @@ namespace GoogleFirstPage.RapidTrackingSERPs
 
         protected void gridviewjobid_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-
+            foreach (TableCell tc in e.Row.Cells)
+            {
+                tc.Attributes["style"] = "border-right:1.5px solid black";
+                tc.Attributes["style"] = "border-left:1.5px solid black";
+                tc.Attributes["style"] = "border-top:1.5px solid black";
+            }
         }
 
         protected void btnjobid_Click(object sender, EventArgs e)
