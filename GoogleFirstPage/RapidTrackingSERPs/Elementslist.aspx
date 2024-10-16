@@ -228,20 +228,20 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <%--<asp:TemplateField HeaderText="ClassicLinkCarousel">
+                        <asp:TemplateField HeaderText="ClassiclinkCarousel">
                             <ItemTemplate>
-                                <div style="width: 80px;">
+                                <div style="width: 105px;">
                                     <%# Eval("classicLinkCarousel","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="ClassicLinkSiteLinks">
+                        <asp:TemplateField HeaderText="ClassiclinkSiteLinks">
                             <ItemTemplate>
-                                <div style="width: 80px;">
+                                <div style="width: 105px;">
                                     <%# Eval("classicLinkSiteLinks","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
-                        </asp:TemplateField>--%>
+                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Dataset">
                             <ItemTemplate>
                                 <div style="width: 54px;">
@@ -305,13 +305,13 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <%--<asp:TemplateField HeaderText="people Also Search">
+                        <asp:TemplateField HeaderText="people Also Search">
                             <ItemTemplate>
-                                <div style="width: 85px;">
+                                <div style="width: 105px;">
                                     <%# Eval("peopleAlsoSearch","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
-                        </asp:TemplateField>--%>
+                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Product listed ads">
                             <ItemTemplate>
                                 <div style="width: 100px;">
@@ -340,13 +340,13 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <%--<asp:TemplateField HeaderText="Sites Carousel">
+                        <asp:TemplateField HeaderText="Sites Carousel">
                             <ItemTemplate>
-                                <div style="width: 60px;">
+                                <div style="width: 90px;">
                                     <%# Eval("sitesCarousel","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
-                        </asp:TemplateField>--%>
+                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Text ads">
                             <ItemTemplate>
                                 <div style="width: 60px;">
