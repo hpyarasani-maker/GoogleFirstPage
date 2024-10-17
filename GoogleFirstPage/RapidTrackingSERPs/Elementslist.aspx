@@ -133,7 +133,7 @@
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
 
-        <div class="header1" style="width: 2500px;">
+        <div class="header1" style="width: 2980px;">
             <div class="header-menu">
              <div style="margin-left:-150px;">
                     <a href="../Dashboard.aspx" title="Pi-Datametrics DashBoard Home">
@@ -191,7 +191,7 @@
                 <br />
 
 
-                <asp:GridView ID="gvelements" Width="100%" AutoGenerateColumns="false" CssClass="footable" HeaderStyle-HorizontalAlign="Right" Font-Bold="true" HeaderStyle-Font-Bold="true" runat="server" OnRowDataBound="gvelements_RowDataBound" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" HeaderStyle-Height="30px" RowStyle-Width="1px" AllowPaging="true" OnPageIndexChanging="gvelements_PageIndexChanging" PageSize="30">
+                <asp:GridView ID="gvelements" Width="100%" AutoGenerateColumns="false" CssClass="footable" HeaderStyle-HorizontalAlign="Left" Font-Bold="true" HeaderStyle-Font-Bold="true" runat="server" OnRowDataBound="gvelements_RowDataBound" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" HeaderStyle-Height="30px" RowStyle-Width="1px" AllowPaging="true" OnPageIndexChanging="gvelements_PageIndexChanging" PageSize="30">
                     <Columns>
                         <asp:TemplateField HeaderText="Date">
                             <ItemTemplate>

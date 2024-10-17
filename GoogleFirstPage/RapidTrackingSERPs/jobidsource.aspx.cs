@@ -68,8 +68,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             {
                 Response.ContentType = "text/html";
                 Response.Write(html1.ToString());
-                //Response.Write("<script>window.open('xmldata.aspx?jobid=" + jobid + "&seid=" + seid + "&keyword=" + keyword + "','_blank');</script>");
-                //ClientScript.RegisterStartupScript(this.GetType(), "OpenWindow", "window.open('" + html1 + "');", true);
+                Response.Write("<script>window.open('xmldata.aspx?jobid=" + jobid + "&seid=" + seid + "&keyword=" + keyword.Replace("%20"," ") + "','_blank');</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "OpenWindow", "window.open('" + html1 + "');", true);
             }
         }
 

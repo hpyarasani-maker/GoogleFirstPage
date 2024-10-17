@@ -134,7 +134,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                         dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                         foreach (XmlNode nodee in node)
                                         {
-                                            dt.Rows.Add("", nodee.Attributes[0].Value, " Title = " + nodee.Attributes[1].Value, " Source = " + nodee.Attributes[2].Value);
+                                            dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + "  ----- " + " Source = " + nodee.Attributes[2].Value);
                                         }
                                         dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                     }
@@ -325,7 +325,9 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                         dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                         foreach (XmlNode nodee in node)
                                         {
-                                            dt.Rows.Add("", nodee.Attributes[0].Value, " Title = " + nodee.Attributes[1].Value, " Source = " + nodee.Attributes[2].Value);
+                                            //dt.Rows.Add("", nodee.Attributes[0].Value, " Title = " + nodee.Attributes[1].Value, " Source = " + nodee.Attributes[2].Value);
+                                            dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value + "  ----- " + " Source = " + nodee.Attributes[2].Value);
+
                                         }
                                         dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                     }
