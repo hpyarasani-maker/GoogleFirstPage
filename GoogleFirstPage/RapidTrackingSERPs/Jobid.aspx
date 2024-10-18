@@ -501,8 +501,9 @@
                 <br />
                 <asp:GridView ID="gridviewjobid" AutoGenerateColumns="false" CssClass="footable" HeaderStyle-HorizontalAlign="Right" Font-Bold="true" HeaderStyle-Font-Bold="true" runat="server" OnRowDataBound="gridviewjobid_RowDataBound" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" HeaderStyle-Height="30px" RowStyle-Width="1px">
                     <Columns>
-                        <asp:BoundField HeaderText="CL Position" DataField="Position" ItemStyle-Width="100px" />
-                        <asp:BoundField HeaderText="Elements" DataField="Block Type" ItemStyle-HorizontalAlign="Center"  />
+                        <asp:BoundField HeaderText="CL Position" DataField="Position" ItemStyle-Width="80px" />
+                        <asp:BoundField HeaderText="Type" DataField="CL" ItemStyle-Width="50px" />
+                        <asp:BoundField HeaderText="Elements" DataField="Block Type" ItemStyle-HorizontalAlign="Center" />
                         <asp:TemplateField HeaderText="URLs">
                             <HeaderStyle HorizontalAlign="Center" />
                             <ItemTemplate>
