@@ -758,7 +758,18 @@ namespace GoogleFirstPage.RapidTrackingSERPs
 
         protected void gridviewlive_RowDataBound(object sender, GridViewRowEventArgs e)
         {
+            foreach (TableCell tc in e.Row.Cells)
+            {
+                tc.Attributes["style"] = "border-right:1.5px solid black";
+                tc.Attributes["style"] = "border-left:1.5px solid black";
+                tc.Attributes["style"] = "border-top:1.5px solid black";
+            }
 
+            for (int i = 0; i < e.Row.Cells.Count; i++)
+            {
+                e.Row.Cells[i].ToolTip = e.Row.Cells[i].Text.Replace("&lt;", "").Replace("&gt;", "").Replace("/", "");
+                //e.Row.Cells[i].ForeColor = Color.Blue;
+            }
         }
 
         protected void txtlivesearch_TextChanged(object sender, EventArgs e)

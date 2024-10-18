@@ -79,6 +79,13 @@
         }
     </style>
 
+    <style>
+     .GvGrid:hover
+        {
+            background-color: #FFEB9C;
+            color:#9C6500;
+        }
+ </style>
 
     <style type="text/css">
         .header3 {
@@ -499,7 +506,7 @@
                 <asp:Label ID="lblalllinks" runat="server" ForeColor="Blue" Font-Size="Small" Font-Bold="true"></asp:Label>
                 <br />
                 <br />
-                <asp:GridView ID="gridviewjobid" AutoGenerateColumns="false" CssClass="footable" HeaderStyle-HorizontalAlign="Right" Font-Bold="true" HeaderStyle-Font-Bold="true" runat="server" OnRowDataBound="gridviewjobid_RowDataBound" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" HeaderStyle-Height="30px" RowStyle-Width="1px">
+                <asp:GridView ID="gridviewjobid" AutoGenerateColumns="false" CssClass="footable" RowStyle-CssClass="GvGrid" HeaderStyle-HorizontalAlign="Left" Font-Bold="true" HeaderStyle-Font-Bold="true" runat="server" OnRowDataBound="gridviewjobid_RowDataBound" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" HeaderStyle-Height="30px" RowStyle-Width="1px">
                     <Columns>
                         <asp:BoundField HeaderText="CL Position" DataField="Position" ItemStyle-Width="80px" />
                         <asp:BoundField HeaderText="Type" DataField="CL" ItemStyle-Width="50px" />
