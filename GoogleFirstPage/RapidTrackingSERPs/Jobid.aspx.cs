@@ -349,7 +349,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                     //    }
                                     //    dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                     //}
-                                    if (node.Attributes[0].Value.ToString() == "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks")
+                                    if (node.Attributes[0].Value.ToString() == "peopleAlsoSearch")
                                     {
                                         dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                         foreach (XmlNode nodee in node)
