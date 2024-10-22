@@ -61,6 +61,8 @@ namespace GoogleFirstPage.Classiclinks
                 {
                     if (node.Attributes["class"]?.Value?.Contains("Ww4FFb vt6azd DlUvEb") == true && node.SelectSingleNode(".//div[@class='lU8tTd']") != null && node.SelectSingleNode(".//div[@class='lEorAf']/div[@class='lU8tTd']") == null)//24-06-2024//05-04-2024
                         continue;//05-04-2024
+                    if (node.SelectSingleNode(".//div[@class='AuVD wHYlTd Ww4FFb vt6azd']") != null && node.SelectSingleNode(".//div[@class='Wt5Tfe']") != null)//22-10-2024
+                        continue;
                     HtmlNode fsh = node.SelectSingleNode(".//*[@id='knowledge-finance-wholepage__fw-sticky-header']");
                     if (fsh != null)
                     {
@@ -912,6 +914,8 @@ namespace GoogleFirstPage.Classiclinks
                     nds = node.SelectNodes(".");//14-02-2024//21-09-2023 //02-02-2022 moved from 687 line   // 25-10-2019
                 if (nds == null)//30-09-2024
                     nds = node.SelectNodes(".//div[@class='AGopnf']");//30-09-2024
+                if (nds != null && node.Attributes["class"]?.Value == "Ww4FFb vt6azd" || node.Attributes["class"]?.Value == "g Ww4FFb vt6azd")//21-10-2024
+                    nds = node.SelectNodes(".");//21-10-2024
             }
             if (nds != null)
             {
@@ -978,7 +982,7 @@ namespace GoogleFirstPage.Classiclinks
                             s.Append("</block>");
                             continue;
                         }//PopularProducts //11-07-2023
-                        if (nd.SelectSingleNode(".//div[@data-snf='RqgZTc' and (@data-sncf='1' or @data-sncf='2')]") != null && nd.SelectNodes(".//div[@class='yzlnle XNfAUb']|.//div[@class='ORij0c vqseUe']|.//div[contains(@class,'ec0wHe N8D9gb M8CEed GUHazd')]") == null)//15-10-2024//14-10-2024 for ClassicLinksCarousel and ClassicLinkSiteLink block
+                        if (nd.SelectSingleNode(".//div[@data-snf='RqgZTc' and (@data-sncf='1' or @data-sncf='2')]|.//div[@class='EDblX HG5ZQb' and @role='list']") != null && nd.SelectNodes(".//div[@class='yzlnle XNfAUb']|.//div[contains(@class,'ec0wHe N8D9gb M8CEed GUHazd')]|.//div[@class='LbKnXb YAG2qc UYJxh']|.//div[@class='cyspcb DH9lqb']") == null)//21-10-2024//18-10-2024//15-10-2024//14-10-2024 for ClassicLinksCarousel and ClassicLinkSiteLink block
                         {
                             s.Append(GetClassicLinkCarousel(nd));
                             continue;
@@ -1688,12 +1692,12 @@ namespace GoogleFirstPage.Classiclinks
                 s.Append("<block type=\"sitesCarousel\">");
                 foreach (HtmlNode nd in nds)
                 {
-                    HtmlNode a = nd.SelectSingleNode(".//a");
+                    string url = nd.SelectSingleNode(".//a")?.Attributes["href"]?.Value ?? "";//22-10-2024
                     string t1 = nd.SelectSingleNode(".//div[contains(@class,'LJEGod')]")?.InnerText ?? "";
                     string s1 = nd.SelectSingleNode(".//div[@class='cyspcb DH9lqb']|.//div[@class='LbKnXb YAG2qc UYJxh']")?.InnerText ?? "";
-                    if (a == null && string.IsNullOrEmpty(t1) && string.IsNullOrEmpty(s1))
+                    if (string.IsNullOrEmpty(SetUrl(url)) && string.IsNullOrEmpty(t1) && string.IsNullOrEmpty(s1))//22-10-2024
                         continue;
-                    s.Append("<item url=\"" + SetUrl(a.Attributes["href"].Value) + "\" title=\"" + SetTitle(t1) + "\" source=\"" + SetTitle(s1) + "\" />");
+                    s.Append("<item url=\"" + SetUrl(url) + "\" title=\"" + SetTitle(t1) + "\" source=\"" + SetTitle(s1) + "\" />");//22-10-2024
                 }
                 s.Append("</block>");
                 if (!s.ToString().Contains("<item url="))
@@ -3418,7 +3422,7 @@ namespace GoogleFirstPage.Classiclinks
             {
                 return "Videos";
             }
-            nd = node.SelectSingleNode(".//div[contains(@class,'HOslld dutT5c')and(.//div[contains(@class,'sPLMud')])]|.//div[contains(@class, 'XNfAUb')]");//10-10-2024//20-02-2024
+            nd = node.SelectSingleNode(".//div[contains(@class,'HOslld dutT5c')and(.//div[contains(@class,'sPLMud')or(.//div[contains(@class,'hNKF2b m9orme')])])]|.//div[contains(@class, 'XNfAUb')]");//18-10-2024//10-10-2024//20-02-2024
             if (nd != null && node.SelectSingleNode(".//div[contains(@class, 'MRtunc')]|.//div[@class='Wt5Tfe']|.//div[@class='RyIFgf']") == null
                 || (node.SelectSingleNode(".//div[@class='VqeGe']") != null && node.SelectSingleNode(".//div[@class='NYidgb']|.//div[@class='xKf9F']") == null))//27-02-2024//26-02-2024//20-02-2024
             {
@@ -3644,7 +3648,7 @@ namespace GoogleFirstPage.Classiclinks
             if (nd != null)
                 return "PeopleAlsoSearch"; // 11-10-2024 PeopleAlsoSearch
             nd = node.SelectSingleNode(".//div[contains(@class,'Ww4FFb vt6azd') or (.//div[@class='zJUuqf adDDi']) and (.//div[(@class='XNfAUb')])]");//11-10-2024 sitesCarousel
-            if (nd != null && node.SelectSingleNode(".//div[@class='owgUHc']|.//div[@class='wPNfjb']|.//div[@class='zhYvOe']|.//div[@class='YB4h9 ky4hfd']") == null)
+            if (nd != null && node.SelectSingleNode(".//div[@class='owgUHc']|.//div[@class='wPNfjb']|.//div[@class='zhYvOe']|.//div[@class='YB4h9 ky4hfd']") == null && node.SelectSingleNode(".//div[@class='LbKnXb YAG2qc UYJxh']|.//div[@class='cyspcb DH9lqb']") != null)//21-10-2024
                 return "sitesCarousel";//11-10-2024 
             return "";
         }
@@ -3675,7 +3679,7 @@ namespace GoogleFirstPage.Classiclinks
                     return false;
             }
             nd = node.SelectSingleNode(".//div[contains(@class,'Ww4FFb vt6azd')and(.//div[(@class='XNfAUb')])]");//11-10-2024 sitesCarousel
-            if (nd != null && node.SelectSingleNode(".//div[contains(@class,'cvP2Ce')]") == null)//15-10-2024
+            if (nd != null && node.SelectSingleNode(".//div[contains(@class,'cvP2Ce')]") == null && node.SelectSingleNode(".//div[@class='LbKnXb YAG2qc UYJxh']|.//div[@class='cyspcb DH9lqb']") != null)//22-10-2024//15-10-2024
                 return true;//11-10-2024 sitesCarousel
             if (node.SelectSingleNode(".//div[contains(@class, 'Z3ngN')]") != null) //22-03-2021
                 return false;
