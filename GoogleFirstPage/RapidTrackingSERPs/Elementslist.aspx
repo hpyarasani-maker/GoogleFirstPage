@@ -123,7 +123,13 @@
                     border-right: none;
                 }
     </style>
-
+    <style>
+     .GvGrid:hover
+        {
+            background-color: #FFEB9C;
+            color:#9C6500;
+        }
+ </style>
 </head>
 <body style="background-color: white">
 
@@ -191,7 +197,7 @@
                 <br />
 
 
-                <asp:GridView ID="gvelements" Width="100%" AutoGenerateColumns="false" CssClass="footable" HeaderStyle-HorizontalAlign="Left" Font-Bold="true" HeaderStyle-Font-Bold="true" runat="server" OnRowDataBound="gvelements_RowDataBound" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" HeaderStyle-Height="30px" RowStyle-Width="1px" AllowPaging="true" OnPageIndexChanging="gvelements_PageIndexChanging" PageSize="30">
+                <asp:GridView ID="gvelements" Width="100%" AutoGenerateColumns="false" CssClass="footable" RowStyle-CssClass="GvGrid" HeaderStyle-HorizontalAlign="Left" Font-Bold="true" HeaderStyle-Font-Bold="true" runat="server" OnRowDataBound="gvelements_RowDataBound" RowStyle-Height="1px" AlternatingRowStyle-BackColor="#f5f5f5" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" HeaderStyle-Height="30px" RowStyle-Width="1px" AllowPaging="true" OnPageIndexChanging="gvelements_PageIndexChanging" PageSize="30">
                     <Columns>
                         <asp:TemplateField HeaderText="Date">
                             <ItemTemplate>
