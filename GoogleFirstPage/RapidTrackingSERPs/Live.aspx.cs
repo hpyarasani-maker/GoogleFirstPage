@@ -203,9 +203,8 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                             {
                                                 dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                                 foreach (XmlNode nodee in node)
-                                                {
-                                                    //dt.Rows.Add("", nodee.Attributes[1].Value, " featureTitle = " + nodee.Attributes[0].Value + " --- " + " Title = " + nodee.Attributes[2].Value + " --- " + " description = " + nodee.Attributes[3].Value + " --- " + " isTable = " + nodee.Attributes[4].Value + " --- " + " isList = " + nodee.Attributes[5].Value + " --- " + " isChart = " + nodee.Attributes[6].Value + " --- " + " isVideo = " + nodee.Attributes[7].Value); //+ " --- " + " Table = " + nodee.LastChild.Attributes[8].Value
-                                                    dt.Rows.Add("", nodee.Attributes[1].Value, " featureTitle = " + nodee.Attributes[0].Value + " --- " + " Title = " + nodee.Attributes[2].Value + " --- " + " description = " + nodee.Attributes[3].Value + " --- " + " cardType = " + nodee.Attributes[4].Value); //+ " --- " + " Table = " + nodee.LastChild.Attributes[8].Value
+                                                {                                                    
+                                                    dt.Rows.Add("", nodee.Attributes[0].Value, " Title = " + nodee.Attributes[1].Value + " --- " + " description = " + nodee.Attributes[2].Value + " --- " + " cardType = " + nodee.Attributes[3].Value);
                                                 }
                                                 dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                             }
@@ -427,14 +426,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                                 dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                                 foreach (XmlNode nodee in node)
                                                 {
-                                                    if (node.Attributes[1].Value != null && node.Attributes[1].Value.ToString() != "")
-                                                    {
-                                                        dt.Rows.Add("", node.Attributes[1].Value, " featureTitle = " + nodee.Attributes[0].Value + " --- " + " Title = " + nodee.Attributes[2].Value + " --- " + " description = " + nodee.Attributes[3].Value + " --- " + " cardType = " + nodee.Attributes[4].Value); //+ " --- " + " Table = " + nodee.LastChild.Attributes[8].Value
-                                                    }
-                                                    if (node.Attributes[1].Value == null || node.Attributes[1].Value.ToString() == "")
-                                                    {
-                                                        dt.Rows.Add("", nodee.Attributes[1].Value, " featureTitle = " + nodee.Attributes[0].Value + " --- " + " Title = " + nodee.Attributes[2].Value + " --- " + " description = " + nodee.Attributes[3].Value + " --- " + " cardType = " + nodee.Attributes[4].Value); //+ " --- " + " Table = " + nodee.LastChild.Attributes[8].Value
-                                                    }
+                                                    dt.Rows.Add("", nodee.Attributes[0].Value, " Title = " + nodee.Attributes[1].Value + " --- " + " Description = " + nodee.Attributes[2].Value + " --- " + " CardType = " + nodee.Attributes[3].Value);
                                                 }
                                                 dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                             }
