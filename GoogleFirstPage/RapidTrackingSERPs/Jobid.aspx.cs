@@ -604,9 +604,9 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                     if (device == "desktop")
                         //url = "https://www.google." + sp.domain + "/search?q=" + keyword + "&gl=" + s1 + "&hl=" + lan1 + "&uule=" + sp.uule + "&num=100&aomd=1&safe=off&safe_search=0&gs_l=desktop&gws_rd=ssl,cr";                        
                         //url = "https://www.google." + gp.domain + "/search?q=" + keyword.Replace("'", "%27") + "&gl=" + s1 + "&hl=" + lan1 + "&uule=" + uule + "&num=100&aomd=1&safe=off&safe_search=0&gs_l=desktop&gws_rd=ssl,cr";
-                        url = "https://www.google." + gp.domain + "/search?q=" + keyword.Replace("'", "%27") + "&gl=" + s1 + "&hl=" + lan1 + "&uule=" + uule + "&num=100&aomd=1&safe=off&safe_search=0";
+                        url = "https://www.google." + gp.domain + "/search?q=" + keyword.Replace("'", "%27").Replace("&", "%26") + "&gl=" + s1 + "&hl=" + lan1 + "&uule=" + uule + "&num=100&aomd=1&safe=off&safe_search=0";
                     else
-                        url = "https://www.google." + gp.domain + "/search?q=" + keyword.Replace("'", "%27") + "&gl=" + s1 + "&hl=" + lan1 + "&uule=" + uule + "&num=100&glp=1&adtest=on&tci=g:2752&safe=images&safe=high&adtest-useragent=Mozilla/5.0 (iPhone; CPU iPhone OS 17_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/128.0.6613.98 Mobile/15E148 Safari/604.1";
+                        url = "https://www.google." + gp.domain + "/search?q=" + keyword.Replace("'", "%27").Replace("&", "%26") + "&gl=" + s1 + "&hl=" + lan1 + "&uule=" + uule + "&num=100&glp=1&adtest=on&tci=g:2752&safe=images&safe=high&adtest-useragent=Mozilla/5.0 (iPhone; CPU iPhone OS 17_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/128.0.6613.98 Mobile/15E148 Safari/604.1";
 
 
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "Popup_File" + 2, "window.open('" + url.Replace("'", "%27") + "','Window_X')", true);
