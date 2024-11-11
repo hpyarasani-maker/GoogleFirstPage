@@ -118,7 +118,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                     //    dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                     //    foreach (XmlNode nodee in node)
                                     //    {
-                                    //        dt.Rows.Add("", "", " Type = " + nodee.Attributes[0].Value + " ----- " + " Content = " + nodee.Attributes[1].Value);
+                                    //        dt.Rows.Add("", nodee.Attributes[0].Value , " Content = " + nodee.Attributes[1].Value);
                                     //    }
                                     //    dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                     //}
@@ -336,7 +336,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                     //    dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                     //    foreach (XmlNode nodee in node)
                                     //    {
-                                    //        dt.Rows.Add("", "", " Type = " + nodee.Attributes[0].Value + " ----- " + " Content = " + nodee.Attributes[1].Value);
+                                    //        dt.Rows.Add("", nodee.Attributes[0].Value , " Content = " + nodee.Attributes[1].Value);
                                     //    }
                                     //    dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                     //}
