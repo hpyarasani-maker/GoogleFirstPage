@@ -3698,14 +3698,6 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             {
                 seid =1025, domain ="com.co", geo_location="Colombia", locale= "es-co", uule = "w+CAIQICIIQ29sb21iaWE",device="mobile_android", sename="Google CO (Spanish, Mobile)"
             },//20-11-2024
-            new SearchProperties()//duplicate of 1024 and 1025 for AIOverview Testing//20-11-2024
-            {
-                seid =1026, domain ="com.co", geo_location="Colombia", locale= "es-co", uule = "w+CAIQICIIQ29sb21iaWE",device="desktop", sename="Google CO (Spanish) Duplicate"
-            },
-            new SearchProperties()
-            {
-                seid =1027, domain ="com.co", geo_location="Colombia", locale= "es-co", uule = "w+CAIQICIIQ29sb21iaWE",device="mobile_android", sename="Google CO (Spanish, Mobile) Duplicate"
-            },//duplicate of 1024 and 1025 for AIOverview Testing//20-11-2024
          };
     }
     public class SearchProperties
