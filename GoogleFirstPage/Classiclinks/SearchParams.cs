@@ -3690,6 +3690,14 @@ namespace GoogleFirstPage.Classiclinks
             {
                 seid =1023, domain ="co.mz", geo_location = "Mozambique", locale= "en-mz", uule = "w+CAIQICIKTW96YW1iaXF1ZQ==",device="mobile_android"
             },//06-11-2024
+            new SearchProperties()//20-11-2024
+            {
+                seid =1024, domain ="com.co", geo_location="Colombia", locale= "es-co", uule = "w+CAIQICIIQ29sb21iaWE",device="desktop"
+            },
+            new SearchProperties()
+            {
+                seid =1025, domain ="com.co", geo_location="Colombia", locale= "es-co", uule = "w+CAIQICIIQ29sb21iaWE",device="mobile_android"
+            },//20-11-2024
          };
     }
     public class SearchProperties
