@@ -673,6 +673,7 @@
       <DependentUpon>Missingelementlist.aspx</DependentUpon>
     </Compile>
     <Compile Include="RapidTrackingSERPs\Oxylabsresponse.cs" />
+    <Compile Include="RapidTrackingSERPs\Seforaiblock.cs" />
     <Compile Include="RapidTrackingSERPs\Xmldata.aspx.cs">
       <DependentUpon>Xmldata.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
