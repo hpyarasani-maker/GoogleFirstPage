@@ -525,7 +525,7 @@ namespace GoogleFirstPage.Classiclinks
                 }
             }
             //AIOverview block //18-11-2024
-            HtmlNode colt = doc.DocumentNode.SelectSingleNode(".//div[@class='M8OgIe']|.//div[@class='GcKpu']");//13-11-2024//08-11-2024//03-09-2024//21-08-2024 AIOverview
+            HtmlNode colt = doc.DocumentNode.SelectSingleNode(".//div[contains(@class,'M8OgIe')]|.//div[@class='GcKpu']");//12-12-2024//13-11-2024//08-11-2024//03-09-2024//21-08-2024 AIOverview
             if (colt != null && doc.DocumentNode.SelectSingleNode(".//div[contains(@class,'Fzsovc')]") != null)//13-11-2024
             {
                 s.Append(GetAioverview(colt));
@@ -852,7 +852,7 @@ namespace GoogleFirstPage.Classiclinks
                         {
                             if ((Regex.IsMatch(nd.OuterHtml, "id=\"vidthumb\\d*\"") && (nd.SelectSingleNode(".//div[@class='ij69rd UHe5G']") != null
                                 || nd.SelectSingleNode(".//div[@class='ij69rd TUOsUe UHe5G']") != null)) || nd.SelectSingleNode(".//div[contains(@class,'U1TUId')]" +
-                                "|.//div[@class='J1mWY']|.//div[contains(@class,'c8rnLc flgn0c')]|.//div[contains(@class,'Ylm8Fc')]" +
+                                "|.//div[@class='J1mWY']|.//div[contains(@class,'c8rnLc flgn0c')]|.//div[@class='Ylm8Fc']" +//10-12-2024
                                 "|.//div[@class='Ttm4Le']|.//div[@class='TdIFfc']") != null)//10-12-2024//02-09-2023//23-08-2023//10-06-2023//07-06-2023//02-05-2023//07-04-2022 //18-10-2021 video block selector
                             {
                                 //24-08-2021 video item urls
@@ -888,7 +888,7 @@ namespace GoogleFirstPage.Classiclinks
                                     n = nd.SelectSingleNode(".//div[@class='yuRUbf']/a|.//div[@class='yuRUbf']/div/div[@class='E74pWd']/a|.//div[@class='yuRUbf']/div/span/a|.//div[@class='IAZbGe']/a|.//div[@class='IAZbGe']/div/a");//07-09-2023//28-07-2023//18-04-2023
                                 if (n == null)//18-04-2023
                                     n = nd.SelectSingleNode(".//div[@class='E74pWd']/a|.//g-link[@class='WYrxZc']/a");//05-12-2023//18-04-2023//18-10-2022 //04-09-2020 included selector for classic links
-                                if (n == null && nd.Attributes["class"]?.Value == "yuRUbf")//17-11-2022
+                                if (n == null && (nd.Attributes["class"]?.Value == "yuRUbf" || nd.Attributes["class"]?.Value == "g PmEWq"))//10-12-2024//17-11-2022
                                     n = nd.SelectSingleNode(".//a");//17-11-2022
                                 if (n != null)
                                     title = n.SelectSingleNode(".//h3"); //04-09-2020 included selector for classic links
@@ -1408,7 +1408,7 @@ namespace GoogleFirstPage.Classiclinks
                         s.Append("<item url=\"" + SetUrl(url) + "\" title=\"" + SetTitle(titles[x++]) + "\" />");//22-02-2022
                 }
             }
-            string pattern1 = @"\\x22\\x3e\\x3ca jsname\\x3d\\x22UWckNb\\x22[ class\\x3d\\x22zReHs\\x22]* href\\x3d\\x22(.*?)\\x22*[ data-jsarwt\\x3d\\x221\\x22]";//26-11-2024//08-09-2023
+            string pattern1 = @"\\x22\\x3e\\x3ca jsname\\x3d\\x22UWckNb\\x22[ class\\x3d\\x22zReHs\\x22]*[ class\\x3d\\x22VfSr4c\\x22]* href\\x3d\\x22(.*?)\\x22*[ data-jsarwt\\x3d\\x221\\x22]";//16-12-2024//26-11-2024//08-09-2023
             re = new Regex(pattern1, RegexOptions.IgnoreCase | RegexOptions.Singleline);
             mc = re.Matches(html);
             foreach (Match m in mc)
@@ -1556,7 +1556,7 @@ namespace GoogleFirstPage.Classiclinks
                 if (nds == null)
                     nds = node.SelectNodes(".//g-inner-card/div/div/div[1]/a[1]");  //02-06-2020
                 if (nds == null)
-                    nds = node.SelectNodes(".//a[@class='h4kbcd']"); //27-05-2020 twitterCard item URLs included selector
+                    nds = node.SelectNodes(".//a[contains(@class,'h4kbcd')]");//16-12-2024 //27-05-2020 twitterCard item URLs included selector
                 if (nds != null)
                     foreach (HtmlNode nd in nds)
                     {
@@ -2220,7 +2220,7 @@ namespace GoogleFirstPage.Classiclinks
             HtmlNode nd1 = null;
             if (nd != null)
                 nd1 = node.SelectSingleNode(".//div[@class='g']");
-            if (nd != null && nd1 == null && node.SelectSingleNode(".//div[@class='fN9oz']|.//div[contains(@class,'tw-res')]") == null)//21-11-2024//10-10-2024//07-10-2024
+            if (nd != null && nd1 == null && node.SelectSingleNode(".//div[@class='fN9oz']|.//div[contains(@class,'tw-res')]|.//div[@class='oj7Mub eVNxY']") == null)//10-12-2024//21-11-2024//10-10-2024//07-10-2024
                 return "videos";
             //end 15-10-2020
             nd = node.SelectSingleNode(".//div[@class='_Zfh']");
@@ -2228,7 +2228,8 @@ namespace GoogleFirstPage.Classiclinks
                 nd = node.SelectSingleNode(".//div[contains(@class,'tw-res')]");//21-11-2024
             if (nd != null)
             {
-                return "Twitters";
+                if (node.SelectSingleNode(".//g-scrolling-carousel[@class='m5t0v QwDjz']") == null)//16-12-2024
+                    return "Twitters";
             }
             if (node.SelectSingleNode(".//div[contains(@class, 'RPdfze')]|.//div[contains(@class, 'nJMOzb')]|.//div[contains(@class, 'Qkn3ie')]|.//div[@class='lMMUFc']") != null)//21-07-2023//07-07-2023
                 return "FindResultsOn";//07-07-2023
@@ -2405,14 +2406,14 @@ namespace GoogleFirstPage.Classiclinks
             nd = node.SelectSingleNode(".//div[contains(@class, 'bba2i')]");//11-06-2024 DataSet Block
             if (nd != null)
                 return "Dataset";//11-06-2024
-            nd = node.SelectSingleNode(".//div[@class='GcKpu']|.//div[@class='M8OgIe']");//13-11-2024//03-09-2024//21-08-2024 AIOverview
+            nd = node.SelectSingleNode(".//div[@class='GcKpu']|.//div[contains(@class,'M8OgIe')]");//13-11-2024//03-09-2024//21-08-2024 AIOverview
             if (nd != null && node.SelectSingleNode(".//div[contains(@class,'Fzsovc')]") != null)//13-11-2024
                 return "aiOverview";//21-08-2024 AIOverview
             nd = node.SelectSingleNode(".//div[@class='oIk2Cb']");//14-10-2024 //11-10-2024  peoplealsosearch
             if (nd != null)
                 return "PeopleAlsoSearch"; // 11-10-2024 PeopleAlsoSearch
             nd = node.SelectSingleNode(".//div[contains(@class,'Ww4FFb vt6azd')and(.//div[(@class='XNfAUb')])]");//11-10-2024 sitesCarousel
-            if (nd != null)
+            if (nd != null && nd.SelectSingleNode(".//div[contains(@class,'Ylm8Fc')]") == null)//10-12-2024
                 return "sitesCarousel";//11-10-2024 
             return "";
         }
@@ -2475,7 +2476,7 @@ namespace GoogleFirstPage.Classiclinks
             {
                 try
                 {
-                    if (node.SelectSingleNode(".//div[@class='Brgz0 tw-res']|.//div[@class='k9uN1c kfn9hb']|.//div[@class='baPFxb g kSMK2']") != null
+                    if (node.SelectSingleNode(".//div[contains(@class,'tw-res')]|.//div[@class='k9uN1c kfn9hb']|.//div[@class='baPFxb g kSMK2']") != null//16-12-2024
                         && node.SelectNodes(".//div[contains(@class,'g Ww4FFb')]") == null) return true;//24-11-2023//26-10-2023//04-01-2023//16-12-2022
                     if (node.SelectSingleNode(".//div[@class='g jNVrwc Y4pkMc']|.//div[@class='g tF2Cxc']|.//div[@class='g eejeod up9jud']" +
                     //"|.//div[@class='g Ww4FFb tF2Cxc']") != null) return false; //21-07-2022//15-02-2022//02-02-2022//31-12-2021 missing CLinks
@@ -2540,7 +2541,7 @@ namespace GoogleFirstPage.Classiclinks
                 if (node.SelectSingleNode(".//div[contains(@class, 'RPdfze')]|.//div[contains(@class, 'nJMOzb')]" +
                     "|.//div[contains(@class, 'Qkn3ie')]|.//div[contains(@class, 'vdQmEd')]|.//div[@class='lMMUFc']" +
                     "|.//div[@class='wH6SXe']|.//div[contains(@class,'WlTAzf')]|.//div[@class='cj1ht QkBAO oYQBg']" +
-                    "|.//div[@class='oIk2Cb']|.//div[@jsmodel='Wn3aEc']") != null && node.SelectSingleNode(".//div[contains(@class,'g')]") == null)//10-12-2024//09-12-2024//04-12-2024//14-10-2024
+                    "|.//div[@class='oIk2Cb']|.//div[@jsmodel='Wn3aEc']") != null && node.SelectSingleNode(".//div[contains(@class,'g ')]") == null)//16-12-2024//10-12-2024//09-12-2024//04-12-2024//14-10-2024
                     return true;//29-06-2023
                 // changes in map block on 19-06-2019.
                 nd = node.SelectSingleNode(".//g-img/img");
