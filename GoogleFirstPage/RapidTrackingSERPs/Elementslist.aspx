@@ -318,6 +318,13 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
+                        <asp:TemplateField HeaderText="people Also Buy From">
+                            <ItemTemplate>
+                                <div style="width: 110px;">
+                                    <%# Eval("peopleAlsoBuyFrom","{0:N0}") %>
+                                </div>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Product listed ads">
                             <ItemTemplate>
                                 <div style="width: 100px;">

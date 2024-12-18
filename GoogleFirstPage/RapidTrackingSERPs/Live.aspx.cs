@@ -138,7 +138,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                             //    dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                             //    dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                             //}
-                                            if (node.Attributes[0].Value.ToString() == "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel")
+                                            if (node.Attributes[0].Value.ToString() == "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoBuyFrom")
                                             {
                                                 dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                                 foreach (XmlNode nodee in node)
@@ -166,7 +166,16 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                                 }
                                                 dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                             }
-                                            if (node.Attributes[0].Value.ToString() == "findResultsOn" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel")
+                                            if (node.Attributes[0].Value.ToString() == "peopleAlsoBuyFrom")
+                                            {
+                                                dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                                foreach (XmlNode nodee in node)
+                                                {
+                                                    dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                                }
+                                                dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
+                                            }
+                                            if (node.Attributes[0].Value.ToString() == "findResultsOn" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoBuyFrom")
                                             {
                                                 dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                                 foreach (XmlNode nodee in node)
@@ -179,7 +188,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                             {
                                                 dt.Rows.Add("", node.Attributes[1].Value);
                                             }
-                                            if (node.Attributes[0].Value.ToString() == "answerCard" && node.Attributes[0].Value.ToString() != "dataset" && node.Attributes[0].Value.ToString() != "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel")
+                                            if (node.Attributes[0].Value.ToString() == "answerCard" && node.Attributes[0].Value.ToString() != "dataset" && node.Attributes[0].Value.ToString() != "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoBuyFrom")
                                             {
                                                 dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                                 foreach (XmlNode nodee in node)
@@ -188,7 +197,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                                 }
                                                 dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                             }
-                                            if (node.Attributes[0].Value.ToString() == "dataset" && node.Attributes[0].Value.ToString() != "findResultsOn" && node.Attributes[0].Value.ToString() != "answerCard" && node.Attributes[0].Value.ToString() != "hotelPack" && node.Attributes[0].Value.ToString() != "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel")
+                                            if (node.Attributes[0].Value.ToString() == "dataset" && node.Attributes[0].Value.ToString() != "findResultsOn" && node.Attributes[0].Value.ToString() != "answerCard" && node.Attributes[0].Value.ToString() != "hotelPack" && node.Attributes[0].Value.ToString() != "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoBuyFrom")
                                             {
                                                 dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                                 foreach (XmlNode nodee in node)
@@ -197,7 +206,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                                 }
                                                 dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                             }
-                                            if (node.Attributes[0].Value.ToString() != "hotelPack" && node.Attributes[0].Value.ToString() != "flightPack" && node.Attributes[0].Value.ToString() != "answerCard" && node.Attributes[0].Value.ToString() != "dataset" && node.Attributes[0].Value.ToString() != "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel")
+                                            if (node.Attributes[0].Value.ToString() != "hotelPack" && node.Attributes[0].Value.ToString() != "flightPack" && node.Attributes[0].Value.ToString() != "answerCard" && node.Attributes[0].Value.ToString() != "dataset" && node.Attributes[0].Value.ToString() != "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoBuyFrom")
                                             {
                                                 if (node.Attributes[0].Value.ToString() != "findResultsOn")
                                                 {
@@ -221,7 +230,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                                     dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                                 }
                                             }
-                                            if (node.Attributes[0].Value.ToString() == "hotelPack" && node.Attributes[0].Value.ToString() != "findResultsOn" && node.Attributes[0].Value.ToString() != "answerCard" && node.Attributes[0].Value.ToString() != "dataset" && node.Attributes[0].Value.ToString() != "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel")
+                                            if (node.Attributes[0].Value.ToString() == "hotelPack" && node.Attributes[0].Value.ToString() != "findResultsOn" && node.Attributes[0].Value.ToString() != "answerCard" && node.Attributes[0].Value.ToString() != "dataset" && node.Attributes[0].Value.ToString() != "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoBuyFrom")
                                             {
                                                 dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                                 foreach (XmlNode nodee in node)
@@ -241,7 +250,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                                 }
                                                 dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                             }
-                                            if (node.Attributes[0].Value.ToString() == "flightPack" && node.Attributes[0].Value.ToString() != "findResultsOn" && node.Attributes[0].Value.ToString() != "answerCard" && node.Attributes[0].Value.ToString() != "dataset" && node.Attributes[0].Value.ToString() != "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel")
+                                            if (node.Attributes[0].Value.ToString() == "flightPack" && node.Attributes[0].Value.ToString() != "findResultsOn" && node.Attributes[0].Value.ToString() != "answerCard" && node.Attributes[0].Value.ToString() != "dataset" && node.Attributes[0].Value.ToString() != "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoBuyFrom")
                                             {
                                                 dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                                 if (node.Attributes.Count == 3)
@@ -331,7 +340,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                             //    dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                             //    dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                             //}
-                                            if (node.Attributes[0].Value.ToString() == "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel")
+                                            if (node.Attributes[0].Value.ToString() == "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoBuyFrom")
                                             {
                                                 dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                                 foreach (XmlNode nodee in node)
@@ -359,6 +368,15 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                                 }
                                                 dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                             }
+                                            if (node.Attributes[0].Value.ToString() == "peopleAlsoBuyFrom")
+                                            {
+                                                dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
+                                                foreach (XmlNode nodee in node)
+                                                {
+                                                    dt.Rows.Add("", nodee.Attributes[0].Value, nodee.Attributes[1].Value);
+                                                }
+                                                dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
+                                            }
                                             if (node.Attributes[0].Value.ToString() == "findResultsOn")
                                             {
                                                 dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
@@ -372,7 +390,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                             {
                                                 dt.Rows.Add("", node.Attributes[1].Value);
                                             }
-                                            if (node.Attributes[0].Value.ToString() == "answerCard" && node.Attributes[0].Value.ToString() != "dataset" && node.Attributes[0].Value.ToString() != "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel")
+                                            if (node.Attributes[0].Value.ToString() == "answerCard" && node.Attributes[0].Value.ToString() != "dataset" && node.Attributes[0].Value.ToString() != "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoBuyFrom")
                                             {
                                                 dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                                 foreach (XmlNode nodee in node)
@@ -381,7 +399,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                                 }
                                                 dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                             }
-                                            if (node.Attributes[0].Value.ToString() == "dataset" && node.Attributes[0].Value.ToString() != "findResultsOn" && node.Attributes[0].Value.ToString() != "answerCard" && node.Attributes[0].Value.ToString() != "hotelPack" && node.Attributes[0].Value.ToString() != "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel")
+                                            if (node.Attributes[0].Value.ToString() == "dataset" && node.Attributes[0].Value.ToString() != "findResultsOn" && node.Attributes[0].Value.ToString() != "answerCard" && node.Attributes[0].Value.ToString() != "hotelPack" && node.Attributes[0].Value.ToString() != "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoBuyFrom")
                                             {
                                                 dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                                 foreach (XmlNode nodee in node)
@@ -390,7 +408,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                                 }
                                                 dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                             }
-                                            if (node.Attributes[0].Value.ToString() != "hotelPack" && node.Attributes[0].Value.ToString() != "flightPack" && node.Attributes[0].Value.ToString() != "answerCard" && node.Attributes[0].Value.ToString() != "dataset" && node.Attributes[0].Value.ToString() != "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel")
+                                            if (node.Attributes[0].Value.ToString() != "hotelPack" && node.Attributes[0].Value.ToString() != "flightPack" && node.Attributes[0].Value.ToString() != "answerCard" && node.Attributes[0].Value.ToString() != "dataset" && node.Attributes[0].Value.ToString() != "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoBuyFrom")
                                             {
                                                 if (node.Attributes[0].Value.ToString() != "findResultsOn")
                                                 {
@@ -433,7 +451,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                                                 }
                                                 dt.Rows.Add("</" + node.Attributes[0].Value.ToString() + ">", "", "");
                                             }
-                                            if (node.Attributes[0].Value.ToString() == "flightPack" && node.Attributes[0].Value.ToString() != "findResultsOn" && node.Attributes[0].Value.ToString() != "answerCard" && node.Attributes[0].Value.ToString() != "dataset" && node.Attributes[0].Value.ToString() != "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel")
+                                            if (node.Attributes[0].Value.ToString() == "flightPack" && node.Attributes[0].Value.ToString() != "findResultsOn" && node.Attributes[0].Value.ToString() != "answerCard" && node.Attributes[0].Value.ToString() != "dataset" && node.Attributes[0].Value.ToString() != "aiOverview" && node.Attributes[0].Value.ToString() != "classickLinkCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoSearch" && node.Attributes[0].Value.ToString() != "classicLinkSiteLinks" && node.Attributes[0].Value.ToString() != "sitesCarousel" && node.Attributes[0].Value.ToString() != "peopleAlsoBuyFrom")
                                             {
                                                 dt.Rows.Add("<" + node.Attributes[0].Value.ToString() + ">");
                                                 if (node.Attributes.Count == 3)
