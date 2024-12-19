@@ -303,14 +303,14 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="people Also Search (Item Urls)">
+                        <asp:TemplateField HeaderText="People Also Search (Item Urls)">
                             <ItemTemplate>
                                 <div style="width: 75px;">
                                     <%# Eval("peopleAlsoSearch","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="people Also Buy From (Item Urls)">
+                        <asp:TemplateField HeaderText="People Also Buy From (Item Urls)">
                             <ItemTemplate>
                                 <div style="width: 75px;">
                                     <%# Eval("peopleAlsoBuyFrom","{0:N0}") %>

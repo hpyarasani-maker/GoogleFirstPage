@@ -124,12 +124,11 @@
                 }
     </style>
     <style>
-     .GvGrid:hover
-        {
+        .GvGrid:hover {
             background-color: #FFEB9C;
-            color:#9C6500;
+            color: #9C6500;
         }
- </style>
+    </style>
 </head>
 <body style="background-color: white">
 
@@ -141,10 +140,10 @@
 
         <div class="header1" style="width: 2980px;">
             <div class="header-menu">
-             <div style="margin-left:-150px;">
+                <div style="margin-left: -150px;">
                     <a href="../Dashboard.aspx" title="Pi-Datametrics DashBoard Home">
-                    <asp:Image ID="Image2" runat="server" ImageUrl="~/images/PILogo_1.jpg" CssClass="imgLogo" Height="51px" Width="54px" /></a>
-               </div>
+                        <asp:Image ID="Image2" runat="server" ImageUrl="~/images/PILogo_1.jpg" CssClass="imgLogo" Height="51px" Width="54px" /></a>
+                </div>
                 <div class="container">
                     <div class="navbar navbar-static-top">
                         <div>
@@ -304,7 +303,14 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
-                         <asp:TemplateField HeaderText="People Also Ask">
+                        <asp:TemplateField HeaderText="People Also Buy From">
+                            <ItemTemplate>
+                                <div style="width: 85px;">
+                                    <%# Eval("peopleAlsoBuyFrom","{0:N0}") %>
+                                </div>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="People Also Ask">
                             <ItemTemplate>
                                 <div style="width: 85px;">
                                     <%# Eval("People also ask","{0:N0}") %>
@@ -315,13 +321,6 @@
                             <ItemTemplate>
                                 <div style="width: 105px;">
                                     <%# Eval("peopleAlsoSearch","{0:N0}") %>
-                                </div>
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                        <asp:TemplateField HeaderText="people Also Buy From">
-                            <ItemTemplate>
-                                <div style="width: 110px;">
-                                    <%# Eval("peopleAlsoBuyFrom","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
