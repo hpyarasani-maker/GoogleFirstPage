@@ -3714,6 +3714,58 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             {
                 seid =1029, domain ="com", geo_location="United States", locale = "en-us", uule = "w+CAIQICINVW5pdGVkIFN0YXRlcw==",device="mobile_android", sename="Google US (AIO, Mobile)"
             },//duplicate Seid's for AI overview testing 1026 to 1029
+            new SearchProperties()//19-12-2024
+            {
+                seid =1030, domain ="com.af", geo_location="Afghanistan", locale= "fa-af", uule = "w+CAIQICILQWZnaGFuaXN0YW4=",device="desktop", sename="Google AF (Dari)"
+            },
+            new SearchProperties()
+            {
+                seid =1031, domain ="com.af", geo_location="Afghanistan", locale= "fa-af", uule = "w+CAIQICILQWZnaGFuaXN0YW4=",device="mobile_android", sename="Google AF (Dari, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =1032, domain ="dz", geo_location="Algeria", locale= "fr-dz", uule = "w+CAIQICIHQWxnZXJpYQ==",device="mobile_android", sename="Google DZ (French, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =1033, domain ="nl", geo_location="Curacao", locale= "en-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="desktop", sename="Google CU (Curacao, English)"
+            },
+            new SearchProperties()
+            {
+                seid =1034, domain ="nl", geo_location="Curacao", locale= "en-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="mobile_android", sename="Google CU (Curacao, English Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =1035, domain ="com.ly", geo_location="Libya", locale= "ar-ly", uule = "w+CAIQICIFTGlieWE=",device="mobile_android", sename="Google LY (Arabic, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =1036, domain ="lu", geo_location="Luxembourg", locale= "de-lu", uule = "w+CAIQICIKTHV4ZW1ib3VyZw==",device="mobile_android", sename="Google LU (German, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =1037, domain ="com.mt", geo_location="Malta", locale = "mt-mt", uule = "w+CAIQICIFbWFsdGE=",device="desktop", sename="Google MT (Maltese)"
+            },
+            new SearchProperties()
+            {
+                seid =1038, domain ="com.mt", geo_location="Malta", locale = "mt-mt", uule = "w+CAIQICIFbWFsdGE=",device="mobile_android", sename="Google MT (Maltese, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =1039, domain ="com.tj", geo_location="Tajikistan", locale = "tg-tj", uule = "w+CAIQICIKVGFqaWtpc3Rhbg==",device="desktop", sename="Google TG (Tajik)"
+            },
+            new SearchProperties()
+            {
+                seid =1040, domain ="com.tj", geo_location="Tajikistan", locale = "tg-tj", uule = "w+CAIQICIKVGFqaWtpc3Rhbg==",device="mobile_android", sename="Google TG (Tajik, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid =1041, domain ="tn", geo_location="Tunisia", locale= "fr-tn", uule = "w+CAIQICIHVHVuaXNpYQ==",device="desktop", sename="Google TN (French)"
+            },
+            new SearchProperties()
+            {
+                seid =1042, domain ="tn", geo_location="Tunisia", locale= "fr-tn", uule = "w+CAIQICIHVHVuaXNpYQ==",device="mobile_android", sename="Google TN (French, Mobile)"
+            },//19-12-2024
          };
     }
     public class SearchProperties
