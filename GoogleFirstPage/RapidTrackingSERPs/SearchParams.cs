@@ -3752,11 +3752,11 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             },
             new SearchProperties()
             {
-                seid =1039, domain ="com.tj", geo_location="Tajikistan", locale = "tg-tj", uule = "w+CAIQICIKVGFqaWtpc3Rhbg==",device="desktop", sename="Google TG (Tajik)"
+                seid =1039, domain ="com.tj", geo_location="Tajikistan", locale = "tg-tj", uule = "w+CAIQICIKVGFqaWtpc3Rhbg==",device="desktop", sename="Google TG (Tajikistan)"
             },
             new SearchProperties()
             {
-                seid =1040, domain ="com.tj", geo_location="Tajikistan", locale = "tg-tj", uule = "w+CAIQICIKVGFqaWtpc3Rhbg==",device="mobile_android", sename="Google TG (Tajik, Mobile)"
+                seid =1040, domain ="com.tj", geo_location="Tajikistan", locale = "tg-tj", uule = "w+CAIQICIKVGFqaWtpc3Rhbg==",device="mobile_android", sename="Google TG (Tajikistan, Mobile)"
             },
             new SearchProperties()
             {
