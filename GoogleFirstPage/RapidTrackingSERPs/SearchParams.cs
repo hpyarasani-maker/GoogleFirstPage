@@ -2692,11 +2692,11 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             },//18-01-2024
             new SearchProperties() //27-01-2024
             {
-            seid =774, domain ="nl", geo_location="Curacao", locale= "nl-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="desktop",sename="Google CU (Curacao)"
+            seid =774, domain ="nl", geo_location="Curacao", locale= "nl-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="desktop",sename="Google NL (Curacao)"
             },
             new SearchProperties()
             {
-            seid =775, domain ="nl", geo_location="Curacao", locale= "nl-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="mobile_android",sename="Google CU (Curacao, Mobile)"
+            seid =775, domain ="nl", geo_location="Curacao", locale= "nl-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="mobile_android",sename="Google NL (Curacao, Mobile)"
             },
             new SearchProperties()
             {
@@ -3728,11 +3728,11 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             },
             new SearchProperties()
             {
-                seid =1033, domain ="nl", geo_location="Curacao", locale= "en-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="desktop", sename="Google CU (Curacao, English)"
+                seid =1033, domain ="nl", geo_location="Curacao", locale= "en-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="desktop", sename="Google NL (Curacao, English)"
             },
             new SearchProperties()
             {
-                seid =1034, domain ="nl", geo_location="Curacao", locale= "en-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="mobile_android", sename="Google CU (Curacao, English Mobile)"
+                seid =1034, domain ="nl", geo_location="Curacao", locale= "en-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="mobile_android", sename="Google NL (Curacao, English Mobile)"
             },
             new SearchProperties()
             {
