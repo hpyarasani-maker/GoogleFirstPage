@@ -824,7 +824,7 @@ namespace GoogleFirstPage.Classiclinks
                             s.Append(GetClassicLinkCarousel(nd));
                             continue;
                         }
-                        if (nd.SelectSingleNode(".//div[contains(@class,'HiHjCd')]|.//div[@class='Mwdfte']") != null)//15-10-2024
+                        if (nd.SelectSingleNode(".//div[contains(@class,'HiHjCd')]|.//div[@class='Mwdfte']|.//div[@jsname='BPrWId']|.//div[contains(@class,'JpOecb')]") != null)//20-01-2025//15-10-2024
                         {
                             s.Append(GetClassicLinkSiteLinks(nd));
                             continue;
@@ -1157,7 +1157,7 @@ namespace GoogleFirstPage.Classiclinks
             if (n != null)
             {
                 HtmlNode t = n.SelectSingleNode(".//h3");
-                HtmlNodeCollection nds = node.SelectNodes(".//div[contains(@class,'HiHjCd')]/a|.//div[@class='Mwdfte']/a");//21-10-2024
+                HtmlNodeCollection nds = node.SelectNodes(".//div[contains(@class,'HiHjCd')]/a|.//div[@class='Mwdfte']/a|.//div[@jsname='BPrWId']/a|.//div[contains(@class,'JpOecb')]/a");//20-01-2025//21-10-2024
                 if (nds != null)
                 {
                     s.Append("<block type=\"classicLinkSiteLinks\" url=\"" + SetUrl(n.Attributes["href"].Value) + "\" title=\"" + SetTitle(t.InnerText) + "\" >");
@@ -1367,7 +1367,7 @@ namespace GoogleFirstPage.Classiclinks
                 }
             }
 
-            HtmlNodeCollection nds = node.SelectNodes(".//table[@class='nrgt']/tr|.//table[@class='jmjoTe']/tr"); //22-08-2020 include selector for sitelinks
+            HtmlNodeCollection nds = node.SelectNodes(".//table[@class='nrgt']/tr|.//table[@class='jmjoTe']/tr|.//table[@class='jmjoTe']/tbody/tr");//20-01-2025 //22-08-2020 include selector for sitelinks
             if (nds != null)
             {
                 s.Append("<block type=\"siteLinks\" url=\"\">");
@@ -1945,7 +1945,7 @@ namespace GoogleFirstPage.Classiclinks
                         {
                             priceValue = Convertprice(price);
                         }
-                        s.Append("<item airline =\"" + SetTitle(airline) + "\" duration=\"" + SetTitle(hours) + "\" durationValue=\"" + hoursValue + "\" connections=\"" + SetTitle(connecting) + "\" price=\"" + price + "\" priceValue=\"" + priceValue + "\" />");//26-08-2024
+                        s.Append("<item airline =\"" + SetTitle(airline) + "\" duration=\"" + SetTitle(hours) + "\" durationValue=\"" + hoursValue + "\" connections=\"" + SetTitle(connecting) + "\" price=\"" + SetTitle(price) + "\" priceValue=\"" + priceValue + "\" />");//26-08-2024
                     }
                     catch { }
                 }
@@ -1974,7 +1974,7 @@ namespace GoogleFirstPage.Classiclinks
                             {
                                 priceValue = Convertprice(price);
                             }
-                            s.Append("<item airline=\"" + SetTitle(airline) + "\" duration=\"" + SetTitle(hours) + "\" durationValue=\"" + hoursValue + "\" connections=\"" + SetTitle(connecting) + "\" price=\"" + price + "\" priceValue=\"" + priceValue + "\" />");
+                            s.Append("<item airline=\"" + SetTitle(airline) + "\" duration=\"" + SetTitle(hours) + "\" durationValue=\"" + hoursValue + "\" connections=\"" + SetTitle(connecting) + "\" price=\"" + SetTitle(price) + "\" priceValue=\"" + priceValue + "\" />");
                         }
                         catch { }
                     }
@@ -2249,9 +2249,9 @@ namespace GoogleFirstPage.Classiclinks
             HtmlNode nd1 = null;
             if (nd != null)
                 nd1 = node.SelectSingleNode(".//div[@class='g']");
-            if (nd != null && nd1 == null && node.SelectSingleNode(".//div[@class='fN9oz']|.//div[contains(@class,'tw-res')]" +
+            if (nd != null && nd1 == null && node.SelectSingleNode(".//div[@class='X4T0U']") != null && node.SelectSingleNode(".//div[@class='fN9oz']|.//div[contains(@class,'tw-res')]" +//08-01-2025
                 "|.//div[@class='oj7Mub eVNxY']|.//div[contains(@class,'Kcn6oc')]|.//div[@class='CW4Rtc cTjBsf']|.//div[@class='Lv2Cle']" +
-                "|.//div[@class='Wt5Tfe']|.//div[@class='o8ebK']|.//div[@class='baPFxb g kSMK2']|.//div[@class='EDblX HG5ZQb']") == null)//07-01-2025//31-12-2024//19-12-2024//18-12-2024 videos
+                "|.//div[@class='Wt5Tfe']|.//div[@class='o8ebK']|.//div[@class='baPFxb g kSMK2']") == null)//08-01-2025//07-01-2025//31-12-2024//19-12-2024//18-12-2024 videos
                 return "videos";
             //end 15-10-2020
             nd = node.SelectSingleNode(".//div[@class='_Zfh']");
