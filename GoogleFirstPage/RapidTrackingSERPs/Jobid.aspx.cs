@@ -659,7 +659,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 }
                 else
                 {
-                    lblalllinks.Text = jobid + " :   Provided jobid has expired";
+                    lblalllinks.Text = jobid + " :   Provided jobid has expired or Status is faulted";
                 }
             }
             catch (Exception ex)
@@ -672,7 +672,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 }
                 else if (string.IsNullOrEmpty("") || ex.Message.Contains("Error reading JObject from JsonReader. Path '', line 0, position 0."))
                 {
-                    lblalllinks.Text = "Provided jobid has expired or invalid : " + txtjobid.Text;
+                    lblalllinks.Text = "Provided jobid has expired or Status is faulted : " + txtjobid.Text;
                     lblalllinks.Visible = true;
                 }
                 gridviewjobid.DataSource = null;
