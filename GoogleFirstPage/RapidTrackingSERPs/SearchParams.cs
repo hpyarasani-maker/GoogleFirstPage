@@ -580,12 +580,12 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             },
             new SearchProperties()
             {
-                seid =240, domain ="com.co", geo_location="Columbia", locale= "es-419-co", uule = "w+CAIQICIIQ29sb21iaWE=",device="desktop", sename="Google CO"
+                seid =240, domain ="com.co", geo_location="Colombia", locale= "es-419-co", uule = "w+CAIQICIIQ29sb21iaWE=",device="desktop", sename="Google CO"
 
             },
             new SearchProperties()
             {
-                seid =241, domain ="com.co", geo_location="Columbia", locale= "es-419-co", uule = "w+CAIQICIIQ29sb21iaWE=",device="mobile_android", sename="Google CO (Mobile)"
+                seid =241, domain ="com.co", geo_location="Colombia", locale= "es-419-co", uule = "w+CAIQICIIQ29sb21iaWE=",device="mobile_android", sename="Google CO (Mobile)"
 
             },
             new SearchProperties()
