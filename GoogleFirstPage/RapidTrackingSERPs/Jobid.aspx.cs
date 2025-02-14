@@ -659,7 +659,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 }
                 else
                 {
-                    lblalllinks.Text = jobid + " :   Provided jobid has expired or Status is faulted";
+                    lblalllinks.Text = "Oxylabs Jobid  is " + status + " : " + jobid;
                 }
             }
             catch (Exception ex)
