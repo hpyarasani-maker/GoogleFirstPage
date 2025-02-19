@@ -1114,7 +1114,7 @@ namespace GoogleFirstPage.Classiclinks
                             }
                             if (n != null)
                             {
-                                string u = n.Attributes["href"].Value;
+                                string u = SetUrl(n.Attributes["href"].Value);//23-01-2025
                                 HtmlNode d = n.SelectSingleNode(".//div[@role='heading']");
                                 string t = "";
                                 if (d != null)
@@ -1712,7 +1712,7 @@ namespace GoogleFirstPage.Classiclinks
         private string GetsitesCarousel(HtmlNode node)//11-10-2024 sitesCarousel //16-10-2024
         {
             StringBuilder s = new StringBuilder();
-            HtmlNodeCollection nds = node.SelectNodes(".//div[@class='IF221e EXH1Ce']");
+            HtmlNodeCollection nds = node.SelectNodes(".//div[@class='IF221e EXH1Ce']|.//div[@class='ZsAbe EXH1Ce']");//18-02-2025
             if (nds != null)
             {
                 s.Append("<block type=\"sitesCarousel\">");
@@ -1720,7 +1720,7 @@ namespace GoogleFirstPage.Classiclinks
                 {
                     string url = nd.SelectSingleNode(".//a")?.Attributes["href"]?.Value ?? "";//22-10-2024
                     string t1 = nd.SelectSingleNode(".//div[contains(@class,'LJEGod')]")?.InnerText ?? "";
-                    string s1 = nd.SelectSingleNode(".//div[@class='cyspcb DH9lqb']|.//div[@class='LbKnXb YAG2qc UYJxh']")?.InnerText ?? "";
+                    string s1 = (nd.SelectSingleNode(".//div[@class='LbKnXb J0EDnf iKOnjb']/div[2]") ?? nd.SelectSingleNode(".//div[@class='LbKnXb YAG2qc UYJxh']") ?? nd.SelectSingleNode(".//div[@class='cyspcb DH9lqb']"))?.InnerText ?? "";//18-02-2025
                     if (string.IsNullOrEmpty(SetUrl(url)) && string.IsNullOrEmpty(t1) && string.IsNullOrEmpty(s1))//22-10-2024
                         continue;
                     s.Append("<item url=\"" + SetUrl(url) + "\" title=\"" + SetTitle(t1) + "\" source=\"" + SetTitle(s1) + "\" />");//22-10-2024
@@ -2670,6 +2670,8 @@ namespace GoogleFirstPage.Classiclinks
                 nds = node.SelectNodes(".//g-inner-card/div/div/a");    // 13-12-2019
             if (nds == null)
                 nds = node.SelectNodes(".//lazy-load-item/div/a");
+            if (nds == null)//24-01-2025
+                nds = node.SelectNodes(".//div[@class='ZFio5c']/a");//24-01-2025
             if (nds != null)
                 foreach (HtmlNode nd in nds)
                 {
@@ -2742,7 +2744,7 @@ namespace GoogleFirstPage.Classiclinks
                     "|.//div[@class='KJDcUb']|.//a[@class='ygih0']|.//div[@class='NBoMDb']/a" +
                     "|.//a[@class='dyWXTb']|.//div[@class='MCDgie']/a[@class='BG7Pyb']" +
                     "|.//div[@class='GFu7kc']/a|.//div[@class='iyrWae']/a|.//a[@class='tAAiTd']" +
-                    "|.//div[@class='fLyK8']/a|.//div[@class='IflIfe']|.//a[@class='QYTJMb']");//01-10-2024//12-08-2024//22-07-2024//26-02-2024//21-11-2023//24-08-2023 //17-05-2022 //07-04-2022 videos item urls
+                    "|.//div[@class='fLyK8']/a|.//div[@class='IflIfe']|.//a[@class='QYTJMb']");//12-02-2025//01-10-2024//12-08-2024//22-07-2024//26-02-2024//21-11-2023//24-08-2023 //17-05-2022 //07-04-2022 videos item urls
 
             if (nds != null)   // 16-09-2019
                 foreach (HtmlNode nd in nds)
@@ -2797,7 +2799,7 @@ namespace GoogleFirstPage.Classiclinks
                         //end 26-06-2020
                         if (url.Contains("/search?") || url.StartsWith("#")) url = "";//11-04-2022
                         string creator = nd.SelectSingleNode(".//div[contains(@class,'YDQ8Te Fy8FNd OSrXXb')]/span[3]|.//div[@class='pDdfmc YqCW4e OSrXXb']/span[3]" +//19-11-2024
-                            "|.//span[@class='GbZYR OSrXXb']|.//div[contains(@class,'R8BTeb q8U8x')]|.//div[@class='SPa6uf Hqu6dd OSrXXb CUQOj']/span[3]")?.InnerText.Trim() ?? "";//01-10-2024//12-08-2024//22-07-2024//04-12-2023
+                            "|.//span[@class='GbZYR OSrXXb']|.//div[contains(@class,'R8BTeb q8U8x')]|.//div[@class='SPa6uf Hqu6dd OSrXXb CUQOj']/span[3]")?.InnerText.Trim() ?? "";//12-02-2025//01-10-2024//12-08-2024//22-07-2024//04-12-2023
                         if (!string.IsNullOrEmpty(url.Trim()) || !string.IsNullOrEmpty(title.Trim())) //11-04-2022
                                                                                                       //s.Append("<item url=\"" + SetUrl(url) + "\" title=\"" + SetTitle(title) + "\" />");
                             s.Append("<item url=\"" + SetUrl(url) + "\" title=\"" + SetTitle(title) + "\" creatorName=\"" + SetTitle(creator) + "\" />");//04-12-2023
@@ -2934,7 +2936,7 @@ namespace GoogleFirstPage.Classiclinks
                 }//09-08-2023
                 catch
                 {
-                    dest = node.SelectSingleNode(".//div[@class='wHYlTd C5w57c']|.//span[@class='mgAbYb OSrXXb RES9jf IFnjPb']");//04-11-2024 //23-04-2024
+                    dest = node.SelectSingleNode(".//div[@class='wHYlTd C5w57c']|.//span[contains(@class,'mgAbYb RES9jf IFnjPb')]");//25-01-2025//04-11-2024 //23-04-2024
                     int lenIndex = dest.GetDirectInnerText().IndexOf(" da ") >= 0 ? dest.GetDirectInnerText().IndexOf(" da ") + 4 : -1;//23-04-2024
                     origin = lenIndex >= 0 ? dest?.GetDirectInnerText()?.Substring(lenIndex).Trim() : "";//25-05-2024
                     lenIndex = origin.IndexOf("&nbsp;&middot;");//25-05-2025
@@ -4273,7 +4275,16 @@ namespace GoogleFirstPage.Classiclinks
                 if (url.Contains("&gclid="))
                     url = url.Remove(url.IndexOf("&gclid="));
                 //end 23-09-2020
-
+                if (url.Contains("%3Fsrsltid="))//27-01-2025
+                    url = url.Remove(url.IndexOf("%3Fsrsltid"));
+                if (url.Contains("?srsltid="))
+                    url = url.Remove(url.IndexOf("?srsltid="));
+                if (url.Contains("&srsltid="))
+                    url = url.Remove(url.IndexOf("&srsltid="));//27-01-2025
+                if (url.Contains("&amp;sa="))//27-01-2025
+                    url = url.Remove(url.IndexOf("&amp;sa="));
+                if (url.Contains("&sa="))
+                    url = url.Remove(url.IndexOf("&sa="));//27-01-2025
                 if (url.Contains("\0"))
                     url = url.Replace("\0", "%00");
 
