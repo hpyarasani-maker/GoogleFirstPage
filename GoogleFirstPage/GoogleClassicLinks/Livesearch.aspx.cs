@@ -90,7 +90,7 @@ namespace GoogleFirstPage.GoogleClassicLinks
             //            doc = new HtmlAgilityPack.HtmlDocument();
             //            doc.LoadHtml(html);
             //            string res = string.Empty;
-            //            if (device == "desktop")
+            //            if (device == "desktop_chrome")
             //            {
             //                dict = DesktopPattern(html, keyword);
             //            }
@@ -147,7 +147,7 @@ namespace GoogleFirstPage.GoogleClassicLinks
                         int count = 0;
                         try
                         {
-                            if (device == "desktop")
+                            if (device == "desktop_chrome")
                             {
                                 Desktop clsDesktop = new Desktop();
                                 res = clsDesktop.ProcessDocument(seid, keyword, doc, out count);
@@ -307,8 +307,20 @@ namespace GoogleFirstPage.GoogleClassicLinks
             Uri queryUri = new Uri("http://data.oxylabs.io/v1/queries/batch");
             //string username = "gpidatametrics";
             //string password = "sdV5X3fcX6";
-            string username = "piapp";
-            string password = "b5FCvgkjxx";
+            //string username = "piapp";
+            //string password = "b5FCvgkjxx";
+            string username = string.Empty;//04-02-2025
+            string password = string.Empty;
+            if (sp.device == "mobile_android")
+            {
+                username = "piapp";
+                password = "b5FCvgkjxx";
+            }
+            else if (sp.device == "desktop_chrome")
+            {
+                username = "piapp-aio";
+                password = "4gvfnA+aBYpBNs37";
+            }//04-03-2025
             string authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(username + ":" + password));
             string[] keyword = { sp.query };
 

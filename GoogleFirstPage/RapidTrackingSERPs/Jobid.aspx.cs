@@ -58,7 +58,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 DataSet ds = new DataSet();
                 var doc = new HtmlAgilityPack.HtmlDocument();
 
-                if (device == "desktop")
+                if (device == "desktop_chrome")
                 {
                     XmlDocument doc1 = new XmlDocument();
                     doc1.LoadXml(res);
@@ -628,7 +628,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                     string s1 = gp.locale.Remove(0, 3);
                     string html = oxyresponse.GetJobidsource1(jobid, seid, device, out string uule);
                     GetJobid(jobid);
-                    if (device == "desktop")
+                    if (device == "desktop_chrome")
                         //url = "https://www.google." + sp.domain + "/search?q=" + keyword + "&gl=" + s1 + "&hl=" + lan1 + "&uule=" + sp.uule + "&num=100&aomd=1&safe=off&safe_search=0&gs_l=desktop&gws_rd=ssl,cr";                        
                         //url = "https://www.google." + gp.domain + "/search?q=" + keyword.Replace("'", "%27") + "&gl=" + s1 + "&hl=" + lan1 + "&uule=" + uule + "&num=100&aomd=1&safe=off&safe_search=0&gs_l=desktop&gws_rd=ssl,cr";
                         url = "https://www.google." + gp.domain + "/search?q=" + keyword.Replace("'", "%27").Replace("&", "%26") + "&gl=" + s1 + "&hl=" + lan1 + "&uule=" + uule + "&num=100&aomd=1&safe=off&safe_search=0";
@@ -640,7 +640,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
 
                     var doc = new HtmlAgilityPack.HtmlDocument();
                     doc.LoadHtml(html);
-                    if (device == "desktop")
+                    if (device == "desktop_chrome")
                     {
                         Desktop clsdesktop = new Desktop();
                         string res = clsdesktop.ProcessDocument(seid, keyword, doc, out count);
