@@ -658,8 +658,21 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                         DisplayDatainPage(seid, keyword, res, jobid, device);
                     }
                 }
+                //else
+                //{
+                //    lblalllinks.Text = "Oxylabs Jobid  is " + status + " : " + jobid;
+                //}
+                else if (status == "faulted")
+                {
+                    lblalllinks.Visible = true;
+                    lblalllinks.Text = "Oxylabs Jobid  is " + status + " : " + jobid;
+
+                    gridviewjobid.DataSource = null;
+                    gridviewjobid.DataBind();
+                }
                 else
                 {
+                    //lblalllinks.Visible = true;
                     lblalllinks.Text = "Oxylabs Jobid  is " + status + " : " + jobid;
                 }
             }
@@ -755,13 +768,22 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                         DisplayDatainPage(seid, keyword, res, jobid, device);
                     }
                 }
+                //else
+                //{
+                //    lblalllinks.Text = "Oxylabs Jobid  is " + status + " : " + jobid;
+                //}
+                else if(status == "faulted")
+                {
+                    lblalllinks.Visible = true;
+                    lblalllinks.Text = "Oxylabs Jobid  is " + status + " : " + jobid;
+
+                    gridviewjobid.DataSource = null;
+                    gridviewjobid.DataBind();
+                }
                 else
                 {
                     lblalllinks.Text = "Oxylabs Jobid  is " + status + " : " + jobid;
                 }
-            }
-            finally
-            {
                 try
                 {
 
@@ -783,6 +805,7 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                     gridviewjobid.DataBind();
                 }
             }
+            
 
         }
     }
