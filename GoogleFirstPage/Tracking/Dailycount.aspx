@@ -184,7 +184,7 @@
                 <div class="wrapper12">
                     <div id="one">
                         <label style="color: darkgreen; font-family: Cambria; font-size: x-large">Sending Count =</label><asp:Label runat="server" ID="lblsendcnt" Font-Names="Cambria" ForeColor="#0080ff" Font-Size="Large" Font-Bold="true" Text=" Google + Baidu  + Bing + Haosou  + Naver + Sogou + Yahoo + Yandex."></asp:Label><br />
-                        <label style="color: darkgreen; font-family: Cambria; font-size: x-large">Total Sending Count =</label><asp:Label runat="server" ID="lbltotalsecnt" Font-Names="Cambria" ForeColor="#0080ff" Font-Size="Large" Font-Bold="true" Text=" Sending + Re-Tracked Keywords."></asp:Label><br />
+                        <label style="color: darkgreen; font-family: Cambria; font-size: x-large">Total Sending Count =</label><asp:Label runat="server" ID="lbltotalsecnt" Font-Names="Cambria" ForeColor="#0080ff" Font-Size="Large" Font-Bold="true" Text=" Sending + Re-Tracked Keywords + ScriptMetaData."></asp:Label><br />
                         <asp:Label runat="server" ID="lbllessthan20view" Font-Names="Cambria" ForeColor="#0080ff" Font-Size="Large" Font-Bold="true" Text=""></asp:Label><br />
                         <br />
                         <br />
