@@ -759,10 +759,29 @@ namespace GoogleFirstPage.RapidTrackingSERPs
                 {
                     lblalllinks.Text = "Oxylabs Jobid  is " + status + " : " + jobid;
                 }
+            }
+            finally
+            {
+                try
+                {
 
-
-
-                
+                }
+                catch (Exception ex)
+                {
+                    oxydiv1.Visible = false;
+                    if (ex.Message.Contains("Root element is missing.") || ex.Message.Contains("No block found.") || ex.Message.Contains("Object reference not set to an instance of an object."))
+                    {
+                        lblalllinks1.Text = "No source found for provided jobid : " + txtjobid.Text;
+                        lblalllinks1.Visible = true;
+                    }
+                    else if (string.IsNullOrEmpty("") || ex.Message.Contains("Error reading JObject from JsonReader. Path '', line 0, position 0."))
+                    {
+                        lblalllinks.Text = "Provided jobid has expired or Status is faulted : " + txtjobid.Text;
+                        lblalllinks.Visible = true;
+                    }
+                    gridviewjobid.DataSource = null;
+                    gridviewjobid.DataBind();
+                }
             }
 
         }

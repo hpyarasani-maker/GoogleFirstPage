@@ -32,7 +32,7 @@ namespace GoogleFirstPage.OxylabsRequestCount
             {
                 using (SqlConnection con = new SqlConnection(connection))
                 {
-                    cmd = new SqlCommand("[UI_GetOxylabsRequestCount]", con);
+                    cmd = new SqlCommand("[UI_GetOxylabsRequestCount]", con); 
                     cmd.CommandType = CommandType.StoredProcedure;
                     da = new SqlDataAdapter(cmd);
                     ds = new DataSet();

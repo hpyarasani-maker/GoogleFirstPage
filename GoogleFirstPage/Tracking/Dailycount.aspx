@@ -368,6 +368,13 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
+                        <asp:TemplateField HeaderText="ScriptMetaData">
+                            <ItemTemplate>
+                                <div style="width: 85px;">
+                                    <%# Eval("scriptMetaData","{0:N0}") %>
+                                </div>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="Re-Tracked keywords">
                             <ItemTemplate>
                                 <div style="width: 62px;">
