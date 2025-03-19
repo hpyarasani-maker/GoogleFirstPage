@@ -363,8 +363,15 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Trending">
                             <ItemTemplate>
-                                <div style="width: 50px;">
+                                <div style="width: 60px;">
                                     <%# Eval("Trending","{0:N0}") %>
+                                </div>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="ScriptMetaData">
+                            <ItemTemplate>
+                                <div style="width: 90px;">
+                                    <%# Eval("scriptMetaData","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
@@ -382,17 +389,9 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="ScriptMetaData">
-                            <ItemTemplate>
-                                <div style="width: 85px;">
-                                    <%# Eval("scriptMetaData","{0:N0}") %>
-                                </div>
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                        
                         <asp:TemplateField HeaderText="Re-Tracked">
                             <ItemTemplate>
-                                <div style="width: 90px;">
+                                <div style="width: 80px;">
                                     <%# Eval("Re-TrackedKeywords","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
@@ -420,7 +419,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Message">
                             <ItemTemplate>
-                                <div style="width: 190px;">
+                                <div style="width: 120px;">
                                     <%# Eval("Message") %>
                                 </div>
                             </ItemTemplate>
