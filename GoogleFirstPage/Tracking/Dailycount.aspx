@@ -368,6 +368,20 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
+                        <asp:TemplateField HeaderText="AIO Full Block">
+                            <ItemTemplate>
+                                <div style="width: 75px;">
+                                    <%# Eval("AIO Full","{0:N0}") %>
+                                </div>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField HeaderText="AIO Empty Block">
+                            <ItemTemplate>
+                                <div style="width: 90px;">
+                                    <%# Eval("AIO Empty","{0:N0}") %>
+                                </div>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                         <asp:TemplateField HeaderText="ScriptMetaData">
                             <ItemTemplate>
                                 <div style="width: 85px;">
@@ -375,9 +389,10 @@
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
-                        <asp:TemplateField HeaderText="Re-Tracked keywords">
+                        
+                        <asp:TemplateField HeaderText="Re-Tracked">
                             <ItemTemplate>
-                                <div style="width: 62px;">
+                                <div style="width: 90px;">
                                     <%# Eval("Re-TrackedKeywords","{0:N0}") %>
                                 </div>
                             </ItemTemplate>

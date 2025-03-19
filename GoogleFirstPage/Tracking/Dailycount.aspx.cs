@@ -140,7 +140,7 @@ namespace GoogleFirstPage.OxylabsRequestCount
         {
             using (SqlConnection con = new SqlConnection(connection))
             {
-                using (SqlCommand cmd = new SqlCommand("select [Date],[Pi_DailyCount],[Google],[Bing],[Yahoo],[Yandex],[Sogou],[PriceSearcher],[Baidu],[Haosou],[Naver],[Sending],[Receiving],[Trending],[Re-TrackedKeywords],[Error_Keywords],[Lessthen20],[TotalSending],[Message] from [TrackingCountTable] order by date desc"))
+                using (SqlCommand cmd = new SqlCommand("select [Date],[Pi_DailyCount],[Google],[Bing],[Yahoo],[Yandex],[Sogou],[PriceSearcher],[Baidu],[Haosou],[Naver],[scriptMetaData],[Sending],[Receiving],[Trending],[Re-TrackedKeywords],[Error_Keywords],[Lessthen20],[TotalSending],[Message] from [TrackingCountTable] order by date desc"))
                 {
                     using (SqlDataAdapter sda = new SqlDataAdapter())
                     {
