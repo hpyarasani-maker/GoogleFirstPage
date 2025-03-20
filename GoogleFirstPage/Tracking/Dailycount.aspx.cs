@@ -108,10 +108,17 @@ namespace GoogleFirstPage.OxylabsRequestCount
                 e.Row.Cells[i].ToolTip = e.Row.Cells[i].Text;
             }
 
+
             try
             {
                 if (e.Row.RowType == DataControlRowType.DataRow)
                 {
+                    //gvrequestcount.DataKeys[e.Row.RowIndex].Value.ToString();
+                    //GridView gvscript = e.Row.FindControl("gvscript") as GridView;
+                    //gvscript.DataSource = GetScriptMetaData();
+                    //gvscript.DataBind();
+
+
                     //Date = gvrequestcount.DataKeys[e.Row.RowIndex].Value.ToString();
 
                     //int count = Convert.ToInt32(((HyperLink)e.Row.FindControl("lbllessthan20")).Text);
@@ -135,12 +142,28 @@ namespace GoogleFirstPage.OxylabsRequestCount
 
         }
 
+        public DataTable GetScriptMetaData()
+        {
+            using (SqlConnection sqlcon = new SqlConnection(connection))
+            {
+                using (SqlCommand cmd = new SqlCommand("[UI_GetScriptMeta]", sqlcon))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
 
+                    using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
+        }
         public void ExportCSV()
         {
             using (SqlConnection con = new SqlConnection(connection))
             {
-                using (SqlCommand cmd = new SqlCommand("select [Date],[Pi_DailyCount],[Google],[Bing],[Yahoo],[Yandex],[Sogou],[PriceSearcher],[Baidu],[Haosou],[Naver],[scriptMetaData],[AIO Full],[AIO Empty],[Sending],[Receiving],[Trending],[Re-TrackedKeywords],[Error_Keywords],[Lessthen20],[TotalSending],[Message] from [TrackingCountTable] order by date desc"))
+                using (SqlCommand cmd = new SqlCommand("select [Date],[Pi_DailyCount],[Google],[Bing],[Yahoo],[Yandex],[Sogou],[PriceSearcher],[Baidu],[Haosou],[Naver],[scriptMetaData],[AIO_Full],[AIO_Empty],[Sending],[Receiving],[Trending],[Re-TrackedKeywords],[Error_Keywords],[Lessthen20],[TotalSending],[Message] from [TrackingCountTable] order by date desc"))
                 {
                     using (SqlDataAdapter sda = new SqlDataAdapter())
                     {
