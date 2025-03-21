@@ -3766,6 +3766,14 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             {
                 seid =1042, domain ="tn", geo_location="Tunisia", locale= "fr-tn", uule = "w+CAIQICIHVHVuaXNpYQ==",device="mobile_android", sename="Google TN (French, Mobile)"
             },//19-12-2024
+            new SearchProperties()//21-03-2025
+            {
+                seid = 1043, domain ="com", geo_location="San Antonio, Texas,United States", locale= "en-us", uule = "w+CAIQICIgU2FuIEFudG9uaW8sIFRleGFzLFVuaXRlZCBTdGF0ZXM=",device="desktop_chrome",sename="Google US (San Antonio)"
+            },
+            new SearchProperties()
+            {
+                seid = 1044, domain ="com", geo_location="San Antonio, Texas,United States", locale= "en-us", uule = "w+CAIQICIgU2FuIEFudG9uaW8sIFRleGFzLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (San Antonio, Mobile)"
+            },//21-03-2025
          };
     }
     public class SearchProperties
