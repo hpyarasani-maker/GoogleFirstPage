@@ -3768,11 +3768,11 @@ namespace GoogleFirstPage.RapidTrackingSERPs
             },//19-12-2024
             new SearchProperties()//21-03-2025
             {
-                seid = 1043, domain ="com", geo_location="San Antonio, Texas,United States", locale= "en-us", uule = "w+CAIQICIgU2FuIEFudG9uaW8sIFRleGFzLFVuaXRlZCBTdGF0ZXM=",device="desktop_chrome",sename="Google US (San Antonio)"
+                seid = 1043, domain ="com", geo_location="San Antonio,Texas,United States", locale= "en-us", uule = "w+CAIQICIfU2FuIEFudG9uaW8sVGV4YXMsVW5pdGVkIFN0YXRlcw==",device="desktop_chrome",sename="Google US (San Antonio,Texas)"
             },
             new SearchProperties()
             {
-                seid = 1044, domain ="com", geo_location="San Antonio, Texas,United States", locale= "en-us", uule = "w+CAIQICIgU2FuIEFudG9uaW8sIFRleGFzLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (San Antonio, Mobile)"
+                seid = 1044, domain ="com", geo_location="San Antonio,Texas,United States", locale= "en-us", uule = "w+CAIQICIfU2FuIEFudG9uaW8sVGV4YXMsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (San Antonio,Texas, Mobile)"
             },//21-03-2025
          };
     }
