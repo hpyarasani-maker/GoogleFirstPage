@@ -11,3770 +11,3609 @@ namespace GoogleFirstPage.RapidTrackingSERPs
         {
             new SearchProperties()
             {
-                seid =1, domain ="com", geo_location="United States", locale="en-us", uule="w+CAIQICINVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US"
+                seid=1, domain="com", geo_location="United States", locale="en-us", uule="w+CAIQICINVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US"
             },
             new SearchProperties()
             {
-                seid =13, domain ="co.nz", geo_location="New Zealand", locale="en-nz", uule="w+CAIQICILTmV3IFplYWxhbmQ=",device="desktop_chrome",sename="Google NZ"
+                seid=13, domain="co.nz", geo_location="New Zealand", locale="en-nz", uule="w+CAIQICILTmV3IFplYWxhbmQ=", device="desktop_chrome", sename="Google NZ"
             },
             new SearchProperties()
             {
-                seid =16, domain ="co.za", geo_location="South Africa", locale="en-za", uule = "w+CAIQICIPU291dGggQWZyaWNhCgoK",device="desktop_chrome", sename="Google ZA"
+                seid=16, domain="co.za", geo_location="South Africa", locale="en-za", uule="w+CAIQICIPU291dGggQWZyaWNhCgoK", device="desktop_chrome", sename="Google ZA"
             },
             new SearchProperties()
             {
-                seid =21, domain ="ru", geo_location="Russia", locale="ru-ru", uule = "w+CAIQICIGUnVzc2lh",device="desktop_chrome",sename="Google RU"
-            },
-            //new SearchProperties()
-            //{
-            //    seid =22, domain ="co.kr", geo_location="South Korea", locale="ko-kr", uule = "w+CAIQICILU291dGggS29yZWE=",device="desktop_chrome"
-            //},
-             new SearchProperties()
-            {
-                seid =40, domain ="fr", geo_location="France", locale="fr-fr", uule = "w+CAIQICIGRnJhbmNl",device="desktop_chrome",sename="Google FR (French)"
-            },
-
-            new SearchProperties()
-            {
-                seid =44, domain ="be", geo_location="Belgium", locale= "nl-be", uule = "w+CAIQICIHQmVsZ2l1bQ==",device="desktop_chrome", sename="Google BE (Dutch)"
-            },
-
-            new SearchProperties()
-            {
-                seid =57, domain ="nl", geo_location="Netherlands", locale= "nl-nl", uule = "w+CAIQICILTmV0aGVybGFuZHM=",device="desktop_chrome", sename="Google NL"
-            },
-              new SearchProperties()
-            {
-                seid =58, domain ="co.uk", geo_location="United Kingdom", locale= "en-gb", uule = "w+CAIQICIOVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK"
-            },
-               new SearchProperties()
-            {
-                seid =59, domain ="es", geo_location="Spain", locale= "es-es", uule = "w+CAIQICIFc3BhaW4=",device="desktop_chrome", sename="Google ES"
+                seid=21, domain="ru", geo_location="Russia", locale="ru-ru", uule="w+CAIQICIGUnVzc2lh", device="desktop_chrome", sename="Google RU"
             },
                 new SearchProperties()
             {
-                seid =60, domain ="it", geo_location="Italy", locale= "it-it", uule = "w+CAIQICIFSXRhbHk=",device="desktop_chrome", sename="Google IT (Italian)"
+                seid=40, domain="fr", geo_location="France", locale="fr-fr", uule="w+CAIQICIGRnJhbmNl", device="desktop_chrome", sename="Google FR (French)"
             },
-                 new SearchProperties()
+            new SearchProperties()
+            {
+                seid=44, domain="be", geo_location="Belgium", locale="nl-be", uule="w+CAIQICIHQmVsZ2l1bQ==", device="desktop_chrome", sename="Google BE (Dutch)"
+            },
+            new SearchProperties()
+            {
+                seid=57, domain="nl", geo_location="Netherlands", locale="nl-nl", uule="w+CAIQICILTmV0aGVybGFuZHM=", device="desktop_chrome", sename="Google NL"
+            },
+            new SearchProperties()
+            {
+                seid=58, domain="co.uk",geo_location="United Kingdom",locale="en-gb",uule="w+CAIQICIOVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK"
+            },
+            new SearchProperties()
+            {
+                seid=59, domain="es", geo_location="Spain", locale="es-es", uule="w+CAIQICIFc3BhaW4=", device="desktop_chrome", sename="Google ES"
+            },
+            new SearchProperties()
             {
-                seid =61, domain ="se", geo_location="Sweden", locale= "sv-se", uule = "w+CAIQICIGc3dlZGVu",device="desktop_chrome", sename="Google SE (Swedish)"
+                seid=60, domain="it", geo_location="Italy", locale="it-it", uule="w+CAIQICIFSXRhbHk=", device="desktop_chrome", sename="Google IT (Italian)"
             },
-
             new SearchProperties()
             {
-                seid =63, domain ="com.hk", geo_location="Hong Kong", locale= "zh-TW-HK", uule = "w+CAIQICIJSG9uZyBLb25n",device="desktop_chrome", sename="Google HK (Chinese Traditional)"
+                seid=61, domain="se", geo_location="Sweden", locale="sv-se", uule="w+CAIQICIGU3dlZGVu", device="desktop_chrome", sename="Google SE (Swedish)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-                seid =64, domain ="com.sg", geo_location="Singapore", locale= "en-sg", uule = "w+CAIQICIJU2luZ2Fwb3Jl",device="desktop_chrome", sename="Google SG (English)"
-
+                seid=63, domain="com.hk", geo_location="Hong Kong", locale="zh-TW-HK", uule="w+CAIQICIJSG9uZyBLb25n", device="desktop_chrome", sename="Google HK (Chinese Traditional)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-                seid =65, domain ="co.jp", geo_location="Japan", locale= "ja-jp", uule = "w+CAIQICIFSmFwYW4=",device="desktop_chrome", sename="Google JP (Japanes)"
-
+                seid=64, domain="com.sg", geo_location="Singapore", locale="en-sg", uule="w+CAIQICIJU2luZ2Fwb3Jl", device="desktop_chrome", sename="Google SG (English)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-                seid =66, domain ="com.br", geo_location="Brazil", locale= "pt-br", uule = "w+CAIQICIGQnJhemls",device="desktop_chrome", sename="Google BR"
-
+                seid=65, domain="co.jp", geo_location="Japan", locale="ja-jp", uule="w+CAIQICIFSmFwYW4=", device="desktop_chrome", sename="Google JP (Japanes)"
             },
-              new SearchProperties()
+            new SearchProperties()
             {
-                seid =67, domain ="de", geo_location="Germany", locale= "de-de", uule = "w+CAIQICIHR2VybWFueQ==",device="desktop_chrome", sename="Google DE (German)"
-
+                seid=66, domain="com.br", geo_location="Brazil", locale="pt-br", uule="w+CAIQICIGQnJhemls", device="desktop_chrome", sename="Google BR"
             },
-               new SearchProperties()
+            new SearchProperties()
             {
-                seid =68, domain ="ch", geo_location="Switzerland", locale= "de-ch", uule = "w+CAIQICIMU3dpdHplcmxhbmQK",device="desktop_chrome", sename="Google CH (German)"
-
+                seid=67, domain="de", geo_location="Germany", locale="de-de", uule="w+CAIQICIHR2VybWFueQ==", device="desktop_chrome", sename="Google DE (German)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-                seid =69, domain ="lu", geo_location="Luxembourg", locale= "de-lu", uule = "w+CAIQICIKTHV4ZW1ib3VyZw==",device="desktop_chrome", sename="Google LU (German)"
-
+                seid=68, domain="ch", geo_location="Switzerland", locale="de-ch", uule="w+CAIQICIMU3dpdHplcmxhbmQK", device="desktop_chrome", sename="Google CH (German)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-                seid =70, domain ="at", geo_location="Austria", locale= "de-at", uule = "w+CAIQICIHQXVzdHJpYQ==",device="desktop_chrome", sename="Google AT"
-
+                seid=69, domain="lu", geo_location="Luxembourg", locale="de-lu", uule="w+CAIQICIKTHV4ZW1ib3VyZw==", device="desktop_chrome", sename="Google LU (German)"
             },
-            // new SearchProperties()
-            //{
-            //    seid =74, domain ="co.uk", geo_location="United Kingdom", locale= "en-gb", uule = "w+CAIQICIOVW5pdGVkIEtpbmdkb20=",tbm="isch",device="desktop_chrome"
-
-            //},
-              new SearchProperties()
+            new SearchProperties()
             {
-                seid =77, domain ="ae", geo_location="United Arab Emirates", locale= "ar-ae", uule = "w+CAIQICIUVW5pdGVkIEFyYWIgRW1pcmF0ZXM=",device="desktop_chrome", sename="Google AE (Arabic)"
-
+                seid=70, domain="at", geo_location="Austria", locale="de-at", uule="w+CAIQICIHQXVzdHJpYQ==", device="desktop_chrome", sename="Google AT"
             },
-               new SearchProperties()
+            new SearchProperties()
             {
-                seid =79, domain ="com.tr", geo_location="Turkey", locale= "tr-tr", uule ="w+CAIQICIGVHVya2V5",device="desktop_chrome", sename="Google TR"
-
+                seid=77, domain="ae", geo_location="United Arab Emirates", locale="ar-ae", uule="w+CAIQICIUVW5pdGVkIEFyYWIgRW1pcmF0ZXM=", device="desktop_chrome", sename="Google AE (Arabic)"
             },
-              new SearchProperties()
+            new SearchProperties()
             {
-                seid =80, domain ="co.ma", geo_location="Morocco", locale= "fr-ma", uule = "w+CAIQICIHTW9yb2Njbw==",device="desktop_chrome", sename="Google MA"
-
+                seid=79, domain="com.tr", geo_location="Turkey", locale="tr-tr", uule ="w+CAIQICIGVHVya2V5", device="desktop_chrome", sename="Google TR"
             },
-               new SearchProperties()
+            new SearchProperties()
             {
-                seid =81, domain ="com.ly", geo_location="Libya", locale= "ar-ly", uule = "w+CAIQICIFTGlieWE=",device="desktop_chrome", sename="Google LY"
-
+                seid=80, domain="co.ma", geo_location="Morocco", locale="fr-ma", uule="w+CAIQICIHTW9yb2Njbw==", device="desktop_chrome", sename="Google MA"
             },
             new SearchProperties()
             {
-                seid =82, domain ="dz", geo_location="Algeria", locale= "fr-dz", uule = "w+CAIQICIHQWxnZXJpYQ==",device="desktop_chrome", sename="Google DZ"
-
+                seid=81, domain="com.ly", geo_location="Libya", locale="ar-ly", uule="w+CAIQICIFTGlieWE=", device="desktop_chrome", sename="Google LY"
             },
             new SearchProperties()
             {
-                seid =83, domain ="com.ua", geo_location="Ukraine", locale= "uk-ua", uule = "w+CAIQICIHVWtyYWluZQ==",device="desktop_chrome", sename="Google UA"
-
+                seid=82, domain="dz", geo_location="Algeria", locale="fr-dz", uule="w+CAIQICIHQWxnZXJpYQ==", device="desktop_chrome", sename="Google DZ"
             },
             new SearchProperties()
             {
-                seid =84, domain ="com.eg", geo_location="Egypt", locale= "ar-eg", uule = "w+CAIQICIFRWd5cHQ=",device="desktop_chrome", sename="Google EG (Arabic)"
-
+                seid=83, domain="com.ua", geo_location="Ukraine", locale="uk-ua", uule="w+CAIQICIHVWtyYWluZQ==", device="desktop_chrome", sename="Google UA"
             },
             new SearchProperties()
             {
-                seid =85, domain ="com.bh", geo_location="Bahrain", locale= "ar-bh", uule = "w+CAIQICIHQmFocmFpbg==",device="desktop_chrome", sename="Google BH (Arabic)"
-
+                seid=84, domain="com.eg", geo_location="Egypt", locale="ar-eg", uule="w+CAIQICIFRWd5cHQ=", device="desktop_chrome", sename="Google EG (Arabic)"
             },
             new SearchProperties()
             {
-                seid =86, domain ="com.qa", geo_location="Qatar", locale= "ar-qa", uule = "w+CAIQICIFUWF0YXI=",device="desktop_chrome", sename="Google QA (Arabic)"
-
+                seid=85, domain="com.bh", geo_location="Bahrain", locale="ar-bh", uule="w+CAIQICIHQmFocmFpbg==", device="desktop_chrome", sename="Google BH (Arabic)"
             },
             new SearchProperties()
             {
-                seid =87, domain ="com.sa", geo_location="Saudi Arabia", locale= "ar-sa", uule = "w+CAIQICIMU2F1ZGkgQXJhYmlh",device="desktop_chrome", sename="Google SA (Arabic)"
-
+                seid=86, domain="com.qa", geo_location="Qatar", locale="ar-qa", uule="w+CAIQICIFUWF0YXI=", device="desktop_chrome", sename="Google QA (Arabic)"
             },
             new SearchProperties()
             {
-                seid =88, domain ="com.kw", geo_location="Kuwait", locale= "ar-kw", uule = "w+CAIQICIGS3V3YWl0",device="desktop_chrome", sename="Google KW (Arabic)"
-
+                seid=87, domain="com.sa", geo_location="Saudi Arabia", locale="ar-sa", uule="w+CAIQICIMU2F1ZGkgQXJhYmlh", device="desktop_chrome", sename="Google SA (Arabic)"
             },
             new SearchProperties()
             {
-                seid =89, domain ="com.vn", geo_location="Vietnam", locale= "vi-vn", uule = "w+CAIQICIHVmlldG5hbQ==",device="desktop_chrome", sename="Google VN"
-
+                seid=88, domain="com.kw", geo_location="Kuwait", locale="ar-kw", uule="w+CAIQICIGS3V3YWl0", device="desktop_chrome", sename="Google KW (Arabic)"
             },
             new SearchProperties()
             {
-                seid =90, domain ="ga", geo_location="Gabon", locale= "fr-ga", uule = "w+CAIQICIFR2Fib24=",device="desktop_chrome", sename="Google GA"
-
+                seid=89, domain="com.vn", geo_location="Vietnam", locale="vi-vn", uule="w+CAIQICIHVmlldG5hbQ==", device="desktop_chrome", sename="Google VN"
             },
             new SearchProperties()
             {
-                seid =93, domain ="co.in", geo_location="India", locale= "en-in", uule = "w+CAIQICIFSW5kaWE=",device="desktop_chrome", sename="Google IN"
-
+                seid=90, domain="ga", geo_location="Gabon", locale="fr-ga", uule="w+CAIQICIFR2Fib24=", device="desktop_chrome", sename="Google GA"
             },
             new SearchProperties()
             {
-                seid =98, domain ="co.il", geo_location="Israel", locale= "iw-il", uule = "w+CAIQICIGSXNyYWVs",device="desktop_chrome", sename="Google IL (Hebrew)"
-
+                seid=93, domain="co.in", geo_location="India", locale="en-in", uule="w+CAIQICIFSW5kaWE=", device="desktop_chrome", sename="Google IN"
             },
-            /* new SearchProperties()
+            new SearchProperties()
             {
-                seid =99, domain ="com", geo_location="United States", locale= "en-us", uule = "w+CAIQICINVW5pdGVkIFN0YXRlcw==",device="desktop_chrome"
-
-            },*/
+                seid=98, domain="co.il", geo_location="Israel", locale="iw-il", uule="w+CAIQICIGSXNyYWVs", device="desktop_chrome", sename="Google IL (Hebrew)"
+            },
             new SearchProperties()
             {
-            seid =102, domain ="com", geo_location="United States", locale = "en-us", uule = "w+CAIQICINVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Mobile)"
+                seid=102, domain="com", geo_location="United States", locale = "en-us", uule="w+CAIQICINVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Mobile)"
             },
             new SearchProperties()
             {
-            seid =104, domain ="it", geo_location="Italy", locale= "it-IT", uule = "w+CAIQICIFSXRhbHk=",device="mobile_android",sename="Google IT (Italian,Mobile)"
-             },
+                seid=104, domain="it", geo_location="Italy", locale="it-IT", uule="w+CAIQICIFSXRhbHk=", device="mobile_android", sename="Google IT (Italian,Mobile)"
+            },
             new SearchProperties()
             {
-            seid =105, domain ="ie", geo_location="Ireland", locale= "en-ie", uule = "w+CAIQICIHSXJlbGFuZA==",device="desktop_chrome", sename="Google IE"
+                seid=105, domain="ie", geo_location="Ireland", locale="en-ie", uule="w+CAIQICIHSXJlbGFuZA==", device="desktop_chrome", sename="Google IE"
             },
             new SearchProperties()
             {
-            seid =106, domain ="co.uk", geo_location="United Kingdom", locale = "en-gb", uule = "w+CAIQICIOVW5pdGVkIEtpbmdkb20=",device="mobile_android",sename="Google UK (Mobile)"
+                seid=106, domain="co.uk", geo_location="United Kingdom", locale = "en-gb", uule="w+CAIQICIOVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Mobile)"
             },
             new SearchProperties()
             {
-            seid =109, domain ="com.my", geo_location="Malaysia", locale= "en-my", uule = "w+CAIQICIITWFsYXlzaWE=",device="desktop_chrome", sename="Google MY (English)"
+                seid=109, domain="com.my", geo_location="Malaysia", locale="en-my", uule="w+CAIQICIITWFsYXlzaWE=", device="desktop_chrome", sename="Google MY (English)"
             },
             new SearchProperties()
             {
-            seid =111, domain ="co.th", geo_location="Thailand", locale= "th-th", uule = "w+CAIQICIIVGhhaWxhbmQ=",device="desktop_chrome", sename="Google TH (Thai)"
+                seid=111, domain="co.th", geo_location="Thailand", locale="th-th", uule="w+CAIQICIIVGhhaWxhbmQ=", device="desktop_chrome", sename="Google TH (Thai)"
             },
             new SearchProperties()
             {
-            seid =113, domain ="com.ng", geo_location="Nigeria", locale= "en-ng", uule = "w+CAIQICIHTmlnZXJpYQ==",device="desktop_chrome", sename="Google NG"
+                seid=113, domain="com.ng", geo_location="Nigeria", locale="en-ng", uule="w+CAIQICIHTmlnZXJpYQ==", device="desktop_chrome", sename="Google NG"
             },
             new SearchProperties()
             {
-            seid =114, domain ="ch", geo_location="Switzerland", locale= "it-ch", uule = "w+CAIQICIMU3dpdHplcmxhbmQK",device="desktop_chrome", sename="Google CH (Italian)"
+                seid=114, domain="ch", geo_location="Switzerland", locale="it-ch", uule="w+CAIQICIMU3dpdHplcmxhbmQK", device="desktop_chrome", sename="Google CH (Italian)"
             },
             new SearchProperties()
             {
-            seid =115, domain ="ch", geo_location="Switzerland", locale= "fr-ch", uule = "w+CAIQICIMU3dpdHplcmxhbmQK",device="desktop_chrome", sename="Google CH (French)"
+                seid=115, domain="ch", geo_location="Switzerland", locale="fr-ch", uule="w+CAIQICIMU3dpdHplcmxhbmQK", device="desktop_chrome", sename="Google CH (French)"
             },
-
             new SearchProperties()
             {
-            seid =117, domain ="pt", geo_location="Portugal", locale= "pt-pt", uule = "w+CAIQICIIUG9ydHVnYWw=",device="mobile_android",sename="Google PT(Mobile)"
+                seid=117, domain="pt", geo_location="Portugal", locale="pt-pt", uule="w+CAIQICIIUG9ydHVnYWw=", device="mobile_android", sename="Google PT(Mobile)"
             },
             new SearchProperties()
             {
-            seid =118, domain ="nl", geo_location="Netherlands", locale= "nl-nl", uule = "w+CAIQICILTmV0aGVybGFuZHM=",device="mobile_android",sename="Google NL(Mobile)"
+                seid=118, domain="nl", geo_location="Netherlands", locale="nl-nl", uule="w+CAIQICILTmV0aGVybGFuZHM=", device="mobile_android", sename="Google NL(Mobile)"
             },
             new SearchProperties()
             {
-            seid =119, domain ="com.mx", geo_location="Mexico", locale= "es-419-mx", uule = "w+CAIQICIGTWV4aWNv",device="desktop_chrome", sename="Google MX (Spanish)"
+                seid=119, domain="com.mx", geo_location="Mexico", locale="es-419-mx", uule="w+CAIQICIGTWV4aWNv", device="desktop_chrome", sename="Google MX (Spanish)"
             },
             new SearchProperties()
             {
-            seid =120, domain ="es", geo_location="Spain", locale= "es-es", uule = "w+CAIQICIFc3BhaW4=",device="mobile_android",sename="Google ES (Mobile)"
+                seid=120, domain="es", geo_location="Spain", locale="es-es", uule="w+CAIQICIFc3BhaW4=", device="mobile_android", sename="Google ES (Mobile)"
             },
             new SearchProperties()
             {
-            seid =121, domain ="com.au", geo_location="Australia", locale= "en-au", uule = "w+CAIQICIJQXVzdHJhbGlh",device="desktop_chrome", sename="Google AU"
+                seid=121, domain="com.au", geo_location="Australia", locale="en-au", uule="w+CAIQICIJQXVzdHJhbGlh", device="desktop_chrome", sename="Google AU"
             },
             new SearchProperties()
             {
-            seid =122, domain ="pl", geo_location="Poland", locale= "pl-pl", uule = "w+CAIQICIGUG9sYW5k",device="desktop_chrome", sename="Google PL"
+                seid=122, domain="pl", geo_location="Poland", locale="pl-pl", uule="w+CAIQICIGUG9sYW5k", device="desktop_chrome", sename="Google PL"
             },
             new SearchProperties()
             {
-            seid =123, domain ="ro", geo_location="Romania", locale= "ro-ro", uule = "w+CAIQICIHUm9tYW5pYQ==",device="desktop_chrome", sename="Google RO"
+                seid=123, domain="ro", geo_location="Romania", locale="ro-ro", uule="w+CAIQICIHUm9tYW5pYQ==", device="desktop_chrome", sename="Google RO"
             },
             new SearchProperties()
             {
-            seid =124, domain ="bg", geo_location="Bulgaria", locale= "bg-bg", uule = "w+CAIQICIIQnVsZ2FyaWE=",device="desktop_chrome", sename="Google BG"
+                seid=124, domain="bg", geo_location="Bulgaria", locale="bg-bg", uule="w+CAIQICIIQnVsZ2FyaWE=", device="desktop_chrome", sename="Google BG"
             },
             new SearchProperties()
             {
-            seid =125, domain ="si", geo_location="Slovenia", locale= "sl-si", uule = "w+CAIQICIIU2xvdmVuaWE=",device="desktop_chrome", sename="Google SI"
+                seid=125, domain="si", geo_location="Slovenia", locale="sl-si", uule="w+CAIQICIIU2xvdmVuaWE=", device="desktop_chrome", sename="Google SI"
             },
             new SearchProperties()
             {
-            seid =126, domain ="hu", geo_location="Hungary", locale= "hu-hu", uule = "w+CAIQICIHSHVuZ2FyeQ==",device="desktop_chrome", sename="Google HU"
+                seid=126, domain="hu", geo_location="Hungary", locale="hu-hu", uule="w+CAIQICIHSHVuZ2FyeQ==", device="desktop_chrome", sename="Google HU"
             },
             new SearchProperties()
             {
-            seid =127, domain ="cz", geo_location="Czech Republic", locale = "cs-cz", uule = "w+CAIQICIOQ3plY2ggUmVwdWJsaWM=",device="desktop_chrome", sename="Google CZ"
+                seid=127, domain="cz", geo_location="Czech Republic", locale = "cs-cz", uule="w+CAIQICIOQ3plY2ggUmVwdWJsaWM=", device="desktop_chrome", sename="Google CZ"
             },
             new SearchProperties()
             {
-            seid =128, domain ="sk", geo_location="Slovakia", locale= "sk-sk", uule = "w+CAIQICIIU2xvdmFraWE=",device="desktop_chrome", sename="Google SK"
+                seid=128, domain="sk", geo_location="Slovakia", locale="sk-sk", uule="w+CAIQICIIU2xvdmFraWE=", device="desktop_chrome", sename="Google SK"
             },
             new SearchProperties()
             {
-            seid =129, domain ="com.ar", geo_location="Argentina", locale= "es-419-ar", uule = "w+CAIQICIJQXJnZW50aW5h",device="desktop_chrome", sename="Google AR"
+                seid=129, domain="com.ar", geo_location="Argentina", locale="es-419-ar", uule="w+CAIQICIJQXJnZW50aW5h", device="desktop_chrome", sename="Google AR"
             },
             new SearchProperties()
             {
-            seid =130, domain ="com.lb", geo_location="Lebanon", locale= "ar-lb", uule = "w+CAIQICIHTGViYW5vbg==",device="desktop_chrome", sename="Google LB (Arabic)"
+                seid=130, domain="com.lb", geo_location="Lebanon", locale="ar-lb", uule="w+CAIQICIHTGViYW5vbg==", device="desktop_chrome", sename="Google LB (Arabic)"
             },
             new SearchProperties()
             {
-            seid =131, domain ="jo", geo_location="Jordan", locale= "ar-jo", uule = "w+CAIQICIGSm9yZGFu",device="desktop_chrome", sename="Google JO (Arabic)"
+                seid=131, domain="jo", geo_location="Jordan", locale="ar-jo", uule="w+CAIQICIGSm9yZGFu", device="desktop_chrome", sename="Google JO (Arabic)"
             },
             new SearchProperties()
             {
-            seid =132, domain ="fi", geo_location="Finland", locale= "fi-fi", uule = "w+CAIQICIHRmlubGFuZA==",device="desktop_chrome", sename="Google FI (Finnish)"
+                seid=132, domain="fi", geo_location="Finland", locale="fi-fi", uule="w+CAIQICIHRmlubGFuZA==", device="desktop_chrome", sename="Google FI (Finnish)"
             },
             new SearchProperties()
             {
-            seid =133, domain ="gr", geo_location="Greece", locale= "el-gr", uule = "w+CAIQICIGR3JlZWNl",device="desktop_chrome", sename="Google GR"
+                seid=133, domain="gr", geo_location="Greece", locale="el-gr", uule="w+CAIQICIGR3JlZWNl", device="desktop_chrome", sename="Google GR"
             },
             new SearchProperties()
             {
-            seid =134, domain ="no", geo_location="Norway", locale= "no-no", uule = "w+CAIQICIGTm9yd2F5",device="desktop_chrome", sename="Google NO (Norwegian)"
+                seid=134, domain="no", geo_location="Norway", locale="no-no", uule="w+CAIQICIGTm9yd2F5", device="desktop_chrome", sename="Google NO (Norwegian)"
             },
             new SearchProperties()
             {
-            seid =135, domain ="be", geo_location="Belgium", locale= "fr-be", uule = "w+CAIQICIHQmVsZ2l1bQ==",device="desktop_chrome", sename="Google BE (French)"
+                seid=135, domain="be", geo_location="Belgium", locale="fr-be", uule="w+CAIQICIHQmVsZ2l1bQ==", device="desktop_chrome", sename="Google BE (French)"
             },
             new SearchProperties()
             {
-            seid =136, domain ="dk", geo_location="Denmark", locale= "da-dk", uule = "w+CAIQICIHRGVubWFyaw==",device="desktop_chrome", sename="Google DK (Danish)"
+                seid=136, domain="dk", geo_location="Denmark", locale="da-dk", uule="w+CAIQICIHRGVubWFyaw==", device="desktop_chrome", sename="Google DK (Danish)"
             },
             new SearchProperties()
             {
-            seid =137, domain ="cl", geo_location="Chile", locale= "es-419-cl", uule = "w+CAIQICIFQ2hpbGU=",device="desktop_chrome", sename="Google CL"
+                seid=137, domain="cl", geo_location="Chile", locale="es-419-cl", uule="w+CAIQICIFQ2hpbGU=", device="desktop_chrome", sename="Google CL"
             },
             new SearchProperties()
             {
-            seid =139, domain ="com.au", geo_location="Australia", locale= "en-au", uule = "w+CAIQICIJQXVzdHJhbGlh",device="mobile_android",sename="Google AU (Mobile)"
+                seid=139, domain="com.au", geo_location="Australia", locale="en-au", uule="w+CAIQICIJQXVzdHJhbGlh", device="mobile_android", sename="Google AU (Mobile)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-            seid =141, domain ="ch", geo_location="Switzerland", locale= "it-ch", uule = "w+CAIQICIMU3dpdHplcmxhbmQK",device="mobile_android",sename="Google CH (Italian, Mobile)"
+                seid=141, domain="ch", geo_location="Switzerland", locale="it-ch", uule="w+CAIQICIMU3dpdHplcmxhbmQK", device="mobile_android", sename="Google CH (Italian, Mobile)"
             },
             new SearchProperties()
             {
-            seid =142, domain ="ch", geo_location="Switzerland", locale= "fr-ch", uule = "w+CAIQICIMU3dpdHplcmxhbmQK",device="mobile_android",sename="Google CH (French, Mobile)"
+                seid=142, domain="ch", geo_location="Switzerland", locale="fr-ch", uule="w+CAIQICIMU3dpdHplcmxhbmQK", device="mobile_android", sename="Google CH (French, Mobile)"
             },
             new SearchProperties()
             {
-            seid =143, domain ="ch", geo_location="Switzerland", locale= "de-ch", uule = "w+CAIQICIMU3dpdHplcmxhbmQK",device="mobile_android",sename="Google CH (German, Mobile)"
+                seid=143, domain="ch", geo_location="Switzerland", locale="de-ch", uule="w+CAIQICIMU3dpdHplcmxhbmQK", device="mobile_android", sename="Google CH (German, Mobile)"
             },
             new SearchProperties()
             {
-            seid =144, domain ="pt", geo_location="Portugal", locale= "pt-pt", uule = "w+CAIQICIIUG9ydHVnYWw=",device="desktop_chrome", sename="Google PT (Mobile)"
+                seid=144, domain="pt", geo_location="Portugal", locale="pt-pt", uule="w+CAIQICIIUG9ydHVnYWw=", device="desktop_chrome", sename="Google PT (Mobile)"
             },
             new SearchProperties()
             {
-            seid =145, domain ="de", geo_location="Germany", locale= "de-de", uule = "w+CAIQICIHR2VybWFueQ==",device="mobile_android",sename="Google DE (German, Mobile)"
+                seid=145, domain="de", geo_location="Germany", locale="de-de", uule="w+CAIQICIHR2VybWFueQ==", device="mobile_android", sename="Google DE (German, Mobile)"
             },
             new SearchProperties()
             {
-            seid =146, domain ="ae", geo_location="United Arab Emirates", locale= "ar-ae", uule = "w+CAIQICIUVW5pdGVkIEFyYWIgRW1pcmF0ZXM=",device="mobile_android", sename="Google AE (Arabic, Mobile)"
+                seid=146, domain="ae", geo_location="United Arab Emirates", locale="ar-ae", uule="w+CAIQICIUVW5pdGVkIEFyYWIgRW1pcmF0ZXM=", device="mobile_android", sename="Google AE (Arabic, Mobile)"
             },
             new SearchProperties()
             {
-            seid =147, domain ="at", geo_location="Austria", locale= "de-at", uule = "w+CAIQICIHQXVzdHJpYQ==",device="mobile_android", sename="Google AT (Mobile) "
+                seid=147, domain="at", geo_location="Austria", locale="de-at", uule="w+CAIQICIHQXVzdHJpYQ==", device="mobile_android", sename="Google AT (Mobile) "
             },
             new SearchProperties()
             {
-            seid =148, domain ="be", geo_location="Belgium", locale= "nl-be", uule = "w+CAIQICIHQmVsZ2l1bQ==",device="mobile_android", sename="Google BE (Dutch, Mobile)"
+                seid=148, domain="be", geo_location="Belgium", locale="nl-be", uule="w+CAIQICIHQmVsZ2l1bQ==", device="mobile_android", sename="Google BE (Dutch, Mobile)"
             },
             new SearchProperties()
             {
-            seid =149, domain ="be", geo_location="Belgium", locale= "fr-be", uule = "w+CAIQICIHQmVsZ2l1bQ==",device="mobile_android", sename="Google BE (French, Mobile)"
+                seid=149, domain="be", geo_location="Belgium", locale="fr-be", uule="w+CAIQICIHQmVsZ2l1bQ==", device="mobile_android", sename="Google BE (French, Mobile)"
             },
             new SearchProperties()
             {
-            seid =150, domain ="com.br", geo_location="Brazil", locale= "pt-br", uule = "w+CAIQICIGQnJhemls",device="mobile_android", sename="Google BR (Mobile)"
+                seid=150, domain="com.br", geo_location="Brazil", locale="pt-br", uule="w+CAIQICIGQnJhemls", device="mobile_android", sename="Google BR (Mobile)"
             },
-
             new SearchProperties()
             {
-            seid =152, domain ="dk", geo_location="Denmark", locale= "da-dk", uule ="w+CAIQICIHRGVubWFyaw==",device="mobile_android", sename="Google DK (Danish,Mobile)"
+                seid=152, domain="dk", geo_location="Denmark", locale="da-dk", uule ="w+CAIQICIHRGVubWFyaw==", device="mobile_android", sename="Google DK (Danish,Mobile)"
             },
             new SearchProperties()
             {
-            seid =153, domain ="fi", geo_location="Finland", locale= "fi-fi", uule = "w+CAIQICIHRmlubGFuZA==",device="mobile_android", sename="Google FI (Finnish, Mobile)"
-            },new SearchProperties()
+                seid=153, domain="fi", geo_location="Finland", locale="fi-fi", uule="w+CAIQICIHRmlubGFuZA==", device="mobile_android", sename="Google FI (Finnish, Mobile)"
+            },
+            new SearchProperties()
             {
-            seid =154, domain ="fr", geo_location="France", locale= "fr-fr", uule = "w+CAIQICIGRnJhbmNl",device="mobile_android", sename="Google FR (French, Mobile)"
-            },new SearchProperties()
+                seid=154, domain="fr", geo_location="France", locale="fr-fr", uule="w+CAIQICIGRnJhbmNl", device="mobile_android", sename="Google FR (French, Mobile)"
+            },
+            new SearchProperties()
             {
-            seid =155, domain ="gr", geo_location="Greece", locale= "el-gr", uule = "w+CAIQICIGR3JlZWNl",device="mobile_android", sename="Google GR (Mobile)"
-            },new SearchProperties()
+                seid=155, domain="gr", geo_location="Greece", locale="el-gr", uule="w+CAIQICIGR3JlZWNl", device="mobile_android", sename="Google GR (Mobile)"
+            },
+            new SearchProperties()
             {
-            seid =156, domain ="com.hk", geo_location="Hong Kong", locale = "zh-TW-HK", uule = "w+CAIQICIJSG9uZyBLb25n",device="mobile_android", sename="Google HK (Chinese Traditional, Mobile)"
-            },new SearchProperties()
+                seid=156, domain="com.hk", geo_location="Hong Kong", locale = "zh-TW-HK", uule="w+CAIQICIJSG9uZyBLb25n", device="mobile_android", sename="Google HK (Chinese Traditional, Mobile)"
+            },
+            new SearchProperties()
             {
-            seid =157, domain ="ie", geo_location="Ireland", locale= "en-ie", uule = "w+CAIQICIHSXJlbGFuZA==",device="mobile_android", sename="Google IE (Mobile)"
-            },new SearchProperties()
+                seid=157, domain="ie", geo_location="Ireland", locale="en-ie", uule="w+CAIQICIHSXJlbGFuZA==", device="mobile_android", sename="Google IE (Mobile)"
+            },
+            new SearchProperties()
             {
-            seid =158, domain ="co.jp", geo_location="Japan", locale= "ja-jp", uule = "w+CAIQICIFSmFwYW4=",device="mobile_android", sename="Google JP (Japanes, Mobile)"
-            },new SearchProperties()
+                seid=158, domain="co.jp", geo_location="Japan", locale="ja-jp", uule="w+CAIQICIFSmFwYW4=", device="mobile_android", sename="Google JP (Japanes, Mobile)"
+            },
+            new SearchProperties()
             {
-            seid =159, domain ="no", geo_location="Norway", locale= "no-no", uule = "w+CAIQICIGTm9yd2F5",device="mobile_android", sename="Google NO (Norwegian, Mobile)"
-            },new SearchProperties()
+                seid=159, domain="no", geo_location="Norway", locale="no-no", uule="w+CAIQICIGTm9yd2F5", device="mobile_android", sename="Google NO (Norwegian, Mobile)"
+            },
+            new SearchProperties()
             {
-            seid =160, domain ="se", geo_location="Sweden", locale= "sv-se", uule = "w+CAIQICIGTm9yd2F5",device="mobile_android", sename="Google SE (Swedish, Mobile)"
-            },new SearchProperties()
+                seid=160, domain="se", geo_location="Sweden", locale="sv-se", uule="w+CAIQICIGU3dlZGVu", device="mobile_android", sename="Google SE (Swedish, Mobile)"
+            },
+            new SearchProperties()
             {
-            seid =167, domain ="hu", geo_location="Hungary", locale= "hu-hu", uule = "w+CAIQICIHSHVuZ2FyeQ==",device="mobile_android", sename="Google HU (Mobile)"
-            },new SearchProperties()
+                seid=167, domain="hu", geo_location="Hungary", locale="hu-hu", uule="w+CAIQICIHSHVuZ2FyeQ==", device="mobile_android", sename="Google HU (Mobile)"
+            },
+            new SearchProperties()
             {
-            seid =168, domain ="pl", geo_location="Poland", locale= "pl-pl", uule = "w+CAIQICIGUG9sYW5k",device="mobile_android", sename="Google PL (Mobile)"
-            },new SearchProperties()
+                seid=168, domain="pl", geo_location="Poland", locale="pl-pl", uule="w+CAIQICIGUG9sYW5k", device="mobile_android", sename="Google PL (Mobile)"
+            },
+            new SearchProperties()
             {
-            seid =169, domain ="com.tr", geo_location="Turkey", locale= "tr-tr", uule = "w+CAIQICIGVHVya2V5",device="mobile_android", sename="Google TR (Mobile)"
-            },new SearchProperties()
+                seid=169, domain="com.tr", geo_location="Turkey", locale="tr-tr", uule="w+CAIQICIGVHVya2V5", device="mobile_android", sename="Google TR (Mobile)"
+            },
+            new SearchProperties()
             {
-            seid =172, domain ="ru", geo_location="Russia", locale= "ru-ru", uule = "w+CAIQICIGUnVzc2lh",device="mobile_android", sename="Google RU (Mobile)"
+                seid=172, domain="ru", geo_location="Russia", locale="ru-ru", uule="w+CAIQICIGUnVzc2lh", device="mobile_android", sename="Google RU (Mobile)"
             },
             new SearchProperties()
             {
-            seid =173, domain ="com.tw", geo_location="Taiwan", locale= "zh-tw", uule = "w+CAIQICIGVGFpd2Fu",device="desktop_chrome", sename="Google TW (Chinese Traditional)"
+                seid=173, domain="com.tw", geo_location="Taiwan", locale="zh-tw", uule="w+CAIQICIGVGFpd2Fu", device="desktop_chrome", sename="Google TW (Chinese Traditional)"
             },
             new SearchProperties()
             {
-            seid =174, domain ="co.il", geo_location="Israel", locale= "en-il", uule = "w+CAIQICIGSXNyYWVs",device="desktop_chrome", sename="Google IL (English)"
+                seid=174, domain="co.il", geo_location="Israel", locale="en-il", uule="w+CAIQICIGSXNyYWVs", device="desktop_chrome", sename="Google IL (English)"
             },
             new SearchProperties()
             {
-            seid =176, domain ="rs", geo_location="Serbia", locale= "sr-rs", uule = "w+CAIQICIGU2VyYmlh",device="desktop_chrome", sename="Google RS"
+                seid=176, domain="rs", geo_location="Serbia", locale="sr-rs", uule="w+CAIQICIGU2VyYmlh", device="desktop_chrome", sename="Google RS"
             },
             new SearchProperties()
             {
-            seid =177, domain ="com", geo_location="New York,United States", locale= "en-us", uule = "w+CAIQICIWTmV3IFlvcmssVW5pdGVkIFN0YXRlcw==",device="desktop_chrome", sename="Google US (New York)"
+                seid=177, domain="com", geo_location="New York,United States", locale="en-us", uule="w+CAIQICIWTmV3IFlvcmssVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (New York)"
             },
             new SearchProperties()
             {
-            seid =178, domain ="com", geo_location="New York,United States", locale= "en-us", uule = "w+CAIQICIWTmV3IFlvcmssVW5pdGVkIFN0YXRlcw==",device="mobile_android", sename="Google US (New York, Mobile)"
+                seid=178, domain="com", geo_location="New York,United States", locale="en-us", uule="w+CAIQICIWTmV3IFlvcmssVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (New York, Mobile)"
             },
             new SearchProperties()
             {
-            seid =179, domain ="com", geo_location="Los Angeles,United States", locale= "en-us", uule = "w+CAIQICIkTG9zIEFuZ2VsZXMsQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz",device="desktop_chrome", sename="Google "
+                seid=179, domain="com", geo_location="Los Angeles,United States", locale="en-us", uule="w+CAIQICIkTG9zIEFuZ2VsZXMsQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google "
             },
             new SearchProperties()
             {
-            seid =180, domain ="com", geo_location="Los Angeles,United States", locale= "en-us", uule = "w+CAIQICIkTG9zIEFuZ2VsZXMsQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz",device="mobile_android", sename="Google US (Los Angeles)"
+                seid=180, domain="com", geo_location="Los Angeles,United States", locale="en-us", uule="w+CAIQICIkTG9zIEFuZ2VsZXMsQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Los Angeles)"
             },
             new SearchProperties()
             {
-            seid =181, domain ="co.za", geo_location="South Africa", locale= "en-za", uule = "w+CAIQICIPU291dGggQWZyaWNhCgoK",device="mobile_android", sename="Google US (Los Angeles, Mobile)"
+                seid=181, domain="co.za", geo_location="South Africa", locale="en-za", uule="w+CAIQICIPU291dGggQWZyaWNhCgoK", device="mobile_android", sename="Google US (Los Angeles, Mobile)"
             },
             new SearchProperties()
             {
-            seid =182, domain ="com.sa", geo_location="Saudi Arabia", locale= "ar-sa", uule = "w+CAIQICIMU2F1ZGkgQXJhYmlh",device="mobile_android", sename="Google ZA (Mobile)"
+                seid=182, domain="com.sa", geo_location="Saudi Arabia", locale="ar-sa", uule="w+CAIQICIMU2F1ZGkgQXJhYmlh", device="mobile_android", sename="Google ZA (Mobile)"
             },
             new SearchProperties()
             {
-            seid =183, domain ="ca", geo_location="Canada", locale= "fr-ca", uule = "w+CAIQICIGQ2FuYWRh",device="desktop_chrome", sename="Google SA (Arabic, Mobile)"
+                seid=183, domain="ca", geo_location="Canada", locale="fr-ca", uule="w+CAIQICIGQ2FuYWRh", device="desktop_chrome", sename="Google SA (Arabic, Mobile)"
             },
             new SearchProperties()
             {
-            seid =184, domain ="com", geo_location="Chicago,United States", locale= "en-us", uule = "w+CAIQICIVQ2hpY2FnbyxVbml0ZWQgU3RhdGVz",device="desktop_chrome", sename="Google CA (French)"
+                seid=184, domain="com", geo_location="Chicago,United States", locale="en-us", uule="w+CAIQICIVQ2hpY2FnbyxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google CA (French)"
             },
             new SearchProperties()
             {
-            seid =185, domain ="com", geo_location="Chicago,United States", locale= "en-us", uule = "w+CAIQICIVQ2hpY2FnbyxVbml0ZWQgU3RhdGVz",device="mobile_android", sename="Google US (Chicago)"
+                seid=185, domain="com", geo_location="Chicago,United States", locale="en-us", uule="w+CAIQICIVQ2hpY2FnbyxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Chicago)"
             },
             new SearchProperties()
             {
-            seid =186, domain ="com", geo_location="San Francisco,United States", locale= "en-us", uule = "w+CAIQICImU2FuIEZyYW5jaXNjbyxDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM",device="desktop_chrome", sename="Google US (San Francisco)"
+                seid=186, domain="com", geo_location="San Francisco,United States", locale="en-us", uule="w+CAIQICImU2FuIEZyYW5jaXNjbyxDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM", device="desktop_chrome", sename="Google US (San Francisco)"
             },
             new SearchProperties()
             {
-            seid =187, domain ="com", geo_location="San Francisco,United States", locale= "en-us", uule = "w+CAIQICImU2FuIEZyYW5jaXNjbyxDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM",device="mobile_android", sename="Google US (San Francisco, Mobile)"
+                seid=187, domain="com", geo_location="San Francisco,United States", locale="en-us", uule="w+CAIQICImU2FuIEZyYW5jaXNjbyxDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM", device="mobile_android", sename="Google US (San Francisco, Mobile)"
             },
             new SearchProperties()
             {
-            seid =188, domain ="com.pk", geo_location="Pakistan", locale= "en-pk", uule = "w+CAIQICIIUGFraXN0YW4=",device="desktop_chrome", sename="Google PK"
+                seid=188, domain="com.pk", geo_location="Pakistan", locale="en-pk", uule="w+CAIQICIIUGFraXN0YW4=", device="desktop_chrome", sename="Google PK"
             },
             new SearchProperties()
             {
-            seid =189, domain ="com.pk", geo_location="Pakistan", locale= "en-pk", uule = "w+CAIQICIIUGFraXN0YW4=",device="mobile_android", sename="Google PK (Mobile)"
+                seid=189, domain="com.pk", geo_location="Pakistan", locale="en-pk", uule="w+CAIQICIIUGFraXN0YW4=", device="mobile_android", sename="Google PK (Mobile)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-                seid =204, domain ="co.in", geo_location="India", locale= "en-in", uule = "w+CAIQICIFSW5kaWE=",device="mobile_android", sename="Google IN (Mobile)"
-
+                seid=204, domain="co.in", geo_location="India", locale="en-in", uule="w+CAIQICIFSW5kaWE=", device="mobile_android", sename="Google IN (Mobile)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-                seid =206, domain ="ca", geo_location="Canada", locale= "fr-ca", uule = "w+CAIQICIGQ2FuYWRh",device="mobile_android", sename="Google CA (French, Mobile)"
-
+                seid=206, domain="ca", geo_location="Canada", locale="fr-ca", uule="w+CAIQICIGQ2FuYWRh", device="mobile_android", sename="Google CA (French, Mobile)"
             },
-
             new SearchProperties()
             {
-                seid =207, domain ="com.my", geo_location="Malaysia", locale= "en-my", uule = "w+CAIQICIITWFsYXlzaWE=",device="mobile_android", sename="Google MY (English, Mobile)"
-
+                seid=207, domain="com.my", geo_location="Malaysia", locale="en-my", uule="w+CAIQICIITWFsYXlzaWE=", device="mobile_android", sename="Google MY (English, Mobile)"
             },
-
             new SearchProperties()
             {
-                seid =208, domain ="com.sg", geo_location="Singapore", locale= "zh-sg", uule = "w+CAIQICIJU2luZ2Fwb3J",device="mobile_android", sename="Google SG (Chinese, Mobile)"
-
+                seid=208, domain="com.sg", geo_location="Singapore", locale="zh-sg", uule="w+CAIQICIJU2luZ2Fwb3Jl", device="mobile_android", sename="Google SG (Chinese, Mobile)"
             },
-
             new SearchProperties()
             {
-                seid =209, domain ="ca", geo_location="Canada", locale= "en-ca", uule = "w+CAIQICIGQ2FuYWRh",device="desktop_chrome", sename="Google CA (English)"
-
+                seid=209, domain="ca", geo_location="Canada", locale="en-ca", uule="w+CAIQICIGQ2FuYWRh", device="desktop_chrome", sename="Google CA (English)"
             },
-
             new SearchProperties()
             {
-                seid =210, domain ="ca", geo_location="Canada", locale= "en-ca", uule = "w+CAIQICIGQ2FuYWRh",device="mobile_android", sename="Google CA (English, Mobile)"
-
+                seid=210, domain="ca", geo_location="Canada", locale="en-ca", uule="w+CAIQICIGQ2FuYWRh", device="mobile_android", sename="Google CA (English, Mobile)"
             },
-
             new SearchProperties()
             {
-                seid =211, domain ="lk", geo_location="Sri Lanka", locale= "en-lk", uule = "w+CAIQICIJU3JpIExhbmth",device="mobile_android", sename="Google LK (English)"
-
+                seid=211, domain="lk", geo_location="Sri Lanka", locale="en-lk", uule="w+CAIQICIJU3JpIExhbmth", device="mobile_android", sename="Google LK (English)"
             },
-
             new SearchProperties()
             {
-                seid =212, domain ="lk", geo_location="Sri Lanka", locale= "en-lk", uule = "w+CAIQICIJU3JpIExhbmth",device="desktop_chrome", sename="Google LK (English,Mobile)"
-
+                seid=212, domain="lk", geo_location="Sri Lanka", locale="en-lk", uule="w+CAIQICIJU3JpIExhbmth", device="desktop_chrome", sename="Google LK (English,Mobile)"
             },
-
             new SearchProperties()
             {
-                seid =213, domain ="hr", geo_location="Croatia", locale= "hr-hr", uule = "w+CAIQICIHQ3JvYXRpYQ==",device="desktop_chrome", sename="Google HR"
-
+                seid=213, domain="hr", geo_location="Croatia", locale="hr-hr", uule="w+CAIQICIHQ3JvYXRpYQ==", device="desktop_chrome", sename="Google HR"
             },
-
             new SearchProperties()
             {
-                seid =214, domain ="hr", geo_location="Croatia", locale= "hr-hr", uule = "w+CAIQICIHQ3JvYXRpYQ==",device="mobile_android", sename="Google HR (Mobile)"
-
+                seid=214, domain="hr", geo_location="Croatia", locale="hr-hr", uule="w+CAIQICIHQ3JvYXRpYQ==", device="mobile_android", sename="Google HR (Mobile)"
             },
             new SearchProperties()
             {
-                seid =215, domain ="cz", geo_location="Czech Republic", locale= "cs-cz", uule = "w+CAIQICIHQ3plY2hpYQ==",device="mobile_android", sename="Google CZ (Mobile)"
-
+                seid=215, domain="cz", geo_location="Czech Republic", locale="cs-cz", uule="w+CAIQICIHQ3plY2hpYQ==", device="mobile_android", sename="Google CZ (Mobile)"
             },
             new SearchProperties()
             {
-                seid =219, domain ="co.th", geo_location="Thailand", locale= "th-th", uule = "w+CAIQICIIVGhhaWxhbmQ=",device="mobile_android", sename="Google TH (Thai, Mobile)"
-
+                seid=219, domain="co.th", geo_location="Thailand", locale="th-th", uule="w+CAIQICIIVGhhaWxhbmQ=", device="mobile_android", sename="Google TH (Thai, Mobile)"
             },
             new SearchProperties()
             {
-                seid =223, domain ="com", geo_location="Houston,United States", locale= "en-us", uule = "w+CAIQICIbSG91c3RvbixUZXhhcyxVbml0ZWQgU3RhdGVz",device="desktop_chrome", sename="223 - Google US (Houston)"
-
+                seid=223, domain="com", geo_location="Houston,United States", locale="en-us", uule="w+CAIQICIbSG91c3RvbixUZXhhcyxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="223 - Google US (Houston)"
             },
             new SearchProperties()
             {
-                seid =224, domain ="com", geo_location="Houston,United States", locale= "en-us", uule = "w+CAIQICIbSG91c3RvbixUZXhhcyxVbml0ZWQgU3RhdGVz",device="mobile_android", sename="224 - Google US (Houston, Mobile)"
-
+                seid=224, domain="com", geo_location="Houston,United States", locale="en-us", uule="w+CAIQICIbSG91c3RvbixUZXhhcyxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="224 - Google US (Houston, Mobile)"
             },
             new SearchProperties()
             {
-                seid =225, domain ="com", geo_location="Miami,United States", locale= "en-us", uule = "w+CAIQICIbTWlhbWksRmxvcmlkYSxVbml0ZWQgU3RhdGVz",device="desktop_chrome", sename="Google US (Miami)"
-
+                seid=225, domain="com", geo_location="Miami,United States", locale="en-us", uule="w+CAIQICIbTWlhbWksRmxvcmlkYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Miami)"
             },
             new SearchProperties()
             {
-                seid =226, domain ="com", geo_location="Miami,United States", locale= "en-us", uule = "w+CAIQICIbTWlhbWksRmxvcmlkYSxVbml0ZWQgU3RhdGVz",device="mobile_android", sename="Google US (Miami, Mobile)"
-
+                seid=226, domain="com", geo_location="Miami,United States", locale="en-us", uule="w+CAIQICIbTWlhbWksRmxvcmlkYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Miami, Mobile)"
             },
             new SearchProperties()
             {
-                seid =233, domain ="ae", geo_location="United Arab Emirates", locale= "en-ae", uule = "w+CAIQICIUVW5pdGVkIEFyYWIgRW1pcmF0ZXM=",device="desktop_chrome", sename="Google AE (English)"
-
+                seid=233, domain="ae", geo_location="United Arab Emirates", locale="en-ae", uule="w+CAIQICIUVW5pdGVkIEFyYWIgRW1pcmF0ZXM=", device="desktop_chrome", sename="Google AE (English)"
             },
             new SearchProperties()
             {
-                seid =234, domain ="com.hk", geo_location="Hong Kong", locale= "en-hk", uule = "w+CAIQICIJSG9uZyBLb25n",device="desktop_chrome", sename="Google HK (English)"
-
+                seid=234, domain="com.hk", geo_location="Hong Kong", locale="en-hk", uule="w+CAIQICIJSG9uZyBLb25n", device="desktop_chrome", sename="Google HK (English)"
             },
             new SearchProperties()
             {
-                seid =235, domain ="com.mx", geo_location="Mexico", locale= "es-419-mx", uule = "w+CAIQICIGTWV4aWNv",device="mobile_android", sename="Google MX (Spanish, Mobile)"
-
+                seid=235, domain="com.mx", geo_location="Mexico", locale="es-419-mx", uule="w+CAIQICIGTWV4aWNv", device="mobile_android", sename="Google MX (Spanish, Mobile)"
             },
             new SearchProperties()
             {
-                seid =236, domain ="com.mx", geo_location="Mexico City,Mexico", locale= "es-419-mx", uule = "w+CAIQICIeTWV4aWNvIENpdHksTWV4aWNvIENpdHksTWV4aWNv",device="mobile_android", sename="Google MX (Mexico City, Mobile)"
-
+                seid=236, domain="com.mx", geo_location="Mexico City,Mexico", locale="es-419-mx", uule="w+CAIQICIeTWV4aWNvIENpdHksTWV4aWNvIENpdHksTWV4aWNv", device="mobile_android", sename="Google MX (Mexico City, Mobile)"
             },
             new SearchProperties()
             {
-                seid =237, domain ="cl", geo_location="Chile", locale= "es-419-cl", uule = "w+CAIQICIFQ2hpbGU=",device="mobile_android", sename="Google CL (Mobile)"
-
+                seid=237, domain="cl", geo_location="Chile", locale="es-419-cl", uule="w+CAIQICIFQ2hpbGU=", device="mobile_android", sename="Google CL (Mobile)"
             },
             new SearchProperties()
             {
-                seid =238, domain ="com.pe", geo_location="Peru", locale= "es-419-pe", uule = "w+CAIQICIEUGVydQ==",device="desktop_chrome", sename="Google PE"
-
+                seid=238, domain="com.pe", geo_location="Peru", locale="es-419-pe", uule="w+CAIQICIEUGVydQ==", device="desktop_chrome", sename="Google PE"
             },
             new SearchProperties()
             {
-                seid =239, domain ="com.pe", geo_location="Peru", locale= "es-419-pe", uule = "w+CAIQICIEUGVydQ==",device="mobile_android", sename="Google PE (Mobile)"
-
+                seid=239, domain="com.pe", geo_location="Peru", locale="es-419-pe", uule="w+CAIQICIEUGVydQ==", device="mobile_android", sename="Google PE (Mobile)"
             },
             new SearchProperties()
             {
-                seid =240, domain ="com.co", geo_location="Colombia", locale= "es-419-co", uule = "w+CAIQICIIQ29sb21iaWE=",device="desktop_chrome", sename="Google CO"
-
+                seid=240, domain="com.co", geo_location="Colombia", locale="es-419-co", uule="w+CAIQICIIQ29sb21iaWE=", device="desktop_chrome", sename="Google CO"
             },
             new SearchProperties()
             {
-                seid =241, domain ="com.co", geo_location="Colombia", locale= "es-419-co", uule = "w+CAIQICIIQ29sb21iaWE=",device="mobile_android", sename="Google CO (Mobile)"
-
+                seid=241, domain="com.co", geo_location="Colombia", locale="es-419-co", uule="w+CAIQICIIQ29sb21iaWE=", device="mobile_android", sename="Google CO (Mobile)"
             },
             new SearchProperties()
             {
-                seid =242, domain ="com.mx", geo_location="Mexico City,Mexico", locale= "es-419-mx", uule = "w+CAIQICIeTWV4aWNvIENpdHksTWV4aWNvIENpdHksTWV4aWNv",device="desktop_chrome", sename="Google MX (Mexico City)"
-
+                seid=242, domain="com.mx", geo_location="Mexico City,Mexico", locale="es-419-mx", uule="w+CAIQICIeTWV4aWNvIENpdHksTWV4aWNvIENpdHksTWV4aWNv", device="desktop_chrome", sename="Google MX (Mexico City)"
             },
             new SearchProperties()
             {
-                seid =243, domain ="co.id", geo_location="Indonesia", locale= "id-id", uule ="w+CAIQICIJSW5kb25lc2lh",device="desktop_chrome", sename="Google ID"
-
+                seid=243, domain="co.id", geo_location="Indonesia", locale="id-id", uule ="w+CAIQICIJSW5kb25lc2lh", device="desktop_chrome", sename="Google ID"
             },
             new SearchProperties()
             {
-                seid =244, domain ="co.id", geo_location="Indonesia", locale= "id-id", uule = "w+CAIQICIJSW5kb25lc2lh",device="mobile_android", sename="Google ID (Mobile)"
-
+                seid=244, domain="co.id", geo_location="Indonesia", locale="id-id", uule="w+CAIQICIJSW5kb25lc2lh", device="mobile_android", sename="Google ID (Mobile)"
             },
             new SearchProperties()
             {
-                seid =245, domain ="com.ph", geo_location="Philippines", locale= "fil-ph", uule = "w+CAIQICILUGhpbGlwcGluZXM=",device="desktop_chrome", sename="Google PH (Filipino)"
-
+                seid=245, domain="com.ph", geo_location="Philippines", locale="fil-ph", uule="w+CAIQICILUGhpbGlwcGluZXM=", device="desktop_chrome", sename="Google PH (Filipino)"
             },
             new SearchProperties()
             {
-                seid =246, domain ="com.ph", geo_location="Philippines", locale= "fil-ph", uule = "w+CAIQICILUGhpbGlwcGluZXM=",device="mobile_android", sename="Google PH (Filipino, Mobile)"
-
+                seid=246, domain="com.ph", geo_location="Philippines", locale="fil-ph", uule="w+CAIQICILUGhpbGlwcGluZXM=", device="mobile_android", sename="Google PH (Filipino, Mobile)"
             },
             new SearchProperties()
             {
-                seid =247, domain ="com.sg", geo_location="Singapore", locale= "en-sg", uule = "w+CAIQICIJU2luZ2Fwb3J",device="mobile_android", sename="Google SG (English, Mobile)"
-
+                seid=247, domain="com.sg", geo_location="Singapore", locale="en-sg", uule="w+CAIQICIJU2luZ2Fwb3Jl", device="mobile_android", sename="Google SG (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid =248, domain ="co.th", geo_location="Thailand", locale= "en-th", uule = "w+CAIQICIIVGhhaWxhbmQ=",device="mobile_android", sename="Google TH (English)"
-
+                seid=248, domain="co.th", geo_location="Thailand", locale="en-th", uule="w+CAIQICIIVGhhaWxhbmQ=", device="mobile_android", sename="Google TH (English)"
             },
             new SearchProperties()
             {
-                seid =249, domain ="com.hk", geo_location="Hong Kong", locale= "en-hk", uule = "w+CAIQICIJSG9uZyBLb25n",device="mobile_android", sename="Google HK (English, Mobile)"
-
+                seid=249, domain="com.hk", geo_location="Hong Kong", locale="en-hk", uule="w+CAIQICIJSG9uZyBLb25n", device="mobile_android", sename="Google HK (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid =250, domain ="com.my", geo_location="Malaysia", locale= "ms-my", uule = "w+CAIQICIITWFsYXlzaWE=",device="desktop_chrome", sename="Google MY (Malay)"
-
+                seid=250, domain="com.my", geo_location="Malaysia", locale="ms-my", uule="w+CAIQICIITWFsYXlzaWE=", device="desktop_chrome", sename="Google MY (Malay)"
             },
             new SearchProperties()
             {
-                seid =251, domain ="com.my", geo_location="Malaysia", locale= "ms-my", uule = "w+CAIQICIITWFsYXlzaWE=",device="mobile_android", sename="Google MY (Malay, Mobile)"
-
+                seid=251, domain="com.my", geo_location="Malaysia", locale="ms-my", uule="w+CAIQICIITWFsYXlzaWE=", device="mobile_android", sename="Google MY (Malay, Mobile)"
             },
             new SearchProperties()
             {
-                seid =252, domain ="co.th", geo_location="Thailand", locale= "en-th", uule = "w+CAIQICIIVGhhaWxhbmQ=",device="desktop_chrome", sename="Google TH (English, Mobile)"
-
+                seid=252, domain="co.th", geo_location="Thailand", locale="en-th", uule="w+CAIQICIIVGhhaWxhbmQ=", device="desktop_chrome", sename="Google TH (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid =253, domain ="com.sg", geo_location="Singapore", locale= "zh-sg", uule = "w+CAIQICIJU2luZ2Fwb3Jl",device="desktop_chrome", sename="Google SG (Chinese)"
-
+                seid=253, domain="com.sg", geo_location="Singapore", locale="zh-sg", uule="w+CAIQICIJU2luZ2Fwb3Jl", device="desktop_chrome", sename="Google SG (Chinese)"
             },
-
             new SearchProperties()
             {
-                seid =254, domain ="com.hk", geo_location="Hong Kong", locale= "zh-cn-hk", uule = "w+CAIQICIJSG9uZyBLb25n",device="desktop_chrome", sename="Google HK (Chinese Simplfied)"
-
+                seid=254, domain="com.hk", geo_location="Hong Kong", locale="zh-cn-hk", uule="w+CAIQICIJSG9uZyBLb25n", device="desktop_chrome", sename="Google HK (Chinese Simplfied)"
             },
             new SearchProperties()
             {
-                seid =255, domain ="com.hk", geo_location="Hong Kong", locale= "zh-cn-hk", uule = "w+CAIQICIJSG9uZyBLb25n",device="mobile_android", sename="Google HK (Chinese Simplfied, Mobile)"
-
+                seid=255, domain="com.hk", geo_location="Hong Kong", locale="zh-cn-hk", uule="w+CAIQICIJSG9uZyBLb25n", device="mobile_android", sename="Google HK (Chinese Simplfied, Mobile)"
             },
             new SearchProperties()
             {
-                seid =257, domain ="co.nz", geo_location="New Zealand", locale= "en-nz", uule = "w+CAIQICILTmV3IFplYWxhbmQ=",device="mobile_android", sename="Google NZ (Mobile)"
-
+                seid=257, domain="co.nz", geo_location="New Zealand", locale="en-nz", uule="w+CAIQICILTmV3IFplYWxhbmQ=", device="mobile_android", sename="Google NZ (Mobile)"
             },
             new SearchProperties()
             {
-                seid =258, domain ="com.tw", geo_location="Taiwan", locale= "zh-tw", uule = "w+CAIQICIGVGFpd2Fu",device="mobile_android", sename="Google TW (Chinese Traditional, Mobile)"
-
+                seid=258, domain="com.tw", geo_location="Taiwan", locale="zh-tw", uule="w+CAIQICIGVGFpd2Fu", device="mobile_android", sename="Google TW (Chinese Traditional, Mobile)"
             },
             new SearchProperties()
             {
-                seid =259, domain ="ae", geo_location="United Arab Emirates", locale= "en-ae", uule = "w+CAIQICIUVW5pdGVkIEFyYWIgRW1pcmF0ZXM=",device="mobile_android", sename="Google AE (English, Mobile)"
-
+                seid=259, domain="ae", geo_location="United Arab Emirates", locale="en-ae", uule="w+CAIQICIUVW5pdGVkIEFyYWIgRW1pcmF0ZXM=", device="mobile_android", sename="Google AE (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid =260, domain ="co.jp", geo_location="Japan", locale= "en-jp", uule = "w+CAIQICIFSmFwYW4=",device="desktop_chrome", sename="Google JP (English)"
-
+                seid=260, domain="co.jp", geo_location="Japan", locale="en-jp", uule="w+CAIQICIFSmFwYW4=", device="desktop_chrome", sename="Google JP (English)"
             },
             new SearchProperties()
             {
-                seid =261, domain ="co.jp", geo_location="Japan", locale= "en-jp", uule = "w+CAIQICIFSmFwYW4=",device="mobile_android", sename="Google JP (English, Mobile)"
-
+                seid=261, domain="co.jp", geo_location="Japan", locale="en-jp", uule="w+CAIQICIFSmFwYW4=", device="mobile_android", sename="Google JP (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid =262, domain ="dk", geo_location="Denmark", locale= "en-dk", uule = "w+CAIQICIHRGVubWFyaw==",device="desktop_chrome", sename="Google DK (English)"
-
+                seid=262, domain="dk", geo_location="Denmark", locale="en-dk", uule="w+CAIQICIHRGVubWFyaw==", device="desktop_chrome", sename="Google DK (English)"
             },
             new SearchProperties()
             {
-                seid =263, domain ="dk", geo_location="Denmark", locale= "en-dk", uule = "w+CAIQICIHRGVubWFyaw==",device="mobile_android", sename="Google DK (English, Mobile)"
-
+                seid=263, domain="dk", geo_location="Denmark", locale="en-dk", uule="w+CAIQICIHRGVubWFyaw==", device="mobile_android", sename="Google DK (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid =264, domain ="se", geo_location="Sweden", locale= "en-se", uule = "w+CAIQICIGU3dlZGV",device="desktop_chrome", sename="Google SE (English)"
-
+                seid=264, domain="se", geo_location="Sweden", locale="en-se", uule="w+CAIQICIGU3dlZGVu", device="desktop_chrome", sename="Google SE (English)"
             },
             new SearchProperties()
             {
-                seid =265, domain ="se", geo_location="Sweden", locale= "en-se", uule = "w+CAIQICIGU3dlZGV",device="mobile_android", sename="Google SE (English, Mobile)"
-
+                seid=265, domain="se", geo_location="Sweden", locale="en-se", uule="w+CAIQICIGU3dlZGVu", device="mobile_android", sename="Google SE (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid =266, domain ="no", geo_location="Norway", locale= "en-no", uule = "w+CAIQICIGTm9yd2F5",device="desktop_chrome", sename="Google NO (English)"
-
+                seid=266, domain="no", geo_location="Norway", locale="en-no", uule="w+CAIQICIGTm9yd2F5", device="desktop_chrome", sename="Google NO (English)"
             },
             new SearchProperties()
             {
-                seid =267, domain ="no", geo_location="Norway", locale= "en-no", uule = "w+CAIQICIGTm9yd2F5",device="mobile_android", sename="Google NO (English, Mobile)"
-
+                seid=267, domain="no", geo_location="Norway", locale="en-no", uule="w+CAIQICIGTm9yd2F5", device="mobile_android", sename="Google NO (English, Mobile)"
             },
-
             new SearchProperties()
             {
-                seid =268, domain ="fi", geo_location="Finland", locale= "en-fi", uule = "w+CAIQICIHRmlubGFuZA==",device="desktop_chrome", sename="Google FI (English)"
-
+                seid=268, domain="fi", geo_location="Finland", locale="en-fi", uule="w+CAIQICIHRmlubGFuZA==", device="desktop_chrome", sename="Google FI (English)"
             },
-
             new SearchProperties()
             {
-                seid =269, domain ="fi", geo_location="Finland", locale= "en-fi", uule = "w+CAIQICIHRmlubGFuZA==",device="mobile_android", sename="Google FI (English, Mobile)"
-
+                seid=269, domain="fi", geo_location="Finland", locale="en-fi", uule="w+CAIQICIHRmlubGFuZA==", device="mobile_android", sename="Google FI (English, Mobile)"
             },
-
             new SearchProperties()
             {
-                seid =270, domain ="de", geo_location="Germany", locale= "en-de", uule = "w+CAIQICIHR2VybWFueQ==",device="desktop_chrome", sename="Google DE (English)"
-
+                seid=270, domain="de", geo_location="Germany", locale="en-de", uule="w+CAIQICIHR2VybWFueQ==", device="desktop_chrome", sename="Google DE (English)"
             },
-
             new SearchProperties()
             {
-                seid =271, domain ="de", geo_location="Germany", locale= "en-de", uule = "w+CAIQICIHR2VybWFueQ==",device="mobile_android", sename="Google DE (English, Mobile)"
-
+                seid=271, domain="de", geo_location="Germany", locale="en-de", uule="w+CAIQICIHR2VybWFueQ==", device="mobile_android", sename="Google DE (English, Mobile)"
             },
-
             new SearchProperties()
             {
-                seid =272, domain ="fr", geo_location="France", locale= "en-fr", uule = "w+CAIQICIGRnJhbmNl",device="desktop_chrome", sename="272 - Google FR (English)"
-
+                seid=272, domain="fr", geo_location="France", locale="en-fr", uule="w+CAIQICIGRnJhbmNl", device="desktop_chrome", sename="272 - Google FR (English)"
             },
-
             new SearchProperties()
             {
-                seid =273, domain ="fr", geo_location="France", locale= "en-fr", uule = "w+CAIQICIGRnJhbmNl",device="mobile_android", sename="Google FR (English, Mobile)"
-
+                seid=273, domain="fr", geo_location="France", locale="en-fr", uule="w+CAIQICIGRnJhbmNl", device="mobile_android", sename="Google FR (English, Mobile)"
             },
-
             new SearchProperties()
             {
-                seid =274, domain ="it", geo_location="Italy", locale= "en-it", uule = "w+CAIQICIFSXRhbHk=",device="desktop_chrome", sename="Google IT (English)"
-
+                seid=274, domain="it", geo_location="Italy", locale="en-it", uule="w+CAIQICIFSXRhbHk=", device="desktop_chrome", sename="Google IT (English)"
             },
-
             new SearchProperties()
             {
-                seid =275, domain ="it", geo_location="Italy", locale= "en-it", uule = "w+CAIQICIFSXRhbHk=",device="mobile_android", sename="Google IT (English, Mobile)"
-
+                seid=275, domain="it", geo_location="Italy", locale="en-it", uule="w+CAIQICIFSXRhbHk=", device="mobile_android", sename="Google IT (English, Mobile)"
             },
-
             new SearchProperties()
             {
-                seid =279, domain ="co.uk", geo_location="London,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIdTG9uZG9uLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (London)"
-
+                seid=279, domain="co.uk", geo_location="London,England,United Kingdom", locale="en-gb", uule="w+CAIQICIdTG9uZG9uLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (London)"
             },
-
             new SearchProperties()
             {
-                seid =280, domain ="co.uk", geo_location="London,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIdTG9uZG9uLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (London, Mobile)"
-
+                seid=280, domain="co.uk", geo_location="London,England,United Kingdom", locale="en-gb", uule="w+CAIQICIdTG9uZG9uLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (London, Mobile)"
             },
-
             new SearchProperties()
             {
-                seid =281, domain ="co.uk", geo_location="Birmingham,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIhQmlybWluZ2hhbSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Birmingham)"
-
+                seid=281, domain="co.uk", geo_location="Birmingham,England,United Kingdom", locale="en-gb", uule="w+CAIQICIhQmlybWluZ2hhbSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Birmingham)"
             },
-
             new SearchProperties()
             {
-                seid =282, domain ="co.uk", geo_location="Birmingham,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIhQmlybWluZ2hhbSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Birmingham, Mobile)"
-
+                seid=282, domain="co.uk", geo_location="Birmingham,England,United Kingdom", locale="en-gb", uule="w+CAIQICIhQmlybWluZ2hhbSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Birmingham, Mobile)"
             },
-
             new SearchProperties()
             {
-                seid =283, domain ="co.uk", geo_location="Leeds,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIcTGVlZHMsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Leeds)"
-
+                seid=283, domain="co.uk", geo_location="Leeds,England,United Kingdom", locale="en-gb", uule="w+CAIQICIcTGVlZHMsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Leeds)"
             },
-
             new SearchProperties()
             {
-                seid =284, domain ="co.uk", geo_location="Leeds,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIcTGVlZHMsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Leeds, Mobile)"
-
+                seid=284, domain="co.uk", geo_location="Leeds,England,United Kingdom", locale="en-gb", uule="w+CAIQICIcTGVlZHMsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Leeds, Mobile)"
             },
             new SearchProperties()
             {
-                seid =285, domain ="co.uk", geo_location="Sheffield,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIgU2hlZmZpZWxkLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Sheffield)"
-
+                seid=285, domain="co.uk", geo_location="Sheffield,England,United Kingdom", locale="en-gb", uule="w+CAIQICIgU2hlZmZpZWxkLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Sheffield)"
             },
             new SearchProperties()
             {
-                seid =286, domain ="co.uk", geo_location="Sheffield,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIgU2hlZmZpZWxkLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Sheffield, Mobile)"
-
+                seid=286, domain="co.uk", geo_location="Sheffield,England,United Kingdom", locale="en-gb", uule="w+CAIQICIgU2hlZmZpZWxkLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Sheffield, Mobile)"
             },
             new SearchProperties()
             {
-                seid =287, domain ="co.uk", geo_location="Bradford,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIfQnJhZGZvcmQsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Bradford)"
-
+                seid=287, domain="co.uk", geo_location="Bradford,England,United Kingdom", locale="en-gb", uule="w+CAIQICIfQnJhZGZvcmQsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Bradford)"
             },
             new SearchProperties()
             {
-                seid =288, domain ="co.uk", geo_location="Bradford,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIfQnJhZGZvcmQsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Bradford, Mobile)"
-
+                seid=288, domain="co.uk", geo_location="Bradford,England,United Kingdom", locale="en-gb", uule="w+CAIQICIfQnJhZGZvcmQsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Bradford, Mobile)"
             },
             new SearchProperties()
             {
-                seid =289, domain ="co.uk", geo_location="Manchester,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIhTWFuY2hlc3RlcixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Manchester)"
-
+                seid=289, domain="co.uk", geo_location="Manchester,England,United Kingdom", locale="en-gb", uule="w+CAIQICIhTWFuY2hlc3RlcixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Manchester)"
             },
             new SearchProperties()
             {
-                seid =290, domain ="co.uk", geo_location="Manchester,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIhTWFuY2hlc3RlcixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Manchester, Mobile)"
-
+                seid=290, domain="co.uk", geo_location="Manchester,England,United Kingdom", locale="en-gb", uule="w+CAIQICIhTWFuY2hlc3RlcixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Manchester, Mobile)"
             },
             new SearchProperties()
             {
-                seid =291, domain ="co.uk", geo_location="Liverpool,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIgTGl2ZXJwb29sLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Liverpool)"
-
+                seid=291, domain="co.uk", geo_location="Liverpool,England,United Kingdom", locale="en-gb", uule="w+CAIQICIgTGl2ZXJwb29sLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Liverpool)"
             },
             new SearchProperties()
             {
-                seid =292, domain ="co.uk", geo_location="Liverpool,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIgTGl2ZXJwb29sLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Liverpool, Mobile)"
-
+                seid=292, domain="co.uk", geo_location="Liverpool,England,United Kingdom", locale="en-gb", uule="w+CAIQICIgTGl2ZXJwb29sLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Liverpool, Mobile)"
             },
             new SearchProperties()
             {
-                seid =293, domain ="co.uk", geo_location="Bristol,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeQnJpc3RvbCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Bristol)"
-
+                seid=293, domain="co.uk", geo_location="Bristol,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeQnJpc3RvbCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Bristol)"
             },
             new SearchProperties()
             {
-                seid =294, domain ="co.uk", geo_location="Bristol,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeQnJpc3RvbCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Bristol, Mobile)"
-
+                seid=294, domain="co.uk", geo_location="Bristol,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeQnJpc3RvbCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Bristol, Mobile)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-                seid =295, domain ="co.uk", geo_location="Newcastle,Northern Ireland,United Kingdom", locale= "en-gb", uule = "w+CAIQICIpTmV3Y2FzdGxlLE5vcnRoZXJuIElyZWxhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Newcastle)"
-
+                seid=295, domain="co.uk", geo_location="Newcastle,Northern Ireland,United Kingdom", locale="en-gb", uule="w+CAIQICIpTmV3Y2FzdGxlLE5vcnRoZXJuIElyZWxhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Newcastle)"
             },
             new SearchProperties()
             {
-                seid =296, domain ="co.uk", geo_location="Newcastle,Northern Ireland,United Kingdom", locale= "en-gb", uule = "w+CAIQICIpTmV3Y2FzdGxlLE5vcnRoZXJuIElyZWxhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Newcastle, Mobile)"
-
+                seid=296, domain="co.uk", geo_location="Newcastle,Northern Ireland,United Kingdom", locale="en-gb", uule="w+CAIQICIpTmV3Y2FzdGxlLE5vcnRoZXJuIElyZWxhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Newcastle, Mobile)"
             },
             new SearchProperties()
             {
-                seid =297, domain ="co.uk", geo_location="Sunderland,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIhU3VuZGVybGFuZCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Sunderland)"
-
+                seid=297, domain="co.uk", geo_location="Sunderland,England,United Kingdom", locale="en-gb", uule="w+CAIQICIhU3VuZGVybGFuZCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Sunderland)"
             },
             new SearchProperties()
             {
-                seid =298, domain ="co.uk", geo_location="Sunderland,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIhU3VuZGVybGFuZCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Sunderland, Mobile)"
-
+                seid=298, domain="co.uk", geo_location="Sunderland,England,United Kingdom", locale="en-gb", uule="w+CAIQICIhU3VuZGVybGFuZCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Sunderland, Mobile)"
             },
             new SearchProperties()
             {
-                seid =299, domain ="co.uk", geo_location="Wolverhampton,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIkV29sdmVyaGFtcHRvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Wolverhampton)"
-
+                seid=299, domain="co.uk", geo_location="Wolverhampton,England,United Kingdom", locale="en-gb", uule="w+CAIQICIkV29sdmVyaGFtcHRvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Wolverhampton)"
             },
-          new SearchProperties()
+            new SearchProperties()
             {
-                seid =300, domain ="co.uk", geo_location="Wolverhampton,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIkV29sdmVyaGFtcHRvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Wolverhampton, Mobile)"
-
+                seid=300, domain="co.uk", geo_location="Wolverhampton,England,United Kingdom", locale="en-gb", uule="w+CAIQICIkV29sdmVyaGFtcHRvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Wolverhampton, Mobile)"
             },
-           new SearchProperties()
+            new SearchProperties()
             {
-               seid =301, domain ="co.uk", geo_location="Plymouth,England,United Kingdom", locale= "en-gb", uule ="w+CAIQICIfUGx5bW91dGgsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Plymouth)"
+                seid=301, domain="co.uk", geo_location="Plymouth,England,United Kingdom", locale="en-gb", uule ="w+CAIQICIfUGx5bW91dGgsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Plymouth)"
             },
-           new SearchProperties()
+            new SearchProperties()
             {
-               seid =302, domain ="co.uk", geo_location="Plymouth,England,United Kingdom", locale= "en-gb", uule ="w+CAIQICIfUGx5bW91dGgsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Plymouth, Mobile)"
+                seid=302, domain="co.uk", geo_location="Plymouth,England,United Kingdom", locale="en-gb", uule ="w+CAIQICIfUGx5bW91dGgsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Plymouth, Mobile)"
             },
-         new SearchProperties()
+            new SearchProperties()
             {
-               seid =303, domain ="co.uk", geo_location="Cardiff,Wales,United Kingdom", locale= "en-gb", uule ="w+CAIQICIcQ2FyZGlmZixXYWxlcyxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Cardiff)"
+                seid=303, domain="co.uk", geo_location="Cardiff,Wales,United Kingdom", locale="en-gb", uule ="w+CAIQICIcQ2FyZGlmZixXYWxlcyxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Cardiff)"
             },
-           new SearchProperties()
+            new SearchProperties()
             {
-               seid =304, domain ="co.uk", geo_location="Cardiff,Wales,United Kingdom", locale= "en-gb", uule ="w+CAIQICIcQ2FyZGlmZixXYWxlcyxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Cardiff, Mobile)"
+                seid=304, domain="co.uk", geo_location="Cardiff,Wales,United Kingdom", locale="en-gb", uule ="w+CAIQICIcQ2FyZGlmZixXYWxlcyxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Cardiff, Mobile)"
             },
             new SearchProperties()
             {
-               seid =305, domain ="co.uk", geo_location="Oxford,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIdT3hmb3JkLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Oxford)"
+                seid=305, domain="co.uk", geo_location="Oxford,England,United Kingdom", locale="en-gb", uule="w+CAIQICIdT3hmb3JkLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Oxford)"
             },
-           new SearchProperties()
+            new SearchProperties()
             {
-               seid =306, domain ="co.uk", geo_location="Oxford,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIdT3hmb3JkLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Oxford, Mobile)"
+                seid=306, domain="co.uk", geo_location="Oxford,England,United Kingdom", locale="en-gb", uule="w+CAIQICIdT3hmb3JkLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Oxford, Mobile)"
             },
             new SearchProperties()
             {
-               seid =307, domain ="co.uk", geo_location="Cambridge,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIgQ2FtYnJpZGdlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Cambridge)"
+                seid=307, domain="co.uk", geo_location="Cambridge,England,United Kingdom", locale="en-gb", uule="w+CAIQICIgQ2FtYnJpZGdlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Cambridge)"
             },
             new SearchProperties()
             {
-               seid =308, domain ="co.uk", geo_location="Cambridge,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIgQ2FtYnJpZGdlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Cambridge, Mobile)"
+                seid=308, domain="co.uk", geo_location="Cambridge,England,United Kingdom", locale="en-gb", uule="w+CAIQICIgQ2FtYnJpZGdlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Cambridge, Mobile)"
             },
             new SearchProperties()
             {
-               seid =309, domain ="co.uk", geo_location="Belfast,Northern Ireland,United Kingdom", locale= "en-gb", uule ="w+CAIQICInQmVsZmFzdCxOb3J0aGVybiBJcmVsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Belfast)"
+                seid=309, domain="co.uk", geo_location="Belfast,Northern Ireland,United Kingdom", locale="en-gb", uule ="w+CAIQICInQmVsZmFzdCxOb3J0aGVybiBJcmVsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Belfast)"
             },
             new SearchProperties()
             {
-               seid =310, domain ="co.uk", geo_location="Belfast,Northern Ireland,United Kingdom", locale= "en-gb", uule = "w+CAIQICInQmVsZmFzdCxOb3J0aGVybiBJcmVsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Belfast, Mobile)"
+                seid=310, domain="co.uk", geo_location="Belfast,Northern Ireland,United Kingdom", locale="en-gb", uule="w+CAIQICInQmVsZmFzdCxOb3J0aGVybiBJcmVsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Belfast, Mobile)"
             },
             new SearchProperties()
             {
-               seid =311, domain ="co.uk", geo_location="Glasgow,Scotland,United Kingdom", locale= "en-gb", uule = "w+CAIQICIfR2xhc2dvdyxTY290bGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Glasgow)"
+                seid=311, domain="co.uk", geo_location="Glasgow,Scotland,United Kingdom", locale="en-gb", uule="w+CAIQICIfR2xhc2dvdyxTY290bGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Glasgow)"
             },
             new SearchProperties()
             {
-               seid =312, domain ="co.uk", geo_location="Glasgow,Scotland,United Kingdom", locale= "en-gb", uule = "w+CAIQICIfR2xhc2dvdyxTY290bGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Glasgow, Mobile)"
+                seid=312, domain="co.uk", geo_location="Glasgow,Scotland,United Kingdom", locale="en-gb", uule="w+CAIQICIfR2xhc2dvdyxTY290bGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Glasgow, Mobile)"
             },
             new SearchProperties()
             {
-               seid =313, domain ="co.uk", geo_location="Edinburgh,Scotland,United Kingdom", locale= "en-gb", uule = "w+CAIQICIhRWRpbmJ1cmdoLFNjb3RsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Edinburgh)"
+                seid=313, domain="co.uk", geo_location="Edinburgh,Scotland,United Kingdom", locale="en-gb", uule="w+CAIQICIhRWRpbmJ1cmdoLFNjb3RsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Edinburgh)"
             },
             new SearchProperties()
             {
-               seid =314, domain ="co.uk", geo_location="Edinburgh,Scotland,United Kingdom", locale= "en-gb", uule = "w+CAIQICIhRWRpbmJ1cmdoLFNjb3RsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Edinburgh, Mobile)"
+                seid=314, domain="co.uk", geo_location="Edinburgh,Scotland,United Kingdom", locale="en-gb", uule="w+CAIQICIhRWRpbmJ1cmdoLFNjb3RsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Edinburgh, Mobile)"
             },
             new SearchProperties()
             {
-               seid =315, domain ="co.uk", geo_location="Brighton,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIfQnJpZ2h0b24sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Brighton)"
+                seid=315, domain="co.uk", geo_location="Brighton,England,United Kingdom", locale="en-gb", uule="w+CAIQICIfQnJpZ2h0b24sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Brighton)"
             },
             new SearchProperties()
             {
-               seid =316, domain ="co.uk", geo_location="Brighton,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIfQnJpZ2h0b24sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Brighton, Mobile)"
+                seid=316, domain="co.uk", geo_location="Brighton,England,United Kingdom", locale="en-gb", uule="w+CAIQICIfQnJpZ2h0b24sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Brighton, Mobile)"
             },
             new SearchProperties()
             {
-               seid =317, domain ="co.uk", geo_location="Hove,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIoQnJpZ2h0b24gYW5kIEhvdmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Hove)"
+                seid=317, domain="co.uk", geo_location="Hove,England,United Kingdom", locale="en-gb", uule="w+CAIQICIoQnJpZ2h0b24gYW5kIEhvdmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Hove)"
             },
             new SearchProperties()
             {
-               seid =318, domain ="co.uk", geo_location="Hove,England,United Kingdom", locale= "en-gb", uule ="w+CAIQICIoQnJpZ2h0b24gYW5kIEhvdmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Hove, Mobile)"
+                seid=318, domain="co.uk", geo_location="Hove,England,United Kingdom", locale="en-gb", uule ="w+CAIQICIoQnJpZ2h0b24gYW5kIEhvdmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Hove, Mobile)"
             },
             new SearchProperties()
             {
-               seid =319, domain ="co.uk", geo_location="Southampton,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIiU291dGhhbXB0b24sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Southampton)"
+                seid=319, domain="co.uk", geo_location="Southampton,England,United Kingdom", locale="en-gb", uule="w+CAIQICIiU291dGhhbXB0b24sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Southampton)"
             },
-           new SearchProperties()
+            new SearchProperties()
             {
-               seid =320, domain ="co.uk", geo_location="Southampton,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIiU291dGhhbXB0b24sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Southampton, Mobile)"
+                seid=320, domain="co.uk", geo_location="Southampton,England,United Kingdom", locale="en-gb", uule="w+CAIQICIiU291dGhhbXB0b24sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Southampton, Mobile)"
             },
-           new SearchProperties()
+            new SearchProperties()
             {
-               seid =321, domain ="com.ph", geo_location="Philippines", locale= "en-ph", uule = "w+CAIQICILUGhpbGlwcGluZXM=",device="desktop_chrome", sename="Google PH (English)"
+                seid=321, domain="com.ph", geo_location="Philippines", locale="en-ph", uule="w+CAIQICILUGhpbGlwcGluZXM=", device="desktop_chrome", sename="Google PH (English)"
             },
             new SearchProperties()
             {
-               seid =322, domain ="com.ph", geo_location="Philippines", locale= "en-ph", uule = "w+CAIQICILUGhpbGlwcGluZXM=",device="mobile_android", sename="Google PH (English, Mobile)"
+                seid=322, domain="com.ph", geo_location="Philippines", locale="en-ph", uule="w+CAIQICILUGhpbGlwcGluZXM=", device="mobile_android", sename="Google PH (English, Mobile)"
             },
             new SearchProperties()
             {
-               seid =323, domain ="bs", geo_location="Bahamas", locale= "en-bs", uule = "w+CAIQICIHQmFoYW1hcw==",device="desktop_chrome", sename="Google BS"
+                seid=323, domain="bs", geo_location="Bahamas", locale="en-bs", uule="w+CAIQICIHQmFoYW1hcw==", device="desktop_chrome", sename="Google BS"
             },
             new SearchProperties()
             {
-               seid =324, domain ="bs", geo_location="Bahamas", locale= "en-bs", uule ="w+CAIQICIHQmFoYW1hcw==",device="mobile_android", sename="Google BS (Mobile)"
+                seid=324, domain="bs", geo_location="Bahamas", locale="en-bs", uule ="w+CAIQICIHQmFoYW1hcw==", device="mobile_android", sename="Google BS (Mobile)"
             },
             new SearchProperties()
             {
-               seid =325, domain ="com.jm", geo_location="Jamaica", locale= "en-jm", uule = "w+CAIQICIHSmFtYWljYQ==",device="desktop_chrome", sename="Google JM"
+                seid=325, domain="com.jm", geo_location="Jamaica", locale="en-jm", uule="w+CAIQICIHSmFtYWljYQ==", device="desktop_chrome", sename="Google JM"
             },
             new SearchProperties()
             {
-               seid =326, domain ="com.jm", geo_location="Jamaica", locale= "en-jm", uule = "w+CAIQICIHSmFtYWljYQ==",device="mobile_android", sename="Google JM (Mobile)"
+                seid=326, domain="com.jm", geo_location="Jamaica", locale="en-jm", uule="w+CAIQICIHSmFtYWljYQ==", device="mobile_android", sename="Google JM (Mobile)"
             },
             new SearchProperties()
             {
-               seid =327, domain ="com.mx", geo_location="Mexico", locale= "en-mx", uule = "w+CAIQICIGTWV4aWNv",device="desktop_chrome", sename="Google MX (English)"
+                seid=327, domain="com.mx", geo_location="Mexico", locale="en-mx", uule="w+CAIQICIGTWV4aWNv", device="desktop_chrome", sename="Google MX (English)"
             },
             new SearchProperties()
             {
-               seid =328, domain ="com.mx", geo_location="Mexico", locale= "en-mx", uule = "w+CAIQICIGTWV4aWNv",device="mobile_android", sename="Google MX (English, Mobile)"
+                seid=328, domain="com.mx", geo_location="Mexico", locale="en-mx", uule="w+CAIQICIGTWV4aWNv", device="mobile_android", sename="Google MX (English, Mobile)"
             },
             new SearchProperties()
             {
-               seid =329, domain ="com.pr", geo_location="Puerto Rico", locale= "en-pr", uule = "w+CAIQICILUHVlcnRvIFJpY28=",device="desktop_chrome", sename="Google PR (English)"
+                seid=329, domain="com.pr", geo_location="Puerto Rico", locale="en-pr", uule="w+CAIQICILUHVlcnRvIFJpY28=", device="desktop_chrome", sename="Google PR (English)"
             },
             new SearchProperties()
             {
-               seid =330, domain ="com.pr", geo_location="Puerto Rico", locale= "en-pr", uule = "w+CAIQICILUHVlcnRvIFJpY28=",device="mobile_android", sename="Google PR (English, Mobile)"
+                seid=330, domain="com.pr", geo_location="Puerto Rico", locale="en-pr", uule="w+CAIQICILUHVlcnRvIFJpY28=", device="mobile_android", sename="Google PR (English, Mobile)"
             },
             new SearchProperties()
             {
-               seid =331, domain ="com.pr", geo_location="Puerto Rico", locale= "es-419-pr", uule = "w+CAIQICILUHVlcnRvIFJpY28=",device="desktop_chrome", sename="Google PR (Spanish)"
+                seid=331, domain="com.pr", geo_location="Puerto Rico", locale="es-419-pr", uule="w+CAIQICILUHVlcnRvIFJpY28=", device="desktop_chrome", sename="Google PR (Spanish)"
             },
             new SearchProperties()
             {
-               seid =332, domain ="com.pr", geo_location="Puerto Rico", locale= "es-419-pr", uule = "w+CAIQICILUHVlcnRvIFJpY28=",device="mobile_android", sename="Google PR (Spanish, Mobile)"
+                seid=332, domain="com.pr", geo_location="Puerto Rico", locale="es-419-pr", uule="w+CAIQICILUHVlcnRvIFJpY28=", device="mobile_android", sename="Google PR (Spanish, Mobile)"
             },
             new SearchProperties()
             {
-               seid =333, domain ="ca", geo_location="Toronto,canada", locale= "en-ca", uule = "w+CAIQICIWVG9yb250byxPbnRhcmlvLENhbmFkYQ==",device="desktop_chrome", sename="Google CA (Toronto)"
+                seid=333, domain="ca", geo_location="Toronto,canada", locale="en-ca", uule="w+CAIQICIWVG9yb250byxPbnRhcmlvLENhbmFkYQ==", device="desktop_chrome", sename="Google CA (Toronto)"
             },
             new SearchProperties()
             {
-               seid =334, domain ="ca", geo_location="Toronto,canada", locale= "en-ca", uule = "w+CAIQICIWVG9yb250byxPbnRhcmlvLENhbmFkYQ==",device="mobile_android", sename="Google CA (Toronto, Mobile)"
+                seid=334, domain="ca", geo_location="Toronto,canada", locale="en-ca", uule="w+CAIQICIWVG9yb250byxPbnRhcmlvLENhbmFkYQ==", device="mobile_android", sename="Google CA (Toronto, Mobile)"
             },
             new SearchProperties()
             {
-               seid =335, domain ="co.ve", geo_location="Venezuela", locale= "es-419-ve", uule = "w+CAIQICIJVmVuZXp1ZWxh",device="desktop_chrome", sename="Google VE"
+                seid=335, domain="co.ve", geo_location="Venezuela", locale="es-419-ve", uule="w+CAIQICIJVmVuZXp1ZWxh", device="desktop_chrome", sename="Google VE"
             },
             new SearchProperties()
             {
-               seid =336, domain ="co.ve", geo_location="Venezuela", locale= "es-419-ve", uule = "w+CAIQICIJVmVuZXp1ZWxh",device="mobile_android", sename="Google VE (Mobile)"
+                seid=336, domain="co.ve", geo_location="Venezuela", locale="es-419-ve", uule="w+CAIQICIJVmVuZXp1ZWxh", device="mobile_android", sename="Google VE (Mobile)"
             },
             new SearchProperties()
             {
-               seid =337, domain ="com.ar", geo_location="Argentina", locale= "es-419-ar", uule =  "w+CAIQICIJQXJnZW50aW5h",device="mobile_android", sename="Google AR (Mobile)"
+                seid=337, domain="com.ar", geo_location="Argentina", locale="es-419-ar", uule= "w+CAIQICIJQXJnZW50aW5h", device="mobile_android", sename="Google AR (Mobile)"
             },
             new SearchProperties()
             {
-               seid =338, domain ="com", geo_location="Dallas,Texas,United States", locale= "en-us", uule = "w+CAIQICIaRGFsbGFzLFRleGFzLFVuaXRlZCBTdGF0ZXM=",device="desktop_chrome", sename="Google US (Dallas, Texas)"
+                seid=338, domain="com", geo_location="Dallas,Texas,United States", locale="en-us", uule="w+CAIQICIaRGFsbGFzLFRleGFzLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Dallas, Texas)"
             },
             new SearchProperties()
             {
-               seid =339, domain ="com", geo_location="Dallas,Texas,United States", locale= "en-us", uule = "w+CAIQICIaRGFsbGFzLFRleGFzLFVuaXRlZCBTdGF0ZXM=",device="mobile_android", sename="Google US (Dallas, Texas, Mobile)"
+                seid=339, domain="com", geo_location="Dallas,Texas,United States", locale="en-us", uule="w+CAIQICIaRGFsbGFzLFRleGFzLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Dallas, Texas, Mobile)"
             },
             new SearchProperties()
             {
-               seid =350, domain ="com.ng", geo_location="Nigeria", locale= "en-ng", uule = "w+CAIQICIHTmlnZXJpYQ==",device="mobile_android", sename="Google NG (Mobile)"
+                seid=350, domain="com.ng", geo_location="Nigeria", locale="en-ng", uule="w+CAIQICIHTmlnZXJpYQ==", device="mobile_android", sename="Google NG (Mobile)"
             },
             new SearchProperties()
             {
-               seid =351, domain ="co.ke", geo_location="Kenya", locale= "en-ke", uule = "w+CAIQICIFS2VueWE=",device="desktop_chrome", sename="Google KE (English)"
+                seid=351, domain="co.ke", geo_location="Kenya", locale="en-ke", uule="w+CAIQICIFS2VueWE=", device="desktop_chrome", sename="Google KE (English)"
             },
             new SearchProperties()
             {
-               seid =352, domain ="co.ke", geo_location="Kenya", locale= "en-ke", uule = "w+CAIQICIFS2VueWE=",device="mobile_android", sename="Google KE (English, Mobile)"
+                seid=352, domain="co.ke", geo_location="Kenya", locale="en-ke", uule="w+CAIQICIFS2VueWE=", device="mobile_android", sename="Google KE (English, Mobile)"
             },
             new SearchProperties()
             {
-               seid =353, domain ="com.au", geo_location="Sydney,Australia", locale= "en-au", uule = "w+CAIQICIgU3lkbmV5LE5ldyBTb3V0aCBXYWxlcyxBdXN0cmFsaWE=",device="desktop_chrome", sename="Google AU (Sydney)"
+                seid=353, domain="com.au", geo_location="Sydney,Australia", locale="en-au", uule="w+CAIQICIgU3lkbmV5LE5ldyBTb3V0aCBXYWxlcyxBdXN0cmFsaWE=", device="desktop_chrome", sename="Google AU (Sydney)"
             },
             new SearchProperties()
             {
-               seid =354, domain ="com.au", geo_location="Melbourne,Australia", locale= "en-au", uule = "w+CAIQICIcTWVsYm91cm5lLFZpY3RvcmlhLEF1c3RyYWxpYQ==",device="desktop_chrome", sename="Google AU (Melbourne)"
+                seid=354, domain="com.au", geo_location="Melbourne,Australia", locale="en-au", uule="w+CAIQICIcTWVsYm91cm5lLFZpY3RvcmlhLEF1c3RyYWxpYQ==", device="desktop_chrome", sename="Google AU (Melbourne)"
             },
             new SearchProperties()
             {
-               seid =355, domain ="com.au", geo_location="Brisbane,Australia", locale= "en-au", uule = "w+CAIQICIdQnJpc2JhbmUsUXVlZW5zbGFuZCxBdXN0cmFsaWE=",device="desktop_chrome", sename="Google AU (Brisbane)"
+                seid=355, domain="com.au", geo_location="Brisbane,Australia", locale="en-au", uule="w+CAIQICIdQnJpc2JhbmUsUXVlZW5zbGFuZCxBdXN0cmFsaWE=", device="desktop_chrome", sename="Google AU (Brisbane)"
             },
             new SearchProperties()
             {
-               seid =356, domain ="com.au", geo_location="Perth,Australia", locale= "en-au", uule = "w+CAIQICIhUGVydGgsV2VzdGVybiBBdXN0cmFsaWEsQXVzdHJhbGlh",device="desktop_chrome", sename="Google AU (Perth)"
+                seid=356, domain="com.au", geo_location="Perth,Australia", locale="en-au", uule="w+CAIQICIhUGVydGgsV2VzdGVybiBBdXN0cmFsaWEsQXVzdHJhbGlh", device="desktop_chrome", sename="Google AU (Perth)"
             },
             new SearchProperties()
             {
-               seid =357, domain ="com.au", geo_location="Adelaide,Australia", locale= "en-au", uule = "w+CAIQICIiQWRlbGFpZGUsU291dGggQXVzdHJhbGlhLEF1c3RyYWxpYQ==",device="desktop_chrome", sename="Google AU (Adelaide)"
+                seid=357, domain="com.au", geo_location="Adelaide,Australia", locale="en-au", uule="w+CAIQICIiQWRlbGFpZGUsU291dGggQXVzdHJhbGlhLEF1c3RyYWxpYQ==", device="desktop_chrome", sename="Google AU (Adelaide)"
             },
             new SearchProperties()
             {
-               seid =358, domain ="com.au", geo_location="Sydney,Australia", locale= "en-au", uule = "w+CAIQICIgU3lkbmV5LE5ldyBTb3V0aCBXYWxlcyxBdXN0cmFsaWE=",device="mobile_android", sename="Google AU (Sydney, Mobile)"
+                seid=358, domain="com.au", geo_location="Sydney,Australia", locale="en-au", uule="w+CAIQICIgU3lkbmV5LE5ldyBTb3V0aCBXYWxlcyxBdXN0cmFsaWE=", device="mobile_android", sename="Google AU (Sydney, Mobile)"
             },
             new SearchProperties()
             {
-               seid =359, domain ="com.au", geo_location="Melbourne,Australia", locale= "en-au", uule = "w+CAIQICIcTWVsYm91cm5lLFZpY3RvcmlhLEF1c3RyYWxpYQ==",device="mobile_android", sename="Google AU (Melbourne, Mobile)"
+                seid=359, domain="com.au", geo_location="Melbourne,Australia", locale="en-au", uule="w+CAIQICIcTWVsYm91cm5lLFZpY3RvcmlhLEF1c3RyYWxpYQ==", device="mobile_android", sename="Google AU (Melbourne, Mobile)"
             },
             new SearchProperties()
             {
-               seid =360, domain ="com.au", geo_location="Brisbane,Australia", locale= "en-au", uule = "w+CAIQICIdQnJpc2JhbmUsUXVlZW5zbGFuZCxBdXN0cmFsaWE=",device="mobile_android", sename="Google AU (Brisbane, Mobile)"
+                seid=360, domain="com.au", geo_location="Brisbane,Australia", locale="en-au", uule="w+CAIQICIdQnJpc2JhbmUsUXVlZW5zbGFuZCxBdXN0cmFsaWE=", device="mobile_android", sename="Google AU (Brisbane, Mobile)"
             },
             new SearchProperties()
             {
-               seid =361, domain ="com.au", geo_location="Perth,Australia", locale= "en-au", uule = "w+CAIQICIhUGVydGgsV2VzdGVybiBBdXN0cmFsaWEsQXVzdHJhbGlh",device="mobile_android", sename="Google AU (Perth, Mobile)"
+                seid=361, domain="com.au", geo_location="Perth,Australia", locale="en-au", uule="w+CAIQICIhUGVydGgsV2VzdGVybiBBdXN0cmFsaWEsQXVzdHJhbGlh", device="mobile_android", sename="Google AU (Perth, Mobile)"
             },
             new SearchProperties()
             {
-               seid =362, domain ="com.au", geo_location="Adelaide,Australia", locale= "en-au", uule = "w+CAIQICIiQWRlbGFpZGUsU291dGggQXVzdHJhbGlhLEF1c3RyYWxpYQ==",device="mobile_android", sename="Google AU (Adelaide, Mobile)"
+                seid=362, domain="com.au", geo_location="Adelaide,Australia", locale="en-au", uule="w+CAIQICIiQWRlbGFpZGUsU291dGggQXVzdHJhbGlhLEF1c3RyYWxpYQ==", device="mobile_android", sename="Google AU (Adelaide, Mobile)"
             },
             new SearchProperties()
             {
-               seid =363, domain ="com.bd", geo_location="Bangladesh", locale= "en-bd", uule =  "w+CAIQICIKQmFuZ2xhZGVzaA",device="desktop_chrome", sename="Google BD"
+                seid=363, domain="com.bd", geo_location="Bangladesh", locale="en-bd", uule= "w+CAIQICIKQmFuZ2xhZGVzaA", device="desktop_chrome", sename="Google BD"
             },
             new SearchProperties()
             {
-               seid =364, domain ="com.bd", geo_location="Bangladesh", locale= "en-bd", uule = "w+CAIQICIKQmFuZ2xhZGVzaA",device="mobile_android", sename="Google BD (Mobile)"
+                seid=364, domain="com.bd", geo_location="Bangladesh", locale="en-bd", uule="w+CAIQICIKQmFuZ2xhZGVzaA", device="mobile_android", sename="Google BD (Mobile)"
             },
             new SearchProperties()
             {
-               seid =365, domain ="lv", geo_location="Latvia", locale= "lv-lv", uule = "w+CAIQICIGTGF0dmlh",device="desktop_chrome", sename="Google LV"
+                seid=365, domain="lv", geo_location="Latvia", locale="lv-lv", uule="w+CAIQICIGTGF0dmlh", device="desktop_chrome", sename="Google LV"
             },
             new SearchProperties()
             {
-               seid =366, domain ="lv", geo_location="Latvia", locale= "lv-lv", uule = "w+CAIQICIGTGF0dmlh",device="mobile_android", sename="Google LV (Mobile)"
+                seid=366, domain="lv", geo_location="Latvia", locale="lv-lv", uule="w+CAIQICIGTGF0dmlh", device="mobile_android", sename="Google LV (Mobile)"
             },
             new SearchProperties()
             {
-               seid =367, domain ="com", geo_location="Aspen,Colorado,United States", locale=  "en-us", uule = "w+CAIQICIcQXNwZW4sQ29sb3JhZG8sVW5pdGVkIFN0YXRlcw==",device="desktop_chrome", sename="Google US (Aspen, Colorado)"
+                seid=367, domain="com", geo_location="Aspen,Colorado,United States", locale= "en-us", uule="w+CAIQICIcQXNwZW4sQ29sb3JhZG8sVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Aspen, Colorado)"
             },
             new SearchProperties()
             {
-               seid =368, domain ="com", geo_location="Aspen,Colorado,United States", locale=  "en-us", uule = "w+CAIQICIcQXNwZW4sQ29sb3JhZG8sVW5pdGVkIFN0YXRlcw==",device="mobile_android", sename="Google US (Aspen, Colorado, Mobile)"
+                seid=368, domain="com", geo_location="Aspen,Colorado,United States", locale= "en-us", uule="w+CAIQICIcQXNwZW4sQ29sb3JhZG8sVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Aspen, Colorado, Mobile)"
             },
             new SearchProperties()
             {
-               seid =369, domain ="com", geo_location="Napa,California,United States", locale=  "en-us", uule = "w+CAIQICIfbmFwYSwgY2FsaWZvcm5pYSwgdW5pdGVkIHN0YXRlcw==",device="desktop_chrome", sename="Google US (Napa, California)"
+                seid=369, domain="com", geo_location="Napa,California,United States", locale= "en-us", uule="w+CAIQICIfbmFwYSwgY2FsaWZvcm5pYSwgdW5pdGVkIHN0YXRlcw==", device="desktop_chrome", sename="Google US (Napa, California)"
             },
             new SearchProperties()
             {
-               seid =370, domain ="com", geo_location="Napa,California,United States", locale=  "en-us", uule = "w+CAIQICIfbmFwYSwgY2FsaWZvcm5pYSwgdW5pdGVkIHN0YXRlcw==",device="mobile_android", sename="Google US (Napa, California, Mobile)"
+                seid=370, domain="com", geo_location="Napa,California,United States", locale= "en-us", uule="w+CAIQICIfbmFwYSwgY2FsaWZvcm5pYSwgdW5pdGVkIHN0YXRlcw==", device="mobile_android", sename="Google US (Napa, California, Mobile)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =371, domain ="com.om", geo_location="Oman", locale= "ar-om", uule = "w+CAIQICIET21hbg",device="desktop_chrome", sename="Google OM (Arabic)"
+                seid=371, domain="com.om", geo_location="Oman", locale="ar-om", uule="w+CAIQICIET21hbg", device="desktop_chrome", sename="Google OM (Arabic)"
             },
-              new SearchProperties()
+            new SearchProperties()
             {
-               seid =372, domain ="com.om", geo_location="Oman", locale= "ar-om", uule = "w+CAIQICIET21hbg",device="mobile_android", sename="Google OM (Arabic, Mobile)"
+                seid=372, domain="com.om", geo_location="Oman", locale="ar-om", uule="w+CAIQICIET21hbg", device="mobile_android", sename="Google OM (Arabic, Mobile)"
             },
-              new SearchProperties()
+            new SearchProperties()
             {
-               seid =373, domain ="com.om", geo_location="Oman", locale= "en-om", uule = "w+CAIQICIET21hbg",device="desktop_chrome", sename="Google OM (English)"
+                seid=373, domain="com.om", geo_location="Oman", locale="en-om", uule="w+CAIQICIET21hbg", device="desktop_chrome", sename="Google OM (English)"
             },
-              new SearchProperties()
+            new SearchProperties()
             {
-               seid =374, domain ="com.om", geo_location="Oman", locale= "en-om", uule = "w+CAIQICIET21hbg",device="mobile_android", sename="Google OM (English, Mobile)"
+                seid=374, domain="com.om", geo_location="Oman", locale="en-om", uule="w+CAIQICIET21hbg", device="mobile_android", sename="Google OM (English, Mobile)"
             },
-            // new SearchProperties()
-            //{
-            //   seid =381, domain ="co.uk", geo_location="United Kingdom", locale= "en-gb", uule ="w+CAIQICIOVW5pdGVkIEtpbmdkb20=",device="desktop_chrome"Google UK (Images, Image URL)"Google UK (Images, Image URL)"
-            //},
-            // new SearchProperties()
-            //{
-            //   seid =382, domain ="co.uk", geo_location="United Kingdom", locale= "en-gb", uule ="w+CAIQICIOVW5pdGVkIEtpbmdkb20=",device="mobile_android"Google UK (Images, Mobile, Page URL)"Google UK (Images, Mobile, Page URL)"
-            //},
-            //  new SearchProperties()
-            //{
-            //   seid =383, domain ="co.uk", geo_location="United Kingdom", locale= "en-gb", uule ="w+CAIQICIOVW5pdGVkIEtpbmdkb20=",device="mobile_android"Google UK (Images, Mobile, Image URL)"Google UK (Images, Mobile, Image URL)"
-            //},
-              new SearchProperties()
+            new SearchProperties()
             {
-               seid =384, domain ="co.uk", geo_location="Hemel Hempstead,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIfSGVtZWwgSGVtcHN0ZWFkLCBVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Hemel Hempstead)"
+                seid=384, domain="co.uk", geo_location="Hemel Hempstead,England,United Kingdom", locale="en-gb", uule="w+CAIQICIfSGVtZWwgSGVtcHN0ZWFkLCBVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Hemel Hempstead)"
             },
-              new SearchProperties()
+            new SearchProperties()
             {
-               seid =385, domain ="co.uk", geo_location="Hemel Hempstead,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIfSGVtZWwgSGVtcHN0ZWFkLCBVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Hemel Hempstead, Mobile)"
+                seid=385, domain="co.uk", geo_location="Hemel Hempstead,England,United Kingdom", locale="en-gb", uule="w+CAIQICIfSGVtZWwgSGVtcHN0ZWFkLCBVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Hemel Hempstead, Mobile)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =386, domain ="co.uk", geo_location="Leicester,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIZTGVpY2VzdGVyLCBVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Leicester)"
+                seid=386, domain="co.uk", geo_location="Leicester,England,United Kingdom", locale="en-gb", uule="w+CAIQICIZTGVpY2VzdGVyLCBVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Leicester)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =387, domain ="co.uk", geo_location="Leicester,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIZTGVpY2VzdGVyLCBVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Leicester, Mobile)"
+                seid=387, domain="co.uk", geo_location="Leicester,England,United Kingdom", locale="en-gb", uule="w+CAIQICIZTGVpY2VzdGVyLCBVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Leicester, Mobile)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =388, domain ="co.uk", geo_location="Nottingham,England,United Kingdom", locale= "en-gb", uule ="w+CAIQICIaTm90dGluZ2hhbSwgVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Nottingham)"
+                seid=388, domain="co.uk", geo_location="Nottingham,England,United Kingdom", locale="en-gb", uule ="w+CAIQICIaTm90dGluZ2hhbSwgVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Nottingham)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =389, domain ="co.uk", geo_location="Nottingham,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIaTm90dGluZ2hhbSwgVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Nottingham, Mobile)"
+                seid=389, domain="co.uk", geo_location="Nottingham,England,United Kingdom", locale="en-gb", uule="w+CAIQICIaTm90dGluZ2hhbSwgVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Nottingham, Mobile)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =390, domain ="co.uk", geo_location="Portsmouth,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIaUG9ydHNtb3V0aCwgVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Portsmouth)"
+                seid=390, domain="co.uk", geo_location="Portsmouth,England,United Kingdom", locale="en-gb", uule="w+CAIQICIaUG9ydHNtb3V0aCwgVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Portsmouth)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =391, domain ="co.uk", geo_location="Portsmouth,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIaUG9ydHNtb3V0aCwgVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Portsmouth, Mobile)"
+                seid=391, domain="co.uk", geo_location="Portsmouth,England,United Kingdom", locale="en-gb", uule="w+CAIQICIaUG9ydHNtb3V0aCwgVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Portsmouth, Mobile)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =392, domain ="co.uk", geo_location="Reading,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIXUmVhZGluZywgVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Reading)"
+                seid=392, domain="co.uk", geo_location="Reading,England,United Kingdom", locale="en-gb", uule="w+CAIQICIXUmVhZGluZywgVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Reading)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =393, domain ="co.uk", geo_location="Reading,England,United Kingdom", locale= "en-gb", uule ="w+CAIQICIXUmVhZGluZywgVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Reading, Mobile)"
+                seid=393, domain="co.uk", geo_location="Reading,England,United Kingdom", locale="en-gb", uule ="w+CAIQICIXUmVhZGluZywgVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Reading, Mobile)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =394, domain ="co.uk", geo_location="Stoke-on-Trent,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeU3Rva2Utb24tVHJlbnQsIFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Stoke"
+                seid=394, domain="co.uk", geo_location="Stoke-on-Trent,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeU3Rva2Utb24tVHJlbnQsIFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Stoke"
             },
-              new SearchProperties()
+            new SearchProperties()
             {
-               seid =395, domain ="co.uk", geo_location="Stoke-on-Trent,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeU3Rva2Utb24tVHJlbnQsIFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Stoke"
+                seid=395, domain="co.uk", geo_location="Stoke-on-Trent,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeU3Rva2Utb24tVHJlbnQsIFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Stoke"
             },
-              new SearchProperties()
+            new SearchProperties()
             {
-               seid =396, domain ="co.uk", geo_location="Swansea,Wales,United Kingdom", locale= "en-gb", uule = "w+CAIQICIXU3dhbnNlYSwgVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Swansea)"
+                seid=396, domain="co.uk", geo_location="Swansea,Wales,United Kingdom", locale="en-gb", uule="w+CAIQICIXU3dhbnNlYSwgVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Swansea)"
             },
-              new SearchProperties()
+            new SearchProperties()
             {
-               seid =397, domain ="co.uk", geo_location="Swansea,Wales,United Kingdom", locale= "en-gb", uule = "w+CAIQICIXU3dhbnNlYSwgVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Swansea, Mobile)"
+                seid=397, domain="co.uk", geo_location="Swansea,Wales,United Kingdom", locale="en-gb", uule="w+CAIQICIXU3dhbnNlYSwgVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Swansea, Mobile)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =398, domain ="com.vn", geo_location="Vietnam", locale= "vi-vn", uule =  "w+CAIQICIHVmlldG5hbQ==",device="mobile_android", sename="Google VN (Mobile)"
+                seid=398, domain="com.vn", geo_location="Vietnam", locale="vi-vn", uule= "w+CAIQICIHVmlldG5hbQ==", device="mobile_android", sename="Google VN (Mobile)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =399, domain ="com.mm", geo_location="Myanmar", locale= "my-mm", uule = "w+CAIQICIHTXlhbm1hcg==",device="desktop_chrome", sename="Google MM"
+                seid=399, domain="com.mm", geo_location="Myanmar", locale="my-mm", uule="w+CAIQICIHTXlhbm1hcg==", device="desktop_chrome", sename="Google MM"
             },
-              new SearchProperties()
+            new SearchProperties()
             {
-               seid =400, domain ="com.mm", geo_location="Myanmar", locale= "my-mm", uule ="w+CAIQICIHTXlhbm1hcg==",device="mobile_android", sename="Google MM (Mobile)"
+                seid=400, domain="com.mm", geo_location="Myanmar", locale="my-mm", uule ="w+CAIQICIHTXlhbm1hcg==", device="mobile_android", sename="Google MM (Mobile)"
             },
-              new SearchProperties()
+            new SearchProperties()
             {
-               seid =403, domain ="ro", geo_location="Romania", locale= "ro-ro", uule = "w+CAIQICIHUm9tYW5pYQ==",device="mobile_android", sename="Google RO (Mobile)"
+                seid=403, domain="ro", geo_location="Romania", locale="ro-ro", uule="w+CAIQICIHUm9tYW5pYQ==", device="mobile_android", sename="Google RO (Mobile)"
             },
-              new SearchProperties()
+            new SearchProperties()
             {
-               seid =404, domain ="ch", geo_location="Switzerland", locale= "en-ch", uule = "w+CAIQICILU3dpdHplcmxhbmQ=",device="desktop_chrome", sename="Google CH (English)"
+                seid=404, domain="ch", geo_location="Switzerland", locale="en-ch", uule="w+CAIQICILU3dpdHplcmxhbmQ=", device="desktop_chrome", sename="Google CH (English)"
             },
-               new SearchProperties()
+            new SearchProperties()
             {
-               seid =405, domain ="ch", geo_location="Switzerland", locale= "en-ch", uule = "w+CAIQICILU3dpdHplcmxhbmQ=",device="mobile_android", sename="Google CH (English, Mobile)"
+                seid=405, domain="ch", geo_location="Switzerland", locale="en-ch", uule="w+CAIQICILU3dpdHplcmxhbmQ=", device="mobile_android", sename="Google CH (English, Mobile)"
             },
-               new SearchProperties()
+            new SearchProperties()
             {
-               seid =406, domain ="com.bh", geo_location="Bahrain", locale= "en-bh", uule = "w+CAIQICIHQmFocmFpbg==",device="mobile_android", sename="Google BH (English, Mobile)"
+                seid=406, domain="com.bh", geo_location="Bahrain", locale="en-bh", uule="w+CAIQICIHQmFocmFpbg==", device="mobile_android", sename="Google BH (English, Mobile)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =407, domain ="com.eg", geo_location="Egypt", locale= "en-eg", uule = "w+CAIQICIFRWd5cHQ=",device="mobile_android", sename="Google EG (English, Mobile)"
+                seid=407, domain="com.eg", geo_location="Egypt", locale="en-eg", uule="w+CAIQICIFRWd5cHQ=", device="mobile_android", sename="Google EG (English, Mobile)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =408, domain ="jo", geo_location="Jordan", locale= "en-jo", uule = "w+CAIQICIGSm9yZGFu",device="mobile_android", sename="Google JO (English, Mobile)"
+                seid=408, domain="jo", geo_location="Jordan", locale="en-jo", uule="w+CAIQICIGSm9yZGFu", device="mobile_android", sename="Google JO (English, Mobile)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =409, domain ="com.kw", geo_location="Kuwait", locale= "en-kw", uule = "w+CAIQICIGS3V3YWl0",device="mobile_android", sename="Google KW (English, Mobile)"
+                seid=409, domain="com.kw", geo_location="Kuwait", locale="en-kw", uule="w+CAIQICIGS3V3YWl0", device="mobile_android", sename="Google KW (English, Mobile)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =410, domain ="com.lb", geo_location="Lebanon", locale= "en-lb", uule = "w+CAIQICIHTGViYW5vbg==",device="mobile_android", sename="Google LB (English, Mobile)"
+                seid=410, domain="com.lb", geo_location="Lebanon", locale="en-lb", uule="w+CAIQICIHTGViYW5vbg==", device="mobile_android", sename="Google LB (English, Mobile)"
             },
-              new SearchProperties()
+            new SearchProperties()
             {
-               seid =411, domain ="com.qa", geo_location="Qatar", locale= "en-qa", uule = "w+CAIQICIFUWF0YXI=",device="mobile_android", sename="Google QA (English, Mobile)"
+                seid=411, domain="com.qa", geo_location="Qatar", locale="en-qa", uule="w+CAIQICIFUWF0YXI=", device="mobile_android", sename="Google QA (English, Mobile)"
             },
-              new SearchProperties()
+            new SearchProperties()
             {
-               seid =412, domain ="com.sa", geo_location="Saudi Arabia", locale= "en-sa", uule = "w+CAIQICIMU2F1ZGkgQXJhYmlh",device="mobile_android", sename="Google SA (English, Mobile)"
+                seid=412, domain="com.sa", geo_location="Saudi Arabia", locale="en-sa", uule="w+CAIQICIMU2F1ZGkgQXJhYmlh", device="mobile_android", sename="Google SA (English, Mobile)"
             },
-               new SearchProperties()
+            new SearchProperties()
             {
-               seid =413, domain ="com.bh", geo_location="Bahrain", locale= "en-bh", uule = "w+CAIQICIHQmFocmFpbg==",device="desktop_chrome", sename="Google BH (English)"
+                seid=413, domain="com.bh", geo_location="Bahrain", locale="en-bh", uule="w+CAIQICIHQmFocmFpbg==", device="desktop_chrome", sename="Google BH (English)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =414, domain ="com.eg", geo_location="Egypt", locale= "en-eg", uule = "w+CAIQICIFRWd5cHQ=",device="desktop_chrome", sename="Google EG (English)"
+                seid=414, domain="com.eg", geo_location="Egypt", locale="en-eg", uule="w+CAIQICIFRWd5cHQ=", device="desktop_chrome", sename="Google EG (English)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =415, domain ="jo", geo_location="Jordan", locale= "en-jo", uule = "w+CAIQICIGSm9yZGFu",device="desktop_chrome", sename="Google JO (English)"
+                seid=415, domain="jo", geo_location="Jordan", locale="en-jo", uule="w+CAIQICIGSm9yZGFu", device="desktop_chrome", sename="Google JO (English)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =416, domain ="com.kw", geo_location="Kuwait", locale= "en-kw", uule = "w+CAIQICIGS3V3YWl0",device="desktop_chrome", sename="Google KW (English)"
+                seid=416, domain="com.kw", geo_location="Kuwait", locale="en-kw", uule="w+CAIQICIGS3V3YWl0", device="desktop_chrome", sename="Google KW (English)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-           seid =417, domain ="com.lb", geo_location="Lebanon", locale= "en-lb", uule = "w+CAIQICIHTGViYW5vbg==",device="desktop_chrome", sename="Google LB (English)"
+                seid=417, domain="com.lb", geo_location="Lebanon", locale="en-lb", uule="w+CAIQICIHTGViYW5vbg==", device="desktop_chrome", sename="Google LB (English)"
             },
-              new SearchProperties()
+            new SearchProperties()
             {
-               seid =418, domain ="com.qa", geo_location="Qatar", locale= "en-qa", uule = "w+CAIQICIFUWF0YXI=",device="desktop_chrome", sename="Google QA (English)"
+                seid=418, domain="com.qa", geo_location="Qatar", locale="en-qa", uule="w+CAIQICIFUWF0YXI=", device="desktop_chrome", sename="Google QA (English)"
             },
-              new SearchProperties()
+            new SearchProperties()
             {
-               seid =419, domain ="com.sa", geo_location="Saudi Arabia", locale= "en-sa", uule = "w+CAIQICIMU2F1ZGkgQXJhYmlh",device="desktop_chrome", sename="Google SA (English)"
+                seid=419, domain="com.sa", geo_location="Saudi Arabia", locale="en-sa", uule="w+CAIQICIMU2F1ZGkgQXJhYmlh", device="desktop_chrome", sename="Google SA (English)"
             },
-              new SearchProperties()
+            new SearchProperties()
             {
-               seid =420, domain ="com.bh", geo_location="Bahrain", locale= "ar-bh", uule = "w+CAIQICIHQmFocmFpbg==",device="mobile_android", sename="Google BH (Arabic, Mobile)"
+                seid=420, domain="com.bh", geo_location="Bahrain", locale="ar-bh", uule="w+CAIQICIHQmFocmFpbg==", device="mobile_android", sename="Google BH (Arabic, Mobile)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =421, domain ="com.eg", geo_location="Egypt", locale= "ar-eg", uule = "w+CAIQICIFRWd5cHQ=",device="mobile_android", sename="Google EG (Arabic, Mobile)"
+                seid=421, domain="com.eg", geo_location="Egypt", locale="ar-eg", uule="w+CAIQICIFRWd5cHQ=", device="mobile_android", sename="Google EG (Arabic, Mobile)"
             },
             new SearchProperties()
             {
-               seid =422, domain ="jo", geo_location="Jordan", locale= "ar-jo", uule = "w+CAIQICIGSm9yZGFu",device="mobile_android", sename="Google JO (Arabic, Mobile)"
+                seid=422, domain="jo", geo_location="Jordan", locale="ar-jo", uule="w+CAIQICIGSm9yZGFu", device="mobile_android", sename="Google JO (Arabic, Mobile)"
             },
             new SearchProperties()
             {
-               seid =423, domain ="com.kw", geo_location="Kuwait", locale= "ar-kw", uule = "w+CAIQICIGS3V3YWl0",device="mobile_android", sename="Google KW (Arabic, Mobile)"
+                seid=423, domain="com.kw", geo_location="Kuwait", locale="ar-kw", uule="w+CAIQICIGS3V3YWl0", device="mobile_android", sename="Google KW (Arabic, Mobile)"
             },
             new SearchProperties()
             {
-               seid =424, domain ="com.lb", geo_location="Lebanon", locale= "ar-lb", uule = "w+CAIQICIHTGViYW5vbg==",device="mobile_android", sename="Google LB (Arabic, Mobile)"
+                seid=424, domain="com.lb", geo_location="Lebanon", locale="ar-lb", uule="w+CAIQICIHTGViYW5vbg==", device="mobile_android", sename="Google LB (Arabic, Mobile)"
             },
             new SearchProperties()
             {
-               seid =425, domain ="com.qa", geo_location="Qatar", locale= "ar-qa", uule = "w+CAIQICIFUWF0YXI=",device="mobile_android", sename="Google QA (Arabic, Mobile)"
+                seid=425, domain="com.qa", geo_location="Qatar", locale="ar-qa", uule="w+CAIQICIFUWF0YXI=", device="mobile_android", sename="Google QA (Arabic, Mobile)"
             },
             new SearchProperties()
             {
-               seid =426, domain ="co.kr", geo_location="South Korea", locale="ko-kr", uule = "w+CAIQICILU291dGggS29yZWE=",device="mobile_android", sename="Google KR (korean, Mobile)"
+                seid=426, domain="co.kr", geo_location="South Korea", locale="ko-kr", uule="w+CAIQICILU291dGggS29yZWE=", device="mobile_android", sename="Google KR (korean, Mobile)"
             },
             new SearchProperties()
             {
-               seid =427, domain ="co.kr", geo_location="South Korea", locale="ko-kr", uule = "w+CAIQICILU291dGggS29yZWE=",device="desktop_chrome", sename="Google KR (korean)"
+                seid=427, domain="co.kr", geo_location="South Korea", locale="ko-kr", uule="w+CAIQICILU291dGggS29yZWE=", device="desktop_chrome", sename="Google KR (korean)"
             },
             new SearchProperties()
             {
-               seid =428, domain ="cz", geo_location="Czech Republic", locale = "en-cz", uule = "w+CAIQICIOQ3plY2ggUmVwdWJsaWM=",device="desktop_chrome", sename="Google CZ (English)"
+                seid=428, domain="cz", geo_location="Czech Republic", locale = "en-cz", uule="w+CAIQICIOQ3plY2ggUmVwdWJsaWM=", device="desktop_chrome", sename="Google CZ (English)"
             },
             new SearchProperties()
             {
-                seid =429, domain ="cz", geo_location="Czech Republic", locale = "en-cz", uule = "w+CAIQICIOQ3plY2ggUmVwdWJsaWM=",device="mobile_android", sename="Google CZ (English, Mobile)"
+                seid=429, domain="cz", geo_location="Czech Republic", locale = "en-cz", uule="w+CAIQICIOQ3plY2ggUmVwdWJsaWM=", device="mobile_android", sename="Google CZ (English, Mobile)"
             },
             new SearchProperties()
             {
-               seid =430, domain ="com.mt", geo_location="Malta", locale = "en-mt", uule = "w+CAIQICIFbWFsdGE=",device="desktop_chrome", sename="Google Malta (English)"
+                seid=430, domain="com.mt", geo_location="Malta", locale = "en-mt", uule="w+CAIQICIFbWFsdGE=", device="desktop_chrome", sename="Google Malta (English)"
             },
             new SearchProperties()
             {
-               seid =431, domain ="com", geo_location="Malta", locale = "en-mt", uule = "w+CAIQICIFbWFsdGE=",device="mobile_android", sename="Google Malta (English, Mobile)"
+                seid=431, domain="com.mt", geo_location="Malta", locale = "en-mt", uule="w+CAIQICIFbWFsdGE=", device="mobile_android", sename="Google Malta (English, Mobile)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-                seid =432, domain ="is", geo_location="Iceland", locale = "is-is", uule = "w+CAIQICIHSWNlbGFuZA==",device="desktop_chrome", sename="Google IS (Icelandic)"
+                seid=432, domain="is", geo_location="Iceland", locale = "is-is", uule="w+CAIQICIHSWNlbGFuZA==", device="desktop_chrome", sename="Google IS (Icelandic)"
             },
-              new SearchProperties()
+            new SearchProperties()
             {
-                seid =433, domain ="is", geo_location="Iceland", locale = "is-is", uule = "w+CAIQICIHSWNlbGFuZA==",device="mobile_android", sename="Google IS (Icelandic Mobile)"
+                seid=433, domain="is", geo_location="Iceland", locale = "is-is", uule="w+CAIQICIHSWNlbGFuZA==", device="mobile_android", sename="Google IS (Icelandic Mobile)"
             },
-               new SearchProperties()
+            new SearchProperties()
             {
-                seid =434, domain ="is", geo_location="Iceland", locale = "en-is", uule = "w+CAIQICIHSWNlbGFuZA==",device="desktop_chrome", sename="Google IS (English)"
+                seid=434, domain="is", geo_location="Iceland", locale = "en-is", uule="w+CAIQICIHSWNlbGFuZA==", device="desktop_chrome", sename="Google IS (English)"
             },
-                new SearchProperties()
+            new SearchProperties()
             {
-                seid =435, domain ="is", geo_location="Iceland", locale = "en-is", uule = "w+CAIQICIHSWNlbGFuZA==",device="mobile_android", sename="Google IS (English Mobile)"
+                seid=435, domain="is", geo_location="Iceland", locale = "en-is", uule="w+CAIQICIHSWNlbGFuZA==", device="mobile_android", sename="Google IS (English Mobile)"
             },
-                new SearchProperties()
+            new SearchProperties()
             {
-               seid =436, domain ="co.uk", geo_location="Peterborough,England,United Kingdom", locale = "en-gb", uule = "w+CAIQICIjUGV0ZXJib3JvdWdoLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Peterborough)"
+                seid=436, domain="co.uk", geo_location="Peterborough,England,United Kingdom", locale="en-gb", uule="w+CAIQICIjUGV0ZXJib3JvdWdoLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Peterborough)"
             },
-                new SearchProperties()
+            new SearchProperties()
             {
-               seid =437, domain ="co.uk", geo_location="Peterborough,England,United Kingdom", locale = "en-gb", uule = "w+CAIQICIjUGV0ZXJib3JvdWdoLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Peterborough, Mobile)"
+                seid=437, domain="co.uk", geo_location="Peterborough,England,United Kingdom", locale="en-gb", uule="w+CAIQICIjUGV0ZXJib3JvdWdoLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Peterborough, Mobile)"
             },
-                 new SearchProperties()
+            new SearchProperties()
             {
-                seid =438, domain ="com.tw", geo_location="Taiwan", locale= "en-tw", uule = "w+CAIQICIGVGFpd2Fu",device="desktop_chrome", sename="Google TW (English)"
+                seid=438, domain="com.tw", geo_location="Taiwan", locale="en-tw", uule="w+CAIQICIGVGFpd2Fu", device="desktop_chrome", sename="Google TW (English)"
             },
-                 new SearchProperties()
+            new SearchProperties()
             {
-                seid = 439, domain = "com.tw", geo_location = "Taiwan", locale = "en-tw", uule = "w+CAIQICIGVGFpd2Fu",device = "mobile_android", sename="Google TW (English, Mobile)"
+                seid=439, domain="com.tw", geo_location="Taiwan", locale="en-tw", uule="w+CAIQICIGVGFpd2Fu", device="mobile_android", sename="Google TW (English, Mobile)"
             },
-                 new SearchProperties()
+            new SearchProperties()
             {
-               seid =441, domain ="co.uk", geo_location="Newcastle upon Tyne,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIqTmV3Y2FzdGxlIHVwb24gVHluZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Newcastle upon Tyne, England)"
+                seid=441, domain="co.uk", geo_location="Newcastle upon Tyne,England,United Kingdom", locale="en-gb", uule="w+CAIQICIqTmV3Y2FzdGxlIHVwb24gVHluZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Newcastle upon Tyne, England)"
             },
             new SearchProperties()
             {
-               seid =442, domain ="co.uk", geo_location="Newcastle upon Tyne,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIqTmV3Y2FzdGxlIHVwb24gVHluZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Newcastle upon Tyne, England, Mobile)"
+                seid=442, domain="co.uk", geo_location="Newcastle upon Tyne,England,United Kingdom", locale="en-gb", uule="w+CAIQICIqTmV3Y2FzdGxlIHVwb24gVHluZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Newcastle upon Tyne, England, Mobile)"
             },
             new SearchProperties()
             {
-               seid =443, domain ="co.uk", geo_location="E1,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIZRTEsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (London E1)"
+                seid=443, domain="co.uk", geo_location="E1,England,United Kingdom", locale="en-gb", uule="w+CAIQICIZRTEsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (London E1)"
             },
             new SearchProperties()
             {
-               seid =444, domain ="co.uk", geo_location="E1,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIZRTEsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (London E1, Mobile)"
+                seid=444, domain="co.uk", geo_location="E1,England,United Kingdom", locale="en-gb", uule="w+CAIQICIZRTEsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (London E1, Mobile)"
             },
             new SearchProperties()
             {
-               seid =445, domain ="co.uk", geo_location="NW1,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIaTlcxLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (London NW1)"
+                seid=445, domain="co.uk", geo_location="NW1,England,United Kingdom", locale="en-gb", uule="w+CAIQICIaTlcxLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (London NW1)"
             },
             new SearchProperties()
             {
-               seid =446, domain ="co.uk", geo_location="NW1,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIaTlcxLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (London NW1, Mobile)"
+                seid=446, domain="co.uk", geo_location="NW1,England,United Kingdom", locale="en-gb", uule="w+CAIQICIaTlcxLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (London NW1, Mobile)"
             },
             new SearchProperties()
             {
-               seid =447, domain ="co.uk", geo_location="SE1,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIaU0UxLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (London SE1)"
+                seid=447, domain="co.uk", geo_location="SE1,England,United Kingdom", locale="en-gb", uule="w+CAIQICIaU0UxLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (London SE1)"
             },
             new SearchProperties()
             {
-               seid =448, domain ="co.uk", geo_location="SE1,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIaU0UxLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (London SE1, Mobile)"
+                seid=448, domain="co.uk", geo_location="SE1,England,United Kingdom", locale="en-gb", uule="w+CAIQICIaU0UxLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (London SE1, Mobile)"
             },
             new SearchProperties()
             {
-               seid =449, domain ="co.uk", geo_location="Aberdeen,Scotland,United Kingdom", locale= "en-gb", uule = "w+CAIQICIgQWJlcmRlZW4sU2NvdGxhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Aberdeen)"
+                seid=449, domain="co.uk", geo_location="Aberdeen,Scotland,United Kingdom", locale="en-gb", uule="w+CAIQICIgQWJlcmRlZW4sU2NvdGxhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Aberdeen)"
             },
             new SearchProperties()
             {
-               seid =450, domain ="co.uk", geo_location="Aberdeen,Scotland,United Kingdom", locale= "en-gb", uule = "w+CAIQICIgQWJlcmRlZW4sU2NvdGxhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Aberdeen, Mobile)"
+                seid=450, domain="co.uk", geo_location="Aberdeen,Scotland,United Kingdom", locale="en-gb", uule="w+CAIQICIgQWJlcmRlZW4sU2NvdGxhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Aberdeen, Mobile)"
             },
             new SearchProperties()
             {
-               seid =451, domain ="co.uk", geo_location="Bolton,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIdQm9sdG9uLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Bolton)"
+                seid=451, domain="co.uk", geo_location="Bolton,England,United Kingdom", locale="en-gb", uule="w+CAIQICIdQm9sdG9uLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Bolton)"
             },
             new SearchProperties()
             {
-               seid =452, domain ="co.uk", geo_location="Bolton,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIdQm9sdG9uLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Bolton, Mobile)"
+                seid=452, domain="co.uk", geo_location="Bolton,England,United Kingdom", locale="en-gb", uule="w+CAIQICIdQm9sdG9uLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Bolton, Mobile)"
             },
             new SearchProperties()
             {
-               seid =453, domain ="co.uk", geo_location="Bournemouth,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIiQm91cm5lbW91dGgsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Bournemouth)"
+                seid=453, domain="co.uk", geo_location="Bournemouth,England,United Kingdom", locale="en-gb", uule="w+CAIQICIiQm91cm5lbW91dGgsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Bournemouth)"
             },
             new SearchProperties()
             {
-               seid =454, domain ="co.uk", geo_location="Bournemouth,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIiQm91cm5lbW91dGgsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Bournemouth, Mobile)"
+                seid=454, domain="co.uk", geo_location="Bournemouth,England,United Kingdom", locale="en-gb", uule="w+CAIQICIiQm91cm5lbW91dGgsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Bournemouth, Mobile)"
             },
             new SearchProperties()
             {
-               seid =455, domain ="co.uk", geo_location="Coventry,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIfQ292ZW50cnksRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Coventry)"
+                seid=455, domain="co.uk", geo_location="Coventry,England,United Kingdom", locale="en-gb", uule="w+CAIQICIfQ292ZW50cnksRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Coventry)"
             },
             new SearchProperties()
             {
-               seid =456, domain ="co.uk", geo_location="Coventry,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIfQ292ZW50cnksRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Coventry, Mobile)"
+                seid=456, domain="co.uk", geo_location="Coventry,England,United Kingdom", locale="en-gb", uule="w+CAIQICIfQ292ZW50cnksRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Coventry, Mobile)"
             },
             new SearchProperties()
             {
-               seid =457, domain ="co.uk", geo_location="Croydon,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeQ3JveWRvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Croydon)"
+                seid=457, domain="co.uk", geo_location="Croydon,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeQ3JveWRvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Croydon)"
             },
             new SearchProperties()
             {
-               seid =458, domain ="co.uk", geo_location="Croydon,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeQ3JveWRvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Croydon, Mobile)"
+                seid=458, domain="co.uk", geo_location="Croydon,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeQ3JveWRvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Croydon, Mobile)"
             },
             new SearchProperties()
             {
-               seid =459, domain ="co.uk", geo_location="Northampton,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIiTm9ydGhhbXB0b24sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Northamptonshire)"
+                seid=459, domain="co.uk", geo_location="Northampton,England,United Kingdom", locale="en-gb", uule="w+CAIQICIiTm9ydGhhbXB0b24sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Northamptonshire)"
             },
             new SearchProperties()
             {
-               seid =460, domain ="co.uk", geo_location="Northampton,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIiTm9ydGhhbXB0b24sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Northamptonshire, Mobile)"
+                seid=460, domain="co.uk", geo_location="Northampton,England,United Kingdom", locale="en-gb", uule="w+CAIQICIiTm9ydGhhbXB0b24sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Northamptonshire, Mobile)"
             },
             new SearchProperties()
             {
-               seid =461, domain ="co.uk", geo_location="Norwich,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeTm9yd2ljaCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Norwich)"
+                seid=461, domain="co.uk", geo_location="Norwich,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeTm9yd2ljaCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Norwich)"
             },
             new SearchProperties()
             {
-               seid =462, domain ="co.uk", geo_location="Norwich,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeTm9yd2ljaCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Norwich, Mobile)"
+                seid=462, domain="co.uk", geo_location="Norwich,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeTm9yd2ljaCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Norwich, Mobile)"
             },
             new SearchProperties()
             {
-               seid =463, domain ="co.uk", geo_location="Slough,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIdU2xvdWdoLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Slough)"
+                seid=463, domain="co.uk", geo_location="Slough,England,United Kingdom", locale="en-gb", uule="w+CAIQICIdU2xvdWdoLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Slough)"
             },
             new SearchProperties()
             {
-               seid =464, domain ="co.uk", geo_location="Slough,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIdU2xvdWdoLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Slough, Mobile)"
+                seid=464, domain="co.uk", geo_location="Slough,England,United Kingdom", locale="en-gb", uule="w+CAIQICIdU2xvdWdoLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Slough, Mobile)"
             },
             new SearchProperties()
             {
-               seid =465, domain ="co.uk", geo_location="Watford,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeV2F0Zm9yZCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Watford)"
+                seid=465, domain="co.uk", geo_location="Watford,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeV2F0Zm9yZCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Watford)"
             },
             new SearchProperties()
             {
-               seid =466, domain ="co.uk", geo_location="Watford,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeV2F0Zm9yZCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Watford, Mobile)"
+                seid=466, domain="co.uk", geo_location="Watford,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeV2F0Zm9yZCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Watford, Mobile)"
             },
             new SearchProperties()
             {
-               seid =467, domain ="co.uk", geo_location="SW1V,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIbU1cxVixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (London SW1V)"
+                seid=467, domain="co.uk", geo_location="SW1V,England,United Kingdom", locale="en-gb", uule="w+CAIQICIbU1cxVixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (London SW1V)"
             },
             new SearchProperties()
             {
-               seid =468, domain ="co.uk", geo_location="SW1V,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIbU1cxVixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (London SW1V, Mobile)"
+                seid=468, domain="co.uk", geo_location="SW1V,England,United Kingdom", locale="en-gb", uule="w+CAIQICIbU1cxVixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (London SW1V, Mobile)"
             },
             new SearchProperties()
             {
-               seid =469, domain ="com.cy", geo_location="Cyprus", locale= "EL-CY", uule = "w+CAIQICIGQ3lwcnVz", device="desktop_chrome", sename="Google Cyprus (Greek)"
+                seid=469, domain="com.cy", geo_location="Cyprus", locale="EL-CY", uule="w+CAIQICIGQ3lwcnVz", device="desktop_chrome", sename="Google Cyprus (Greek)"
             },
             new SearchProperties()
             {
-               seid =470, domain ="com.cy", geo_location="Cyprus", locale= "EL-CY", uule = "w+CAIQICIGQ3lwcnVz", device="mobile_android", sename="Google Cyprus (Greek Mobile)"
+                seid=470, domain="com.cy", geo_location="Cyprus", locale="EL-CY", uule="w+CAIQICIGQ3lwcnVz", device="mobile_android", sename="Google Cyprus (Greek Mobile)"
             },
             new SearchProperties()
             {
-               seid =471, domain ="ee", geo_location="Estonia", locale= "ET-EE", uule = "w+CAIQICIHRXN0b25pYQ==", device="desktop_chrome", sename="Google Estonia (Estonian )"
+                seid=471, domain="ee", geo_location="Estonia", locale="ET-EE", uule="w+CAIQICIHRXN0b25pYQ==", device="desktop_chrome", sename="Google Estonia (Estonian )"
             },
             new SearchProperties()
             {
-               seid =472, domain ="ee", geo_location="Estonia", locale= "ET-EE", uule = "w+CAIQICIHRXN0b25pYQ==", device="mobile_android", sename="Google Estonia (Estonian  Mobile)"
+                seid=472, domain="ee", geo_location="Estonia", locale="ET-EE", uule="w+CAIQICIHRXN0b25pYQ==", device="mobile_android", sename="Google Estonia (Estonian  Mobile)"
             },
             new SearchProperties()
             {
-               seid =473, domain ="lt", geo_location="Lithuania", locale= "LT-LT", uule = "w+CAIQICIJTGl0aHVhbmlh", device="desktop_chrome", sename="Google Lithuania (Lithuanian)"
+                seid=473, domain="lt", geo_location="Lithuania", locale="LT-LT", uule="w+CAIQICIJTGl0aHVhbmlh", device="desktop_chrome", sename="Google Lithuania (Lithuanian)"
             },
             new SearchProperties()
             {
-               seid =474, domain ="lt", geo_location="Lithuania", locale= "LT-LT", uule = "w+CAIQICIJTGl0aHVhbmlh", device="mobile_android", sename="Google Lithuania (Lithuanian Mobile)"
+                seid=474, domain="lt", geo_location="Lithuania", locale="LT-LT", uule="w+CAIQICIJTGl0aHVhbmlh", device="mobile_android", sename="Google Lithuania (Lithuanian Mobile)"
             },
             new SearchProperties()
             {
-               seid =475, domain ="com", geo_location="Florida,United States", locale="en-us", uule="w+CAIQICIVRmxvcmlkYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Florida)"
+                seid=475, domain="com", geo_location="Florida,United States", locale="en-us", uule="w+CAIQICIVRmxvcmlkYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Florida)"
             },
             new SearchProperties()
             {
-               seid =476, domain ="com", geo_location="Florida,United States", locale="en-us", uule="w+CAIQICIVRmxvcmlkYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Florida, Mobile)"
+                seid=476, domain="com", geo_location="Florida,United States", locale="en-us", uule="w+CAIQICIVRmxvcmlkYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Florida, Mobile)"
             },
             new SearchProperties()
             {
-               seid =477, domain ="com", geo_location="Pennsylvania,United States", locale="en-us", uule="w+CAIQICIaUGVubnN5bHZhbmlhLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Pennsylvania)"
+                seid=477, domain="com", geo_location="Pennsylvania,United States", locale="en-us", uule="w+CAIQICIaUGVubnN5bHZhbmlhLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Pennsylvania)"
             },
             new SearchProperties()
             {
-               seid =478, domain ="com", geo_location="Pennsylvania,United States", locale="en-us", uule="w+CAIQICIaUGVubnN5bHZhbmlhLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Pennsylvania, Mobile)"
+                seid=478, domain="com", geo_location="Pennsylvania,United States", locale="en-us", uule="w+CAIQICIaUGVubnN5bHZhbmlhLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Pennsylvania, Mobile)"
             },
             new SearchProperties()
             {
-               seid =479, domain ="com", geo_location="Wisconsin,United States", locale="en-us", uule="w+CAIQICIXV2lzY29uc2luLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Wisconsin)"
+                seid=479, domain="com", geo_location="Wisconsin,United States", locale="en-us", uule="w+CAIQICIXV2lzY29uc2luLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Wisconsin)"
             },
             new SearchProperties()
             {
-               seid =480, domain ="com", geo_location="Wisconsin,United States", locale="en-us", uule="w+CAIQICIXV2lzY29uc2luLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Wisconsin, Mobile)"
+                seid=480, domain="com", geo_location="Wisconsin,United States", locale="en-us", uule="w+CAIQICIXV2lzY29uc2luLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Wisconsin, Mobile)"
             },
             new SearchProperties()
             {
-               seid =481, domain ="com", geo_location="Arizona,United States", locale="en-us", uule="w+CAIQICIVQXJpem9uYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Arizona)"
+                seid=481, domain="com", geo_location="Arizona,United States", locale="en-us", uule="w+CAIQICIVQXJpem9uYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Arizona)"
             },
             new SearchProperties()
             {
-               seid =482, domain ="com", geo_location="Arizona,United States", locale="en-us", uule="w+CAIQICIVQXJpem9uYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Arizona, Mobile)"
+                seid=482, domain="com", geo_location="Arizona,United States", locale="en-us", uule="w+CAIQICIVQXJpem9uYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Arizona, Mobile)"
             },
             new SearchProperties()
             {
-               seid =483, domain ="com", geo_location="Michigan,United States", locale="en-us", uule="w+CAIQICIWTWljaGlnYW4sVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Michigan)"
+                seid=483, domain="com", geo_location="Michigan,United States", locale="en-us", uule="w+CAIQICIWTWljaGlnYW4sVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Michigan)"
             },
             new SearchProperties()
             {
-               seid =484, domain ="com", geo_location="Michigan,United States", locale="en-us", uule="w+CAIQICIWTWljaGlnYW4sVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Michigan, Mobile)"
+                seid=484, domain="com", geo_location="Michigan,United States", locale="en-us", uule="w+CAIQICIWTWljaGlnYW4sVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Michigan, Mobile)"
             },
             new SearchProperties()
             {
-               seid =485, domain ="com", geo_location="Ohio,United States", locale="en-us", uule="w+CAIQICIST2hpbyxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Ohio)"
+                seid=485, domain="com", geo_location="Ohio,United States", locale="en-us", uule="w+CAIQICIST2hpbyxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Ohio)"
             },
             new SearchProperties()
             {
-               seid =486, domain ="com", geo_location="Ohio,United States", locale="en-us", uule="w+CAIQICIST2hpbyxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Ohio, Mobile)"
+                seid=486, domain="com", geo_location="Ohio,United States", locale="en-us", uule="w+CAIQICIST2hpbyxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Ohio, Mobile)"
             },
             new SearchProperties()
             {
-               seid =487, domain ="com", geo_location="North Carolina,United States", locale="en-us", uule="w+CAIQICIcTm9ydGggQ2Fyb2xpbmEsVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (North Carolina)"
+                seid=487, domain="com", geo_location="North Carolina,United States", locale="en-us", uule="w+CAIQICIcTm9ydGggQ2Fyb2xpbmEsVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (North Carolina)"
             },
             new SearchProperties()
             {
-               seid =488, domain ="com", geo_location="North Carolina,United States", locale="en-us", uule="w+CAIQICIcTm9ydGggQ2Fyb2xpbmEsVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (North Carolina, Mobile)"
+                seid=488, domain="com", geo_location="North Carolina,United States", locale="en-us", uule="w+CAIQICIcTm9ydGggQ2Fyb2xpbmEsVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (North Carolina, Mobile)"
             },
             new SearchProperties()
             {
-               seid =489, domain ="com", geo_location="Tallahassee,Florida,United States", locale="en-us", uule="w+CAIQICIhVGFsbGFoYXNzZWUsRmxvcmlkYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Tallahassee,Florida)"
+                seid=489, domain="com", geo_location="Tallahassee,Florida,United States", locale="en-us", uule="w+CAIQICIhVGFsbGFoYXNzZWUsRmxvcmlkYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Tallahassee,Florida)"
             },
             new SearchProperties()
             {
-               seid =490, domain ="com", geo_location="Tallahassee,Florida,United States", locale="en-us", uule="w+CAIQICIhVGFsbGFoYXNzZWUsRmxvcmlkYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Tallahassee,Florida, Mobile)"
+                seid=490, domain="com", geo_location="Tallahassee,Florida,United States", locale="en-us", uule="w+CAIQICIhVGFsbGFoYXNzZWUsRmxvcmlkYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Tallahassee,Florida, Mobile)"
             },
             new SearchProperties()
             {
-               seid =491, domain ="com", geo_location="Harrisburg,Pennsylvania,United States", locale="en-us", uule="w+CAIQICIlSGFycmlzYnVyZyxQZW5uc3lsdmFuaWEsVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Harrisburg,Pennsylvania)"
+                seid=491, domain="com", geo_location="Harrisburg,Pennsylvania,United States", locale="en-us", uule="w+CAIQICIlSGFycmlzYnVyZyxQZW5uc3lsdmFuaWEsVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Harrisburg,Pennsylvania)"
             },
             new SearchProperties()
             {
-               seid =492, domain ="com", geo_location="Harrisburg,Pennsylvania,United States", locale="en-us", uule="w+CAIQICIlSGFycmlzYnVyZyxQZW5uc3lsdmFuaWEsVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Harrisburg,Pennsylvania, Mobile)"
+                seid=492, domain="com", geo_location="Harrisburg,Pennsylvania,United States", locale="en-us", uule="w+CAIQICIlSGFycmlzYnVyZyxQZW5uc3lsdmFuaWEsVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Harrisburg,Pennsylvania, Mobile)"
             },
             new SearchProperties()
             {
-               seid =493, domain ="com", geo_location="Madison,Wisconsin,United States", locale="en-us", uule="w+CAIQICIfTWFkaXNvbixXaXNjb25zaW4sVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Madison,Wisconsin)"
+                seid=493, domain="com", geo_location="Madison,Wisconsin,United States", locale="en-us", uule="w+CAIQICIfTWFkaXNvbixXaXNjb25zaW4sVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Madison,Wisconsin)"
             },
             new SearchProperties()
             {
-               seid =494, domain ="com", geo_location="Madison,Wisconsin,United States", locale="en-us", uule="w+CAIQICIfTWFkaXNvbixXaXNjb25zaW4sVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Madison,Wisconsin, Mobile)"
+                seid=494, domain="com", geo_location="Madison,Wisconsin,United States", locale="en-us", uule="w+CAIQICIfTWFkaXNvbixXaXNjb25zaW4sVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Madison,Wisconsin, Mobile)"
             },
             new SearchProperties()
             {
-               seid =495, domain ="com", geo_location="Phoenix,Arizona,United States", locale="en-us", uule="w+CAIQICIdUGhvZW5peCxBcml6b25hLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Phoenix,Arizona)"
+                seid=495, domain="com", geo_location="Phoenix,Arizona,United States", locale="en-us", uule="w+CAIQICIdUGhvZW5peCxBcml6b25hLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Phoenix,Arizona)"
             },
             new SearchProperties()
             {
-               seid =496, domain ="com", geo_location="Phoenix,Arizona,United States", locale="en-us", uule="w+CAIQICIdUGhvZW5peCxBcml6b25hLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Phoenix,Arizona, Mobile)"
+                seid=496, domain="com", geo_location="Phoenix,Arizona,United States", locale="en-us", uule="w+CAIQICIdUGhvZW5peCxBcml6b25hLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Phoenix,Arizona, Mobile)"
             },
             new SearchProperties()
             {
-               seid =497, domain ="com", geo_location="Lansing,Michigan,United States", locale="en-us", uule="w+CAIQICIeTGFuc2luZyxNaWNoaWdhbixVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Lansing,Michigan)"
+                seid=497, domain="com", geo_location="Lansing,Michigan,United States", locale="en-us", uule="w+CAIQICIeTGFuc2luZyxNaWNoaWdhbixVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Lansing,Michigan)"
             },
             new SearchProperties()
             {
-               seid =498, domain ="com", geo_location="Lansing,Michigan,United States", locale="en-us", uule="w+CAIQICIeTGFuc2luZyxNaWNoaWdhbixVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Lansing,Michigan, Mobile)"
+                seid=498, domain="com", geo_location="Lansing,Michigan,United States", locale="en-us", uule="w+CAIQICIeTGFuc2luZyxNaWNoaWdhbixVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Lansing,Michigan, Mobile)"
             },
             new SearchProperties()
             {
-               seid =499, domain ="com", geo_location="Columbus,Ohio,United States", locale="en-us", uule="w+CAIQICIbQ29sdW1idXMsT2hpbyxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Columbus,Ohio)"
+                seid=499, domain="com", geo_location="Columbus,Ohio,United States", locale="en-us", uule="w+CAIQICIbQ29sdW1idXMsT2hpbyxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Columbus,Ohio)"
             },
             new SearchProperties()
             {
-               seid =500, domain ="com", geo_location="Columbus,Ohio,United States", locale="en-us", uule="w+CAIQICIbQ29sdW1idXMsT2hpbyxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Columbus,Ohio, Mobile)"
+                seid=500, domain="com", geo_location="Columbus,Ohio,United States", locale="en-us", uule="w+CAIQICIbQ29sdW1idXMsT2hpbyxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Columbus,Ohio, Mobile)"
             },
             new SearchProperties()
             {
-               seid =501, domain ="com", geo_location="Raleigh,North Carolina,United States", locale="en-us", uule="w+CAIQICIkUmFsZWlnaCxOb3J0aCBDYXJvbGluYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Raleigh,North Carolina)"
+                seid=501, domain="com", geo_location="Raleigh,North Carolina,United States", locale="en-us", uule="w+CAIQICIkUmFsZWlnaCxOb3J0aCBDYXJvbGluYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Raleigh,North Carolina)"
             },
             new SearchProperties()
             {
-               seid =502, domain ="com", geo_location="Raleigh,North Carolina,United States", locale="en-us", uule="w+CAIQICIkUmFsZWlnaCxOb3J0aCBDYXJvbGluYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Raleigh,North Carolina, Mobile)"
+                seid=502, domain="com", geo_location="Raleigh,North Carolina,United States", locale="en-us", uule="w+CAIQICIkUmFsZWlnaCxOb3J0aCBDYXJvbGluYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Raleigh,North Carolina, Mobile)"
             },
-             new SearchProperties() //11-01-2021
+            new SearchProperties() //11-01-2021
             {
-               seid =504, domain ="fr", geo_location="Monaco", locale="en-mc", uule="w+CAIQICIGTW9uYWNv", device="desktop_chrome", sename="Google MN"
+                seid=504, domain="fr", geo_location="Monaco", locale="en-mc", uule="w+CAIQICIGTW9uYWNv", device="desktop_chrome", sename="Google MN"
             },
             new SearchProperties()
             {
-               seid =505, domain ="fr", geo_location="Monaco", locale="en-mc", uule="w+CAIQICIGTW9uYWNv", device="mobile_android", sename="Google MN (Mobile)"
+                seid=505, domain="fr", geo_location="Monaco", locale="en-mc", uule="w+CAIQICIGTW9uYWNv", device="mobile_android", sename="Google MN (Mobile)"
             },
-             new SearchProperties()
+            new SearchProperties()
             {
-               seid =506, domain ="fr", geo_location="Monaco", locale="fr-mc", uule="w+CAIQICIGTW9uYWNv", device="desktop_chrome", sename="Google MN (French)"
+                seid=506, domain="fr", geo_location="Monaco", locale="fr-mc", uule="w+CAIQICIGTW9uYWNv", device="desktop_chrome", sename="Google MN (French)"
             },
             new SearchProperties()
             {
-               seid =507, domain ="fr", geo_location="Monaco", locale="fr-mc", uule="w+CAIQICIGTW9uYWNv", device="mobile_android", sename="Google MN (French Mobile)"
+                seid=507, domain="fr", geo_location="Monaco", locale="fr-mc", uule="w+CAIQICIGTW9uYWNv", device="mobile_android", sename="Google MN (French Mobile)"
             },
             new SearchProperties()
             {
-               seid =508, domain ="com", geo_location="United States", locale= "es-419-us", uule = "w+CAIQICINVW5pdGVkIFN0YXRlcw==",device="desktop_chrome", sename="Google US (Spanish)"
+                seid=508, domain="com", geo_location="United States", locale="es-419-us", uule="w+CAIQICINVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Spanish)"
             },
             new SearchProperties()
             {
-               seid =509, domain ="com", geo_location="United States", locale= "es-419-us", uule = "w+CAIQICINVW5pdGVkIFN0YXRlcw==",device="mobile_android", sename="Google US (Spanish Mobile)"
+                seid=509, domain="com", geo_location="United States", locale="es-419-us", uule="w+CAIQICINVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Spanish Mobile)"
             },
             new SearchProperties() //locale="zh-cn-us" but "us" does not work in oxy so just use locale = "zh-cn"
             {
-               seid =510, domain ="com", geo_location="United States", locale= "zh-cn", uule = "w+CAIQICINVW5pdGVkIFN0YXRlcw==",device="desktop_chrome", sename="Google US (Chinese)"
+                seid=510, domain="com", geo_location="United States", locale="zh-cn", uule="w+CAIQICINVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Chinese)"
             },
             new SearchProperties()//locale="zh-cn-us" but "us" does not work in oxy so just use locale = "zh-cn"
             {
-               seid =511, domain ="com", geo_location="United States", locale= "zh-cn", uule = "w+CAIQICINVW5pdGVkIFN0YXRlcw==",device="mobile_android", sename="Google US (Chinese Mobile)"
+                seid=511, domain="com", geo_location="United States", locale="zh-cn", uule="w+CAIQICINVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Chinese Mobile)"
             },//end 11-01-2021
-             new SearchProperties()
+            new SearchProperties() //18-02-2021
             {
-               seid =512, domain ="nl", geo_location="Netherlands", locale= "en-nl", uule = "w+CAIQICILTmV0aGVybGFuZHM=",device="desktop_chrome", sename="Google NL(English)"
+                seid=512, domain="nl", geo_location="Netherlands", locale="en-nl", uule="w+CAIQICILTmV0aGVybGFuZHM=", device="desktop_chrome", sename="Google NL(English)"
             },
             new SearchProperties()
             {
-               seid =513, domain ="nl", geo_location="Netherlands", locale= "en-nl", uule = "w+CAIQICILTmV0aGVybGFuZHM=",device="mobile_android", sename="Google NL(English,Mobile)"
-            },
-             new SearchProperties() //22-02-2021
+                seid=513, domain="nl", geo_location="Netherlands", locale="en-nl", uule="w+CAIQICILTmV0aGVybGFuZHM=", device="mobile_android", sename="Google NL(English,Mobile)"
+            }, //end 18-02-2021
+            new SearchProperties() //22-02-2021
             {
-               seid =514, domain ="ee", geo_location="Estonia", locale="ru-ee", uule = "w+CAIQICIHRXN0b25pYQ==",device="desktop_chrome", sename="Google EE (Russian)"
+                seid=514, domain="ee", geo_location="Estonia", locale="ru-ee", uule="w+CAIQICIHRXN0b25pYQ==", device="desktop_chrome", sename="Google EE (Russian)"
             },
-               new SearchProperties()
+            new SearchProperties()
             {
-               seid =515, domain ="ee", geo_location="Estonia", locale="ru-ee", uule = "w+CAIQICIHRXN0b25pYQ==",device="mobile_android", sename="Google EE (Russian, Mobile)"
+                seid=515, domain="ee", geo_location="Estonia", locale="ru-ee", uule="w+CAIQICIHRXN0b25pYQ==", device="mobile_android", sename="Google EE (Russian, Mobile)"
             },
-               new SearchProperties()
+            new SearchProperties()
             {
-               seid =516, domain ="lv", geo_location="Latvia", locale="ru-lv", uule = "w+CAIQICIGTGF0dmlh",device="desktop_chrome", sename="Google LV (Russian)"
+                seid=516, domain="lv", geo_location="Latvia", locale="ru-lv", uule="w+CAIQICIGTGF0dmlh", device="desktop_chrome", sename="Google LV (Russian)"
             },
-               new SearchProperties()
+            new SearchProperties()
             {
-               seid =517, domain ="lv", geo_location="Latvia", locale="ru-lv", uule = "w+CAIQICIGTGF0dmlh",device="mobile_android", sename="Google LV (Russian, Mobile)"
+                seid=517, domain="lv", geo_location="Latvia", locale="ru-lv", uule="w+CAIQICIGTGF0dmlh", device="mobile_android", sename="Google LV (Russian, Mobile)"
             },//end 22-02-2021
-                new SearchProperties() //start 25-02-2021
+            new SearchProperties() //start 25-02-2021
             {
-               seid =518, domain ="co.nz", geo_location="Auckland,New Zealand", locale= "en-nz", uule = "w+CAIQICIUQXVja2xhbmQsTmV3IFplYWxhbmQ=",device="desktop_chrome", sename="Google NZ (Auckland)"
+                seid=518, domain="co.nz", geo_location="Auckland,New Zealand", locale="en-nz", uule="w+CAIQICIUQXVja2xhbmQsTmV3IFplYWxhbmQ=", device="desktop_chrome", sename="Google NZ (Auckland)"
             },
             new SearchProperties()
             {
-               seid =519, domain ="co.nz", geo_location="Auckland,New Zealand", locale= "en-nz", uule = "w+CAIQICIUQXVja2xhbmQsTmV3IFplYWxhbmQ=",device="mobile_android", sename="Google NZ (Auckland, Mobile)"
+                seid=519, domain="co.nz", geo_location="Auckland,New Zealand", locale="en-nz", uule="w+CAIQICIUQXVja2xhbmQsTmV3IFplYWxhbmQ=", device="mobile_android", sename="Google NZ (Auckland, Mobile)"
             },
             new SearchProperties()
             {
-               seid =520, domain ="co.nz", geo_location="Wellington,New Zealand", locale= "en-nz", uule = "w+CAIQICIWV2VsbGluZ3RvbixOZXcgWmVhbGFuZA==",device="desktop_chrome", sename="Google NZ (Wellington)"
+                seid=520, domain="co.nz", geo_location="Wellington,New Zealand", locale="en-nz", uule="w+CAIQICIWV2VsbGluZ3RvbixOZXcgWmVhbGFuZA==", device="desktop_chrome", sename="Google NZ (Wellington)"
             },
             new SearchProperties()
             {
-               seid =521, domain ="co.nz", geo_location="Wellington,New Zealand", locale= "en-nz", uule = "w+CAIQICIWV2VsbGluZ3RvbixOZXcgWmVhbGFuZA==",device="mobile_android", sename="Google NZ (Wellington, Mobile)"
+                seid=521, domain="co.nz", geo_location="Wellington,New Zealand", locale="en-nz", uule="w+CAIQICIWV2VsbGluZ3RvbixOZXcgWmVhbGFuZA==", device="mobile_android", sename="Google NZ (Wellington, Mobile)"
             },
             new SearchProperties()
             {
-               seid =522, domain ="co.nz", geo_location="Hamilton,Waikato,New Zealand", locale= "en-nz", uule = "w+CAIQICIcSGFtaWx0b24sV2Fpa2F0byxOZXcgWmVhbGFuZA==",device="desktop_chrome", sename="Google NZ (Hamilton,Waikato)"
+                seid=522, domain="co.nz", geo_location="Hamilton,Waikato,New Zealand", locale="en-nz", uule="w+CAIQICIcSGFtaWx0b24sV2Fpa2F0byxOZXcgWmVhbGFuZA==", device="desktop_chrome", sename="Google NZ (Hamilton,Waikato)"
             },
             new SearchProperties()
             {
-               seid =523, domain ="co.nz", geo_location="Hamilton,Waikato,New Zealand", locale= "en-nz", uule = "w+CAIQICIcSGFtaWx0b24sV2Fpa2F0byxOZXcgWmVhbGFuZA==",device="mobile_android", sename="Google NZ (Hamilton,Waikato, Mobile)"
+                seid=523, domain="co.nz", geo_location="Hamilton,Waikato,New Zealand", locale="en-nz", uule="w+CAIQICIcSGFtaWx0b24sV2Fpa2F0byxOZXcgWmVhbGFuZA==", device="mobile_android", sename="Google NZ (Hamilton,Waikato, Mobile)"
             },
             new SearchProperties()
             {
-               seid =524, domain ="co.nz", geo_location="Christchurch,Canterbury,New Zealand", locale= "en-nz", uule = "w+CAIQICIjQ2hyaXN0Y2h1cmNoLENhbnRlcmJ1cnksTmV3IFplYWxhbmQ=",device="desktop_chrome", sename="Google NZ (Christchurch,Canterbury)"
+                seid=524, domain="co.nz", geo_location="Christchurch,Canterbury,New Zealand", locale="en-nz", uule="w+CAIQICIjQ2hyaXN0Y2h1cmNoLENhbnRlcmJ1cnksTmV3IFplYWxhbmQ=", device="desktop_chrome", sename="Google NZ (Christchurch,Canterbury)"
             },
             new SearchProperties()
             {
-               seid =525, domain ="co.nz", geo_location="Christchurch,Canterbury,New Zealand", locale= "en-nz", uule = "w+CAIQICIjQ2hyaXN0Y2h1cmNoLENhbnRlcmJ1cnksTmV3IFplYWxhbmQ=",device="mobile_android", sename="Google NZ (Christchurch,Canterbury, Mobile)"
+                seid=525, domain="co.nz", geo_location="Christchurch,Canterbury,New Zealand", locale="en-nz", uule="w+CAIQICIjQ2hyaXN0Y2h1cmNoLENhbnRlcmJ1cnksTmV3IFplYWxhbmQ=", device="mobile_android", sename="Google NZ (Christchurch,Canterbury, Mobile)"
             },
             new SearchProperties()
             {
-               seid =526, domain ="co.nz", geo_location="Dunedin,Otago,New Zealand", locale= "en-nz", uule = "w+CAIQICIZRHVuZWRpbixPdGFnbyxOZXcgWmVhbGFuZA==",device="desktop_chrome", sename="Google NZ (Dunedin,Otago)"
+                seid=526, domain="co.nz", geo_location="Dunedin,Otago,New Zealand", locale="en-nz", uule="w+CAIQICIZRHVuZWRpbixPdGFnbyxOZXcgWmVhbGFuZA==", device="desktop_chrome", sename="Google NZ (Dunedin,Otago)"
             },
             new SearchProperties()
             {
-               seid =527, domain ="co.nz", geo_location="Dunedin,Otago,New Zealand", locale= "en-nz", uule = "w+CAIQICIZRHVuZWRpbixPdGFnbyxOZXcgWmVhbGFuZA==",device="mobile_android", sename="Google NZ (Dunedin,Otago, Mobile)"
+                seid=527, domain="co.nz", geo_location="Dunedin,Otago,New Zealand", locale="en-nz", uule="w+CAIQICIZRHVuZWRpbixPdGFnbyxOZXcgWmVhbGFuZA==", device="mobile_android", sename="Google NZ (Dunedin,Otago, Mobile)"
             },
             new SearchProperties()
             {
-               seid =528, domain ="co.nz", geo_location="Tauranga,Bay of Plenty,New Zealand", locale= "en-nz", uule = "w+CAIQICIiVGF1cmFuZ2EsQmF5IG9mIFBsZW50eSxOZXcgWmVhbGFuZA==",device="desktop_chrome", sename="Google NZ (Tauranga,Bay of Plenty)"
+                seid=528, domain="co.nz", geo_location="Tauranga,Bay of Plenty,New Zealand", locale="en-nz", uule="w+CAIQICIiVGF1cmFuZ2EsQmF5IG9mIFBsZW50eSxOZXcgWmVhbGFuZA==", device="desktop_chrome", sename="Google NZ (Tauranga,Bay of Plenty)"
             },
             new SearchProperties()
             {
-               seid =529, domain ="co.nz", geo_location="Tauranga,Bay of Plenty,New Zealand", locale= "en-nz", uule = "w+CAIQICIiVGF1cmFuZ2EsQmF5IG9mIFBsZW50eSxOZXcgWmVhbGFuZA==",device="mobile_android", sename="Google NZ (Tauranga,Bay of Plenty, Mobile)"
+                seid=529, domain="co.nz", geo_location="Tauranga,Bay of Plenty,New Zealand", locale="en-nz", uule="w+CAIQICIiVGF1cmFuZ2EsQmF5IG9mIFBsZW50eSxOZXcgWmVhbGFuZA==", device="mobile_android", sename="Google NZ (Tauranga,Bay of Plenty, Mobile)"
             }, //end 25-02-2021
             new SearchProperties()//30-03-2021
             {
-               seid =530, domain ="com.gh", geo_location="Ghana", locale= "en-gh", uule = "w+CAIQICIFR2hhbmE=",device="desktop_chrome", sename="Google GH (Ghana)"
+                seid=530, domain="com.gh", geo_location="Ghana", locale="en-gh", uule="w+CAIQICIFR2hhbmE=", device="desktop_chrome", sename="Google GH (Ghana)"
             },
             new SearchProperties()
             {
-               seid =531, domain ="com.gh", geo_location="Ghana", locale= "en-gh", uule = "w+CAIQICIFR2hhbmE=",device="mobile_android", sename="Google GH (Ghana, Mobile)"
+                seid=531, domain="com.gh", geo_location="Ghana", locale="en-gh", uule="w+CAIQICIFR2hhbmE=", device="mobile_android", sename="Google GH (Ghana, Mobile)"
             },
             new SearchProperties()
             {
-               seid =532, domain ="co.tz", geo_location="Tanzania", locale= "en-tz", uule = "w+CAIQICIIVGFuemFuaWE=",device="desktop_chrome", sename="Google TZ (English)"
+                seid=532, domain="co.tz", geo_location="Tanzania", locale="en-tz", uule="w+CAIQICIIVGFuemFuaWE=", device="desktop_chrome", sename="Google TZ (English)"
             },
             new SearchProperties()
             {
-               seid =533, domain ="co.tz", geo_location="Tanzania", locale= "en-tz", uule = "w+CAIQICIIVGFuemFuaWE=",device="mobile_android", sename="Google TZ (English, Mobile)"
+                seid=533, domain="co.tz", geo_location="Tanzania", locale="en-tz", uule="w+CAIQICIIVGFuemFuaWE=", device="mobile_android", sename="Google TZ (English, Mobile)"
             },
             new SearchProperties()
             {
-               seid =534, domain ="co.tz", geo_location="Tanzania", locale= "sw-tz", uule = "w+CAIQICIIVGFuemFuaWE=",device="desktop_chrome", sename="Google TZ (Swahili)"
+                seid=534, domain="co.tz", geo_location="Tanzania", locale="sw-tz", uule="w+CAIQICIIVGFuemFuaWE=", device="desktop_chrome", sename="Google TZ (Swahili)"
             },
             new SearchProperties()
             {
-               seid =535, domain ="co.tz", geo_location="Tanzania", locale= "sw-tz", uule = "w+CAIQICIIVGFuemFuaWE=",device="mobile_android", sename="Google TZ (Swahili, Mobile)"
+                seid=535, domain="co.tz", geo_location="Tanzania", locale="sw-tz", uule="w+CAIQICIIVGFuemFuaWE=", device="mobile_android", sename="Google TZ (Swahili, Mobile)"
             }, //end 30-03-2021
-            new SearchProperties() //07-04
+            new SearchProperties() //07-04-2021
             {
-               seid =536, domain ="co.id", geo_location="Indonesia", locale= "en-id", uule ="w+CAIQICIJSW5kb25lc2lh",device="desktop_chrome", sename="Google ID (Indonesia)"
+                seid=536, domain="co.id", geo_location="Indonesia", locale="en-id", uule ="w+CAIQICIJSW5kb25lc2lh", device="desktop_chrome", sename="Google ID (Indonesia)"
             },
             new SearchProperties()
             {
-               seid =537, domain ="co.id", geo_location="Indonesia", locale= "en-id", uule = "w+CAIQICIJSW5kb25lc2lh",device="mobile_android", sename="Google ID (Indonesia, Mobile)"
-            },
+                seid=537, domain="co.id", geo_location="Indonesia", locale="en-id", uule="w+CAIQICIJSW5kb25lc2lh", device="mobile_android", sename="Google ID (Indonesia, Mobile)"
+            }, //end 07-04-2021
             new SearchProperties() //13-05-2021
             {
-               seid =538, domain ="co.in", geo_location="Mumbai,Maharashtra,India", locale= "en-in", uule ="w+CAIQICIYTXVtYmFpLE1haGFyYXNodHJhLEluZGlh",device="desktop_chrome", sename="Google Mumbai (English)"
+                seid=538, domain="co.in", geo_location="Mumbai,Maharashtra,India", locale="en-in", uule ="w+CAIQICIYTXVtYmFpLE1haGFyYXNodHJhLEluZGlh", device="desktop_chrome", sename="Google Mumbai (English)"
             },
             new SearchProperties()
             {
-               seid =539, domain ="co.in", geo_location="Mumbai,Maharashtra,India", locale= "en-in", uule = "w+CAIQICIYTXVtYmFpLE1haGFyYXNodHJhLEluZGlh",device="mobile_android", sename="Google Mumbai (English, Mobile)"
+                seid=539, domain="co.in", geo_location="Mumbai,Maharashtra,India", locale="en-in", uule="w+CAIQICIYTXVtYmFpLE1haGFyYXNodHJhLEluZGlh", device="mobile_android", sename="Google Mumbai (English, Mobile)"
             },
             new SearchProperties()
             {
-               seid =540, domain ="co.in", geo_location="New Delhi,Delhi,India", locale= "en-in", uule =" w+CAIQICIVRGVsaGksTmV3IERlbGhpLEluZGlh",device="desktop_chrome", sename="Google Delhi (English)"
+                seid=540, domain="co.in", geo_location="New Delhi,Delhi,India", locale="en-in", uule =" w+CAIQICIVRGVsaGksTmV3IERlbGhpLEluZGlh", device="desktop_chrome", sename="Google Delhi (English)"
             },
             new SearchProperties()
             {
-               seid =541, domain ="co.in", geo_location="New Delhi,Delhi,India", locale= "en-in", uule = " w+CAIQICIVRGVsaGksTmV3IERlbGhpLEluZGlh",device="mobile_android", sename="Google Delhi (English, Mobile)"
+                seid=541, domain="co.in", geo_location="New Delhi,Delhi,India", locale="en-in", uule=" w+CAIQICIVRGVsaGksTmV3IERlbGhpLEluZGlh", device="mobile_android", sename="Google Delhi (English, Mobile)"
             },
             new SearchProperties()
             {
-               seid =542, domain ="co.in", geo_location="Bengaluru,Karnataka,India", locale= "en-in", uule ="w+CAIQICIZQmVuZ2FsdXJ1LEthcm5hdGFrYSxJbmRpYQ==",device="desktop_chrome", sename="Google Bengaluru (English)"
+                seid=542, domain="co.in", geo_location="Bengaluru,Karnataka,India", locale="en-in", uule ="w+CAIQICIZQmVuZ2FsdXJ1LEthcm5hdGFrYSxJbmRpYQ==", device="desktop_chrome", sename="Google Bengaluru (English)"
             },
             new SearchProperties()
             {
-               seid =543, domain ="co.in", geo_location="Bengaluru,Karnataka,India", locale= "en-in", uule = "w+CAIQICIZQmVuZ2FsdXJ1LEthcm5hdGFrYSxJbmRpYQ==",device="mobile_android", sename="Google Bengaluru (English, Mobile)"
+                seid=543, domain="co.in", geo_location="Bengaluru,Karnataka,India", locale="en-in", uule="w+CAIQICIZQmVuZ2FsdXJ1LEthcm5hdGFrYSxJbmRpYQ==", device="mobile_android", sename="Google Bengaluru (English, Mobile)"
             },
             new SearchProperties()
             {
-               seid =544, domain ="co.in", geo_location="Hyderabad,Telangana,India", locale= "en-in", uule ="w+CAIQICIZSHlkZXJhYmFkLFRlbGFuZ2FuYSxJbmRpYQ==",device="desktop_chrome", sename="Google Hyderabad (English)"
+                seid=544, domain="co.in", geo_location="Hyderabad,Telangana,India", locale="en-in", uule ="w+CAIQICIZSHlkZXJhYmFkLFRlbGFuZ2FuYSxJbmRpYQ==", device="desktop_chrome", sename="Google Hyderabad (English)"
             },
             new SearchProperties()
             {
-               seid =545, domain ="co.in", geo_location="Hyderabad,Telangana,India", locale= "en-in", uule = "w+CAIQICIZSHlkZXJhYmFkLFRlbGFuZ2FuYSxJbmRpYQ==",device="mobile_android", sename="Google Hyderabad (English, Mobile)"
-            },
-             new SearchProperties()
-            {
-               seid =546, domain ="co.in", geo_location="Ahmedabad,Gujarat,India", locale= "en-in", uule ="w+CAIQICIXQWhtZWRhYmFkLEd1amFyYXQsSW5kaWE=",device="desktop_chrome", sename="Google Ahmedabad (English)"
+                seid=545, domain="co.in", geo_location="Hyderabad,Telangana,India", locale="en-in", uule="w+CAIQICIZSHlkZXJhYmFkLFRlbGFuZ2FuYSxJbmRpYQ==", device="mobile_android", sename="Google Hyderabad (English, Mobile)"
             },
             new SearchProperties()
             {
-               seid =547, domain ="co.in", geo_location="Ahmedabad,Gujarat,India", locale= "en-in", uule = "w+CAIQICIXQWhtZWRhYmFkLEd1amFyYXQsSW5kaWE=",device="mobile_android", sename="Google Ahmedabad (English, Mobile)"
+                seid=546, domain="co.in", geo_location="Ahmedabad,Gujarat,India", locale="en-in", uule ="w+CAIQICIXQWhtZWRhYmFkLEd1amFyYXQsSW5kaWE=", device="desktop_chrome", sename="Google Ahmedabad (English)"
             },
             new SearchProperties()
             {
-               seid =548, domain ="co.in", geo_location="Kolkata,West Bengal,India", locale= "en-in", uule ="w+CAIQICIYS29sa2F0YSxXZXN0QmVuZ2FsLEluZGlh",device="desktop_chrome", sename="Google Kolkata (English)"
+                seid=547, domain="co.in", geo_location="Ahmedabad,Gujarat,India", locale="en-in", uule="w+CAIQICIXQWhtZWRhYmFkLEd1amFyYXQsSW5kaWE=", device="mobile_android", sename="Google Ahmedabad (English, Mobile)"
             },
             new SearchProperties()
             {
-               seid =549, domain ="co.in", geo_location="Kolkata,West Bengal,India", locale= "en-in", uule = "w+CAIQICIYS29sa2F0YSxXZXN0QmVuZ2FsLEluZGlh",device="mobile_android", sename="Google Kolkata (English, Mobile)"
+                seid=548, domain="co.in", geo_location="Kolkata,West Bengal,India", locale="en-in", uule ="w+CAIQICIYS29sa2F0YSxXZXN0QmVuZ2FsLEluZGlh", device="desktop_chrome", sename="Google Kolkata (English)"
             },
             new SearchProperties()
             {
-               seid =550, domain ="co.in", geo_location="Chennai,Tamil Nadu,India", locale= "en-in", uule ="w+CAIQICIXQ2hlbm5haSxUYW1pbG5hZHUsSW5kaWE=",device="desktop_chrome", sename="Google Chennai (English)"
+                seid=549, domain="co.in", geo_location="Kolkata,West Bengal,India", locale="en-in", uule="w+CAIQICIYS29sa2F0YSxXZXN0QmVuZ2FsLEluZGlh", device="mobile_android", sename="Google Kolkata (English, Mobile)"
             },
             new SearchProperties()
             {
-               seid =551, domain ="co.in", geo_location="Chennai,Tamil Nadu,India", locale= "en-in", uule = "w+CAIQICIXQ2hlbm5haSxUYW1pbG5hZHUsSW5kaWE=",device="mobile_android", sename="Google Chennai (English, Mobile)"
+                seid=550, domain="co.in", geo_location="Chennai,Tamil Nadu,India", locale="en-in", uule ="w+CAIQICIXQ2hlbm5haSxUYW1pbG5hZHUsSW5kaWE=", device="desktop_chrome", sename="Google Chennai (English)"
             },
             new SearchProperties()
             {
-               seid =552, domain ="co.in", geo_location="Mumbai,Maharashtra,India", locale= "mr-in", uule ="w+CAIQICIYTXVtYmFpLE1haGFyYXNodHJhLEluZGlh",device="desktop_chrome", sename="Google Mumbai (Marathi)"
+                seid=551, domain="co.in", geo_location="Chennai,Tamil Nadu,India", locale="en-in", uule="w+CAIQICIXQ2hlbm5haSxUYW1pbG5hZHUsSW5kaWE=", device="mobile_android", sename="Google Chennai (English, Mobile)"
             },
             new SearchProperties()
             {
-               seid =553, domain ="co.in", geo_location="Mumbai,Maharashtra,India", locale= "mr-in", uule = "w+CAIQICIYTXVtYmFpLE1haGFyYXNodHJhLEluZGlh",device="mobile_android", sename="Google Mumbai (Marathi, Mobile)"
+                seid=552, domain="co.in", geo_location="Mumbai,Maharashtra,India", locale="mr-in", uule ="w+CAIQICIYTXVtYmFpLE1haGFyYXNodHJhLEluZGlh", device="desktop_chrome", sename="Google Mumbai (Marathi)"
             },
             new SearchProperties()
             {
-               seid =554, domain ="co.in", geo_location="New Delhi,Delhi,India", locale= "hi-in", uule =" w+CAIQICIVRGVsaGksTmV3IERlbGhpLEluZGlh",device="desktop_chrome", sename=" Google Delhi (Hindi)"
+                seid=553, domain="co.in", geo_location="Mumbai,Maharashtra,India", locale="mr-in", uule="w+CAIQICIYTXVtYmFpLE1haGFyYXNodHJhLEluZGlh", device="mobile_android", sename="Google Mumbai (Marathi, Mobile)"
             },
             new SearchProperties()
             {
-               seid =555, domain ="co.in", geo_location="New Delhi,Delhi,India", locale= "hi-in", uule = " w+CAIQICIVRGVsaGksTmV3IERlbGhpLEluZGlh",device="mobile_android", sename=" Google Delhi (Hindi, Mobile)"
+                seid=554, domain="co.in", geo_location="New Delhi,Delhi,India", locale="hi-in", uule =" w+CAIQICIVRGVsaGksTmV3IERlbGhpLEluZGlh", device="desktop_chrome", sename=" Google Delhi (Hindi)"
             },
             new SearchProperties()
             {
-               seid =556, domain ="co.in", geo_location="Bengaluru,Karnataka,India", locale= "kn-in", uule ="w+CAIQICIZQmVuZ2FsdXJ1LEthcm5hdGFrYSxJbmRpYQ==",device="desktop_chrome", sename="Google Bangalore (Kannada)"
+                seid=555, domain="co.in", geo_location="New Delhi,Delhi,India", locale="hi-in", uule=" w+CAIQICIVRGVsaGksTmV3IERlbGhpLEluZGlh", device="mobile_android", sename=" Google Delhi (Hindi, Mobile)"
             },
             new SearchProperties()
             {
-               seid =557, domain ="co.in", geo_location="Bengaluru,Karnataka,India", locale= "kn-in", uule = "w+CAIQICIZQmVuZ2FsdXJ1LEthcm5hdGFrYSxJbmRpYQ==",device="mobile_android", sename="Google Bangalore (Kannada, Mobile)"
+                seid=556, domain="co.in", geo_location="Bengaluru,Karnataka,India", locale="kn-in", uule ="w+CAIQICIZQmVuZ2FsdXJ1LEthcm5hdGFrYSxJbmRpYQ==", device="desktop_chrome", sename="Google Bangalore (Kannada)"
             },
             new SearchProperties()
             {
-               seid =558, domain ="co.in", geo_location="Hyderabad,Telangana,India", locale= "te-in", uule ="w+CAIQICIZSHlkZXJhYmFkLFRlbGFuZ2FuYSxJbmRpYQ==",device="desktop_chrome", sename="Google Hyderabad (Telugu)"
+                seid=557, domain="co.in", geo_location="Bengaluru,Karnataka,India", locale="kn-in", uule="w+CAIQICIZQmVuZ2FsdXJ1LEthcm5hdGFrYSxJbmRpYQ==", device="mobile_android", sename="Google Bangalore (Kannada, Mobile)"
             },
             new SearchProperties()
             {
-               seid =559, domain ="co.in", geo_location="Hyderabad,Telangana,India", locale= "te-in", uule = "w+CAIQICIZSHlkZXJhYmFkLFRlbGFuZ2FuYSxJbmRpYQ==",device="mobile_android", sename="Google Hyderabad (Telugu, Mobile)"
+                seid=558, domain="co.in", geo_location="Hyderabad,Telangana,India", locale="te-in", uule ="w+CAIQICIZSHlkZXJhYmFkLFRlbGFuZ2FuYSxJbmRpYQ==", device="desktop_chrome", sename="Google Hyderabad (Telugu)"
             },
             new SearchProperties()
             {
-               seid =560, domain ="co.in", geo_location="Ahmedabad,Gujarat,India", locale= "gu-in", uule ="w+CAIQICIXQWhtZWRhYmFkLEd1amFyYXQsSW5kaWE=",device="desktop_chrome", sename="Google Ahmedabad (Gujarati)"
+                seid=559, domain="co.in", geo_location="Hyderabad,Telangana,India", locale="te-in", uule="w+CAIQICIZSHlkZXJhYmFkLFRlbGFuZ2FuYSxJbmRpYQ==", device="mobile_android", sename="Google Hyderabad (Telugu, Mobile)"
             },
             new SearchProperties()
             {
-               seid =561, domain ="co.in", geo_location="Ahmedabad,Gujarat,India", locale= "gu-in", uule = "w+CAIQICIXQWhtZWRhYmFkLEd1amFyYXQsSW5kaWE=",device="mobile_android", sename="Google Ahmedabad (Gujarati, Mobile)"
+                seid=560, domain="co.in", geo_location="Ahmedabad,Gujarat,India", locale="gu-in", uule ="w+CAIQICIXQWhtZWRhYmFkLEd1amFyYXQsSW5kaWE=", device="desktop_chrome", sename="Google Ahmedabad (Gujarati)"
             },
             new SearchProperties()
             {
-               seid =562, domain ="co.in", geo_location="Kolkata,West Bengal,India", locale= "bn-in", uule ="w+CAIQICIYS29sa2F0YSxXZXN0QmVuZ2FsLEluZGlh",device="desktop_chrome", sename="Google Kolkata (Bengali)"
+                seid=561, domain="co.in", geo_location="Ahmedabad,Gujarat,India", locale="gu-in", uule="w+CAIQICIXQWhtZWRhYmFkLEd1amFyYXQsSW5kaWE=", device="mobile_android", sename="Google Ahmedabad (Gujarati, Mobile)"
             },
             new SearchProperties()
             {
-               seid =563, domain ="co.in", geo_location="Kolkata,West Bengal,India", locale= "bn-in", uule = "w+CAIQICIYS29sa2F0YSxXZXN0QmVuZ2FsLEluZGlh",device="mobile_android", sename="Google Kolkata (Bengali, Mobile)"
+                seid=562, domain="co.in", geo_location="Kolkata,West Bengal,India", locale="bn-in", uule ="w+CAIQICIYS29sa2F0YSxXZXN0QmVuZ2FsLEluZGlh", device="desktop_chrome", sename="Google Kolkata (Bengali)"
             },
             new SearchProperties()
             {
-               seid =564, domain ="co.in", geo_location="Chennai,Tamil Nadu,India", locale= "ta-in", uule ="w+CAIQICIXQ2hlbm5haSxUYW1pbG5hZHUsSW5kaWE=",device="desktop_chrome", sename="Google Chennai (Tamil)"
+                seid=563, domain="co.in", geo_location="Kolkata,West Bengal,India", locale="bn-in", uule="w+CAIQICIYS29sa2F0YSxXZXN0QmVuZ2FsLEluZGlh", device="mobile_android", sename="Google Kolkata (Bengali, Mobile)"
             },
             new SearchProperties()
             {
-               seid =565, domain ="co.in", geo_location="Chennai,Tamil Nadu,India", locale= "ta-in", uule = "w+CAIQICIXQ2hlbm5haSxUYW1pbG5hZHUsSW5kaWE=",device="mobile_android", sename="Google Chennai (Tamil, Mobile)"
+                seid=564, domain="co.in", geo_location="Chennai,Tamil Nadu,India", locale="ta-in", uule ="w+CAIQICIXQ2hlbm5haSxUYW1pbG5hZHUsSW5kaWE=", device="desktop_chrome", sename="Google Chennai (Tamil)"
+            },
+            new SearchProperties()
+            {
+                seid=565, domain="co.in", geo_location="Chennai,Tamil Nadu,India", locale="ta-in", uule="w+CAIQICIXQ2hlbm5haSxUYW1pbG5hZHUsSW5kaWE=", device="mobile_android", sename="Google Chennai (Tamil, Mobile)"
             },//13-05-2021 end
             new SearchProperties() //18-05-2021
             {
-               seid =566, domain ="co.uk", geo_location="Milton Keynes,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIkTWlsdG9uIEtleW5lcyxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Milton Keynes)"
+                seid=566, domain="co.uk", geo_location="Milton Keynes,England,United Kingdom", locale="en-gb", uule="w+CAIQICIkTWlsdG9uIEtleW5lcyxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Milton Keynes)"
             },
             new SearchProperties()
             {
-               seid =567, domain ="co.uk", geo_location="Milton Keynes,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIkTWlsdG9uIEtleW5lcyxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Milton Keynes, Mobile)"
+                seid=567, domain="co.uk", geo_location="Milton Keynes,England,United Kingdom", locale="en-gb", uule="w+CAIQICIkTWlsdG9uIEtleW5lcyxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Milton Keynes, Mobile)"
             },
             new SearchProperties()
             {
-               seid =568, domain ="co.uk", geo_location="Guildford,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIgR3VpbGRmb3JkLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Guildford)"
+                seid=568, domain="co.uk", geo_location="Guildford,England,United Kingdom", locale="en-gb", uule="w+CAIQICIgR3VpbGRmb3JkLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Guildford)"
             },
             new SearchProperties()
             {
-               seid =569, domain ="co.uk", geo_location="Guildford,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIgR3VpbGRmb3JkLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Guildford, Mobile)"
+                seid=569, domain="co.uk", geo_location="Guildford,England,United Kingdom", locale="en-gb", uule="w+CAIQICIgR3VpbGRmb3JkLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Guildford, Mobile)"
             },
             new SearchProperties()
             {
-               seid =570, domain ="co.uk", geo_location="Wrexham,Wales,United Kingdom", locale= "en-gb", uule = "w+CAIQICIcV3JleGhhbSxXYWxlcyxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Wrexham)"
+                seid=570, domain="co.uk", geo_location="Wrexham,Wales,United Kingdom", locale="en-gb", uule="w+CAIQICIcV3JleGhhbSxXYWxlcyxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Wrexham)"
             },
             new SearchProperties()
             {
-               seid =571, domain ="co.uk", geo_location="Wrexham,Wales,United Kingdom", locale= "en-gb", uule = "w+CAIQICIcV3JleGhhbSxXYWxlcyxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Wrexham, Mobile)"
-            },//18-05-2021
-            new SearchProperties() // 10-08-2021
+                seid=571, domain="co.uk", geo_location="Wrexham,Wales,United Kingdom", locale="en-gb", uule="w+CAIQICIcV3JleGhhbSxXYWxlcyxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Wrexham, Mobile)"
+            }, //18-05-2021 ends
+            new SearchProperties() //10-08-2021 Google Ecuador (Spanish)
             {
-               seid =572, domain ="com.ec", geo_location="Ecuador", locale= "es-419-ec", uule = "w+CAIQICIHRWN1YWRvcg==",device="desktop_chrome", sename="Google Ecuador (Spanish)"
+                seid=572, domain="com.ec", geo_location="Ecuador", locale="es-419-ec", uule="w+CAIQICIHRWN1YWRvcg==", device="desktop_chrome", sename="Google Ecuador (Spanish)"
             },
             new SearchProperties()
             {
-               seid =573, domain ="com.ec", geo_location="Ecuador", locale= "es-419-ec", uule = "w+CAIQICIHRWN1YWRvcg==",device="mobile_android", sename="Google Ecuador (Spanish, Mobile)"
+                seid=573, domain="com.ec", geo_location="Ecuador", locale="es-419-ec", uule="w+CAIQICIHRWN1YWRvcg==", device="mobile_android", sename="Google Ecuador (Spanish, Mobile)"
             },//10-08-2021
             new SearchProperties() //21-10-2021  Google TH(Bangkok)
             {
-                seid=574, domain="co.th", geo_location="Bangkok,Thailand", locale= "th-th", uule = "w+CAIQICIQQmFuZ2tvayxUaGFpbGFuZA==",device="desktop_chrome", sename="Google TH (Bangkok)"
+                seid=574, domain="co.th", geo_location="Bangkok,Thailand", locale="th-th", uule="w+CAIQICIQQmFuZ2tvayxUaGFpbGFuZA==", device="desktop_chrome", sename="Google TH (Bangkok)"
             },
             new SearchProperties()
             {
-                seid=575, domain="co.th", geo_location="Bangkok,Thailand", locale= "th-th", uule = "w+CAIQICIQQmFuZ2tvayxUaGFpbGFuZA==",device="mobile_android", sename="Google TH (Bangkok, Mobile)"
+                seid=575, domain="co.th", geo_location="Bangkok,Thailand", locale="th-th", uule="w+CAIQICIQQmFuZ2tvayxUaGFpbGFuZA==", device="mobile_android", sename="Google TH (Bangkok, Mobile)"
             },
             new SearchProperties() //Google TH(Udon Thani)
             {
-                seid=576, domain="co.th", geo_location="Udon Thani,Thailand", locale= "th-th", uule = "w+CAIQICITVWRvbiBUaGFuaSxUaGFpbGFuZA==",device="desktop_chrome", sename="Google TH (Udon Thani)"
+                seid=576, domain="co.th", geo_location="Udon Thani,Thailand", locale="th-th", uule="w+CAIQICITVWRvbiBUaGFuaSxUaGFpbGFuZA==", device="desktop_chrome", sename="Google TH (Udon Thani)"
             },
             new SearchProperties()
             {
-                seid=577, domain="co.th", geo_location="Udon Thani,Thailand", locale= "th-th", uule = "w+CAIQICITVWRvbiBUaGFuaSxUaGFpbGFuZA==",device="mobile_android", sename="Google TH (Udon Thani, Mobile)"
+                seid=577, domain="co.th", geo_location="Udon Thani,Thailand", locale="th-th", uule="w+CAIQICITVWRvbiBUaGFuaSxUaGFpbGFuZA==", device="mobile_android", sename="Google TH (Udon Thani, Mobile)"
             },
             new SearchProperties() //Goolge TH(Pattaya)
             {
-                seid=578, domain="co.th", geo_location="Pattaya City,Chon Buri,Thailand", locale= "th-th", uule = "w+CAIQICIfUGF0dGF5YSBDaXR5LENob24gQnVyaSxUaGFpbGFuZA==",device="desktop_chrome", sename="Google TH (Pattaya City,Chon Buri)"
+                seid=578, domain="co.th", geo_location="Pattaya City,Chon Buri,Thailand", locale="th-th", uule="w+CAIQICIfUGF0dGF5YSBDaXR5LENob24gQnVyaSxUaGFpbGFuZA==", device="desktop_chrome", sename="Google TH (Pattaya City,Chon Buri)"
             },
             new SearchProperties()
             {
-                seid=579, domain="co.th", geo_location="Pattaya City,Chon Buri,Thailand", locale= "th-th", uule = "w+CAIQICIfUGF0dGF5YSBDaXR5LENob24gQnVyaSxUaGFpbGFuZA==",device="mobile_android", sename="Google TH (Pattaya City,Chon Buri, Mobile)"
+                seid=579, domain="co.th", geo_location="Pattaya City,Chon Buri,Thailand", locale="th-th", uule="w+CAIQICIfUGF0dGF5YSBDaXR5LENob24gQnVyaSxUaGFpbGFuZA==", device="mobile_android", sename="Google TH (Pattaya City,Chon Buri, Mobile)"
             },
             new SearchProperties()//Goolge TH(Nakhon Ratchasima)
             {
-               seid =580, domain="co.th", geo_location="Nakhon Ratchasima,Thailand", locale= "th-th", uule = "w+CAIQICIaTmFraG9uIFJhdGNoYXNpbWEsVGhhaWxhbmQ=",device="desktop_chrome", sename="Google TH (Nakhon Ratchasima)"
+                seid=580, domain="co.th", geo_location="Nakhon Ratchasima,Thailand", locale="th-th", uule="w+CAIQICIaTmFraG9uIFJhdGNoYXNpbWEsVGhhaWxhbmQ=", device="desktop_chrome", sename="Google TH (Nakhon Ratchasima)"
             },
             new SearchProperties()
             {
-                seid=581, domain="co.th", geo_location="Nakhon Ratchasima,Thailand", locale= "th-th", uule = "w+CAIQICIaTmFraG9uIFJhdGNoYXNpbWEsVGhhaWxhbmQ=",device="mobile_android", sename="Google TH (Nakhon Ratchasima, Mobile)"
+                seid=581, domain="co.th", geo_location="Nakhon Ratchasima,Thailand", locale="th-th", uule="w+CAIQICIaTmFraG9uIFJhdGNoYXNpbWEsVGhhaWxhbmQ=", device="mobile_android", sename="Google TH (Nakhon Ratchasima, Mobile)"
             },
             new SearchProperties()//Goolge TH(Chiang Mai)
             {
-               seid =582, domain="co.th", geo_location="Chiang Mai,Thailand", locale= "th-th", uule = "w+CAIQICITQ2hpYW5nIE1haSxUaGFpbGFuZA==",device="desktop_chrome", sename="Google TH (Chiang Mai)"
+                seid=582, domain="co.th", geo_location="Chiang Mai,Thailand", locale="th-th", uule="w+CAIQICITQ2hpYW5nIE1haSxUaGFpbGFuZA==", device="desktop_chrome", sename="Google TH (Chiang Mai)"
             },
             new SearchProperties()
             {
-                seid=583, domain="co.th", geo_location="Chiang Mai,Thailand", locale= "th-th", uule = "w+CAIQICITQ2hpYW5nIE1haSxUaGFpbGFuZA==",device="mobile_android", sename="Google TH (Chiang Mai, Mobile)"
+                seid=583, domain="co.th", geo_location="Chiang Mai,Thailand", locale="th-th", uule="w+CAIQICITQ2hpYW5nIE1haSxUaGFpbGFuZA==", device="mobile_android", sename="Google TH (Chiang Mai, Mobile)"
             },
             new SearchProperties()//Goolge TH(Hat Yai)
             {
-                seid=584, domain ="co.th", geo_location="Hat Yai,Songkhla,Thailand", locale= "th-th", uule = "w+CAIQICIZSGF0IFlhaSxTb25na2hsYSxUaGFpbGFuZA==",device="desktop_chrome", sename="Google TH (Hat Yai,Songkhla)"
+                seid=584, domain="co.th", geo_location="Hat Yai,Songkhla,Thailand", locale="th-th", uule="w+CAIQICIZSGF0IFlhaSxTb25na2hsYSxUaGFpbGFuZA==", device="desktop_chrome", sename="Google TH (Hat Yai,Songkhla)"
             },
             new SearchProperties()
             {
-                seid=585, domain="co.th", geo_location="Hat Yai,Songkhla,Thailand", locale= "th-th", uule = "w+CAIQICIZSGF0IFlhaSxTb25na2hsYSxUaGFpbGFuZA==",device="mobile_android", sename="Google TH (Hat Yai,Songkhla, Mobile)"
+                seid=585, domain="co.th", geo_location="Hat Yai,Songkhla,Thailand", locale="th-th", uule="w+CAIQICIZSGF0IFlhaSxTb25na2hsYSxUaGFpbGFuZA==", device="mobile_android", sename="Google TH (Hat Yai,Songkhla, Mobile)"
             },
             new SearchProperties()//Goolge TH(Phuket)
             {
-                seid=586, domain="co.th", geo_location="Phuket,Thailand", locale= "th-th", uule = "w+CAIQICIPUGh1a2V0LFRoYWlsYW5k",device="desktop_chrome", sename="Google TH (Phuket)"
+                seid=586, domain="co.th", geo_location="Phuket,Thailand", locale="th-th", uule="w+CAIQICIPUGh1a2V0LFRoYWlsYW5k", device="desktop_chrome", sename="Google TH (Phuket)"
             },
             new SearchProperties()
             {
-                seid=587, domain="co.th", geo_location="Phuket,Thailand", locale= "th-th", uule = "w+CAIQICIPUGh1a2V0LFRoYWlsYW5k",device="mobile_android", sename="Google TH (Phuket, Mobile)"
+                seid=587, domain="co.th", geo_location="Phuket,Thailand", locale="th-th", uule="w+CAIQICIPUGh1a2V0LFRoYWlsYW5k", device="mobile_android", sename="Google TH (Phuket, Mobile)"
             },
             new SearchProperties() //Goolge TH(Surat Thani)
             {
-                seid=588, domain="co.th", geo_location="Surat Thani,Thailand", locale= "th-th", uule = "w+CAIQICIUU3VyYXQgVGhhbmksVGhhaWxhbmQ=",device="desktop_chrome", sename="Google TH (Surat Thani)"
+                seid=588, domain="co.th", geo_location="Surat Thani,Thailand", locale="th-th", uule="w+CAIQICIUU3VyYXQgVGhhbmksVGhhaWxhbmQ=", device="desktop_chrome", sename="Google TH (Surat Thani)"
             },
             new SearchProperties()
             {
-                seid=589, domain="co.th", geo_location="Surat Thani,Thailand", locale= "th-th", uule = "w+CAIQICIUU3VyYXQgVGhhbmksVGhhaWxhbmQ=",device="mobile_android", sename="Google TH (Surat Thani, Mobile)"
+                seid=589, domain="co.th", geo_location="Surat Thani,Thailand", locale="th-th", uule="w+CAIQICIUU3VyYXQgVGhhbmksVGhhaWxhbmQ=", device="mobile_android", sename="Google TH (Surat Thani, Mobile)"
             },//end 21-10-2021
             new SearchProperties()//20-12-2021 France Paris, Lyon, Marseille
             {
-                seid=590, domain="fr", geo_location="Paris,Paris,Ile-de-France,France", locale= "fr-fr", uule = "w+CAIQICIgUGFyaXMsUGFyaXMsSWxlLWRlLUZyYW5jZSxGcmFuY2U=",device="desktop_chrome",sename="Google FR (Paris)"
+                seid=590, domain="fr", geo_location="Paris,Paris,Ile-de-France,France", locale="fr-fr", uule="w+CAIQICIgUGFyaXMsUGFyaXMsSWxlLWRlLUZyYW5jZSxGcmFuY2U=", device="desktop_chrome", sename="Google FR (Paris)"
             },
             new SearchProperties()
             {
-                seid=591, domain="fr", geo_location="Paris,Paris,Ile-de-France,France", locale= "fr-fr", uule = "w+CAIQICIgUGFyaXMsUGFyaXMsSWxlLWRlLUZyYW5jZSxGcmFuY2U=",device="mobile_android",sename="Google FR (Paris, Mobile)"
+                seid=591, domain="fr", geo_location="Paris,Paris,Ile-de-France,France", locale="fr-fr", uule="w+CAIQICIgUGFyaXMsUGFyaXMsSWxlLWRlLUZyYW5jZSxGcmFuY2U=", device="mobile_android", sename="Google FR (Paris, Mobile)"
             },
             new SearchProperties()
             {
-                seid=592, domain="fr", geo_location="Lyon,Auvergne-Rhone-Alpes,France", locale= "fr-fr", uule = "w+CAIQICIgTHlvbixBdXZlcmduZS1SaG9uZS1BbHBlcyxGcmFuY2U=",device="desktop_chrome",sename="Google FR (Lyon)"
+                seid=592, domain="fr", geo_location="Lyon,Auvergne-Rhone-Alpes,France", locale="fr-fr", uule="w+CAIQICIgTHlvbixBdXZlcmduZS1SaG9uZS1BbHBlcyxGcmFuY2U=", device="desktop_chrome", sename="Google FR (Lyon)"
             },
             new SearchProperties()
             {
-                seid=593, domain="fr", geo_location="Lyon,Auvergne-Rhone-Alpes,France", locale= "fr-fr", uule = "w+CAIQICIgTHlvbixBdXZlcmduZS1SaG9uZS1BbHBlcyxGcmFuY2U=",device="mobile_android",sename="Google FR (Lyon, Mobile)"
+                seid=593, domain="fr", geo_location="Lyon,Auvergne-Rhone-Alpes,France", locale="fr-fr", uule="w+CAIQICIgTHlvbixBdXZlcmduZS1SaG9uZS1BbHBlcyxGcmFuY2U=", device="mobile_android", sename="Google FR (Lyon, Mobile)"
             },
             new SearchProperties()
             {
-                 seid=594, domain="fr", geo_location="Marseille,Provence-Alpes-Cote d'Azur,France", locale= "fr-fr", uule = "w+CAIQICIrTWFyc2VpbGxlLFByb3ZlbmNlLUFscGVzLUNvdGUgZCdBenVyLEZyYW5jZQ==",device="desktop_chrome",sename="Google FR (Marseille)"
+                seid=594, domain="fr", geo_location="Marseille,Provence-Alpes-Cote d'Azur,France", locale="fr-fr", uule="w+CAIQICIrTWFyc2VpbGxlLFByb3ZlbmNlLUFscGVzLUNvdGUgZCdBenVyLEZyYW5jZQ==", device="desktop_chrome", sename="Google FR (Marseille)"
             },
             new SearchProperties()
             {
-                seid=595, domain="fr", geo_location="Marseille,Provence-Alpes-Cote d'Azur,France", locale= "fr-fr", uule = "w+CAIQICIrTWFyc2VpbGxlLFByb3ZlbmNlLUFscGVzLUNvdGUgZCdBenVyLEZyYW5jZQ==",device="mobile_android",sename="Google FR (Marseille, Mobile)"
+                seid=595, domain="fr", geo_location="Marseille,Provence-Alpes-Cote d'Azur,France", locale="fr-fr", uule="w+CAIQICIrTWFyc2VpbGxlLFByb3ZlbmNlLUFscGVzLUNvdGUgZCdBenVyLEZyYW5jZQ==", device="mobile_android", sename="Google FR (Marseille, Mobile)"
             },//end 20-12-2021
             new SearchProperties() //01-04-2022 Barcelona
-           {
-             seid =596, domain ="es", geo_location="Barcelona,Catalonia,Spain", locale= "es-es", uule = "w+CAIQICIZQmFyY2Vsb25hLENhdGFsb25pYSxTcGFpbg==",device="desktop_chrome",sename="Google ES (Barcelona,Catalonia)"
-           },
-           new SearchProperties()
-           {
-             seid =597, domain ="es", geo_location="Barcelona,Catalonia,Spain", locale= "es-es", uule = "w+CAIQICIZQmFyY2Vsb25hLENhdGFsb25pYSxTcGFpbg==",device="mobile_android",sename="Google ES (Barcelona,Catalonia, Mobile)"
-           },
-           new SearchProperties()//01-04-2022 Madrid
-           {
-              seid =598, domain ="es", geo_location="Province of Madrid,Madrid,Spain", locale= "es-es", uule = "w+CAIQICIfUHJvdmluY2Ugb2YgTWFkcmlkLE1hZHJpZCxTcGFpbg==",device="desktop_chrome",sename="Google ES (Province of Madrid, Madrid)"
-           },
-           new SearchProperties()
-           {
-              seid =599, domain ="es", geo_location="Province of Madrid,Madrid,Spain", locale= "es-es", uule = "w+CAIQICIfUHJvdmluY2Ugb2YgTWFkcmlkLE1hZHJpZCxTcGFpbg==",device="mobile_android",sename="Google ES (Province of Madrid,Madrid, Mobile)"
-           },
+            {
+                seid=596, domain="es", geo_location="Barcelona,Catalonia,Spain", locale="es-es", uule="w+CAIQICIZQmFyY2Vsb25hLENhdGFsb25pYSxTcGFpbg==", device="desktop_chrome", sename="Google ES (Barcelona,Catalonia)"
+            },
+            new SearchProperties()
+            {
+                seid=597, domain="es", geo_location="Barcelona,Catalonia,Spain", locale="es-es", uule="w+CAIQICIZQmFyY2Vsb25hLENhdGFsb25pYSxTcGFpbg==", device="mobile_android", sename="Google ES (Barcelona,Catalonia, Mobile)"
+            },
+            new SearchProperties()//01-04-2022 Madrid
+            {
+                seid=598, domain="es", geo_location="Province of Madrid,Madrid,Spain", locale="es-es", uule="w+CAIQICIfUHJvdmluY2Ugb2YgTWFkcmlkLE1hZHJpZCxTcGFpbg==", device="desktop_chrome", sename="Google ES (Province of Madrid, Madrid)"
+            },
+            new SearchProperties()
+            {
+                seid=599, domain="es", geo_location="Province of Madrid,Madrid,Spain", locale="es-es", uule="w+CAIQICIfUHJvdmluY2Ugb2YgTWFkcmlkLE1hZHJpZCxTcGFpbg==", device="mobile_android", sename="Google ES (Province of Madrid,Madrid, Mobile)"
+            },
             new SearchProperties() //01-04-2022 Valencia
-           {
-              seid =600, domain ="es", geo_location="Province of Valencia,Valencia,Spain", locale= "es-es", uule = "w+CAIQICIjUHJvdmluY2Ugb2YgVmFsZW5jaWEsVmFsZW5jaWEsU3BhaW4=",device="desktop_chrome",sename="Google ES (Province of Valencia,Valencia)"
-           },
-           new SearchProperties()
-           {
-              seid =601, domain ="es", geo_location="Province of Valencia,Valencia,Spain", locale= "es-es", uule = "w+CAIQICIjUHJvdmluY2Ugb2YgVmFsZW5jaWEsVmFsZW5jaWEsU3BhaW4=",device="mobile_android",sename="Google ES (Province of Valencia,Valencia, Mobile)"
-           },//end 01-04-2022
-           new SearchProperties() //13-07-2022
-           {
-              seid =602, domain ="co.uk", geo_location="Bermuda", locale= "en-bm", uule = "w+CAIQICIHQmVybXVkYQ==",device="desktop_chrome",sename="Google UK (Bermuda)"
-           },
-           new SearchProperties()
-           {
-              seid =603, domain ="co.uk", geo_location="Bermuda", locale= "en-bm", uule = "w+CAIQICIHQmVybXVkYQ==",device="mobile_android",sename="Google UK (Bermuda, Mobile)"
-           }, //end 13-07-2022
-           new SearchProperties() // 23-11-2022
-           {
-              seid = 604, domain ="be", geo_location="Belgium", locale= "en-be", uule = "w+CAIQICIHQmVsZ2l1bQ==",device="desktop_chrome",sename="Google UK (Belgium)"
-           },
-           new SearchProperties()
-           {
-              seid = 605, domain ="be", geo_location="Belgium", locale= "en-be", uule = "w+CAIQICIHQmVsZ2l1bQ==",device="mobile_android",sename="Google UK (Belgium, Mobile)"
-           }, // end 23-11-2022
-           new SearchProperties() // 23-12-2022 new seid's from 606 - 691
-           {
-                seid = 606, domain ="com", geo_location="Surprise, Arizona,United States", locale= "en-us", uule = "w+CAIQICIfU3VycHJpc2UsIEFyaXpvbmEsVW5pdGVkIFN0YXRlcw==",device="desktop_chrome",sename="Google US (Surprise, Arizona)"
-           },
-           new SearchProperties()
-           {
-                seid = 607, domain ="com", geo_location="Surprise, Arizona,United States", locale= "en-us", uule = "w+CAIQICIfU3VycHJpc2UsIEFyaXpvbmEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Surprise, Arizona, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 608, domain ="com", geo_location="Austin, Texas,United States", locale= "en-us", uule = "w+CAIQICIbQXVzdGluLCBUZXhhcyxVbml0ZWQgU3RhdGVz",device="desktop_chrome",sename="Google US (Austin, Texas)"
-           },
-           new SearchProperties()
-           {
-                seid = 609, domain ="com", geo_location="Austin, Texas,United States", locale= "en-us", uule = "w+CAIQICIbQXVzdGluLCBUZXhhcyxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Austin, Texas, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 610, domain ="com", geo_location="Berkeley, California,United States", locale= "en-us", uule = "w+CAIQICIiQmVya2VsZXksIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="desktop_chrome",sename="Google US (Berkeley, California)"
-           },
-           new SearchProperties()
-           {
-                seid = 611, domain ="com", geo_location="Berkeley, California,United States", locale= "en-us", uule = "w+CAIQICIiQmVya2VsZXksIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Berkeley, California, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 612, domain ="com", geo_location="Clearwater, Florida,United States", locale= "en-us", uule = "w+CAIQICIhQ2xlYXJ3YXRlciwgRmxvcmlkYSxVbml0ZWQgU3RhdGVz",device="desktop_chrome",sename="Google US (Clearwater, Florida)"
-           },
-           new SearchProperties()
-           {
-                seid = 613, domain ="com", geo_location="Clearwater, Florida,United States", locale= "en-us", uule = "w+CAIQICIhQ2xlYXJ3YXRlciwgRmxvcmlkYSxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Clearwater, Florida, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 614, domain ="com", geo_location="Maspeth, New York,United States", locale= "en-us", uule = "w+CAIQICIfTWFzcGV0aCwgTmV3IFlvcmssVW5pdGVkIFN0YXRlcw==",device="desktop_chrome",sename="Google US (Maspeth, New York)"
-           },
-           new SearchProperties()
-           {
-                seid = 615, domain ="com", geo_location="Maspeth, New York,United States", locale= "en-us", uule = "w+CAIQICIfTWFzcGV0aCwgTmV3IFlvcmssVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Maspeth, New York, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 616, domain ="com", geo_location="Milpitas, California,United States", locale= "en-us", uule = "w+CAIQICIiTWlscGl0YXMsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="desktop_chrome",sename="Google US (Milpitas, California)"
-           },
-           new SearchProperties()
-           {
-                seid = 617, domain ="com", geo_location="Milpitas, California,United States", locale= "en-us", uule = "w+CAIQICIiTWlscGl0YXMsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Milpitas, California, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 618, domain ="com", geo_location="Rialto, California,United States", locale= "en-us", uule = "w+CAIQICIgUmlhbHRvLCBDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=",device="desktop_chrome",sename="Google US (Rialto, California)"
-           },
-           new SearchProperties()
-           {
-                seid = 619, domain ="com", geo_location="Rialto, California,United States", locale= "en-us", uule = "w+CAIQICIgUmlhbHRvLCBDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Rialto, California, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 620, domain ="com", geo_location="Richmond, California,United States", locale= "en-us", uule = "w+CAIQICIiUmljaG1vbmQsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="desktop_chrome",sename="Google US (Richmond, California)"
-           },
-           new SearchProperties()
-           {
-                seid = 621, domain ="com", geo_location="Richmond, California,United States", locale= "en-us", uule = "w+CAIQICIiUmljaG1vbmQsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Richmond, California, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 622, domain ="com", geo_location="Riverview, Florida,United States", locale= "en-us", uule = "w+CAIQICIgUml2ZXJ2aWV3LCBGbG9yaWRhLFVuaXRlZCBTdGF0ZXM=",device="desktop_chrome",sename="Google US (Riverview, Florida)"
-           },
-           new SearchProperties()
-           {
-                seid = 623, domain ="com", geo_location="Riverview, Florida,United States", locale= "en-us", uule = "w+CAIQICIgUml2ZXJ2aWV3LCBGbG9yaWRhLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Riverview, Florida, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 624, domain ="com", geo_location="San Diego, California,United States", locale= "en-us", uule = "w+CAIQICIjU2FuIERpZWdvLCBDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=",device="desktop_chrome",sename="Google US (San Diego, California)"
-           },
-           new SearchProperties()
-           {
-                seid = 625, domain ="com", geo_location="San Diego, California,United States", locale= "en-us", uule = "w+CAIQICIjU2FuIERpZWdvLCBDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (San Diego, California, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 626, domain ="com", geo_location="San Jose, California,United States", locale= "en-us", uule = "w+CAIQICIiU2FuIEpvc2UsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="desktop_chrome",sename="Google US (San Jose, California)"
-           },
-           new SearchProperties()
-           {
-                seid = 627, domain ="com", geo_location="San Jose, California,United States", locale= "en-us", uule = "w+CAIQICIiU2FuIEpvc2UsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (San Jose, California, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 628, domain ="com", geo_location="San Leandro, California,United States", locale= "en-us", uule = "w+CAIQICIlU2FuIExlYW5kcm8sIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="desktop_chrome",sename="Google US (San Leandro, California)"
-           },
-           new SearchProperties()
-           {
-                seid = 629, domain ="com", geo_location="San Leandro, California,United States", locale= "en-us", uule = "w+CAIQICIlU2FuIExlYW5kcm8sIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (San Leandro, California, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 630, domain ="com", geo_location="Seattle, Washington,United States", locale= "en-us", uule = "w+CAIQICIhU2VhdHRsZSwgV2FzaGluZ3RvbixVbml0ZWQgU3RhdGVz",device="desktop_chrome",sename="Google US (Seattle, Washington)"
-           },
-           new SearchProperties()
-           {
-                seid = 631, domain ="com", geo_location="Seattle, Washington,United States", locale= "en-us", uule = "w+CAIQICIhU2VhdHRsZSwgV2FzaGluZ3RvbixVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Seattle, Washington, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 632, domain ="com", geo_location="Spring Valley, California,United States", locale= "en-us", uule = "w+CAIQICInU3ByaW5nIFZhbGxleSwgQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz",device="desktop_chrome",sename="Google US (Spring Valley)"
-           },
-           new SearchProperties()
-           {
-                seid = 633, domain ="com", geo_location="Spring Valley, California,United States", locale= "en-us", uule = "w+CAIQICInU3ByaW5nIFZhbGxleSwgQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Spring Valley,, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 634, domain ="com", geo_location="Titusville, Florida,United States", locale= "en-us", uule = "w+CAIQICIhVGl0dXN2aWxsZSwgRmxvcmlkYSxVbml0ZWQgU3RhdGVz",device="desktop_chrome",sename="Google US (Titusville, Florida)"
-           },
-           new SearchProperties()
-           {
-                seid = 635, domain ="com", geo_location="Titusville, Florida,United States", locale= "en-us", uule = "w+CAIQICIhVGl0dXN2aWxsZSwgRmxvcmlkYSxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Titusville, Florida, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 636, domain ="com", geo_location="Van Nuys, California,United States", locale= "en-us", uule = "w+CAIQICIiVmFuIE51eXMsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="desktop_chrome",sename="Google US (Van Nuys, California)"
-           },
-           new SearchProperties()
-           {
-                seid = 637, domain ="com", geo_location="Van Nuys, California,United States", locale= "en-us", uule = "w+CAIQICIiVmFuIE51eXMsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Van Nuys, California, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 638, domain ="com", geo_location="Waipahu, Hawaii,United States", locale= "en-us", uule = "w+CAIQICIdV2FpcGFodSwgSGF3YWlpLFVuaXRlZCBTdGF0ZXM=",device="desktop_chrome",sename="Google US (Waipahu, Hawaii)"
-           },
-           new SearchProperties()
-           {
-                seid = 639, domain ="com", geo_location="Waipahu, Hawaii,United States", locale= "en-us", uule = "w+CAIQICIdV2FpcGFodSwgSGF3YWlpLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Waipahu, Hawaii, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 640, domain ="com", geo_location="Palm Harbor, Florida,United States", locale= "en-us", uule = "w+CAIQICIiUGFsbSBIYXJib3IsIEZsb3JpZGEsVW5pdGVkIFN0YXRlcw==",device="desktop_chrome",sename="Google US (Palm Harbor, Florida)"
-           },
-           new SearchProperties()
-           {
-                seid = 641, domain ="com", geo_location="Palm Harbor, Florida,United States", locale= "en-us", uule = "w+CAIQICIiUGFsbSBIYXJib3IsIEZsb3JpZGEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Palm Harbor, Florida, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 642, domain ="com", geo_location="Antioch, California,United States", locale= "en-us", uule = "w+CAIQICIhQW50aW9jaCwgQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz",device="desktop_chrome",sename="Google US (Antioch, California)"
-           },
-           new SearchProperties()
-           {
-                seid = 643, domain ="com", geo_location="Antioch, California,United States", locale= "en-us", uule = "w+CAIQICIhQW50aW9jaCwgQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Antioch, California, Mobile)"
-           },
-            new SearchProperties()
-           {
-                seid = 644, domain ="com", geo_location="Bee Cave, Texas,United States", locale= "en-us", uule = "w+CAIQICIcQmVlIENhdmUsIFRleGFzLFVuaXRlZCBTdGF0ZQ==",device="desktop_chrome",sename="Google US (Bee Cave, Texas)"
-           },
-           new SearchProperties()
-           {
-                seid = 645, domain ="com", geo_location="Bee Cave, Texas,United States", locale= "en-us", uule = "w+CAIQICIcQmVlIENhdmUsIFRleGFzLFVuaXRlZCBTdGF0ZQ==",device="mobile_android",sename="Google US (Bee Cave, Texas, Mobile)"
-           },
-            new SearchProperties()
-           {
-                seid = 646, domain ="com", geo_location="Brea, California,United States", locale= "en-us", uule = "w+CAIQICIeQnJlYSwgQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz",device="desktop_chrome",sename="Google US (Brea, California)"
-           },
-           new SearchProperties()
-           {
-                seid = 647, domain ="com", geo_location="Brea, California,United States", locale= "en-us", uule = "w+CAIQICIeQnJlYSwgQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Brea, California, Mobile)"
-           },
-            new SearchProperties()
-           {
-                seid = 648, domain ="com", geo_location="Federal Way, Washington,United States", locale= "en-us", uule = "w+CAIQICIlRmVkZXJhbCBXYXksIFdhc2hpbmd0b24sVW5pdGVkIFN0YXRlcw==",device="desktop_chrome",sename="Google US (Federal Way, Washington)"
-           },
-           new SearchProperties()
-           {
-                seid = 649, domain ="com", geo_location="Federal Way, Washington,United States", locale= "en-us", uule = "w+CAIQICIlRmVkZXJhbCBXYXksIFdhc2hpbmd0b24sVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Federal Way, Washington,, Mobile)"
-           },
-            new SearchProperties()
-           {
-                seid = 650, domain ="com", geo_location="Lanham, Maryland,United States", locale= "en-us", uule = "w+CAIQICIeTGFuaGFtLCBNYXJ5bGFuZCxVbml0ZWQgU3RhdGVzCg==",device="desktop_chrome",sename="Google US (Lanham, Maryland)"
-           },
-           new SearchProperties()
-           {
-                seid = 651, domain ="com", geo_location="Lanham, Maryland,United States", locale= "en-us", uule = "w+CAIQICIeTGFuaGFtLCBNYXJ5bGFuZCxVbml0ZWQgU3RhdGVzCg==",device="mobile_android",sename="Google US (Lanham, Maryland, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 652, domain ="com", geo_location="Livingston, New Jersey,United States", locale= "en-us", uule = "w+CAIQICIkTGl2aW5nc3RvbiwgTmV3IEplcnNleSxVbml0ZWQgU3RhdGVz",device="desktop_chrome",sename="Google US (Livingston, New Jersey)"
-           },
-           new SearchProperties()
-           {
-                seid = 653, domain ="com", geo_location="Livingston, New Jersey,United States", locale= "en-us", uule = "w+CAIQICIkTGl2aW5nc3RvbiwgTmV3IEplcnNleSxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Livingston, New Jersey, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 654, domain ="com", geo_location="Denver, Colorado,United States", locale= "en-us", uule = "w+CAIQICIeRGVudmVyLCBDb2xvcmFkbyxVbml0ZWQgU3RhdGVz",device="desktop_chrome",sename="Google US (Denver, Colorado)"
-           },
-           new SearchProperties()
-           {
-                seid = 655, domain ="com", geo_location="Denver, Colorado,United States", locale= "en-us", uule = "w+CAIQICIeRGVudmVyLCBDb2xvcmFkbyxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Denver, Colorado, Mobile)"
-           },
-           //new SearchProperties()
-           //{
-           //     seid = 656, domain ="com", geo_location="Los Angeles, California,United States", locale= "en-us", uule = "w+CAIQICImTG9zIEFuZ2VsZXMsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcwo=",device="desktop_chrome",sename="Google US (Los Angeles, California)"
-           //},
-           //new SearchProperties()
-           //{
-           //     seid = 657, domain ="com", geo_location="Los Angeles, California,United States", locale= "en-us", uule = "w+CAIQICImTG9zIEFuZ2VsZXMsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcwo=",device="mobile_android",sename="Google US (Los Angeles, California, Mobile)"
-           //},
-           new SearchProperties()
-           {
-                seid = 658, domain ="com", geo_location="Blue Bell, Pennsylvania,United States", locale= "en-us", uule = "w+CAIQICIlQmx1ZSBCZWxsLCBQZW5uc3lsdmFuaWEsVW5pdGVkIFN0YXRlcw==",device="desktop_chrome",sename="Google US (Blue Bell, Pennsylvania)"
-           },
-           new SearchProperties()
-           {
-                seid = 659, domain ="com", geo_location="Blue Bell, Pennsylvania,United States", locale= "en-us", uule = "w+CAIQICIlQmx1ZSBCZWxsLCBQZW5uc3lsdmFuaWEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Blue Bell, Pennsylvania, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 660, domain ="com", geo_location="Camarillo, California,United States", locale= "en-us", uule = "w+CAIQICIjQ2FtYXJpbGxvLCBDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=",device="desktop_chrome",sename="Google US (Camarillo, California)"
-           },
-           new SearchProperties()
-           {
-                seid = 661, domain ="com", geo_location="Camarillo, California,United States", locale= "en-us", uule = "w+CAIQICIjQ2FtYXJpbGxvLCBDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Camarillo, California, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 662, domain ="com", geo_location="Torrance, California,United States", locale= "en-us", uule = "w+CAIQICIiVG9ycmFuY2UsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="desktop_chrome",sename="Google US (Torrance, California)"
-           },
-           new SearchProperties()
-           {
-                seid = 663, domain ="com", geo_location="Torrance, California,United States", locale= "en-us", uule = "w+CAIQICIiVG9ycmFuY2UsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Torrance, California, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 664, domain ="com", geo_location="Atlantic Beach, Florida,United States", locale= "en-us", uule = "w+CAIQICIlQXRsYW50aWMgQmVhY2gsIEZsb3JpZGEsVW5pdGVkIFN0YXRlcw==",device="desktop_chrome",sename="Google US (Atlantic Beach, Florida)"
-           },
-           new SearchProperties()
-           {
-                seid = 665, domain ="com", geo_location="Atlantic Beach, Florida,United States", locale= "en-us", uule = "w+CAIQICIlQXRsYW50aWMgQmVhY2gsIEZsb3JpZGEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Atlantic Beach, Florida, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 666, domain ="com", geo_location="Murray, Utah,United States", locale= "en-us", uule = "w+CAIQICIaTXVycmF5LCBVdGFoLFVuaXRlZCBTdGF0ZXM=",device="desktop_chrome",sename="Google US (Murray, Utah)"
-           },
-           new SearchProperties()
-           {
-                seid = 667, domain ="com", geo_location="Murray, Utah,United States", locale= "en-us", uule = "w+CAIQICIaTXVycmF5LCBVdGFoLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Murray, Utah, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 668, domain ="com", geo_location="Vista, California,United States", locale= "en-us", uule = "w+CAIQICIfVmlzdGEsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="desktop_chrome",sename="Google US (Vista, California)"
-           },
-           new SearchProperties()
-           {
-                seid = 669, domain ="com", geo_location="Vista, California,United States", locale= "en-us", uule = "w+CAIQICIfVmlzdGEsIENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Vista, California, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 670, domain ="com", geo_location="Brooklyn, New York,United States", locale= "en-us", uule = "w+CAIQICIgQnJvb2tseW4sIE5ldyBZb3JrLFVuaXRlZCBTdGF0ZXM=",device="desktop_chrome",sename="Google US (Brooklyn, New York)"
-           },
-           new SearchProperties()
-           {
-                seid = 671, domain ="com", geo_location="Brooklyn, New York,United States", locale= "en-us", uule = "w+CAIQICIgQnJvb2tseW4sIE5ldyBZb3JrLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Brooklyn, New York, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 672, domain ="com", geo_location="North Wales, Pennsylvania,United States", locale= "en-us", uule = "w+CAIQICInTm9ydGggV2FsZXMsIFBlbm5zeWx2YW5pYSxVbml0ZWQgU3RhdGVz",device="desktop_chrome",sename="Google US (North Wales, Pennsylvania)"
-           },
-           new SearchProperties()
-           {
-                seid = 673, domain ="com", geo_location="North Wales, Pennsylvania,United States", locale= "en-us", uule = "w+CAIQICInTm9ydGggV2FsZXMsIFBlbm5zeWx2YW5pYSxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (North Wales, Pennsylvania, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 674, domain ="com", geo_location="Tacoma, Washington,United States", locale= "en-us", uule = "w+CAIQICIgVGFjb21hLCBXYXNoaW5ndG9uLFVuaXRlZCBTdGF0ZXM=",device="desktop_chrome",sename="Google US (Tacoma, Washington)"
-           },
-           new SearchProperties()
-           {
-                seid = 675, domain ="com", geo_location="Tacoma, Washington,United States", locale= "en-us", uule = "w+CAIQICIgVGFjb21hLCBXYXNoaW5ndG9uLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Tacoma, Washington, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 676, domain ="com", geo_location="Piscataway, New Jersey,United States", locale= "en-us", uule = "w+CAIQICIkUGlzY2F0YXdheSwgTmV3IEplcnNleSxVbml0ZWQgU3RhdGVz",device="desktop_chrome",sename="Google US (Piscataway, New Jersey)"
-           },
-           new SearchProperties()
-           {
-                seid = 677, domain ="com", geo_location="Piscataway, New Jersey,United States", locale= "en-us", uule = "w+CAIQICIkUGlzY2F0YXdheSwgTmV3IEplcnNleSxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Piscataway, New Jersey, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 678, domain ="com", geo_location="Portland, Oregon,United States", locale= "en-us", uule = "w+CAIQICIeUG9ydGxhbmQsIE9yZWdvbixVbml0ZWQgU3RhdGVz",device="desktop_chrome",sename="Google US (Portland, Oregon,United States)"
-           },
-           new SearchProperties()
-           {
-                seid = 679, domain ="com", geo_location="Portland, Oregon,United States", locale= "en-us", uule = "w+CAIQICIeUG9ydGxhbmQsIE9yZWdvbixVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Portland, Oregon,United States, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 680, domain ="com", geo_location="Homestead, Florida,United States", locale= "en-us", uule = "w+CAIQICIgSG9tZXN0ZWFkLCBGbG9yaWRhLFVuaXRlZCBTdGF0ZXM=",device="desktop_chrome",sename="Google US (Homestead, Florida)"
-           },
-           new SearchProperties()
-           {
-                seid = 681, domain ="com", geo_location="Homestead, Florida,United States", locale= "en-us", uule = "w+CAIQICIgSG9tZXN0ZWFkLCBGbG9yaWRhLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Homestead, Florida, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 682, domain ="com", geo_location="Everett, Washington,United States", locale= "en-us", uule = "w+CAIQICIhRXZlcmV0dCwgV2FzaGluZ3RvbixVbml0ZWQgU3RhdGVz",device="desktop_chrome",sename="Google US (Everett, Washington)"
-           },
-           new SearchProperties()
-           {
-                seid = 683, domain ="com", geo_location="Everett, Washington,United States", locale= "en-us", uule = "w+CAIQICIhRXZlcmV0dCwgV2FzaGluZ3RvbixVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Everett, Washington, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 684, domain ="com", geo_location="Flushing, New York,United States", locale= "en-us", uule = "w+CAIQICIgRmx1c2hpbmcsIE5ldyBZb3JrLFVuaXRlZCBTdGF0ZXM=",device="desktop_chrome",sename="Google US (Flushing, New York)"
-           },
-           new SearchProperties()
-           {
-                seid = 685, domain ="com", geo_location="Flushing, New York,United States", locale= "en-us", uule = "w+CAIQICIgRmx1c2hpbmcsIE5ldyBZb3JrLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Flushing, New York, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 686, domain ="com", geo_location="Lakewood, Washington,United States", locale= "en-us", uule = "w+CAIQICIiTGFrZXdvb2QsIFdhc2hpbmd0b24sVW5pdGVkIFN0YXRlcw==",device="desktop_chrome",sename="Google US (Lakewood, Washington)"
-           },
-           new SearchProperties()
-           {
-                seid = 687, domain ="com", geo_location="Lakewood, Washington,United States", locale= "en-us", uule = "w+CAIQICIiTGFrZXdvb2QsIFdhc2hpbmd0b24sVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Lakewood, Washington, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 688, domain ="com", geo_location="Los Gatos, California,United States", locale= "en-us", uule = "w+CAIQICIjTG9zIEdhdG9zLCBDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=",device="desktop_chrome",sename="Google US (Los Gatos, California)"
-           },
-           new SearchProperties()
-           {
-                seid = 689, domain ="com", geo_location="Los Gatos, California,United States", locale= "en-us", uule = "w+CAIQICIjTG9zIEdhdG9zLCBDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=",device="mobile_android",sename="Google US (Los Gatos, California, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 690, domain ="com", geo_location="Mililani, Hawaii,United States", locale= "en-us", uule = "w+CAIQICIeTWlsaWxhbmksIEhhd2FpaSxVbml0ZWQgU3RhdGVz",device="desktop_chrome",sename="Google US (Mililani, Hawaii)"
-           },
-           new SearchProperties()
-           {
-                seid = 691, domain ="com", geo_location="Mililani, Hawaii,United States", locale= "en-us", uule = "w+CAIQICIeTWlsaWxhbmksIEhhd2FpaSxVbml0ZWQgU3RhdGVz",device="mobile_android",sename="Google US (Mililani, Hawaii, Mobile)"
-           },// 23-12-2022 new seid's from 606 - 691
-           new SearchProperties()// 30-12-2022 new seid's from 692- 713
-           {
-                seid = 692, domain ="bj", geo_location="Benin", locale= "fr-bj", uule = "w+CAIQICIFQmVuaW4=",device="desktop_chrome",sename="Google BJ (Benin,French)"
-           },
-           new SearchProperties()
-           {
-                seid = 693, domain ="bj", geo_location="Benin", locale= "fr-bj", uule = "w+CAIQICIFQmVuaW4=",device="mobile_android",sename="Google BJ (Benin,French, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 694, domain ="bf", geo_location="Burkina Faso", locale= "fr-bf", uule = "w+CAIQICIMQnVya2luYSBGYXNv",device="desktop_chrome",sename="Google BF (Burkina Faso,French)"
-           },
-           new SearchProperties()
-           {
-                seid = 695, domain ="bf", geo_location="Burkina Faso", locale= "fr-bf", uule = "w+CAIQICIMQnVya2luYSBGYXNv",device="mobile_android",sename="Google BF (Burkina Faso,French, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 696, domain ="cv", geo_location="Cape Verde", locale= "pt-cv", uule = "w+CAIQICIKQ2FwZSBWZXJkZQ==",device="desktop_chrome",sename="Google CV (Cape Verde,Portuguese)"
-           },
-           new SearchProperties()
-           {
-                seid = 697, domain ="cv", geo_location="Cape Verde", locale= "pt-cv", uule = "w+CAIQICIKQ2FwZSBWZXJkZQ==",device="mobile_android",sename="Google CV (Cape Verde,Portuguese, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 698, domain ="gm", geo_location="The Gambia", locale= "en-gm", uule = "w+CAIQICIKVGhlIEdhbWJpYQ==",device="desktop_chrome",sename="Google GM (The Gambia,English)"
-           },
-           new SearchProperties()
-           {
-                seid = 699, domain ="gm", geo_location="The Gambia", locale= "en-gm", uule = "w+CAIQICIKVGhlIEdhbWJpYQ==",device="mobile_android",sename="Google GM (The Gambia,English, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 700, domain ="ci", geo_location="Ivory Coast", locale= "fr-ci", uule = "w+CAIQICILSXZvcnkgQ29hc3Q=",device="desktop_chrome",sename="Google CI (Ivory Coast,French)"
-           },
-           new SearchProperties()
-           {
-                seid = 701, domain ="ci", geo_location="Ivory Coast", locale= "fr-ci", uule = "w+CAIQICILSXZvcnkgQ29hc3Q=",device="mobile_android",sename="Google CI (Ivory Coast,French, Mobile)"
-           },
-            new SearchProperties()
-           {
-                seid = 702, domain ="ml", geo_location="Mali", locale= "fr-ml", uule = "w+CAIQICIETWFsaQ==",device="desktop_chrome",sename="Google ML (Mali,French)"
-           },
-           new SearchProperties()
-           {
-                seid = 703, domain ="ml", geo_location="Mali", locale= "fr-ml", uule = "w+CAIQICIETWFsaQ==",device="mobile_android",sename="Google ML (Mali,French, Mobile)"
-           },
-            new SearchProperties()
-           {
-                seid = 704, domain ="ne", geo_location="Niger", locale= "fr-ne", uule = "w+CAIQICIFTmlnZXI=",device="desktop_chrome",sename="Google NE (Niger,French)"
-           },
-           new SearchProperties()
-           {
-                seid = 705, domain ="ne", geo_location="Niger", locale= "fr-ne", uule = "w+CAIQICIFTmlnZXI=",device="mobile_android",sename="Google NE (Niger,French, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 706, domain ="sn", geo_location="Senegal", locale= "fr-sn", uule = "w+CAIQICIHU2VuZWdhbA==",device="desktop_chrome",sename="Google SN (Senegal,French)"
-           },
-           new SearchProperties()
-           {
-                seid = 707, domain ="sn", geo_location="Senegal", locale= "fr-sn", uule = "w+CAIQICIHU2VuZWdhbA==",device="mobile_android",sename="Google SN (Senegal,French, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 708, domain ="com.sl", geo_location="Sierra Leone", locale= "en-sl", uule = "w+CAIQICIMU2llcnJhIExlb25l",device="desktop_chrome",sename="Google SL (Sierra Leone,English)"
-           },
-           new SearchProperties()
-           {
-                seid = 709, domain ="com.sl", geo_location="Sierra Leone", locale= "en-sl", uule = "w+CAIQICIMU2llcnJhIExlb25l",device="mobile_android",sename="Google SL (Sierra Leone,English, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 710, domain ="tg", geo_location="Togo", locale= "fr-tg", uule = "w+CAIQICIMU2llcnJhIExlb25l",device="desktop_chrome",sename="Google TG (Togo,French)"
-           },
-           new SearchProperties()
-           {
-                seid = 711, domain ="tg", geo_location="Togo", locale= "fr-tg", uule = "w+CAIQICIMU2llcnJhIExlb25l",device="mobile_android",sename="Google TG (Togo,French, Mobile)"
-           },
-           new SearchProperties()
-           {
-                seid = 712, domain ="st", geo_location="Sao Tome and Principe", locale= "pt-st", uule = "w+CAIQICIVU2FvIFRvbWUgYW5kIFByaW5jaXBl",device="desktop_chrome",sename="Google ST (Sao Tome and Príncipe,Portuguese)"
-           },
-           new SearchProperties()
-           {
-                seid = 713, domain ="st", geo_location="Sao Tome and Principe", locale= "pt-st", uule = "w+CAIQICIVU2FvIFRvbWUgYW5kIFByaW5jaXBl",device="mobile_android",sename="Google ST (Sao Tome and Príncipe,Portuguese, Mobile)"
-           },    // 30-12-2022 new seid's from 692- 713
-           new SearchProperties() //06-03-2023
             {
-             seid = 714, domain ="com", geo_location="California,United States", locale= "en-us", uule = "w+CAIQICIYY2FsaWZvcm5pYSx1bml0ZWQgc3RhdGVz",device="desktop_chrome",sename="Google US (California)"
+                seid=600, domain="es", geo_location="Province of Valencia,Valencia,Spain", locale="es-es", uule="w+CAIQICIjUHJvdmluY2Ugb2YgVmFsZW5jaWEsVmFsZW5jaWEsU3BhaW4=", device="desktop_chrome", sename="Google ES (Province of Valencia,Valencia)"
             },
             new SearchProperties()
             {
-             seid = 715, domain ="com", geo_location="California,United States", locale= "en-us", uule = "w+CAIQICIYY2FsaWZvcm5pYSx1bml0ZWQgc3RhdGVz",device="mobile_android",sename="Google US (California, Mobile)"
+                seid=601, domain="es", geo_location="Province of Valencia,Valencia,Spain", locale="es-es", uule="w+CAIQICIjUHJvdmluY2Ugb2YgVmFsZW5jaWEsVmFsZW5jaWEsU3BhaW4=", device="mobile_android", sename="Google ES (Province of Valencia,Valencia, Mobile)"
+            },//end 01-04-2022
+            new SearchProperties() //13-07-2022
+            {
+                seid=602, domain="co.uk", geo_location="Bermuda", locale="en-bm", uule="w+CAIQICIHQmVybXVkYQ==", device="desktop_chrome", sename="Google UK (Bermuda)"
+            },
+            new SearchProperties()
+            {
+                seid=603, domain="co.uk", geo_location="Bermuda", locale="en-bm", uule="w+CAIQICIHQmVybXVkYQ==", device="mobile_android", sename="Google UK (Bermuda, Mobile)"
+            }, //end 13-07-2022
+            new SearchProperties() // 23-11-2022
+            {
+                seid=604, domain="be", geo_location="Belgium", locale="en-be", uule="w+CAIQICIHQmVsZ2l1bQ==", device="desktop_chrome", sename="Google UK (Belgium)"
+            },
+            new SearchProperties()
+            {
+                seid=605, domain="be", geo_location="Belgium", locale="en-be", uule="w+CAIQICIHQmVsZ2l1bQ==", device="mobile_android", sename="Google UK (Belgium, Mobile)"
+            }, // end 23-11-2022
+            new SearchProperties()//22-03-2025 geo_location space removed // 23-12-2022 new seid's from 606 - 691
+            {
+                seid=606, domain="com", geo_location="Surprise,Arizona,United States", locale="en-us", uule="w+CAIQICIeU3VycHJpc2UsQXJpem9uYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Surprise, Arizona)"
+            },
+            new SearchProperties()
+            {
+                seid=607, domain="com", geo_location="Surprise,Arizona,United States", locale="en-us", uule="w+CAIQICIeU3VycHJpc2UsQXJpem9uYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Surprise, Arizona, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=608, domain="com", geo_location="Austin,Texas,United States", locale="en-us", uule="w+CAIQICIaQXVzdGluLFRleGFzLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Austin, Texas)"
+            },
+            new SearchProperties()
+            {
+                seid=609, domain="com", geo_location="Austin,Texas,United States", locale="en-us", uule="w+CAIQICIaQXVzdGluLFRleGFzLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Austin, Texas, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=610, domain="com", geo_location="Berkeley,California,United States", locale="en-us", uule="w+CAIQICIhQmVya2VsZXksQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Berkeley, California)"
+            },
+            new SearchProperties()
+            {
+                seid=611, domain="com", geo_location="Berkeley,California,United States", locale="en-us", uule="w+CAIQICIhQmVya2VsZXksQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Berkeley, California, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=612, domain="com", geo_location="Clearwater,Florida,United States", locale="en-us", uule="w+CAIQICIgQ2xlYXJ3YXRlcixGbG9yaWRhLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Clearwater, Florida)"
+            },
+            new SearchProperties()
+            {
+                seid=613, domain="com", geo_location="Clearwater,Florida,United States", locale="en-us", uule="w+CAIQICIgQ2xlYXJ3YXRlcixGbG9yaWRhLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Clearwater, Florida, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=614, domain="com", geo_location="Maspeth,New York,United States", locale="en-us", uule="w+CAIQICIeTWFzcGV0aCxOZXcgWW9yayxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Maspeth, New York)"
+            },
+            new SearchProperties()
+            {
+                seid=615, domain="com", geo_location="Maspeth,New York,United States", locale="en-us", uule="w+CAIQICIeTWFzcGV0aCxOZXcgWW9yayxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Maspeth, New York, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=616, domain="com", geo_location="Milpitas,California,United States", locale="en-us", uule="w+CAIQICIhTWlscGl0YXMsQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Milpitas, California)"
+            },
+            new SearchProperties()
+            {
+                seid=617, domain="com", geo_location="Milpitas,California,United States", locale="en-us", uule="w+CAIQICIhTWlscGl0YXMsQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Milpitas, California, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=618, domain="com", geo_location="Rialto,California,United States", locale="en-us", uule="w+CAIQICIfUmlhbHRvLENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Rialto, California)"
+            },
+            new SearchProperties()
+            {
+                seid=619, domain="com", geo_location="Rialto,California,United States", locale="en-us", uule="w+CAIQICIfUmlhbHRvLENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Rialto, California, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=620, domain="com", geo_location="Richmond,California,United States", locale="en-us", uule="w+CAIQICIhUmljaG1vbmQsQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Richmond, California)"
+            },
+            new SearchProperties()
+            {
+                seid=621, domain="com", geo_location="Richmond,California,United States", locale="en-us", uule="w+CAIQICIhUmljaG1vbmQsQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Richmond, California, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=622, domain="com", geo_location="Riverview,Florida,United States", locale="en-us", uule="w+CAIQICIfUml2ZXJ2aWV3LEZsb3JpZGEsVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Riverview, Florida)"
+            },
+            new SearchProperties()
+            {
+                seid=623, domain="com", geo_location="Riverview,Florida,United States", locale="en-us", uule="w+CAIQICIfUml2ZXJ2aWV3LEZsb3JpZGEsVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Riverview, Florida, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=624, domain="com", geo_location="San Diego,California,United States", locale="en-us", uule="w+CAIQICIiU2FuIERpZWdvLENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (San Diego, California)"
+            },
+            new SearchProperties()
+            {
+                seid=625, domain="com", geo_location="San Diego,California,United States", locale="en-us", uule="w+CAIQICIiU2FuIERpZWdvLENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (San Diego, California, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=626, domain="com", geo_location="San Jose,California,United States", locale="en-us", uule="w+CAIQICIhU2FuIEpvc2UsQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (San Jose, California)"
+            },
+            new SearchProperties()
+            {
+                seid=627, domain="com", geo_location="San Jose,California,United States", locale="en-us", uule="w+CAIQICIhU2FuIEpvc2UsQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (San Jose, California, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=628, domain="com", geo_location="San Leandro,California,United States", locale="en-us", uule="w+CAIQICIkU2FuIExlYW5kcm8sQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (San Leandro, California)"
+            },
+            new SearchProperties()
+            {
+                seid=629, domain="com", geo_location="San Leandro,California,United States", locale="en-us", uule="w+CAIQICIkU2FuIExlYW5kcm8sQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (San Leandro, California, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=630, domain="com", geo_location="Seattle,Washington,United States", locale="en-us", uule="w+CAIQICIgU2VhdHRsZSxXYXNoaW5ndG9uLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Seattle, Washington)"
+            },
+            new SearchProperties()
+            {
+                seid=631, domain="com", geo_location="Seattle,Washington,United States", locale="en-us", uule="w+CAIQICIgU2VhdHRsZSxXYXNoaW5ndG9uLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Seattle, Washington, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=632, domain="com", geo_location="Spring Valley,California,United States", locale="en-us", uule="w+CAIQICImU3ByaW5nIFZhbGxleSxDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Spring Valley)"
+            },
+            new SearchProperties()
+            {
+                seid=633, domain="com", geo_location="Spring Valley,California,United States", locale="en-us", uule="w+CAIQICImU3ByaW5nIFZhbGxleSxDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Spring Valley,, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=634, domain="com", geo_location="Titusville,Florida,United States", locale="en-us", uule="w+CAIQICIgVGl0dXN2aWxsZSxGbG9yaWRhLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Titusville, Florida)"
+            },
+            new SearchProperties()
+            {
+                seid=635, domain="com", geo_location="Titusville,Florida,United States", locale="en-us", uule="w+CAIQICIgVGl0dXN2aWxsZSxGbG9yaWRhLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Titusville, Florida, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=636, domain="com", geo_location="Van Nuys,California,United States", locale="en-us", uule="w+CAIQICIhVmFuIE51eXMsQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Van Nuys, California)"
+            },
+            new SearchProperties()
+            {
+                seid=637, domain="com", geo_location="Van Nuys,California,United States", locale="en-us", uule="w+CAIQICIhVmFuIE51eXMsQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Van Nuys, California, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=638, domain="com", geo_location="Waipahu,Hawaii,United States", locale="en-us", uule="w+CAIQICIcV2FpcGFodSxIYXdhaWksVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Waipahu, Hawaii)"
+            },
+            new SearchProperties()
+            {
+                seid=639, domain="com", geo_location="Waipahu,Hawaii,United States", locale="en-us", uule="w+CAIQICIcV2FpcGFodSxIYXdhaWksVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Waipahu, Hawaii, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=640, domain="com", geo_location="Palm Harbor,Florida,United States", locale="en-us", uule="w+CAIQICIhUGFsbSBIYXJib3IsRmxvcmlkYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Palm Harbor, Florida)"
+            },
+            new SearchProperties()
+            {
+                seid=641, domain="com", geo_location="Palm Harbor,Florida,United States", locale="en-us", uule="w+CAIQICIhUGFsbSBIYXJib3IsRmxvcmlkYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Palm Harbor, Florida, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=642, domain="com", geo_location="Antioch,California,United States", locale="en-us", uule="w+CAIQICIgQW50aW9jaCxDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Antioch, California)"
+            },
+            new SearchProperties()
+            {
+                seid=643, domain="com", geo_location="Antioch,California,United States", locale="en-us", uule="w+CAIQICIgQW50aW9jaCxDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Antioch, California, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=644, domain="com", geo_location="Bee Cave,Texas,United States", locale="en-us", uule="w+CAIQICIcQmVlIENhdmUsVGV4YXMsVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Bee Cave, Texas)"
+            },
+            new SearchProperties()
+            {
+                seid=645, domain="com", geo_location="Bee Cave,Texas,United States", locale="en-us", uule="w+CAIQICIcQmVlIENhdmUsVGV4YXMsVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Bee Cave, Texas, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=646, domain="com", geo_location="Brea,California,United States", locale="en-us", uule="w+CAIQICIdQnJlYSxDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Brea, California)"
+            },
+            new SearchProperties()
+            {
+                seid=647, domain="com", geo_location="Brea,California,United States", locale="en-us", uule="w+CAIQICIdQnJlYSxDYWxpZm9ybmlhLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Brea, California, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=648, domain="com", geo_location="Federal Way,Washington,United States", locale="en-us", uule="w+CAIQICIkRmVkZXJhbCBXYXksV2FzaGluZ3RvbixVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Federal Way, Washington)"
+            },
+            new SearchProperties()
+            {
+                seid=649, domain="com", geo_location="Federal Way,Washington,United States", locale="en-us", uule="w+CAIQICIkRmVkZXJhbCBXYXksV2FzaGluZ3RvbixVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Federal Way, Washington,, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=650, domain="com", geo_location="Lanham,Maryland,United States", locale="en-us", uule="w+CAIQICIdTGFuaGFtLE1hcnlsYW5kLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Lanham, Maryland)"
+            },
+            new SearchProperties()
+            {
+                seid=651, domain="com", geo_location="Lanham,Maryland,United States", locale="en-us", uule="w+CAIQICIdTGFuaGFtLE1hcnlsYW5kLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Lanham, Maryland, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=652, domain="com", geo_location="Livingston,New Jersey,United States", locale="en-us", uule="w+CAIQICIjTGl2aW5nc3RvbixOZXcgSmVyc2V5LFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Livingston, New Jersey)"
+            },
+            new SearchProperties()
+            {
+                seid=653, domain="com", geo_location="Livingston,New Jersey,United States", locale="en-us", uule="w+CAIQICIjTGl2aW5nc3RvbixOZXcgSmVyc2V5LFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Livingston, New Jersey, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=654, domain="com", geo_location="Denver,Colorado,United States", locale="en-us", uule="w+CAIQICIdRGVudmVyLENvbG9yYWRvLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Denver, Colorado)"
+            },
+            new SearchProperties()
+            {
+                seid=655, domain="com", geo_location="Denver,Colorado,United States", locale="en-us", uule="w+CAIQICIdRGVudmVyLENvbG9yYWRvLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Denver, Colorado, Mobile)"
+            },
+            /*new SearchProperties()
+            {
+                seid=656, domain="com", geo_location="Los Angeles,California,United States", locale="en-us", uule="w+CAIQICIkTG9zIEFuZ2VsZXMsQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Los Angeles, California)"
+            },
+            new SearchProperties()
+            {
+                seid=657, domain="com", geo_location="Los Angeles,California,United States", locale="en-us", uule="w+CAIQICIkTG9zIEFuZ2VsZXMsQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Los Angeles, California, Mobile)"
+            },*/
+            new SearchProperties()
+            {
+                seid=658, domain="com", geo_location="Blue Bell,Pennsylvania,United States", locale="en-us", uule="w+CAIQICIkQmx1ZSBCZWxsLFBlbm5zeWx2YW5pYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Blue Bell, Pennsylvania)"
+            },
+            new SearchProperties()
+            {
+                seid=659, domain="com", geo_location="Blue Bell,Pennsylvania,United States", locale="en-us", uule="w+CAIQICIkQmx1ZSBCZWxsLFBlbm5zeWx2YW5pYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Blue Bell, Pennsylvania, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=660, domain="com", geo_location="Camarillo,California,United States", locale="en-us", uule="w+CAIQICIiQ2FtYXJpbGxvLENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Camarillo, California)"
+            },
+            new SearchProperties()
+            {
+                seid=661, domain="com", geo_location="Camarillo,California,United States", locale="en-us", uule="w+CAIQICIiQ2FtYXJpbGxvLENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Camarillo, California, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=662, domain="com", geo_location="Torrance,California,United States", locale="en-us", uule="w+CAIQICIhVG9ycmFuY2UsQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Torrance, California)"
+            },
+            new SearchProperties()
+            {
+                seid=663, domain="com", geo_location="Torrance,California,United States", locale="en-us", uule="w+CAIQICIhVG9ycmFuY2UsQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Torrance, California, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=664, domain="com", geo_location="Atlantic Beach,Florida,United States", locale="en-us", uule="w+CAIQICIkQXRsYW50aWMgQmVhY2gsRmxvcmlkYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Atlantic Beach, Florida)"
+            },
+            new SearchProperties()
+            {
+                seid=665, domain="com", geo_location="Atlantic Beach,Florida,United States", locale="en-us", uule="w+CAIQICIkQXRsYW50aWMgQmVhY2gsRmxvcmlkYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Atlantic Beach, Florida, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=666, domain="com", geo_location="Murray,Utah,United States", locale="en-us", uule="w+CAIQICIZTXVycmF5LFV0YWgsVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Murray, Utah)"
+            },
+            new SearchProperties()
+            {
+                seid=667, domain="com", geo_location="Murray,Utah,United States", locale="en-us", uule="w+CAIQICIZTXVycmF5LFV0YWgsVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Murray, Utah, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=668, domain="com", geo_location="Vista,California,United States", locale="en-us", uule="w+CAIQICIeVmlzdGEsQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Vista, California)"
+            },
+            new SearchProperties()
+            {
+                seid=669, domain="com", geo_location="Vista,California,United States", locale="en-us", uule="w+CAIQICIeVmlzdGEsQ2FsaWZvcm5pYSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Vista, California, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=670, domain="com", geo_location="Brooklyn,New York,United States", locale="en-us", uule="w+CAIQICIfQnJvb2tseW4sTmV3IFlvcmssVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Brooklyn, New York)"
+            },
+            new SearchProperties()
+            {
+                seid=671, domain="com", geo_location="Brooklyn,New York,United States", locale="en-us", uule="w+CAIQICIfQnJvb2tseW4sTmV3IFlvcmssVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Brooklyn, New York, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=672, domain="com", geo_location="North Wales,Pennsylvania,United States", locale="en-us", uule="w+CAIQICImTm9ydGggV2FsZXMsUGVubnN5bHZhbmlhLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (North Wales, Pennsylvania)"
+            },
+            new SearchProperties()
+            {
+                seid=673, domain="com", geo_location="North Wales,Pennsylvania,United States", locale="en-us", uule="w+CAIQICImTm9ydGggV2FsZXMsUGVubnN5bHZhbmlhLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (North Wales, Pennsylvania, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=674, domain="com", geo_location="Tacoma,Washington,United States", locale="en-us", uule="w+CAIQICIfVGFjb21hLFdhc2hpbmd0b24sVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Tacoma, Washington)"
+            },
+            new SearchProperties()
+            {
+                seid=675, domain="com", geo_location="Tacoma,Washington,United States", locale="en-us", uule="w+CAIQICIfVGFjb21hLFdhc2hpbmd0b24sVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Tacoma, Washington, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=676, domain="com", geo_location="Piscataway,New Jersey,United States", locale="en-us", uule="w+CAIQICIjUGlzY2F0YXdheSxOZXcgSmVyc2V5LFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Piscataway, New Jersey)"
+            },
+            new SearchProperties()
+            {
+                seid=677, domain="com", geo_location="Piscataway,New Jersey,United States", locale="en-us", uule="w+CAIQICIjUGlzY2F0YXdheSxOZXcgSmVyc2V5LFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Piscataway, New Jersey, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=678, domain="com", geo_location="Portland,Oregon,United States", locale="en-us", uule="w+CAIQICIdUG9ydGxhbmQsT3JlZ29uLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Portland, Oregon,United States)"
+            },
+            new SearchProperties()
+            {
+                seid=679, domain="com", geo_location="Portland,Oregon,United States", locale="en-us", uule="w+CAIQICIdUG9ydGxhbmQsT3JlZ29uLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Portland, Oregon,United States, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=680, domain="com", geo_location="Homestead,Florida,United States", locale="en-us", uule="w+CAIQICIfSG9tZXN0ZWFkLEZsb3JpZGEsVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Homestead, Florida)"
+            },
+            new SearchProperties()
+            {
+                seid=681, domain="com", geo_location="Homestead,Florida,United States", locale="en-us", uule="w+CAIQICIfSG9tZXN0ZWFkLEZsb3JpZGEsVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Homestead, Florida, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=682, domain="com", geo_location="Everett,Washington,United States", locale="en-us", uule="w+CAIQICIgRXZlcmV0dCxXYXNoaW5ndG9uLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Everett, Washington)"
+            },
+            new SearchProperties()
+            {
+                seid=683, domain="com", geo_location="Everett,Washington,United States", locale="en-us", uule="w+CAIQICIgRXZlcmV0dCxXYXNoaW5ndG9uLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Everett, Washington, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=684, domain="com", geo_location="Flushing,New York,United States", locale="en-us", uule="w+CAIQICIfRmx1c2hpbmcsTmV3IFlvcmssVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Flushing, New York)"
+            },
+            new SearchProperties()
+            {
+                seid=685, domain="com", geo_location="Flushing,New York,United States", locale="en-us", uule="w+CAIQICIfRmx1c2hpbmcsTmV3IFlvcmssVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Flushing, New York, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=686, domain="com", geo_location="Lakewood,Washington,United States", locale="en-us", uule="w+CAIQICIhTGFrZXdvb2QsV2FzaGluZ3RvbixVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US (Lakewood, Washington)"
+            },
+            new SearchProperties()
+            {
+                seid=687, domain="com", geo_location="Lakewood,Washington,United States", locale="en-us", uule="w+CAIQICIhTGFrZXdvb2QsV2FzaGluZ3RvbixVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US (Lakewood, Washington, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=688, domain="com", geo_location="Los Gatos,California,United States", locale="en-us", uule="w+CAIQICIiTG9zIEdhdG9zLENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Los Gatos, California)"
+            },
+            new SearchProperties()
+            {
+                seid=689, domain="com", geo_location="Los Gatos,California,United States", locale="en-us", uule="w+CAIQICIiTG9zIEdhdG9zLENhbGlmb3JuaWEsVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Los Gatos, California, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=690, domain="com", geo_location="Mililani,Hawaii,United States", locale="en-us", uule="w+CAIQICIdTWlsaWxhbmksSGF3YWlpLFVuaXRlZCBTdGF0ZXM=", device="desktop_chrome", sename="Google US (Mililani, Hawaii)"
+            },
+            new SearchProperties()
+            {
+                seid=691, domain="com", geo_location="Mililani,Hawaii,United States", locale="en-us", uule="w+CAIQICIdTWlsaWxhbmksSGF3YWlpLFVuaXRlZCBTdGF0ZXM=", device="mobile_android", sename="Google US (Mililani, Hawaii, Mobile)"
+            },//22-03-2025 geo_location space removed // 23-12-2022 new seid's from 606 - 691
+            new SearchProperties()// 30-12-2022 new seid's from 692- 713
+            {
+                seid=692, domain="bj", geo_location="Benin", locale="fr-bj", uule="w+CAIQICIFQmVuaW4=", device="desktop_chrome", sename="Google BJ (Benin,French)"
+            },
+            new SearchProperties()
+            {
+                seid=693, domain="bj", geo_location="Benin", locale="fr-bj", uule="w+CAIQICIFQmVuaW4=", device="mobile_android", sename="Google BJ (Benin,French, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=694, domain="bf", geo_location="Burkina Faso", locale="fr-bf", uule="w+CAIQICIMQnVya2luYSBGYXNv", device="desktop_chrome", sename="Google BF (Burkina Faso,French)"
+            },
+            new SearchProperties()
+            {
+                seid=695, domain="bf", geo_location="Burkina Faso", locale="fr-bf", uule="w+CAIQICIMQnVya2luYSBGYXNv", device="mobile_android", sename="Google BF (Burkina Faso,French, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=696, domain="cv", geo_location="Cape Verde", locale="pt-cv", uule="w+CAIQICIKQ2FwZSBWZXJkZQ==", device="desktop_chrome", sename="Google CV (Cape Verde,Portuguese)"
+            },
+            new SearchProperties()
+            {
+                seid=697, domain="cv", geo_location="Cape Verde", locale="pt-cv", uule="w+CAIQICIKQ2FwZSBWZXJkZQ==", device="mobile_android", sename="Google CV (Cape Verde,Portuguese, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=698, domain="gm", geo_location="The Gambia", locale="en-gm", uule="w+CAIQICIKVGhlIEdhbWJpYQ==", device="desktop_chrome", sename="Google GM (The Gambia,English)"
+            },
+            new SearchProperties()
+            {
+                seid=699, domain="gm", geo_location="The Gambia", locale="en-gm", uule="w+CAIQICIKVGhlIEdhbWJpYQ==", device="mobile_android", sename="Google GM (The Gambia,English, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=700, domain="ci", geo_location="Ivory Coast", locale="fr-ci", uule="w+CAIQICILSXZvcnkgQ29hc3Q=", device="desktop_chrome", sename="Google CI (Ivory Coast,French)"
+            },
+            new SearchProperties()
+            {
+                seid=701, domain="ci", geo_location="Ivory Coast", locale="fr-ci", uule="w+CAIQICILSXZvcnkgQ29hc3Q=", device="mobile_android", sename="Google CI (Ivory Coast,French, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=702, domain="ml", geo_location="Mali", locale="fr-ml", uule="w+CAIQICIETWFsaQ==", device="desktop_chrome", sename="Google ML (Mali,French)"
+            },
+            new SearchProperties()
+            {
+                seid=703, domain="ml", geo_location="Mali", locale="fr-ml", uule="w+CAIQICIETWFsaQ==", device="mobile_android", sename="Google ML (Mali,French, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=704, domain="ne", geo_location="Niger", locale="fr-ne", uule="w+CAIQICIFTmlnZXI=", device="desktop_chrome", sename="Google NE (Niger,French)"
+            },
+            new SearchProperties()
+            {
+                seid=705, domain="ne", geo_location="Niger", locale="fr-ne", uule="w+CAIQICIFTmlnZXI=", device="mobile_android", sename="Google NE (Niger,French, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=706, domain="sn", geo_location="Senegal", locale="fr-sn", uule="w+CAIQICIHU2VuZWdhbA==", device="desktop_chrome", sename="Google SN (Senegal,French)"
+            },
+            new SearchProperties()
+            {
+                seid=707, domain="sn", geo_location="Senegal", locale="fr-sn", uule="w+CAIQICIHU2VuZWdhbA==", device="mobile_android", sename="Google SN (Senegal,French, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=708, domain="com.sl", geo_location="Sierra Leone", locale="en-sl", uule="w+CAIQICIMU2llcnJhIExlb25l", device="desktop_chrome", sename="Google SL (Sierra Leone,English)"
+            },
+            new SearchProperties()
+            {
+                seid=709, domain="com.sl", geo_location="Sierra Leone", locale="en-sl", uule="w+CAIQICIMU2llcnJhIExlb25l", device="mobile_android", sename="Google SL (Sierra Leone,English, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=710, domain="tg", geo_location="Togo", locale="fr-tg", uule="w+CAIQICIMU2llcnJhIExlb25l", device="desktop_chrome", sename="Google TG (Togo,French)"
+            },
+            new SearchProperties()
+            {
+                seid=711, domain="tg", geo_location="Togo", locale="fr-tg", uule="w+CAIQICIMU2llcnJhIExlb25l", device="mobile_android", sename="Google TG (Togo,French, Mobile)"
+            },
+            new SearchProperties()
+            {
+                seid=712, domain="st", geo_location="Sao Tome and Principe", locale="pt-st", uule="w+CAIQICIVU2FvIFRvbWUgYW5kIFByaW5jaXBl", device="desktop_chrome", sename="Google ST (Sao Tome and Príncipe,Portuguese)"
+            },
+            new SearchProperties()
+            {
+                seid=713, domain="st", geo_location="Sao Tome and Principe", locale="pt-st", uule="w+CAIQICIVU2FvIFRvbWUgYW5kIFByaW5jaXBl", device="mobile_android", sename="Google ST (Sao Tome and Príncipe,Portuguese, Mobile)"
+            },    // 30-12-2022 new seid's from 692- 713
+            new SearchProperties() //06-03-2023
+            {
+                seid=714, domain="com", geo_location="California,United States", locale="en-us", uule="w+CAIQICIYY2FsaWZvcm5pYSx1bml0ZWQgc3RhdGVz", device="desktop_chrome", sename="Google US (California)"
+            },
+            new SearchProperties()
+            {
+                seid=715, domain="com", geo_location="California,United States", locale="en-us", uule="w+CAIQICIYY2FsaWZvcm5pYSx1bml0ZWQgc3RhdGVz", device="mobile_android", sename="Google US (California, Mobile)"
             },//06-03-2023
-             new SearchProperties() //14-03-2023
+            new SearchProperties() //14-03-2023
             {
-            seid = 716, domain ="com", geo_location="Texas,United States", locale= "en-us", uule = "w+CAIQICITVGV4YXMsVW5pdGVkIFN0YXRlcw==",device="desktop_chrome",sename="Google US (Texas)"
+                seid=716, domain="com", geo_location="Texas,United States", locale="en-us", uule="w+CAIQICITVGV4YXMsVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (Texas)"
             },
             new SearchProperties()
             {
-            seid = 717, domain ="com", geo_location="Texas,United States", locale= "en-us", uule = "w+CAIQICITVGV4YXMsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (Texas, Mobile)"
+                seid=717, domain="com", geo_location="Texas,United States", locale="en-us", uule="w+CAIQICITVGV4YXMsVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (Texas, Mobile)"
             },//14-03-2023 end
             new SearchProperties()//29-08-2023
             {
-            seid =718, domain ="com.br", geo_location="Brazil", locale= "en-br", uule = "w+CAIQICIGQnJhemls",device="desktop_chrome",sename="Google BR (English)"
+                seid=718, domain="com.br", geo_location="Brazil", locale="en-br", uule="w+CAIQICIGQnJhemls", device="desktop_chrome", sename="Google BR (English)"
             },
             new SearchProperties()
             {
-            seid =719, domain ="com.br", geo_location="Brazil", locale= "en-br", uule = "w+CAIQICIGQnJhemls",device="mobile_android",sename="Google BR (English, Mobile)"
+                seid=719, domain="com.br", geo_location="Brazil", locale="en-br", uule="w+CAIQICIGQnJhemls", device="mobile_android", sename="Google BR (English, Mobile)"
             },//29-08-2023
             new SearchProperties()//22-12-2023
             {
-            seid =720, domain ="al", geo_location="Albania", locale= "sq-al", uule = "w+CAIQICIHQWxiYW5pYQ==",device="desktop_chrome",sename="Google AL (Albania)"
+                seid=720, domain="al", geo_location="Albania", locale="sq-al", uule="w+CAIQICIHQWxiYW5pYQ==", device="desktop_chrome", sename="Google AL (Albania)"
             },
             new SearchProperties()
             {
-            seid =721, domain ="al", geo_location="Albania", locale= "sq-al", uule = "w+CAIQICIHQWxiYW5pYQ==",device="mobile_android",sename="Google AL (Albania, Mobile)"
+                seid=721, domain="al", geo_location="Albania", locale="sq-al", uule="w+CAIQICIHQWxiYW5pYQ==", device="mobile_android", sename="Google AL (Albania, Mobile)"
             },
             new SearchProperties()
             {
-            seid =722, domain ="am", geo_location="Armenia", locale= "hy-am", uule = "w+CAIQICIHQXJtZW5pYQ==",device="desktop_chrome",sename="Google AM (Armenian)"
+                seid=722, domain="am", geo_location="Armenia", locale="hy-am", uule="w+CAIQICIHQXJtZW5pYQ==", device="desktop_chrome", sename="Google AM (Armenian)"
             },
             new SearchProperties()
             {
-            seid =723, domain ="am", geo_location="Armenia", locale= "hy-am", uule = "w+CAIQICIHQXJtZW5pYQ==",device="mobile_android",sename="Google AM (Armenian, Mobile)"
+                seid=723, domain="am", geo_location="Armenia", locale="hy-am", uule="w+CAIQICIHQXJtZW5pYQ==", device="mobile_android", sename="Google AM (Armenian, Mobile)"
             },
             new SearchProperties()
             {
-            seid =724, domain ="ba", geo_location="Bosnia and Herzegovina", locale= "bs-ba", uule = "w+CAIQICIWQm9zbmlhIGFuZCBIZXJ6ZWdvdmluYQ==",device="desktop_chrome",sename="Google BA (Bosnian)"
+                seid=724, domain="ba", geo_location="Bosnia and Herzegovina", locale="bs-ba", uule="w+CAIQICIWQm9zbmlhIGFuZCBIZXJ6ZWdvdmluYQ==", device="desktop_chrome", sename="Google BA (Bosnian)"
             },
             new SearchProperties()
             {
-            seid =725, domain ="ba", geo_location="Bosnia and Herzegovina", locale= "bs-ba", uule = "w+CAIQICIWQm9zbmlhIGFuZCBIZXJ6ZWdvdmluYQ==",device="mobile_android",sename="Google BA (Bosnian, Mobile)"
+                seid=725, domain="ba", geo_location="Bosnia and Herzegovina", locale="bs-ba", uule="w+CAIQICIWQm9zbmlhIGFuZCBIZXJ6ZWdvdmluYQ==", device="mobile_android", sename="Google BA (Bosnian, Mobile)"
             },
             new SearchProperties()
             {
-            seid =726, domain ="co.bw", geo_location="Botswana", locale= "tn-bw", uule = "w+CAIQICIIQm90c3dhbmE=",device="desktop_chrome",sename="Google BW (Tswana)"
+                seid=726, domain="co.bw", geo_location="Botswana", locale="tn-bw", uule="w+CAIQICIIQm90c3dhbmE=", device="desktop_chrome", sename="Google BW (Tswana)"
             },
             new SearchProperties()
             {
-            seid =727, domain ="co.bw", geo_location="Botswana", locale= "tn-bw", uule = "w+CAIQICIIQm90c3dhbmE=",device="mobile_android",sename="Google BW (Tswana, Mobile)"
+                seid=727, domain="co.bw", geo_location="Botswana", locale="tn-bw", uule="w+CAIQICIIQm90c3dhbmE=", device="mobile_android", sename="Google BW (Tswana, Mobile)"
             },
             new SearchProperties()
             {
-            seid =728, domain ="co.cr", geo_location="Costa Rica", locale= "es-cr", uule = "w+CAIQICIKQ29zdGEgUmljYQ==",device="desktop_chrome",sename="Google CR (Spanish)"
+                seid=728, domain="co.cr", geo_location="Costa Rica", locale="es-cr", uule="w+CAIQICIKQ29zdGEgUmljYQ==", device="desktop_chrome", sename="Google CR (Spanish)"
             },
             new SearchProperties()
             {
-            seid =729, domain ="co.cr", geo_location="Costa Rica", locale= "es-cr", uule = "w+CAIQICIKQ29zdGEgUmljYQ==",device="mobile_android",sename="Google CR (Spanish, Mobile)"
+                seid=729, domain="co.cr", geo_location="Costa Rica", locale="es-cr", uule="w+CAIQICIKQ29zdGEgUmljYQ==", device="mobile_android", sename="Google CR (Spanish, Mobile)"
             },
             new SearchProperties()
             {
-            seid =730, domain ="com.do", geo_location="Dominican Republic", locale= "es-do", uule = "w+CAIQICISRG9taW5pY2FuIFJlcHVibGlj",device="desktop_chrome",sename="Google DO (Spanish)"
+                seid=730, domain="com.do", geo_location="Dominican Republic", locale="es-do", uule="w+CAIQICISRG9taW5pY2FuIFJlcHVibGlj", device="desktop_chrome", sename="Google DO (Spanish)"
             },
             new SearchProperties()
             {
-            seid =731, domain ="com.do", geo_location="Dominican Republic", locale= "es-do", uule = "w+CAIQICISRG9taW5pY2FuIFJlcHVibGlj",device="mobile_android",sename="Google DO (Spanish, Mobile)"
+                seid=731, domain="com.do", geo_location="Dominican Republic", locale="es-do", uule="w+CAIQICISRG9taW5pY2FuIFJlcHVibGlj", device="mobile_android", sename="Google DO (Spanish, Mobile)"
             },
             new SearchProperties()
             {
-            seid =732, domain ="ge", geo_location="Georgia", locale= "ka-ge", uule = "w+CAIQICIHR2VvcmdpYQ==",device="desktop_chrome",sename="Google GE (Kartuli)"
+                seid=732, domain="ge", geo_location="Georgia", locale="ka-ge", uule="w+CAIQICIHR2VvcmdpYQ==", device="desktop_chrome", sename="Google GE (Kartuli)"
             },
             new SearchProperties()
             {
-            seid =733, domain ="ge", geo_location="Georgia", locale= "ka-ge", uule = "w+CAIQICIHR2VvcmdpYQ==",device="mobile_android",sename="Google GE (Kartuli, Mobile)"
+                seid=733, domain="ge", geo_location="Georgia", locale="ka-ge", uule="w+CAIQICIHR2VvcmdpYQ==", device="mobile_android", sename="Google GE (Kartuli, Mobile)"
             },
             new SearchProperties()
             {
-            seid =734, domain ="com.gt", geo_location="Guatemala", locale= "es-gt", uule = "w+CAIQICIJR3VhdGVtYWxh",device="desktop_chrome",sename="Google GT (Spanish)"
+                seid=734, domain="com.gt", geo_location="Guatemala", locale="es-gt", uule="w+CAIQICIJR3VhdGVtYWxh", device="desktop_chrome", sename="Google GT (Spanish)"
             },
             new SearchProperties()
             {
-            seid =735, domain ="com.gt", geo_location="Guatemala", locale= "es-gt", uule = "w+CAIQICIJR3VhdGVtYWxh",device="mobile_android",sename="Google GT (Spanish, Mobile)"
+                seid=735, domain="com.gt", geo_location="Guatemala", locale="es-gt", uule="w+CAIQICIJR3VhdGVtYWxh", device="mobile_android", sename="Google GT (Spanish, Mobile)"
             },
             new SearchProperties()
             {
-            seid =736, domain ="com.pg", geo_location="Guinea", locale= "en-pg", uule = "w+CAIQICIGR3VpbmVh",device="desktop_chrome",sename="Google GU (English)"
+                seid=736, domain="com.pg", geo_location="Guinea", locale="en-pg", uule="w+CAIQICIGR3VpbmVh", device="desktop_chrome", sename="Google GU (English)"
             },
             new SearchProperties()
             {
-            seid =737, domain ="com.pg", geo_location="Guinea", locale= "en-pg", uule = "w+CAIQICIGR3VpbmVh",device="mobile_android",sename="Google GU (English, Mobile)"
+                seid=737, domain="com.pg", geo_location="Guinea", locale="en-pg", uule="w+CAIQICIGR3VpbmVh", device="mobile_android", sename="Google GU (English, Mobile)"
             },
             new SearchProperties()
             {
-            seid =738, domain ="kz", geo_location="Kazakhstan", locale= "kk-kz", uule = "w+CAIQICIKS2F6YWtoc3Rhbg==",device="desktop_chrome",sename="Google KZ (Kazakh)"
+                seid=738, domain="kz", geo_location="Kazakhstan", locale="kk-kz", uule="w+CAIQICIKS2F6YWtoc3Rhbg==", device="desktop_chrome", sename="Google KZ (Kazakh)"
             },
             new SearchProperties()
             {
-            seid =739, domain ="kz", geo_location="Kazakhstan", locale= "kk-kz", uule = "w+CAIQICIKS2F6YWtoc3Rhbg==",device="mobile_android",sename="Google KZ (Kazakh, Mobile)"
+                seid=739, domain="kz", geo_location="Kazakhstan", locale="kk-kz", uule="w+CAIQICIKS2F6YWtoc3Rhbg==", device="mobile_android", sename="Google KZ (Kazakh, Mobile)"
             },
             new SearchProperties()
             {
-            seid =740, domain ="kg", geo_location="Kurgyzstan", locale= "ky-kg", uule = "w+CAIQICIKS3lyZ3l6c3Rhbg==",device="desktop_chrome",sename="Google KG (Kyrgyz)"
+                seid=740, domain="kg", geo_location="Kurgyzstan", locale="ky-kg", uule="w+CAIQICIKS3lyZ3l6c3Rhbg==", device="desktop_chrome", sename="Google KG (Kyrgyz)"
             },
             new SearchProperties()
             {
-            seid =741, domain ="kg", geo_location="Kurgyzstan", locale= "ky-kg", uule = "w+CAIQICIKS3lyZ3l6c3Rhbg==",device="mobile_android",sename="Google KG (Kyrgyz, Mobile)"
+                seid=741, domain="kg", geo_location="Kurgyzstan", locale="ky-kg", uule="w+CAIQICIKS3lyZ3l6c3Rhbg==", device="mobile_android", sename="Google KG (Kyrgyz, Mobile)"
             },
             new SearchProperties()
             {
-            seid =742, domain ="mk", geo_location="Macedonia", locale= "mk-mk", uule = "w+CAIQICIJTWFjZWRvbmlh",device="desktop_chrome",sename="Google MK (Macedonian)"
+                seid=742, domain="mk", geo_location="Macedonia", locale="mk-mk", uule="w+CAIQICIJTWFjZWRvbmlh", device="desktop_chrome", sename="Google MK (Macedonian)"
             },
             new SearchProperties()
             {
-            seid =743, domain ="mk", geo_location="Macedonia", locale= "mk-mk", uule = "w+CAIQICIJTWFjZWRvbmlh",device="mobile_android",sename="Google MK (Macedonian, Mobile)"
+                seid=743, domain="mk", geo_location="Macedonia", locale="mk-mk", uule="w+CAIQICIJTWFjZWRvbmlh", device="mobile_android", sename="Google MK (Macedonian, Mobile)"
             },
             new SearchProperties()
             {
-            seid =744, domain ="mg", geo_location="Madagascar", locale= "mg-mg", uule = "w+CAIQICIKTWFkYWdhc2Nhcg==",device="desktop_chrome",sename="Google MG (Malagasy)"
+                seid=744, domain="mg", geo_location="Madagascar", locale="mg-mg", uule="w+CAIQICIKTWFkYWdhc2Nhcg==", device="desktop_chrome", sename="Google MG (Malagasy)"
             },
             new SearchProperties()
             {
-            seid =745, domain ="mg", geo_location="Madagascar", locale= "mg-mg", uule = "w+CAIQICIKTWFkYWdhc2Nhcg==",device="mobile_android",sename="Google MG (Malagasy, Mobile)"
+                seid=745, domain="mg", geo_location="Madagascar", locale="mg-mg", uule="w+CAIQICIKTWFkYWdhc2Nhcg==", device="mobile_android", sename="Google MG (Malagasy, Mobile)"
             },
             new SearchProperties()
             {
-            seid =746, domain ="mv", geo_location="Maldives", locale= "en-mv", uule = "w+CAIQICIITWFsZGl2ZXM=",device="desktop_chrome",sename="Google MV (English)"
+                seid=746, domain="mv", geo_location="Maldives", locale="en-mv", uule="w+CAIQICIITWFsZGl2ZXM=", device="desktop_chrome", sename="Google MV (English)"
             },
             new SearchProperties()
             {
-            seid =747, domain ="mv", geo_location="Maldives", locale= "en-mv", uule = "w+CAIQICIITWFsZGl2ZXM=",device="mobile_android",sename="Google MV (English, Mobile)"
+                seid=747, domain="mv", geo_location="Maldives", locale="en-mv", uule="w+CAIQICIITWFsZGl2ZXM=", device="mobile_android", sename="Google MV (English, Mobile)"
             },
             new SearchProperties()
             {
-            seid =748, domain ="mu", geo_location="Mauritius", locale= "mfe-mu", uule = "w+CAIQICIJTWF1cml0aXVz",device="desktop_chrome",sename="Google MU (Mauritian Creole)"
+                seid=748, domain="mu", geo_location="Mauritius", locale="mfe-mu", uule="w+CAIQICIJTWF1cml0aXVz", device="desktop_chrome", sename="Google MU (Mauritian Creole)"
             },
             new SearchProperties()
             {
-            seid =749, domain ="mu", geo_location="Mauritius", locale= "mfe-mu", uule = "w+CAIQICIJTWF1cml0aXVz",device="mobile_android",sename="Google MU (Mauritian Creole, Mobile)"
+                seid=749, domain="mu", geo_location="Mauritius", locale="mfe-mu", uule="w+CAIQICIJTWF1cml0aXVz", device="mobile_android", sename="Google MU (Mauritian Creole, Mobile)"
             },
             new SearchProperties()
             {
-            seid =750, domain ="md", geo_location="Moldova", locale= "mo-md", uule = "w+CAIQICIHTW9sZG92YQ==",device="desktop_chrome",sename="Google MD (Moldovan Creole)"
+                seid=750, domain="md", geo_location="Moldova", locale="mo-md", uule="w+CAIQICIHTW9sZG92YQ==", device="desktop_chrome", sename="Google MD (Moldovan Creole)"
             },
             new SearchProperties()
             {
-            seid =751, domain ="md", geo_location="Moldova", locale= "mo-md", uule = "w+CAIQICIHTW9sZG92YQ==",device="mobile_android",sename="Google MD (Moldovan Creole, Mobile)"
+                seid=751, domain="md", geo_location="Moldova", locale="mo-md", uule="w+CAIQICIHTW9sZG92YQ==", device="mobile_android", sename="Google MD (Moldovan Creole, Mobile)"
             },
             new SearchProperties()
             {
-            seid =752, domain ="me", geo_location="Montenegro", locale= "sr-me-me", uule = "w+CAIQICIKTW9udGVuZWdybw==",device="desktop_chrome",sename="Google ME (Montenegrin)"
+                seid=752, domain="me", geo_location="Montenegro", locale="sr-me-me", uule="w+CAIQICIKTW9udGVuZWdybw==", device="desktop_chrome", sename="Google ME (Montenegrin)"
             },
             new SearchProperties()
             {
-            seid =753, domain ="me", geo_location="Montenegro", locale= "sr-me-me", uule = "w+CAIQICIKTW9udGVuZWdybw==",device="mobile_android",sename="Google ME (Montenegrin, Mobile)"
+                seid=753, domain="me", geo_location="Montenegro", locale="sr-me-me", uule="w+CAIQICIKTW9udGVuZWdybw==", device="mobile_android", sename="Google ME (Montenegrin, Mobile)"
             },
             new SearchProperties()
             {
-            seid =754, domain ="com.na", geo_location="Namibia", locale= "af-na", uule = "w+CAIQICIHTmFtaWJpYQ==",device="desktop_chrome",sename="Google NA (Afrikaans)"
+                seid=754, domain="com.na", geo_location="Namibia", locale="af-na", uule="w+CAIQICIHTmFtaWJpYQ==", device="desktop_chrome", sename="Google NA (Afrikaans)"
             },
             new SearchProperties()
             {
-            seid =755, domain ="com.na", geo_location="Namibia", locale= "af-na", uule = "w+CAIQICIHTmFtaWJpYQ==",device="mobile_android",sename="Google NA (Afrikaans, Mobile)"
+                seid=755, domain="com.na", geo_location="Namibia", locale="af-na", uule="w+CAIQICIHTmFtaWJpYQ==", device="mobile_android", sename="Google NA (Afrikaans, Mobile)"
             },
             new SearchProperties()
             {
-            seid =756, domain ="com.cy", geo_location="Cyprus", locale= "el-cy", uule = "w+CAIQICIPTm9ydGhlcm4gQ3lwcnVz",device="desktop_chrome",sename="Google CY (Greek)"
+                seid=756, domain="com.cy", geo_location="Cyprus", locale="el-cy", uule="w+CAIQICIPTm9ydGhlcm4gQ3lwcnVz", device="desktop_chrome", sename="Google CY (Greek)"
             },
             new SearchProperties()
             {
-            seid =757, domain ="com.cy", geo_location="Cyprus", locale= "el-cy", uule = "w+CAIQICIPTm9ydGhlcm4gQ3lwcnVz",device="mobile_android",sename="Google CY (Greek, Mobile)"
+                seid=757, domain="com.cy", geo_location="Cyprus", locale="el-cy", uule="w+CAIQICIPTm9ydGhlcm4gQ3lwcnVz", device="mobile_android", sename="Google CY (Greek, Mobile)"
             },
             new SearchProperties()
             {
-            seid =758, domain ="ps", geo_location="Palestinian territories", locale= "ar-ps", uule = "w+CAIQICIJUGFsZXN0aW5l",device="desktop_chrome",sename="Google PS (Arabic)"
+                seid=758, domain="ps", geo_location="Palestinian territories", locale="ar-ps", uule="w+CAIQICIJUGFsZXN0aW5l", device="desktop_chrome", sename="Google PS (Arabic)"
             },
             new SearchProperties()
             {
-            seid =759, domain ="ps", geo_location="Palestinian territories", locale= "ar-ps", uule = "w+CAIQICIJUGFsZXN0aW5l",device="mobile_android",sename="Google PS (Arabic, Mobile)"
+                seid=759, domain="ps", geo_location="Palestinian territories", locale="ar-ps", uule="w+CAIQICIJUGFsZXN0aW5l", device="mobile_android", sename="Google PS (Arabic, Mobile)"
             },
             new SearchProperties()
             {
-            seid =760, domain ="com.py", geo_location="Paraguay", locale= "es-py", uule = "w+CAIQICIIUGFyYWd1YXk=",device="desktop_chrome",sename="Google PY (Spanish)"
+                seid=760, domain="com.py", geo_location="Paraguay", locale="es-py", uule="w+CAIQICIIUGFyYWd1YXk=", device="desktop_chrome", sename="Google PY (Spanish)"
             },
             new SearchProperties()
             {
-            seid =761, domain ="com.py", geo_location="Paraguay", locale= "es-py", uule = "w+CAIQICIIUGFyYWd1YXk=",device="mobile_android",sename="Google PY (Spanish, Mobile)"
+                seid=761, domain="com.py", geo_location="Paraguay", locale="es-py", uule="w+CAIQICIIUGFyYWd1YXk=", device="mobile_android", sename="Google PY (Spanish, Mobile)"
             },
             new SearchProperties()
             {
-            seid =762, domain ="tn", geo_location="Tunisia", locale= "ar-tn", uule = "w+CAIQICIHVHVuaXNpYQ==",device="desktop_chrome",sename="Google TN (Arabic)"
+                seid=762, domain="tn", geo_location="Tunisia", locale="ar-tn", uule="w+CAIQICIHVHVuaXNpYQ==", device="desktop_chrome", sename="Google TN (Arabic)"
             },
             new SearchProperties()
             {
-            seid =763, domain ="tn", geo_location="Tunisia", locale= "ar-tn", uule = "w+CAIQICIHVHVuaXNpYQ==",device="mobile_android",sename="Google TN (Arabic, Mobile)"
+                seid=763, domain="tn", geo_location="Tunisia", locale="ar-tn", uule="w+CAIQICIHVHVuaXNpYQ==", device="mobile_android", sename="Google TN (Arabic, Mobile)"
             },
             new SearchProperties()
             {
-            seid =764, domain ="co.ug", geo_location="Uganda", locale= "sw-ug", uule = "w+CAIQICIGVWdhbmRh",device="desktop_chrome",sename="Google UG (Kiswahili)"
+                seid=764, domain="co.ug", geo_location="Uganda", locale="sw-ug", uule="w+CAIQICIGVWdhbmRh", device="desktop_chrome", sename="Google UG (Kiswahili)"
             },
             new SearchProperties()
             {
-            seid =765, domain ="co.ug", geo_location="Uganda", locale= "sw-ug", uule = "w+CAIQICIGVWdhbmRh",device="mobile_android",sename="Google UG (Kiswahili, Mobile)"
+                seid=765, domain="co.ug", geo_location="Uganda", locale="sw-ug", uule="w+CAIQICIGVWdhbmRh", device="mobile_android", sename="Google UG (Kiswahili, Mobile)"
             },//22-12-2023
             new SearchProperties() //16-01-2024
             {
-            seid =766, domain ="by", geo_location="Belarus", locale= "ru-by", uule = "w+CAIQICIHQmVsYXJ1cw==",device="desktop_chrome",sename="Google BY (Belarus)"
+                seid=766, domain="by", geo_location="Belarus", locale="ru-by", uule="w+CAIQICIHQmVsYXJ1cw==", device="desktop_chrome", sename="Google BY (Belarus)"
             },
             new SearchProperties()
             {
-            seid =767, domain ="by", geo_location="Belarus", locale= "ru-by", uule = "w+CAIQICIHQmVsYXJ1cw==",device="mobile_android",sename="Google BY (Belarus, Mobile)"
+                seid=767, domain="by", geo_location="Belarus", locale="ru-by", uule="w+CAIQICIHQmVsYXJ1cw==", device="mobile_android", sename="Google BY (Belarus, Mobile)"
             },
             new SearchProperties()
             {
-            seid =768, domain ="co.uz", geo_location="Uzbekistan", locale= "uz-uz", uule = "w+CAIQICIKVXpiZWtpc3Rhbg==",device="desktop_chrome",sename="Google UZ (Uzbekistan)"
+                seid=768, domain="co.uz", geo_location="Uzbekistan", locale="uz-uz", uule="w+CAIQICIKVXpiZWtpc3Rhbg==", device="desktop_chrome", sename="Google UZ (Uzbekistan)"
             },
             new SearchProperties()
             {
-            seid =769, domain ="co.uz", geo_location="Uzbekistan", locale= "uz-uz", uule = "w+CAIQICIKVXpiZWtpc3Rhbg==",device="mobile_android",sename="Google UZ (Uzbekistan, Mobile)"
+                seid=769, domain="co.uz", geo_location="Uzbekistan", locale="uz-uz", uule="w+CAIQICIKVXpiZWtpc3Rhbg==", device="mobile_android", sename="Google UZ (Uzbekistan, Mobile)"
             },
             new SearchProperties()
             {
-            seid =770, domain ="nl", geo_location="Aruba", locale= "en-aw", uule = "w+CAIQICIFQXJ1YmE=",device="desktop_chrome",sename="Google NL (Aruba)"
+                seid=770, domain="nl", geo_location="Aruba", locale="en-aw", uule="w+CAIQICIFQXJ1YmE=", device="desktop_chrome", sename="Google NL (Aruba)"
             },
             new SearchProperties()
             {
-            seid =771, domain ="nl", geo_location="Aruba", locale= "en-aw", uule = "w+CAIQICIFQXJ1YmE=",device="mobile_android",sename="Google NL (Aruba, English, Mobile)"
+                seid=771, domain="nl", geo_location="Aruba", locale="en-aw", uule="w+CAIQICIFQXJ1YmE=", device="mobile_android", sename="Google NL (Aruba, English, Mobile)"
             },//16-01-2024
             new SearchProperties() //18-01-2024
             {
-            seid =772, domain ="fr", geo_location="Saint-Denis", locale= "fr-re", uule = "w+CAIQICILU2FpbnQtRGVuaXM=",device="desktop_chrome",sename="Google FR (Saint-Denis)"
+                seid=772, domain="fr", geo_location="Saint-Denis", locale="fr-re", uule="w+CAIQICILU2FpbnQtRGVuaXM=", device="desktop_chrome", sename="Google FR (Saint-Denis)"
             },
             new SearchProperties()
             {
-            seid =773, domain ="fr", geo_location="Saint-Denis", locale= "fr-re", uule = "w+CAIQICILU2FpbnQtRGVuaXM=",device="mobile_android",sename="Google FR (Reunion Island, Mobile)"
+                seid=773, domain="fr", geo_location="Saint-Denis", locale="fr-re", uule="w+CAIQICILU2FpbnQtRGVuaXM=", device="mobile_android", sename="Google FR (Reunion Island, Mobile)"
             },//18-01-2024
             new SearchProperties() //27-01-2024
             {
-            seid =774, domain ="nl", geo_location="Curacao", locale= "nl-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="desktop_chrome",sename="Google NL (Curacao)"
+                seid=774, domain="nl", geo_location="Curacao", locale="nl-cw", uule="w+CAIQICIHQ3VyYWNhbw==", device="desktop_chrome", sename="Google NL (Curacao)"
             },
             new SearchProperties()
             {
-            seid =775, domain ="nl", geo_location="Curacao", locale= "nl-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="mobile_android",sename="Google NL (Curacao, Mobile)"
-            },
+                seid=775, domain="nl", geo_location="Curacao", locale="nl-cw", uule="w+CAIQICIHQ3VyYWNhbw==", device="mobile_android", sename="Google NL (Curacao, Mobile)"
+            }, //mobile
             new SearchProperties()
             {
-            seid =776, domain ="bg", geo_location="Bulgaria", locale= "bg-bg", uule = "w+CAIQICIIQnVsZ2FyaWE=",device="mobile_android",sename="Google BG (Bulgaria, Mobile)"
-            },
+                seid=776, domain="bg", geo_location="Bulgaria", locale="bg-bg", uule="w+CAIQICIIQnVsZ2FyaWE=", device="mobile_android", sename="Google BG (Bulgaria, Mobile)"
+            },//mobile
             new SearchProperties()
             {
-            seid =777, domain ="co.ma", geo_location="Morocco", locale= "fr-ma", uule = "w+CAIQICIHTW9yb2Njbw==",device="mobile_android",sename="Google MA (Morocco, Mobile)"
-            },//27-01-2024
+                seid=777, domain="co.ma", geo_location="Morocco", locale="fr-ma", uule="w+CAIQICIHTW9yb2Njbw==", device="mobile_android", sename="Google MA (Morocco, Mobile)"
+            },//27-01-2024 mobile
             new SearchProperties()//21-02-2024
             {
-             seid =778, domain ="hn", geo_location="Honduras", locale= "es-hn", uule = "w+CAIQICIISG9uZHVyYXM=", device="mobile_android",sename="Google HN (Spanish, Mobile)"
+                seid=778, domain="hn", geo_location="Honduras", locale="es-hn", uule="w+CAIQICIISG9uZHVyYXM=", device="mobile_android", sename="Google HN (Spanish, Mobile)"
             },
             new SearchProperties()
             {
-            seid =779, domain ="com.sv", geo_location="El Salvador", locale= "es-sv", uule = "w+CAIQICILRWwgU2FsdmFkb3I=", device="mobile_android",sename="Google El Salvador (Spanish, Mobile)"
+                seid=779, domain="com.sv", geo_location="El Salvador", locale="es-sv", uule="w+CAIQICILRWwgU2FsdmFkb3I=", device="mobile_android", sename="Google El Salvador (Spanish, Mobile)"
             },
             new SearchProperties()
             {
-            seid =780, domain ="com.cy", geo_location="Famagusta,Cyprus", locale= "tr-cy", uule = "w+CAIQICIQRmFtYWd1c3RhLEN5cHJ1cw==", device="mobile_android",sename="Google CY (Famagusta,Turkish, Mobile)"
+                seid=780, domain="com.cy", geo_location="Famagusta,Cyprus", locale="tr-cy", uule="w+CAIQICIQRmFtYWd1c3RhLEN5cHJ1cw==", device="mobile_android", sename="Google CY (Famagusta,Turkish, Mobile)"
             },
             new SearchProperties()
             {
-            seid =781, domain ="com.ua", geo_location="Ukraine", locale= "uk-ua", uule = "w+CAIQICIHVWtyYWluZQ==", device="mobile_android",sename="Google UA (Mobile)"
+                seid=781, domain="com.ua", geo_location="Ukraine", locale="uk-ua", uule="w+CAIQICIHVWtyYWluZQ==", device="mobile_android", sename="Google UA (Mobile)"
             },
             new SearchProperties()
             {
-             seid =782, domain ="com.ua", geo_location="Ukraine", locale= "ru-ua", uule = "w+CAIQICIHVWtyYWluZQ==", device="mobile_android",sename="Google UA (Russian, Mobile)"
+                seid=782, domain="com.ua", geo_location="Ukraine", locale="ru-ua", uule="w+CAIQICIHVWtyYWluZQ==", device="mobile_android", sename="Google UA (Russian, Mobile)"
             },
             new SearchProperties()
             {
-            seid = 783, domain ="rs", geo_location="Serbia", locale= "sr-rs", uule = "w+CAIQICIGU2VyYmlh", device="mobile_android",sename="Google RS (Mobile)"
+                seid=783, domain="rs", geo_location="Serbia", locale="sr-rs", uule="w+CAIQICIGU2VyYmlh", device="mobile_android", sename="Google RS (Mobile)"
             },
             new SearchProperties()
             {
-            seid = 784, domain ="sk", geo_location="Slovakia", locale= "sk-sk", uule = "w+CAIQICIIU2xvdmFraWE=", device="mobile_android",sename="Google SK (Mobile)"
+                seid=784, domain="sk", geo_location="Slovakia", locale="sk-sk", uule="w+CAIQICIIU2xvdmFraWE=", device="mobile_android", sename="Google SK (Mobile)"
             },
             new SearchProperties()
             {
-            seid =785, domain ="si", geo_location="Slovenia", locale= "sl-si", uule = "w+CAIQICIIU2xvdmVuaWE=", device="mobile_android",sename="Google SI (Mobile)"
+                seid=785, domain="si", geo_location="Slovenia", locale="sl-si", uule="w+CAIQICIIU2xvdmVuaWE=", device="mobile_android", sename="Google SI (Mobile)"
             },
             new SearchProperties()
             {
-            seid =786, domain ="co.il", geo_location="Israel", locale= "iw-il", uule = "w+CAIQICIGSXNyYWVs", device="mobile_android",sename="Google IL (Hebrew, Mobile)"
+                seid=786, domain="co.il", geo_location="Israel", locale="iw-il", uule="w+CAIQICIGSXNyYWVs", device="mobile_android", sename="Google IL (Hebrew, Mobile)"
             },//21-02-2024
             new SearchProperties()//21-02-2024
             {
-                seid =787, domain ="co.uk", geo_location="Bath,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIbQmF0aCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Bath)"
+               seid=787, domain="co.uk", geo_location="Bath,England,United Kingdom", locale="en-gb", uule="w+CAIQICIbQmF0aCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Bath)"
             },
             new SearchProperties()
             {
-                seid =788, domain ="co.uk", geo_location="Bath,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIbQmF0aCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Bath, Mobile)"
+               seid=788, domain="co.uk", geo_location="Bath,England,United Kingdom", locale="en-gb", uule="w+CAIQICIbQmF0aCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Bath, Mobile)"
             },
             new SearchProperties()
             {
-                seid =789, domain ="co.uk", geo_location="Ilkley,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIdSWxrbGV5LEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Ilkley)"
+                seid=789, domain="co.uk", geo_location="Ilkley,England,United Kingdom", locale="en-gb", uule="w+CAIQICIdSWxrbGV5LEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Ilkley)"
             },
             new SearchProperties()
             {
-                seid =790, domain ="co.uk", geo_location="Ilkley,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIdSWxrbGV5LEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Ilkley, Mobile)"
+                seid=790, domain="co.uk", geo_location="Ilkley,England,United Kingdom", locale="en-gb", uule="w+CAIQICIdSWxrbGV5LEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Ilkley, Mobile)"
             },
             new SearchProperties()
             {
-                seid =791, domain ="co.uk", geo_location="Ipswich,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeSXBzd2ljaCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Ipswich)"
+                seid=791, domain="co.uk", geo_location="Ipswich,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeSXBzd2ljaCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Ipswich)"
             },
             new SearchProperties()
             {
-                seid =792, domain ="co.uk", geo_location="Ipswich,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeSXBzd2ljaCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Ipswich, Mobile)"
+                seid=792, domain="co.uk", geo_location="Ipswich,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeSXBzd2ljaCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Ipswich, Mobile)"
             },
             new SearchProperties()
             {
-                seid =793, domain ="co.uk", geo_location="Preston,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeUHJlc3RvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Preston)"
+                seid=793, domain="co.uk", geo_location="Preston,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeUHJlc3RvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Preston)"
             },
             new SearchProperties()
             {
-                seid =794, domain ="co.uk", geo_location="Preston,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeUHJlc3RvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Preston, Mobile)"
+                seid=794, domain="co.uk", geo_location="Preston,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeUHJlc3RvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Preston, Mobile)"
             },
             new SearchProperties()
             {
-                seid =795, domain ="co.uk", geo_location="Reigate,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeUmVpZ2F0ZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Reigate)"
+                seid=795, domain="co.uk", geo_location="Reigate,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeUmVpZ2F0ZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Reigate)"
             },
             new SearchProperties()
             {
-                seid =796, domain ="co.uk", geo_location="Reigate,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeUmVpZ2F0ZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Reigate, Mobile)"
+                seid=796, domain="co.uk", geo_location="Reigate,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeUmVpZ2F0ZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Reigate, Mobile)"
             },
             new SearchProperties()
             {
-                seid =797, domain ="co.uk", geo_location="Swindon,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeU3dpbmRvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Swindon)"
+                seid=797, domain="co.uk", geo_location="Swindon,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeU3dpbmRvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Swindon)"
             },
             new SearchProperties()
             {
-                seid =798, domain ="co.uk", geo_location="Swindon,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeU3dpbmRvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Swindon, Mobile)"
+                seid=798, domain="co.uk", geo_location="Swindon,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeU3dpbmRvbixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Swindon, Mobile)"
             },
             new SearchProperties()
             {
-                seid =799, domain ="co.uk", geo_location="Wigan,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIcV2lnYW4sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Wigan)"
+                seid=799, domain="co.uk", geo_location="Wigan,England,United Kingdom", locale="en-gb", uule="w+CAIQICIcV2lnYW4sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Wigan)"
             },
             new SearchProperties()
             {
-                seid =800, domain ="co.uk", geo_location="Wigan,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIcV2lnYW4sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Wigan, Mobile)"
+                seid=800, domain="co.uk", geo_location="Wigan,England,United Kingdom", locale="en-gb", uule="w+CAIQICIcV2lnYW4sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Wigan, Mobile)"
             },
             new SearchProperties()
             {
-                seid =801, domain ="co.uk", geo_location="Windsor,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeV2luZHNvcixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Windsor)"
+                seid=801, domain="co.uk", geo_location="Windsor,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeV2luZHNvcixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Windsor)"
             },
             new SearchProperties()
             {
-                seid =802, domain ="co.uk", geo_location="Windsor,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIeV2luZHNvcixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Windsor, Mobile)"
+                seid=802, domain="co.uk", geo_location="Windsor,England,United Kingdom", locale="en-gb", uule="w+CAIQICIeV2luZHNvcixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Windsor, Mobile)"
             },//21-02-2024
             new SearchProperties()//07-03-2024
             {
-                seid =803, domain ="bt", geo_location="Bhutan", locale= "en-bt", uule = "w+CAIQICIGQmh1dGFu",device="mobile_android",sename="Google BT (English, Mobile)"
+                seid=803, domain="bt", geo_location="Bhutan", locale="en-bt", uule="w+CAIQICIGQmh1dGFu", device="mobile_android", sename="Google BT (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid =804, domain ="com.vc", geo_location="Saint Vincent and the Grenadines", locale= "en-vc", uule = "w+CAIQICIHR3JlbmFkYQ==",device="mobile_android",sename="Google VC (English, Mobile)"
+                seid=804, domain="com.vc", geo_location="Saint Vincent and the Grenadines", locale="en-vc", uule="w+CAIQICIHR3JlbmFkYQ==", device="mobile_android", sename="Google VC (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid =805, domain ="tt", geo_location="Trinidad and Tobago", locale= "en-tt", uule = "w+CAIQICITVHJpbmlkYWQgYW5kIFRvYmFnbw==",device="mobile_android",sename="Google TT (English, Mobile)"
+                seid=805, domain="tt", geo_location="Trinidad and Tobago", locale="en-tt", uule="w+CAIQICITVHJpbmlkYWQgYW5kIFRvYmFnbw==", device="mobile_android", sename="Google TT (English, Mobile)"
             },//07-03-2024
             new SearchProperties()//12-04-2024
             {
-            seid =806, domain ="com.cy", geo_location="Famagusta,Cyprus", locale= "en-cy", uule = "w+CAIQICIQRmFtYWd1c3RhLEN5cHJ1cw==", device="mobile_android",sename="Google CY (Famagusta,English, Mobile)"
+                seid=806, domain="com.cy", geo_location="Famagusta,Cyprus", locale="en-cy", uule="w+CAIQICIQRmFtYWd1c3RhLEN5cHJ1cw==", device="mobile_android", sename="Google CY (Famagusta,English, Mobile)"
             },//12-04-2024
             new SearchProperties() //01-05-2024 from seid 807 to 896
             {
-                seid =807, domain ="co.uk", geo_location="Altrincham,Greater Manchester,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI0QWx0cmluY2hhbSxHcmVhdGVyIE1hbmNoZXN0ZXIsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Altrincham)"
+                seid=807, domain="co.uk", geo_location="Altrincham,Greater Manchester,England,United Kingdom", locale="en-gb", uule="w+CAIQICI0QWx0cmluY2hhbSxHcmVhdGVyIE1hbmNoZXN0ZXIsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Altrincham)"
             },
             new SearchProperties()
             {
-                seid =808, domain ="co.uk", geo_location="Altrincham,Greater Manchester,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI0QWx0cmluY2hhbSxHcmVhdGVyIE1hbmNoZXN0ZXIsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Altrincham, Mobile)"
+                seid=808, domain="co.uk", geo_location="Altrincham,Greater Manchester,England,United Kingdom", locale="en-gb", uule="w+CAIQICI0QWx0cmluY2hhbSxHcmVhdGVyIE1hbmNoZXN0ZXIsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Altrincham, Mobile)"
             },
             new SearchProperties()
             {
-                seid =809, domain ="co.uk", geo_location="Banbury,Oxford,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIqQmFuYnVyeSxPeGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Banbury)"
+                seid=809, domain="co.uk", geo_location="Banbury,Oxfordshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIqQmFuYnVyeSxPeGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Banbury)"
             },
             new SearchProperties()
             {
-                seid =810, domain ="co.uk", geo_location="Banbury,Oxford,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIqQmFuYnVyeSxPeGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Banbury, Mobile)"
+                seid=810, domain="co.uk", geo_location="Banbury,Oxfordshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIqQmFuYnVyeSxPeGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Banbury, Mobile)"
             },
             new SearchProperties()
             {
-                seid =811, domain ="co.uk", geo_location="Berkhamsted,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIwQmVya2hhbXN0ZWQsSGVydGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Berkhamsted)"
+                seid=811, domain="co.uk", geo_location="Berkhamsted,Hertfordshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIwQmVya2hhbXN0ZWQsSGVydGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Berkhamsted)"
             },
             new SearchProperties()
             {
-                seid =812, domain ="co.uk", geo_location="Berkhamsted,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIwQmVya2hhbXN0ZWQsSGVydGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Berkhamsted,mobile)"
+                seid=812, domain="co.uk", geo_location="Berkhamsted,Hertfordshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIwQmVya2hhbXN0ZWQsSGVydGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Berkhamsted,mobile)"
             },
             new SearchProperties()
             {
-                seid =813, domain ="co.uk", geo_location="Beverley,East Riding of Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI4QmV2ZXJsZXksRWFzdCBSaWRpbmcgb2YgWW9ya3NoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Beverley)"
+                seid=813, domain="co.uk", geo_location="Beverley,East Riding of Yorkshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICI4QmV2ZXJsZXksRWFzdCBSaWRpbmcgb2YgWW9ya3NoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Beverley)"
             },
             new SearchProperties()
             {
-                seid =814, domain ="co.uk", geo_location="Beverley,East Riding of Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI4QmV2ZXJsZXksRWFzdCBSaWRpbmcgb2YgWW9ya3NoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Beverley, Mobile)"
+                seid=814, domain="co.uk", geo_location="Beverley,East Riding of Yorkshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICI4QmV2ZXJsZXksRWFzdCBSaWRpbmcgb2YgWW9ya3NoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Beverley, Mobile)"
             },
             new SearchProperties()
             {
-                seid =815, domain ="co.uk", geo_location="Bishops Stortford,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI2QmlzaG9wcyBTdG9ydGZvcmQsSGVydGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Bishops Stortford)"
+                seid=815, domain="co.uk", geo_location="Bishops Stortford,Hertfordshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICI2QmlzaG9wcyBTdG9ydGZvcmQsSGVydGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Bishops Stortford)"
             },
             new SearchProperties()
             {
-                seid =816, domain ="co.uk", geo_location="Bishops Stortford,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI2QmlzaG9wcyBTdG9ydGZvcmQsSGVydGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Bishops Stortford, Mobile)"
+                seid=816, domain="co.uk", geo_location="Bishops Stortford,Hertfordshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICI2QmlzaG9wcyBTdG9ydGZvcmQsSGVydGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Bishops Stortford, Mobile)"
             },
             new SearchProperties()
             {
-                seid =817, domain ="co.uk", geo_location="Bracknell,Berkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIqQnJhY2tuZWxsLEJlcmtzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Bracknell)"
+                seid=817, domain="co.uk", geo_location="Bracknell,Berkshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIqQnJhY2tuZWxsLEJlcmtzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Bracknell)"
             },
             new SearchProperties()
             {
-                seid =818, domain ="co.uk", geo_location="Bracknell,Berkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIqQnJhY2tuZWxsLEJlcmtzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Bracknell, Mobile)"
+                seid=818, domain="co.uk", geo_location="Bracknell,Berkshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIqQnJhY2tuZWxsLEJlcmtzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Bracknell, Mobile)"
             },
             new SearchProperties()
             {
-                seid =819, domain ="co.uk", geo_location="Camberley,Surrey,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInQ2FtYmVybGV5LFN1cnJleSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Camberley)"
+                seid=819, domain="co.uk", geo_location="Camberley,Surrey,England,United Kingdom", locale="en-gb", uule="w+CAIQICInQ2FtYmVybGV5LFN1cnJleSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Camberley)"
             },
             new SearchProperties()
             {
-                seid =820, domain ="co.uk", geo_location="Camberley,Surrey,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInQ2FtYmVybGV5LFN1cnJleSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Camberley,Mobile)"
+                seid=820, domain="co.uk", geo_location="Camberley,Surrey,England,United Kingdom", locale="en-gb", uule="w+CAIQICInQ2FtYmVybGV5LFN1cnJleSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Camberley,Mobile)"
             },
             new SearchProperties()
             {
-                seid =821, domain ="co.uk", geo_location="Canterbury,Kent,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICImQ2FudGVyYnVyeSxLZW50LEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Canterbury)"
+                seid=821, domain="co.uk", geo_location="Canterbury,Kent,England,United Kingdom", locale="en-gb", uule="w+CAIQICImQ2FudGVyYnVyeSxLZW50LEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Canterbury)"
             },
             new SearchProperties()
             {
-                seid =822, domain ="co.uk", geo_location="Canterbury,Kent,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICImQ2FudGVyYnVyeSxLZW50LEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Canterbury, Mobile)"
+                seid=822, domain="co.uk", geo_location="Canterbury,Kent,England,United Kingdom", locale="en-gb", uule="w+CAIQICImQ2FudGVyYnVyeSxLZW50LEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Canterbury, Mobile)"
             },
             new SearchProperties()
             {
-                seid =823, domain ="co.uk", geo_location="Chelmsford,Essex,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInQ2hlbG1zZm9yZCxFc3NleCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Chelmsford)"
+                seid=823, domain="co.uk", geo_location="Chelmsford,Essex,England,United Kingdom", locale="en-gb", uule="w+CAIQICInQ2hlbG1zZm9yZCxFc3NleCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Chelmsford)"
             },
             new SearchProperties()
             {
-                seid =824, domain ="co.uk", geo_location="Chelmsford,Essex,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInQ2hlbG1zZm9yZCxFc3NleCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Chelmsford, Mobile)"
+                seid=824, domain="co.uk", geo_location="Chelmsford,Essex,England,United Kingdom", locale="en-gb", uule="w+CAIQICInQ2hlbG1zZm9yZCxFc3NleCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Chelmsford, Mobile)"
             },
             new SearchProperties()
             {
-                seid =825, domain ="co.uk", geo_location="Cheltenham,Gloucestershire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIxQ2hlbHRlbmhhbSxHbG91Y2VzdGVyc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Cheltenham)"
+                seid=825, domain="co.uk", geo_location="Cheltenham,Gloucestershire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIxQ2hlbHRlbmhhbSxHbG91Y2VzdGVyc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Cheltenham)"
             },
             new SearchProperties()
             {
-                seid =826, domain ="co.uk", geo_location="Cheltenham,Gloucestershire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIxQ2hlbHRlbmhhbSxHbG91Y2VzdGVyc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Cheltenham, Mobile)"
+                seid=826, domain="co.uk", geo_location="Cheltenham,Gloucestershire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIxQ2hlbHRlbmhhbSxHbG91Y2VzdGVyc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Cheltenham, Mobile)"
             },
             new SearchProperties()
             {
-                seid =827, domain ="co.uk", geo_location="Chester,Cheshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInQ2hlc3RlcixDaGVzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Chester)"
+                seid=827, domain="co.uk", geo_location="Chester,Cheshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICInQ2hlc3RlcixDaGVzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Chester)"
             },
             new SearchProperties()
             {
-                seid =828, domain ="co.uk", geo_location="Chester,Cheshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInQ2hlc3RlcixDaGVzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Chester, Mobile)"
+                seid=828, domain="co.uk", geo_location="Chester,Cheshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICInQ2hlc3RlcixDaGVzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Chester, Mobile)"
             },
             new SearchProperties()
             {
-                seid =829, domain ="co.uk", geo_location="Chesterfield,Derbyshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIuQ2hlc3RlcmZpZWxkLERlcmJ5c2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Chesterfield)"
+                seid=829, domain="co.uk", geo_location="Chesterfield,Derbyshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIuQ2hlc3RlcmZpZWxkLERlcmJ5c2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Chesterfield)"
             },
             new SearchProperties()
             {
-                seid =830, domain ="co.uk", geo_location="Chesterfield,Derbyshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIuQ2hlc3RlcmZpZWxkLERlcmJ5c2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Chesterfield, Mobile)"
+                seid=830, domain="co.uk", geo_location="Chesterfield,Derbyshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIuQ2hlc3RlcmZpZWxkLERlcmJ5c2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Chesterfield, Mobile)"
             },
             new SearchProperties()
             {
-                seid =831, domain ="co.uk", geo_location="Colchester,Essex,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInQ29sY2hlc3RlcixFc3NleCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Colchester)"
+                seid=831, domain="co.uk", geo_location="Colchester,Essex,England,United Kingdom", locale="en-gb", uule="w+CAIQICInQ29sY2hlc3RlcixFc3NleCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Colchester)"
             },
             new SearchProperties()
             {
-                seid =832, domain ="co.uk", geo_location="Colchester,Essex,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInQ29sY2hlc3RlcixFc3NleCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Colchester, Mobile)"
+                seid=832, domain="co.uk", geo_location="Colchester,Essex,England,United Kingdom", locale="en-gb", uule="w+CAIQICInQ29sY2hlc3RlcixFc3NleCxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Colchester, Mobile)"
             },
             new SearchProperties()
             {
-                seid =833, domain ="co.uk", geo_location="Crewe,Cheshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIlQ3Jld2UsQ2hlc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Crewe)"
+                seid=833, domain="co.uk", geo_location="Crewe,Cheshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIlQ3Jld2UsQ2hlc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Crewe)"
             },
             new SearchProperties()
             {
-                seid =834, domain ="co.uk", geo_location="Crewe,Cheshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIlQ3Jld2UsQ2hlc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Crewe, Mobile)"
+                seid=834, domain="co.uk", geo_location="Crewe,Cheshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIlQ3Jld2UsQ2hlc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Crewe, Mobile)"
             },
             new SearchProperties()
             {
-                seid =835, domain ="co.uk", geo_location="Derby,Derbyshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInRGVyYnksRGVyYnlzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Derby)"
+                seid=835, domain="co.uk", geo_location="Derby,Derbyshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICInRGVyYnksRGVyYnlzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Derby)"
             },
             new SearchProperties()
             {
-                seid =836, domain ="co.uk", geo_location="Derby,Derbyshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInRGVyYnksRGVyYnlzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Derby, Mobile)"
+                seid=836, domain="co.uk", geo_location="Derby,Derbyshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICInRGVyYnksRGVyYnlzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Derby, Mobile)"
             },
             new SearchProperties()
             {
-                seid =837, domain ="co.uk", geo_location="Durham,County Durham,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrRHVyaGFtLENvdW50eSBEdXJoYW0sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Durham,County Durham)"
+                seid=837, domain="co.uk", geo_location="Durham,County Durham,England,United Kingdom", locale="en-gb", uule="w+CAIQICIrRHVyaGFtLENvdW50eSBEdXJoYW0sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Durham,County Durham)"
             },
             new SearchProperties()
             {
-                seid =838, domain ="co.uk", geo_location="Durham,County Durham,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrRHVyaGFtLENvdW50eSBEdXJoYW0sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Durham,County Durham, Mobile)"
+                seid=838, domain="co.uk", geo_location="Durham,County Durham,England,United Kingdom", locale="en-gb", uule="w+CAIQICIrRHVyaGFtLENvdW50eSBEdXJoYW0sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Durham,County Durham, Mobile)"
             },
             new SearchProperties()
             {
-                seid =839, domain ="co.uk", geo_location="Exeter,Devon,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIjRXhldGVyLERldm9uLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Exeter)"
+                seid=839, domain="co.uk", geo_location="Exeter,Devon,England,United Kingdom", locale="en-gb", uule="w+CAIQICIjRXhldGVyLERldm9uLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Exeter)"
             },
             new SearchProperties()
             {
-                seid =840, domain ="co.uk", geo_location="Exeter,Devon,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIjRXhldGVyLERldm9uLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Exeter, Mobile)"
+                seid=840, domain="co.uk", geo_location="Exeter,Devon,England,United Kingdom", locale="en-gb", uule="w+CAIQICIjRXhldGVyLERldm9uLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Exeter, Mobile)"
             },
             new SearchProperties()
             {
-                seid =841, domain ="co.uk", geo_location="Farnborough,Hampshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIsRmFybmJvcm91Z2gsSGFtcHNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Farnborough)"
+                seid=841, domain="co.uk", geo_location="Farnborough,Hampshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIsRmFybmJvcm91Z2gsSGFtcHNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Farnborough)"
             },
             new SearchProperties()
             {
-                seid =842, domain ="co.uk", geo_location="Farnborough,Hampshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIsRmFybmJvcm91Z2gsSGFtcHNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Farnborough, Mobile)"
+                seid=842, domain="co.uk", geo_location="Farnborough,Hampshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIsRmFybmJvcm91Z2gsSGFtcHNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Farnborough, Mobile)"
             },
             new SearchProperties()
             {
-                seid =843, domain ="co.uk", geo_location="Fleet,Hampshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICImRmxlZXQsSGFtcHNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Fleet,)"
+                seid=843, domain="co.uk", geo_location="Fleet,Hampshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICImRmxlZXQsSGFtcHNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Fleet,)"
             },
             new SearchProperties()
             {
-                seid =844, domain ="co.uk", geo_location="Fleet,Hampshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICImRmxlZXQsSGFtcHNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Fleet, Mobile)"
+                seid=844, domain="co.uk", geo_location="Fleet,Hampshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICImRmxlZXQsSGFtcHNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Fleet, Mobile)"
             },
             new SearchProperties()
             {
-                seid =845, domain ="co.uk", geo_location="Guildford,Surrey,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInR3VpbGRmb3JkLFN1cnJleSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Guildford)"
+                seid=845, domain="co.uk", geo_location="Guildford,Surrey,England,United Kingdom", locale="en-gb", uule="w+CAIQICInR3VpbGRmb3JkLFN1cnJleSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Guildford)"
             },
             new SearchProperties()
             {
-                seid =846, domain ="co.uk", geo_location="Guildford,Surrey,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICInR3VpbGRmb3JkLFN1cnJleSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Guildford, Mobile)"
+                seid=846, domain="co.uk", geo_location="Guildford,Surrey,England,United Kingdom", locale="en-gb", uule="w+CAIQICInR3VpbGRmb3JkLFN1cnJleSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Guildford, Mobile)"
             },
             new SearchProperties()
             {
-                seid =847, domain ="co.uk", geo_location="Harrogate,North Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIwSGFycm9nYXRlLE5vcnRoIFlvcmtzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Harrogate)"
+                seid=847, domain="co.uk", geo_location="Harrogate,North Yorkshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIwSGFycm9nYXRlLE5vcnRoIFlvcmtzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Harrogate)"
             },
             new SearchProperties()
             {
-                seid =848, domain ="co.uk", geo_location="Harrogate,North Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIwSGFycm9nYXRlLE5vcnRoIFlvcmtzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Harrogate, Mobile)"
+                seid=848, domain="co.uk", geo_location="Harrogate,North Yorkshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIwSGFycm9nYXRlLE5vcnRoIFlvcmtzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Harrogate, Mobile)"
             },
             new SearchProperties()
             {
-                seid =849, domain ="co.uk", geo_location="High Wycombe,Buckinghamshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIzSGlnaCBXeWNvbWJlLEJ1Y2tpbmdoYW1zaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (High Wycombe)"
+                seid=849, domain="co.uk", geo_location="High Wycombe,Buckinghamshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIzSGlnaCBXeWNvbWJlLEJ1Y2tpbmdoYW1zaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (High Wycombe)"
             },
             new SearchProperties()
             {
-                seid =850, domain ="co.uk", geo_location="High Wycombe,Buckinghamshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIzSGlnaCBXeWNvbWJlLEJ1Y2tpbmdoYW1zaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (High Wycombe, Mobile)"
+                seid=850, domain="co.uk", geo_location="High Wycombe,Buckinghamshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIzSGlnaCBXeWNvbWJlLEJ1Y2tpbmdoYW1zaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (High Wycombe, Mobile)"
             },
             new SearchProperties()
             {
-                seid =851, domain ="co.uk", geo_location="Huddersfield,West Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIySHVkZGVyc2ZpZWxkLFdlc3QgWW9ya3NoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Huddersfield)"
+                seid=851, domain="co.uk", geo_location="Huddersfield,West Yorkshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIySHVkZGVyc2ZpZWxkLFdlc3QgWW9ya3NoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Huddersfield)"
             },
             new SearchProperties()
             {
-                seid =852, domain ="co.uk", geo_location="Huddersfield,West Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIySHVkZGVyc2ZpZWxkLFdlc3QgWW9ya3NoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Huddersfield, Mobile)"
+                seid=852, domain="co.uk", geo_location="Huddersfield,West Yorkshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIySHVkZGVyc2ZpZWxkLFdlc3QgWW9ya3NoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Huddersfield, Mobile)"
             },
             new SearchProperties()
             {
-                seid =853, domain ="co.uk", geo_location="Kingston,Greater London,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIuS2luZ3N0b24sR3JlYXRlciBMb25kb24sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Kingston)"
+                seid=853, domain="co.uk", geo_location="Kingston,Greater London,England,United Kingdom", locale="en-gb", uule="w+CAIQICIuS2luZ3N0b24sR3JlYXRlciBMb25kb24sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Kingston)"
             },
             new SearchProperties()
             {
-                seid =854, domain ="co.uk", geo_location="Kingston,Greater London,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIuS2luZ3N0b24sR3JlYXRlciBMb25kb24sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Kingston, Mobile)"
+                seid=854, domain="co.uk", geo_location="Kingston,Greater London,England,United Kingdom", locale="en-gb", uule="w+CAIQICIuS2luZ3N0b24sR3JlYXRlciBMb25kb24sRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Kingston, Mobile)"
             },
             new SearchProperties()
             {
-                seid =855, domain ="co.uk", geo_location="Knutsford,Cheshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIpS251dHNmb3JkLENoZXNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Knutsford)"
+                seid=855, domain="co.uk", geo_location="Knutsford,Cheshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIpS251dHNmb3JkLENoZXNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Knutsford)"
             },
             new SearchProperties()
             {
-                seid =856, domain ="co.uk", geo_location="Knutsford,Cheshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIpS251dHNmb3JkLENoZXNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Knutsford, Mobile)"
+                seid=856, domain="co.uk", geo_location="Knutsford,Cheshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIpS251dHNmb3JkLENoZXNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Knutsford, Mobile)"
             },
             new SearchProperties()
             {
-                seid =857, domain ="co.uk", geo_location="Leamington Spa,Warwickshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIyTGVhbWluZ3RvbiBTcGEsV2Fyd2lja3NoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Leamington Spa)"
+                seid=857, domain="co.uk", geo_location="Leamington Spa,Warwickshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIyTGVhbWluZ3RvbiBTcGEsV2Fyd2lja3NoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Leamington Spa)"
             },
             new SearchProperties()
             {
-                seid =858, domain ="co.uk", geo_location="Leamington Spa,Warwickshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIyTGVhbWluZ3RvbiBTcGEsV2Fyd2lja3NoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Leamington Spa, Mobile)"
+                seid=858, domain="co.uk", geo_location="Leamington Spa,Warwickshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIyTGVhbWluZ3RvbiBTcGEsV2Fyd2lja3NoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Leamington Spa, Mobile)"
             },
             new SearchProperties()
             {
-                seid =859, domain ="co.uk", geo_location="Lincoln,Lincolnshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrTGluY29sbixMaW5jb2xuc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Lincoln)"
+                seid=859, domain="co.uk", geo_location="Lincoln,Lincolnshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIrTGluY29sbixMaW5jb2xuc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Lincoln)"
             },
             new SearchProperties()
             {
-                seid =860, domain ="co.uk", geo_location="Lincoln,Lincolnshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrTGluY29sbixMaW5jb2xuc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Lincoln, Mobile)"
+                seid=860, domain="co.uk", geo_location="Lincoln,Lincolnshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIrTGluY29sbixMaW5jb2xuc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Lincoln, Mobile)"
             },
             new SearchProperties()
             {
-                seid =861, domain ="co.uk", geo_location="Middlesbrough,North Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI0TWlkZGxlc2Jyb3VnaCxOb3J0aCBZb3Jrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Middlesbrough)"
+                seid=861, domain="co.uk", geo_location="Middlesbrough,North Yorkshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICI0TWlkZGxlc2Jyb3VnaCxOb3J0aCBZb3Jrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Middlesbrough)"
             },
             new SearchProperties()
             {
-                seid =862, domain ="co.uk", geo_location="Middlesbrough,North Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI0TWlkZGxlc2Jyb3VnaCxOb3J0aCBZb3Jrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Middlesbrough, Mobile)"
+                seid=862, domain="co.uk", geo_location="Middlesbrough,North Yorkshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICI0TWlkZGxlc2Jyb3VnaCxOb3J0aCBZb3Jrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Middlesbrough, Mobile)"
             },
             new SearchProperties()
             {
-                seid =863, domain ="co.uk", geo_location="North Shields,Tyne and Wear,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIyTm9ydGggU2hpZWxkcyxUeW5lIGFuZCBXZWFyLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (North Shields)"
+                seid=863, domain="co.uk", geo_location="North Shields,Tyne and Wear,England,United Kingdom", locale="en-gb", uule="w+CAIQICIyTm9ydGggU2hpZWxkcyxUeW5lIGFuZCBXZWFyLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (North Shields)"
             },
             new SearchProperties()
             {
-                seid =864, domain ="co.uk", geo_location="North Shields,Tyne and Wear,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIyTm9ydGggU2hpZWxkcyxUeW5lIGFuZCBXZWFyLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (North Shields, Mobile)"
+                seid=864, domain="co.uk", geo_location="North Shields,Tyne and Wear,England,United Kingdom", locale="en-gb", uule="w+CAIQICIyTm9ydGggU2hpZWxkcyxUeW5lIGFuZCBXZWFyLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (North Shields, Mobile)"
             },
             new SearchProperties()
             {
-                seid =865, domain ="co.uk", geo_location="Rickmansworth,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIyUmlja21hbnN3b3J0aCxIZXJ0Zm9yZHNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Rickmansworth)"
+                seid=865, domain="co.uk", geo_location="Rickmansworth,Hertfordshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIyUmlja21hbnN3b3J0aCxIZXJ0Zm9yZHNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Rickmansworth)"
             },
             new SearchProperties()
             {
-                seid =866, domain ="co.uk", geo_location="Rickmansworth,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIyUmlja21hbnN3b3J0aCxIZXJ0Zm9yZHNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Rickmansworth, Mobile)"
+                seid=866, domain="co.uk", geo_location="Rickmansworth,Hertfordshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIyUmlja21hbnN3b3J0aCxIZXJ0Zm9yZHNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Rickmansworth, Mobile)"
             },
             new SearchProperties()
             {
-                seid =867, domain ="co.uk", geo_location="Sevenoaks,Kent,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIlU2V2ZW5vYWtzLEtlbnQsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Sevenoaks)"
+                seid=867, domain="co.uk", geo_location="Sevenoaks,Kent,England,United Kingdom", locale="en-gb", uule="w+CAIQICIlU2V2ZW5vYWtzLEtlbnQsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Sevenoaks)"
             },
             new SearchProperties()
             {
-                seid =868, domain ="co.uk", geo_location="Sevenoaks,Kent,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIlU2V2ZW5vYWtzLEtlbnQsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Sevenoaks, Mobile)"
+                seid=868, domain="co.uk", geo_location="Sevenoaks,Kent,England,United Kingdom", locale="en-gb", uule="w+CAIQICIlU2V2ZW5vYWtzLEtlbnQsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Sevenoaks, Mobile)"
             },
             new SearchProperties()
             {
-                seid =869, domain ="co.uk", geo_location="Solihull,West Midlands,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICItU29saWh1bGwsV2VzdCBNaWRsYW5kcyxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Solihull)"
+                seid=869, domain="co.uk", geo_location="Solihull,West Midlands,England,United Kingdom", locale="en-gb", uule="w+CAIQICItU29saWh1bGwsV2VzdCBNaWRsYW5kcyxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Solihull)"
             },
             new SearchProperties()
             {
-                seid =870, domain ="co.uk", geo_location="Solihull,West Midlands,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICItU29saWh1bGwsV2VzdCBNaWRsYW5kcyxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Solihull, Mobile)"
+                seid=870, domain="co.uk", geo_location="Solihull,West Midlands,England,United Kingdom", locale="en-gb", uule="w+CAIQICItU29saWh1bGwsV2VzdCBNaWRsYW5kcyxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Solihull, Mobile)"
             },
             new SearchProperties()
             {
-                seid =871, domain ="co.uk", geo_location="St Albans,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIuU3QgQWxiYW5zLEhlcnRmb3Jkc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (St Albans)"
+                seid=871, domain="co.uk", geo_location="St Albans,Hertfordshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIuU3QgQWxiYW5zLEhlcnRmb3Jkc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (St Albans)"
             },
             new SearchProperties()
             {
-                seid =872, domain ="co.uk", geo_location="St Albans,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIuU3QgQWxiYW5zLEhlcnRmb3Jkc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (St Albans, Mobile)"
+                seid=872, domain="co.uk", geo_location="St Albans,Hertfordshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIuU3QgQWxiYW5zLEhlcnRmb3Jkc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (St Albans, Mobile)"
             },
             new SearchProperties()
             {
-                seid =873, domain ="co.uk", geo_location="Stamford,Lincolnshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIsU3RhbWZvcmQsTGluY29sbnNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Stamford)"
+                seid=873, domain="co.uk", geo_location="Stamford,Lincolnshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIsU3RhbWZvcmQsTGluY29sbnNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Stamford)"
             },
             new SearchProperties()
             {
-                seid =874, domain ="co.uk", geo_location="Stamford,Lincolnshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIsU3RhbWZvcmQsTGluY29sbnNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Stamford, Mobile)"
+                seid=874, domain="co.uk", geo_location="Stamford,Lincolnshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIsU3RhbWZvcmQsTGluY29sbnNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Stamford, Mobile)"
             },
             new SearchProperties()
             {
-                seid =875, domain ="co.uk", geo_location="Stockport,Greater Manchester,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIzU3RvY2twb3J0LEdyZWF0ZXIgTWFuY2hlc3RlcixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Stockport)"
+                seid=875, domain="co.uk", geo_location="Stockport,Greater Manchester,England,United Kingdom", locale="en-gb", uule="w+CAIQICIzU3RvY2twb3J0LEdyZWF0ZXIgTWFuY2hlc3RlcixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Stockport)"
             },
             new SearchProperties()
             {
-                seid =876, domain ="co.uk", geo_location="Stockport,Greater Manchester,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIzU3RvY2twb3J0LEdyZWF0ZXIgTWFuY2hlc3RlcixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Stockport, Mobile)"
+                seid=876, domain="co.uk", geo_location="Stockport,Greater Manchester,England,United Kingdom", locale="en-gb", uule="w+CAIQICIzU3RvY2twb3J0LEdyZWF0ZXIgTWFuY2hlc3RlcixFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Stockport, Mobile)"
             },
             new SearchProperties()
             {
-                seid =877, domain ="co.uk", geo_location="Stoke On Trent,Staffordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIzU3Rva2UgT24gVHJlbnQsU3RhZmZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Stoke On Trent)"
+                seid=877, domain="co.uk", geo_location="Stoke On Trent,Staffordshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIzU3Rva2UgT24gVHJlbnQsU3RhZmZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Stoke On Trent)"
             },
             new SearchProperties()
             {
-                seid =878, domain ="co.uk", geo_location="Stoke On Trent,Staffordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIzU3Rva2UgT24gVHJlbnQsU3RhZmZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Stoke On Trent, Mobile)"
+                seid=878, domain="co.uk", geo_location="Stoke On Trent,Staffordshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIzU3Rva2UgT24gVHJlbnQsU3RhZmZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Stoke On Trent, Mobile)"
             },
             new SearchProperties()
             {
-                seid =879, domain ="co.uk", geo_location="Sutton Coldfield,Warwickshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI0U3V0dG9uIENvbGRmaWVsZCxXYXJ3aWNrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Sutton Coldfield)"
+                seid=879, domain="co.uk", geo_location="Sutton Coldfield,Warwickshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICI0U3V0dG9uIENvbGRmaWVsZCxXYXJ3aWNrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Sutton Coldfield)"
             },
             new SearchProperties()
             {
-                seid =880, domain ="co.uk", geo_location="Sutton Coldfield,Warwickshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI0U3V0dG9uIENvbGRmaWVsZCxXYXJ3aWNrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Sutton Coldfield, Mobile)"
+                seid=880, domain="co.uk", geo_location="Sutton Coldfield,Warwickshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICI0U3V0dG9uIENvbGRmaWVsZCxXYXJ3aWNrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Sutton Coldfield, Mobile)"
             },
             new SearchProperties()
             {
-                seid =881, domain ="co.uk", geo_location="Swindon,Wiltshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIoU3dpbmRvbixXaWx0c2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Swindon)"
+                seid=881, domain="co.uk", geo_location="Swindon,Wiltshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIoU3dpbmRvbixXaWx0c2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Swindon)"
             },
             new SearchProperties()
             {
-                seid =882, domain ="co.uk", geo_location="Swindon,Wiltshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIoU3dpbmRvbixXaWx0c2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Swindon, Mobile)"
+                seid=882, domain="co.uk", geo_location="Swindon,Wiltshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIoU3dpbmRvbixXaWx0c2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Swindon, Mobile)"
             },
             new SearchProperties()
             {
-                seid =883, domain ="co.uk", geo_location="Tunbridge Wells,Kent,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrVHVuYnJpZGdlIFdlbGxzLEtlbnQsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Tunbridge Wells)"
+                seid=883, domain="co.uk", geo_location="Tunbridge Wells,Kent,England,United Kingdom", locale="en-gb", uule="w+CAIQICIrVHVuYnJpZGdlIFdlbGxzLEtlbnQsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Tunbridge Wells)"
             },
             new SearchProperties()
             {
-                seid =884, domain ="co.uk", geo_location="Tunbridge Wells,Kent,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrVHVuYnJpZGdlIFdlbGxzLEtlbnQsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Tunbridge Wells, Mobile)"
+                seid=884, domain="co.uk", geo_location="Tunbridge Wells,Kent,England,United Kingdom", locale="en-gb", uule="w+CAIQICIrVHVuYnJpZGdlIFdlbGxzLEtlbnQsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Tunbridge Wells, Mobile)"
             },
             new SearchProperties()
             {
-                seid =885, domain ="co.uk", geo_location="Warrington,Cheshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIqV2FycmluZ3RvbixDaGVzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Warrington)"
+                seid=885, domain="co.uk", geo_location="Warrington,Cheshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIqV2FycmluZ3RvbixDaGVzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Warrington)"
             },
             new SearchProperties()
             {
-                seid =886, domain ="co.uk", geo_location="Warrington,Cheshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIqV2FycmluZ3RvbixDaGVzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Warrington, Mobile)"
+                seid=886, domain="co.uk", geo_location="Warrington,Cheshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIqV2FycmluZ3RvbixDaGVzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Warrington, Mobile)"
             },
             new SearchProperties()
             {
-                seid =887, domain ="co.uk", geo_location="Wetherby,West Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIuV2V0aGVyYnksV2VzdCBZb3Jrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Wetherby)"
+                seid=887, domain="co.uk", geo_location="Wetherby,West Yorkshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIuV2V0aGVyYnksV2VzdCBZb3Jrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Wetherby)"
             },
             new SearchProperties()
             {
-                seid =888, domain ="co.uk", geo_location="Wetherby,West Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIuV2V0aGVyYnksV2VzdCBZb3Jrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Wetherby, Mobile)"
+                seid=888, domain="co.uk", geo_location="Wetherby,West Yorkshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIuV2V0aGVyYnksV2VzdCBZb3Jrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Wetherby, Mobile)"
             },
             new SearchProperties()
             {
-                seid =889, domain ="co.uk", geo_location="Winchester,Hampshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrV2luY2hlc3RlcixIYW1wc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (Winchester)"
+                seid=889, domain="co.uk", geo_location="Winchester,Hampshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIrV2luY2hlc3RlcixIYW1wc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Winchester)"
             },
             new SearchProperties()
             {
-                seid =890, domain ="co.uk", geo_location="Winchester,Hampshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrV2luY2hlc3RlcixIYW1wc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (Winchester, Mobile)"
+                seid=890, domain="co.uk", geo_location="Winchester,Hampshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIrV2luY2hlc3RlcixIYW1wc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Winchester, Mobile)"
             },
             new SearchProperties()
             {
-                seid =891, domain ="co.uk", geo_location="Woking,Surrey,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIkV29raW5nLFN1cnJleSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome", sename="Google UK (Woking)"
+                seid=891, domain="co.uk", geo_location="Woking,Surrey,England,United Kingdom", locale="en-gb", uule="w+CAIQICIkV29raW5nLFN1cnJleSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Woking)"
             },
             new SearchProperties()
             {
-                seid =892, domain ="co.uk", geo_location="Woking,Surrey,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIkV29raW5nLFN1cnJleSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android", sename="Google UK (Woking, Mobile)"
+                seid=892, domain="co.uk", geo_location="Woking,Surrey,England,United Kingdom", locale="en-gb", uule="w+CAIQICIkV29raW5nLFN1cnJleSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Woking, Mobile)"
             },
             new SearchProperties()
             {
-                seid =893, domain ="co.uk", geo_location="Worcester,Worcestershire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIvV29yY2VzdGVyLFdvcmNlc3RlcnNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (Worcester)"
+                seid=893, domain="co.uk", geo_location="Worcester,Worcestershire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIvV29yY2VzdGVyLFdvcmNlc3RlcnNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="desktop_chrome", sename="Google UK (Worcester)"
             },
             new SearchProperties()
             {
-                seid =894, domain ="co.uk", geo_location="Worcester,Worcestershire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIvV29yY2VzdGVyLFdvcmNlc3RlcnNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (Worcester, Mobile)"
+                seid=894, domain="co.uk", geo_location="Worcester,Worcestershire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIvV29yY2VzdGVyLFdvcmNlc3RlcnNoaXJlLEVuZ2xhbmQsVW5pdGVkIEtpbmdkb20=", device="mobile_android", sename="Google UK (Worcester, Mobile)"
             },
             new SearchProperties()
             {
-                seid =895, domain ="co.uk", geo_location="York,North Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrWW9yayxOb3J0aCBZb3Jrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome", sename="Google UK (York)"
+                seid=895, domain="co.uk", geo_location="York,North Yorkshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIrWW9yayxOb3J0aCBZb3Jrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (York)"
             },
             new SearchProperties()
             {
-                seid =896, domain ="co.uk", geo_location="York,North Yorkshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICIrWW9yayxOb3J0aCBZb3Jrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android", sename="Google UK (York, Mobile)"
-            },//01-05-2024 
+                seid=896, domain="co.uk", geo_location="York,North Yorkshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICIrWW9yayxOb3J0aCBZb3Jrc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (York, Mobile)"
+            },//01-05-2024
             new SearchProperties()//15-05-2024
             {
-                seid =897, domain ="com.np", geo_location="Nepal", locale= "en-np", uule = "w+CAIQICIFTmVwYWw=",device="desktop_chrome", sename="Google Nepal (English)"
+                seid=897, domain="com.np", geo_location="Nepal", locale="en-np", uule="w+CAIQICIFTmVwYWw=", device="desktop_chrome", sename="Google Nepal (English)"
             },
             new SearchProperties()
             {
-                seid =898, domain ="com.np", geo_location="Nepal", locale= "en-np", uule = "w+CAIQICIFTmVwYWw=",device="mobile_android", sename="Google Nepal (English, Mobile)"
+                seid=898, domain="com.np", geo_location="Nepal", locale="en-np", uule="w+CAIQICIFTmVwYWw=", device="mobile_android", sename="Google Nepal (English, Mobile)"
             },//15-05-2024
             new SearchProperties()//03-06-2024
             {
-                seid = 899, domain ="com", geo_location="New Jersey,United States", locale= "en-us", uule = "w+CAIQICIYTmV3IEplcnNleSxVbml0ZWQgU3RhdGVz",device="desktop_chrome", sename="Google US(New Jersey)"
+                seid=899, domain="com", geo_location="New Jersey,United States", locale="en-us", uule="w+CAIQICIYTmV3IEplcnNleSxVbml0ZWQgU3RhdGVz", device="desktop_chrome", sename="Google US(New Jersey)"
             },
             new SearchProperties()
             {
-                seid = 900, domain ="com", geo_location="New Jersey,United States", locale= "en-us", uule = "w+CAIQICIYTmV3IEplcnNleSxVbml0ZWQgU3RhdGVz",device="mobile_android", sename="Google US(New Jersey, Mobile)"
+                seid=900, domain="com", geo_location="New Jersey,United States", locale="en-us", uule="w+CAIQICIYTmV3IEplcnNleSxVbml0ZWQgU3RhdGVz", device="mobile_android", sename="Google US(New Jersey, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 901, domain ="com", geo_location="Delaware,United States", locale= "en-us", uule = "w+CAIQICIWRGVsYXdhcmUsVW5pdGVkIFN0YXRlcw==",device="desktop_chrome", sename="Google US(Delaware)"
+                seid=901, domain="com", geo_location="Delaware,United States", locale="en-us", uule="w+CAIQICIWRGVsYXdhcmUsVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US(Delaware)"
             },
             new SearchProperties()
             {
-                seid = 902, domain ="com", geo_location="Delaware,United States", locale= "en-us", uule = "w+CAIQICIWRGVsYXdhcmUsVW5pdGVkIFN0YXRlcw==",device="mobile_android", sename="Google US(Delaware, Mobile)"
+                seid=902, domain="com", geo_location="Delaware,United States", locale="en-us", uule="w+CAIQICIWRGVsYXdhcmUsVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US(Delaware, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 903, domain ="com", geo_location="Maryland,United States", locale= "en-us", uule = "w+CAIQICIWTWFyeWxhbmQsVW5pdGVkIFN0YXRlcw==",device="desktop_chrome", sename="Google US(Maryland)"
+                seid=903, domain="com", geo_location="Maryland,United States", locale="en-us", uule="w+CAIQICIWTWFyeWxhbmQsVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US(Maryland)"
             },
             new SearchProperties()
             {
-                seid = 904, domain ="com", geo_location="Maryland,United States", locale= "en-us", uule = "w+CAIQICIWTWFyeWxhbmQsVW5pdGVkIFN0YXRlcw==",device="mobile_android", sename="Google US(Maryland, Mobile)"
+                seid=904, domain="com", geo_location="Maryland,United States", locale="en-us", uule="w+CAIQICIWTWFyeWxhbmQsVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US(Maryland, Mobile)"
             },//03-06-2024
             new SearchProperties()//19-06-2024
             {
-                seid = 905, domain ="al", geo_location="Albania", locale= "en-al", uule = "w+CAIQICIHQWxiYW5pYQ==",device="desktop_chrome", sename="Google AL (English)"
+                seid=905, domain="al", geo_location="Albania", locale="en-al", uule="w+CAIQICIHQWxiYW5pYQ==", device="desktop_chrome", sename="Google AL (English)"
             },
             new SearchProperties()
             {
-                seid = 906, domain ="al", geo_location="Albania", locale= "en-al", uule = "w+CAIQICIHQWxiYW5pYQ==",device="mobile_android", sename="Google AL (English, Mobile)"
+                seid=906, domain="al", geo_location="Albania", locale="en-al", uule="w+CAIQICIHQWxiYW5pYQ==", device="mobile_android", sename="Google AL (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 907, domain ="am", geo_location="Armenia", locale= "en-am", uule = "w+CAIQICIHQXJtZW5pYQ==",device="desktop_chrome", sename="Google AM (English)"
+                seid=907, domain="am", geo_location="Armenia", locale="en-am", uule="w+CAIQICIHQXJtZW5pYQ==", device="desktop_chrome", sename="Google AM (English)"
             },
             new SearchProperties()
             {
-                seid = 908, domain ="am", geo_location="Armenia", locale= "en-am", uule = "w+CAIQICIHQXJtZW5pYQ==",device="mobile_android", sename="Google AM (English, Mobile)"
+                seid=908, domain="am", geo_location="Armenia", locale="en-am", uule="w+CAIQICIHQXJtZW5pYQ==", device="mobile_android", sename="Google AM (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 909, domain ="nl", geo_location="Aruba", locale= "en-aw", uule = "w+CAIQICIFQXJ1YmE=",device="desktop_chrome", sename="Google AW (English)"
+                seid=909, domain="nl", geo_location="Aruba", locale="en-aw", uule="w+CAIQICIFQXJ1YmE=", device="desktop_chrome", sename="Google AW (English)"
             },
             new SearchProperties()
             {
-                seid = 910, domain ="nl", geo_location="Aruba", locale= "en-aw", uule = "w+CAIQICIFQXJ1YmE=",device="mobile_android", sename="Google AW (English, Mobile)"
+                seid=910, domain="nl", geo_location="Aruba", locale="en-aw", uule="w+CAIQICIFQXJ1YmE=", device="mobile_android", sename="Google AW (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 911, domain ="at", geo_location="Austria", locale= "en-at", uule = "w+CAIQICIHQXVzdHJpYQ==",device="desktop_chrome", sename="Google AT (English)"
+                seid=911, domain="at", geo_location="Austria", locale="en-at", uule="w+CAIQICIHQXVzdHJpYQ==", device="desktop_chrome", sename="Google AT (English)"
             },
             new SearchProperties()
             {
-                seid = 912, domain ="at", geo_location="Austria", locale= "en-at", uule = "w+CAIQICIHQXVzdHJpYQ==",device="mobile_android", sename="Google AT (English, Mobile)"
+                seid=912, domain="at", geo_location="Austria", locale="en-at", uule="w+CAIQICIHQXVzdHJpYQ==", device="mobile_android", sename="Google AT (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 913, domain ="ba", geo_location="Bosnia and Herzegovina", locale= "en-ba", uule = "w+CAIQICIWQm9zbmlhIGFuZCBIZXJ6ZWdvdmluYQ==",device="desktop_chrome", sename="Google BA (English)"
+                seid=913, domain="ba", geo_location="Bosnia and Herzegovina", locale="en-ba", uule="w+CAIQICIWQm9zbmlhIGFuZCBIZXJ6ZWdvdmluYQ==", device="desktop_chrome", sename="Google BA (English)"
             },
             new SearchProperties()
             {
-                seid = 914, domain ="ba", geo_location="Bosnia and Herzegovina", locale= "en-ba", uule = "w+CAIQICIWQm9zbmlhIGFuZCBIZXJ6ZWdvdmluYQ==",device="mobile_android", sename="Google BA (English, Mobile)"
+                seid=914, domain="ba", geo_location="Bosnia and Herzegovina", locale="en-ba", uule="w+CAIQICIWQm9zbmlhIGFuZCBIZXJ6ZWdvdmluYQ==", device="mobile_android", sename="Google BA (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 915, domain ="com.co", geo_location="Colombia", locale= "en-co", uule = "w+CAIQICIIQ29sb21iaWE=",device="desktop_chrome", sename="Google CO (English)"
+                seid=915, domain="com.co", geo_location="Colombia", locale="en-co", uule="w+CAIQICIIQ29sb21iaWE=", device="desktop_chrome", sename="Google CO (English)"
             },
             new SearchProperties()
             {
-                seid = 916, domain ="com.co", geo_location="Colombia", locale= "en-co", uule = "w+CAIQICIIQ29sb21iaWE=",device="mobile_android", sename="Google CO (English, Mobile)"
+                seid=916, domain="com.co", geo_location="Colombia", locale="en-co", uule="w+CAIQICIIQ29sb21iaWE=", device="mobile_android", sename="Google CO (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 917, domain ="co.cr", geo_location="Costa Rica", locale= "en-cr", uule = "w+CAIQICIKQ29zdGEgUmljYQ==",device="desktop_chrome", sename="Google CR (English)"
+                seid=917, domain="co.cr", geo_location="Costa Rica", locale="en-cr", uule="w+CAIQICIKQ29zdGEgUmljYQ==", device="desktop_chrome", sename="Google CR (English)"
             },
             new SearchProperties()
             {
-                seid = 918, domain ="co.cr", geo_location="Costa Rica", locale= "en-cr", uule = "w+CAIQICIKQ29zdGEgUmljYQ==",device="mobile_android", sename="Google CR (English,  Mobile)"
+                seid=918, domain="co.cr", geo_location="Costa Rica", locale="en-cr", uule="w+CAIQICIKQ29zdGEgUmljYQ==", device="mobile_android", sename="Google CR (English,  Mobile)"
             },
             new SearchProperties()
             {
-                seid = 919, domain ="hr", geo_location="Croatia", locale= "en-hr", uule = "w+CAIQICIHQ3JvYXRpYQ==",device="desktop_chrome", sename="Google HR (English)"
+                seid=919, domain="hr", geo_location="Croatia", locale="en-hr", uule="w+CAIQICIHQ3JvYXRpYQ==", device="desktop_chrome", sename="Google HR (English)"
             },
             new SearchProperties()
             {
-                seid = 920, domain ="hr", geo_location="Croatia", locale= "en-hr", uule = "w+CAIQICIHQ3JvYXRpYQ==",device="mobile_android", sename="Google HR (English, Mobile)"
+                seid=920, domain="hr", geo_location="Croatia", locale="en-hr", uule="w+CAIQICIHQ3JvYXRpYQ==", device="mobile_android", sename="Google HR (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 921, domain ="com.cy", geo_location="Cyprus", locale= "en-cy", uule = "w+CAIQICIGQ3lwcnVz",device="desktop_chrome", sename="Google CY (English)"
+                seid=921, domain="com.cy", geo_location="Cyprus", locale="en-cy", uule="w+CAIQICIGQ3lwcnVz", device="desktop_chrome", sename="Google CY (English)"
             },
             new SearchProperties()
             {
-                seid = 922, domain ="com.cy", geo_location="Cyprus", locale= "en-cy", uule = "w+CAIQICIGQ3lwcnVz",device="mobile_android", sename="Google CY (English, Mobile)"
+                seid=922, domain="com.cy", geo_location="Cyprus", locale="en-cy", uule="w+CAIQICIGQ3lwcnVz", device="mobile_android", sename="Google CY (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 923, domain ="com.do", geo_location="Dominican Republic", locale= "en-do", uule = "w+CAIQICISRG9taW5pY2FuIFJlcHVibGlj",device="desktop_chrome", sename="Google DO (English)"
+                seid=923, domain="com.do", geo_location="Dominican Republic", locale="en-do", uule="w+CAIQICISRG9taW5pY2FuIFJlcHVibGlj", device="desktop_chrome", sename="Google DO (English)"
             },
             new SearchProperties()
             {
-                seid = 924, domain ="com.do", geo_location="Dominican Republic", locale= "en-do", uule = "w+CAIQICISRG9taW5pY2FuIFJlcHVibGlj",device="mobile_android", sename="Google DO (English, Mobile)"
+                seid=924, domain="com.do", geo_location="Dominican Republic", locale="en-do", uule="w+CAIQICISRG9taW5pY2FuIFJlcHVibGlj", device="mobile_android", sename="Google DO (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 925, domain ="com.ec", geo_location="Ecuador", locale= "en-ec", uule ="w+CAIQICIHRWN1YWRvcg==",device="desktop_chrome", sename="Google EC (English)"
+                seid=925, domain="com.ec", geo_location="Ecuador", locale="en-ec", uule ="w+CAIQICIHRWN1YWRvcg==", device="desktop_chrome", sename="Google EC (English)"
             },
             new SearchProperties()
             {
-                seid = 926, domain ="com.ec", geo_location="Ecuador", locale= "en-ec", uule = "w+CAIQICIHRWN1YWRvcg==",device="mobile_android", sename="Google EC (English, Mobile)"
+                seid=926, domain="com.ec", geo_location="Ecuador", locale="en-ec", uule="w+CAIQICIHRWN1YWRvcg==", device="mobile_android", sename="Google EC (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 927, domain ="com.sv", geo_location="El Salvador", locale= "en-sv", uule ="w+CAIQICILRWwgU2FsdmFkb3I=",device="desktop_chrome", sename="Google SV (English)"
+                seid=927, domain="com.sv", geo_location="El Salvador", locale="en-sv", uule ="w+CAIQICILRWwgU2FsdmFkb3I=", device="desktop_chrome", sename="Google SV (English)"
             },
             new SearchProperties()
             {
-                seid = 928, domain ="com.sv", geo_location="El Salvador", locale= "en-sv", uule ="w+CAIQICILRWwgU2FsdmFkb3I=",device="mobile_android", sename="Google SV (English, Mobile)"
+                seid=928, domain="com.sv", geo_location="El Salvador", locale="en-sv", uule ="w+CAIQICILRWwgU2FsdmFkb3I=", device="mobile_android", sename="Google SV (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 929, domain ="ge", geo_location="Georgia", locale= "en-ge", uule ="w+CAIQICIHR2VvcmdpYQ==",device="desktop_chrome", sename="Google GE (English)"
+                seid=929, domain="ge", geo_location="Georgia", locale="en-ge", uule ="w+CAIQICIHR2VvcmdpYQ==", device="desktop_chrome", sename="Google GE (English)"
             },
             new SearchProperties()
             {
-                seid = 930, domain ="ge", geo_location="Georgia", locale= "en-ge", uule ="w+CAIQICIHR2VvcmdpYQ==",device="mobile_android", sename="Google GE (English, Mobile)"
+                seid=930, domain="ge", geo_location="Georgia", locale="en-ge", uule ="w+CAIQICIHR2VvcmdpYQ==", device="mobile_android", sename="Google GE (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 931, domain ="gr", geo_location="Greece", locale= "en-gr", uule ="w+CAIQICIGR3JlZWNl",device="desktop_chrome", sename="Google GR (English)"
+                seid=931, domain="gr", geo_location="Greece", locale="en-gr", uule ="w+CAIQICIGR3JlZWNl", device="desktop_chrome", sename="Google GR (English)"
             },
             new SearchProperties()
             {
-                seid = 932, domain ="gr", geo_location="Greece", locale= "en-gr", uule ="w+CAIQICIGR3JlZWNl",device="mobile_android", sename="Google GR (English, Mobile)"
+                seid=932, domain="gr", geo_location="Greece", locale="en-gr", uule ="w+CAIQICIGR3JlZWNl", device="mobile_android", sename="Google GR (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 933, domain ="com.gt", geo_location="Guatemala", locale= "en-gt", uule ="w+CAIQICIJR3VhdGVtYWxh",device="desktop_chrome", sename="Google GT (English)"
+                seid=933, domain="com.gt", geo_location="Guatemala", locale="en-gt", uule ="w+CAIQICIJR3VhdGVtYWxh", device="desktop_chrome", sename="Google GT (English)"
             },
             new SearchProperties()
             {
-                seid = 934, domain ="com.gt", geo_location="Guatemala", locale= "en-gt", uule ="w+CAIQICIJR3VhdGVtYWxh",device="mobile_android", sename="Google GT (English, Mobile)"
+                seid=934, domain="com.gt", geo_location="Guatemala", locale="en-gt", uule ="w+CAIQICIJR3VhdGVtYWxh", device="mobile_android", sename="Google GT (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 935, domain ="hu", geo_location="Hungary", locale= "en-hu", uule ="w+CAIQICIHSHVuZ2FyeQ==",device="desktop_chrome", sename="Google HU (English)"
+                seid=935, domain="hu", geo_location="Hungary", locale="en-hu", uule ="w+CAIQICIHSHVuZ2FyeQ==", device="desktop_chrome", sename="Google HU (English)"
             },
             new SearchProperties()
             {
-                seid = 936, domain ="hu", geo_location="Hungary", locale= "en-hu", uule ="w+CAIQICIHSHVuZ2FyeQ==",device="mobile_android", sename="Google HU (English, Mobile)"
+                seid=936, domain="hu", geo_location="Hungary", locale="en-hu", uule ="w+CAIQICIHSHVuZ2FyeQ==", device="mobile_android", sename="Google HU (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 937, domain ="kz", geo_location="Kazakhstan", locale= "en-kz", uule ="w+CAIQICIKS2F6YWtoc3Rhbg==",device="desktop_chrome", sename="Google KZ (English)"
+                seid=937, domain="kz", geo_location="Kazakhstan", locale="en-kz", uule ="w+CAIQICIKS2F6YWtoc3Rhbg==", device="desktop_chrome", sename="Google KZ (English)"
             },
             new SearchProperties()
             {
-                seid = 938, domain ="kz", geo_location="Kazakhstan", locale= "en-kz", uule ="w+CAIQICIKS2F6YWtoc3Rhbg==",device="mobile_android", sename="Google KZ (English, Mobile)"
+                seid=938, domain="kz", geo_location="Kazakhstan", locale="en-kz", uule ="w+CAIQICIKS2F6YWtoc3Rhbg==", device="mobile_android", sename="Google KZ (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 939, domain ="kg", geo_location="Kyrgyzstan", locale= "en-kg", uule ="w+CAIQICIKS3lyZ3l6c3Rhbg==",device="desktop_chrome", sename="Google KG (English)"
+                seid=939, domain="kg", geo_location="Kyrgyzstan", locale="en-kg", uule ="w+CAIQICIKS3lyZ3l6c3Rhbg==", device="desktop_chrome", sename="Google KG (English)"
             },
             new SearchProperties()
             {
-                seid = 940, domain ="kg", geo_location="Kyrgyzstan", locale= "en-kg", uule = "w+CAIQICIKS3lyZ3l6c3Rhbg==",device="mobile_android", sename="Google KG (English, Mobile)"
+                seid=940, domain="kg", geo_location="Kyrgyzstan", locale="en-kg", uule="w+CAIQICIKS3lyZ3l6c3Rhbg==", device="mobile_android", sename="Google KG (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 941, domain ="lt", geo_location="Lithuania", locale= "en-lt", uule ="w+CAIQICIJTGl0aHVhbmlh",device="desktop_chrome", sename="Google LT(English)"
+                seid=941, domain="lt", geo_location="Lithuania", locale="en-lt", uule ="w+CAIQICIJTGl0aHVhbmlh", device="desktop_chrome", sename="Google LT(English)"
             },
             new SearchProperties()
             {
-                seid = 942, domain ="lt", geo_location="Lithuania", locale= "en-lt", uule = "w+CAIQICIJTGl0aHVhbmlh",device="mobile_android", sename="Google LT(English, Mobile)"
+                seid=942, domain="lt", geo_location="Lithuania", locale="en-lt", uule="w+CAIQICIJTGl0aHVhbmlh", device="mobile_android", sename="Google LT(English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 943, domain ="mv", geo_location="Maldives", locale= "en-mv", uule ="w+CAIQICIITWFsZGl2ZXM=",device="desktop_chrome", sename="Google MV(English)"
+                seid=943, domain="mv", geo_location="Maldives", locale="en-mv", uule="w+CAIQICIITWFsZGl2ZXM=", device="desktop_chrome", sename="Google MV(English)"
             },
             new SearchProperties()
             {
-                seid = 944, domain ="mv", geo_location="Maldives", locale= "en-mv", uule = "w+CAIQICIITWFsZGl2ZXM=",device="mobile_android", sename="Google MV(English, Mobile)"
+                seid=944, domain="mv", geo_location="Maldives", locale="en-mv", uule="w+CAIQICIITWFsZGl2ZXM=", device="mobile_android", sename="Google MV(English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 945, domain ="md", geo_location="Moldova", locale= "en-md", uule ="w+CAIQICIHTW9sZG92YQ==",device="desktop_chrome", sename="Google MD(English)"
+                seid=945, domain="md", geo_location="Moldova", locale="en-md", uule ="w+CAIQICIHTW9sZG92YQ==", device="desktop_chrome", sename="Google MD(English)"
             },
             new SearchProperties()
             {
-                seid = 946, domain ="md", geo_location="Moldova", locale= "en-md", uule = "w+CAIQICIHTW9sZG92YQ==",device="mobile_android", sename="Google MD(English, Mobile)"
+                seid=946, domain="md", geo_location="Moldova", locale="en-md", uule="w+CAIQICIHTW9sZG92YQ==", device="mobile_android", sename="Google MD(English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 947, domain ="me", geo_location="Montenegro", locale= "en-me", uule ="w+CAIQICIKTW9udGVuZWdybw==",device="desktop_chrome", sename="Google ME(English)"
+                seid=947, domain="me", geo_location="Montenegro", locale="en-me", uule ="w+CAIQICIKTW9udGVuZWdybw==", device="desktop_chrome", sename="Google ME(English)"
             },
             new SearchProperties()
             {
-                seid = 948, domain ="me", geo_location="Montenegro", locale= "en-me", uule = "w+CAIQICIKTW9udGVuZWdybw==",device="mobile_android", sename="Google ME(English, Mobile)"
+                seid=948, domain="me", geo_location="Montenegro", locale="en-me", uule="w+CAIQICIKTW9udGVuZWdybw==", device="mobile_android", sename="Google ME(English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 949, domain ="co.ma", geo_location="Morocco", locale= "en-ma", uule ="w+CAIQICIHTW9yb2Njbw==",device="desktop_chrome", sename="Google MA(English)"
+                seid=949, domain="co.ma", geo_location="Morocco", locale="en-ma", uule ="w+CAIQICIHTW9yb2Njbw==", device="desktop_chrome", sename="Google MA(English)"
             },
             new SearchProperties()
             {
-                seid = 950, domain ="co.ma", geo_location="Morocco", locale= "en-ma", uule = "w+CAIQICIHTW9yb2Njbw==",device="mobile_android", sename="Google MA(English, Mobile)"
+                seid=950, domain="co.ma", geo_location="Morocco", locale="en-ma", uule="w+CAIQICIHTW9yb2Njbw==", device="mobile_android", sename="Google MA(English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 951, domain ="mk", geo_location="North Macedonia", locale= "en-mk", uule ="w+CAIQICIJTWFjZWRvbmlh",device="desktop_chrome",sename="Google MK (Macedonian)"
+                seid=951, domain="mk", geo_location="North Macedonia", locale="en-mk", uule ="w+CAIQICIJTWFjZWRvbmlh", device="desktop_chrome", sename="Google MK (Macedonian)"
             },
             new SearchProperties()
             {
-                seid = 952, domain ="mk", geo_location="North Macedonia", locale= "en-mk", uule = "w+CAIQICIJTWFjZWRvbmlh",device="mobile_android",sename="Google MK (Macedonian, Mobile)"
+                seid=952, domain="mk", geo_location="North Macedonia", locale="en-mk", uule="w+CAIQICIJTWFjZWRvbmlh", device="mobile_android", sename="Google MK (Macedonian, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 953, domain ="ps", geo_location="Palestine", locale= "en-ps", uule ="w+CAIQICIJUGFsZXN0aW5l",device="desktop_chrome",sename="Google PS (English)"
+                seid=953, domain="ps", geo_location="Palestine", locale="en-ps", uule ="w+CAIQICIJUGFsZXN0aW5l", device="desktop_chrome", sename="Google PS (English)"
             },
             new SearchProperties()
             {
-                seid = 954, domain ="ps", geo_location="Palestine", locale= "en-ps", uule = "w+CAIQICIJUGFsZXN0aW5l",device="mobile_android",sename="Google PS (English, Mobile)"
+                seid=954, domain="ps", geo_location="Palestine", locale="en-ps", uule="w+CAIQICIJUGFsZXN0aW5l", device="mobile_android", sename="Google PS (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 955, domain ="pl", geo_location="Poland", locale= "en-pl", uule ="w+CAIQICIGUG9sYW5k",device="desktop_chrome", sename="Google PL(English)"
+                seid=955, domain="pl", geo_location="Poland", locale="en-pl", uule ="w+CAIQICIGUG9sYW5k", device="desktop_chrome", sename="Google PL(English)"
             },
             new SearchProperties()
             {
-                seid = 956, domain ="pl", geo_location="Poland", locale= "en-pl", uule = "w+CAIQICIGUG9sYW5k",device="mobile_android", sename="Google PL(English, Mobile)"
+                seid=956, domain="pl", geo_location="Poland", locale="en-pl", uule="w+CAIQICIGUG9sYW5k", device="mobile_android", sename="Google PL(English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 957, domain ="pt", geo_location="Portugal", locale= "en-pt", uule ="w+CAIQICIIUG9ydHVnYWw=",device="desktop_chrome", sename="Google PT(English)"
+                seid=957, domain="pt", geo_location="Portugal", locale="en-pt", uule ="w+CAIQICIIUG9ydHVnYWw=", device="desktop_chrome", sename="Google PT(English)"
             },
             new SearchProperties()
             {
-                seid = 958, domain ="pt", geo_location="Portugal", locale= "en-pt", uule = "w+CAIQICIIUG9ydHVnYWw=",device="mobile_android", sename="Google PT(English, Mobile)"
+                seid=958, domain="pt", geo_location="Portugal", locale="en-pt", uule="w+CAIQICIIUG9ydHVnYWw=", device="mobile_android", sename="Google PT(English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 959, domain ="rs", geo_location="Serbia", locale= "en-rs", uule ="w+CAIQICIGU2VyYmlh",device="desktop_chrome", sename="Google RS(English)"
+                seid=959, domain="rs", geo_location="Serbia", locale="en-rs", uule ="w+CAIQICIGU2VyYmlh", device="desktop_chrome", sename="Google RS(English)"
             },
             new SearchProperties()
             {
-                seid = 960, domain ="rs", geo_location="Serbia", locale= "en-rs", uule = "w+CAIQICIGU2VyYmlh",device="mobile_android", sename="Google RS(English, Mobile)"
+                seid=960, domain="rs", geo_location="Serbia", locale="en-rs", uule="w+CAIQICIGU2VyYmlh", device="mobile_android", sename="Google RS(English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 961, domain ="es", geo_location="Spain", locale= "en-es", uule ="w+CAIQICIFU3BhaW4=",device="desktop_chrome", sename="Google ES(English)"
+                seid=961, domain="es", geo_location="Spain", locale="en-es", uule ="w+CAIQICIFU3BhaW4=", device="desktop_chrome", sename="Google ES(English)"
             },
             new SearchProperties()
             {
-                seid = 962, domain ="es", geo_location="Spain", locale= "en-es", uule = "w+CAIQICIFU3BhaW4=",device="mobile_android", sename="Google ES(English, Mobile)"
+                seid=962, domain="es", geo_location="Spain", locale="en-es", uule="w+CAIQICIFU3BhaW4=", device="mobile_android", sename="Google ES(English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 963, domain ="com.ua", geo_location="Ukraine", locale= "en-ua", uule ="w+CAIQICIHVWtyYWluZQ==",device="desktop_chrome", sename="Google UA(English)"
+                seid=963, domain="com.ua", geo_location="Ukraine", locale="en-ua", uule ="w+CAIQICIHVWtyYWluZQ==", device="desktop_chrome", sename="Google UA(English)"
             },
             new SearchProperties()
             {
-                seid = 964, domain ="com.ua", geo_location="Ukraine", locale= "en-ua", uule = "w+CAIQICIHVWtyYWluZQ==",device="mobile_android", sename="Google UA(English, Mobile)"
+                seid=964, domain="com.ua", geo_location="Ukraine", locale="en-ua", uule="w+CAIQICIHVWtyYWluZQ==", device="mobile_android", sename="Google UA(English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 965, domain ="co.uz", geo_location="Uzbekistan", locale= "en-uz", uule ="w+CAIQICIKVXpiZWtpc3Rhbg==",device="desktop_chrome", sename="Google UZ(English)"
+                seid=965, domain="co.uz", geo_location="Uzbekistan", locale="en-uz", uule ="w+CAIQICIKVXpiZWtpc3Rhbg==", device="desktop_chrome", sename="Google UZ(English)"
             },
             new SearchProperties()
             {
-                seid = 966, domain ="co.uz", geo_location="Uzbekistan", locale= "en-uz", uule = "w+CAIQICIKVXpiZWtpc3Rhbg==",device="mobile_android", sename="Google UZ(English, Mobile)"
+                seid=966, domain="co.uz", geo_location="Uzbekistan", locale="en-uz", uule="w+CAIQICIKVXpiZWtpc3Rhbg==", device="mobile_android", sename="Google UZ(English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 967, domain ="kz", geo_location="Kazakhstan", locale= "ru-kz", uule ="w+CAIQICIKS2F6YWtoc3Rhbg==",device="desktop_chrome", sename="Google KZ(Russian)"
+                seid=967, domain="kz", geo_location="Kazakhstan", locale="ru-kz", uule ="w+CAIQICIKS2F6YWtoc3Rhbg==", device="desktop_chrome", sename="Google KZ(Russian)"
             },
             new SearchProperties()
             {
-                seid = 968, domain ="kz", geo_location="Kazakhstan", locale= "ru-kz", uule = "w+CAIQICIKS2F6YWtoc3Rhbg==",device="mobile_android", sename="Google KZ(Russian, Mobile)"
+                seid=968, domain="kz", geo_location="Kazakhstan", locale="ru-kz", uule="w+CAIQICIKS2F6YWtoc3Rhbg==", device="mobile_android", sename="Google KZ(Russian, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 969, domain ="kg", geo_location="Kyrgyzstan", locale= "ru-kg", uule ="w+CAIQICIKS3lyZ3l6c3Rhbg==",device="desktop_chrome", sename="Google KG(Russian)"
+                seid=969, domain="kg", geo_location="Kyrgyzstan", locale="ru-kg", uule ="w+CAIQICIKS3lyZ3l6c3Rhbg==", device="desktop_chrome", sename="Google KG(Russian)"
             },
             new SearchProperties()
             {
-                seid = 970, domain ="kg", geo_location="Kyrgyzstan", locale= "ru-kg", uule = "w+CAIQICIKS3lyZ3l6c3Rhbg==",device="mobile_android", sename="Google KG(Russian, Mobile)"
+                seid=970, domain="kg", geo_location="Kyrgyzstan", locale="ru-kg", uule="w+CAIQICIKS3lyZ3l6c3Rhbg==", device="mobile_android", sename="Google KG(Russian, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 971, domain ="md", geo_location="Moldova", locale= "ru-md", uule ="w+CAIQICIHTW9sZG92YQ==",device="desktop_chrome", sename="Google MD(Russian)"
+                seid=971, domain="md", geo_location="Moldova", locale="ru-md", uule ="w+CAIQICIHTW9sZG92YQ==", device="desktop_chrome", sename="Google MD(Russian)"
             },
             new SearchProperties()
             {
-                seid = 972, domain ="md", geo_location="Moldova", locale= "ru-md", uule = "w+CAIQICIHTW9sZG92YQ==",device="mobile_android", sename="Google MD(Russian, Mobile)"
+                seid=972, domain="md", geo_location="Moldova", locale="ru-md", uule="w+CAIQICIHTW9sZG92YQ==", device="mobile_android", sename="Google MD(Russian, Mobile)"
             },
             new SearchProperties()//20-06-2024
             {
-                seid = 973, domain ="tn", geo_location="Tunisia", locale= "en-tn", uule = "w+CAIQICIHVHVuaXNpYQ==",device="desktop_chrome", sename="Google TN (English)"
+                seid=973, domain="tn", geo_location="Tunisia", locale="en-tn", uule="w+CAIQICIHVHVuaXNpYQ==", device="desktop_chrome", sename="Google TN (English)"
             },
             new SearchProperties()
             {
-                seid = 974, domain ="tn", geo_location="Tunisia", locale= "en-tn", uule = "w+CAIQICIHVHVuaXNpYQ==",device="mobile_android",sename="Google TN (English, Mobile)"
+                seid=974, domain="tn", geo_location="Tunisia", locale="en-tn", uule="w+CAIQICIHVHVuaXNpYQ==", device="mobile_android", sename="Google TN (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 975, domain ="hn", geo_location="Honduras", locale= "en-hn", uule = "w+CAIQICIISG9uZHVyYXM=",device="desktop_chrome", sename="Google HN (English)"
+                seid=975, domain="hn", geo_location="Honduras", locale="en-hn", uule="w+CAIQICIISG9uZHVyYXM=", device="desktop_chrome", sename="Google HN (English)"
             },
             new SearchProperties()
             {
-                seid = 976, domain ="hn", geo_location="Honduras", locale= "en-hn", uule = "w+CAIQICIISG9uZHVyYXM=", device="mobile_android",sename="Google HN (English, Mobile)"
+                seid=976, domain="hn", geo_location="Honduras", locale="en-hn", uule="w+CAIQICIISG9uZHVyYXM=", device="mobile_android", sename="Google HN (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 977, domain ="si", geo_location="Slovenia", locale= "en-si", uule = "w+CAIQICIIU2xvdmVuaWE=",device="desktop_chrome", sename="Google SI (English)"
+                seid=977, domain="si", geo_location="Slovenia", locale="en-si", uule="w+CAIQICIIU2xvdmVuaWE=", device="desktop_chrome", sename="Google SI (English)"
             },
             new SearchProperties()
             {
-                seid = 978, domain ="si", geo_location="Slovenia", locale= "en-si", uule = "w+CAIQICIIU2xvdmVuaWE=", device="mobile_android", sename="Google SI (English, Mobile)"
+                seid=978, domain="si", geo_location="Slovenia", locale="en-si", uule="w+CAIQICIIU2xvdmVuaWE=", device="mobile_android", sename="Google SI (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 979, domain ="ro", geo_location="Romania", locale= "en-ro", uule = "w+CAIQICIHUm9tYW5pYQ==",device="desktop_chrome", sename="Google RO (English)"
+                seid=979, domain="ro", geo_location="Romania", locale="en-ro", uule="w+CAIQICIHUm9tYW5pYQ==", device="desktop_chrome", sename="Google RO (English)"
             },
             new SearchProperties()
             {
-                seid = 980, domain ="ro", geo_location="Romania", locale= "en-ro", uule = "w+CAIQICIHUm9tYW5pYQ==",device="mobile_android", sename="Google RO (English, Mobile)"
+                seid=980, domain="ro", geo_location="Romania", locale="en-ro", uule="w+CAIQICIHUm9tYW5pYQ==", device="mobile_android", sename="Google RO (English, Mobile)"
             },//20-06-2024
             new SearchProperties()//21-06-2024
             {
-                seid = 981, domain ="fr", geo_location="Saint-Denis", locale= "en-re", uule = "w+CAIQICILU2FpbnQtRGVuaXM=",device="desktop_chrome",sename="Google FR (Reunion Island, English)"
+                seid=981, domain="fr", geo_location="Saint-Denis", locale="en-re", uule="w+CAIQICILU2FpbnQtRGVuaXM=", device="desktop_chrome", sename="Google FR (Reunion Island, English)"
             },
             new SearchProperties()
             {
-                seid = 982, domain ="fr", geo_location="Saint-Denis", locale= "en-re", uule = "w+CAIQICILU2FpbnQtRGVuaXM=",device="mobile_android",sename="Google FR (Reunion Island, English, Mobile)"
-            },//21-06-2024
+                seid=982, domain="fr", geo_location="Saint-Denis", locale="en-re", uule="w+CAIQICILU2FpbnQtRGVuaXM=", device="mobile_android", sename="Google FR (Reunion Island, English, Mobile)"
+            },//21-06-2024 
             new SearchProperties()//04-07-2024
             {
-                seid = 983, domain ="nl", geo_location="Aruba", locale= "es-aw", uule = "w+CAIQICIFQXJ1YmE=",device="desktop_chrome",sename="Google AW (Spanish)"
+                seid=983, domain="nl", geo_location="Aruba", locale="es-aw", uule="w+CAIQICIFQXJ1YmE=", device="desktop_chrome", sename="Google AW (Spanish)"
             },
             new SearchProperties()
             {
-                seid = 984, domain ="nl", geo_location="Aruba", locale= "es-aw", uule = "w+CAIQICIFQXJ1YmE=",device="mobile_android",sename="Google AW (Spanish, Mobile)"
+                seid=984, domain="nl", geo_location="Aruba", locale="es-aw", uule="w+CAIQICIFQXJ1YmE=", device="mobile_android", sename="Google AW (Spanish, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 985, domain ="am", geo_location="Armenia", locale= "ru-am", uule = "w+CAIQICIHQXJtZW5pYQ==",device="desktop_chrome",sename="Google AM (Russian)"
+                seid=985, domain="am", geo_location="Armenia", locale="ru-am", uule="w+CAIQICIHQXJtZW5pYQ==", device="desktop_chrome", sename="Google AM (Russian)"
             },
             new SearchProperties()
             {
-                seid = 986, domain ="am", geo_location="Armenia", locale= "ru-am", uule = "w+CAIQICIHQXJtZW5pYQ==",device="mobile_android",sename="Google AM (Russian, Mobile)"
+                seid=986, domain="am", geo_location="Armenia", locale="ru-am", uule="w+CAIQICIHQXJtZW5pYQ==", device="mobile_android", sename="Google AM (Russian, Mobile)"
             },//04-07-2024
-            new SearchProperties()//11-07-2024
+            new SearchProperties()//10-07-2024
             {
-                seid = 987, domain ="co.il", geo_location="Israel", locale= "en-il", uule = "w+CAIQICIGSXNyYWVs",device="mobile_android",sename="Google IL (English, Mobile)"
-            },//11-07-2024
+                seid=987, domain="co.il", geo_location="Israel", locale="en-il", uule="w+CAIQICIGSXNyYWVs", device="mobile_android", sename="Google IL (English, Mobile)"
+            },//10-07-2024
             new SearchProperties()//03-09-2024
             {
-                seid = 988, domain ="ad", geo_location="Andorra", locale= "ca-ad", uule = "w+CAIQICIHQW5kb3JyYQ==",device="desktop_chrome",sename="Google AD (Catalan)"
+                seid=988, domain="ad", geo_location="Andorra", locale="ca-ad", uule="w+CAIQICIHQW5kb3JyYQ==", device="desktop_chrome", sename="Google AD (Catalan)"
             },
             new SearchProperties()
             {
-                seid = 989, domain ="ad", geo_location="Andorra", locale= "ca-ad", uule = "w+CAIQICIHQW5kb3JyYQ==",device="mobile_android",sename="Google AD (Catalan, Mobile)"
+                seid=989, domain="ad", geo_location="Andorra", locale="ca-ad", uule="w+CAIQICIHQW5kb3JyYQ==", device="mobile_android", sename="Google AD (Catalan, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 990, domain ="es", geo_location="Canary Islands,Spain", locale= "es-es", uule = "w+CAIQICIUQ2FuYXJ5IElzbGFuZHMsU3BhaW4=",device="desktop_chrome",sename="Google ES (Canary Islands)"
+                seid=990, domain="es", geo_location="Canary Islands,Spain", locale="es-es", uule="w+CAIQICIUQ2FuYXJ5IElzbGFuZHMsU3BhaW4=", device="desktop_chrome", sename="Google ES (Canary Islands)"
             },
             new SearchProperties()
             {
-                seid = 991, domain ="es", geo_location="Canary Islands,Spain", locale= "es-es", uule = "w+CAIQICIUQ2FuYXJ5IElzbGFuZHMsU3BhaW4=",device="mobile_android",sename="Google ES (Canary Islands, Mobile)"
+                seid=991, domain="es", geo_location="Canary Islands,Spain", locale="es-es", uule="w+CAIQICIUQ2FuYXJ5IElzbGFuZHMsU3BhaW4=", device="mobile_android", sename="Google ES (Canary Islands, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 992, domain ="com.af", geo_location="Afghanistan", locale= "ar-af", uule = "w+CAIQICILQWZnaGFuaXN0YW4=",device="desktop_chrome",sename="Google AF (Arabic)"
+                seid=992, domain="com.af", geo_location="Afghanistan", locale="ar-af", uule="w+CAIQICILQWZnaGFuaXN0YW4=", device="desktop_chrome", sename="Google AF (Arabic)"
             },
             new SearchProperties()
             {
-                seid = 993, domain ="com.af", geo_location="Afghanistan", locale= "ar-af", uule = "w+CAIQICILQWZnaGFuaXN0YW4=",device="mobile_android",sename="Google AF (Arabic, Mobile)"
+                seid=993, domain="com.af", geo_location="Afghanistan", locale="ar-af", uule="w+CAIQICILQWZnaGFuaXN0YW4=", device="mobile_android", sename="Google AF (Arabic, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 994, domain ="iq", geo_location="Iraq", locale= "ar-iq", uule = "w+CAIQICIESXJhcQ==",device="desktop_chrome",sename="Google IQ (Arabic)"
+                seid=994, domain="iq", geo_location="Iraq", locale="ar-iq", uule="w+CAIQICIESXJhcQ==", device="desktop_chrome", sename="Google IQ (Arabic)"
             },
             new SearchProperties()
             {
-                seid = 995, domain ="iq", geo_location="Iraq", locale= "ar-iq", uule = "w+CAIQICIESXJhcQ==",device="mobile_android",sename="Google IQ (Arabic, Mobile)"
+                seid=995, domain="iq", geo_location="Iraq", locale="ar-iq", uule="w+CAIQICIESXJhcQ==", device="mobile_android", sename="Google IQ (Arabic, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 996, domain ="az", geo_location="Azerbaijan", locale= "az-az", uule = "w+CAIQICIKQXplcmJhaWphbg==",device="desktop_chrome",sename="Google AZ (Azerbaijani)"
+                seid=996, domain="az", geo_location="Azerbaijan", locale="az-az", uule="w+CAIQICIKQXplcmJhaWphbg==", device="desktop_chrome", sename="Google AZ (Azerbaijani)"
             },
             new SearchProperties()
             {
-                seid = 997, domain ="az", geo_location="Azerbaijan", locale= "az-az", uule = "w+CAIQICIKQXplcmJhaWphbg==",device="mobile_android",sename="Google AZ (Azerbaijani, Mobile)"
+                seid=997, domain="az", geo_location="Azerbaijan", locale="az-az", uule="w+CAIQICIKQXplcmJhaWphbg==", device="mobile_android", sename="Google AZ (Azerbaijani, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 998, domain ="az", geo_location="Azerbaijan", locale= "ru-az", uule = "w+CAIQICIKQXplcmJhaWphbg==",device="desktop_chrome",sename="Google AZ (Russian)"
+                seid=998, domain="az", geo_location="Azerbaijan", locale="ru-az", uule="w+CAIQICIKQXplcmJhaWphbg==", device="desktop_chrome", sename="Google AZ (Russian)"
             },
             new SearchProperties()
             {
-                seid = 999, domain ="az", geo_location="Azerbaijan", locale= "ru-az", uule = "w+CAIQICIKQXplcmJhaWphbg==",device="mobile_android",sename="Google AZ (Russian, Mobile)"
+                seid=999, domain="az", geo_location="Azerbaijan", locale="ru-az", uule="w+CAIQICIKQXplcmJhaWphbg==", device="mobile_android", sename="Google AZ (Russian, Mobile)"
             },
             new SearchProperties()
             {
-                seid = 1000, domain ="lu", geo_location="Luxembourg", locale= "fr-lu", uule = "w+CAIQICIKTHV4ZW1ib3VyZw==",device="desktop_chrome",sename="Google LU (French)"
+                seid=1000, domain="lu", geo_location="Luxembourg", locale="fr-lu", uule="w+CAIQICIKTHV4ZW1ib3VyZw==", device="desktop_chrome", sename="Google LU (French)"
             },
             new SearchProperties()
             {
-                seid = 1001, domain ="lu", geo_location="Luxembourg", locale= "fr-lu", uule = "w+CAIQICIKTHV4ZW1ib3VyZw==",device="mobile_android",sename="Google LU (French, Mobile)"
+                seid=1001, domain="lu", geo_location="Luxembourg", locale="fr-lu", uule="w+CAIQICIKTHV4ZW1ib3VyZw==", device="mobile_android", sename="Google LU (French, Mobile)"
             },//03-09-2024
             new SearchProperties()//07-10-2024
             {
-                seid =1002, domain ="co.uk", geo_location = "Hertford,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICItSGVydGZvcmQsSGVydGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome",sename="Google UK (Hertford)"
+                seid=1002, domain="co.uk", geo_location="Hertford,Hertfordshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICItSGVydGZvcmQsSGVydGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Hertford)"
             },
             new SearchProperties()
             {
-                seid =1003, domain ="co.uk", geo_location = "Hertford,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICItSGVydGZvcmQsSGVydGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android",sename="Google UK (Hertford, Mobile)"
+                seid=1003, domain="co.uk", geo_location="Hertford,Hertfordshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICItSGVydGZvcmQsSGVydGZvcmRzaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Hertford, Mobile)"
             },
             new SearchProperties()
             {
-                seid =1004, domain ="co.uk", geo_location = "Redbourne,Lincolnshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICItUmVkYm91cm5lLExpbmNvbG5zaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="desktop_chrome",sename="Google UK (Redbourne)"
+                seid=1004, domain="co.uk", geo_location="Redbourne,Lincolnshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICItUmVkYm91cm5lLExpbmNvbG5zaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="desktop_chrome", sename="Google UK (Redbourne)"
             },
             new SearchProperties()
             {
-                seid =1005, domain ="co.uk", geo_location = "Redbourne,Lincolnshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICItUmVkYm91cm5lLExpbmNvbG5zaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t",device="mobile_android",sename="Google UK (Redbourne, Mobile)"
+                seid=1005, domain="co.uk", geo_location="Redbourne,Lincolnshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICItUmVkYm91cm5lLExpbmNvbG5zaGlyZSxFbmdsYW5kLFVuaXRlZCBLaW5nZG9t", device="mobile_android", sename="Google UK (Redbourne, Mobile)"
             },
             new SearchProperties()
             {
-                seid =1006, domain ="co.uk", geo_location = "Welwyn Garden City,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI3V2Vsd3luIEdhcmRlbiBDaXR5LEhlcnRmb3Jkc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="desktop_chrome",sename="Google UK (Welwyn Garden City)"
+                seid=1006, domain="co.uk", geo_location="Welwyn Garden City,Hertfordshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICI3V2Vsd3luIEdhcmRlbiBDaXR5LEhlcnRmb3Jkc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="desktop_chrome", sename="Google UK (Welwyn Garden City)"
             },
             new SearchProperties()
             {
-                seid =1007, domain ="co.uk", geo_location = "Welwyn Garden City,Hertfordshire,England,United Kingdom", locale= "en-gb", uule = "w+CAIQICI3V2Vsd3luIEdhcmRlbiBDaXR5LEhlcnRmb3Jkc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==",device="mobile_android",sename="Google UK (Welwyn Garden City, Mobile)"
+                seid=1007, domain="co.uk", geo_location="Welwyn Garden City,Hertfordshire,England,United Kingdom", locale="en-gb", uule="w+CAIQICI3V2Vsd3luIEdhcmRlbiBDaXR5LEhlcnRmb3Jkc2hpcmUsRW5nbGFuZCxVbml0ZWQgS2luZ2RvbQ==", device="mobile_android", sename="Google UK (Welwyn Garden City, Mobile)"
             },//07-10-2024
             new SearchProperties()//06-11-2024
             {
-                seid =1008, domain ="cd", geo_location = "Democratic Republic of the Congo", locale= "fr-cd", uule = "w+CAIQICIgRGVtb2NyYXRpYyBSZXB1YmxpYyBvZiB0aGUgQ29uZ28=",device="desktop_chrome",sename="Google CD (French)"
+                seid=1008, domain="cd", geo_location="Democratic Republic of the Congo", locale="fr-cd", uule="w+CAIQICIgRGVtb2NyYXRpYyBSZXB1YmxpYyBvZiB0aGUgQ29uZ28=", device="desktop_chrome", sename="Google CD (French)"
             },
             new SearchProperties()
             {
-                seid =1009, domain ="cd", geo_location = "Democratic Republic of the Congo", locale= "fr-cd", uule = "w+CAIQICIgRGVtb2NyYXRpYyBSZXB1YmxpYyBvZiB0aGUgQ29uZ28=",device="mobile_android",sename="Google CD (French, Mobile)"
+                seid=1009, domain="cd", geo_location="Democratic Republic of the Congo", locale="fr-cd", uule="w+CAIQICIgRGVtb2NyYXRpYyBSZXB1YmxpYyBvZiB0aGUgQ29uZ28=", device="mobile_android", sename="Google CD (French, Mobile)"
             },
             new SearchProperties()
             {
-                seid =1010, domain ="cd", geo_location = "Democratic Republic of the Congo", locale= "en-cd", uule = "w+CAIQICIgRGVtb2NyYXRpYyBSZXB1YmxpYyBvZiB0aGUgQ29uZ28=",device="desktop_chrome",sename="Google CD (English)"
+                seid=1010, domain="cd", geo_location="Democratic Republic of the Congo", locale="en-cd", uule="w+CAIQICIgRGVtb2NyYXRpYyBSZXB1YmxpYyBvZiB0aGUgQ29uZ28=", device="desktop_chrome", sename="Google CD (English)"
             },
             new SearchProperties()
             {
-                seid =1011, domain ="cd", geo_location = "Democratic Republic of the Congo", locale= "en-cd", uule = "w+CAIQICIgRGVtb2NyYXRpYyBSZXB1YmxpYyBvZiB0aGUgQ29uZ28=",device="mobile_android",sename="Google CD (English, Mobile)"
+                seid=1011, domain="cd", geo_location="Democratic Republic of the Congo", locale="en-cd", uule="w+CAIQICIgRGVtb2NyYXRpYyBSZXB1YmxpYyBvZiB0aGUgQ29uZ28=", device="mobile_android", sename="Google CD (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid =1012, domain ="com.et", geo_location = "Ethiopia", locale= "am-et", uule = "w+CAIQICIIRXRoaW9waWE=",device="desktop_chrome",sename="Google ET (Amharic)"
+                seid=1012, domain="com.et", geo_location="Ethiopia", locale="am-et", uule="w+CAIQICIIRXRoaW9waWE=", device="desktop_chrome", sename="Google ET (Amharic)"
             },
             new SearchProperties()
             {
-                seid =1013, domain ="com.et", geo_location = "Ethiopia", locale= "am-et", uule = "w+CAIQICIIRXRoaW9waWE=",device="mobile_android",sename="Google ET (Amharic, Mobile)"
+                seid=1013, domain="com.et", geo_location="Ethiopia", locale="am-et", uule="w+CAIQICIIRXRoaW9waWE=", device="mobile_android", sename="Google ET (Amharic, Mobile)"
             },
             new SearchProperties()
             {
-                seid =1014, domain ="com.et", geo_location = "Ethiopia", locale= "en-et", uule = "w+CAIQICIIRXRoaW9waWE=",device="desktop_chrome",sename="Google ET (English)"
+                seid=1014, domain="com.et", geo_location="Ethiopia", locale="en-et", uule="w+CAIQICIIRXRoaW9waWE=", device="desktop_chrome", sename="Google ET (English)"
             },
             new SearchProperties()
             {
-                seid =1015, domain ="com.et", geo_location = "Ethiopia", locale= "en-et", uule = "w+CAIQICIIRXRoaW9waWE=",device="mobile_android",sename="Google ET (English, Mobile)"
+                seid=1015, domain="com.et", geo_location="Ethiopia", locale="en-et", uule="w+CAIQICIIRXRoaW9waWE=", device="mobile_android", sename="Google ET (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid =1016, domain ="co.ls", geo_location = "Lesotho", locale= "st-ls", uule = "w+CAIQICIHTGVzb3Robw==",device="desktop_chrome",sename="Google LS (Sesotho)"
+                seid=1016, domain="co.ls", geo_location="Lesotho", locale="st-ls", uule="w+CAIQICIHTGVzb3Robw==", device="desktop_chrome", sename="Google LS (Sesotho)"
             },
             new SearchProperties()
             {
-                seid =1017, domain ="co.ls", geo_location = "Lesotho", locale= "st-ls", uule = "w+CAIQICIHTGVzb3Robw==",device="mobile_android",sename="Google LS (Sesotho, Mobile)"
+                seid=1017, domain="co.ls", geo_location="Lesotho", locale="st-ls", uule="w+CAIQICIHTGVzb3Robw==", device="mobile_android", sename="Google LS (Sesotho, Mobile)"
             },
             new SearchProperties()
             {
-                seid =1018, domain ="co.ls", geo_location = "Lesotho", locale= "en-ls", uule = "w+CAIQICIHTGVzb3Robw==",device="desktop_chrome",sename="Google LS (English)"
+                seid=1018, domain="co.ls", geo_location="Lesotho", locale="en-ls", uule="w+CAIQICIHTGVzb3Robw==", device="desktop_chrome", sename="Google LS (English)"
             },
             new SearchProperties()
             {
-                seid =1019, domain ="co.ls", geo_location = "Lesotho", locale= "en-ls", uule = "w+CAIQICIHTGVzb3Robw==",device="mobile_android",sename="Google LS (English, Mobile)"
+                seid=1019, domain="co.ls", geo_location="Lesotho", locale="en-ls", uule="w+CAIQICIHTGVzb3Robw==", device="mobile_android", sename="Google LS (English, Mobile)"
             },
             new SearchProperties()
             {
-                seid =1020, domain ="co.mz", geo_location = "Mozambique", locale= "pt-mz", uule = "w+CAIQICIKTW96YW1iaXF1ZQ==",device="desktop_chrome",sename="Google MZ (Portuguese)"
+                seid=1020, domain="co.mz", geo_location="Mozambique", locale="pt-mz", uule="w+CAIQICIKTW96YW1iaXF1ZQ==", device="desktop_chrome", sename="Google MZ (Portuguese)"
             },
             new SearchProperties()
             {
-                seid =1021, domain ="co.mz", geo_location = "Mozambique", locale= "pt-mz", uule = "w+CAIQICIKTW96YW1iaXF1ZQ==",device="mobile_android",sename="Google MZ (Portuguese, Mobile)"
+                seid=1021, domain="co.mz", geo_location="Mozambique", locale="pt-mz", uule="w+CAIQICIKTW96YW1iaXF1ZQ==", device="mobile_android", sename="Google MZ (Portuguese, Mobile)"
             },
             new SearchProperties()
             {
-                seid =1022, domain ="co.mz", geo_location = "Mozambique", locale= "en-mz", uule = "w+CAIQICIKTW96YW1iaXF1ZQ==",device="desktop_chrome",sename="Google MZ (English)"
+                seid=1022, domain="co.mz", geo_location="Mozambique", locale="en-mz", uule="w+CAIQICIKTW96YW1iaXF1ZQ==", device="desktop_chrome", sename="Google MZ (English)"
             },
             new SearchProperties()
             {
-                seid =1023, domain ="co.mz", geo_location = "Mozambique", locale= "en-mz", uule = "w+CAIQICIKTW96YW1iaXF1ZQ==",device="mobile_android",sename="Google MZ (English, Mobile)"
+                seid=1023, domain="co.mz", geo_location="Mozambique", locale="en-mz", uule="w+CAIQICIKTW96YW1iaXF1ZQ==", device="mobile_android", sename="Google MZ (English, Mobile)"
             },//06-11-2024
             new SearchProperties()//20-11-2024
             {
-                seid =1024, domain ="com.co", geo_location="Colombia", locale= "es-co", uule = "w+CAIQICIIQ29sb21iaWE",device="desktop_chrome", sename="Google CO (Spanish)"
+                seid=1024, domain="com.co", geo_location="Colombia", locale="es-co", uule="w+CAIQICIIQ29sb21iaWE", device="desktop_chrome", sename="Google CO (Spanish)"
             },
             new SearchProperties()
             {
-                seid =1025, domain ="com.co", geo_location="Colombia", locale= "es-co", uule = "w+CAIQICIIQ29sb21iaWE",device="mobile_android", sename="Google CO (Spanish, Mobile)"
+                seid=1025, domain="com.co", geo_location="Colombia", locale="es-co", uule="w+CAIQICIIQ29sb21iaWE", device="mobile_android", sename="Google CO (Spanish, Mobile)"
             },//20-11-2024
-            new SearchProperties()//duplicate Seid's for AI overview testing  1026 to 1029
-            {
-                seid =1026, domain ="co.uk",geo_location="United Kingdom",locale= "en-gb",uule = "w+CAIQICIOVW5pdGVkIEtpbmdkb20=",device="desktop_chrome", sename="Google UK (AIO)"
-            },
-            new SearchProperties()
-            {
-                seid =1027, domain ="co.uk", geo_location="United Kingdom", locale = "en-gb", uule = "w+CAIQICIOVW5pdGVkIEtpbmdkb20=",device="mobile_android", sename="Google UK (AIO, Mobile)"
-            },
-            new SearchProperties()
-            {
-                seid =1028, domain ="com", geo_location="United States", locale="en-us", uule="w+CAIQICINVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (AIO)"
-            },
-            new SearchProperties()
-            {
-                seid =1029, domain ="com", geo_location="United States", locale = "en-us", uule = "w+CAIQICINVW5pdGVkIFN0YXRlcw==",device="mobile_android", sename="Google US (AIO, Mobile)"
-            },//duplicate Seid's for AI overview testing 1026 to 1029
             new SearchProperties()//19-12-2024
             {
-                seid =1030, domain ="com.af", geo_location="Afghanistan", locale= "fa-af", uule = "w+CAIQICILQWZnaGFuaXN0YW4=",device="desktop_chrome", sename="Google AF (Dari)"
+                seid=1030, domain="com.af", geo_location="Afghanistan", locale="fa-af", uule="w+CAIQICILQWZnaGFuaXN0YW4=", device="desktop_chrome", sename="Google AF (Dari)"
             },
             new SearchProperties()
             {
-                seid =1031, domain ="com.af", geo_location="Afghanistan", locale= "fa-af", uule = "w+CAIQICILQWZnaGFuaXN0YW4=",device="mobile_android", sename="Google AF (Dari, Mobile)"
+                seid=1031, domain="com.af", geo_location="Afghanistan", locale="fa-af", uule="w+CAIQICILQWZnaGFuaXN0YW4=", device="mobile_android", sename="Google AF (Dari, Mobile)"
             },
             new SearchProperties()
             {
-                seid =1032, domain ="dz", geo_location="Algeria", locale= "fr-dz", uule = "w+CAIQICIHQWxnZXJpYQ==",device="mobile_android", sename="Google DZ (French, Mobile)"
+                seid=1032, domain="dz", geo_location="Algeria", locale="fr-dz", uule="w+CAIQICIHQWxnZXJpYQ==", device="mobile_android", sename="Google DZ (French, Mobile)"
             },
             new SearchProperties()
             {
-                seid =1033, domain ="nl", geo_location="Curacao", locale= "en-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="desktop_chrome", sename="Google NL (Curacao, English)"
+                seid=1033, domain="nl", geo_location="Curacao", locale="en-cw", uule="w+CAIQICIHQ3VyYWNhbw==", device="desktop_chrome", sename="Google NL (Curacao, English)"
             },
             new SearchProperties()
             {
-                seid =1034, domain ="nl", geo_location="Curacao", locale= "en-cw", uule = "w+CAIQICIHQ3VyYWNhbw==",device="mobile_android", sename="Google NL (Curacao, English Mobile)"
+                seid=1034, domain="nl", geo_location="Curacao", locale="en-cw", uule="w+CAIQICIHQ3VyYWNhbw==", device="mobile_android", sename="Google NL (Curacao, English Mobile)"
             },
             new SearchProperties()
             {
-                seid =1035, domain ="com.ly", geo_location="Libya", locale= "ar-ly", uule = "w+CAIQICIFTGlieWE=",device="mobile_android", sename="Google LY (Arabic, Mobile)"
+                seid=1035, domain="com.ly", geo_location="Libya", locale="ar-ly", uule="w+CAIQICIFTGlieWE=", device="mobile_android", sename="Google LY (Arabic, Mobile)"
             },
             new SearchProperties()
             {
-                seid =1036, domain ="lu", geo_location="Luxembourg", locale= "de-lu", uule = "w+CAIQICIKTHV4ZW1ib3VyZw==",device="mobile_android", sename="Google LU (German, Mobile)"
+                seid=1036, domain="lu", geo_location="Luxembourg", locale="de-lu", uule="w+CAIQICIKTHV4ZW1ib3VyZw==", device="mobile_android", sename="Google LU (German, Mobile)"
             },
             new SearchProperties()
             {
-                seid =1037, domain ="com.mt", geo_location="Malta", locale = "mt-mt", uule = "w+CAIQICIFbWFsdGE=",device="desktop_chrome", sename="Google MT (Maltese)"
+                seid=1037, domain="com.mt", geo_location="Malta", locale = "mt-mt", uule="w+CAIQICIFbWFsdGE=", device="desktop_chrome", sename="Google MT (Maltese)"
             },
             new SearchProperties()
             {
-                seid =1038, domain ="com.mt", geo_location="Malta", locale = "mt-mt", uule = "w+CAIQICIFbWFsdGE=",device="mobile_android", sename="Google MT (Maltese, Mobile)"
+                seid=1038, domain="com.mt", geo_location="Malta", locale = "mt-mt", uule="w+CAIQICIFbWFsdGE=", device="mobile_android", sename="Google MT (Maltese, Mobile)"
             },
             new SearchProperties()
             {
-                seid =1039, domain ="com.tj", geo_location="Tajikistan", locale = "tg-tj", uule = "w+CAIQICIKVGFqaWtpc3Rhbg==",device="desktop_chrome", sename="Google TG (Tajikistan)"
+                seid=1039, domain="com.tj", geo_location="Tajikistan", locale = "tg-tj", uule="w+CAIQICIKVGFqaWtpc3Rhbg==", device="desktop_chrome", sename="Google TG (Tajikistan)"
             },
             new SearchProperties()
             {
-                seid =1040, domain ="com.tj", geo_location="Tajikistan", locale = "tg-tj", uule = "w+CAIQICIKVGFqaWtpc3Rhbg==",device="mobile_android", sename="Google TG (Tajikistan, Mobile)"
+                seid=1040, domain="com.tj", geo_location="Tajikistan", locale = "tg-tj", uule="w+CAIQICIKVGFqaWtpc3Rhbg==", device="mobile_android", sename="Google TG (Tajikistan, Mobile)"
             },
             new SearchProperties()
             {
-                seid =1041, domain ="tn", geo_location="Tunisia", locale= "fr-tn", uule = "w+CAIQICIHVHVuaXNpYQ==",device="desktop_chrome", sename="Google TN (French)"
+                seid=1041, domain="tn", geo_location="Tunisia", locale="fr-tn", uule="w+CAIQICIHVHVuaXNpYQ==", device="desktop_chrome", sename="Google TN (French)"
             },
             new SearchProperties()
             {
-                seid =1042, domain ="tn", geo_location="Tunisia", locale= "fr-tn", uule = "w+CAIQICIHVHVuaXNpYQ==",device="mobile_android", sename="Google TN (French, Mobile)"
+                seid=1042, domain="tn", geo_location="Tunisia", locale="fr-tn", uule="w+CAIQICIHVHVuaXNpYQ==", device="mobile_android", sename="Google TN (French, Mobile)"
             },//19-12-2024
             new SearchProperties()//21-03-2025
             {
-                seid = 1043, domain ="com", geo_location="San Antonio,Texas,United States", locale= "en-us", uule = "w+CAIQICIfU2FuIEFudG9uaW8sVGV4YXMsVW5pdGVkIFN0YXRlcw==",device="desktop_chrome",sename="Google US (San Antonio,Texas)"
+                seid=1043, domain="com", geo_location="San Antonio,Texas,United States", locale="en-us", uule="w+CAIQICIfU2FuIEFudG9uaW8sVGV4YXMsVW5pdGVkIFN0YXRlcw==", device="desktop_chrome", sename="Google US (San Antonio,Texas)"
             },
             new SearchProperties()
             {
-                seid = 1044, domain ="com", geo_location="San Antonio,Texas,United States", locale= "en-us", uule = "w+CAIQICIfU2FuIEFudG9uaW8sVGV4YXMsVW5pdGVkIFN0YXRlcw==",device="mobile_android",sename="Google US (San Antonio,Texas, Mobile)"
+                seid=1044, domain="com", geo_location="San Antonio,Texas,United States", locale="en-us", uule="w+CAIQICIfU2FuIEFudG9uaW8sVGV4YXMsVW5pdGVkIFN0YXRlcw==", device="mobile_android", sename="Google US (San Antonio,Texas, Mobile)"
             },//21-03-2025
-         };
+        };
     }
     public class SearchProperties
     {
