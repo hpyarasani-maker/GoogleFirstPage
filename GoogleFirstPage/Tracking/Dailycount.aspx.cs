@@ -103,11 +103,15 @@ namespace GoogleFirstPage.OxylabsRequestCount
 
         protected void gvrequestcount_RowDataBound(object sender, GridViewRowEventArgs e)
         {
+            
+            foreach (TableCell tc in e.Row.Cells)
+            {
+                tc.Attributes["style"] = "border-right:1px solid black";
+            }
             for (int i = 0; i < e.Row.Cells.Count; i++)
             {
                 e.Row.Cells[i].ToolTip = e.Row.Cells[i].Text;
             }
-
 
             try
             {
@@ -211,6 +215,18 @@ namespace GoogleFirstPage.OxylabsRequestCount
         protected void lnkdownloadreport_Click(object sender, EventArgs e)
         {
             ExportCSV();
+        }
+
+        protected void grdmonth_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            foreach (TableCell tc in e.Row.Cells)
+            {
+                tc.Attributes["style"] = "border-right:1px solid black";
+            }
+            for (int i = 0; i < e.Row.Cells.Count; i++)
+            {
+                e.Row.Cells[i].ToolTip = e.Row.Cells[i].Text;
+            }
         }
     }
 }

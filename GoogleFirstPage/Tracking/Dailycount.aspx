@@ -161,7 +161,6 @@
         }
     </style>
 
-
 </head>
 <body style="background-color: white">
 
@@ -218,7 +217,7 @@
                         <label style="color: darkgreen; font-family: Cambria; font-size: x-large">Sending Request =</label><asp:Label runat="server" ID="Label2" Font-Names="Cambria" ForeColor="#0080ff" Font-Size="Large" Font-Bold="true" Text=" Number of keywords  *  10 Pages."></asp:Label><br />
                     </div>
                     <div id="two">
-                        <asp:GridView ID="grdmonth" runat="server" AutoGenerateColumns="false" CssClass="footable" HeaderStyle-Height="25px" Font-Bold="true" HeaderStyle-Font-Bold="true" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef">
+                        <asp:GridView ID="grdmonth" runat="server" AutoGenerateColumns="false" CssClass="footable" HeaderStyle-Height="25px" Font-Bold="true" HeaderStyle-Font-Bold="true" Font-Size="Small" HeaderStyle-BackColor="#e4e8ef" OnRowDataBound="grdmonth_RowDataBound">
                             <Columns>
                                 <asp:TemplateField HeaderText="Month">
                                     <ItemTemplate>
@@ -294,7 +293,7 @@
                 </div>
                 <br />
 
-                <asp:GridView ID="gvrequestcount" AutoGenerateColumns="false" Font-Bold="true" HeaderStyle-BackColor="#e4e8ef" AlternatingRowStyle-BackColor="#f5f5f5" HeaderStyle-Height="40px" HeaderStyle-HorizontalAlign="Left" CssClass="footable" HeaderStyle-Font-Bold="true" runat="server" RowStyle-Width="1px" OnRowDataBound="gvrequestcount_RowDataBound" Font-Size="Small" AllowPaging="true" OnPageIndexChanging="gvrequestcount_PageIndexChanging" PageSize="30">
+                <asp:GridView ID="gvrequestcount" AutoGenerateColumns="false" Font-Bold="true" HeaderStyle-BackColor="#e4e8ef" AlternatingRowStyle-BackColor="#f5f5f5" HeaderStyle-Height="40px" HeaderStyle-HorizontalAlign="Center" CssClass="footable" HeaderStyle-Font-Bold="true" runat="server" RowStyle-Width="1px" OnRowDataBound="gvrequestcount_RowDataBound" Font-Size="Small" AllowPaging="true" OnPageIndexChanging="gvrequestcount_PageIndexChanging" PageSize="30">
                     <Columns>
                         <asp:TemplateField HeaderText="Date">
                             <ItemTemplate>
