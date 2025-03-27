@@ -133,7 +133,7 @@
     <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true"></asp:ScriptManager>
 
-        <div class="header1" style="width: 2980px;">
+        <div class="header1" style="width: 3100px;">
             <div class="header-menu">
                 <div style="margin-left:-150px;">
                     <a href="../Dashboard.aspx" title="Pi-Datametrics DashBoard Home">

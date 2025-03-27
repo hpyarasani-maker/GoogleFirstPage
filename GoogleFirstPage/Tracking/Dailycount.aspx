@@ -319,28 +319,28 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Baidu">
                             <ItemTemplate>
-                                <div style="width: 65px;">
+                                <div style="width: 60px;">
                                     <%# Eval("Baidu","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Bing">
                             <ItemTemplate>
-                                <div style="width: 65px;">
+                                <div style="width: 60px;">
                                     <%# Eval("Bing","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Haosou">
                             <ItemTemplate>
-                                <div style="width: 65px;">
+                                <div style="width: 55px;">
                                     <%# Eval("Haosou","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Naver">
                             <ItemTemplate>
-                                <div style="width: 65px;">
+                                <div style="width: 60px;">
                                     <%# Eval("Naver","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
@@ -354,21 +354,21 @@
                         </asp:TemplateField>--%>
                         <asp:TemplateField HeaderText="Sogou">
                             <ItemTemplate>
-                                <div style="width: 65px;">
+                                <div style="width: 60px;">
                                     <%# Eval("Sogou","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Yandex">
                             <ItemTemplate>
-                                <div style="width: 65px;">
+                                <div style="width: 55px;">
                                     <%# Eval("Yandex","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Yahoo">
                             <ItemTemplate>
-                                <div style="width: 65px;">
+                                <div style="width: 55px;">
                                     <%# Eval("Yahoo","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
@@ -396,7 +396,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Empty Block">
                             <ItemTemplate>
-                                <div style="width: 60px;">
+                                <div style="width: 70px;">
                                     <%# Eval("Empty Block","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
@@ -424,7 +424,7 @@
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Re-Tracked">
                             <ItemTemplate>
-                                <div style="width: 80px;">
+                                <div style="width: 70px;">
                                     <%# Eval("Re-TrackedKeywords","{0:N0}") %>
                                 </div>
                             </ItemTemplate>
