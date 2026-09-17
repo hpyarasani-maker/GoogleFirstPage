@@ -1,1 +1,1 @@
-Dashboard returns Tracked data in different tool and online search tools
+GoogleFirstPage is a data intelligence and analytics dashboard designed to collect, process, and visualize search engine data and online search results. The platform integrates data from multiple search sources, stores large volumes of collected data, and provides an interactive dashboard for monitoring search performance, keyword insights, trends, and actionable analytics
